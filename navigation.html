@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +8,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap"
+    rel="stylesheet">
 
   <style>
     :root {
@@ -28,7 +31,11 @@
       --rule: #D8D2C7;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: var(--font-ui);
@@ -38,16 +45,20 @@
       line-height: 1.6;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     /* ─── Utility bar ─────────────────────────────────────────── */
     .utility-bar {
       background: var(--navy);
-      color: rgba(255,255,255,0.82);
+      color: rgba(255, 255, 255, 0.82);
       font-family: var(--font-ui);
       font-size: 13px;
       letter-spacing: 0.01em;
     }
+
     .utility-inner {
       max-width: 1240px;
       margin: 0 auto;
@@ -57,20 +68,51 @@
       justify-content: space-between;
       gap: 16px;
     }
-    .utility-left { display: inline-flex; align-items: center; gap: 18px; }
+
+    .utility-left {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+    }
+
     .utility-item {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       transition: color 0.15s ease;
     }
-    .utility-item svg { width: 14px; height: 14px; color: var(--gold-soft); flex-shrink: 0; }
-    .utility-item:hover { color: var(--white); }
-    .utility-right { display: inline-flex; align-items: center; gap: 14px; }
-    .utility-stars { color: var(--gold-soft); letter-spacing: 0.04em; }
-    .utility-right strong { color: var(--white); font-weight: 700; }
+
+    .utility-item svg {
+      width: 14px;
+      height: 14px;
+      color: var(--gold-soft);
+      flex-shrink: 0;
+    }
+
+    .utility-item:hover {
+      color: var(--white);
+    }
+
+    .utility-right {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .utility-stars {
+      color: var(--gold-soft);
+      letter-spacing: 0.04em;
+    }
+
+    .utility-right strong {
+      color: var(--white);
+      font-weight: 700;
+    }
+
     @media (max-width: 760px) {
-      .utility-bar { display: none; }
+      .utility-bar {
+        display: none;
+      }
     }
 
     /* ─── Main header ─────────────────────────────────────────── */
@@ -82,11 +124,13 @@
       border-bottom: 1px solid var(--rule);
       transition: box-shadow 0.2s ease, background 0.2s ease;
     }
+
     .site-header.is-scrolled {
       box-shadow: 0 4px 20px rgba(36, 47, 58, 0.08);
       background: rgba(247, 245, 242, 0.96);
       backdrop-filter: blur(8px);
     }
+
     .header-inner {
       max-width: 1240px;
       margin: 0 auto;
@@ -112,16 +156,24 @@
       line-height: 1;
       flex-shrink: 0;
     }
+
     .logo .brand-mark {
-      width: 24px; height: 24px;
+      width: 24px;
+      height: 24px;
       color: var(--coral);
       flex-shrink: 0;
       transform: translateY(-1px);
     }
-    .logo .dot { color: var(--gold); }
+
+    .logo .dot {
+      color: var(--gold);
+    }
 
     /* ─── Primary nav (desktop) ───────────────────────────────── */
-    .primary-nav { display: none; }
+    .primary-nav {
+      display: none;
+    }
+
     @media (min-width: 1000px) {
       .primary-nav {
         display: flex;
@@ -130,7 +182,14 @@
         height: 100%;
       }
     }
-    .nav-item { position: relative; height: 100%; display: flex; align-items: center; }
+
+    .nav-item {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
     .nav-link {
       display: inline-flex;
       align-items: center;
@@ -148,20 +207,26 @@
       transition: background 0.15s ease, color 0.15s ease;
       white-space: nowrap;
     }
+
     .nav-link:hover,
     .nav-item:hover .nav-link,
     .nav-item.is-open .nav-link {
       background: var(--cream);
       color: var(--coral);
     }
+
     .nav-link .chev {
-      width: 11px; height: 11px;
+      width: 11px;
+      height: 11px;
       transition: transform 0.2s ease;
       color: currentColor;
       opacity: 0.7;
     }
+
     .nav-item:hover .nav-link .chev,
-    .nav-item.is-open .nav-link .chev { transform: rotate(180deg); }
+    .nav-item.is-open .nav-link .chev {
+      transform: rotate(180deg);
+    }
 
     /* ─── Dropdown panels ─────────────────────────────────────── */
     .dropdown {
@@ -180,6 +245,7 @@
       pointer-events: none;
       transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
     }
+
     .nav-item:hover .dropdown,
     .nav-item.is-open .dropdown {
       opacity: 1;
@@ -187,10 +253,18 @@
       pointer-events: auto;
       transform: translateX(-50%) translateY(0);
     }
+
     /* Keep the wide mega panels from spilling off-screen */
-    .nav-item--right .dropdown { left: auto; right: 0; transform: translateX(0) translateY(8px); }
+    .nav-item--right .dropdown {
+      left: auto;
+      right: 0;
+      transform: translateX(0) translateY(8px);
+    }
+
     .nav-item--right:hover .dropdown,
-    .nav-item--right.is-open .dropdown { transform: translateX(0) translateY(0); }
+    .nav-item--right.is-open .dropdown {
+      transform: translateX(0) translateY(0);
+    }
 
     .dropdown-link {
       display: flex;
@@ -204,8 +278,19 @@
       color: var(--navy);
       transition: background 0.12s ease, color 0.12s ease;
     }
-    .dropdown-link:hover { background: var(--cream); color: var(--coral); }
-    .dropdown-link svg { width: 16px; height: 16px; color: var(--gold); flex-shrink: 0; }
+
+    .dropdown-link:hover {
+      background: var(--cream);
+      color: var(--coral);
+    }
+
+    .dropdown-link svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
     .dropdown-link .lbl-sub {
       display: block;
       font-size: 12px;
@@ -213,7 +298,12 @@
       color: var(--grey);
       margin-top: 1px;
     }
-    .dropdown-divider { height: 1px; background: var(--rule); margin: 6px 8px; }
+
+    .dropdown-divider {
+      height: 1px;
+      background: var(--rule);
+      margin: 6px 8px;
+    }
 
     /* Mega panel (Subjects) — one delivery market, groups across columns */
     .dropdown--mega {
@@ -221,6 +311,7 @@
       max-width: min(620px, calc(100vw - 40px));
       padding: 16px;
     }
+
     /* Market header strip — makes each menu's market unmistakable.
        Online = cool navy wash · In Batley = warm cream/gold wash */
     .market-head {
@@ -231,25 +322,42 @@
       margin: -4px -4px 10px;
       border-radius: 8px;
     }
+
     .market-head--online {
       background: rgba(36, 47, 58, 0.06);
       border: 1px solid rgba(36, 47, 58, 0.12);
     }
-    .market-head--online .market-ico svg { color: var(--navy); }
+
+    .market-head--online .market-ico svg {
+      color: var(--navy);
+    }
+
     .market-head--batley {
       background: rgba(201, 154, 46, 0.12);
       border: 1px solid rgba(201, 154, 46, 0.30);
     }
-    .market-head--batley .market-ico svg { color: var(--gold); }
+
+    .market-head--batley .market-ico svg {
+      color: var(--gold);
+    }
+
     .market-head .market-ico {
-      width: 30px; height: 30px;
+      width: 30px;
+      height: 30px;
       border-radius: 7px;
       background: var(--white);
       border: 1px solid var(--rule);
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
     }
-    .market-head .market-ico svg { width: 16px; height: 16px; }
+
+    .market-head .market-ico svg {
+      width: 16px;
+      height: 16px;
+    }
+
     .market-head .market-name {
       font-family: var(--font-ui);
       font-size: 13px;
@@ -259,6 +367,7 @@
       color: var(--navy);
       line-height: 1.2;
     }
+
     .market-head .market-sub {
       display: block;
       font-size: 12px;
@@ -268,13 +377,18 @@
       color: var(--grey);
       margin-top: 1px;
     }
+
     /* Groups laid across two columns within the single-market panel */
     .mega-groups {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0 18px;
     }
-    .mega-col + .mega-col { border-left: 1px solid var(--rule); padding-left: 24px; }
+
+    .mega-col+.mega-col {
+      border-left: 1px solid var(--rule);
+      padding-left: 24px;
+    }
 
     /* Column header — delivery mode (Online / In-Person) */
     .mega-col-head {
@@ -291,7 +405,12 @@
       border-bottom: 1px solid var(--rule);
       margin-bottom: 6px;
     }
-    .mega-col-head svg { width: 14px; height: 14px; color: var(--coral); }
+
+    .mega-col-head svg {
+      width: 14px;
+      height: 14px;
+      color: var(--coral);
+    }
 
     /* Sub-group label within a column (Core / Sciences / Commerce) */
     .mega-group-label {
@@ -303,10 +422,19 @@
       color: var(--gold);
       padding: 9px 12px 3px;
     }
-    .mega-group-label:first-of-type { padding-top: 2px; }
+
+    .mega-group-label:first-of-type {
+      padding-top: 2px;
+    }
 
     /* CTA in header */
-    .header-actions { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .header-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
     .header-cta {
       display: none;
       align-items: center;
@@ -322,24 +450,47 @@
       transition: background 0.18s ease, transform 0.15s ease;
       white-space: nowrap;
     }
-    .header-cta:hover { background: var(--coral-hover); transform: translateY(-1px); }
-    .header-cta svg { width: 15px; height: 8px; }
-    @media (min-width: 1000px) { .header-cta { display: inline-flex; } }
+
+    .header-cta:hover {
+      background: var(--coral-hover);
+      transform: translateY(-1px);
+    }
+
+    .header-cta svg {
+      width: 15px;
+      height: 8px;
+    }
+
+    @media (min-width: 1000px) {
+      .header-cta {
+        display: inline-flex;
+      }
+    }
 
     /* Hamburger */
     .menu-toggle {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 44px; height: 44px;
+      width: 44px;
+      height: 44px;
       background: none;
       border: 1px solid var(--rule);
       border-radius: 8px;
       cursor: pointer;
       color: var(--navy);
     }
-    .menu-toggle svg { width: 22px; height: 22px; }
-    @media (min-width: 1000px) { .menu-toggle { display: none; } }
+
+    .menu-toggle svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    @media (min-width: 1000px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
 
     /* ─── Mobile drawer ───────────────────────────────────────── */
     .mobile-overlay {
@@ -351,7 +502,11 @@
       transition: opacity 0.25s ease, visibility 0.25s;
       z-index: 1001;
     }
-    .mobile-overlay.is-open { opacity: 1; visibility: visible; }
+
+    .mobile-overlay.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
 
     .mobile-drawer {
       position: fixed;
@@ -367,7 +522,10 @@
       flex-direction: column;
       overflow: hidden;
     }
-    .mobile-drawer.is-open { transform: translateX(0); }
+
+    .mobile-drawer.is-open {
+      transform: translateX(0);
+    }
 
     .drawer-head {
       display: flex;
@@ -377,9 +535,17 @@
       border-bottom: 1px solid var(--rule);
       flex-shrink: 0;
     }
-    .drawer-body { overflow-y: auto; flex: 1; padding: 8px 12px 20px; }
 
-    .m-item { border-bottom: 1px solid var(--rule); }
+    .drawer-body {
+      overflow-y: auto;
+      flex: 1;
+      padding: 8px 12px 20px;
+    }
+
+    .m-item {
+      border-bottom: 1px solid var(--rule);
+    }
+
     .m-link {
       display: flex;
       align-items: center;
@@ -395,23 +561,38 @@
       cursor: pointer;
       text-align: left;
     }
+
     .m-link .m-chev {
-      width: 18px; height: 18px;
+      width: 18px;
+      height: 18px;
       color: var(--grey);
       transition: transform 0.22s ease;
       flex-shrink: 0;
     }
-    .m-item.is-open > .m-link .m-chev { transform: rotate(180deg); color: var(--coral); }
-    .m-item.is-open > .m-link { color: var(--coral); }
+
+    .m-item.is-open>.m-link .m-chev {
+      transform: rotate(180deg);
+      color: var(--coral);
+    }
+
+    .m-item.is-open>.m-link {
+      color: var(--coral);
+    }
 
     .m-sub {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.35s ease;
     }
-    .m-item.is-open > .m-sub { max-height: 1400px; }
 
-    .m-sub-inner { padding: 2px 0 12px; }
+    .m-item.is-open>.m-sub {
+      max-height: 1400px;
+    }
+
+    .m-sub-inner {
+      padding: 2px 0 12px;
+    }
+
     .m-sub-group-title {
       font-family: var(--font-ui);
       font-size: 11px;
@@ -421,6 +602,7 @@
       color: var(--coral);
       padding: 12px 14px 5px;
     }
+
     .m-sub-group-label {
       font-family: var(--font-ui);
       font-size: 10px;
@@ -430,6 +612,7 @@
       color: var(--gold);
       padding: 8px 14px 2px 22px;
     }
+
     .m-sub-link {
       display: flex;
       align-items: center;
@@ -441,8 +624,17 @@
       color: var(--navy-soft);
       border-radius: 7px;
     }
-    .m-sub-link:active { background: var(--cream); }
-    .m-sub-link svg { width: 15px; height: 15px; color: var(--gold); flex-shrink: 0; }
+
+    .m-sub-link:active {
+      background: var(--cream);
+    }
+
+    .m-sub-link svg {
+      width: 15px;
+      height: 15px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
 
     .drawer-foot {
       padding: 16px 20px 24px;
@@ -450,6 +642,7 @@
       flex-shrink: 0;
       background: var(--cream);
     }
+
     .drawer-cta {
       display: flex;
       align-items: center;
@@ -465,6 +658,7 @@
       border-radius: 9px;
       margin-bottom: 12px;
     }
+
     .drawer-call {
       display: flex;
       align-items: center;
@@ -475,20 +669,30 @@
       font-size: 18px;
       color: var(--navy);
     }
-    .drawer-call svg { width: 18px; height: 18px; color: var(--coral); }
+
+    .drawer-call svg {
+      width: 18px;
+      height: 18px;
+      color: var(--coral);
+    }
 
     .close-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 40px; height: 40px;
+      width: 40px;
+      height: 40px;
       background: none;
       border: 1px solid var(--rule);
       border-radius: 8px;
       cursor: pointer;
       color: var(--navy);
     }
-    .close-btn svg { width: 20px; height: 20px; }
+
+    .close-btn svg {
+      width: 20px;
+      height: 20px;
+    }
 
     /* ─── Demo page content ───────────────────────────────────── */
     .demo {
@@ -497,6 +701,7 @@
       padding: clamp(48px, 8vw, 96px) 24px;
       text-align: center;
     }
+
     .demo-eyebrow {
       font-family: var(--font-ui);
       font-size: 12px;
@@ -506,6 +711,7 @@
       color: var(--coral);
       margin-bottom: 12px;
     }
+
     .demo h1 {
       font-family: var(--font-display);
       font-weight: 600;
@@ -514,22 +720,32 @@
       letter-spacing: -0.015em;
       margin-bottom: 18px;
     }
-    .demo h1 em { font-style: italic; color: var(--gold); }
+
+    .demo h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
     .demo p {
       font-size: clamp(15px, 1.8vw, 17px);
       color: var(--grey);
       max-width: 52ch;
       margin: 0 auto 14px;
     }
+
     .demo-hint {
       font-family: var(--font-hand);
       font-size: 24px;
       color: var(--coral);
       margin-top: 28px;
     }
-    .spacer { height: 120vh; }
+
+    .spacer {
+      height: 120vh;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- ─── Utility bar ─── -->
@@ -537,11 +753,18 @@
     <div class="utility-inner">
       <div class="utility-left">
         <a href="tel:01924506010" class="utility-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+          </svg>
           01924 506010
         </a>
         <span class="utility-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
           Batley · West Yorkshire &amp; Online
         </span>
       </div>
@@ -557,9 +780,10 @@
     <div class="header-inner">
 
       <a class="logo" href="/" aria-label="Improve Tuition home">
-        <svg class="brand-mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="36" cy="22" r="8.5" fill="currentColor"/>
-          <path d="M22 50 L46 78 L82 24" stroke="currentColor" stroke-width="13.5" fill="none"/>
+        <svg class="brand-mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round"
+          aria-hidden="true">
+          <circle cx="36" cy="22" r="8.5" fill="currentColor" />
+          <path d="M22 50 L46 78 L82 24" stroke="currentColor" stroke-width="13.5" fill="none" />
         </svg>
         <span>improve&nbsp;tuition<span class="dot">.</span></span>
       </a>
@@ -575,34 +799,83 @@
         <div class="nav-item">
           <button class="nav-link" aria-haspopup="true" aria-expanded="false">
             Online
-            <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+              <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
           </button>
           <div class="dropdown dropdown--mega" role="menu">
             <div class="market-head market-head--online">
-              <span class="market-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
-              <span class="market-name">Online Tuition<span class="market-sub">Live, one-to-one &amp; small group · UK &amp; worldwide</span></span>
+              <span class="market-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg></span>
+              <span class="market-name">Online Tuition<span class="market-sub">Live, one-to-one &amp; small group · UK
+                  &amp; worldwide</span></span>
             </div>
             <div class="mega-groups">
               <div class="mega-col">
                 <p class="mega-group-label">Core</p>
-                <a class="dropdown-link" href="/uk/online/maths-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14M9 3v4M9 13l3 3 3-3M12 12v6"/></svg>Maths</a>
-                <a class="dropdown-link" href="/uk/online/english-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13M8 7h8M8 11h8M8 15h5"/></svg>English</a>
-                <a class="dropdown-link" href="/uk/online/science-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3"/></svg>Science</a>
+                <a class="dropdown-link" href="/uk/online/maths-tutor/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 7h14M9 3v4M9 13l3 3 3-3M12 12v6" />
+                  </svg>Maths</a>
+                <a class="dropdown-link" href="/uk/online/english-tutor/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13M8 7h8M8 11h8M8 15h5" />
+                  </svg>English</a>
+                <a class="dropdown-link" href="/uk/online/science-tutor/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3" />
+                  </svg>Science</a>
 
                 <p class="mega-group-label">Sciences</p>
-                <a class="dropdown-link" href="/uk/online/biology-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v4M15 3v4M9 21v-4M15 21v-4M9 7c0 3 6 3 6 6s-6 3-6 6M15 7c0 3-6 3-6 6"/></svg>Biology</a>
-                <a class="dropdown-link" href="/uk/online/chemistry-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3"/><path d="M7 14h10"/></svg>Chemistry</a>
-                <a class="dropdown-link" href="/uk/online/physics-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg>Physics</a>
+                <a class="dropdown-link" href="/uk/online/biology-tutor/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 3v4M15 3v4M9 21v-4M15 21v-4M9 7c0 3 6 3 6 6s-6 3-6 6M15 7c0 3-6 3-6 6" />
+                  </svg>Biology</a>
+                <a class="dropdown-link" href="/uk/online/chemistry-tutor/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3" />
+                    <path d="M7 14h10" />
+                  </svg>Chemistry</a>
+                <a class="dropdown-link" href="/uk/online/physics-tutor/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="1.5" />
+                    <ellipse cx="12" cy="12" rx="10" ry="4" />
+                    <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" />
+                    <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" />
+                  </svg>Physics</a>
               </div>
               <div class="mega-col">
                 <p class="mega-group-label">Commerce</p>
-                <a class="dropdown-link" href="/uk/online/economics-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg>Economics</a>
-                <a class="dropdown-link" href="/uk/online/business-studies-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Business Studies</a>
-                <a class="dropdown-link" href="/uk/online/accounting-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h6M9 11h6M9 15h3M6 3h12a1 1 0 0 1 1 1v16l-3-2-2 2-2-2-2 2-3-2V4a1 1 0 0 1 1-1z"/></svg>Accounting</a>
+                <a class="dropdown-link" href="/uk/online/economics-tutor/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 3v18h18M7 15l4-4 3 3 5-6" />
+                  </svg>Economics</a>
+                <a class="dropdown-link" href="/uk/online/business-studies-tutor/" role="menuitem"><svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="3" y="7" width="18" height="13" rx="2" />
+                    <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                  </svg>Business Studies</a>
+                <a class="dropdown-link" href="/uk/online/accounting-tutor/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 7h6M9 11h6M9 15h3M6 3h12a1 1 0 0 1 1 1v16l-3-2-2 2-2-2-2 2-3-2V4a1 1 0 0 1 1-1z" />
+                  </svg>Accounting</a>
 
                 <p class="mega-group-label">Humanities</p>
-                <a class="dropdown-link" href="/uk/online/law-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7h14M7 7l-3 6a3 3 0 0 0 6 0L7 7zM17 7l-3 6a3 3 0 0 0 6 0l-3-6zM8 21h8"/></svg>Law</a>
-                <a class="dropdown-link" href="/uk/online/psychology-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a5.5 5.5 0 0 0-5 7.8c.4.9.5 1.5.5 2.2v1a2 2 0 0 0 2 2h1M9 21v-3M13 21v-5a5 5 0 0 0-3.5-7.8"/><circle cx="14" cy="9" r="1"/></svg>Psychology</a>
+                <a class="dropdown-link" href="/uk/online/law-tutor/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3v18M5 7h14M7 7l-3 6a3 3 0 0 0 6 0L7 7zM17 7l-3 6a3 3 0 0 0 6 0l-3-6zM8 21h8" />
+                  </svg>Law</a>
+                <a class="dropdown-link" href="/uk/online/psychology-tutor/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9.5 2a5.5 5.5 0 0 0-5 7.8c.4.9.5 1.5.5 2.2v1a2 2 0 0 0 2 2h1M9 21v-3M13 21v-5a5 5 0 0 0-3.5-7.8" />
+                    <circle cx="14" cy="9" r="1" />
+                  </svg>Psychology</a>
               </div>
             </div>
           </div>
@@ -612,34 +885,83 @@
         <div class="nav-item">
           <button class="nav-link" aria-haspopup="true" aria-expanded="false">
             In Batley
-            <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+              <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
           </button>
           <div class="dropdown dropdown--mega" role="menu">
             <div class="market-head market-head--batley">
-              <span class="market-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-              <span class="market-name">In-Person · Batley<span class="market-sub">At our centre on George Street · West Yorkshire</span></span>
+              <span class="market-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg></span>
+              <span class="market-name">In-Person · Batley<span class="market-sub">At our centre on George Street · West
+                  Yorkshire</span></span>
             </div>
             <div class="mega-groups">
               <div class="mega-col">
                 <p class="mega-group-label">Core</p>
-                <a class="dropdown-link" href="/uk/maths/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14M9 3v4M9 13l3 3 3-3M12 12v6"/></svg>Maths</a>
-                <a class="dropdown-link" href="/uk/english/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13M8 7h8M8 11h8M8 15h5"/></svg>English</a>
-                <a class="dropdown-link" href="/uk/science/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3"/></svg>Science</a>
+                <a class="dropdown-link" href="/uk/maths/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 7h14M9 3v4M9 13l3 3 3-3M12 12v6" />
+                  </svg>Maths</a>
+                <a class="dropdown-link" href="/uk/english/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13M8 7h8M8 11h8M8 15h5" />
+                  </svg>English</a>
+                <a class="dropdown-link" href="/uk/science/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3" />
+                  </svg>Science</a>
 
                 <p class="mega-group-label">Sciences</p>
-                <a class="dropdown-link" href="/uk/biology/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v4M15 3v4M9 21v-4M15 21v-4M9 7c0 3 6 3 6 6s-6 3-6 6M15 7c0 3-6 3-6 6"/></svg>Biology</a>
-                <a class="dropdown-link" href="/uk/chemistry/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3"/><path d="M7 14h10"/></svg>Chemistry</a>
-                <a class="dropdown-link" href="/uk/physics/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg>Physics</a>
+                <a class="dropdown-link" href="/uk/biology/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 3v4M15 3v4M9 21v-4M15 21v-4M9 7c0 3 6 3 6 6s-6 3-6 6M15 7c0 3-6 3-6 6" />
+                  </svg>Biology</a>
+                <a class="dropdown-link" href="/uk/chemistry/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3" />
+                    <path d="M7 14h10" />
+                  </svg>Chemistry</a>
+                <a class="dropdown-link" href="/uk/physics/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="1.5" />
+                    <ellipse cx="12" cy="12" rx="10" ry="4" />
+                    <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" />
+                    <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" />
+                  </svg>Physics</a>
               </div>
               <div class="mega-col">
                 <p class="mega-group-label">Commerce</p>
-                <a class="dropdown-link" href="/uk/economics/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg>Economics</a>
-                <a class="dropdown-link" href="/uk/business-studies/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Business Studies</a>
-                <a class="dropdown-link" href="/uk/accounting/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h6M9 11h6M9 15h3M6 3h12a1 1 0 0 1 1 1v16l-3-2-2 2-2-2-2 2-3-2V4a1 1 0 0 1 1-1z"/></svg>Accounting</a>
+                <a class="dropdown-link" href="/uk/economics/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 3v18h18M7 15l4-4 3 3 5-6" />
+                  </svg>Economics</a>
+                <a class="dropdown-link" href="/uk/business-studies/tutor-in/batley/" role="menuitem"><svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="3" y="7" width="18" height="13" rx="2" />
+                    <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                  </svg>Business Studies</a>
+                <a class="dropdown-link" href="/uk/accounting/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 7h6M9 11h6M9 15h3M6 3h12a1 1 0 0 1 1 1v16l-3-2-2 2-2-2-2 2-3-2V4a1 1 0 0 1 1-1z" />
+                  </svg>Accounting</a>
 
                 <p class="mega-group-label">Humanities</p>
-                <a class="dropdown-link" href="/uk/law/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7h14M7 7l-3 6a3 3 0 0 0 6 0L7 7zM17 7l-3 6a3 3 0 0 0 6 0l-3-6zM8 21h8"/></svg>Law</a>
-                <a class="dropdown-link" href="/uk/psychology/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a5.5 5.5 0 0 0-5 7.8c.4.9.5 1.5.5 2.2v1a2 2 0 0 0 2 2h1M9 21v-3M13 21v-5a5 5 0 0 0-3.5-7.8"/><circle cx="14" cy="9" r="1"/></svg>Psychology</a>
+                <a class="dropdown-link" href="/uk/law/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3v18M5 7h14M7 7l-3 6a3 3 0 0 0 6 0L7 7zM17 7l-3 6a3 3 0 0 0 6 0l-3-6zM8 21h8" />
+                  </svg>Law</a>
+                <a class="dropdown-link" href="/uk/psychology/tutor-in/batley/" role="menuitem"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9.5 2a5.5 5.5 0 0 0-5 7.8c.4.9.5 1.5.5 2.2v1a2 2 0 0 0 2 2h1M9 21v-3M13 21v-5a5 5 0 0 0-3.5-7.8" />
+                    <circle cx="14" cy="9" r="1" />
+                  </svg>Psychology</a>
               </div>
             </div>
           </div>
@@ -649,15 +971,38 @@
         <div class="nav-item">
           <button class="nav-link" aria-haspopup="true" aria-expanded="false">
             Exams
-            <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+              <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
           </button>
           <div class="dropdown" role="menu">
-            <a class="dropdown-link" href="/uk/11-plus-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .5-4.5 4 1.5 6L12 15l-5.5 3.5 1.5-6L3.5 8.5 9.5 8z"/></svg>11 Plus</a>
-            <a class="dropdown-link" href="/uk/sats-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>SATs</a>
-            <a class="dropdown-link" href="/uk/gcse-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>GCSE</a>
-            <a class="dropdown-link" href="/uk/igcse-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>IGCSE</a>
-            <a class="dropdown-link" href="/uk/a-level-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/><path d="M16 16l2.5 4 2.5-4z"/></svg>A-Level</a>
-            <a class="dropdown-link" href="/uk/ib-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 0 0 0 18M12 3a14 14 0 0 1 0 18M3 12h18"/></svg>IB</a>
+            <a class="dropdown-link" href="/uk/11-plus-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l3 6 6 .5-4.5 4 1.5 6L12 15l-5.5 3.5 1.5-6L3.5 8.5 9.5 8z" />
+              </svg>11 Plus</a>
+            <a class="dropdown-link" href="/uk/sats-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+              </svg>SATs</a>
+            <a class="dropdown-link" href="/uk/gcse-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5" />
+              </svg>GCSE</a>
+            <a class="dropdown-link" href="/uk/igcse-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5" />
+              </svg>IGCSE</a>
+            <a class="dropdown-link" href="/uk/a-level-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16M4 12h16M4 18h10" />
+                <path d="M16 16l2.5 4 2.5-4z" />
+              </svg>A-Level</a>
+            <a class="dropdown-link" href="/uk/ib-tutor/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 3a14 14 0 0 0 0 18M12 3a14 14 0 0 1 0 18M3 12h18" />
+              </svg>IB</a>
           </div>
         </div>
 
@@ -665,11 +1010,17 @@
         <div class="nav-item">
           <button class="nav-link" aria-haspopup="true" aria-expanded="false">
             Schools
-            <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+              <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
           </button>
           <div class="dropdown" role="menu">
             <a class="dropdown-link" href="/heckmondwike-tutor/" role="menuitem">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6" />
+              </svg>
               <span>Heckmondwike Grammar<span class="lbl-sub">Entrance preparation</span></span>
             </a>
           </div>
@@ -679,14 +1030,34 @@
         <div class="nav-item">
           <button class="nav-link" aria-haspopup="true" aria-expanded="false">
             About
-            <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+              <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
           </button>
           <div class="dropdown" role="menu">
-            <a class="dropdown-link" href="/about/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>About Us</a>
-            <a class="dropdown-link" href="/about/mr-g-dabhad/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Mr G Dabhad</a>
-            <a class="dropdown-link" href="/safeguarding/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Safeguarding</a>
-            <a class="dropdown-link" href="/reviews/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .5-4.5 4 1.5 6L12 15l-5.5 3.5 1.5-6L3.5 8.5 9.5 8z"/></svg>Reviews</a>
-            <a class="dropdown-link" href="/case-studies/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h5"/></svg>Case Studies</a>
+            <a class="dropdown-link" href="/about/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4M12 8h.01" />
+              </svg>About Us</a>
+            <a class="dropdown-link" href="/about/mr-g-dabhad/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>Mr G Dabhad</a>
+            <a class="dropdown-link" href="/safeguarding/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>Safeguarding</a>
+            <a class="dropdown-link" href="/reviews/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l3 6 6 .5-4.5 4 1.5 6L12 15l-5.5 3.5 1.5-6L3.5 8.5 9.5 8z" />
+              </svg>Reviews</a>
+            <a class="dropdown-link" href="/case-studies/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h5" />
+              </svg>Case Studies</a>
           </div>
         </div>
 
@@ -694,14 +1065,33 @@
         <div class="nav-item nav-item--right">
           <button class="nav-link" aria-haspopup="true" aria-expanded="false">
             More
-            <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="chev" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+              <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
           </button>
           <div class="dropdown" role="menu">
-            <a class="dropdown-link" href="/pricing/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4L13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/></svg>Pricing</a>
-            <a class="dropdown-link" href="/contact/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 7l8 5 8-5"/></svg>Contact</a>
-            <a class="dropdown-link" href="/blog/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Blog</a>
+            <a class="dropdown-link" href="/pricing/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.6 13.4L13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z" />
+                <circle cx="7.5" cy="7.5" r="1.5" fill="currentColor" />
+              </svg>Pricing</a>
+            <a class="dropdown-link" href="/contact/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16v16H4z" />
+                <path d="M4 7l8 5 8-5" />
+              </svg>Contact</a>
+            <a class="dropdown-link" href="/blog/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+              </svg>Blog</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-link" href="/privacy-policy/" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Privacy Policy</a>
+            <a class="dropdown-link" href="/privacy-policy/" role="menuitem"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>Privacy Policy</a>
           </div>
         </div>
 
@@ -710,10 +1100,15 @@
       <div class="header-actions">
         <a class="header-cta" href="/contact/">
           Book a Free Assessment
-          <svg viewBox="0 0 22 10" fill="none" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4" stroke="currentColor" stroke-width="1.8"/></svg>
+          <svg viewBox="0 0 22 10" fill="none" aria-hidden="true">
+            <path d="M0 5h20M16 1l4 4-4 4" stroke="currentColor" stroke-width="1.8" />
+          </svg>
         </a>
         <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
         </button>
       </div>
 
@@ -725,14 +1120,18 @@
   <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation">
     <div class="drawer-head">
       <a class="logo" href="/" aria-label="Improve Tuition home">
-        <svg class="brand-mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="36" cy="22" r="8.5" fill="currentColor"/>
-          <path d="M22 50 L46 78 L82 24" stroke="currentColor" stroke-width="13.5" fill="none"/>
+        <svg class="brand-mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round"
+          aria-hidden="true">
+          <circle cx="36" cy="22" r="8.5" fill="currentColor" />
+          <path d="M22 50 L46 78 L82 24" stroke="currentColor" stroke-width="13.5" fill="none" />
         </svg>
         <span>improve&nbsp;tuition<span class="dot">.</span></span>
       </a>
       <button class="close-btn" id="drawerClose" aria-label="Close menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
       </button>
     </div>
 
@@ -743,101 +1142,264 @@
       <!-- Online -->
       <div class="m-item" data-accordion>
         <button class="m-link">Online
-          <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
         </button>
-        <div class="m-sub"><div class="m-sub-inner">
-          <p class="m-sub-group-label">Core</p>
-          <a class="m-sub-link" href="/uk/online/maths-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14M9 3v4M9 13l3 3 3-3M12 12v6"/></svg>Maths</a>
-          <a class="m-sub-link" href="/uk/online/english-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13M8 7h8M8 11h8"/></svg>English</a>
-          <a class="m-sub-link" href="/uk/online/science-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3"/></svg>Science</a>
-          <p class="m-sub-group-label">Sciences</p>
-          <a class="m-sub-link" href="/uk/online/biology-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v4M15 3v4M9 21v-4M15 21v-4M9 7c0 3 6 3 6 6s-6 3-6 6M15 7c0 3-6 3-6 6"/></svg>Biology</a>
-          <a class="m-sub-link" href="/uk/online/chemistry-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3"/><path d="M7 14h10"/></svg>Chemistry</a>
-          <a class="m-sub-link" href="/uk/online/physics-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/></svg>Physics</a>
-          <p class="m-sub-group-label">Commerce</p>
-          <a class="m-sub-link" href="/uk/online/economics-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg>Economics</a>
-          <a class="m-sub-link" href="/uk/online/business-studies-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Business Studies</a>
-          <a class="m-sub-link" href="/uk/online/accounting-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h6M9 11h6M9 15h3M6 3h12a1 1 0 0 1 1 1v16l-3-2-2 2-2-2-2 2-3-2V4a1 1 0 0 1 1-1z"/></svg>Accounting</a>
-          <p class="m-sub-group-label">Humanities</p>
-          <a class="m-sub-link" href="/uk/online/law-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7h14M7 7l-3 6a3 3 0 0 0 6 0L7 7zM17 7l-3 6a3 3 0 0 0 6 0l-3-6zM8 21h8"/></svg>Law</a>
-          <a class="m-sub-link" href="/uk/online/psychology-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a5.5 5.5 0 0 0-5 7.8c.4.9.5 1.5.5 2.2v1a2 2 0 0 0 2 2h1M9 21v-3M13 21v-5a5 5 0 0 0-3.5-7.8"/><circle cx="14" cy="9" r="1"/></svg>Psychology</a>
-        </div></div>
+        <div class="m-sub">
+          <div class="m-sub-inner">
+            <p class="m-sub-group-label">Core</p>
+            <a class="m-sub-link" href="/uk/online/maths-tutor/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 7h14M9 3v4M9 13l3 3 3-3M12 12v6" />
+              </svg>Maths</a>
+            <a class="m-sub-link" href="/uk/online/english-tutor/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13M8 7h8M8 11h8" />
+              </svg>English</a>
+            <a class="m-sub-link" href="/uk/online/science-tutor/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3" />
+              </svg>Science</a>
+            <p class="m-sub-group-label">Sciences</p>
+            <a class="m-sub-link" href="/uk/online/biology-tutor/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3v4M15 3v4M9 21v-4M15 21v-4M9 7c0 3 6 3 6 6s-6 3-6 6M15 7c0 3-6 3-6 6" />
+              </svg>Biology</a>
+            <a class="m-sub-link" href="/uk/online/chemistry-tutor/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3" />
+                <path d="M7 14h10" />
+              </svg>Chemistry</a>
+            <a class="m-sub-link" href="/uk/online/physics-tutor/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="1.5" />
+                <ellipse cx="12" cy="12" rx="10" ry="4" />
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" />
+              </svg>Physics</a>
+            <p class="m-sub-group-label">Commerce</p>
+            <a class="m-sub-link" href="/uk/online/economics-tutor/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18M7 15l4-4 3 3 5-6" />
+              </svg>Economics</a>
+            <a class="m-sub-link" href="/uk/online/business-studies-tutor/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="7" width="18" height="13" rx="2" />
+                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+              </svg>Business Studies</a>
+            <a class="m-sub-link" href="/uk/online/accounting-tutor/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 7h6M9 11h6M9 15h3M6 3h12a1 1 0 0 1 1 1v16l-3-2-2 2-2-2-2 2-3-2V4a1 1 0 0 1 1-1z" />
+              </svg>Accounting</a>
+            <p class="m-sub-group-label">Humanities</p>
+            <a class="m-sub-link" href="/uk/online/law-tutor/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v18M5 7h14M7 7l-3 6a3 3 0 0 0 6 0L7 7zM17 7l-3 6a3 3 0 0 0 6 0l-3-6zM8 21h8" />
+              </svg>Law</a>
+            <a class="m-sub-link" href="/uk/online/psychology-tutor/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9.5 2a5.5 5.5 0 0 0-5 7.8c.4.9.5 1.5.5 2.2v1a2 2 0 0 0 2 2h1M9 21v-3M13 21v-5a5 5 0 0 0-3.5-7.8" />
+                <circle cx="14" cy="9" r="1" />
+              </svg>Psychology</a>
+          </div>
+        </div>
       </div>
 
       <!-- In Batley -->
       <div class="m-item" data-accordion>
         <button class="m-link">In Batley
-          <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
         </button>
-        <div class="m-sub"><div class="m-sub-inner">
-          <p class="m-sub-group-label">Core</p>
-          <a class="m-sub-link" href="/uk/maths/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14M9 3v4M9 13l3 3 3-3M12 12v6"/></svg>Maths</a>
-          <a class="m-sub-link" href="/uk/english/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13M8 7h8M8 11h8"/></svg>English</a>
-          <a class="m-sub-link" href="/uk/science/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3"/></svg>Science</a>
-          <p class="m-sub-group-label">Sciences</p>
-          <a class="m-sub-link" href="/uk/biology/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v4M15 3v4M9 21v-4M15 21v-4M9 7c0 3 6 3 6 6s-6 3-6 6M15 7c0 3-6 3-6 6"/></svg>Biology</a>
-          <a class="m-sub-link" href="/uk/chemistry/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3"/><path d="M7 14h10"/></svg>Chemistry</a>
-          <a class="m-sub-link" href="/uk/physics/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/></svg>Physics</a>
-          <p class="m-sub-group-label">Commerce</p>
-          <a class="m-sub-link" href="/uk/economics/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg>Economics</a>
-          <a class="m-sub-link" href="/uk/business-studies/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Business Studies</a>
-          <a class="m-sub-link" href="/uk/accounting/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h6M9 11h6M9 15h3M6 3h12a1 1 0 0 1 1 1v16l-3-2-2 2-2-2-2 2-3-2V4a1 1 0 0 1 1-1z"/></svg>Accounting</a>
-          <p class="m-sub-group-label">Humanities</p>
-          <a class="m-sub-link" href="/uk/law/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7h14M7 7l-3 6a3 3 0 0 0 6 0L7 7zM17 7l-3 6a3 3 0 0 0 6 0l-3-6zM8 21h8"/></svg>Law</a>
-          <a class="m-sub-link" href="/uk/psychology/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a5.5 5.5 0 0 0-5 7.8c.4.9.5 1.5.5 2.2v1a2 2 0 0 0 2 2h1M9 21v-3M13 21v-5a5 5 0 0 0-3.5-7.8"/><circle cx="14" cy="9" r="1"/></svg>Psychology</a>
-        </div></div>
+        <div class="m-sub">
+          <div class="m-sub-inner">
+            <p class="m-sub-group-label">Core</p>
+            <a class="m-sub-link" href="/uk/maths/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 7h14M9 3v4M9 13l3 3 3-3M12 12v6" />
+              </svg>Maths</a>
+            <a class="m-sub-link" href="/uk/english/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13M8 7h8M8 11h8" />
+              </svg>English</a>
+            <a class="m-sub-link" href="/uk/science/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3" />
+              </svg>Science</a>
+            <p class="m-sub-group-label">Sciences</p>
+            <a class="m-sub-link" href="/uk/biology/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3v4M15 3v4M9 21v-4M15 21v-4M9 7c0 3 6 3 6 6s-6 3-6 6M15 7c0 3-6 3-6 6" />
+              </svg>Biology</a>
+            <a class="m-sub-link" href="/uk/chemistry/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3" />
+                <path d="M7 14h10" />
+              </svg>Chemistry</a>
+            <a class="m-sub-link" href="/uk/physics/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="1.5" />
+                <ellipse cx="12" cy="12" rx="10" ry="4" />
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" />
+              </svg>Physics</a>
+            <p class="m-sub-group-label">Commerce</p>
+            <a class="m-sub-link" href="/uk/economics/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18M7 15l4-4 3 3 5-6" />
+              </svg>Economics</a>
+            <a class="m-sub-link" href="/uk/business-studies/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="7" width="18" height="13" rx="2" />
+                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+              </svg>Business Studies</a>
+            <a class="m-sub-link" href="/uk/accounting/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 7h6M9 11h6M9 15h3M6 3h12a1 1 0 0 1 1 1v16l-3-2-2 2-2-2-2 2-3-2V4a1 1 0 0 1 1-1z" />
+              </svg>Accounting</a>
+            <p class="m-sub-group-label">Humanities</p>
+            <a class="m-sub-link" href="/uk/law/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v18M5 7h14M7 7l-3 6a3 3 0 0 0 6 0L7 7zM17 7l-3 6a3 3 0 0 0 6 0l-3-6zM8 21h8" />
+              </svg>Law</a>
+            <a class="m-sub-link" href="/uk/psychology/tutor-in/batley/"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9.5 2a5.5 5.5 0 0 0-5 7.8c.4.9.5 1.5.5 2.2v1a2 2 0 0 0 2 2h1M9 21v-3M13 21v-5a5 5 0 0 0-3.5-7.8" />
+                <circle cx="14" cy="9" r="1" />
+              </svg>Psychology</a>
+          </div>
+        </div>
       </div>
 
       <!-- Exams -->
       <div class="m-item" data-accordion>
         <button class="m-link">Exams
-          <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
         </button>
-        <div class="m-sub"><div class="m-sub-inner">
-          <a class="m-sub-link" href="/uk/11-plus-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .5-4.5 4 1.5 6L12 15l-5.5 3.5 1.5-6L3.5 8.5 9.5 8z"/></svg>11 Plus</a>
-          <a class="m-sub-link" href="/uk/sats-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>SATs</a>
-          <a class="m-sub-link" href="/uk/gcse-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>GCSE</a>
-          <a class="m-sub-link" href="/uk/igcse-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>IGCSE</a>
-          <a class="m-sub-link" href="/uk/a-level-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/><path d="M16 16l2.5 4 2.5-4z"/></svg>A-Level</a>
-          <a class="m-sub-link" href="/uk/ib-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 0 0 0 18M3 12h18"/></svg>IB</a>
-        </div></div>
+        <div class="m-sub">
+          <div class="m-sub-inner">
+            <a class="m-sub-link" href="/uk/11-plus-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l3 6 6 .5-4.5 4 1.5 6L12 15l-5.5 3.5 1.5-6L3.5 8.5 9.5 8z" />
+              </svg>11 Plus</a>
+            <a class="m-sub-link" href="/uk/sats-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+              </svg>SATs</a>
+            <a class="m-sub-link" href="/uk/gcse-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5" />
+              </svg>GCSE</a>
+            <a class="m-sub-link" href="/uk/igcse-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5" />
+              </svg>IGCSE</a>
+            <a class="m-sub-link" href="/uk/a-level-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16M4 12h16M4 18h10" />
+                <path d="M16 16l2.5 4 2.5-4z" />
+              </svg>A-Level</a>
+            <a class="m-sub-link" href="/uk/ib-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 3a14 14 0 0 0 0 18M3 12h18" />
+              </svg>IB</a>
+          </div>
+        </div>
       </div>
 
       <!-- Schools -->
       <div class="m-item" data-accordion>
         <button class="m-link">Schools
-          <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
         </button>
-        <div class="m-sub"><div class="m-sub-inner">
-          <a class="m-sub-link" href="/heckmondwike-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>Heckmondwike Grammar Entrance</a>
-        </div></div>
+        <div class="m-sub">
+          <div class="m-sub-inner">
+            <a class="m-sub-link" href="/heckmondwike-tutor/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6" />
+              </svg>Heckmondwike Grammar Entrance</a>
+          </div>
+        </div>
       </div>
 
       <!-- About -->
       <div class="m-item" data-accordion>
         <button class="m-link">About
-          <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
         </button>
-        <div class="m-sub"><div class="m-sub-inner">
-          <a class="m-sub-link" href="/about/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>About Us</a>
-          <a class="m-sub-link" href="/about/mr-g-dabhad/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Mr G Dabhad</a>
-          <a class="m-sub-link" href="/safeguarding/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Safeguarding</a>
-          <a class="m-sub-link" href="/reviews/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .5-4.5 4 1.5 6L12 15l-5.5 3.5 1.5-6L3.5 8.5 9.5 8z"/></svg>Reviews</a>
-          <a class="m-sub-link" href="/case-studies/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6"/></svg>Case Studies</a>
-        </div></div>
+        <div class="m-sub">
+          <div class="m-sub-inner">
+            <a class="m-sub-link" href="/about/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4M12 8h.01" />
+              </svg>About Us</a>
+            <a class="m-sub-link" href="/about/mr-g-dabhad/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>Mr G Dabhad</a>
+            <a class="m-sub-link" href="/safeguarding/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>Safeguarding</a>
+            <a class="m-sub-link" href="/reviews/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l3 6 6 .5-4.5 4 1.5 6L12 15l-5.5 3.5 1.5-6L3.5 8.5 9.5 8z" />
+              </svg>Reviews</a>
+            <a class="m-sub-link" href="/case-studies/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6" />
+              </svg>Case Studies</a>
+          </div>
+        </div>
       </div>
 
       <!-- More -->
       <div class="m-item" data-accordion>
         <button class="m-link">More
-          <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
         </button>
-        <div class="m-sub"><div class="m-sub-inner">
-          <a class="m-sub-link" href="/pricing/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4L13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/></svg>Pricing</a>
-          <a class="m-sub-link" href="/contact/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 7l8 5 8-5"/></svg>Contact</a>
-          <a class="m-sub-link" href="/blog/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Blog</a>
-          <a class="m-sub-link" href="/privacy-policy/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Privacy Policy</a>
-        </div></div>
+        <div class="m-sub">
+          <div class="m-sub-inner">
+            <a class="m-sub-link" href="/pricing/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.6 13.4L13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z" />
+              </svg>Pricing</a>
+            <a class="m-sub-link" href="/contact/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16v16H4z" />
+                <path d="M4 7l8 5 8-5" />
+              </svg>Contact</a>
+            <a class="m-sub-link" href="/blog/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+              </svg>Blog</a>
+            <a class="m-sub-link" href="/privacy-policy/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>Privacy Policy</a>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -845,10 +1407,15 @@
     <div class="drawer-foot">
       <a class="drawer-cta" href="/contact/">
         Book a Free Assessment
-        <svg viewBox="0 0 22 10" width="18" height="9" fill="none" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4" stroke="currentColor" stroke-width="1.8"/></svg>
+        <svg viewBox="0 0 22 10" width="18" height="9" fill="none" aria-hidden="true">
+          <path d="M0 5h20M16 1l4 4-4 4" stroke="currentColor" stroke-width="1.8" />
+        </svg>
       </a>
       <a class="drawer-call" href="tel:01924506010">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+        </svg>
         01924 506010
       </a>
     </div>
@@ -858,85 +1425,88 @@
   <main class="demo">
     <p class="demo-eyebrow">Navigation Demo</p>
     <h1>Two markets, split <em>at the top level</em>.</h1>
-    <p>Online and In Batley are now separate menus — each carrying all eleven subjects across Core, Sciences, Commerce and Humanities. A parent picks their market first, then their subject. Each panel leads with a tinted market header so there's no mistaking which one you're in. Exams includes A-Level.</p>
+    <p>Online and In Batley are now separate menus — each carrying all eleven subjects across Core, Sciences, Commerce
+      and Humanities. A parent picks their market first, then their subject. Each panel leads with a tinted market
+      header so there's no mistaking which one you're in. Exams includes A-Level.</p>
     <p class="demo-hint">Scroll down to see the header condense ↓</p>
     <div class="spacer"></div>
     <p>The header gains a soft shadow and blur once you scroll.</p>
   </main>
 
   <script>
-  (function () {
-    'use strict';
+    (function () {
+      'use strict';
 
-    var header = document.getElementById('siteHeader');
-    var menuToggle = document.getElementById('menuToggle');
-    var drawer = document.getElementById('mobileDrawer');
-    var overlay = document.getElementById('mobileOverlay');
-    var drawerClose = document.getElementById('drawerClose');
+      var header = document.getElementById('siteHeader');
+      var menuToggle = document.getElementById('menuToggle');
+      var drawer = document.getElementById('mobileDrawer');
+      var overlay = document.getElementById('mobileOverlay');
+      var drawerClose = document.getElementById('drawerClose');
 
-    /* Scroll shadow on header */
-    function onScroll() {
-      header.classList.toggle('is-scrolled', window.scrollY > 10);
-    }
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-
-    /* Mobile drawer open/close */
-    function openDrawer() {
-      drawer.classList.add('is-open');
-      overlay.classList.add('is-open');
-      menuToggle.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeDrawer() {
-      drawer.classList.remove('is-open');
-      overlay.classList.remove('is-open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-    menuToggle.addEventListener('click', openDrawer);
-    drawerClose.addEventListener('click', closeDrawer);
-    overlay.addEventListener('click', closeDrawer);
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') closeDrawer();
-    });
-
-    /* Mobile accordions */
-    document.querySelectorAll('.m-item[data-accordion] > .m-link').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var item = btn.parentElement;
-        var isOpen = item.classList.contains('is-open');
-        document.querySelectorAll('.m-item[data-accordion].is-open').forEach(function (other) {
-          if (other !== item) other.classList.remove('is-open');
-        });
-        item.classList.toggle('is-open', !isOpen);
-      });
-    });
-
-    /* Desktop: click-to-open for touch + keyboard support on the buttons */
-    document.querySelectorAll('.primary-nav .nav-item > button.nav-link').forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        var item = btn.parentElement;
-        var isOpen = item.classList.contains('is-open');
-        document.querySelectorAll('.primary-nav .nav-item.is-open').forEach(function (o) {
-          if (o !== item) { o.classList.remove('is-open'); o.querySelector('button').setAttribute('aria-expanded', 'false'); }
-        });
-        item.classList.toggle('is-open', !isOpen);
-        btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
-      });
-    });
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.primary-nav .nav-item')) {
-        document.querySelectorAll('.primary-nav .nav-item.is-open').forEach(function (o) {
-          o.classList.remove('is-open');
-          o.querySelector('button').setAttribute('aria-expanded', 'false');
-        });
+      /* Scroll shadow on header */
+      function onScroll() {
+        header.classList.toggle('is-scrolled', window.scrollY > 10);
       }
-    });
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
 
-  })();
+      /* Mobile drawer open/close */
+      function openDrawer() {
+        drawer.classList.add('is-open');
+        overlay.classList.add('is-open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeDrawer() {
+        drawer.classList.remove('is-open');
+        overlay.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+      menuToggle.addEventListener('click', openDrawer);
+      drawerClose.addEventListener('click', closeDrawer);
+      overlay.addEventListener('click', closeDrawer);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeDrawer();
+      });
+
+      /* Mobile accordions */
+      document.querySelectorAll('.m-item[data-accordion] > .m-link').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var item = btn.parentElement;
+          var isOpen = item.classList.contains('is-open');
+          document.querySelectorAll('.m-item[data-accordion].is-open').forEach(function (other) {
+            if (other !== item) other.classList.remove('is-open');
+          });
+          item.classList.toggle('is-open', !isOpen);
+        });
+      });
+
+      /* Desktop: click-to-open for touch + keyboard support on the buttons */
+      document.querySelectorAll('.primary-nav .nav-item > button.nav-link').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          var item = btn.parentElement;
+          var isOpen = item.classList.contains('is-open');
+          document.querySelectorAll('.primary-nav .nav-item.is-open').forEach(function (o) {
+            if (o !== item) { o.classList.remove('is-open'); o.querySelector('button').setAttribute('aria-expanded', 'false'); }
+          });
+          item.classList.toggle('is-open', !isOpen);
+          btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+        });
+      });
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.primary-nav .nav-item')) {
+          document.querySelectorAll('.primary-nav .nav-item.is-open').forEach(function (o) {
+            o.classList.remove('is-open');
+            o.querySelector('button').setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+
+    })();
   </script>
 
 </body>
+
 </html>
