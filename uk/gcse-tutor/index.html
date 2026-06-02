@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Improve Tuition — GCSE Maths Tutor in Batley</title>
+    <meta name="description"
+        content="GCSE Maths tutor in Batley for Year 10 and Year 11 pupils, with support also available for Year 9. Teacher-led Maths assessment before tuition starts.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you help Year 9 pupils?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We support Year 9 pupils alongside GCSE pupils, especially where earlier foundations need strengthening before Year 10 or Year 11."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does GCSE Maths tuition cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pricing depends on the format — class, small group, paired or one-to-one. We explain the recommended format and cost before you decide whether to continue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the Maths assessment free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. There is no payment to book the assessment. We explain what we found before any paid tuition begins."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you help with Foundation and Higher tier?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The assessment helps us understand whether your child needs support with Foundation tier, Higher tier, or earlier Maths gaps that are affecting GCSE performance."
+        }
+      }
+    ]
+  }
+  </script>
+
+    <style>
+        /* -------------------------------------------------------------
+       1. Tokens
+       ------------------------------------------------------------- */
+        :root {
+            --font-display: 'Lora', Georgia, serif;
+            --font-ui: 'Nunito Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            --ink: #1a1a1a;
+            --ink-soft: #3a3a3a;
+            --ink-muted: #6b6b6b;
+
+            --paper: #ffffff;
+            --paper-warm: #ebe8e1;
+            --paper-soft: #f8f4ec;
+
+            --rule: #d9d4c7;
+            --rule-soft: #f0ede6;
+
+            --warm-1: #5a4a3a;
+            --sepia: #2c2018;
+            --sepia-soft: #3a2e24;
+            --accent: #c4a373;
+
+            --brand-coral: #E4634F;
+            --brand-green: #1B5E20;
+            --brand-ink: #111111;
+        }
+
+        /* -------------------------------------------------------------
+       2. Base
+       ------------------------------------------------------------- */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-ui);
+            color: var(--ink);
+            background: var(--paper);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* Generic placeholder block used wherever an image will sit. */
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            min-height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.55), transparent 35%),
+                linear-gradient(135deg, #f4eee3 0%, #e8e0d0 55%, #d8cdb8 100%);
+            border: 1px solid rgba(90, 74, 58, 0.18);
+        }
+
+        .image-placeholder::before {
+            content: "";
+            position: absolute;
+            inset: 24px;
+            border: 1px solid rgba(90, 74, 58, 0.16);
+        }
+
+        .image-placeholder span {
+            position: relative;
+            z-index: 1;
+            font-family: var(--font-ui);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--warm-1);
+            text-align: center;
+            padding: 24px;
+        }
+
+        /* Real images dropped into the existing image slots. */
+        .cell-image picture,
+        .insight-image picture,
+        .diagnose-visual picture {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cell-image img,
+        .insight-image img,
+        .diagnose-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Shared section-heading typography. */
+        .assess-first-head h2,
+        .page-intro h2,
+        .why-head h2,
+        .tuition-flow-head h2,
+        .outcomes-head h2,
+        .before-decide-head h2,
+        .faq-head h2 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(32px, 4.8vw, 50px);
+            line-height: 1.08;
+            letter-spacing: -0.005em;
+            color: var(--ink);
+            margin: 0 auto 18px;
+            max-width: 22ch;
+        }
+
+        /* Step eyebrow used above each section heading. */
+        .step {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--warm-1);
+            margin-bottom: 18px;
+        }
+
+        .step span {
+            opacity: 0.5;
+        }
+
+        /* Italic display lede used under several section headings. */
+        .lede {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: clamp(17px, 2vw, 20px);
+            line-height: 1.5;
+            color: var(--ink-soft);
+            max-width: 50ch;
+            margin: 0 auto;
+        }
+
+        /* -------------------------------------------------------------
+       3. Brand strip
+       ------------------------------------------------------------- */
+        .brand-strip {
+            background: #fff;
+            color: #1a1a1a;
+            padding: 22px 32px 14px;
+            border-bottom: 1px solid var(--rule-soft);
+        }
+
+        .brand-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-row {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: -0.012em;
+            color: var(--brand-ink);
+            text-transform: lowercase;
+            line-height: 1;
+            text-decoration: none;
+        }
+
+        .logo .brand-mark {
+            width: 22px;
+            height: 22px;
+            color: var(--brand-coral);
+            flex-shrink: 0;
+            transform: translateY(-1px);
+        }
+
+        .logo .wordmark {
+            display: inline-flex;
+            align-items: baseline;
+        }
+
+        .logo .wordmark .dot,
+        .footer-wordmark .name .dot {
+            color: var(--brand-green);
+        }
+
+        .brand-meta {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--ink-muted);
+            letter-spacing: 0.02em;
+        }
+
+        .sub-brand {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--ink-soft);
+            margin-top: 8px;
+        }
+
+        /* -------------------------------------------------------------
+       4. Hero
+       ------------------------------------------------------------- */
+        .hero {
+            position: relative;
+            height: clamp(420px, 70vh, 720px);
+            overflow: hidden;
+            color: #fff;
+            background:
+                radial-gradient(ellipse at 30% 70%, rgba(255, 220, 170, 0.18), transparent 55%),
+                radial-gradient(ellipse at 80% 20%, rgba(120, 90, 60, 0.35), transparent 60%),
+                linear-gradient(135deg, #4a3a2a 0%, #2c2018 55%, #1a1208 100%);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background:
+                linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.45) 100%),
+                repeating-linear-gradient(105deg,
+                    transparent 0,
+                    transparent 90px,
+                    rgba(255, 235, 200, 0.04) 90px,
+                    rgba(255, 235, 200, 0.05) 92px);
+        }
+
+        .hero-inner {
+            position: relative;
+            height: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 clamp(24px, 4vw, 48px) clamp(56px, 8vw, 96px);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .hero-eyebrow {
+            font-family: var(--font-ui);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 18px;
+        }
+
+        .years-accent {
+            font-family: var(--font-display);
+            font-style: italic;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        h1.hero-title {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(38px, 7vw, 72px);
+            line-height: 1.05;
+            letter-spacing: -0.005em;
+            color: #fff;
+            max-width: 16ch;
+            margin: 0;
+        }
+
+        /* -------------------------------------------------------------
+       5. Primary CTA blocks
+       ------------------------------------------------------------- */
+        .cta {
+            background: var(--paper-warm);
+            padding: clamp(64px, 9vw, 110px) clamp(24px, 4vw, 48px);
+            text-align: center;
+        }
+
+        .cta-inner {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(28px, 4vw, 44px);
+            line-height: 1.1;
+            letter-spacing: -0.005em;
+            color: var(--ink);
+            margin: 0 0 14px;
+        }
+
+        .cta-lede {
+            font-family: var(--font-ui);
+            font-size: clamp(15px, 1.7vw, 17.5px);
+            line-height: 1.55;
+            color: var(--ink-soft);
+            margin: 0 0 28px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 28px;
+            background: var(--sepia);
+            color: #fff;
+            text-decoration: none;
+            font-family: var(--font-ui);
+            font-weight: 700;
+            font-size: 15.5px;
+            letter-spacing: 0.02em;
+            border-radius: 2px;
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background: var(--sepia-soft);
+        }
+
+        .cta-meta {
+            font-family: var(--font-ui);
+            font-size: 12.5px;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            margin-top: 22px;
+        }
+
+        .cta-meta span+span::before {
+            content: "·";
+            margin: 0 10px;
+            opacity: 0.5;
+        }
+
+        .cta-secondary {
+            margin-top: clamp(28px, 4vw, 40px);
+            padding-top: clamp(20px, 3vw, 28px);
+            border-top: 1px solid var(--rule);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px 16px;
+        }
+
+        .cta-secondary-label {
+            font-family: var(--font-ui);
+            font-size: 14px;
+            color: var(--ink-muted);
+        }
+
+        .cta-secondary-actions {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cta-secondary-actions a {
+            font-family: var(--font-ui);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(90, 74, 58, 0.3);
+            padding-bottom: 2px;
+            transition: border-color 0.15s ease;
+        }
+
+        .cta-secondary-actions a:hover {
+            border-color: var(--ink);
+        }
+
+        /* -------------------------------------------------------------
+       6. Trust strip
+       ------------------------------------------------------------- */
+        .trust-strip {
+            background: #fff;
+            border-bottom: 1px solid var(--rule);
+            padding: clamp(18px, 2.5vw, 24px) clamp(20px, 4vw, 48px);
+        }
+
+        .trust-strip-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: clamp(12px, 2vw, 24px) clamp(20px, 3vw, 40px);
+        }
+
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .trust-label {
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+        }
+
+        .trust-value {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: clamp(14px, 1.6vw, 17px);
+            line-height: 1.2;
+            color: var(--ink);
+            letter-spacing: -0.005em;
+        }
+
+        /* -------------------------------------------------------------
+       6b. Brand statement (DIRECTION compass image)
+       ------------------------------------------------------------- */
+        .brand-statement {
+            background: var(--paper-warm);
+            border-top: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+            padding: clamp(40px, 6vw, 72px) clamp(24px, 4vw, 48px);
+        }
+
+        .brand-statement-inner {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .brand-statement picture {
+            display: block;
+        }
+
+        .brand-statement img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* -------------------------------------------------------------
+       7. Maths intro
+       ------------------------------------------------------------- */
+        .maths-intro-section {
+            border-top: 1px solid var(--rule);
+        }
+
+        .intro-block {
+            padding: clamp(56px, 7vw, 88px) 22px;
+        }
+
+        .intro-block-soft {
+            background: var(--paper-soft);
+        }
+
+        .intro-block-white {
+            background: #fff;
+        }
+
+        .intro-block-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-block-inner h3 {
+            margin: 0 auto 28px;
+            font-family: var(--font-display);
+            font-size: clamp(1.55rem, 4vw, 2.4rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+            color: #1f1713;
+            max-width: 22ch;
+        }
+
+        .intro-block-inner p {
+            max-width: 60ch;
+            margin: 0 auto 22px;
+            font-family: var(--font-ui);
+            font-size: clamp(1.05rem, 2.4vw, 1.22rem);
+            line-height: 1.7;
+            color: #3a3430;
+        }
+
+        .intro-block-inner p:last-child {
+            margin-bottom: 0;
+        }
+
+        .intro-block-inner em {
+            font-style: italic;
+        }
+
+        /* -------------------------------------------------------------
+       8. Diagnose
+       ------------------------------------------------------------- */
+        .diagnose {
+            background: #fff;
+            padding: clamp(80px, 11vw, 140px) clamp(24px, 4vw, 48px);
+            border-top: 1px solid var(--rule);
+        }
+
+        .diagnose-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+            gap: clamp(48px, 7vw, 96px);
+            align-items: center;
+        }
+
+        .diagnose-text {
+            max-width: 500px;
+        }
+
+        .diagnose-text h2 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(34px, 4.8vw, 56px);
+            line-height: 1.05;
+            letter-spacing: -0.005em;
+            color: var(--ink);
+            margin: 0 0 18px;
+            max-width: 14ch;
+        }
+
+        .diagnose-lede {
+            font-family: var(--font-ui);
+            font-size: clamp(15.5px, 1.7vw, 17.5px);
+            line-height: 1.55;
+            color: var(--ink-soft);
+            margin: 0 0 32px;
+            max-width: 44ch;
+        }
+
+        .diagnose-list {
+            list-style: none;
+            border-top: 1px solid var(--rule);
+        }
+
+        .diagnose-list li {
+            padding: 14px 0;
+            border-bottom: 1px solid var(--rule);
+            display: flex;
+            gap: 18px;
+            align-items: baseline;
+        }
+
+        .diagnose-list .num {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--warm-1);
+            flex-shrink: 0;
+            min-width: 24px;
+            letter-spacing: 0.02em;
+        }
+
+        .diagnose-list span:not(.num) {
+            font-family: var(--font-ui);
+            font-size: 15.5px;
+            line-height: 1.5;
+            color: var(--ink);
+        }
+
+        .diagnose-list b {
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .diagnose-visual {
+            aspect-ratio: 4 / 3;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* -------------------------------------------------------------
+       9. Assess-first
+       ------------------------------------------------------------- */
+        .assess-first {
+            background: var(--paper-warm);
+            padding: clamp(80px, 11vw, 130px) clamp(24px, 4vw, 48px);
+            border-top: 1px solid var(--rule);
+        }
+
+        .assess-first-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .assess-first-head {
+            text-align: center;
+            margin-bottom: clamp(48px, 7vw, 80px);
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(36px, 5vw, 64px);
+            margin-bottom: clamp(48px, 7vw, 80px);
+        }
+
+        .insight-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .insight-image {
+            aspect-ratio: 4 / 3;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .insight-label {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--warm-1);
+            margin-bottom: 12px;
+        }
+
+        .insight-title {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(22px, 2.8vw, 30px);
+            line-height: 1.18;
+            letter-spacing: -0.005em;
+            color: var(--ink);
+            margin: 0 0 14px;
+            max-width: 16ch;
+        }
+
+        .insight-body {
+            font-family: var(--font-ui);
+            font-size: 15.5px;
+            line-height: 1.6;
+            color: var(--ink-soft);
+            margin: 0;
+            max-width: 42ch;
+        }
+
+        .insight-body b {
+            color: var(--ink);
+            font-weight: 700;
+        }
+
+        .bridge-quote {
+            background: #fff;
+            text-align: center;
+            padding: clamp(56px, 8vw, 96px) clamp(24px, 4vw, 48px);
+            border-top: 1px solid var(--rule);
+        }
+
+        .bridge-quote p {
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-style: italic;
+            font-size: clamp(18px, 2.4vw, 24px);
+            line-height: 1.4;
+            color: var(--ink);
+            margin: 0 auto;
+            max-width: 32ch;
+        }
+
+        /* -------------------------------------------------------------
+       10. Page intro (Free Assessment)
+       ------------------------------------------------------------- */
+        .page-intro {
+            background: var(--paper-warm);
+            padding: clamp(72px, 10vw, 120px) clamp(24px, 4vw, 48px);
+            text-align: center;
+            border-top: 1px solid var(--rule);
+        }
+
+        .page-intro-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .page-intro p {
+            font-family: var(--font-ui);
+            font-size: clamp(16px, 1.8vw, 19px);
+            line-height: 1.55;
+            color: var(--ink-soft);
+            max-width: 50ch;
+            margin: 0 auto;
+        }
+
+        /* -------------------------------------------------------------
+       11. Cells (alternating dark text / image grid)
+       ------------------------------------------------------------- */
+        .cells {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .cell {
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cell-text {
+            background: var(--sepia);
+            color: #fff;
+            padding: clamp(40px, 5.5vw, 80px) clamp(28px, 4.5vw, 64px);
+        }
+
+        .cell-text h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(28px, 3.6vw, 40px);
+            line-height: 1.08;
+            letter-spacing: -0.005em;
+            color: #fff;
+            margin: 0 0 20px;
+            max-width: 14ch;
+        }
+
+        .cell-text p {
+            font-family: var(--font-ui);
+            font-weight: 400;
+            font-size: clamp(15px, 1.6vw, 17px);
+            line-height: 1.6;
+            color: rgba(255, 245, 230, 0.85);
+            margin: 0 0 12px;
+            max-width: 40ch;
+        }
+
+        .cell-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .cell-text p b {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .cell-text .kicker {
+            display: block;
+            font-family: var(--font-ui);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 14px;
+        }
+
+        .cell-image {
+            background: var(--paper-warm);
+        }
+
+        /* -------------------------------------------------------------
+       12. Why
+       ------------------------------------------------------------- */
+        .why {
+            background: #fff;
+            padding: clamp(80px, 11vw, 130px) clamp(24px, 4vw, 48px);
+            border-top: 1px solid var(--rule);
+        }
+
+        .why-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-head {
+            text-align: center;
+            margin-bottom: clamp(48px, 7vw, 80px);
+        }
+
+        .why-head p {
+            font-family: var(--font-ui);
+            font-size: clamp(16px, 1.7vw, 18px);
+            line-height: 1.6;
+            color: var(--ink-soft);
+            max-width: 56ch;
+            margin: 0 auto;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background: var(--rule);
+            border: 1px solid var(--rule);
+        }
+
+        .why-card {
+            background: #fff;
+            padding: clamp(32px, 4vw, 48px) clamp(24px, 3vw, 36px);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .why-card-num {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--warm-1);
+            letter-spacing: 0.08em;
+        }
+
+        .why-card h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: clamp(20px, 2.4vw, 24px);
+            line-height: 1.18;
+            letter-spacing: -0.005em;
+            color: var(--ink);
+            margin: 0;
+            max-width: 20ch;
+        }
+
+        .why-card p {
+            font-family: var(--font-ui);
+            font-size: 15px;
+            line-height: 1.55;
+            color: var(--ink-soft);
+            margin: 0;
+            max-width: 36ch;
+        }
+
+        /* -------------------------------------------------------------
+       13. Mid CTA banner
+       ------------------------------------------------------------- */
+        .cta-mid {
+            background: var(--paper-warm);
+            border-top: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .cta-mid-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+            align-items: stretch;
+        }
+
+        .cta-mid-image {
+            position: relative;
+            overflow: hidden;
+            min-height: 420px;
+        }
+
+        .cta-mid-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: bottom right;
+            display: block;
+        }
+
+        .cta-mid-text {
+            padding: clamp(48px, 7vw, 88px) clamp(32px, 5vw, 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: clamp(28px, 3.5vw, 40px);
+        }
+
+        .cta-mid-headline {
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-style: italic;
+            font-size: clamp(28px, 4vw, 48px);
+            line-height: 1.1;
+            letter-spacing: -0.005em;
+            color: var(--ink);
+            margin: 0;
+            max-width: 14ch;
+        }
+
+        .cta-mid-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 32px;
+            background: var(--brand-coral);
+            color: #fff;
+            border-radius: 999px;
+            font-family: var(--font-ui);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        /* -------------------------------------------------------------
+       14. Tuition flow + Outcomes + Before-decide
+       ------------------------------------------------------------- */
+        .tuition-flow,
+        .before-decide {
+            background: #fff;
+            padding: clamp(80px, 11vw, 130px) clamp(24px, 4vw, 48px);
+            border-top: 1px solid var(--rule);
+        }
+
+        .outcomes {
+            background: var(--paper-warm);
+            padding: clamp(80px, 11vw, 130px) clamp(24px, 4vw, 48px);
+            border-top: 1px solid var(--rule);
+        }
+
+        .tuition-flow-inner,
+        .outcomes-inner,
+        .before-decide-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tuition-flow-head,
+        .outcomes-head,
+        .before-decide-head {
+            text-align: center;
+            margin-bottom: clamp(48px, 7vw, 80px);
+        }
+
+        .before-decide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(20px, 2.5vw, 32px);
+        }
+
+        .decide-card {
+            position: relative;
+            background: #fff;
+            border: 1px solid var(--rule);
+            padding: clamp(36px, 4.5vw, 56px) clamp(28px, 3.5vw, 40px);
+            overflow: hidden;
+            min-height: 300px;
+        }
+
+        .decide-card::before {
+            content: attr(data-num);
+            position: absolute;
+            top: -32px;
+            right: -8px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(140px, 18vw, 220px);
+            line-height: 1;
+            color: rgba(90, 74, 58, 0.06);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .decide-card-label {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--warm-1);
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .decide-card h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(22px, 2.7vw, 28px);
+            line-height: 1.15;
+            color: var(--ink);
+            margin: 0 0 16px;
+            max-width: 14ch;
+            position: relative;
+            z-index: 1;
+        }
+
+        .decide-card p {
+            font-family: var(--font-ui);
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--ink-soft);
+            margin: 0;
+            max-width: 36ch;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* -------------------------------------------------------------
+       15. Location
+       ------------------------------------------------------------- */
+        .location {
+            background: #fff;
+            padding: clamp(80px, 11vw, 130px) clamp(24px, 4vw, 48px);
+            border-top: 1px solid var(--rule);
+        }
+
+        .location-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .location-heading {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(34px, 5.2vw, 56px);
+            line-height: 1.05;
+            color: var(--ink);
+            margin: 0 0 clamp(40px, 5vw, 56px);
+            max-width: 22ch;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: minmax(320px, 380px) 1fr;
+            min-height: 440px;
+        }
+
+        .location-card {
+            background: linear-gradient(160deg, #2c2018 0%, #1d1610 100%);
+            color: #fff;
+            padding: clamp(32px, 4vw, 48px);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-card .place-name {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(28px, 3.6vw, 38px);
+            line-height: 1.05;
+            margin: 0 0 clamp(20px, 2.5vw, 28px);
+        }
+
+        .location-card .address {
+            font-family: var(--font-ui);
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.82);
+            margin: 0 0 clamp(28px, 3.5vw, 40px);
+        }
+
+        .location-card .map-link {
+            font-family: var(--font-ui);
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 6px;
+            align-self: flex-start;
+            margin-top: auto;
+        }
+
+        .location-map {
+            position: relative;
+            background: var(--rule-soft);
+            overflow: hidden;
+            min-height: 440px;
+        }
+
+        /* -------------------------------------------------------------
+       16. FAQ
+       ------------------------------------------------------------- */
+        .faq {
+            background: linear-gradient(180deg, #2c2018 0%, #211912 100%);
+            padding: clamp(80px, 11vw, 130px) clamp(24px, 4vw, 48px);
+        }
+
+        .faq-inner {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .faq-head {
+            margin-bottom: clamp(48px, 7vw, 80px);
+        }
+
+        .faq-head .step {
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .faq-head h2 {
+            color: #fff;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .faq-head p {
+            font-family: var(--font-ui);
+            font-size: clamp(15px, 1.7vw, 18px);
+            line-height: 1.55;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 50ch;
+            margin: 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .faq-item:first-child {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .faq-item summary {
+            list-style: none;
+            cursor: pointer;
+            padding: clamp(22px, 3vw, 32px) 56px clamp(22px, 3vw, 32px) 0;
+            position: relative;
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-size: clamp(20px, 2.6vw, 30px);
+            line-height: 1.25;
+            color: #fff;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: "";
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            width: 14px;
+            height: 14px;
+            border-right: 2px solid rgba(255, 255, 255, 0.85);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.85);
+            transform: translateY(-75%) rotate(45deg);
+            transition: transform 0.25s ease;
+        }
+
+        .faq-item[open] summary::after {
+            transform: translateY(-25%) rotate(-135deg);
+        }
+
+        .faq-answer {
+            padding: 0 56px clamp(28px, 3.5vw, 36px) 0;
+            font-family: var(--font-ui);
+            font-size: clamp(15px, 1.7vw, 17px);
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.78);
+            margin: 0;
+            max-width: 60ch;
+        }
+
+        /* -------------------------------------------------------------
+       17. Footer
+       ------------------------------------------------------------- */
+        .site-footer {
+            background: #fff;
+            padding: clamp(60px, 8vw, 100px) clamp(24px, 4vw, 48px) clamp(28px, 3.5vw, 36px);
+            border-top: 1px solid var(--rule);
+        }
+
+        .site-footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-wordmark {
+            margin: 0 0 clamp(48px, 7vw, 80px);
+            display: flex;
+            align-items: center;
+            gap: clamp(14px, 2vw, 22px);
+        }
+
+        .footer-wordmark .footer-mark {
+            width: clamp(40px, 5.6vw, 64px);
+            height: clamp(40px, 5.6vw, 64px);
+            color: var(--brand-coral);
+            flex-shrink: 0;
+        }
+
+        .footer-wordmark .name {
+            display: block;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(36px, 5.6vw, 64px);
+            line-height: 1.05;
+            letter-spacing: -0.012em;
+            color: var(--brand-ink);
+            text-transform: lowercase;
+        }
+
+        .footer-wordmark .tag {
+            display: block;
+            font-family: var(--font-ui);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--warm-1);
+            margin-top: 14px;
+        }
+
+        .footer-cols {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(32px, 5vw, 64px);
+            margin-bottom: clamp(40px, 6vw, 64px);
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            margin: 0 0 18px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 12px;
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-size: clamp(16px, 1.7vw, 19px);
+            line-height: 1.35;
+            color: var(--ink);
+        }
+
+        .footer-col a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: var(--rule);
+            margin: clamp(24px, 4vw, 40px) 0 clamp(20px, 3vw, 28px);
+        }
+
+        .footer-fine {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .footer-fine .credit,
+        .footer-fine .legal a {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            color: var(--ink-muted);
+            text-decoration: none;
+        }
+
+        .footer-fine .legal {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        /* -------------------------------------------------------------
+       18. Responsive
+       ------------------------------------------------------------- */
+        @media (max-width: 900px) {
+            .before-decide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .decide-card {
+                min-height: 0;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .diagnose-inner {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .diagnose-visual {
+                aspect-ratio: 16 / 11;
+                order: -1;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+                min-height: 0;
+            }
+
+            .location-card {
+                min-height: 300px;
+            }
+
+            .location-map {
+                min-height: 320px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .cta-mid-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-mid-image {
+                min-height: 0;
+                max-height: 60vh;
+            }
+
+            .cta-mid-image img {
+                object-position: bottom center;
+            }
+
+            .cta-mid-headline {
+                max-width: 100%;
+            }
+
+            .footer-cols {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .footer-fine {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 14px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .trust-strip-inner {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 14px 20px;
+            }
+
+            .insights-grid,
+            .why-grid,
+            .cells {
+                grid-template-columns: 1fr;
+            }
+
+            .cell {
+                aspect-ratio: 16 / 11;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .brand-strip {
+                padding: 18px 22px 12px;
+            }
+
+            .brand-meta {
+                display: none;
+            }
+
+            .hero {
+                height: clamp(380px, 65vh, 540px);
+            }
+
+            .hero-inner {
+                padding: 0 22px 56px;
+            }
+
+            h1.hero-title {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .intro-block {
+                padding: 48px 20px;
+            }
+
+            .intro-block-inner h3 {
+                margin-bottom: 22px;
+            }
+
+            .intro-block-inner p {
+                margin-bottom: 20px;
+            }
+
+            .cta-meta {
+                letter-spacing: 0.08em;
+            }
+
+            .cta-meta span {
+                display: block;
+                margin: 4px 0;
+            }
+
+            .cta-meta span+span::before {
+                content: "";
+                margin: 0;
+            }
+        }
+
+        /* -------------------------------------------------------------
+       19. WhatsApp bubble + sticky CTA bar
+       ------------------------------------------------------------- */
+        .whatsapp-bubble {
+            position: fixed;
+            right: 20px;
+            bottom: 24px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--sepia);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+            transition: background 0.2s ease, transform 0.2s ease, bottom 0.3s ease;
+        }
+
+        .whatsapp-bubble:hover {
+            background: var(--sepia-soft);
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-bubble svg {
+            width: 28px;
+            height: 28px;
+            fill: #fff;
+        }
+
+        .whatsapp-bubble.lifted {
+            bottom: 80px;
+        }
+
+        .sticky-cta {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            z-index: 99;
+            background: var(--sepia);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-cta-call,
+        .sticky-cta-book {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 14px;
+            font-family: var(--font-ui);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .sticky-cta-call {
+            border-right: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .sticky-cta-book {
+            background: var(--brand-coral);
+        }
+
+        .sticky-cta svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 480px) {
+
+            .sticky-cta-call,
+            .sticky-cta-book {
+                font-size: 12.5px;
+                padding: 14px 8px;
+                letter-spacing: 0.02em;
+            }
+
+            .whatsapp-bubble {
+                right: 14px;
+                bottom: 20px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .whatsapp-bubble svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .whatsapp-bubble.lifted {
+                bottom: 72px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="brand-strip">
+        <div class="brand-inner">
+            <div class="logo-row">
+                <a class="logo" href="/" aria-label="Improve Tuition home">
+                    <svg class="brand-mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="36" cy="22" r="8.5" fill="currentColor" />
+                        <path d="M22 50 L46 78 L82 24" stroke="currentColor" stroke-width="13.5" fill="none" />
+                    </svg>
+                    <span class="wordmark">improve&nbsp;tuition<span class="dot">.</span></span>
+                </a>
+
+                <div class="brand-meta">Established 2007 · Batley</div>
+            </div>
+
+            <div class="sub-brand">GCSE Maths Tutor in Batley</div>
+        </div>
+    </header>
+
+    <section class="hero" aria-label="Page introduction">
+        <div class="hero-inner">
+            <div class="hero-eyebrow">GCSE Maths · <span class="years-accent">Years 9–11</span></div>
+            <h1 class="hero-title">GCSE Maths Tutor in Batley for <span class="years-accent">Years 9–11</span> Pupils.
+            </h1>
+        </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+        <div class="cta-inner">
+            <h2 id="cta-title">Book your free assessment.</h2>
+
+            <p class="cta-lede">
+                A calm diagnostic starting point. Not a pass-or-fail test. You'll know what your child needs before
+                paying for any lessons.
+            </p>
+
+            <a href="#start" class="cta-button">
+                Start your free assessment
+                <svg width="18" height="9" viewBox="0 0 22 10" fill="none" aria-hidden="true">
+                    <path d="M0 5h20M16 1l4 4-4 4" stroke="currentColor" stroke-width="1.8" />
+                </svg>
+            </a>
+
+            <div class="cta-meta">
+                <span>Takes 2 minutes</span><span>No payment</span><span>No obligation</span>
+            </div>
+
+            <div class="cta-secondary">
+                <span class="cta-secondary-label">Prefer to speak first?</span>
+                <span class="cta-secondary-actions">
+                    <a href="tel:01924506010">Call 01924 506010</a>
+                    <span>·</span>
+                    <a href="#start">Book a Free Assessment</a>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Trust signals">
+        <div class="trust-strip-inner">
+            <div class="trust-item">
+                <span class="trust-label">Established</span>
+                <span class="trust-value">2007</span>
+            </div>
+
+            <div class="trust-item">
+                <span class="trust-label">Led by</span>
+                <span class="trust-value">Mr G Dabhad, QTS</span>
+            </div>
+
+            <div class="trust-item">
+                <span class="trust-label">Centre</span>
+                <span class="trust-value">Batley · Online</span>
+            </div>
+
+            <div class="trust-item">
+                <span class="trust-label">Reviews</span>
+                <span class="trust-value">Trustpilot · Google</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="brand-statement" aria-label="Direction — guided by a qualified teacher">
+        <div class="brand-statement-inner">
+            <picture>
+                <source srcset="images/direction-compass.webp" type="image/webp">
+                <img src="images/direction-compass.png" alt="Direction — guided by Mr G Dabhad, qualified teacher">
+            </picture>
+        </div>
+    </section>
+
+    <section class="maths-intro-section" aria-labelledby="maths-intro-title">
+
+        <div class="intro-block intro-block-soft">
+            <div class="intro-block-inner">
+                <h3 id="maths-intro-title">When hard work is not turning into marks</h3>
+
+                <p>
+                    Many parents come to Improve Tuition when Maths starts to feel serious — often in Year 10 or 11,
+                    when mocks are lower than expected and time feels short.
+                </p>
+
+                <p>
+                    The problem is rarely effort. The marks drift because the real cause has not been found.
+                </p>
+            </div>
+        </div>
+
+        <div class="intro-block intro-block-white">
+            <div class="intro-block-inner">
+                <h3>Built for pupils who are trying, but still losing marks</h3>
+
+                <p>
+                    This page exists for one kind of pupil — the one who is working hard at Maths but still losing
+                    marks.
+                    Our job is to find <em>why</em>, explain it clearly, and rebuild the marks back up before the exam.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="diagnose" aria-labelledby="diagnose-title">
+        <div class="diagnose-inner">
+            <div class="diagnose-text">
+                <h2 id="diagnose-title">Often it's one specific gap.</h2>
+
+                <p class="diagnose-lede">
+                    The patterns we see most often when marks are uneven across the paper.
+                </p>
+
+                <ul class="diagnose-list">
+                    <li>
+                        <span class="num">01</span>
+                        <span><b>Shaky foundations</b> — times tables, fractions, decimals, percentages</span>
+                    </li>
+
+                    <li>
+                        <span class="num">02</span>
+                        <span><b>Algebra</b> — equations, brackets, simultaneous equations</span>
+                    </li>
+
+                    <li>
+                        <span class="num">03</span>
+                        <span><b>Multi-step questions</b> where they do not know how to begin</span>
+                    </li>
+
+                    <li>
+                        <span class="num">04</span>
+                        <span><b>Foundation or Higher tier</b> — and parents wanting a clearer view</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="diagnose-visual" aria-hidden="true">
+                <picture>
+                    <source srcset="images/find-the-gap.webp" type="image/webp">
+                    <img src="images/find-the-gap.png" alt="">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="assess-first" aria-labelledby="assess-first-title">
+        <div class="assess-first-inner">
+            <header class="assess-first-head">
+                <div class="step">01 <span>/</span> Why assessment first</div>
+
+                <h2 id="assess-first-title">Why the Maths gap should be found before tuition starts.</h2>
+
+                <p class="lede">More teaching is not always the same as better teaching.</p>
+            </header>
+
+            <div class="insights-grid">
+                <article class="insight-card">
+                    <div class="insight-image" aria-hidden="true">
+                        <picture>
+                            <source srcset="images/tuition-becomes-list.webp" type="image/webp">
+                            <img src="images/tuition-becomes-list.png" alt="">
+                        </picture>
+                    </div>
+
+                    <span class="insight-label">Without diagnosis</span>
+
+                    <h3 class="insight-title">Tuition becomes a list of topics.</h3>
+
+                    <p class="insight-body">
+                        Fractions one week, algebra the next, then graphs and exam papers. The pupil works hard, but the
+                        same mistakes keep appearing — because the underlying cause has not been corrected.
+                    </p>
+                </article>
+
+                <article class="insight-card">
+                    <div class="insight-image" aria-hidden="true">
+                        <picture>
+                            <source srcset="images/same-score.webp" type="image/webp">
+                            <img src="images/same-score.png" alt="">
+                        </picture>
+                    </div>
+
+                    <span class="insight-label">With assessment first</span>
+
+                    <h3 class="insight-title">Same score, different needs.</h3>
+
+                    <p class="insight-body">
+                        Two children with the same mock score can need <b>completely different support</b>. We assess
+                        first so tuition is focused on what's actually missing — not guessed at from the latest test.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="bridge-quote">
+        <p>Find the reason marks are being lost — then teach in the right order.</p>
+    </section>
+
+    <section class="page-intro" aria-labelledby="assessment-title">
+        <div class="page-intro-inner">
+            <div class="step">02 <span>/</span> Free Assessment</div>
+
+            <h2 id="assessment-title">Find out what needs fixing first.</h2>
+
+            <p>
+                Before any paid tuition, a calm diagnostic so you know exactly where your child stands — and what should
+                come next.
+            </p>
+        </div>
+    </section>
+
+    <section class="cells" aria-label="How the assessment works">
+        <div class="cell cell-text">
+            <span class="kicker">The principle</span>
+
+            <h3>Free assessment first</h3>
+
+            <p>
+                Before any paid tuition. We identify where your child is secure, where the gaps are, and what should be
+                fixed first.
+            </p>
+
+            <p>
+                Teacher-led by <b>Mr G Dabhad (QTS)</b>, 18 years' experience. Supporting families since 2007.
+            </p>
+        </div>
+
+        <div class="cell cell-image" aria-hidden="true">
+            <picture>
+                <source srcset="images/assessment-first.webp" type="image/webp">
+                <img src="images/assessment-first.png" alt="">
+            </picture>
+        </div>
+
+        <div class="cell cell-image" aria-hidden="true">
+            <picture>
+                <source srcset="images/what-we-look-at.webp" type="image/webp">
+                <img src="images/what-we-look-at.png" alt="">
+            </picture>
+        </div>
+
+        <div class="cell cell-text">
+            <span class="kicker">What we check</span>
+
+            <h3>Not just the latest test score</h3>
+
+            <p>
+                We look at number fluency, fractions, decimals, percentages, algebra, problem-solving, exam-question
+                reading, working and method marks.
+            </p>
+
+            <p>
+                The aim is to understand <b>why</b> marks are being lost, not simply to tell your child they need to
+                revise more.
+            </p>
+        </div>
+    </section>
+
+    <section class="why" aria-labelledby="why-title">
+        <div class="why-inner">
+            <header class="why-head">
+                <div class="step">03 <span>/</span> Why parents choose us</div>
+
+                <h2 id="why-title">Structured Maths support. Not guesswork.</h2>
+
+                <p>
+                    Parents choose Improve Tuition because the first step is clear: assess, explain, then teach in the
+                    right order.
+                </p>
+            </header>
+
+            <div class="why-grid">
+                <article class="why-card">
+                    <span class="why-card-num">01</span>
+
+                    <h3>Teacher-led diagnosis</h3>
+
+                    <p>
+                        Mr G Dabhad monitors the assessment process and guides the next steps, so tuition is built
+                        around the actual gaps.
+                    </p>
+                </article>
+
+                <article class="why-card">
+                    <span class="why-card-num">02</span>
+
+                    <h3>DBS-checked tutors</h3>
+
+                    <p>
+                        Your child is supported by tutors working within a structured, teacher-led system.
+                    </p>
+                </article>
+
+                <article class="why-card">
+                    <span class="why-card-num">03</span>
+
+                    <h3>Batley centre or online</h3>
+
+                    <p>
+                        Families can attend at our Batley centre or study online, depending on what suits the child
+                        best.
+                    </p>
+                </article>
+
+                <article class="why-card">
+                    <span class="why-card-num">04</span>
+
+                    <h3>Clear next step</h3>
+
+                    <p>
+                        After the assessment, you will understand what needs work, what format may suit your child, and
+                        whether tuition is the right next step.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-mid" aria-label="Mid-page call to action">
+        <div class="cta-mid-inner">
+            <div class="cta-mid-image" aria-hidden="true">
+                <picture>
+                    <source srcset="images/cta-banner-lady.webp" type="image/webp">
+                    <img src="images/cta-banner-lady.png" alt="">
+                </picture>
+            </div>
+
+            <div class="cta-mid-text">
+                <p class="cta-mid-headline">Find the Maths gap before paying for lessons.</p>
+
+                <a href="#start" class="cta-mid-button">Book Free Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tuition-flow" aria-labelledby="tuition-flow-title">
+        <div class="tuition-flow-inner">
+            <header class="tuition-flow-head">
+                <div class="step">04 <span>/</span> How tuition follows</div>
+
+                <h2 id="tuition-flow-title">After the assessment, tuition follows the plan.</h2>
+
+                <p class="lede">
+                    The assessment is not the end point. It gives the order for what should be fixed first.
+                </p>
+            </header>
+
+            <div class="insights-grid">
+                <article class="insight-card">
+                    <div class="insight-image" aria-hidden="true">
+                        <picture>
+                            <source srcset="images/linked-to-findings.webp" type="image/webp">
+                            <img src="images/linked-to-findings.png" alt="">
+                        </picture>
+                    </div>
+
+                    <span class="insight-label">Step one</span>
+
+                    <h3 class="insight-title">Secure the foundations.</h3>
+
+                    <p class="insight-body">
+                        If number fluency, fractions or basic algebra are weak, we deal with those first so later exam
+                        questions become easier to handle.
+                    </p>
+                </article>
+
+                <article class="insight-card">
+                    <div class="insight-image" aria-hidden="true">
+                        <picture>
+                            <source srcset="images/checked-properly.webp" type="image/webp">
+                            <img src="images/checked-properly.png" alt="">
+                        </picture>
+                    </div>
+
+                    <span class="insight-label">Step two</span>
+
+                    <h3 class="insight-title">Build exam marks.</h3>
+
+                    <p class="insight-body">
+                        Once the basics are stronger, we work on exam-question reading, method marks, multi-step
+                        questions and confidence under pressure.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="outcomes" aria-labelledby="outcomes-title">
+        <div class="outcomes-inner">
+            <header class="outcomes-head">
+                <div class="step">05 <span>/</span> What changes</div>
+
+                <h2 id="outcomes-title">After the assessment, two things change.</h2>
+
+                <p class="lede">Different angles on the same point — your child stops drifting and starts gaining
+                    ground.</p>
+            </header>
+
+            <div class="insights-grid">
+                <article class="insight-card">
+                    <div class="insight-image" aria-hidden="true">
+                        <picture>
+                            <source srcset="images/what-youll-see.webp" type="image/webp">
+                            <img src="images/what-youll-see.png" alt="">
+                        </picture>
+                    </div>
+
+                    <span class="insight-label">What you'll see</span>
+
+                    <h3 class="insight-title">Marks moving up, paper by paper.</h3>
+
+                    <p class="insight-body">A pattern of progress across mocks, homework and topic tests — not a one-off
+                        bump in a single result.</p>
+                </article>
+
+                <article class="insight-card">
+                    <div class="insight-image" aria-hidden="true">
+                        <picture>
+                            <source srcset="images/what-youll-know.webp" type="image/webp">
+                            <img src="images/what-youll-know.png" alt="">
+                        </picture>
+                    </div>
+
+                    <span class="insight-label">What you'll know</span>
+
+                    <h3 class="insight-title">Why marks were being lost.</h3>
+
+                    <p class="insight-body">A real explanation of what's been holding your child back — and exactly what
+                        should be fixed first.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="before-decide" aria-labelledby="before-decide-title">
+        <div class="before-decide-inner">
+            <header class="before-decide-head">
+                <div class="step">06 <span>/</span> Before you decide</div>
+
+                <h2 id="before-decide-title">What parents usually want to know first.</h2>
+
+                <p class="lede">You should not have to commit before the problem is clear.</p>
+            </header>
+
+            <div class="before-decide-grid">
+                <article class="decide-card" data-num="01">
+                    <span class="decide-card-label">Assessment</span>
+
+                    <h3>Is it really free?</h3>
+
+                    <p>
+                        Yes. There is no payment to book the assessment. We explain what we found before any paid
+                        tuition begins.
+                    </p>
+                </article>
+
+                <article class="decide-card" data-num="02">
+                    <span class="decide-card-label">Suitability</span>
+
+                    <h3>What if we are unsure?</h3>
+
+                    <p>
+                        That is normal. Many parents do not know whether the issue is algebra, exam technique,
+                        confidence or weak foundations.
+                    </p>
+                </article>
+
+                <article class="decide-card" data-num="03">
+                    <span class="decide-card-label">Next step</span>
+
+                    <h3>What happens after?</h3>
+
+                    <p>
+                        You receive a clear explanation of what needs work and which tuition format may suit your child
+                        best.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="location" aria-labelledby="location-title">
+        <div class="location-inner">
+            <h2 id="location-title" class="location-heading">Maths tuition in Batley and online.</h2>
+
+            <div class="location-grid">
+                <div class="location-card">
+                    <h3 class="place-name">Improve Tuition Batley</h3>
+
+                    <div class="address">
+                        <div>Batley tuition centre</div>
+                        <div>Online Maths support also available</div>
+                        <div>For Years 9–11 and GCSE pupils</div>
+                    </div>
+
+                    <a class="map-link" href="#start">Book a free assessment →</a>
+                </div>
+
+                <div class="location-map" aria-hidden="true">
+                    <div class="image-placeholder">
+                        <span>Map placeholder</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+        <div class="faq-inner">
+            <header class="faq-head">
+                <div class="step">07 <span>/</span> Questions</div>
+
+                <h2 id="faq-title">GCSE Maths tuition FAQs.</h2>
+
+                <p>
+                    Clear answers for parents before booking a free Maths assessment.
+                </p>
+            </header>
+
+            <div>
+                <details class="faq-item">
+                    <summary>Do you help Year 9 pupils?</summary>
+                    <p class="faq-answer">
+                        Yes. We support Year 9 pupils alongside GCSE pupils, especially where earlier foundations need
+                        strengthening before Year 10 or Year 11.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Is the Maths assessment free?</summary>
+                    <p class="faq-answer">
+                        Yes. There is no payment to book the assessment. We explain what we found before any paid
+                        tuition begins.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Do you help with Foundation and Higher tier?</summary>
+                    <p class="faq-answer">
+                        Yes. The assessment helps us understand whether your child needs support with Foundation tier,
+                        Higher tier, or earlier Maths gaps that are affecting GCSE performance.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How much does GCSE Maths tuition cost?</summary>
+                    <p class="faq-answer">
+                        Pricing depends on the format — class, small group, paired or one-to-one. We explain the
+                        recommended format and cost before you decide whether to continue.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="start" aria-labelledby="final-cta-title">
+        <div class="cta-inner">
+            <h2 id="final-cta-title">Start with a free Maths assessment.</h2>
+
+            <p class="cta-lede">
+                We will identify what your child understands, where marks are being lost, and what should be fixed
+                first.
+            </p>
+
+            <a href="/contact/" class="cta-button">
+                Book a Free Maths Assessment
+                <svg width="18" height="9" viewBox="0 0 22 10" fill="none" aria-hidden="true">
+                    <path d="M0 5h20M16 1l4 4-4 4" stroke="currentColor" stroke-width="1.8" />
+                </svg>
+            </a>
+
+            <div class="cta-meta">
+                <span>Takes 2 minutes</span><span>No obligation</span><span>Teacher-led</span>
+            </div>
+
+            <div class="cta-secondary">
+                <span class="cta-secondary-label">Prefer to speak first?</span>
+                <span class="cta-secondary-actions">
+                    <a href="tel:01924506010">Call 01924 506010</a>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="footer-wordmark">
+                <svg class="footer-mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="36" cy="22" r="8.5" fill="currentColor" />
+                    <path d="M22 50 L46 78 L82 24" stroke="currentColor" stroke-width="13.5" fill="none" />
+                </svg>
+
+                <span>
+                    <span class="name">improve tuition<span class="dot">.</span></span>
+                    <span class="tag">Maths · English · Science</span>
+                </span>
+            </div>
+
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h4>Tuition</h4>
+                    <ul>
+                        <li><a href="/maths-tuition/">Maths Tuition</a></li>
+                        <li><a href="/english-tuition/">English Tuition</a></li>
+                        <li><a href="/science-tuition/">Science Tuition</a></li>
+                        <li><a href="/gcse-tuition/">GCSE Tuition</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Parents</h4>
+                    <ul>
+                        <li><a href="/pricing/">Pricing</a></li>
+                        <li><a href="/reviews/">Parent Reviews</a></li>
+                        <li><a href="/safeguarding/">Safeguarding</a></li>
+                        <li><a href="/contact/">Book Free Assessment</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:01924506010">01924 506010</a></li>
+                        <li><a href="https://www.improvetuition.org/">www.improvetuition.org</a></li>
+                        <li>Batley centre and online tuition</li>
+                        <li>Established 2007</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-fine">
+                <div class="credit">© Improve Tuition. Established 2007.</div>
+
+                <div class="legal">
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                    <a href="/terms/">Terms</a>
+                    <a href="/safeguarding/">Safeguarding</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a class="whatsapp-bubble" href="https://wa.me/441924506010" target="_blank" rel="noopener"
+        aria-label="Message Improve Tuition on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.04 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.889-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.886 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <aside class="sticky-cta" aria-label="Quick contact">
+        <a class="sticky-cta-call" href="tel:01924506010">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 0 0-1.02.24l-2.2 2.2a15.07 15.07 0 0 1-6.59-6.59l2.2-2.2a1 1 0 0 0 .25-1.02A11.36 11.36 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z" />
+            </svg>
+            01924 506010
+        </a>
+        <a class="sticky-cta-book" href="#start">Book Free Assessment</a>
+    </aside>
+
+    <script>
+        (function () {
+            var bar = document.querySelector('.sticky-cta');
+            var bubble = document.querySelector('.whatsapp-bubble');
+            var SCROLL_THRESHOLD = 700;
+            var inView = new Set();
+
+            // Hide the bar whenever any of these are on screen — they already
+            // contain a Book CTA, so the persistent bar would be redundant.
+            var hideOver = document.querySelectorAll('.cta, .cta-mid, .site-footer');
+
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) inView.add(e.target);
+                    else inView.delete(e.target);
+                });
+                update();
+            }, { threshold: 0.15 });
+
+            hideOver.forEach(function (el) { io.observe(el); });
+
+            function update() {
+                var scrolled = window.scrollY > SCROLL_THRESHOLD;
+                var show = scrolled && inView.size === 0;
+                bar.classList.toggle('visible', show);
+                bubble.classList.toggle('lifted', show);
+            }
+
+            window.addEventListener('scroll', update, { passive: true });
+            update();
+        })();
+    </script>
+
+</body>
+
+</html>
