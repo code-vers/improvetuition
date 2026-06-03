@@ -1,0 +1,313 @@
+/* FOOTER — canonical site footer */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 18px;
+    margin-bottom: 14px
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .08);
+    color: var(--white);
+    transition: background .15s ease, transform .15s ease;
+    text-decoration: none
+}
+
+.footer-social a:hover {
+    background: var(--coral);
+    transform: translateY(-2px)
+}
+
+.footer-social svg {
+    width: 18px;
+    height: 18px
+}
+
+.site-footer {
+    background: var(--navy);
+    color: var(--white);
+    padding: clamp(64px, 9vw, 100px) clamp(24px, 4vw, 48px) clamp(40px, 5vw, 56px)
+}
+
+.site-footer-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: center
+}
+
+.footer-mark-block {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 12px
+}
+
+.footer-mark-block .footer-mark {
+    width: clamp(36px, 4.5vw, 52px);
+    height: clamp(36px, 4.5vw, 52px);
+    color: var(--coral);
+    flex-shrink: 0
+}
+
+.footer-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1;
+    letter-spacing: -.012em;
+    color: var(--white);
+    text-transform: lowercase
+}
+
+.footer-name .dot {
+    color: var(--coral)
+}
+
+.footer-tagline {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(16px, 1.8vw, 20px);
+    line-height: 1.4;
+    color: var(--white);
+    margin: 0 0 clamp(20px, 2.5vw, 28px);
+    text-wrap: balance
+}
+
+.footer-tagline em.gold {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 600
+}
+
+.footer-contact {
+    margin-bottom: clamp(8px, 2vw, 16px)
+}
+
+.footer-phone {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(18px, 2vw, 22px);
+    color: var(--white);
+    text-decoration: none;
+    margin-bottom: 6px
+}
+
+.footer-email {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(15px, 1.7vw, 18px);
+    color: var(--gold);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    margin-bottom: 14px
+}
+
+.footer-hours {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: rgba(255, 255, 255, .55);
+    margin: 0
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: clamp(24px, 3vw, 40px);
+    text-align: left;
+    margin: clamp(20px, 3vw, 28px) 0 clamp(44px, 5vw, 60px);
+    padding: clamp(32px, 4vw, 44px) 0;
+    border-top: 1px solid rgba(255, 255, 255, .12);
+    border-bottom: 1px solid rgba(255, 255, 255, .12)
+}
+
+.footer-col h3 {
+    font-family: var(--font-ui);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 18px;
+    padding-bottom: 11px;
+    position: relative
+}
+
+.footer-col h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 22px;
+    height: 1.5px;
+    background: var(--gold);
+    opacity: .55
+}
+
+.footer-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.footer-col li {
+    margin: 0 0 12px
+}
+
+.footer-col li:last-child {
+    margin-bottom: 0
+}
+
+.footer-col a {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .72);
+    text-decoration: none;
+    transition: color .18s ease, padding-left .18s ease;
+    line-height: 1.45;
+    display: inline-block;
+    position: relative
+}
+
+.footer-col a::before {
+    content: "\2192";
+    position: absolute;
+    left: -16px;
+    opacity: 0;
+    color: var(--coral);
+    transition: opacity .18s ease, left .18s ease;
+    font-size: 12px
+}
+
+.footer-col a:hover {
+    color: var(--white);
+    padding-left: 16px
+}
+
+.footer-col a:hover::before {
+    opacity: 1;
+    left: 0
+}
+
+.footer-rule {
+    height: 1px;
+    background: rgba(255, 255, 255, .15);
+    margin: 0 auto clamp(28px, 3.5vw, 36px);
+    max-width: 100%
+}
+
+.footer-credentials {
+    font-family: var(--font-ui);
+    font-size: clamp(13px, 1.4vw, 14.5px);
+    color: rgba(255, 255, 255, .8);
+    margin: 0 0 8px;
+    line-height: 1.5
+}
+
+.footer-credentials em.gold {
+    color: var(--gold);
+    font-style: normal;
+    font-weight: 700
+}
+
+.footer-address {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: rgba(255, 255, 255, .55);
+    margin: 0 0 clamp(28px, 4vw, 36px);
+    line-height: 1.5
+}
+
+.footer-fine {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    color: rgba(255, 255, 255, .55);
+    margin: 0;
+    line-height: 1.5
+}
+
+.footer-fine a {
+    color: rgba(255, 255, 255, .85);
+    text-decoration: none
+}
+
+.footer-fine a:hover {
+    color: var(--white)
+}
+
+@media (max-width:900px) {
+    .footer-nav {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 34px 24px
+    }
+}
+
+@media (max-width:600px) {
+    .footer-nav {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px
+    }
+}
+
+@media (max-width:760px) {
+    .hero {
+        padding: 64px 0 70px
+    }
+}
+
+@media (max-width:380px) {
+    .footer-nav {
+        grid-template-columns: 1fr
+    }
+}
+
+/* reveal */
+.rv {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .7s ease, transform .7s ease
+}
+
+.rv.in {
+    opacity: 1;
+    transform: none
+}
+
+.skip {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--navy);
+    color: #fff;
+    padding: 12px 18px;
+    z-index: 2000;
+    border-radius: 0 0 8px 0;
+    font-weight: 700
+}
+
+.skip:focus {
+    left: 0
+}
+
+@media(prefers-reduced-motion:reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important
+    }
+
+    .rv {
+        opacity: 1;
+        transform: none
+    }
+}
