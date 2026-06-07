@@ -7,6 +7,11 @@
     letter-spacing: 0.01em;
 }
 
+.utility-left a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.82);
+}
+
 .utility-inner {
     max-width: 1240px;
     margin: 0 auto;
@@ -409,9 +414,11 @@
 }
 
 .m-sub-link:hover,
-.m-sub-link:active {
+.m-sub-link:active,
+.m-sub-link.is-active {
     background: var(--cream);
     color: var(--coral);
+    font-weight: 700;
 }
 
 .m-sub-link svg {

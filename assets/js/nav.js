@@ -43,4 +43,32 @@
         });
     });
 
+    // Highlight active link and expand its accordion
+    function normalizePath(p) {
+        if (!p) return '';
+        var path = p.replace(/^https?:\/\/[^\/]+/, '');
+        path = path.replace(/index\.(html|php)$/, '');
+        path = path.replace(/\/$/, '');
+        return path || '/';
+    }
+
+    if (drawer) {
+        var currentPath = normalizePath(window.location.pathname);
+        var drawerLinks = drawer.querySelectorAll('a');
+        drawerLinks.forEach(function (link) {
+            var href = link.getAttribute('href');
+            if (!href) return;
+            var linkPath = normalizePath(href);
+            if (linkPath === currentPath) {
+                link.classList.add('is-active');
+                link.setAttribute('aria-current', 'page');
+                
+                var parentAccordion = link.closest('.m-item[data-accordion]');
+                if (parentAccordion) {
+                    parentAccordion.classList.add('is-open');
+                }
+            }
+        });
+    }
+
 })();

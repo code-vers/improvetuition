@@ -38,103 +38,7 @@
         href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <style>
-        :root {
-            /* ─── 4-PILLAR PALETTE ─── */
-            --pillar-authority: #242F3A;
-            /* Navy — qualified teacher-led */
-            --pillar-experience: #D55A3F;
-            /* Warm coral — established, action, energy */
-            --pillar-expertise: #C99A2E;
-            /* Rich ochre — gap analysis, insight */
-            --pillar-trust: #5A5A5A;
-            /* Grey — proof, reviews, restraint */
 
-            /* Surfaces */
-            --main-bg: #F7F5F2;
-            --section-bg: #E8E3DA;
-            --panel-bg: #FFFFFF;
-            --rule: #D8D2C7;
-
-            /* Variants */
-            --coral-dark: #B14526;
-            --gold-soft: #D6B35A;
-            --hero-line: rgba(36, 47, 58, 0.06);
-
-            /* CTA */
-            --cta-bg: #D55A3F;
-
-            /* ─── Legacy aliases mapped to clean palette ─── */
-            --ink: #242F3A;
-            --muted: #5A5A5A;
-            --paper: #F7F5F2;
-            --cream: #E8E3DA;
-            --ivory: #F7F5F2;
-            --coral: #D55A3F;
-            --gold: #C99A2E;
-            --brand-red: #D55A3F;
-            --forest: #5A5A5A;
-            --forest-dark: #424242;
-            --hero-gold: #C99A2E;
-            --cream-warm: #E8E3DA;
-        }
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html,
-        body {
-            font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
-            color: var(--ink);
-            background: var(--cream);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        ::selection {
-            background: rgba(199, 92, 69, 0.18);
-            color: var(--ink);
-        }
-
-        /* ═══════════════════ Header ═══════════════════ */
-        .site-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1.5rem;
-            padding: 1.4rem 2.5rem 1.15rem;
-            background: var(--paper);
-            border-bottom: 1px solid var(--rule);
-        }
-
-        .brand-mark {
-            display: flex;
-            align-items: center;
-            gap: 0.55rem;
-        }
-
-        .brand-icon {
-            width: 22px;
-            height: 22px;
-            flex-shrink: 0;
-        }
-
-        .brand-name {
-            font-family: 'Fraunces', serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            letter-spacing: -0.012em;
-            color: var(--ink);
-            line-height: 1;
-        }
-
-        .brand-name .dot {
-            color: var(--brand-red);
-        }
 
         /* ═══════════════════ Page intro ═══════════════════ */
         main.pricing {
@@ -342,508 +246,7 @@
             border-bottom-color: var(--brand-red);
         }
 
-        /* ═══════════════════ Footer (matches other pages) ═══════════════════ */
-        .site-footer {
-            background: #242F3A;
-            color: #e8e0d2;
-            padding: 3rem 2.5rem 2rem;
-        }
 
-        .site-footer-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 2rem;
-            align-items: start;
-        }
-
-        .footer-brand .brand-mark {
-            margin-bottom: 1.25rem;
-        }
-
-        .footer-brand .brand-name {
-            font-family: 'Fraunces', serif;
-            font-weight: 700;
-            font-size: 1.6rem;
-            color: var(--ivory);
-        }
-
-        .footer-brand .brand-name .dot {
-            color: var(--brand-red);
-        }
-
-        .footer-contact {
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
-            margin-top: 0.5rem;
-        }
-
-        .footer-contact a {
-            color: #e8e0d2;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 150ms ease;
-        }
-
-        .footer-contact a:hover {
-            color: var(--gold);
-        }
-
-        .footer-meta .established {
-            color: #C99A2E;
-            font-weight: 600;
-        }
-
-        .footer-meta {
-            grid-column: 1 / -1;
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(232, 224, 210, 0.1);
-            font-size: 0.78rem;
-            color: rgba(232, 224, 210, 0.6);
-            line-height: 1.6;
-        }
-
-        .footer-meta p {
-            margin: 0 0 0.4rem;
-        }
-
-        .footer-meta p:last-child {
-            margin: 0;
-        }
-
-        .footer-meta .sep {
-            margin: 0 0.5em;
-            opacity: 0.5;
-        }
-
-        /* ═══════════════════ Drawer (shared across pages) ═══════════════════ */
-        .menu-toggle {
-            display: flex;
-            align-items: center;
-            gap: 0.55rem;
-            background: none;
-            border: none;
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 500;
-            font-size: 0.95rem;
-            color: var(--ink);
-            cursor: pointer;
-            padding: 0.4rem 0.6rem;
-            border-radius: 4px;
-            transition: background 130ms ease;
-        }
-
-        .menu-toggle:hover {
-            background: var(--cream);
-        }
-
-        .menu-toggle .bars {
-            width: 18px;
-            height: 14px;
-            position: relative;
-        }
-
-        .menu-toggle .bars::before,
-        .menu-toggle .bars::after,
-        .menu-toggle .bars span {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--ink);
-            border-radius: 1px;
-        }
-
-        .menu-toggle .bars::before {
-            top: 0;
-        }
-
-        .menu-toggle .bars span {
-            top: 6px;
-        }
-
-        .menu-toggle .bars::after {
-            bottom: 0;
-        }
-
-        .drawer-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(26, 23, 21, 0.5);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 220ms ease;
-            z-index: 90;
-        }
-
-        .drawer-overlay.is-open {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .drawer {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100dvh;
-            width: 100%;
-            max-width: 380px;
-            background: var(--ivory);
-            transform: translateX(-100%);
-            transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: 100;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-
-        .drawer.is-open {
-            transform: translateX(0);
-        }
-
-        .drawer-head {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1.1rem 1.5rem;
-            border-bottom: 1px solid var(--rule);
-            flex-shrink: 0;
-        }
-
-        .drawer-brand {
-            font-family: 'Fraunces', serif;
-            font-weight: 700;
-            font-size: 1.05rem;
-            letter-spacing: -0.01em;
-            color: var(--ink);
-        }
-
-        .drawer-brand .dot {
-            color: var(--brand-red);
-        }
-
-        .drawer-close {
-            background: none;
-            border: none;
-            width: 32px;
-            height: 32px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 4px;
-            color: var(--ink);
-            transition: background 150ms ease;
-        }
-
-        .drawer-close:hover {
-            background: var(--cream);
-        }
-
-        .drawer-close svg {
-            width: 18px;
-            height: 18px;
-        }
-
-        .drawer-body {
-            flex: 1;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            padding: 0.5rem 0 1.5rem;
-        }
-
-        .drawer .section-label {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.16em;
-            color: var(--muted);
-            padding: 1.5rem 1.5rem 0.65rem;
-            margin: 0;
-        }
-
-        .drawer-foot {
-            padding: 1rem 1.5rem 1.5rem;
-            border-top: 1px solid var(--rule);
-            background: var(--ivory);
-            flex-shrink: 0;
-        }
-
-        .drawer-cta {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            width: 100%;
-            padding: 0.95rem 1rem;
-            background: var(--gold);
-            color: var(--ink);
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: background 150ms ease;
-        }
-
-        .drawer-cta:hover {
-            background: var(--coral);
-        }
-
-        .drawer-cta svg {
-            width: 14px;
-            height: 14px;
-        }
-
-        .drawer-phone {
-            text-align: center;
-            margin: 0.95rem 0 0;
-            font-size: 0.85rem;
-            color: var(--muted);
-        }
-
-        .drawer-phone a {
-            color: var(--ink);
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .drawer-phone a:hover {
-            color: var(--brand-red);
-        }
-
-        .drawer-phone svg {
-            width: 13px;
-            height: 13px;
-            color: var(--muted);
-        }
-
-        .drawer-phone-hours {
-            display: block;
-            margin-top: 0.2rem;
-            font-size: 0.75rem;
-            color: var(--muted);
-        }
-
-        .format-cards {
-            padding: 0 1rem 0.25rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .format-group {
-            border: 1px solid var(--rule);
-            border-radius: 8px;
-            background: var(--cream);
-            overflow: hidden;
-            transition: border-color 150ms ease, background 150ms ease;
-        }
-
-        .format-group.is-open {
-            background: var(--cream-warm);
-            border-color: var(--gold-soft);
-        }
-
-        .format-card {
-            display: flex;
-            align-items: center;
-            gap: 0.95rem;
-            width: 100%;
-            padding: 0.85rem 1rem;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            text-align: left;
-            font-family: inherit;
-            color: var(--ink);
-            transition: background 130ms ease;
-        }
-
-        .format-card:hover {
-            background: rgba(0, 0, 0, 0.025);
-        }
-
-        .format-icon {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: var(--ivory);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            color: var(--gold);
-        }
-
-        .format-icon svg {
-            width: 18px;
-            height: 18px;
-        }
-
-        .format-text {
-            display: flex;
-            flex-direction: column;
-            gap: 0.1rem;
-            min-width: 0;
-            flex: 1;
-        }
-
-        .format-title {
-            font-family: 'Fraunces', serif;
-            font-weight: 700;
-            font-size: 1rem;
-            letter-spacing: -0.01em;
-            color: var(--ink);
-        }
-
-        .format-sub {
-            font-size: 0.78rem;
-            color: var(--muted);
-        }
-
-        .format-chevron {
-            width: 14px;
-            height: 14px;
-            flex-shrink: 0;
-            color: var(--muted);
-            transition: transform 200ms ease;
-        }
-
-        .format-group.is-open .format-chevron {
-            transform: rotate(180deg);
-            color: var(--ink);
-        }
-
-        .format-subjects {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 250ms ease;
-        }
-
-        .format-group.is-open .format-subjects {
-            max-height: 240px;
-        }
-
-        .format-subjects li {
-            list-style: none;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .format-subjects li a {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.75rem 1rem 0.75rem 3.4rem;
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 500;
-            font-size: 0.9rem;
-            color: var(--ink);
-            text-decoration: none;
-            gap: 1rem;
-            transition: background 130ms ease;
-        }
-
-        .format-subjects li a:hover,
-        .format-subjects li a.is-active {
-            background: rgba(0, 0, 0, 0.04);
-        }
-
-        .format-subjects li a.is-active {
-            color: var(--brand-red);
-            font-weight: 600;
-        }
-
-        .format-subjects .menu-arrow {
-            width: 14px;
-            height: 14px;
-            flex-shrink: 0;
-            color: var(--muted);
-            transition: transform 150ms ease;
-        }
-
-        .format-subjects li a:hover .menu-arrow {
-            transform: translateX(3px);
-            color: var(--ink);
-        }
-
-        .menu-list {
-            list-style: none;
-            padding: 0 0.5rem;
-            margin: 0;
-        }
-
-        .menu-list li {
-            list-style: none;
-        }
-
-        .menu-list li a {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.85rem 1rem;
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 500;
-            font-size: 0.95rem;
-            color: var(--ink);
-            text-decoration: none;
-            border-radius: 6px;
-            transition: background 130ms ease;
-            gap: 1rem;
-        }
-
-        .menu-list li a:hover,
-        .menu-list li a.is-active {
-            background: var(--cream);
-        }
-
-        .menu-list li a.is-active {
-            color: var(--brand-red);
-            font-weight: 600;
-        }
-
-        .menu-list .menu-arrow {
-            width: 14px;
-            height: 14px;
-            flex-shrink: 0;
-            color: var(--muted);
-            transition: transform 150ms ease;
-        }
-
-        .menu-list li a:hover .menu-arrow {
-            transform: translateX(3px);
-            color: var(--ink);
-        }
-
-        body.drawer-open {
-            overflow: hidden;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-
-            .drawer,
-            .drawer-overlay,
-            .menu-list li a,
-            .menu-arrow,
-            .drawer-cta,
-            .format-group,
-            .format-chevron,
-            .format-subjects {
-                transition: none;
-            }
-        }
 
         /* ═══════════════════ Mobile ═══════════════════ */
         @media (max-width: 720px) {
@@ -858,14 +261,6 @@
         }
 
         @media (max-width: 640px) {
-            .site-header {
-                padding: 1.1rem 1.25rem;
-            }
-
-            .brand-name {
-                font-size: 1.3rem;
-            }
-
             main.pricing {
                 padding: 2rem 1.25rem 3rem;
             }
@@ -884,186 +279,372 @@
                 margin-top: 3rem;
                 padding-top: 2rem;
             }
-
-            .site-footer {
-                padding: 2.5rem 1.25rem 1.5rem;
-            }
-
-            .site-footer-inner {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
         }
     </style>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/nav.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
 </head>
 
 <body>
 
     <!-- ═══════════ HEADER ═══════════ -->
-    <header class="site-header">
-        <div class="brand-mark">
-            <svg class="brand-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path d="M3.5 8 L10.5 19 L20.5 4.5" stroke="#D55A3F" stroke-width="3" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
-            <span class="brand-name">improve tuition<span class="dot">.</span></span>
-        </div>
-        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="drawer" id="menuToggle">
-            <span class="bars" aria-hidden="true"><span></span></span>
-            <span>Menu</span>
-        </button>
-    </header>
-
-    <!-- ═══════════ DRAWER ═══════════ -->
-    <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
-    <aside class="drawer" id="drawer" aria-label="Site navigation" aria-hidden="true">
-        <div class="drawer-head">
-            <span class="drawer-brand">improve tuition<span class="dot">.</span></span>
-            <button class="drawer-close" aria-label="Close menu" id="drawerClose">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18" />
-                    <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-            </button>
-        </div>
-        <div class="drawer-body">
-            <p class="section-label">Tuition Options</p>
-            <div class="format-cards">
-
-                <div class="format-group" data-format="centre">
-                    <button type="button" class="format-card" aria-expanded="false">
-                        <span class="format-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M12 2 L19 8.5 V20 a1 1 0 0 1-1 1 H6 a1 1 0 0 1-1-1 V8.5 Z" />
-                                <path d="M9 21 V13 H15 V21" />
-                            </svg>
-                        </span>
-                        <span class="format-text">
-                            <span class="format-title">Batley Centre</span>
-                            <span class="format-sub">In-person tuition at our Batley centre</span>
-                        </span>
-                        <svg class="format-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M4 6 L8 10 L12 6" />
-                        </svg>
-                    </button>
-                    <ul class="format-subjects">
-                        <li><a href="hero.html"><span>Maths Tutor</span><svg class="menu-arrow" viewBox="0 0 16 16"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li><a href="english.html"><span>English Tutor</span><svg class="menu-arrow" viewBox="0 0 16 16"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li><a href="science.html"><span>Science Tutor</span><svg class="menu-arrow" viewBox="0 0 16 16"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                    </ul>
-                </div>
-
-                <div class="format-group" data-format="online">
-                    <button type="button" class="format-card" aria-expanded="false">
-                        <span class="format-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <rect x="2" y="4" width="20" height="13" rx="1.5" />
-                                <line x1="8" y1="21" x2="16" y2="21" />
-                                <line x1="12" y1="17" x2="12" y2="21" />
-                            </svg>
-                        </span>
-                        <span class="format-text">
-                            <span class="format-title">Online Tuition</span>
-                            <span class="format-sub">Online tuition for families in the UK and abroad</span>
-                        </span>
-                        <svg class="format-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M4 6 L8 10 L12 6" />
-                        </svg>
-                    </button>
-                    <ul class="format-subjects">
-                        <li><a href="online-maths.html"><span>Online Maths Tutor</span><svg class="menu-arrow"
-                                    viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li><a href="online-english.html"><span>Online English Tutor</span><svg class="menu-arrow"
-                                    viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li><a href="online-science.html"><span>Online Science Tutor</span><svg class="menu-arrow"
-                                    viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <p class="section-label">About</p>
-            <ul class="menu-list">
-                <li><a href="about.html"><span>About Improve Tuition</span><svg class="menu-arrow" viewBox="0 0 16 16"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" aria-hidden="true">
-                            <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                        </svg></a></li>
-                <li><a href="safeguarding.html"><span>Safeguarding</span><svg class="menu-arrow" viewBox="0 0 16 16"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" aria-hidden="true">
-                            <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                        </svg></a></li>
-                <li><a href="reviews.html"><span>Reviews</span><svg class="menu-arrow" viewBox="0 0 16 16" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                        </svg></a></li>
-            </ul>
-
-            <p class="section-label">More</p>
-            <ul class="menu-list">
-                <li><a href="pricing.html" class="is-active" aria-current="page"><span>Pricing</span><svg
-                            class="menu-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                        </svg></a></li>
-                <li><a href="contact.html"><span>Contact</span><svg class="menu-arrow" viewBox="0 0 16 16" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                        </svg></a></li>
-            </ul>
-
-        </div>
-        <div class="drawer-foot">
-            <a href="#book" class="drawer-cta">
-                Book a Free Assessment
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" aria-hidden="true">
-                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                </svg>
-            </a>
-            <p class="drawer-phone">
-                <a href="tel:+441924506010">
+    <!-- ─── Utility bar ─── -->
+    <div class="utility-bar">
+        <div class="utility-inner">
+            <div class="utility-left">
+                <a href="tel:01924506010" class="utility-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" aria-hidden="true">
                         <path
-                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
                     </svg>
-                    <span data-config="contact.phone_display">01924 506010</span>
+                    01924 506010
                 </a>
-                <span class="drawer-phone-hours">Mon-Fri, 9am-7pm · Sat-Sun, 10am-2pm</span>
-            </p>
+                <span class="utility-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    Batley · West Yorkshire &amp; Online
+                </span>
+            </div>
+            <div class="utility-right">
+                <span class="utility-stars" aria-hidden="true">★★★★★</span>
+                <span><strong>4.7</strong> / 5 · Trustpilot &amp; Google</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── Main header (left hamburger, logo, spacer, CTA) ─── -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <!-- LEFT: hamburger -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"
+                aria-controls="mobileDrawer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    aria-hidden="true">
+                    <path d="M3 6h18M3 12h18M3 18h18" />
+                </svg>
+            </button>
+
+            <!-- LOGO -->
+            <a class="logo" href="/" aria-label="Improve Tuition home">
+                <svg class="brand-mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <circle cx="36" cy="22" r="8.5" fill="currentColor" />
+                    <path d="M22 50 L46 78 L82 24" stroke="currentColor" stroke-width="13.5" fill="none" />
+                </svg>
+                <span>improve&nbsp;tuition<span class="dot">.</span></span>
+            </a>
+
+            <div class="header-spacer"></div>
+
+            <!-- RIGHT: CTA -->
+            <div class="header-actions">
+                <a class="header-cta" href="/contact/index.html">
+                    Book a Free Assessment
+                    <svg viewBox="0 0 22 10" fill="none" aria-hidden="true">
+                        <path d="M0 5h20M16 1l4 4-4 4" stroke="currentColor" stroke-width="1.8" />
+                    </svg>
+                </a>
+                <a class="header-cta-mobile" href="tel:01924506010" aria-label="Call us">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path
+                            d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- ─── Left drawer + overlay ─── -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Site navigation">
+        <div class="drawer-head">
+            <a class="logo" href="/" aria-label="Improve Tuition home">
+                <svg class="brand-mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <circle cx="36" cy="22" r="8.5" fill="currentColor" />
+                    <path d="M22 50 L46 78 L82 24" stroke="currentColor" stroke-width="13.5" fill="none" />
+                </svg>
+                <span>improve&nbsp;tuition<span class="dot">.</span></span>
+            </a>
+            <button class="close-btn" id="drawerClose" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    aria-hidden="true">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="drawer-body">
+            <!-- Home -->
+            <div class="m-item"><a class="m-link" href="/index.html">Home</a></div>
+
+            <!-- Online -->
+            <div class="m-item" data-accordion>
+                <button class="m-link">
+                    Online
+                    <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="m-sub">
+                    <div class="m-sub-inner">
+                        <div class="m-market m-market--online">
+                            <span class="m-market-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                                    <path d="M8 21h8M12 17v4" />
+                                </svg>
+                            </span>
+                            <span class="m-market-text">Online Tuition<span class="m-market-sub">UK &amp;
+                                    worldwide</span></span>
+                        </div>
+
+                        <a class="m-sub-link" href="/uk/online/maths-tutor/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 7h14M9 3v4M9 13l3 3 3-3M12 12v6" />
+                            </svg>
+                            Maths
+                        </a>
+                        <a class="m-sub-link" href="/uk/online/english-tutor/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13M8 7h8M8 11h8" />
+                            </svg>English</a>
+                        <a class="m-sub-link" href="/uk/online/science-tutor/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3" />
+                            </svg>Science</a>
+                        <a class="m-sub-link" href="/uk/online/biology-tutor/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M9 3v4M15 3v4M9 21v-4M15 21v-4M9 7c0 3 6 3 6 6s-6 3-6 6M15 7c0 3-6 3-6 6" />
+                            </svg>Biology</a>
+                        <a class="m-sub-link" href="/uk/online/chemistry-tutor/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3" />
+                                <path d="M7 14h10" />
+                            </svg>Chemistry</a>
+                        <a class="m-sub-link" href="/uk/online/physics-tutor/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <ellipse cx="12" cy="12" rx="10" ry="4" />
+                                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" />
+                                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" />
+                            </svg>Physics</a>
+                        <a class="m-sub-link" href="/uk/online/economics-tutor/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M3 3v18h18M7 15l4-4 3 3 5-6" />
+                            </svg>Economics</a>
+                        <a class="m-sub-link" href="/uk/online/business-studies/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="7" width="18" height="13" rx="2" />
+                                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                            </svg>Business Studies</a>
+                        <a class="m-sub-link" href="/uk/online/accounting-tutor/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M9 7h6M9 11h6M9 15h3M6 3h12a1 1 0 0 1 1 1v16l-3-2-2 2-2-2-2 2-3-2V4a1 1 0 0 1 1-1z" />
+                            </svg>Accounting</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- In Batley -->
+            <div class="m-item" data-accordion>
+                <button class="m-link">
+                    In Batley
+                    <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="m-sub">
+                    <div class="m-sub-inner">
+                        <div class="m-market m-market--batley">
+                            <span class="m-market-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg></span>
+                            <span class="m-market-text">In-Person · Batley<span class="m-market-sub">George Street
+                                    centre</span></span>
+                        </div>
+
+                        <a class="m-sub-link" href="/uk/maths/tutor-in/batley/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 7h14M9 3v4M9 13l3 3 3-3M12 12v6" />
+                            </svg>Maths</a>
+                        <a class="m-sub-link" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19V5a2 2 0 0 1 2-2h11l3 3v13M8 7h8M8 11h8" />
+                            </svg>English</a>
+                        <a class="m-sub-link" href="/uk/science/tutor-in/batley/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3" />
+                            </svg>Science</a>
+                        <a class="m-sub-link" href="/uk/biology/tutor-in/batley/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M9 3v4M15 3v4M9 21v-4M15 21v-4M9 7c0 3 6 3 6 6s-6 3-6 6M15 7c0 3-6 3-6 6" />
+                            </svg>Biology</a>
+                        <a class="m-sub-link" href="/uk/chemistry/tutor-in/batley/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M9 3h6M10 3v6l-4 9a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-9V3" />
+                                <path d="M7 14h10" />
+                            </svg>Chemistry</a>
+                        <a class="m-sub-link" href="/uk/physics/tutor-in/batley/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <ellipse cx="12" cy="12" rx="10" ry="4" />
+                                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" />
+                                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" />
+                            </svg>Physics</a>
+                        <a class="m-sub-link" href="/uk/economics/tutor-in/batley/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M3 3v18h18M7 15l4-4 3 3 5-6" />
+                            </svg>Economics</a>
+                        <a class="m-sub-link" href="/uk/business-studies/tutor-in/batley/index.html"><svg
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="7" width="18" height="13" rx="2" />
+                                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                            </svg>Business Studies</a>
+                        <a class="m-sub-link" href="/uk/accounting/tutor-in/batley/index.html"><svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M9 7h6M9 11h6M9 15h3M6 3h12a1 1 0 0 1 1 1v16l-3-2-2 2-2-2-2 2-3-2V4a1 1 0 0 1 1-1z" />
+                            </svg>Accounting</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exams (incl. Selective Entry) -->
+            <div class="m-item" data-accordion>
+                <button class="m-link">
+                    Exams
+                    <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="m-sub">
+                    <div class="m-sub-inner">
+                        <p class="m-sub-group-label">Stages</p>
+                        <a class="m-sub-link" href="/uk/sats-tutor/index.html"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                            </svg>SATs</a>
+                        <a class="m-sub-link" href="/uk/gcse-tutor/index.html"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5" />
+                            </svg>GCSE</a>
+                        <a class="m-sub-link" href="/uk/igcse-tutor/index.html"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5" />
+                            </svg>IGCSE</a>
+                        <a class="m-sub-link" href="/uk/a-level-tutor/index.html"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 6h16M4 12h16M4 18h10" />
+                                <path d="M16 16l2.5 4 2.5-4z" />
+                            </svg>A-Level</a>
+                        <p class="m-sub-group-label">Selective Entry</p>
+                        <a class="m-sub-link" href="/uk/11-Plus-tutor/index.html"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2l3 6 6 .5-4.5 4 1.5 6L12 15l-5.5 3.5 1.5-6L3.5 8.5 9.5 8z" />
+                            </svg>11 Plus</a>
+                        <a class="m-sub-link" href="/heckmondwike-tutor/index.html"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6" />
+                            </svg>Heckmondwike Grammar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing -->
+            <div class="m-item"><a class="m-link" href="/pricing/index.html">Pricing</a></div>
+
+            <!-- About -->
+            <div class="m-item" data-accordion>
+                <button class="m-link">
+                    About
+                    <svg class="m-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="m-sub">
+                    <div class="m-sub-inner">
+                        <a class="m-sub-link" href="/about/index.html"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 16v-4M12 8h.01" />
+                            </svg>About Us</a>
+                        <a class="m-sub-link" href="/about/mr-g-dabhad/index.html"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>Mr G Dabhad</a>
+                        <a class="m-sub-link" href="/safeguarding/"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>Safeguarding</a>
+                        <a class="m-sub-link" href="/reviews/index.html"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2l3 6 6 .5-4.5 4 1.5 6L12 15l-5.5 3.5 1.5-6L3.5 8.5 9.5 8z" />
+                            </svg>Reviews</a>
+                        <a class="m-sub-link" href="/case-studies/index.html"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6" />
+                            </svg>Case Studies</a>
+                        <a class="m-sub-link" href="/contact/index.html"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16v16H4z" />
+                                <path d="M4 7l8 5 8-5" />
+                            </svg>Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="drawer-foot">
+            <a class="drawer-cta" href="/contact/index.html">
+                Book a Free Assessment
+                <svg viewBox="0 0 22 10" width="18" height="9" fill="none" aria-hidden="true">
+                    <path d="M0 5h20M16 1l4 4-4 4" stroke="currentColor" stroke-width="1.8" />
+                </svg>
+            </a>
+            <a class="drawer-call" href="tel:01924506010">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path
+                        d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+                </svg>
+                01924 506010
+            </a>
         </div>
     </aside>
+
+    <!-- ═══════════ DRAWER ═══════════ -->
+
+
 
     <!-- ═══════════ PRICING PAGE ═══════════ -->
     <main class="pricing">
@@ -1167,90 +748,195 @@
     <!-- ═══════════ FOOTER ═══════════ -->
     <footer class="site-footer">
         <div class="site-footer-inner">
-            <div class="footer-brand">
-                <div class="brand-mark">
-                    <svg class="brand-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true">
-                        <path d="M3.5 8 L10.5 19 L20.5 4.5" stroke="#D55A3F" stroke-width="3" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                    <span class="brand-name">improve tuition<span class="dot">.</span></span>
-                </div>
-                <div class="footer-contact">
-                    <a href="tel:+441924506010"><span data-config="contact.phone_display">01924 506010</span></a>
-                    <a href="mailto:info@improvetuition.com"><span
-                            data-config="contact.email">info@improvetuition.com</span></a>
-                </div>
+            <div class="footer-mark-block">
+                <svg class="footer-mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+                    <circle cx="22" cy="38" r="8" fill="currentColor" />
+                    <path d="M22 48 Q 18 58 22 68 Q 28 78 36 76" stroke="currentColor" stroke-width="7"
+                        stroke-linecap="round" fill="none" />
+                    <path d="M30 60 L46 80 L86 18" stroke="currentColor" stroke-width="13" stroke-linecap="round"
+                        stroke-linejoin="round" fill="none" />
+                </svg>
+                <span class="footer-name">improve tuition<span class="dot">.</span></span>
             </div>
-            <div class="footer-meta">
-                <p>Mr G Dabhad, Qualified Teacher<span class="sep">·</span>Batley Centre and Online<span
-                        class="sep">·</span>Established <span class="established"
-                        data-config="business.established_year">2007</span></p>
-                <p data-config="business.address_line">The Study Room, George Street, Batley, West Yorkshire WF17 5AR
+            <p class="footer-tagline">
+                We find the gap. <em class="gold">Then we teach it.</em>
+            </p>
+            <div class="footer-contact">
+                <a class="footer-phone" href="tel:+441924506010">+44 (0)1924 506010</a>
+                <a class="footer-email" href="mailto:info@improvetuition.org">info@improvetuition.org</a>
+                <p class="footer-hours">
+                    By appointment &middot; Mon&ndash;Fri 9:30am&ndash;7pm &middot;
+                    Sat&ndash;Sun 10am&ndash;2pm
                 </p>
-                <p>© 2026 Improve Tuition. All rights reserved.</p>
             </div>
+
+            <nav class="footer-nav" aria-label="Footer">
+                <div class="footer-col">
+                    <h3>Subjects</h3>
+                    <ul>
+                        <li>
+                            <a href="/uk/online/maths-tutor/index.html">Maths Tutor</a>
+                        </li>
+                        <li>
+                            <a href="/uk/online/english-tutor/index.html">English Tutor</a>
+                        </li>
+                        <li>
+                            <a href="/uk/online/science-tutor/index.html">Science Tutor</a>
+                        </li>
+                        <li>
+                            <a href="/uk/online/biology-tutor/index.html">Biology Tutor</a>
+                        </li>
+                        <li>
+                            <a href="/uk/online/physics-tutor/index.html">Physics Tutor</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Exams &amp; Stages</h3>
+                    <ul>
+                        <li>
+                            <a href="/uk/11-Plus-tutor/index.html">11-Plus Tutor</a>
+                        </li>
+                        <li>
+                            <a href="/uk/sats-tutor/index.html">SATs Tutor</a>
+                        </li>
+                        <li>
+                            <a href="/uk/igcse-tutor/index.html">IGCSE Tutors</a>
+                        </li>
+                        <li>
+                            <a href="/heckmondwike-tutor/index.html">Heckmondwike Entrance</a>
+                        </li>
+                        <li>
+                            <a href="#">Online Tuition (UK)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>About</h3>
+                    <ul>
+                        <li>
+                            <a href="/about/index.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="/about/mr-g-dabhad/index.html">Mr G Dabhad</a>
+                        </li>
+                        <li>
+                            <a href="/reviews/index.html">Reviews</a>
+                        </li>
+                        <li>
+                            <a href="/case-studies/index.html">Case Studies</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Get Started</h3>
+                    <ul>
+                        <li>
+                            <a href="/pricing/index.html">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="/contact/index.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="/contact/index.html">Book a Free Assessment</a>
+                        </li>
+                        <li>
+                            <a href="/safeguarding/index.html">Safeguarding</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Areas We Cover</h3>
+                    <ul>
+                        <li>
+                            <a href="/uk/tutor-in/batley/index.html">Tutors in Batley</a>
+                        </li>
+                        <li>
+                            <a href="/uk/tutor-in/dewsbury/index.html">Tutors in Dewsbury</a>
+                        </li>
+                        <li>
+                            <a href="/uk/tutor-in/bradford/index.html">Tutors in Bradford</a>
+                        </li>
+                        <li>
+                            <a href="#">Tutors in Leeds</a>
+                        </li>
+                        <li>
+                            <a href="#">Tutors in Wakefield</a>
+                        </li>
+                        <li>
+                            <a href="#">Tutors in Huddersfield</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="footer-rule"></div>
+            <p class="footer-credentials">
+                Mr G Dabhad, QTS &middot; Online &amp; Batley Centre &middot;
+                Established <em class="gold">2007</em>
+            </p>
+            <p class="footer-address">
+                The Study Room, George Street, Batley, West Yorkshire WF17 5AR
+            </p>
+            <div class="footer-social" aria-label="Improve Tuition on social media">
+                <a href="https://www.facebook.com/improvetuition" target="_blank" rel="noopener"
+                    aria-label="Improve Tuition on Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/improve_tuition/" target="_blank" rel="noopener"
+                    aria-label="Improve Tuition on Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/@improvetuition" target="_blank" rel="noopener"
+                    aria-label="Improve Tuition on YouTube">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M23 12s0-3.9-.49-5.77a3 3 0 0 0-2.12-2.13C18.52 3.6 12 3.6 12 3.6s-6.52 0-8.39.5A3 3 0 0 0 1.49 6.23 31.6 31.6 0 0 0 1 12a31.6 31.6 0 0 0 .49 5.77 3 3 0 0 0 2.12 2.13c1.87.5 8.39.5 8.39.5s6.52 0 8.39-.5a3 3 0 0 0 2.12-2.13C23 15.9 23 12 23 12zM9.95 15.5v-7l6.07 3.5z" />
+                    </svg>
+                </a>
+                <a href="https://www.tiktok.com/@improvetuition/" target="_blank" rel="noopener"
+                    aria-label="Improve Tuition on TikTok">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 0 1-2.58-2.5 2.59 2.59 0 0 1 3.36-2.47V9.4a5.66 5.66 0 0 0-.78-.05A5.67 5.67 0 0 0 4.2 15a5.67 5.67 0 0 0 5.66 5.66A5.67 5.67 0 0 0 15.5 15V8.69a7.33 7.33 0 0 0 4.29 1.37V7a4.28 4.28 0 0 1-3.19-1.18z" />
+                    </svg>
+                </a>
+                <a href="https://x.com/ImproveTuition" target="_blank" rel="noopener" aria-label="Improve Tuition on X">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M18.9 2H22l-7.5 8.6L23 22h-6.8l-5.3-7-6.1 7H1.7l8-9.2L1 2h7l4.8 6.4L18.9 2zm-1.2 18h1.9L7 4H5l12.7 16z" />
+                    </svg>
+                </a>
+                <a href="https://g.page/r/CZSz3InrApT0EAI/review" target="_blank" rel="noopener"
+                    aria-label="Leave a Google review for Improve Tuition">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81z" />
+                    </svg>
+                </a>
+            </div>
+            <p class="footer-fine">
+                &copy; 2026 Improve Tuition. All rights reserved. &middot;
+                <a href="/privacy-policy/index.html">Privacy</a> &middot;
+                <a href="#">Terms</a> &middot;
+                <a href="/safeguarding/index.html">Safeguarding</a>
+            </p>
         </div>
     </footer>
 
     <script src="config.js"></script>
-    <script>
-        (function () {
-            const toggle = document.getElementById('menuToggle');
-            const drawer = document.getElementById('drawer');
-            const overlay = document.getElementById('drawerOverlay');
-            const close = document.getElementById('drawerClose');
-            const body = document.body;
 
-            if (!toggle || !drawer || !overlay || !close) return;
 
-            function openDrawer() {
-                drawer.classList.add('is-open');
-                overlay.classList.add('is-open');
-                drawer.setAttribute('aria-hidden', 'false');
-                overlay.setAttribute('aria-hidden', 'false');
-                toggle.setAttribute('aria-expanded', 'true');
-                body.classList.add('drawer-open');
-                setTimeout(function () { close.focus(); }, 50);
-            }
-            function closeDrawer() {
-                drawer.classList.remove('is-open');
-                overlay.classList.remove('is-open');
-                drawer.setAttribute('aria-hidden', 'true');
-                overlay.setAttribute('aria-hidden', 'true');
-                toggle.setAttribute('aria-expanded', 'false');
-                body.classList.remove('drawer-open');
-                toggle.focus();
-            }
 
-            toggle.addEventListener('click', openDrawer);
-            close.addEventListener('click', closeDrawer);
-            overlay.addEventListener('click', closeDrawer);
-
-            /* Accordion behaviour for format cards */
-            const formatCards = drawer.querySelectorAll('.format-card');
-            formatCards.forEach(card => {
-                card.addEventListener('click', function () {
-                    const group = card.parentElement;
-                    const isOpen = group.classList.contains('is-open');
-                    drawer.querySelectorAll('.format-group').forEach(g => {
-                        g.classList.remove('is-open');
-                        const btn = g.querySelector('.format-card');
-                        if (btn) btn.setAttribute('aria-expanded', 'false');
-                    });
-                    if (!isOpen) {
-                        group.classList.add('is-open');
-                        card.setAttribute('aria-expanded', 'true');
-                    }
-                });
-            });
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && drawer.classList.contains('is-open')) closeDrawer();
-            });
-        })();
-    </script>
-
+    <script src="/assets/js/nav.js"></script>
 </body>
 
 </html>
