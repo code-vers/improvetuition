@@ -62,7 +62,7 @@
             if (linkPath === currentPath) {
                 link.classList.add('is-active');
                 link.setAttribute('aria-current', 'page');
-                
+
                 var parentAccordion = link.closest('.m-item[data-accordion]');
                 if (parentAccordion) {
                     parentAccordion.classList.add('is-open');
