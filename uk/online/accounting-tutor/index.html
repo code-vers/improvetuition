@@ -327,67 +327,6 @@
       bottom: 0
     }
 
-    /* ── Category strip ── */
-    .cat-nav {
-      background: #1c2530;
-      border-bottom: 1px solid rgba(214, 179, 90, .18);
-      position: sticky;
-      top: 0;
-      z-index: 999
-    }
-
-    .cat-nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      padding: 0 clamp(.5rem, 2vw, 1rem);
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none
-    }
-
-    .cat-nav-inner::-webkit-scrollbar {
-      display: none
-    }
-
-    .cat-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: var(--font-ui);
-      font-weight: 500;
-      font-size: 14px;
-      color: rgba(255, 255, 255, .88);
-      padding: 12px 13px;
-      white-space: nowrap;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background .15s ease, color .15s ease
-    }
-
-    .cat-link:hover {
-      background: rgba(255, 255, 255, .08);
-      color: var(--gold)
-    }
-
-    .cat-link.is-active {
-      color: var(--gold);
-      font-weight: 700
-    }
-
-    .cat-link.is-cta {
-      background: var(--coral);
-      color: var(--white);
-      font-weight: 700
-    }
-
-    .cat-link.is-cta:hover {
-      background: var(--coral-hover);
-      color: var(--white)
-    }
-
     /* ── Drawer ── */
     .drawer-overlay {
       position: fixed;
@@ -3170,19 +3109,6 @@
       </a>
     </div>
   </aside>
-
-  <nav class="cat-nav" aria-label="Site sections">
-    <div class="cat-nav-inner">
-      <a class="cat-link" href="/uk/">Subjects</a>
-      <a class="cat-link" href="/exam-preparation/">Exam Stages</a>
-      <a class="cat-link" href="/uk/online-tuition/">Online</a>
-      <a class="cat-link" href="/about/">About</a>
-      <a class="cat-link" href="#reviews">Reviews</a>
-      <a class="cat-link" href="#pricing">Pricing</a>
-      <a class="cat-link" href="/contact/index.html">Contact</a>
-      <a class="cat-link is-cta" href="#start">Free assessment</a>
-    </div>
-  </nav>
 
   <main id="main-content">
 

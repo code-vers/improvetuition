@@ -1299,98 +1299,6 @@
             }
         }
 
-        .cat-nav {
-            background: #283440;
-            border-top: 2px solid var(--gold);
-            border-bottom: 1px solid rgba(214, 179, 90, 0.18);
-            position: relative;
-            z-index: 999;
-        }
-
-        .cat-nav-wrap {
-            max-width: 1240px;
-            margin: 0 auto;
-            position: relative;
-            display: flex;
-            align-items: stretch;
-        }
-
-        .cat-nav-inner {
-            flex: 1;
-            min-width: 0;
-            padding: 0 clamp(0.5rem, 2vw, 1rem);
-            display: flex;
-            align-items: center;
-            gap: 0.1rem;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-            scroll-behavior: smooth;
-            -webkit-mask-image: linear-gradient(to right, #000 90%, transparent 100%);
-            mask-image: linear-gradient(to right, #000 90%, transparent 100%);
-        }
-
-        .cat-nav-inner.is-end {
-            -webkit-mask-image: none;
-            mask-image: none;
-        }
-
-        .cat-nav-inner::-webkit-scrollbar {
-            display: none;
-        }
-
-        .cat-next {
-            flex-shrink: 0;
-            width: 44px;
-            border: none;
-            cursor: pointer;
-            background: linear-gradient(to right, rgba(40, 52, 64, 0) 0%, #283440 45%);
-            color: rgba(255, 255, 255, 0.9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: color 0.15s ease;
-        }
-
-        .cat-next:hover {
-            color: var(--hero-gold);
-        }
-
-        .cat-next svg {
-            width: 18px;
-            height: 18px;
-        }
-
-        .cat-next.is-hidden {
-            display: none;
-        }
-
-        .cat-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            font-family: var(--font-ui);
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.88);
-            padding: 0.75rem 0.8rem;
-            white-space: nowrap;
-            text-decoration: none;
-            border: 1px solid transparent;
-            border-radius: 6px;
-            transition: background 0.15s ease, color 0.15s ease;
-        }
-
-        .cat-link:hover {
-            background: rgba(255, 255, 255, 0.08);
-            color: var(--hero-gold);
-        }
-
-        .cat-link[aria-current="page"] {
-            color: var(--hero-gold);
-            box-shadow: inset 0 -2px 0 var(--hero-gold);
-            border-radius: 6px 6px 0 0;
-        }
 
         .menu-toggle {
             display: flex;
@@ -4822,28 +4730,6 @@
             </div>
         </div>
     </header>
-
-    <!-- <nav class="cat-nav" aria-label="Categories">
-        <div class="cat-nav-wrap">
-            <div class="cat-nav-inner" id="catNavInner">
-                <a href="https://www.improvetuition.org/about/" class="cat-link">About</a>
-                <a href="https://www.improvetuition.org/uk/online/maths-tutor/" class="cat-link"
-                    aria-current="page">Online Maths</a>
-                <a href="https://www.improvetuition.org/uk/online/english-tutor/" class="cat-link">Online English</a>
-                <a href="https://www.improvetuition.org/uk/online/science-tutor/" class="cat-link">Online Science</a>
-                <a href="https://www.improvetuition.org/reviews/" class="cat-link">Reviews</a>
-                <a href="https://www.improvetuition.org/pricing/" class="cat-link">Pricing</a>
-                <a href="https://www.improvetuition.org/contact/" class="cat-link">Contact</a>
-                <a href="#start" class="cat-link" style="color:var(--hero-gold);font-weight:700;">Free assessment</a>
-            </div>
-            <button class="cat-next" id="catNext" aria-label="Scroll categories">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                    stroke-linejoin="round" aria-hidden="true">
-                    <polyline points="9 18 15 12 9 6" />
-                </svg>
-            </button>
-        </div>
-    </nav> -->
 
     <!-- ─── Left drawer + overlay ─── -->
     <div class="mobile-overlay" id="mobileOverlay"></div>
