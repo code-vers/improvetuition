@@ -100,42 +100,6 @@
             color: var(--ink);
         }
 
-        /* ═══════════════════ Header ═══════════════════ */
-        .site-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1.5rem;
-            padding: 1.4rem 2.5rem 1.15rem;
-            background: var(--paper);
-            border-bottom: 1px solid var(--rule);
-        }
-
-        .brand-mark {
-            display: flex;
-            align-items: center;
-            gap: 0.55rem;
-        }
-
-        .brand-icon {
-            width: 22px;
-            height: 22px;
-            flex-shrink: 0;
-        }
-
-        .brand-name {
-            font-family: 'Fraunces', serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            letter-spacing: -0.012em;
-            color: var(--ink);
-            line-height: 1;
-        }
-
-        .brand-name .dot {
-            color: var(--brand-red);
-        }
-
         /* ═══════════════════ Page intro ═══════════════════ */
         main.pricing {
             max-width: 880px;
@@ -342,8 +306,6 @@
             border-bottom-color: var(--brand-red);
         }
 
-
-
         /* ═══════════════════ Mobile ═══════════════════ */
         @media (max-width: 720px) {
             .price-grid {
@@ -357,13 +319,6 @@
         }
 
         @media (max-width: 640px) {
-            .site-header {
-                padding: 1.1rem 1.25rem;
-            }
-
-            .brand-name {
-                font-size: 1.3rem;
-            }
 
             main.pricing {
                 padding: 2rem 1.25rem 3rem;
@@ -383,8 +338,6 @@
                 margin-top: 3rem;
                 padding-top: 2rem;
             }
-
-
         }
     </style>
 </head>
