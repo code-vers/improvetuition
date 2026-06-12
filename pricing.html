@@ -342,82 +342,7 @@
             border-bottom-color: var(--brand-red);
         }
 
-        /* ═══════════════════ Footer (matches other pages) ═══════════════════ */
-        .site-footer {
-            background: #242F3A;
-            color: #e8e0d2;
-            padding: 3rem 2.5rem 2rem;
-        }
 
-        .site-footer-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 2rem;
-            align-items: start;
-        }
-
-        .footer-brand .brand-mark {
-            margin-bottom: 1.25rem;
-        }
-
-        .footer-brand .brand-name {
-            font-family: 'Fraunces', serif;
-            font-weight: 700;
-            font-size: 1.6rem;
-            color: var(--ivory);
-        }
-
-        .footer-brand .brand-name .dot {
-            color: var(--brand-red);
-        }
-
-        .footer-contact {
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
-            margin-top: 0.5rem;
-        }
-
-        .footer-contact a {
-            color: #e8e0d2;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 150ms ease;
-        }
-
-        .footer-contact a:hover {
-            color: var(--gold);
-        }
-
-        .footer-meta .established {
-            color: #C99A2E;
-            font-weight: 600;
-        }
-
-        .footer-meta {
-            grid-column: 1 / -1;
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(232, 224, 210, 0.1);
-            font-size: 0.78rem;
-            color: rgba(232, 224, 210, 0.6);
-            line-height: 1.6;
-        }
-
-        .footer-meta p {
-            margin: 0 0 0.4rem;
-        }
-
-        .footer-meta p:last-child {
-            margin: 0;
-        }
-
-        .footer-meta .sep {
-            margin: 0 0.5em;
-            opacity: 0.5;
-        }
 
         /* ═══════════════════ Mobile ═══════════════════ */
         @media (max-width: 720px) {
@@ -459,23 +384,13 @@
                 padding-top: 2rem;
             }
 
-            .site-footer {
-                padding: 2.5rem 1.25rem 1.5rem;
-            }
 
-            .site-footer-inner {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
         }
     </style>
 </head>
 
 <body>
-
-
-
-
+    <div id="navbar-placeholder"></div>
 
     <!-- ═══════════ PRICING PAGE ═══════════ -->
     <main class="pricing">
@@ -576,7 +491,8 @@
 
     </main>
 
-
+    <div id="footer-placeholder"></div>
+    <script src="/assets/js/app.js"></script>
 </body>
 
 </html>
