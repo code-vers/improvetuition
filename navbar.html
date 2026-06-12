@@ -675,6 +675,20 @@
             height: 60vh
         }
 
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+
         @media (prefers-reduced-motion:reduce) {
             * {
                 transition: none !important;
@@ -833,12 +847,13 @@
                 </svg><span>Menu</span>
             </button>
             <a class="logo" href="/" aria-label="Improve Tuition home">
-                <svg class="brand-mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                <!-- <svg class="brand-mark" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round"
                     aria-hidden="true">
                     <circle cx="36" cy="22" r="8.5" fill="currentColor" />
                     <path d="M22 50 L46 78 L82 24" stroke="currentColor" stroke-width="13.5" fill="none" />
-                </svg>
-                <span>improve&nbsp;tuition<span class="dot">.</span></span>
+                </svg> -->
+                <div class="logo"><img src="/assets/images/logo-2.png" alt="Logo"></div>
+                <div> <span>improve&nbsp;tuition<span class="dot">.</span></span></div>
             </a>
             <div class="header-spacer"></div>
             <div class="header-actions">

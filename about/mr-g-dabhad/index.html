@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Improve Tuition | Founded 2007 by Mr G Dabhad QTS</title>
+    <meta name="description"
+        content="Teacher-led Maths, English and Science tuition since 2007 in Batley. Founded by Mr G Dabhad, QTS, BA (Hons), with 18 years' experience. In-person and online.">
+
+    <link rel="canonical" href="https://improvetuition.org/about.html">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Mr G Dabhad">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Improve Tuition">
+    <meta property="og:title" content="About Improve Tuition | Founded 2007 by Mr G Dabhad QTS">
+    <meta property="og:description"
+        content="Teacher-led Maths, English and Science tuition since 2007. Founded by Mr G Dabhad, QTS (BA Hons), with 18 years' experience. Batley centre and online across the UK.">
+    <meta property="og:url" content="https://improvetuition.org/about.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:image" content="https://improvetuition.org/assets/images/about-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Improve Tuition | Founded 2007 by Mr G Dabhad QTS">
+    <meta name="twitter:description"
+        content="Teacher-led Maths, English and Science tuition since 2007 in Batley. Founded by Mr G Dabhad, QTS (BA Hons), 18 years' experience.">
+    <meta name="twitter:image" content="https://improvetuition.org/assets/images/about-og.jpg">
+
+    <meta name="theme-color" content="#D55A3F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            /* ─── 4-PILLAR PALETTE ─── */
+            --pillar-authority: #242F3A;
+            --pillar-experience: #D55A3F;
+            --pillar-expertise: #C99A2E;
+            --pillar-trust: #5A5A5A;
+
+            --main-bg: #F7F5F2;
+            --section-bg: #E8E3DA;
+            --panel-bg: #FFFFFF;
+            --rule: #D8D2C7;
+
+            --coral-dark: #B14526;
+            --gold-soft: #D6B35A;
+            --hero-line: rgba(36, 47, 58, 0.06);
+
+            --cta-bg: #D55A3F;
+
+            --ink: #242F3A;
+            --muted: #5A5A5A;
+            --paper: #F7F5F2;
+            --cream: #E8E3DA;
+            --ivory: #F7F5F2;
+            --coral: #D55A3F;
+            --gold: #C99A2E;
+            --brand-red: #D55A3F;
+            --forest: #5A5A5A;
+            --forest-dark: #424242;
+            --hero-gold: #C99A2E;
+            --cream-warm: #E8E3DA;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+            color: var(--ink);
+            background: var(--paper);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+            scroll-padding-top: 1.25rem;
+            overflow-x: clip;
+        }
+
+        html {
+            /* Reserve space for the scrollbar so the page does not jump horizontally
+       when content height changes (scrollbar appearing/disappearing) */
+            scrollbar-gutter: stable;
+        }
+
+        ::selection {
+            background: rgba(199, 92, 69, 0.18);
+            color: var(--ink);
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            z-index: 200;
+            padding: 0.7rem 1.1rem;
+            background: var(--ink);
+            color: var(--ivory);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.92rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: top 150ms ease;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+            outline: 2px solid var(--gold);
+            outline-offset: 2px;
+        }
+
+        /* ═══════════════════ ABOUT PAGE ═══════════════════ */
+        .about-hero {
+            background: #19242F;
+            padding: clamp(3rem, 7vw, 5rem) 2.5rem clamp(2.5rem, 6vw, 4rem);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image: repeating-linear-gradient(108deg, transparent 0, transparent 110px,
+                    rgba(255, 255, 255, 0.04) 110px, rgba(255, 255, 255, 0.04) 111px);
+        }
+
+        .about-hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-eyebrow {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1rem;
+        }
+
+        .about-headline {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: clamp(2rem, 4.6vw, 3.2rem);
+            line-height: 1.05;
+            letter-spacing: -0.022em;
+            color: rgba(255, 255, 255, 0.96);
+            margin-bottom: 1.4rem;
+            max-width: 22ch;
+            text-wrap: balance;
+        }
+
+        .about-headline em {
+            font-style: italic;
+            color: var(--hero-gold);
+        }
+
+        .about-lede {
+            font-family: 'Fraunces', serif;
+            font-weight: 400;
+            font-size: clamp(1.05rem, 2vw, 1.18rem);
+            line-height: 1.55;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 56ch;
+        }
+
+        .about-section {
+            padding: clamp(3rem, 6vw, 4.5rem) 2.5rem;
+        }
+
+        .about-section--cream {
+            background: var(--cream-warm);
+        }
+
+        /* Hero credentials strip — quietly stacks 4 trust signals.
+     Deliberately understated so the H1 italic stays the gold focal point. */
+        .about-credentials {
+            list-style: none;
+            margin: 1.75rem 0 0;
+            padding: 1rem 0 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.55rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .about-credentials li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.78);
+            line-height: 1.3;
+            letter-spacing: 0.005em;
+        }
+
+        .about-credentials .cred-mark {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 14px;
+            height: 14px;
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 0.85rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        @media (min-width: 720px) {
+            .about-credentials {
+                grid-template-columns: repeat(4, auto);
+                justify-content: start;
+                gap: 0.5rem 1.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-credentials {
+                grid-template-columns: 1fr;
+                gap: 0.55rem;
+            }
+        }
+
+        /* Approach section: warmer paper-tone bg that contrasts with the framed image */
+        .about-section--approach {
+            background: #E7DCD1;
+        }
+
+        /* Image is lifted off the page with a stronger shadow + thin gold accent line,
+     so it reads as a raised piece rather than a heavy frame */
+        .about-section--approach .about-figure img {
+            border: 1.5px solid var(--gold);
+            border-radius: 2px;
+            box-shadow: 0 28px 56px -14px rgba(36, 47, 58, 0.38),
+                0 12px 22px -8px rgba(36, 47, 58, 0.20),
+                0 3px 5px -1px rgba(36, 47, 58, 0.10);
+        }
+
+        /* Image breaks out of the 760px text column for a wider banner feel.
+     Capped so it stays sharp on wide screens and never reaches the viewport edge. */
+        @media (min-width: 900px) {
+            .about-section--approach .about-figure {
+                width: min(1000px, calc(100vw - 6rem));
+                max-width: calc(100vw - 6rem);
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .about-section--approach .about-figure img {
+                border-width: 1px;
+            }
+        }
+
+        .about-section--paper {
+            background: var(--paper);
+        }
+
+        .about-section--navy {
+            background: #19242F;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .about-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .about-section-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: clamp(1.65rem, 3.4vw, 2.2rem);
+            line-height: 1.1;
+            letter-spacing: -0.022em;
+            color: var(--ink);
+            margin: 0.5rem 0 1.5rem;
+            max-width: 24ch;
+            text-wrap: balance;
+        }
+
+        .about-section-title em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .about-section-title--light {
+            color: rgba(255, 255, 255, 0.96);
+        }
+
+        .about-section-title--light em {
+            color: var(--hero-gold);
+        }
+
+        .about-eyebrow-light {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .about-prose p,
+        .about-lead-para {
+            font-family: 'Fraunces', serif;
+            font-weight: 400;
+            font-size: clamp(1.05rem, 2vw, 1.15rem);
+            line-height: 1.7;
+            color: var(--ink);
+            margin-bottom: 1.2rem;
+            max-width: 60ch;
+        }
+
+        .about-prose strong {
+            font-weight: 600;
+        }
+
+        /* Scannable list inside about prose — used for tutor selection criteria */
+        .about-list {
+            list-style: none;
+            margin: 0.5rem 0 1.25rem;
+            padding: 0;
+        }
+
+        .about-list li {
+            position: relative;
+            padding: 0.45rem 0 0.45rem 1.6rem;
+            font-family: 'Fraunces', serif;
+            font-weight: 400;
+            font-size: clamp(1.05rem, 2vw, 1.18rem);
+            line-height: 1.5;
+            color: var(--ink);
+        }
+
+        .about-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.95rem;
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .about-figure {
+            margin: 0.5rem 0 2rem;
+            padding: 0;
+        }
+
+        .about-figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        /* On larger screens, let the image bleed slightly wider than the text column
+     for a stronger "edge to edge" feel without breaking out of the section. */
+        @media (min-width: 900px) {
+            .about-figure {
+                margin-left: -2rem;
+                margin-right: -2rem;
+            }
+        }
+
+        .about-lead-para {
+            color: var(--muted);
+            margin-bottom: 2rem;
+            max-width: 50ch;
+        }
+
+        /* Intro lead paragraph (fast-path summary) */
+        .about-intro-lead {
+            font-size: clamp(1.2rem, 2.4vw, 1.4rem) !important;
+            line-height: 1.5 !important;
+            color: var(--ink) !important;
+            margin-bottom: 1.5rem !important;
+            max-width: 56ch !important;
+        }
+
+        /* Inline trust link in CTA section */
+        .cta-inline-link {
+            color: var(--hero-gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(201, 154, 46, 0.5);
+            transition: border-color 150ms ease, color 150ms ease;
+        }
+
+        .cta-inline-link:hover,
+        .cta-inline-link:focus-visible {
+            color: #d6b35a;
+            border-bottom-color: #d6b35a;
+        }
+
+        /* CTA microcopy strip */
+        .about-cta-microcopy {
+            margin-top: 1.25rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.01em;
+        }
+
+        .about-cta-microcopy span {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Closing CTA */
+        .about-cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            margin-top: 2rem;
+        }
+
+        .about-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.95rem 1.6rem;
+            border-radius: 6px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background 150ms ease, color 150ms ease;
+        }
+
+        .about-cta-btn--primary {
+            background: var(--coral);
+            color: #ffffff;
+        }
+
+        .about-cta-btn--primary:hover {
+            background: var(--coral-dark);
+        }
+
+        .about-cta-btn--ghost {
+            background: transparent;
+            color: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .about-cta-btn--ghost:hover {
+            border-color: var(--hero-gold);
+            color: var(--hero-gold);
+        }
+
+        .about-cta-prose p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .about-cta-prose strong {
+            color: rgba(255, 255, 255, 0.96);
+        }
+
+        /* Footer CTA prominence */
+        .footer-cta-line {
+            font-family: 'Fraunces', serif;
+            font-weight: 500;
+            font-size: 1.05rem;
+            color: var(--hero-gold);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .about-hero {
+                padding: 2rem 1.25rem 2.5rem;
+            }
+
+            .about-section {
+                padding: 2.5rem 1.25rem;
+            }
+        }
+    </style>
+
+    <!-- ═══════════ JSON-LD SCHEMA (cleaned, no AggregateRating) ═══════════ -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://improvetuition.org/#website",
+      "url": "https://improvetuition.org/",
+      "name": "Improve Tuition",
+      "description": "Teacher-led Maths, English and Science tuition since 2007. Founded and led by Mr G Dabhad, QTS.",
+      "inLanguage": "en-GB",
+      "publisher": { "@id": "https://improvetuition.org/#organization" }
+    },
+    {
+      "@type": ["EducationalOrganization", "LocalBusiness"],
+      "@id": "https://improvetuition.org/#organization",
+      "name": "Improve Tuition",
+      "alternateName": "Mr G Dabhad Tuition",
+      "url": "https://improvetuition.org/",
+      "logo": "https://improvetuition.org/assets/images/improve-tuition-logo.png",
+      "image": "https://improvetuition.org/assets/images/about-og.jpg",
+      "description": "Teacher-led Maths, English and Science tuition for children aged 5 to 18, from primary through to A-Level. Established in 2007 in Batley, West Yorkshire and led by Mr G Dabhad, a qualified teacher with QTS, BA (Hons), and 18 years' experience. In-person at the Batley centre and online across the UK and abroad.",
+      "foundingDate": "2007",
+      "slogan": "We find the gap. Then we teach it.",
+      "founder": {
+        "@id": "https://improvetuition.org/about.html#mr-g-dabhad"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "The Study Room, George Street",
+        "addressLocality": "Batley",
+        "addressRegion": "West Yorkshire",
+        "postalCode": "WF17 5AR",
+        "addressCountry": "GB"
+      },
+      "telephone": "+441924506010",
+      "email": "info@improvetuition.org",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "10:00",
+          "closes": "14:00"
+        }
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Batley" },
+        { "@type": "City", "name": "Dewsbury" },
+        { "@type": "City", "name": "Bradford" },
+        { "@type": "City", "name": "Huddersfield" },
+        { "@type": "City", "name": "Leeds" },
+        { "@type": "City", "name": "Wakefield" },
+        { "@type": "City", "name": "Halifax" },
+        { "@type": "Country", "name": "United Kingdom" }
+      ],
+      "knowsAbout": [
+        "Maths tuition",
+        "English tuition",
+        "Science tuition",
+        "11+ exam preparation",
+        "SATs preparation",
+        "GCSE tuition",
+        "A-Level tuition"
+      ],
+      "priceRange": "££",
+      "sameAs": [
+        "https://uk.trustpilot.com/review/improvetuition.org"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://improvetuition.org/about.html#mr-g-dabhad",
+      "name": "Mr G Dabhad",
+      "honorificPrefix": "Mr",
+      "givenName": "G",
+      "familyName": "Dabhad",
+      "jobTitle": "Founder and Qualified Teacher at Improve Tuition",
+      "description": "Mr G Dabhad is the founder of Improve Tuition. He is a qualified teacher with QTS and a BA (Hons) degree, with 18 years' experience leading the service. He oversees assessment, progress and teaching direction across Maths, English and Science.",
+      "url": "https://improvetuition.org/about.html#mr-g-dabhad",
+      "knowsLanguage": "en-GB",
+      "knowsAbout": [
+        "Maths",
+        "English",
+        "Science",
+        "Pupil assessment",
+        "Tuition",
+        "UK National Curriculum"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "license",
+          "name": "Qualified Teacher Status (QTS)",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Department for Education"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "BA (Hons)"
+        }
+      ],
+      "worksFor": {
+        "@id": "https://improvetuition.org/#organization"
+      }
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://improvetuition.org/about.html#aboutpage",
+      "url": "https://improvetuition.org/about.html",
+      "name": "About Improve Tuition",
+      "description": "About Improve Tuition — a teacher-led Maths, English and Science tuition service established in 2007 in Batley, West Yorkshire by Mr G Dabhad, QTS.",
+      "inLanguage": "en-GB",
+      "datePublished": "2024-09-01",
+      "dateModified": "2026-05-06",
+      "isPartOf": { "@id": "https://improvetuition.org/#website" },
+      "about": [
+        { "@id": "https://improvetuition.org/#organization" },
+        { "@id": "https://improvetuition.org/about.html#mr-g-dabhad" }
+      ],
+      "mainEntity": {
+        "@id": "https://improvetuition.org/#organization"
+      },
+      "author": { "@id": "https://improvetuition.org/about.html#mr-g-dabhad" },
+      "publisher": { "@id": "https://improvetuition.org/#organization" },
+      "breadcrumb": {
+        "@id": "https://improvetuition.org/about.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://improvetuition.org/about.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://improvetuition.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://improvetuition.org/about.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ═══════════ MAIN CONTENT ═══════════ -->
+    <main id="main">
+
+        <!-- HERO -->
+        <section class="about-hero">
+            <div class="about-hero-inner">
+                <p class="about-eyebrow">About Improve Tuition</p>
+                <h1 class="about-headline">Teacher-led tuition, <em>since 2007.</em></h1>
+                <p class="about-lede">A teacher-led tuition service supporting children aged 5 to 18 in Maths, English
+                    and Science — from primary through to A-Level — in person at our Batley centre and online across the
+                    UK and abroad. Founded and led by Mr G Dabhad, a qualified teacher with QTS, BA (Hons), and 18
+                    years' experience.</p>
+                <ul class="about-credentials" aria-label="Credentials">
+                    <li><span class="cred-mark" aria-hidden="true">✓</span> Established 2007</li>
+                    <li><span class="cred-mark" aria-hidden="true">✓</span> QTS &amp; BA (Hons)</li>
+                    <li><span class="cred-mark" aria-hidden="true">✓</span> 18 years' experience</li>
+                    <li><span class="cred-mark" aria-hidden="true">✓</span> Batley &amp; online (UK + abroad)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- INTRO SUMMARY — fast-path for scanners -->
+        <section class="about-section about-section--cream">
+            <div class="about-inner">
+                <div class="about-prose">
+                    <p class="about-intro-lead"><strong>Parents usually come to us when their child is trying, but
+                            progress is not showing. Often, the issue is not lack of effort — it is an unseen learning
+                            gap.</strong></p>
+                    <p>Our role is to assess first, explain the problem clearly, and provide structured tuition with a
+                        proper plan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARENT WORRY — emotional expansion -->
+        <section class="about-section about-section--paper">
+            <div class="about-inner">
+                <p class="about-eyebrow" style="color: var(--muted);">What we see</p>
+                <h2 class="about-section-title">The signs are usually the same.</h2>
+                <div class="about-prose">
+                    <p>Homework may feel stressful. Confidence may be slipping. Exam marks may not reflect the effort
+                        being made. By the time parents reach out, they've often tried the school's own support — and
+                        they still don't have a clear answer.</p>
+                    <p>Our first job isn't to sell tuition. It's to find out <strong>what is really causing the
+                            difficulty</strong>, so parents don't have to guess what's wrong before asking for help.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHO WE ARE -->
+        <section class="about-section about-section--cream">
+            <div class="about-inner">
+                <p class="about-eyebrow" style="color: var(--muted);">Who we are</p>
+                <h2 class="about-section-title">A teacher-led tuition centre, not a marketplace.</h2>
+                <div class="about-prose">
+                    <p>Improve Tuition was established in <strong>2007</strong> in Batley, West Yorkshire. Since then we
+                        have supported families in Batley and online with teacher-led <strong>Maths, English and
+                            Science</strong> tuition for SATs, the 11+, GCSEs and A-Levels.</p>
+                    <p>We work with children <strong>aged 5 to 18</strong>, both in person at our Batley centre and
+                        online — supporting families across the UK and abroad. Every pupil starts with an assessment
+                        that finds the gap, then follows a focused plan that closes it.</p>
+                    <p>We are not a tutor marketplace where parents compare profiles alone. We are a focused,
+                        teacher-led team with one clear standard across the subjects we offer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOUNDER SECTION -->
+        <section id="mr-g-dabhad" class="about-section about-section--paper">
+            <div class="about-inner">
+                <p class="about-eyebrow" style="color: var(--muted);">The founder</p>
+                <h2 class="about-section-title">Led by <em>Mr G Dabhad</em>, qualified teacher.</h2>
+                <div class="about-prose">
+                    <p>Improve Tuition is led by <strong>Mr G Dabhad</strong>, a qualified teacher with
+                        <strong>QTS</strong>, a <strong>BA (Hons)</strong> degree and 18 years' experience leading the
+                        service.</p>
+                    <p>He founded Improve Tuition in 2007 with a clear belief: pupils make stronger progress when
+                        teaching is structured, monitored and based on the real gaps in their learning.</p>
+                    <p>Mr Dabhad oversees assessment, progress and teaching direction across Maths, English and Science.
+                        Lessons are delivered by DBS-checked tutors who follow Improve Tuition's structured approach.
+                    </p>
+                    <p>His focus is simple: find the gap, close the gap, and keep families informed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR TUTORS -->
+        <section class="about-section about-section--cream">
+            <div class="about-inner">
+                <p class="about-eyebrow" style="color: var(--muted);">Our tutors</p>
+                <h2 class="about-section-title">Selected from the top of their year.</h2>
+                <div class="about-prose">
+                    <p>Past tutors have gone on to study medicine at <strong>Oxford and Cambridge</strong>. Some stayed
+                        with us for <strong>seven years</strong> — from sixth form through to qualifying as doctors.</p>
+                    <p>We accept fewer than <strong>1 in 7</strong> who apply. Top grades are the starting point. We
+                        then look for three things:</p>
+                    <ul class="about-list">
+                        <li>Can they explain ideas clearly?</li>
+                        <li>Are they good with children?</li>
+                        <li>Do they stay patient when a pupil is stuck?</li>
+                    </ul>
+                    <p><strong>Pupils rate them too.</strong> Only those who pass that bar carry the Improve Tuition
+                        name.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR APPROACH -->
+        <section class="about-section about-section--cream about-section--approach">
+            <div class="about-inner">
+                <p class="about-eyebrow" style="color: var(--muted);">Our approach</p>
+                <h2 class="about-section-title">Find the gap first, then teach with a clear plan.</h2>
+                <figure class="about-figure">
+                    <img src="data:image/webp;base64,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"
+                        alt="Linked to findings: assessment, lessons, progress. A clipboard checklist links by an arrow to a lesson plan, which links by an arrow to a progress chart showing consistent growth."
+                        width="1448" height="1086" loading="lazy" decoding="async">
+                </figure>
+                <div class="about-prose">
+                    <p><strong>1. Assess.</strong> Every pupil begins with a written assessment. We identify the gaps by
+                        topic, skill or exam question type. No guessing.</p>
+                    <p><strong>2. Teach.</strong> Lessons follow a focused plan. Pupils learn what is missing, then
+                        practise until it sticks.</p>
+                    <p><strong>3. Track.</strong> We monitor progress, update parents and adjust quickly if something is
+                        not working.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUBJECTS WE TEACH -->
+        <section class="about-section about-section--paper">
+            <div class="about-inner">
+                <p class="about-eyebrow" style="color: var(--muted);">What we teach</p>
+                <h2 class="about-section-title">Maths, English and Science — for ages <em>5 to 18</em>.</h2>
+                <div class="about-prose">
+                    <p>Our core subjects are <strong>Maths, English and Science</strong>, supported across primary,
+                        secondary, GCSE and A-Level.</p>
+                    <p>We also prepare pupils for the <strong>11+ exam</strong>, <strong>SATs</strong> and <strong>GCSE
+                            retakes</strong>.</p>
+                    <p>Lessons are available <strong>in person</strong> at our Batley centre, or <strong>online</strong>
+                        — with the same standards and the same structured approach.</p>
+                    <p>Support is offered through <strong>one-to-one, paired, small group or online tuition</strong>,
+                        depending on the child's needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOCATION -->
+        <section class="about-section about-section--cream">
+            <div class="about-inner">
+                <p class="about-eyebrow" style="color: var(--muted);">Where to find us</p>
+                <h2 class="about-section-title">Based in <em>Batley</em>, online everywhere.</h2>
+                <div class="about-prose">
+                    <p>Our centre is on George Street, Batley, West Yorkshire. Families travel from Dewsbury, Bradford,
+                        Huddersfield, Leeds, Wakefield and Halifax for in-person tuition.</p>
+                    <p>Online lessons are open to families across the UK and to British curriculum pupils overseas. The
+                        teaching approach is the same in both formats.</p>
+                    <p>Lessons run <strong>by appointment</strong>: Monday to Friday <strong>9am–7pm</strong>, Saturday
+                        and Sunday <strong>10am–2pm</strong>. You can call within these hours.</p>
+                    <p><strong>The Study Room, George Street, Batley, West Yorkshire WF17 5AR</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLOSING CTA -->
+        <section class="about-section about-section--navy">
+            <div class="about-inner">
+                <p class="about-eyebrow about-eyebrow-light">Next step</p>
+                <h2 class="about-section-title about-section-title--light">Ready to find out what your child needs?</h2>
+                <div class="about-prose about-cta-prose">
+                    <p>Established since 2007, Improve Tuition is supported by DBS-checked tutors and <a
+                            href="https://uk.trustpilot.com/review/improvetuition.org" target="_blank" rel="noopener"
+                            class="cta-inline-link">public parent reviews</a>.</p>
+                    <p>If your child is struggling, slipping behind or losing confidence, the first step is not to
+                        guess. It is to find the gap.</p>
+                    <p>Parents deserve clear answers, children deserve patient teaching, and tuition should have a
+                        proper plan.</p>
+                    <p><strong>Book a free assessment.</strong> We'll explain what your child needs — and what it will
+                        cost — before you commit to tuition.</p>
+                </div>
+                <div class="about-cta-actions">
+                    <a href="/contact.html#book" class="about-cta-btn about-cta-btn--primary">Book a Free Assessment</a>
+                    <a href="tel:+441924506010" class="about-cta-btn about-cta-btn--ghost">Call 01924 506010</a>
+                </div>
+                <p class="about-cta-microcopy">Takes 2 minutes <span>•</span> No obligation <span>•</span> We explain
+                    the next step clearly before tuition begins</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/assets/js/app.js"></script>
+
+</body>
+
+</html>
