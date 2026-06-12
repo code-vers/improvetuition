@@ -106,12 +106,7 @@
             outline-offset: 3px
         }
 
-        .brand-strip {
-            background: var(--white);
-            color: var(--navy);
-            padding: 22px 32px 14px;
-            border-bottom: 1px solid var(--rule)
-        }
+        
 
         .brand-inner {
             max-width: 1200px;
@@ -2519,9 +2514,7 @@
         }
 
         @media (max-width:600px) {
-            .brand-strip {
-                padding: 18px 22px 12px
-            }
+            
 
             .brand-meta {
                 display: none
@@ -2625,7 +2618,7 @@
         .a11y {
             position: fixed;
             top: 12px;
-            right: 12px;
+            right: 32px;
             z-index: 1100;
             font-family: var(--font-ui)
         }
@@ -3201,9 +3194,7 @@
         body.comfort-contrast .offer-closer,
         body.comfort-contrast .how-online-card,
         body.comfort-contrast .review-quote,
-        body.comfort-contrast .brand-strip {
-            background: #FAF8F4 !important
-        }
+        body.comfort-contrast 
 
         body.comfort-contrast .home-hero,
         body.comfort-contrast .faq {
@@ -3375,24 +3366,7 @@
         </div>
     </div>
 
-    <header class="brand-strip">
-        <div class="brand-inner">
-            <div class="logo-row">
-                <a class="logo" href="/" aria-label="Improve Tuition home">
-                    <svg class="brand-mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                        <circle cx="22" cy="38" r="8" fill="currentColor" />
-                        <path d="M22 48 Q 18 58 22 68 Q 28 78 36 76" stroke="currentColor" stroke-width="7"
-                            stroke-linecap="round" fill="none" />
-                        <path d="M30 60 L46 80 L86 18" stroke="currentColor" stroke-width="13" stroke-linecap="round"
-                            stroke-linejoin="round" fill="none" />
-                    </svg>
-                    <span class="wordmark">improve&nbsp;tuition<span class="dot">.</span></span>
-                </a>
-                <div class="brand-meta">Established 2007</div>
-            </div>
-            <div class="sub-brand">Online Chemistry Tuition &middot; UK &amp; International</div>
-        </div>
-    </header>
+    <div id="navbar-placeholder"></div>
 
     <main id="main-content">
 
@@ -4387,6 +4361,7 @@
         })();
     </script>
 
+  <script src="/assets/js/app.js"></script>
 </body>
 
 </html>

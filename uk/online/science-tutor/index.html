@@ -517,7 +517,7 @@
         .a11y {
             position: fixed;
             top: 12px;
-            right: 12px;
+            right: 32px;
             z-index: 1100;
             font-family: var(--font-ui);
         }
@@ -1019,9 +1019,7 @@
         body.comfort-contrast .reviews-aggregate,
         body.comfort-contrast .review-card,
         body.comfort-contrast .level-card,
-        body.comfort-contrast .brand-strip {
-            background: #FAF8F4 !important;
-        }
+        body.comfort-contrast 
 
         body.comfort-contrast .home-hero,
         body.comfort-contrast .faq {
@@ -1189,12 +1187,7 @@
             }
         }
 
-        .brand-strip {
-            background: var(--white);
-            color: var(--navy);
-            padding: 22px 32px 14px;
-            border-bottom: 1px solid var(--rule);
-        }
+        
 
         /* ── Site header (navy) + category nav strip + slide-in drawer ── */
         .site-header {
@@ -1214,54 +1207,7 @@
             min-height: 80px;
         }
 
-        .menu-toggle {
-            display: flex;
-            align-items: center;
-            background: none;
-            border: none;
-            color: #E8E0D2;
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: 4px;
-            flex-shrink: 0;
-        }
-
-        .menu-toggle:hover {
-            background: rgba(255, 255, 255, 0.08);
-            color: var(--gold);
-        }
-
-        .menu-toggle .bars {
-            width: 24px;
-            height: 14px;
-            position: relative;
-            display: block;
-        }
-
-        .menu-toggle .bars::before,
-        .menu-toggle .bars::after,
-        .menu-toggle .bars span {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: currentColor;
-            border-radius: 2px;
-        }
-
-        .menu-toggle .bars::before {
-            top: 0;
-        }
-
-        .menu-toggle .bars span {
-            top: 6px;
-        }
-
-        .menu-toggle .bars::after {
-            bottom: 0;
-        }
+        
 
         .brand-mark {
             display: flex;
@@ -3588,9 +3534,7 @@
         }
 
         @media (max-width: 600px) {
-            .brand-strip {
-                padding: 18px 22px 12px;
-            }
+            
 
             .brand-meta {
                 display: none;
@@ -3817,63 +3761,7 @@
         </div>
     </div>
 
-    <header class="site-header">
-        <div class="header-inner">
-            <button class="menu-toggle" aria-label="Open menu" id="menuToggle" aria-expanded="false"
-                aria-controls="drawer">
-                <span class="bars"><span></span></span>
-            </button>
-            <a href="https://www.improvetuition.org/" class="brand-mark">
-                <img class="brand-logo" src="/images/improve-tuition-logo.png" alt="Improve Tuition" width="270"
-                    height="56" decoding="async">
-            </a>
-        </div>
-    </header>
-
-    <nav class="cat-nav" aria-label="Categories">
-        <div class="cat-nav-wrap">
-            <div class="cat-nav-inner" id="catNavInner">
-                <a href="https://www.improvetuition.org/subjects.html" class="cat-link">Subjects</a>
-                <a href="https://www.improvetuition.org/exam-stages.html" class="cat-link">Exam Stages</a>
-                <a href="https://www.improvetuition.org/online-maths.html" class="cat-link">Online</a>
-                <a href="https://www.improvetuition.org/about.html" class="cat-link">About</a>
-                <a href="https://www.improvetuition.org/reviews.html" class="cat-link">Reviews</a>
-                <a href="https://www.improvetuition.org/pricing.html" class="cat-link">Pricing</a>
-                <a href="https://www.improvetuition.org/contact.html" class="cat-link">Contact</a>
-                <a href="#start" class="cat-link" style="color:#C99A2E;">Free assessment</a>
-            </div>
-            <button class="cat-next" id="catNext" aria-label="Scroll categories">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6" />
-                </svg>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Slide-in drawer (opened by the hamburger) -->
-    <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
-    <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Site menu">
-        <div class="drawer-head">
-            <img class="drawer-logo" src="/images/improve-tuition-logo.png" alt="Improve Tuition" decoding="async">
-            <button class="drawer-close" id="drawerClose" aria-label="Close menu">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" aria-hidden="true">
-                    <path d="M18 6L6 18M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
-        <ul class="drawer-links">
-            <li><a href="https://www.improvetuition.org/subjects.html">Subjects</a></li>
-            <li><a href="https://www.improvetuition.org/exam-stages.html">Exam Stages</a></li>
-            <li><a href="https://www.improvetuition.org/online-maths.html">Online</a></li>
-            <li><a href="https://www.improvetuition.org/about.html">About</a></li>
-            <li><a href="https://www.improvetuition.org/reviews.html">Reviews</a></li>
-            <li><a href="https://www.improvetuition.org/pricing.html">Pricing</a></li>
-            <li><a href="https://www.improvetuition.org/contact.html">Contact</a></li>
-            <li><a href="#start" class="is-cta">Free assessment</a></li>
-        </ul>
-    </aside>
+    <div id="navbar-placeholder"></div>
 
     <main id="main-content">
 
@@ -4628,50 +4516,6 @@
         (function () {
             'use strict';
 
-            /* ── Header: hamburger drawer + category-strip scrolling ─────── */
-            var menuToggle = document.getElementById('menuToggle');
-            var drawer = document.getElementById('drawer');
-            var drawerOverlay = document.getElementById('drawerOverlay');
-            var drawerClose = document.getElementById('drawerClose');
-
-            function openDrawer() {
-                if (!drawer) return;
-                drawer.classList.add('is-open');
-                drawerOverlay.classList.add('is-open');
-                if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
-                drawerOverlay.setAttribute('aria-hidden', 'false');
-            }
-            function closeDrawer() {
-                if (!drawer) return;
-                drawer.classList.remove('is-open');
-                drawerOverlay.classList.remove('is-open');
-                if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
-                drawerOverlay.setAttribute('aria-hidden', 'true');
-            }
-            if (menuToggle) menuToggle.addEventListener('click', openDrawer);
-            if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
-            if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && drawer && drawer.classList.contains('is-open')) closeDrawer();
-            });
-
-            // Category strip — chevron scrolls right; hides itself at the end.
-            var catInner = document.getElementById('catNavInner');
-            var catNext = document.getElementById('catNext');
-            if (catInner && catNext) {
-                function updateCatNav() {
-                    var atEnd = catInner.scrollLeft + catInner.clientWidth >= catInner.scrollWidth - 4;
-                    catNext.classList.toggle('is-hidden', atEnd);
-                    catInner.classList.toggle('is-end', atEnd);
-                }
-                catNext.addEventListener('click', function () {
-                    catInner.scrollBy({ left: Math.round(catInner.clientWidth * 0.7), behavior: 'smooth' });
-                });
-                catInner.addEventListener('scroll', updateCatNav, { passive: true });
-                window.addEventListener('resize', updateCatNav);
-                updateCatNav();
-            }
-
             /* ── Accessibility panel: open / close ───────────────────────── */
             var launch = document.getElementById('a11yLaunch');
             var panel = document.getElementById('a11yPanel');
@@ -4983,6 +4827,7 @@
         })();
     </script>
 
+  <script src="/assets/js/app.js"></script>
 </body>
 
 </html>
