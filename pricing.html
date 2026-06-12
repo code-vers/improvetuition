@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Improve Tuition</title>
+    <meta name="description"
+        content="Tuition from £14.50 per hour. Group, small group, and 1-to-1 lessons. Same prices online or at our Batley centre. No registration fee, no long contract.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://improvetuition.com/pricing">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Improve Tuition">
+    <meta property="og:title" content="Pricing | Improve Tuition">
+    <meta property="og:description"
+        content="Tuition from £14.50 per hour. Group, small group, and 1-to-1 lessons. Same prices online or at our Batley centre. No registration fee, no long contract.">
+    <meta property="og:url" content="https://improvetuition.com/pricing">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Pricing | Improve Tuition">
+    <meta name="twitter:description"
+        content="Tuition from £14.50 per hour. Group, small group, and 1-to-1 lessons. Same prices online or at our Batley centre. No registration fee, no long contract.">
+
+    <!-- Brand -->
+    <meta name="theme-color" content="#D55A3F">
+    <meta name="author" content="Mr G Dabhad, Improve Tuition">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* ─── 4-PILLAR PALETTE ─── */
+            --pillar-authority: #242F3A;
+            /* Navy — qualified teacher-led */
+            --pillar-experience: #D55A3F;
+            /* Warm coral — established, action, energy */
+            --pillar-expertise: #C99A2E;
+            /* Rich ochre — gap analysis, insight */
+            --pillar-trust: #5A5A5A;
+            /* Grey — proof, reviews, restraint */
+
+            /* Surfaces */
+            --main-bg: #F7F5F2;
+            --section-bg: #E8E3DA;
+            --panel-bg: #FFFFFF;
+            --rule: #D8D2C7;
+
+            /* Variants */
+            --coral-dark: #B14526;
+            --gold-soft: #D6B35A;
+            --hero-line: rgba(36, 47, 58, 0.06);
+
+            /* CTA */
+            --cta-bg: #D55A3F;
+
+            /* ─── Legacy aliases mapped to clean palette ─── */
+            --ink: #242F3A;
+            --muted: #5A5A5A;
+            --paper: #F7F5F2;
+            --cream: #E8E3DA;
+            --ivory: #F7F5F2;
+            --coral: #D55A3F;
+            --gold: #C99A2E;
+            --brand-red: #D55A3F;
+            --forest: #5A5A5A;
+            --forest-dark: #424242;
+            --hero-gold: #C99A2E;
+            --cream-warm: #E8E3DA;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+            color: var(--ink);
+            background: var(--cream);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        ::selection {
+            background: rgba(199, 92, 69, 0.18);
+            color: var(--ink);
+        }
+
+        /* ═══════════════════ Header ═══════════════════ */
+        .site-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            padding: 1.4rem 2.5rem 1.15rem;
+            background: var(--paper);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .brand-mark {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+        }
+
+        .brand-icon {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        .brand-name {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.012em;
+            color: var(--ink);
+            line-height: 1;
+        }
+
+        .brand-name .dot {
+            color: var(--brand-red);
+        }
+
+        /* ═══════════════════ Page intro ═══════════════════ */
+        main.pricing {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem clamp(3rem, 6vw, 5rem);
+        }
+
+        .eyebrow {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+
+        h1.tagline {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: clamp(2rem, 5.5vw, 3rem);
+            line-height: 1.08;
+            letter-spacing: -0.022em;
+            color: var(--ink);
+            margin-bottom: 1.25rem;
+        }
+
+        h1.tagline em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .lede {
+            font-family: 'Fraunces', serif;
+            font-weight: 400;
+            font-size: clamp(1.05rem, 2.4vw, 1.2rem);
+            line-height: 1.55;
+            color: var(--muted);
+            max-width: 56ch;
+            margin-bottom: 3rem;
+        }
+
+        /* ═══════════════════ Price cards ═══════════════════ */
+        .price-stage {
+            margin-bottom: 2.5rem;
+        }
+
+        .stage-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--muted);
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+        }
+
+        .price-card {
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-radius: 10px;
+            padding: 1.5rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            position: relative;
+            transition: border-color 150ms ease, transform 150ms ease;
+        }
+
+        .price-card.is-popular {
+            background: var(--cream-warm);
+            border-color: var(--gold-soft);
+            border-width: 2px;
+            padding: 1.5rem 1.25rem;
+        }
+
+        .popular-tag {
+            position: absolute;
+            top: -10px;
+            left: 1.25rem;
+            background: var(--ink);
+            color: var(--paper);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        .price-card .format-name {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--ink);
+            line-height: 1.25;
+        }
+
+        .price-card .format-detail {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.82rem;
+            color: var(--muted);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .price-card .price {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 1.95rem;
+            color: var(--ink);
+            line-height: 1;
+            letter-spacing: -0.018em;
+        }
+
+        .price-card.is-popular .price {
+            color: var(--brand-red);
+        }
+
+        .price-card .per {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.78rem;
+            color: var(--muted);
+            margin-top: 0.2rem;
+        }
+
+        .price-fineprint {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-top: 1rem;
+            line-height: 1.5;
+        }
+
+        /* ═══════════════════ Included + payment sections ═══════════════════ */
+        .info-section {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--rule);
+        }
+
+        .info-section+.info-section {
+            margin-top: 3rem;
+            padding-top: 2.5rem;
+        }
+
+        .info-section h2 {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: clamp(1.4rem, 3vw, 1.75rem);
+            letter-spacing: -0.018em;
+            margin-bottom: 1.25rem;
+            color: var(--ink);
+        }
+
+        .info-section p {
+            font-family: 'Fraunces', serif;
+            font-weight: 400;
+            font-size: 1.08rem;
+            line-height: 1.65;
+            color: var(--ink);
+            margin-bottom: 1rem;
+            max-width: 60ch;
+        }
+
+        .info-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-section strong {
+            font-weight: 600;
+        }
+
+        /* ═══════════════════ Closing CTA ═══════════════════ */
+        .closing-cta {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--rule);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--ink);
+        }
+
+        .closing-cta a {
+            color: var(--ink);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid var(--gold);
+            transition: color 150ms ease, border-color 150ms ease;
+        }
+
+        .closing-cta a:hover {
+            color: var(--brand-red);
+            border-bottom-color: var(--brand-red);
+        }
+
+        /* ═══════════════════ Footer (matches other pages) ═══════════════════ */
+        .site-footer {
+            background: #242F3A;
+            color: #e8e0d2;
+            padding: 3rem 2.5rem 2rem;
+        }
+
+        .site-footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .footer-brand .brand-mark {
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-brand .brand-name {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--ivory);
+        }
+
+        .footer-brand .brand-name .dot {
+            color: var(--brand-red);
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-top: 0.5rem;
+        }
+
+        .footer-contact a {
+            color: #e8e0d2;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 150ms ease;
+        }
+
+        .footer-contact a:hover {
+            color: var(--gold);
+        }
+
+        .footer-meta .established {
+            color: #C99A2E;
+            font-weight: 600;
+        }
+
+        .footer-meta {
+            grid-column: 1 / -1;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(232, 224, 210, 0.1);
+            font-size: 0.78rem;
+            color: rgba(232, 224, 210, 0.6);
+            line-height: 1.6;
+        }
+
+        .footer-meta p {
+            margin: 0 0 0.4rem;
+        }
+
+        .footer-meta p:last-child {
+            margin: 0;
+        }
+
+        .footer-meta .sep {
+            margin: 0 0.5em;
+            opacity: 0.5;
+        }
+
+        /* ═══════════════════ Mobile ═══════════════════ */
+        @media (max-width: 720px) {
+            .price-grid {
+                grid-template-columns: 1fr;
+                gap: 0.65rem;
+            }
+
+            .price-card.is-popular {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .site-header {
+                padding: 1.1rem 1.25rem;
+            }
+
+            .brand-name {
+                font-size: 1.3rem;
+            }
+
+            main.pricing {
+                padding: 2rem 1.25rem 3rem;
+            }
+
+            h1.tagline {
+                font-size: 2rem;
+                line-height: 1.1;
+            }
+
+            .lede {
+                font-size: 1.05rem;
+                margin-bottom: 2.25rem;
+            }
+
+            .info-section {
+                margin-top: 3rem;
+                padding-top: 2rem;
+            }
+
+            .site-footer {
+                padding: 2.5rem 1.25rem 1.5rem;
+            }
+
+            .site-footer-inner {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+    <!-- ═══════════ PRICING PAGE ═══════════ -->
+    <main class="pricing">
+
+        <p class="eyebrow">Pricing</p>
+        <h1 class="tagline">Tuition from <em>£14.50</em> per&nbsp;hour.</h1>
+        <p class="lede">Most of our pupils learn in small group classes — typically four to five children, with full
+            teacher attention. Smaller groups and 1-to-1 sessions are also available. Same prices online or at our
+            Batley centre.</p>
+
+        <!-- ─── Years 2 to GCSE ─── -->
+        <section class="price-stage">
+            <p class="stage-label">Years 2 to GCSE</p>
+            <div class="price-grid">
+
+                <div class="price-card is-popular">
+                    <span class="popular-tag">Most popular</span>
+                    <span class="format-name">Group lesson</span>
+                    <span class="format-detail">4–5 children per group</span>
+                    <span class="price">£14.50</span>
+                    <span class="per">per child, per hour</span>
+                </div>
+
+                <div class="price-card">
+                    <span class="format-name">Small group</span>
+                    <span class="format-detail">2–3 children per group</span>
+                    <span class="price">£22.50</span>
+                    <span class="per">per child, per hour</span>
+                </div>
+
+                <div class="price-card">
+                    <span class="format-name">1-to-1</span>
+                    <span class="format-detail">One pupil, one tutor</span>
+                    <span class="price">£39.50</span>
+                    <span class="per">per hour</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ─── A-Level ─── -->
+        <section class="price-stage">
+            <p class="stage-label">A-Level</p>
+            <div class="price-grid">
+
+                <div class="price-card">
+                    <span class="format-name">Group lesson</span>
+                    <span class="format-detail">4–5 students per group</span>
+                    <span class="price">£17.50</span>
+                    <span class="per">per student, per hour</span>
+                </div>
+
+                <div class="price-card">
+                    <span class="format-name">Small group</span>
+                    <span class="format-detail">2–3 students per group</span>
+                    <span class="price">£27.50</span>
+                    <span class="per">per student, per hour</span>
+                </div>
+
+                <div class="price-card">
+                    <span class="format-name">1-to-1</span>
+                    <span class="format-detail">One student, one tutor</span>
+                    <span class="price">£45</span>
+                    <span class="per">per hour</span>
+                </div>
+
+            </div>
+        </section>
+
+        <p class="price-fineprint">All lessons are 1 hour. For Year 2 pupils, lessons are 30 minutes (priced pro rata).
+            Same prices at our Batley centre or online.</p>
+
+        <!-- ─── What's included ─── -->
+        <section class="info-section">
+            <h2>What's included</h2>
+            <p>Every parent gets the same thing. A <strong>free first assessment</strong> for any pupil up to GCSE, so
+                we understand where your child is before tuition begins. Frequent <strong>progress feedback</strong> by
+                message — usually WhatsApp — so you always know how lessons are going. We get in touch directly when
+                there's something to share, whether it's strong progress or a concern that needs your attention.</p>
+            <p>There is <strong>no registration fee</strong>, no exam-period surcharge, and no minimum commitment. We
+                ask families to bring their child's school books and any past papers or revision guides — we'll work
+                from those, since it keeps tuition aligned with what's happening in school.</p>
+        </section>
+
+        <!-- ─── How payment works ─── -->
+        <section class="info-section">
+            <h2>How payment works</h2>
+            <p>Lessons are paid <strong>monthly in advance</strong>. There is no long contract — you can stop any time.
+                We invoice once a month and you're never tied in beyond the month you've paid for.</p>
+        </section>
+
+        <!-- ─── Closing CTA ─── -->
+        <p class="closing-cta">
+            Want to chat? <a href="#book">Book a free assessment</a>, call <a href="tel:+441924506010"><span
+                    data-config="contact.phone_display">01924 506010</span></a>, or <a href="https://wa.me/447951918152"
+                target="_blank" rel="noopener noreferrer">message us on WhatsApp</a>.
+        </p>
+
+    </main>
+
+
+</body>
+
+</html>
