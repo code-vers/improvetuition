@@ -66,7 +66,7 @@
   .site-footer {
     background: var(--navy);
     color: var(--white);
-    padding: clamp(64px, 9vw, 100px) clamp(24px, 4vw, 48px) clamp(40px, 5vw, 56px)
+    padding: clamp(64px, 9vw, 50px) clamp(24px, 4vw, 48px) clamp(40px, 5vw, 56px)
   }
 
   .site-footer-inner {
@@ -278,6 +278,11 @@
     color: var(--white)
   }
 
+  .footer-logo img {
+    width: 250px;
+    margin: 0 auto;
+  }
+
   @media (max-width:900px) {
     .footer-nav {
       grid-template-columns: repeat(3, 1fr);
@@ -301,8 +306,7 @@
 <footer class="site-footer">
   <div class="site-footer-inner">
     <div class="footer-mark-block">
-      <div class="logo"><img src="/assets/images/logo-2.png" alt="Logo"></div>
-      <span class="footer-name">improve tuition<span class="dot">.</span></span>
+      <div class="footer-logo"><img src="/assets/images/logo_3.png" alt="Logo"></div>
     </div>
     <p class="footer-tagline">We find the gap. <em class="gold">Then we teach it.</em></p>
     <div class="footer-contact">
