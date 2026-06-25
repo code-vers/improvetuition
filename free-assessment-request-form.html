@@ -1,0 +1,317 @@
+<style>
+    .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.78rem;
+        font-weight: 800;
+        color: var(--gold);
+        margin-bottom: 8px;
+    }
+
+    .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    /* contact form */
+    .ctf {
+        background: var(--paper);
+        border-bottom: 1px solid var(--rule);
+        padding: 56px 0;
+    }
+
+    .ctf .wrap {
+        display: grid;
+        gap: 34px;
+        align-items: start;
+    }
+
+    @media (min-width: 860px) {
+        .ctf .wrap {
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 48px;
+        }
+    }
+
+    .ctf-title {
+        font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.1rem);
+        margin: 8px 0 14px;
+    }
+
+    .ctf-title em {
+        color: var(--gold);
+        font-style: italic;
+    }
+
+    .ctf-lede {
+        font-size: 1.02rem;
+        max-width: 44ch;
+        margin-bottom: 20px;
+    }
+
+    .ctf-points {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .ctf-points li {
+        padding-left: 26px;
+        position: relative;
+        font-size: 0.98rem;
+    }
+
+    .ctf-points li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--coral);
+        font-weight: 900;
+    }
+
+    .ctf-points b {
+        color: var(--navy);
+    }
+
+    .ctf-card {
+        background: var(--navy);
+        border-top: 4px solid var(--gold);
+        border-radius: 14px;
+        padding: 30px;
+        box-shadow: 0 10px 34px rgba(36, 47, 58, 0.16);
+    }
+
+    .ctf-card-head {
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--gold-soft);
+        margin-bottom: 18px;
+    }
+
+    .ctf-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ctf-field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ctf-field--full {
+        grid-column: 1 / -1;
+    }
+
+    .ctf-field label {
+        font-size: 0.78rem;
+        font-weight: 800;
+        color: #ECEAE6;
+        margin-bottom: 6px;
+    }
+
+    .ctf-field label span {
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.55);
+    }
+
+    .ctf-field input,
+    .ctf-field select,
+    .ctf-field textarea {
+        width: 100%;
+        font-family: inherit;
+        font-size: 1rem;
+        color: var(--grey);
+        background: var(--white);
+        border: 1px solid var(--rule);
+        border-radius: 8px;
+        padding: 12px 14px;
+    }
+
+    .ctf-field textarea {
+        resize: vertical;
+        min-height: 84px;
+    }
+
+    .ctf-field select {
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23242F3A' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+        padding-right: 36px;
+    }
+
+    .ctf-field input:focus,
+    .ctf-field select:focus,
+    .ctf-field textarea:focus {
+        outline: none;
+        border-color: var(--gold);
+        box-shadow: 0 0 0 3px rgba(201, 154, 46, 0.30);
+    }
+
+    .ctf-submit {
+        grid-column: 1 / -1;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: var(--coral);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: 800;
+        font-size: 1rem;
+        border-radius: 8px;
+        padding: 16px 24px;
+        transition: background .2s ease, transform .15s ease;
+    }
+
+    .ctf-submit:hover {
+        background: var(--coral-hover);
+        transform: translateY(-1px);
+    }
+
+    .ctf-meta {
+        grid-column: 1 / -1;
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.62);
+        text-align: center;
+        margin-top: 4px;
+    }
+
+    .ctf-success {
+        display: none;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 0;
+    }
+
+    .ctf-success.is-shown {
+        display: flex;
+    }
+
+    .ctf-success svg {
+        width: 44px;
+        height: 44px;
+        color: var(--gold-soft);
+    }
+
+    .ctf-success p {
+        font-family: 'Lora', serif;
+        font-weight: 600;
+        color: #fff;
+        font-size: 1.15rem;
+        margin: 0;
+    }
+
+    @media (max-width: 460px) {
+        .ctf-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<section class="ctf" id="assessment-form" aria-labelledby="ctf-title">
+    <div class="wrap">
+        <div>
+            <p class="eyebrow">Get in touch</p>
+            <h2 class="ctf-title" id="ctf-title">Tell us where your child is stuck — <em>we'll find the gap</em>
+            </h2>
+            <p class="ctf-lede">Send a few details and we'll arrange a free, no-obligation assessment. Prefer to
+                talk? Call <b style="color:var(--navy);">01924 506010</b> or message us on WhatsApp.</p>
+            <ul class="ctf-points">
+                <li><b>Free assessment first</b> — no cost, no obligation.</li>
+                <li><b>Teacher-led</b> by Mr G Dabhad (QTS, BA Hons) · DBS-checked tutors.</li>
+                <li><b>We reply within one working day.</b></li>
+            </ul>
+        </div>
+        <div class="ctf-card">
+            <p class="ctf-card-head">Request your free assessment</p>
+            <form class="ctf-grid" id="ctfForm" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+                <div class="ctf-field ctf-field--full">
+                    <label for="ctf-name">Name</label>
+                    <input id="ctf-name" type="text" name="name" placeholder="Parent or student name"
+                        autocomplete="name" required>
+                </div>
+                <div class="ctf-field">
+                    <label for="ctf-email">Email</label>
+                    <input id="ctf-email" type="email" name="email" placeholder="you@example.com" autocomplete="email"
+                        required>
+                </div>
+                <div class="ctf-field">
+                    <label for="ctf-phone">Phone</label>
+                    <input id="ctf-phone" type="tel" name="phone" placeholder="Mobile or landline" autocomplete="tel">
+                </div>
+                <div class="ctf-field">
+                    <label for="ctf-stage">Year / stage</label>
+                    <select id="ctf-stage" name="stage" required>
+                        <option value="" selected disabled>Select…</option>
+                        <option>KS1 / KS2 (SATs)</option>
+                        <option>11+</option>
+                        <option>KS3 (Years 7–9)</option>
+                        <option>GCSE</option>
+                        <option>A-Level</option>
+                        <option>Not sure</option>
+                    </select>
+                </div>
+                <div class="ctf-field">
+                    <label for="ctf-subject">Subject</label>
+                    <select id="ctf-subject" name="subject" required>
+                        <option value="" selected disabled>Select…</option>
+                        <option>Maths</option>
+                        <option>English</option>
+                        <option>Science</option>
+                        <option>Biology</option>
+                        <option>Chemistry</option>
+                        <option>Physics</option>
+                        <option>More than one</option>
+                    </select>
+                </div>
+                <div class="ctf-field ctf-field--full">
+                    <label for="ctf-message">What's your child finding hard? <span>(optional)</span></label>
+                    <textarea id="ctf-message" name="message"
+                        placeholder="e.g. times tables, reading comprehension, exam technique…"></textarea>
+                </div>
+                <button type="submit" class="ctf-submit">
+                    Request my free assessment
+                    <svg width="16" height="8" viewBox="0 0 22 10" fill="none" aria-hidden="true">
+                        <path d="M0 5h20M16 1l4 4-4 4" stroke="currentColor" stroke-width="1.8" />
+                    </svg>
+                </button>
+                <p class="ctf-meta">Free · No cost · No obligation · We reply within one working day.</p>
+            </form>
+            <div class="ctf-success" id="ctfSuccess" role="status" aria-live="polite">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M8 12l3 3 5-6" />
+                </svg>
+                <p>Thank you — we'll be in touch within one working day.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    (function () {
+        var form = document.getElementById('ctfForm');
+        var success = document.getElementById('ctfSuccess');
+        if (form) form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!form.checkValidity()) { form.reportValidity(); return; }
+            var action = form.getAttribute('action') || '';
+            function showThanks() { form.style.display = 'none'; success.classList.add('is-shown'); }
+            if (action.indexOf('your-form-id') !== -1) { showThanks(); return; }
+            fetch(action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } }).then(showThanks).catch(showThanks);
+        });
+    })();
+</script>

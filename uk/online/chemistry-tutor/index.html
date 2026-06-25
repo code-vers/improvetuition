@@ -3010,114 +3010,6 @@
     <div class="tint-overlay" aria-hidden="true"></div>
     <div class="reading-ruler" id="readingRuler" aria-hidden="true"></div>
 
-    <div class="a11y">
-        <button type="button" class="a11y-launch" id="a11yLaunch" aria-expanded="false" aria-controls="a11yPanel"
-            aria-label="Reading and accessibility options">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="4" r="1.6" fill="currentColor" stroke="none" />
-                <path d="M4 8h16M9 21l3-7 3 7M12 8v6" />
-            </svg>
-            <span class="a11y-launch-text">Reading options</span>
-        </button>
-
-        <div class="a11y-panel" id="a11yPanel" role="group" aria-label="Reading and sensory options">
-            <div class="a11y-panel-head">
-                <p class="a11y-panel-title">Reading options</p>
-                <button type="button" class="a11y-reset" id="a11yReset">Reset all</button>
-            </div>
-
-            <div class="a11y-row">
-                <p class="a11y-row-label">Text size</p>
-                <div class="a11y-size-group">
-                    <button type="button" class="reading-btn reading-btn--sm" data-scale="100" aria-pressed="true"
-                        aria-label="Standard text size">A</button>
-                    <button type="button" class="reading-btn reading-btn--md" data-scale="115" aria-pressed="false"
-                        aria-label="Larger text size">A+</button>
-                    <button type="button" class="reading-btn reading-btn--lg" data-scale="130" aria-pressed="false"
-                        aria-label="Largest text size">A++</button>
-                </div>
-            </div>
-
-            <div class="a11y-row" id="readAloudRow">
-                <p class="a11y-row-label">Read this page aloud</p>
-                <div class="read-aloud-row">
-                    <button type="button" class="read-btn read-btn--play" id="readPlay" data-state="idle"
-                        aria-label="Play or pause reading">
-                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
-                        <span id="readPlayLabel">Play</span>
-                    </button>
-                    <button type="button" class="read-btn" id="readStop" aria-label="Stop reading">
-                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <rect x="6" y="6" width="12" height="12" rx="1.5" />
-                        </svg>
-                        Stop
-                    </button>
-                </div>
-                <select class="read-aloud-voice" id="readVoice" aria-label="Choose a reading voice"></select>
-                <div class="read-aloud-speed">
-                    <label for="readSpeed">Speed</label>
-                    <input type="range" id="readSpeed" min="0.7" max="1.3" step="0.1" value="1">
-                    <output id="readSpeedOut">1.0×</output>
-                </div>
-            </div>
-
-            <div class="a11y-row">
-                <p class="a11y-row-label">Dyslexia</p>
-                <button type="button" class="a11y-toggle" data-mode="dyslexia-mode" aria-pressed="false">
-                    <span>Dyslexia-friendly font</span>
-                    <span class="a11y-toggle-state" aria-hidden="true"></span>
-                </button>
-            </div>
-
-            <div class="a11y-row">
-                <p class="a11y-row-label">Colour tint (visual stress)</p>
-                <select class="tint-select" id="tintSelect" aria-label="Choose a colour tint overlay">
-                    <option value="none">Off</option>
-                    <option value="cream">Cream</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                    <option value="pink">Pink</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="grey">Grey</option>
-                </select>
-            </div>
-
-            <div class="a11y-row">
-                <p class="a11y-row-label">Contrast</p>
-                <button type="button" class="a11y-toggle" data-mode="high-contrast" data-exclusive="comfort-contrast"
-                    aria-pressed="false">
-                    <span>High contrast</span>
-                    <span class="a11y-toggle-state" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="a11y-toggle" data-mode="comfort-contrast" data-exclusive="high-contrast"
-                    aria-pressed="false">
-                    <span>Comfort (softer) contrast</span>
-                    <span class="a11y-toggle-state" aria-hidden="true"></span>
-                </button>
-            </div>
-
-            <div class="a11y-row">
-                <p class="a11y-row-label">Sensory comfort</p>
-                <button type="button" class="a11y-toggle" data-mode="reduce-motion" aria-pressed="false">
-                    <span>Reduce motion</span>
-                    <span class="a11y-toggle-state" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="a11y-toggle" data-mode="calm-layout" aria-pressed="false">
-                    <span>Calm layout</span>
-                    <span class="a11y-toggle-state" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="a11y-toggle" data-mode="reading-ruler-on" id="rulerToggle"
-                    aria-pressed="false">
-                    <span>Reading ruler</span>
-                    <span class="a11y-toggle-state" aria-hidden="true"></span>
-                </button>
-            </div>
-        </div>
-    </div>
-
     <div id="header-phone-placeholder"></div>
 
     <main id="main-content">
@@ -3160,6 +3052,10 @@
                 </div>
             </div>
         </section>
+
+        <div id="start">
+            <div id="free-assessment-form-placeholder"></div>
+        </div>
 
         <!-- 2. WHAT WE OFFER -->
         <section class="offer" aria-labelledby="offer-title">

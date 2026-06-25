@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const headerPlaceholder = document.getElementById('header-placeholder');
     const headerPhonePlaceholder = document.getElementById('header-phone-placeholder');
     const footerPlaceholder = document.getElementById('footer-placeholder');
+    const assessFormPlaceholder = document.getElementById('free-assessment-form-placeholder');
 
     function injectHTML(placeholder, url) {
         fetch(url)
@@ -29,6 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (footerPlaceholder) {
         injectHTML(footerPlaceholder, '/footer.html');
+    }
+
+    if (assessFormPlaceholder) {
+        injectHTML(assessFormPlaceholder, '/free-assessment-request-form.html');
     }
 
     // ── Sticky Contact Bar — injected directly into body so it always renders ──

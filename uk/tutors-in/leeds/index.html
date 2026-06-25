@@ -245,7 +245,7 @@
             padding: 0 24px;
         }
 
-        
+
 
         .hero {
             background: var(--navy);
@@ -897,7 +897,7 @@
                 grid-template-columns: 1fr;
             }
 
-            
+
         }
     </style>
 </head>
@@ -926,88 +926,9 @@
         </div>
     </header>
 
-    <section class="ctf" id="assessment-form" aria-labelledby="ctf-title">
-        <div class="wrap">
-            <div>
-                <p class="eyebrow">Get in touch</p>
-                <h2 class="ctf-title" id="ctf-title">Tell us where your child is stuck — <em>we'll find the gap</em>
-                </h2>
-                <p class="ctf-lede">Send a few details and we'll arrange a free, no-obligation assessment. Prefer to
-                    talk? Call <b style="color:var(--navy);">01924 506010</b> or message us on WhatsApp.</p>
-                <ul class="ctf-points">
-                    <li><b>Free assessment first</b> — no cost, no obligation.</li>
-                    <li><b>Teacher-led</b> by Mr G Dabhad (QTS, BA Hons) · DBS-checked tutors.</li>
-                    <li><b>We reply within one working day.</b></li>
-                </ul>
-            </div>
-            <div class="ctf-card">
-                <p class="ctf-card-head">Request your free assessment</p>
-                <form class="ctf-grid" id="ctfForm" action="https://formspree.io/f/your-form-id" method="POST"
-                    novalidate>
-                    <div class="ctf-field ctf-field--full">
-                        <label for="ctf-name">Name</label>
-                        <input id="ctf-name" type="text" name="name" placeholder="Parent or student name"
-                            autocomplete="name" required>
-                    </div>
-                    <div class="ctf-field">
-                        <label for="ctf-email">Email</label>
-                        <input id="ctf-email" type="email" name="email" placeholder="you@example.com"
-                            autocomplete="email" required>
-                    </div>
-                    <div class="ctf-field">
-                        <label for="ctf-phone">Phone</label>
-                        <input id="ctf-phone" type="tel" name="phone" placeholder="Mobile or landline"
-                            autocomplete="tel">
-                    </div>
-                    <div class="ctf-field">
-                        <label for="ctf-stage">Year / stage</label>
-                        <select id="ctf-stage" name="stage" required>
-                            <option value="" selected disabled>Select…</option>
-                            <option>KS1 / KS2 (SATs)</option>
-                            <option>11+</option>
-                            <option>KS3 (Years 7–9)</option>
-                            <option>GCSE</option>
-                            <option>A-Level</option>
-                            <option>Not sure</option>
-                        </select>
-                    </div>
-                    <div class="ctf-field">
-                        <label for="ctf-subject">Subject</label>
-                        <select id="ctf-subject" name="subject" required>
-                            <option value="" selected disabled>Select…</option>
-                            <option>Maths</option>
-                            <option>English</option>
-                            <option>Science</option>
-                            <option>Biology</option>
-                            <option>Chemistry</option>
-                            <option>Physics</option>
-                            <option>More than one</option>
-                        </select>
-                    </div>
-                    <div class="ctf-field ctf-field--full">
-                        <label for="ctf-message">What's your child finding hard? <span>(optional)</span></label>
-                        <textarea id="ctf-message" name="message"
-                            placeholder="e.g. times tables, reading comprehension, exam technique…"></textarea>
-                    </div>
-                    <button type="submit" class="ctf-submit">
-                        Request my free assessment
-                        <svg width="16" height="8" viewBox="0 0 22 10" fill="none" aria-hidden="true">
-                            <path d="M0 5h20M16 1l4 4-4 4" stroke="currentColor" stroke-width="1.8" />
-                        </svg>
-                    </button>
-                    <p class="ctf-meta">Free · No cost · No obligation · We reply within one working day.</p>
-                </form>
-                <div class="ctf-success" id="ctfSuccess" role="status" aria-live="polite">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                        stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M8 12l3 3 5-6" />
-                    </svg>
-                    <p>Thank you — we'll be in touch within one working day.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div id="start">
+        <div id="free-assessment-form-placeholder"></div>
+    </div>
 
     <section class="section-paper">
         <div class="wrap">
@@ -1213,7 +1134,7 @@
 
     <div id="footer-placeholder"></div>
 
-    
+
 
     <script>
         (function () {
@@ -1228,7 +1149,7 @@
                 fetch(action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } }).then(showThanks).catch(showThanks);
             });
         })();
-        </script>
+    </script>
 
     <script src="/assets/js/app.js"></script>
 </body>
