@@ -742,6 +742,12 @@
             gap: 0.55rem;
             flex-shrink: 0;
             text-decoration: none;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
             margin-right: auto;
         }
 
@@ -1351,6 +1357,35 @@
             transform: translateX(3px);
             color: var(--ink);
         }
+
+        @media (max-width: 480px) {
+            .a11y {
+                top: 42px;
+            }
+        }
+
+        @media (max-width: 420px) {
+
+
+            .header-inner {
+                padding-left: 0.75rem;
+            }
+
+            .brand-logo {
+                height: 38px;
+            }
+
+            .pill-call {
+                padding: 5px 8px;
+                font-size: 0.75rem;
+                gap: 4px;
+            }
+
+            .pill-call svg {
+                width: 12px !important;
+                height: 12px !important;
+            }
+        }
     </style>
 </head>
 
@@ -1493,13 +1528,32 @@
 
     <header class="site-header" id="siteHeader">
         <div class="header-inner">
-            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"
-                id="menuToggle">
-                <span class="bars" aria-hidden="true"><span></span></span>
-            </button>
-            <a href="/" class="brand-mark" aria-label="Improve Tuition — home">
-                <img src="/assets/images/logo_3.png" alt="Logo" class="brand-logo">
-            </a>
+            <div class="header-left">
+                <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"
+                    id="menuToggle">
+                    <span class="bars" aria-hidden="true"><span></span></span>
+                </button>
+                <a href="/" class="brand-mark" aria-label="Improve Tuition — home">
+                    <img src="/assets/images/logo_3.png" alt="Logo" class="brand-logo">
+                </a>
+
+                <svg class="header-icon-doc" width="48" height="48" viewBox="0 0 48 48" fill="white"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Case study">
+                    <!-- Document body -->
+                    <path
+                        d="M13 5H29L37 13V41C37 42.1046 36.1046 43 35 43H13C11.8954 43 11 42.1046 11 41V7C11 5.89543 11.8954 5 13 5Z"
+                        stroke="#242F3A" stroke-width="2.5" stroke-linejoin="round" />
+                    <!-- Folded corner (gold accent) -->
+                    <path d="M29 5V11C29 12.1046 29.8954 13 31 13H37" stroke="#C99A2E" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <!-- Progress / outcome trend line (coral) -->
+                    <path d="M16 35L21 30L25 32L32 24" stroke="#D55A3F" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <!-- End-point marker -->
+                    <circle cx="32" cy="24" r="2.4" fill="#D55A3F" />
+                </svg>
+            </div>
+
             <div class="header-cta">
                 <a class="pill pill-call" href="tel:+441924506010">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
