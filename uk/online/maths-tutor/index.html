@@ -442,9 +442,7 @@
 
 
 
-        @media (max-width: 600px) {
-
-        }
+        @media (max-width: 600px) {}
 
 
 
@@ -3803,8 +3801,12 @@
             <div class="quick-capture-inner">
                 <p class="quick-capture-eyebrow">Free · No payment · No obligation</p>
                 <h2 id="quick-capture-title">Book your free Maths assessment in <em class="gold">30 seconds</em>.</h2>
-                <form class="quick-form" id="quickForm" action="https://formspree.io/f/your-form-id" method="POST"
+                <form class="quick-form" id="quickForm" action="https://api.web3forms.com/submit" method="POST"
                     novalidate>
+                    <input type="hidden" name="access_key" value="efb1f09c-319e-4b47-b770-12997364e160">
+                    <input type="hidden" name="source-page" value="maths">
+                    <input type="hidden" name="redirect" value="https://improvetuition.org">
+                    <input type="hidden" name="subject" value="Book a free assessment">
                     <input type="text" name="name" aria-label="Your name" placeholder="Your name" autocomplete="name"
                         required>
                     <input type="text" name="contact" aria-label="Phone or email" placeholder="Phone or email"

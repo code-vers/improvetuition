@@ -292,9 +292,7 @@
 
 
 
-        @media (max-width: 600px) {
-
-        }
+        @media (max-width: 600px) {}
 
 
 
@@ -2773,8 +2771,7 @@
 
         /* keep the floating reading-options pill clear of the new sticky header */
 
-        @media (max-width: 760px) {
-        }
+        @media (max-width: 760px) {}
 
 
 
@@ -2966,8 +2963,11 @@
             <div class="quick-capture-inner">
                 <p class="quick-capture-eyebrow">Free · No payment · No obligation</p>
                 <h2 id="quick-capture-title">Book your free Biology assessment in <em class="gold">30 seconds</em>.</h2>
-                <form class="quick-form" id="quickForm" action="https://formspree.io/f/your-form-id" method="POST"
+                <form class="quick-form" id="quickForm" action="https://api.web3forms.com/submit" method="POST"
                     novalidate>
+                    <input type="hidden" name="access_key" value="efb1f09c-319e-4b47-b770-12997364e160">
+                    <input type="hidden" name="redirect" value="https://improvetuition.org">
+                    <input type="hidden" name="subject" value="Book a free assessment">
                     <input type="text" name="name" aria-label="Your name" placeholder="Your name" autocomplete="name"
                         required>
                     <input type="text" name="contact" aria-label="Phone or email" placeholder="Phone or email"
@@ -3544,9 +3544,12 @@
                 <p class="cta-trust-line">Teacher-led since 2007 · DBS-checked tutors · Free assessment before paid
                     tuition</p>
 
-                <form class="assess-form" id="assessForm" name="assessment" action="https://formspree.io/f/your-form-id"
+                <form class="assess-form" id="assessForm" name="assessment" action="https://api.web3forms.com/submit"
                     method="POST" novalidate>
+                    <input type="hidden" name="access_key" value="efb1f09c-319e-4b47-b770-12997364e160">
                     <input type="hidden" name="source-page" value="biology">
+                    <input type="hidden" name="redirect" value="https://improvetuition.org">
+                    <input type="hidden" name="subject" value="Book a free assessment">
                     <p class="assess-reassure">Not sure exactly what your child needs help with? That's fine — the
                         assessment is designed to find out.</p>
                     <div class="assess-field">
