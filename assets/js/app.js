@@ -66,4 +66,72 @@ document.addEventListener("DOMContentLoaded", function () {
         'WhatsApp</a>'
     ].join('');
     document.body.appendChild(bar);
+
+    // ── Global Web3Forms Submission Handler ──
+    document.addEventListener('submit', function (e) {
+        if (e.target && e.target.tagName === 'FORM' && e.target.getAttribute('action') === 'https://api.web3forms.com/submit') {
+            e.preventDefault();
+            const form = e.target;
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('input[type="submit"]');
+            const originalBtnText = submitBtn ? (submitBtn.innerHTML || submitBtn.value) : '';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                if (submitBtn.tagName === 'BUTTON') {
+                    submitBtn.innerHTML = 'Sending...';
+                } else {
+                    submitBtn.value = 'Sending...';
+                }
+            }
+
+            const formData = new FormData(form);
+
+            // Check for Web3Forms access key, if not set, maybe it's in the form already.
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let jsonResponse = await response.json();
+                    if (response.status == 200) {
+                        form.innerHTML = '<div style="grid-column: 1 / -1; width: 100%; box-sizing: border-box; padding: 24px; text-align: center; background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; border-radius: 8px; font-weight: 600; font-family: var(--font-ui, system-ui, sans-serif); margin-top: 1rem;"><svg style="width: 48px; height: 48px; margin-bottom: 12px; display: inline-block; color: #22c55e;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><br><h3 style="margin:0 0 8px; color:#166534; font-size:1.25rem;">Thank you!</h3><p style="margin:0; font-weight:400; color:#15803d;">Your enquiry has been received. We will be in touch within 1 working day.</p></div>';
+                    } else {
+                        console.error(response);
+                        alert(jsonResponse.message || "Something went wrong!");
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            if (submitBtn.tagName === 'BUTTON') {
+                                submitBtn.innerHTML = originalBtnText;
+                            } else {
+                                submitBtn.value = originalBtnText;
+                            }
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert("Something went wrong! Please try again later.");
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        if (submitBtn.tagName === 'BUTTON') {
+                            submitBtn.innerHTML = originalBtnText;
+                        } else {
+                            submitBtn.value = originalBtnText;
+                        }
+                    }
+                });
+        }
+    });
 });
