@@ -220,90 +220,6 @@
             color: var(--navy)
         }
 
-        /* Header */
-        header {
-            background: var(--white);
-            border-bottom: 1px solid var(--rule);
-            position: sticky;
-            top: 0;
-            z-index: 100
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 24px;
-            max-width: 1080px;
-            margin: 0 auto
-        }
-
-        .brand {
-            font-family: var(--display);
-            font-weight: 700;
-            font-size: 1.3rem;
-            color: var(--navy)
-        }
-
-        .brand span {
-            color: var(--coral)
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 26px;
-            align-items: center
-        }
-
-        .nav-links a {
-            color: var(--navy);
-            font-weight: 700;
-            font-size: .95rem
-        }
-
-        .nav-links a:hover {
-            color: var(--coral);
-            text-decoration: none
-        }
-
-        .nav-cta {
-            padding: 10px 18px;
-            font-size: .9rem
-        }
-
-        .menu-btn {
-            display: none;
-            background: none;
-            border: 2px solid var(--navy);
-            border-radius: 6px;
-            padding: 8px 12px;
-            font-weight: 800;
-            color: var(--navy)
-        }
-
-        @media(max-width:860px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #fff;
-                flex-direction: column;
-                padding: 18px 24px;
-                border-bottom: 1px solid var(--rule);
-                gap: 16px
-            }
-
-            .nav-links.open {
-                display: flex
-            }
-
-            .menu-btn {
-                display: block
-            }
-        }
-
         /* Hero */
         .hero {
             background: linear-gradient(160deg, var(--navy) 0%, #1c2530 100%);
@@ -680,208 +596,6 @@
             color: var(--navy)
         }
 
-        /* Footer */
-        footer {
-            background: var(--navy);
-            color: #cfd3d8;
-            padding: 44px 0 28px;
-            font-size: .94rem
-        }
-
-        footer a {
-            color: #fff
-        }
-
-        .foot-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 28px
-        }
-
-        @media(max-width:760px) {
-            .foot-grid {
-                grid-template-columns: 1fr
-            }
-        }
-
-        footer h4 {
-            font-family: var(--display);
-            color: #fff;
-            font-size: 1.1rem;
-            margin-bottom: .6rem
-        }
-
-        footer ul {
-            list-style: none
-        }
-
-        footer li {
-            margin-bottom: .35rem
-        }
-
-        .foot-bottom {
-            border-top: 1px solid rgba(255, 255, 255, .14);
-            margin-top: 26px;
-            padding-top: 16px;
-            font-size: .85rem;
-            color: #9aa0a8
-        }
-
-        /* Sticky bar */
-        .sticky-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--navy);
-            display: none;
-            z-index: 120;
-            border-top: 2px solid var(--gold)
-        }
-
-        .sticky-bar a {
-            flex: 1;
-            text-align: center;
-            padding: 13px 6px;
-            color: #fff;
-            font-weight: 800;
-            font-size: .9rem;
-            border-right: 1px solid rgba(255, 255, 255, .15)
-        }
-
-        .sticky-bar a:last-child {
-            border-right: none;
-            background: var(--coral)
-        }
-
-        .sticky-bar a:hover {
-            text-decoration: none
-        }
-
-        @media(max-width:860px) {
-            .sticky-bar {
-                display: flex
-            }
-
-            body {
-                padding-bottom: 52px
-            }
-        }
-
-        /* Accessibility */
-        .a11y-toggle {
-            position: fixed;
-            right: 16px;
-            bottom: 70px;
-            z-index: 130;
-            background: var(--gold);
-            color: var(--navy);
-            border: none;
-            border-radius: 50%;
-            width: 52px;
-            height: 52px;
-            font-size: 1.4rem;
-            font-weight: 800;
-            cursor: pointer;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, .25)
-        }
-
-        @media(max-width:860px) {
-            .a11y-toggle {
-                bottom: 64px
-            }
-        }
-
-        .a11y-panel {
-            position: fixed;
-            right: 16px;
-            bottom: 132px;
-            z-index: 131;
-            background: #fff;
-            border: 1px solid var(--rule);
-            border-radius: 12px;
-            padding: 18px;
-            width: 250px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, .2);
-            display: none
-        }
-
-        .a11y-panel.open {
-            display: block
-        }
-
-        .a11y-panel h4 {
-            font-family: var(--display);
-            margin-bottom: .6rem;
-            color: var(--navy)
-        }
-
-        .a11y-panel button {
-            display: block;
-            width: 100%;
-            text-align: left;
-            background: var(--paper);
-            border: 1px solid var(--rule);
-            border-radius: 7px;
-            padding: 9px 12px;
-            margin-bottom: 8px;
-            font-weight: 700;
-            color: var(--navy);
-            cursor: pointer
-        }
-
-        .a11y-panel button:hover {
-            background: var(--cream)
-        }
-
-        .a11y-panel button[aria-pressed="true"] {
-            background: var(--navy);
-            color: #fff;
-            border-color: var(--navy)
-        }
-
-        body.dys {
-            --display: var(--body);
-            letter-spacing: .03em;
-            word-spacing: .08em
-        }
-
-        body.dys p,
-        body.dys li {
-            line-height: 1.9
-        }
-
-        body.contrast {
-            --paper: #fff;
-            --cream: #f0efec;
-            --grey: #333
-        }
-
-        body.contrast .hero {
-            background: #0f1620
-        }
-
-        body.big {
-            font-size: 19px
-        }
-
-        .ruler {
-            position: fixed;
-            left: 0;
-            right: 0;
-            height: 44px;
-            background: rgba(201, 154, 46, .16);
-            border-top: 2px solid var(--gold);
-            border-bottom: 2px solid var(--gold);
-            pointer-events: none;
-            z-index: 90;
-            display: none
-        }
-
-        body.ruler-on .ruler {
-            display: block
-        }
-
         /* Quick booking form */
         .bform {
             display: grid;
@@ -967,24 +681,9 @@
 
 <body>
     <a class="skip" href="#main">Skip to content</a>
-    <div class="ruler" id="ruler" aria-hidden="true"></div>
 
-    <header>
-        <div class="nav">
-            <a class="brand" href="/">Improve <span>Tuition</span></a>
-            <button class="menu-btn" aria-expanded="false" aria-controls="navlinks"
-                onclick="toggleMenu(this)">Menu</button>
-            <nav class="nav-links" id="navlinks" aria-label="Primary">
-                <a href="/uk/online/maths-tutor/">Online Maths</a>
-                <a href="/uk/online/gcse-maths-tutor/">GCSE Maths</a>
-                <a href="/uk/online/a-level-maths-tutor/" aria-current="page">A-Level Maths</a>
-                <a href="/uk/maths/tutor-in/batley/">Batley</a>
-                <a href="/pricing/">Pricing</a>
-                <a href="/reviews/">Reviews</a>
-                <a class="btn btn-coral nav-cta" href="#book">Free Assessment</a>
-            </nav>
-        </div>
-    </header>
+
+    <div id="header-placeholder"></div>
 
     <main id="main">
 
@@ -1328,57 +1027,11 @@
 
     </main>
 
-    <footer>
-        <div class="wrap">
-            <div class="foot-grid">
-                <div>
-                    <h4>Improve Tuition</h4>
-                    <p style="color:#cfd3d8">Teacher-led online GCSE Maths tuition and in-person support from our Batley
-                        centre. We find the gap first, then teach it.</p>
-                    <p style="color:#cfd3d8;margin-bottom:0">The Study Room, George Street, Batley, WF17 5AR<br><a
-                            href="tel:+447951918152">07951 918152</a></p>
-                </div>
-                <div>
-                    <h4>Maths tuition</h4>
-                    <ul>
-                        <li><a href="/uk/online/a-level-maths-tutor/">Online A-Level Maths Tutor</a></li>
-                        <li><a href="/uk/online/gcse-maths-tutor/">Online GCSE Maths Tutor</a></li>
-                        <li><a href="/uk/online/maths-tutor/">Online Maths Tutor</a></li>
-                        <li><a href="/uk/maths/tutor-in/batley/">Maths Tutor in Batley</a></li>
-                        <li><a href="/contact/">Free Assessment</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Improve Tuition</h4>
-                    <ul>
-                        <li><a href="/about/">About</a></li>
-                        <li><a href="/pricing/">Pricing</a></li>
-                        <li><a href="/reviews/">Reviews</a></li>
-                        <li><a href="/contact/">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="foot-bottom">© 2007–<span id="yr"></span> Improve Tuition · Established 2007 · Batley &amp;
-                Online</div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
-    <nav class="sticky-bar" aria-label="Quick contact">
-        <a href="tel:+447951918152">Call</a>
-        <a href="https://wa.me/447951918152?text=Hi%20Improve%20Tuition%2C%20I%27d%20like%20a%20free%20GCSE%20Maths%20assessment"
-            target="_blank" rel="noopener">WhatsApp</a>
-        <a href="#book">Free Assessment</a>
-    </nav>
 
-    <button class="a11y-toggle" aria-expanded="false" aria-controls="a11y" title="Accessibility options"
-        onclick="toggleA11y(this)">&#9855;</button>
-    <div class="a11y-panel" id="a11y" role="dialog" aria-label="Accessibility options">
-        <h4>Accessibility</h4>
-        <button aria-pressed="false" onclick="tog('dys',this)">Dyslexia-friendly text</button>
-        <button aria-pressed="false" onclick="tog('contrast',this)">Higher contrast</button>
-        <button aria-pressed="false" onclick="tog('big',this)">Larger text</button>
-        <button aria-pressed="false" onclick="tog('ruler-on',this,true)">Reading ruler</button>
-    </div>
+
+
 
     <script type="application/ld+json">
 {
@@ -1543,12 +1196,8 @@
 }
 </script>
 
+    <script src="/assets/js/app.js"></script>
     <script>
-        document.getElementById('yr').textContent = new Date().getFullYear();
-        function toggleMenu(b) { var n = document.getElementById('navlinks'); var o = n.classList.toggle('open'); b.setAttribute('aria-expanded', o) }
-        function toggleA11y(b) { var p = document.getElementById('a11y'); var o = p.classList.toggle('open'); b.setAttribute('aria-expanded', o) }
-        function tog(cls, btn, ruler) { var on = document.body.classList.toggle(cls); btn.setAttribute('aria-pressed', on); if (ruler) { if (on) { document.addEventListener('mousemove', moveRuler) } else { document.removeEventListener('mousemove', moveRuler) } } }
-        function moveRuler(e) { document.getElementById('ruler').style.top = (e.clientY - 22) + 'px' }
         function submitBooking(e) {
             e.preventDefault();
             var g = function (id) { return document.getElementById(id) };
