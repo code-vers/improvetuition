@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online A-Level Maths Tutor | Free Assessment | Improve Tuition</title>
+    <meta name="description"
+        content="Looking for an online A-Level Maths tutor? Improve Tuition helps Year 12 and Year 13 students master Pure, Mechanics and Statistics and bridge the jump from GCSE. Book a free assessment.">
+    <link rel="canonical" href="https://improvetuition.org/uk/online/a-level-maths-tutor/">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Improve Tuition">
+    <meta property="og:title" content="Online A-Level Maths Tutor | Free Assessment | Improve Tuition">
+    <meta property="og:description"
+        content="Online A-Level Maths tuition for Year 12 & Year 13. We find the gap first, then teach it. Pure, Mechanics, Statistics, exam technique and past papers. Book a free assessment.">
+    <meta property="og:url" content="https://improvetuition.org/uk/online/a-level-maths-tutor/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Online A-Level Maths Tutor | Free Assessment | Improve Tuition">
+    <meta name="twitter:description"
+        content="Online A-Level Maths tuition for Year 12 & Year 13. Find the gap first, then teach it. Book a free assessment.">
+    <meta name="twitter:url" content="https://improvetuition.org/uk/online/a-level-maths-tutor/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #242F3A;
+            --coral: #D55A3F;
+            --coral-hover: #B14526;
+            --gold: #C99A2E;
+            --gold-soft: #D6B35A;
+            --grey: #5A5A5A;
+            --paper: #F7F5F2;
+            --cream: #E8E3DA;
+            --white: #FFFFFF;
+            --rule: #D8D2C7;
+            --display: 'Lora', Georgia, serif;
+            --body: 'Nunito Sans', system-ui, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+
+            * {
+                animation: none !important;
+                transition: none !important
+            }
+        }
+
+        body {
+            font-family: var(--body);
+            color: var(--navy);
+            background: var(--paper);
+            line-height: 1.65;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--display);
+            line-height: 1.2;
+            font-weight: 600
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 3.4vw, 2.15rem);
+            margin-bottom: .4rem
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: .35rem
+        }
+
+        p {
+            margin-bottom: 1rem
+        }
+
+        a {
+            color: var(--coral);
+            text-decoration: none
+        }
+
+        a:hover {
+            color: var(--coral-hover);
+            text-decoration: underline
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px
+        }
+
+        img {
+            max-width: 100%
+        }
+
+        .wrap {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px
+        }
+
+        .eyebrow {
+            font-family: var(--body);
+            font-weight: 800;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            font-size: .78rem;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            margin-bottom: .5rem
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 34px;
+            height: 2px;
+            background: var(--gold)
+        }
+
+        .skip {
+            position: absolute;
+            left: -999px;
+            top: 0;
+            background: var(--navy);
+            color: #fff;
+            padding: 10px 16px;
+            z-index: 200
+        }
+
+        .skip:focus {
+            left: 8px;
+            top: 8px
+        }
+
+
+        /* Skim line = the one-glance takeaway per section */
+        .skimline {
+            font-family: var(--display);
+            font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+            font-weight: 600;
+            color: var(--navy);
+            border-left: 3px solid var(--coral);
+            padding-left: 15px;
+            margin: .6rem 0 1.1rem;
+            max-width: 760px
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            font-family: var(--body);
+            font-weight: 800;
+            font-size: 1rem;
+            padding: 15px 28px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: background .15s, color .15s, transform .1s;
+            text-align: center
+        }
+
+        .btn:hover {
+            text-decoration: none;
+            transform: translateY(-1px)
+        }
+
+        .btn-coral {
+            background: var(--coral);
+            color: #fff
+        }
+
+        .btn-coral:hover {
+            background: var(--coral-hover);
+            color: #fff
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--navy);
+            border-color: var(--navy)
+        }
+
+        .btn-outline:hover {
+            background: var(--navy);
+            color: #fff
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: #fff;
+            border-color: rgba(255, 255, 255, .6)
+        }
+
+        .btn-ghost:hover {
+            background: #fff;
+            color: var(--navy)
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--rule);
+            position: sticky;
+            top: 0;
+            z-index: 100
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 24px;
+            max-width: 1080px;
+            margin: 0 auto
+        }
+
+        .brand {
+            font-family: var(--display);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--navy)
+        }
+
+        .brand span {
+            color: var(--coral)
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 26px;
+            align-items: center
+        }
+
+        .nav-links a {
+            color: var(--navy);
+            font-weight: 700;
+            font-size: .95rem
+        }
+
+        .nav-links a:hover {
+            color: var(--coral);
+            text-decoration: none
+        }
+
+        .nav-cta {
+            padding: 10px 18px;
+            font-size: .9rem
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: 2px solid var(--navy);
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-weight: 800;
+            color: var(--navy)
+        }
+
+        @media(max-width:860px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                flex-direction: column;
+                padding: 18px 24px;
+                border-bottom: 1px solid var(--rule);
+                gap: 16px
+            }
+
+            .nav-links.open {
+                display: flex
+            }
+
+            .menu-btn {
+                display: block
+            }
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(160deg, var(--navy) 0%, #1c2530 100%);
+            color: #fff;
+            padding: 60px 0 52px
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5.2vw, 3.25rem);
+            color: #fff;
+            margin-bottom: .9rem
+        }
+
+        .hero .skimline {
+            color: #fff;
+            border-left-color: var(--gold);
+            max-width: 640px
+        }
+
+        .hero .eyebrow {
+            color: var(--gold-soft)
+        }
+
+        .hero .eyebrow::before {
+            background: var(--gold-soft)
+        }
+
+        .method {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 1.2rem 0 1.6rem
+        }
+
+        .method span {
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .18);
+            color: #fff;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: .9rem
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px
+        }
+
+        .trust-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 26px;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, .15)
+        }
+
+        .trust-strip div {
+            font-size: .92rem;
+            color: #e9e6df
+        }
+
+        .trust-strip strong {
+            display: block;
+            font-family: var(--display);
+            font-size: 1.35rem;
+            color: #fff
+        }
+
+        /* Sections */
+        section {
+            padding: 52px 0
+        }
+
+        section.cream {
+            background: var(--cream)
+        }
+
+        section.white {
+            background: var(--white)
+        }
+
+        .lead-narrow {
+            max-width: 760px
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 1.2rem
+        }
+
+        @media(max-width:760px) {
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 20px
+            }
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--rule);
+            border-radius: 12px;
+            padding: 24px
+        }
+
+        section.white .card {
+            background: var(--paper)
+        }
+
+        .card h3 {
+            color: var(--navy)
+        }
+
+        .tick {
+            list-style: none;
+            margin-top: .5rem
+        }
+
+        .tick li {
+            padding-left: 26px;
+            position: relative;
+            margin-bottom: .45rem
+        }
+
+        .tick li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--coral);
+            font-weight: 800
+        }
+
+        /* Compact CTA band */
+        .cta-band {
+            background: var(--navy);
+            color: #fff;
+            border-radius: 14px;
+            padding: 32px 30px;
+            margin-top: .6rem
+        }
+
+        .cta-band h2 {
+            color: #fff
+        }
+
+        .cta-band .skimline {
+            color: #fff;
+            border-left-color: var(--gold-soft)
+        }
+
+        .cta-band p {
+            color: #e9e6df;
+            max-width: 640px;
+            margin-bottom: .6rem
+        }
+
+        .cta-band .note {
+            font-size: .9rem;
+            color: var(--gold-soft);
+            font-weight: 700;
+            margin: .4rem 0 0
+        }
+
+        /* Topic grid */
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 1rem
+        }
+
+        @media(max-width:760px) {
+            .topic-grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(max-width:460px) {
+            .topic-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .topic {
+            background: var(--white);
+            border: 1px solid var(--rule);
+            border-left: 4px solid var(--gold);
+            border-radius: 8px;
+            padding: 14px 16px;
+            font-weight: 700
+        }
+
+        .topic small {
+            display: block;
+            font-weight: 400;
+            color: var(--grey);
+            font-size: .84rem;
+            margin-top: .15rem
+        }
+
+        /* Steps */
+        .steps {
+            margin-top: 1rem;
+            display: grid;
+            gap: 12px
+        }
+
+        .step {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            background: var(--white);
+            border: 1px solid var(--rule);
+            border-radius: 10px;
+            padding: 16px 20px
+        }
+
+        section.cream .step {
+            background: var(--paper)
+        }
+
+        .step::before {
+            counter-increment: s;
+            content: counter(s);
+            flex: 0 0 38px;
+            height: 38px;
+            background: var(--coral);
+            color: #fff;
+            font-family: var(--display);
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .steps {
+            counter-reset: s
+        }
+
+        .step h3 {
+            margin-bottom: .1rem;
+            font-size: 1.1rem
+        }
+
+        .step p {
+            margin-bottom: 0;
+            font-size: .96rem
+        }
+
+        /* Reviews */
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 1.2rem
+        }
+
+        @media(max-width:760px) {
+            .reviews {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .review {
+            background: var(--white);
+            border: 1px solid var(--rule);
+            border-radius: 12px;
+            padding: 22px
+        }
+
+        .review .stars {
+            color: var(--gold);
+            letter-spacing: 2px;
+            margin-bottom: .4rem
+        }
+
+        .review p {
+            font-style: italic;
+            color: var(--navy);
+            margin-bottom: .5rem
+        }
+
+        .review .who {
+            font-style: normal;
+            font-weight: 800;
+            color: var(--grey);
+            font-size: .9rem;
+            margin-bottom: 0
+        }
+
+        .score-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            align-items: center;
+            margin-top: 1.2rem;
+            padding: 18px 22px;
+            background: var(--white);
+            border: 1px solid var(--rule);
+            border-radius: 12px
+        }
+
+        .score-row .big {
+            font-family: var(--display);
+            font-size: 2.4rem;
+            color: var(--navy);
+            line-height: 1
+        }
+
+        .score-row div small {
+            display: block;
+            color: var(--grey);
+            font-size: .85rem
+        }
+
+        /* FAQ */
+        .faq {
+            margin-top: 1.1rem;
+            border-top: 1px solid var(--rule)
+        }
+
+        .faq details {
+            border-bottom: 1px solid var(--rule)
+        }
+
+        .faq summary {
+            cursor: pointer;
+            padding: 16px 40px 16px 0;
+            font-family: var(--display);
+            font-weight: 600;
+            font-size: 1.08rem;
+            position: relative;
+            list-style: none
+        }
+
+        .faq summary::-webkit-details-marker {
+            display: none
+        }
+
+        .faq summary::after {
+            content: "+";
+            position: absolute;
+            right: 6px;
+            top: 14px;
+            font-size: 1.5rem;
+            color: var(--coral)
+        }
+
+        .faq details[open] summary::after {
+            content: "–"
+        }
+
+        .faq details p {
+            padding: 0 0 16px;
+            color: var(--grey);
+            margin: 0
+        }
+
+        /* Signpost */
+        .signpost {
+            background: var(--cream);
+            border: 1px dashed var(--gold);
+            border-radius: 12px;
+            padding: 20px 24px
+        }
+
+        .signpost h3 {
+            color: var(--navy)
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: #cfd3d8;
+            padding: 44px 0 28px;
+            font-size: .94rem
+        }
+
+        footer a {
+            color: #fff
+        }
+
+        .foot-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 28px
+        }
+
+        @media(max-width:760px) {
+            .foot-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        footer h4 {
+            font-family: var(--display);
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: .6rem
+        }
+
+        footer ul {
+            list-style: none
+        }
+
+        footer li {
+            margin-bottom: .35rem
+        }
+
+        .foot-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .14);
+            margin-top: 26px;
+            padding-top: 16px;
+            font-size: .85rem;
+            color: #9aa0a8
+        }
+
+        /* Sticky bar */
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--navy);
+            display: none;
+            z-index: 120;
+            border-top: 2px solid var(--gold)
+        }
+
+        .sticky-bar a {
+            flex: 1;
+            text-align: center;
+            padding: 13px 6px;
+            color: #fff;
+            font-weight: 800;
+            font-size: .9rem;
+            border-right: 1px solid rgba(255, 255, 255, .15)
+        }
+
+        .sticky-bar a:last-child {
+            border-right: none;
+            background: var(--coral)
+        }
+
+        .sticky-bar a:hover {
+            text-decoration: none
+        }
+
+        @media(max-width:860px) {
+            .sticky-bar {
+                display: flex
+            }
+
+            body {
+                padding-bottom: 52px
+            }
+        }
+
+        /* Accessibility */
+        .a11y-toggle {
+            position: fixed;
+            right: 16px;
+            bottom: 70px;
+            z-index: 130;
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, .25)
+        }
+
+        @media(max-width:860px) {
+            .a11y-toggle {
+                bottom: 64px
+            }
+        }
+
+        .a11y-panel {
+            position: fixed;
+            right: 16px;
+            bottom: 132px;
+            z-index: 131;
+            background: #fff;
+            border: 1px solid var(--rule);
+            border-radius: 12px;
+            padding: 18px;
+            width: 250px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, .2);
+            display: none
+        }
+
+        .a11y-panel.open {
+            display: block
+        }
+
+        .a11y-panel h4 {
+            font-family: var(--display);
+            margin-bottom: .6rem;
+            color: var(--navy)
+        }
+
+        .a11y-panel button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: var(--paper);
+            border: 1px solid var(--rule);
+            border-radius: 7px;
+            padding: 9px 12px;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--navy);
+            cursor: pointer
+        }
+
+        .a11y-panel button:hover {
+            background: var(--cream)
+        }
+
+        .a11y-panel button[aria-pressed="true"] {
+            background: var(--navy);
+            color: #fff;
+            border-color: var(--navy)
+        }
+
+        body.dys {
+            --display: var(--body);
+            letter-spacing: .03em;
+            word-spacing: .08em
+        }
+
+        body.dys p,
+        body.dys li {
+            line-height: 1.9
+        }
+
+        body.contrast {
+            --paper: #fff;
+            --cream: #f0efec;
+            --grey: #333
+        }
+
+        body.contrast .hero {
+            background: #0f1620
+        }
+
+        body.big {
+            font-size: 19px
+        }
+
+        .ruler {
+            position: fixed;
+            left: 0;
+            right: 0;
+            height: 44px;
+            background: rgba(201, 154, 46, .16);
+            border-top: 2px solid var(--gold);
+            border-bottom: 2px solid var(--gold);
+            pointer-events: none;
+            z-index: 90;
+            display: none
+        }
+
+        body.ruler-on .ruler {
+            display: block
+        }
+
+        /* Quick booking form */
+        .bform {
+            display: grid;
+            gap: 14px;
+            margin-top: 1.2rem;
+            max-width: 520px
+        }
+
+        .bform label {
+            display: block;
+            font-weight: 800;
+            font-size: .9rem;
+            margin-bottom: .3rem;
+            color: #fff
+        }
+
+        .bform input,
+        .bform select,
+        .bform textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--rule);
+            background: #fff;
+            font-family: var(--body);
+            font-size: 1rem;
+            color: var(--navy)
+        }
+
+        .bform textarea {
+            resize: vertical;
+            min-height: 60px
+        }
+
+        .bform .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px
+        }
+
+        @media(max-width:520px) {
+            .bform .row {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .bform .opt {
+            font-weight: 600;
+            color: var(--gold-soft);
+            font-size: .82rem;
+            text-transform: none;
+            letter-spacing: 0
+        }
+
+        .bform-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            margin-top: .2rem
+        }
+
+        .bform-err {
+            color: #ffd7cd;
+            font-size: .85rem;
+            font-weight: 700;
+            min-height: 1em;
+            margin: 0
+        }
+
+        .bform .alt {
+            font-size: .84rem;
+            color: #cfd3d8;
+            margin: .2rem 0 0
+        }
+
+        .bform .alt a {
+            color: #fff;
+            text-decoration: underline
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="ruler" id="ruler" aria-hidden="true"></div>
+
+    <header>
+        <div class="nav">
+            <a class="brand" href="/">Improve <span>Tuition</span></a>
+            <button class="menu-btn" aria-expanded="false" aria-controls="navlinks"
+                onclick="toggleMenu(this)">Menu</button>
+            <nav class="nav-links" id="navlinks" aria-label="Primary">
+                <a href="/uk/online/maths-tutor/">Online Maths</a>
+                <a href="/uk/online/gcse-maths-tutor/">GCSE Maths</a>
+                <a href="/uk/online/a-level-maths-tutor/" aria-current="page">A-Level Maths</a>
+                <a href="/uk/maths/tutor-in/batley/">Batley</a>
+                <a href="/pricing/">Pricing</a>
+                <a href="/reviews/">Reviews</a>
+                <a class="btn btn-coral nav-cta" href="#book">Free Assessment</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="wrap">
+                <p class="eyebrow">Online A-Level Maths Tutor</p>
+                <h1>Online A-Level Maths Tutor for Year 12 &amp; Year 13</h1>
+                <p class="skimline">Struggling with the jump to A-Level Maths? We find the exact gap first — then teach
+                    it.</p>
+                <div class="method"><span>Assess first</span><span>Find the barrier</span><span>Teach the missing
+                        skill</span></div>
+                <div class="hero-cta">
+                    <a class="btn btn-coral" href="#book">Book a Free A-Level Maths Assessment</a>
+                    <a class="btn btn-ghost"
+                        href="https://wa.me/447951918152?text=Hi%20Improve%20Tuition%2C%20I%27d%20like%20to%20book%20a%20free%20A-Level%20Maths%20assessment"
+                        target="_blank" rel="noopener">WhatsApp us</a>
+                </div>
+                <div class="trust-strip">
+                    <div><strong>4.7 / 5</strong>from 171 reviews</div>
+                    <div><strong>Since 2007</strong>established</div>
+                    <div><strong>QTS</strong>teacher-led</div>
+                    <div><strong>DBS</strong>checked tutors</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- YEAR 12 & 13 -->
+        <section class="white">
+            <div class="wrap">
+                <p class="eyebrow">Who we help</p>
+                <h2>Online A-Level Maths Tutor for Year 12 and Year 13</h2>
+                <p class="skimline">Year 12 to bridge the GCSE gap, Year 13 to master exams and secure UCAS grades.</p>
+                <div class="two-col">
+                    <div class="card">
+                        <h3>Year 12 (AS)</h3>
+                        <ul class="tick">
+                            <li>Bridge the steep step up from GCSE</li>
+                            <li>Make algebra fast and automatic</li>
+                            <li>Build strong Pure foundations</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Year 13 (A2)</h3>
+                        <ul class="tick">
+                            <li>Full A-Level content and synoptic questions</li>
+                            <li>Past papers and exam technique</li>
+                            <li>UCAS predicted grades and resit support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FREE ASSESSMENT -->
+        <section class="cream">
+            <div class="wrap">
+                <div class="cta-band">
+                    <p class="skimline">Start with a free assessment. We find the gaps before any paid tuition.</p>
+                    <p class="note">No payment is needed to book.</p>
+                    <div style="margin-top:1rem"><a class="btn btn-coral" href="#book">Book a Free A-Level Maths
+                            Assessment</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY STRUGGLE -->
+        <section class="white">
+            <div class="wrap lead-narrow">
+                <p class="eyebrow">The real problem</p>
+                <h2>Why Students Struggle With A-Level Maths</h2>
+                <p class="skimline">The jump from GCSE to A-Level is the biggest in the curriculum — even for grade 7–9
+                    students.</p>
+                <p>Many students who did well at GCSE hit a wall at A-Level. It isn't a lack of ability — it's that
+                    A-Level demands a different level of fluency and moves fast. The gaps we find most often:</p>
+                <ul class="tick">
+                    <li><strong>Algebra isn't automatic yet:</strong> A-Level assumes GCSE algebra is instant, and
+                        hesitation there breaks harder topics.</li>
+                    <li><strong>New abstraction:</strong> proof, functions and calculus think differently to GCSE
+                        methods.</li>
+                    <li><strong>Pace:</strong> content is covered quickly, so one missed idea compounds.</li>
+                    <li><strong>Independent study:</strong> A-Level needs stronger self-study and problem-solving
+                        habits.</li>
+                </ul>
+                <p style="margin-top:.8rem">Our free assessment pinpoints exactly which of these is the barrier — across
+                    Pure, Mechanics or Statistics — so every lesson afterwards is targeted, not generic.</p>
+            </div>
+        </section>
+
+        <!-- THREE STRANDS -->
+        <section class="cream">
+            <div class="wrap">
+                <p class="eyebrow">The full A-Level</p>
+                <h2>Pure, Mechanics &amp; Statistics</h2>
+                <p class="skimline">We cover all three strands of A-Level Maths — and Further Maths where needed.</p>
+                <div class="topic-grid" style="grid-template-columns:repeat(3,1fr)">
+                    <div class="topic" style="border-left-color:var(--coral)">Pure<small>Algebra, functions, calculus,
+                            trigonometry, proof, sequences</small></div>
+                    <div class="topic" style="border-left-color:var(--gold)">Mechanics<small>Kinematics, forces,
+                            Newton's laws, moments, vectors</small></div>
+                    <div class="topic" style="border-left-color:var(--navy)">Statistics<small>Probability,
+                            distributions, sampling, hypothesis testing</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOPICS -->
+        <section class="white">
+            <div class="wrap">
+                <p class="eyebrow">Where students get stuck</p>
+                <h2>A-Level Maths Topics We Help With</h2>
+                <div class="topic-grid">
+                    <div class="topic">Differentiation<small>Rules, applications</small></div>
+                    <div class="topic">Integration<small>Definite, by parts</small></div>
+                    <div class="topic">Trigonometry<small>Identities, equations</small></div>
+                    <div class="topic">Proof<small>Contradiction, induction*</small></div>
+                    <div class="topic">Vectors<small>2D and 3D</small></div>
+                    <div class="topic">Kinematics<small>SUVAT, calculus methods</small></div>
+                    <div class="topic">Forces<small>Newton's laws, friction</small></div>
+                    <div class="topic">Distributions<small>Binomial, normal</small></div>
+                    <div class="topic">Hypothesis testing<small>Sampling, significance</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXAM TECHNIQUE -->
+        <section class="cream">
+            <div class="wrap lead-narrow">
+                <p class="eyebrow">Marks, not just methods</p>
+                <h2>Exam Technique &amp; Past Paper Practice</h2>
+                <p class="skimline">A-Level rewards clear method and calm under unfamiliar questions. We drill both.</p>
+                <p>Students practise with real past papers and mark schemes, learning to show working for method marks,
+                    break down unfamiliar problems, use the calculator efficiently, and manage time across long papers —
+                    so the exam feels familiar, not daunting.</p>
+            </div>
+        </section>
+
+        <!-- FURTHER / RETAKE -->
+        <section class="white">
+            <div class="wrap lead-narrow">
+                <p class="eyebrow">Extra support</p>
+                <h2>AS, Further Maths &amp; Resit Support</h2>
+                <p class="skimline">Sitting AS, taking Further Maths, or resitting to lift a grade? We help with all
+                    three.</p>
+                <div><a class="btn btn-outline" href="#book">Book a Free A-Level Maths Assessment</a></div>
+            </div>
+        </section>
+
+        <!-- HOW LESSONS WORK -->
+        <section class="cream">
+            <div class="wrap">
+                <p class="eyebrow">Our method</p>
+                <h2>How Online A-Level Maths Lessons Work</h2>
+                <p class="skimline">Five clear steps, one-to-one or small group, online.</p>
+                <div class="steps">
+                    <div class="step">
+                        <div>
+                            <h3>Assess</h3>
+                            <p>A free assessment pinpoints the gaps across Pure, Mechanics and Statistics.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div>
+                            <h3>Plan</h3>
+                            <p>A targeted plan around those gaps — not a generic syllabus march.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div>
+                            <h3>Teach</h3>
+                            <p>The tutor teaches the missing skill clearly, checking understanding.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div>
+                            <h3>Practise</h3>
+                            <p>Exam-style questions and past papers turn it into reliable marks.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div>
+                            <h3>Track</h3>
+                            <p>Progress tracked lesson by lesson, so students and parents see it improving.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY US + REVIEWS -->
+        <section class="white">
+            <div class="wrap">
+                <p class="eyebrow">Trusted since 2007</p>
+                <h2>Why Students Choose Improve Tuition for A-Level Maths</h2>
+                <p class="skimline">An established Batley centre, QTS teacher-led, supporting Year 12 &amp; 13 across
+                    the UK online.</p>
+                <p class="lead-narrow">Our tutors are subject specialists and DBS-checked, our lesson structure is
+                    clear, and every journey starts with a free assessment — so students and parents know exactly what
+                    they're getting.</p>
+
+                <!-- Review scores shown as visible text only. Do NOT add AggregateRating schema to this page. -->
+                <div class="score-row">
+                    <div><span class="big">4.7</span></div>
+                    <div><strong>171 reviews</strong><small>Google &amp; Trustpilot</small></div>
+                    <div><strong>Google 4.5</strong><small>from 56 reviews</small></div>
+                    <div><strong>Trustpilot 4.8</strong><small>from 115 reviews</small></div>
+                </div>
+
+                <!-- REPLACE these snippets with your real, verified Google/Trustpilot A-Level reviews before publishing. -->
+                <div class="reviews">
+                    <div class="review">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"The step up to A-Level floored my son after a grade 8 at GCSE. The tutor rebuilt his algebra
+                            and his confidence came back."</p>
+                        <p class="who">&mdash; Parent, Year 12 A-Level Maths</p>
+                    </div>
+                    <div class="review">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"Brilliant with Mechanics, which I'd found impossible. Clear, patient and exam-focused."</p>
+                        <p class="who">&mdash; Student, Year 13 A-Level Maths</p>
+                    </div>
+                    <div class="review">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"The past-paper practice made a real difference to my predicted grades for UCAS."</p>
+                        <p class="who">&mdash; Student, Year 13 A-Level Maths</p>
+                    </div>
+                    <div class="review">
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"Honest free assessment that showed exactly where the gaps were. No guesswork."</p>
+                        <p class="who">&mdash; Parent, Year 12 A-Level Maths</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOOK -->
+        <section class="cream" id="book">
+            <div class="wrap">
+                <div class="cta-band">
+                    <p class="eyebrow" style="color:var(--gold-soft)">Your next step</p>
+                    <h2>Book a Free Online A-Level Maths Assessment</h2>
+                    <p class="skimline">Year 12 or 13 and A-Level Maths becoming a struggle? Start with a free
+                        assessment.</p>
+                    <p>We'll identify the gaps, explain what's holding you back, and recommend the right next step.</p>
+                    <p class="note">Takes about 30 seconds. No payment is needed to book.</p>
+                    <form class="bform" onsubmit="return submitBooking(event)" novalidate>
+                        <div>
+                            <label for="bf-name">Your name (or parent name)</label>
+                            <input id="bf-name" name="name" type="text" autocomplete="name" required>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <label for="bf-contact">Phone or email</label>
+                                <input id="bf-contact" name="contact" type="text" autocomplete="tel" required>
+                            </div>
+                            <div>
+                                <label for="bf-year">Year group</label>
+                                <select id="bf-year" name="year" required>
+                                    <option value="" selected disabled>Choose…</option>
+                                    <option>Year 12</option>
+                                    <option>Year 13</option>
+                                    <option>Resit / other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="bf-msg">What are you finding hard in A-Level Maths? <span
+                                    class="opt">(optional)</span></label>
+                            <textarea id="bf-msg" name="msg" rows="2"></textarea>
+                        </div>
+                        <p class="bform-err" id="bf-err" role="alert"></p>
+                        <div class="bform-actions">
+                            <button class="btn btn-coral" type="submit">Book my free assessment</button>
+                            <a class="btn btn-ghost" href="tel:+447951918152">Call 07951 918152</a>
+                        </div>
+                        <p class="alt">Sends via WhatsApp so we can confirm a time. Prefer a form? <a
+                                href="/contact/">Use our contact page</a>.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="white">
+            <div class="wrap lead-narrow">
+                <p class="eyebrow">Questions students &amp; parents ask</p>
+                <h2>Online A-Level Maths Tutor FAQs</h2>
+                <div class="faq">
+                    <details>
+                        <summary>Is online A-Level Maths tuition effective?</summary>
+                        <p>Yes. Lessons are one-to-one or small group and interactive, so the tutor sees the student's
+                            working in real time and targets the exact gap — which matters even more at A-Level, where
+                            topics build quickly.</p>
+                    </details>
+                    <details>
+                        <summary>My child got a good GCSE grade but is struggling at A-Level. Is that normal?</summary>
+                        <p>Very. The jump from GCSE to A-Level is the steepest in the curriculum. Strong GCSE students
+                            often struggle at first because A-Level assumes instant algebra fluency and introduces new
+                            abstraction. It is fixable with targeted help.</p>
+                    </details>
+                    <details>
+                        <summary>How does the free assessment work?</summary>
+                        <p>It's a short online session where a tutor identifies exactly which A-Level Maths topics are
+                            causing problems, across Pure, Mechanics and Statistics. There's no charge and no
+                            obligation.</p>
+                    </details>
+                    <details>
+                        <summary>Do you cover Pure, Mechanics and Statistics?</summary>
+                        <p>Yes — all three strands of A-Level Maths, plus Further Maths where needed.</p>
+                    </details>
+                    <details>
+                        <summary>Do you support AS, Further Maths and resits?</summary>
+                        <p>Yes. We help AS students, Further Maths students, and those resitting to lift a grade for
+                            university.</p>
+                    </details>
+                    <details>
+                        <summary>Which exam boards do you cover?</summary>
+                        <p>We support the major A-Level Maths boards including Edexcel, AQA and OCR (including OCR MEI),
+                            and tailor past-paper practice to your board.</p>
+                    </details>
+                    <details>
+                        <summary>Can you help with UCAS predicted grades and university offers?</summary>
+                        <p>Yes. Focused work on exam technique and past papers is often what moves a predicted or final
+                            grade in time for university offers.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIGNPOST -->
+        <section class="cream">
+            <div class="wrap lead-narrow">
+                <div class="signpost">
+                    <h3>Not quite A-Level yet?</h3>
+                    <p style="margin-bottom:.5rem">We also tutor GCSE, KS3 and Primary Maths online. See our <a
+                            href="/uk/online/gcse-maths-tutor/">Online GCSE Maths Tutor</a> page, or all ages on our <a
+                            href="/uk/online/maths-tutor/">Online Maths Tutor</a> page.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div>
+                    <h4>Improve Tuition</h4>
+                    <p style="color:#cfd3d8">Teacher-led online GCSE Maths tuition and in-person support from our Batley
+                        centre. We find the gap first, then teach it.</p>
+                    <p style="color:#cfd3d8;margin-bottom:0">The Study Room, George Street, Batley, WF17 5AR<br><a
+                            href="tel:+447951918152">07951 918152</a></p>
+                </div>
+                <div>
+                    <h4>Maths tuition</h4>
+                    <ul>
+                        <li><a href="/uk/online/a-level-maths-tutor/">Online A-Level Maths Tutor</a></li>
+                        <li><a href="/uk/online/gcse-maths-tutor/">Online GCSE Maths Tutor</a></li>
+                        <li><a href="/uk/online/maths-tutor/">Online Maths Tutor</a></li>
+                        <li><a href="/uk/maths/tutor-in/batley/">Maths Tutor in Batley</a></li>
+                        <li><a href="/contact/">Free Assessment</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Improve Tuition</h4>
+                    <ul>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/pricing/">Pricing</a></li>
+                        <li><a href="/reviews/">Reviews</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foot-bottom">© 2007–<span id="yr"></span> Improve Tuition · Established 2007 · Batley &amp;
+                Online</div>
+        </div>
+    </footer>
+
+    <nav class="sticky-bar" aria-label="Quick contact">
+        <a href="tel:+447951918152">Call</a>
+        <a href="https://wa.me/447951918152?text=Hi%20Improve%20Tuition%2C%20I%27d%20like%20a%20free%20GCSE%20Maths%20assessment"
+            target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#book">Free Assessment</a>
+    </nav>
+
+    <button class="a11y-toggle" aria-expanded="false" aria-controls="a11y" title="Accessibility options"
+        onclick="toggleA11y(this)">&#9855;</button>
+    <div class="a11y-panel" id="a11y" role="dialog" aria-label="Accessibility options">
+        <h4>Accessibility</h4>
+        <button aria-pressed="false" onclick="tog('dys',this)">Dyslexia-friendly text</button>
+        <button aria-pressed="false" onclick="tog('contrast',this)">Higher contrast</button>
+        <button aria-pressed="false" onclick="tog('big',this)">Larger text</button>
+        <button aria-pressed="false" onclick="tog('ruler-on',this,true)">Reading ruler</button>
+    </div>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "EducationalOrganization",
+        "LocalBusiness"
+      ],
+      "@id": "https://improvetuition.org/#org",
+      "name": "Improve Tuition",
+      "url": "https://improvetuition.org/",
+      "telephone": "+447951918152",
+      "foundingDate": "2007",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "The Study Room, George Street",
+        "addressLocality": "Batley",
+        "postalCode": "WF17 5AR",
+        "addressCountry": "GB"
+      },
+      "areaServed": "GB"
+    },
+    {
+      "@type": "Service",
+      "name": "Online A-Level Maths Tutor",
+      "serviceType": "Online A-Level Maths tuition",
+      "provider": {
+        "@id": "https://improvetuition.org/#org"
+      },
+      "areaServed": "GB",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      },
+      "url": "https://improvetuition.org/uk/online/a-level-maths-tutor/",
+      "offers": {
+        "@type": "Offer",
+        "name": "Free A-Level Maths assessment",
+        "price": "0",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://improvetuition.org/uk/online/a-level-maths-tutor/"
+      }
+    },
+    {
+      "@type": "Course",
+      "name": "Online A-Level Maths Tuition",
+      "description": "One-to-one and small-group online A-Level Maths tuition for Year 12 and Year 13 students, covering Pure, Mechanics and Statistics, exam technique and past papers. Every student starts with a free assessment that pinpoints the exact gaps.",
+      "provider": {
+        "@id": "https://improvetuition.org/#org"
+      },
+      "url": "https://improvetuition.org/uk/online/a-level-maths-tutor/",
+      "educationalLevel": "A-Level",
+      "teaches": [
+        "Pure Mathematics",
+        "Mechanics",
+        "Statistics",
+        "Differentiation",
+        "Integration",
+        "Trigonometry",
+        "Proof",
+        "Vectors",
+        "Hypothesis testing"
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "courseWorkload": "PT1H",
+        "location": {
+          "@type": "VirtualLocation",
+          "url": "https://improvetuition.org/uk/online/a-level-maths-tutor/"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://improvetuition.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Online Maths Tutor",
+          "item": "https://improvetuition.org/uk/online/maths-tutor/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Online A-Level Maths Tutor",
+          "item": "https://improvetuition.org/uk/online/a-level-maths-tutor/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is online A-Level Maths tuition effective?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Lessons are one-to-one or small group and interactive, so the tutor sees the student's working in real time and targets the exact gap, which matters even more at A-Level."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My child got a good GCSE grade but is struggling at A-Level. Is that normal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Very. The jump from GCSE to A-Level is the steepest in the curriculum. Strong GCSE students often struggle at first because A-Level assumes instant algebra fluency and new abstraction. It is fixable with targeted help."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the free assessment work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is a short online session where a tutor identifies exactly which A-Level Maths topics are causing problems across Pure, Mechanics and Statistics. There is no charge and no obligation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you cover Pure, Mechanics and Statistics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all three strands of A-Level Maths, plus Further Maths where needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you support AS, Further Maths and resits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We help AS students, Further Maths students, and those resitting to lift a grade for university."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which exam boards do you cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We support the major A-Level Maths boards including Edexcel, AQA and OCR (including OCR MEI), and tailor past-paper practice to your board."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help with UCAS predicted grades and university offers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Focused work on exam technique and past papers is often what moves a predicted or final grade in time for university offers."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+    <script>
+        document.getElementById('yr').textContent = new Date().getFullYear();
+        function toggleMenu(b) { var n = document.getElementById('navlinks'); var o = n.classList.toggle('open'); b.setAttribute('aria-expanded', o) }
+        function toggleA11y(b) { var p = document.getElementById('a11y'); var o = p.classList.toggle('open'); b.setAttribute('aria-expanded', o) }
+        function tog(cls, btn, ruler) { var on = document.body.classList.toggle(cls); btn.setAttribute('aria-pressed', on); if (ruler) { if (on) { document.addEventListener('mousemove', moveRuler) } else { document.removeEventListener('mousemove', moveRuler) } } }
+        function moveRuler(e) { document.getElementById('ruler').style.top = (e.clientY - 22) + 'px' }
+        function submitBooking(e) {
+            e.preventDefault();
+            var g = function (id) { return document.getElementById(id) };
+            var name = g('bf-name').value.trim(), contact = g('bf-contact').value.trim(), year = g('bf-year').value, msg = g('bf-msg').value.trim();
+            var err = g('bf-err');
+            if (!name || !contact || !year) { err.textContent = "Please add your name, a contact, and your child's year group."; return false }
+            err.textContent = "";
+            var text = "Hi Improve Tuition, I'd like to book a free GCSE Maths assessment." +
+                "\nParent: " + name + "\nContact: " + contact + "\nYear group: " + year + (msg ? ("\nConcern: " + msg) : "");
+            window.open("https://wa.me/447951918152?text=" + encodeURIComponent(text), "_blank", "noopener");
+            return false;
+        }
+    </script>
+</body>
+
+</html>
