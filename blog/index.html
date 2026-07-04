@@ -106,37 +106,6 @@
             padding: 0 24px
         }
 
-        .topbar {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            background: var(--navy);
-            color: #fff;
-            font-size: 14px;
-            font-weight: 700
-        }
-
-        .topbar .wrap {
-            display: flex;
-            gap: 22px;
-            justify-content: center;
-            align-items: center;
-            padding: 10px 24px;
-            flex-wrap: wrap
-        }
-
-        .topbar a {
-            color: #fff
-        }
-
-        .topbar a:hover {
-            color: var(--gold-soft)
-        }
-
-        .topbar a.assess {
-            color: var(--gold-soft)
-        }
-
         /* Category head */
         .cat-head {
             background: var(--white);
@@ -374,18 +343,6 @@
             font-weight: 600
         }
 
-        footer {
-            background: #1B242C;
-            color: #AEB4BA;
-            text-align: center;
-            font-size: 13px;
-            padding: 26px 24px
-        }
-
-        footer a {
-            color: var(--gold-soft)
-        }
-
         :focus-visible {
             outline: 3px solid var(--gold);
             outline-offset: 2px;
@@ -419,13 +376,7 @@
 
 <body>
 
-    <div class="topbar">
-        <div class="wrap">
-            <a href="tel:+441924000000">Call us</a>
-            <a href="/contact/">Contact us</a>
-            <a class="assess" href="/free-assessment/">Free assessment &rarr;</a>
-        </div>
-    </div>
+    <div id="header-placeholder"></div>
 
     <header class="cat-head">
         <div class="wrap">
@@ -520,11 +471,9 @@
         <span class="sub">Teacher-led &middot; In-person in Batley or online &middot; No obligation</span>
     </section>
 
-    <footer>
-        Improve Tuition &middot; The Study Room, George Street, Batley, West Yorkshire WF17 5AR &middot;
-        <a href="/free-assessment/">Book a free assessment</a>
-    </footer>
+    <div id="footer-placeholder"></div>
 
+    <script src="/assets/js/app.js"></script>
 </body>
 
 </html>
