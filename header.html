@@ -1210,7 +1210,30 @@
         }
 
         .format-group.is-open .format-subjects {
-            max-height: 240px;
+            max-height: 600px;
+        }
+
+        .format-subject-group-label {
+            font-size: 0.63rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: #4A5058;
+            padding: 10px 1rem 6px 3.4rem;
+            background: var(--paper);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .format-subject-group-label::before {
+            content: "";
+            width: 10px;
+            height: 1.5px;
+            background: var(--coral);
+            border-radius: 2px;
+            flex: none;
+            opacity: .9;
         }
 
         .format-subjects li {
@@ -1578,16 +1601,23 @@
                         </svg>
                     </button>
                     <ul class="format-subjects">
-                        <li><a href="/uk/11-plus-tutor/" class="is-active"><span>11 Plus</span><svg class="menu-arrow"
-                                    viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
+                        <li class="format-subject-group-label">Primary &amp; Entrance Exams</li>
                         <li><a href="/uk/sats-tutor/"><span>SATs</span><svg class="menu-arrow" viewBox="0 0 16 16"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" aria-hidden="true">
                                     <path d="M3 8 H13 M9 4 L13 8 L9 12" />
                                 </svg></a></li>
+                        <li><a href="/uk/11-plus-tutor/" class="is-active"><span>11 Plus</span><svg class="menu-arrow"
+                                    viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+                                </svg></a></li>
+                        <li><a href="/heckmondwike-tutor/"><span>Heckmondwike Grammar</span><svg class="menu-arrow"
+                                    viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+                                </svg></a></li>
+                        <li class="format-subject-group-label">GCSE &amp; International Exams</li>
                         <li><a href="/uk/gcse-tutors/"><span>GCSE</span><svg class="menu-arrow" viewBox="0 0 16 16"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" aria-hidden="true">
@@ -1598,12 +1628,22 @@
                                     stroke-linejoin="round" aria-hidden="true">
                                     <path d="M3 8 H13 M9 4 L13 8 L9 12" />
                                 </svg></a></li>
-                        <li><a href="/heckmondwike-tutor/"><span>Heckmondwike Grammar</span><svg class="menu-arrow"
+                        <li><a href="/uk/online/lb-tutors/"><span>IB</span><svg class="menu-arrow" viewBox="0 0 16 16"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+                                </svg></a></li>
+                        <li class="format-subject-group-label">Scottish SQA Exams</li>
+                        <li><a href="/uk/online/scottish-nationals/"><span>National 5</span><svg class="menu-arrow" viewBox="0 0 16 16"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+                                </svg></a></li>
+                        <li><a href="/uk/online/higher-tutor/"><span>Higher &amp; Advanced Higher</span><svg class="menu-arrow"
                                     viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <path d="M3 8 H13 M9 4 L13 8 L9 12" />
                                 </svg></a></li>
-
                     </ul>
                 </div>
 
