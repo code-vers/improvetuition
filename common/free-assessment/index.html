@@ -1365,9 +1365,57 @@
 
 
 
+
+    <!-- ============ FAQ / SERVICE / BREADCRUMB SCHEMA (no AggregateRating, no reviews) ============ -->
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"EducationalOrganization",
+      "@id":"https://improvetuition.org/#org",
+      "name":"Improve Tuition",
+      "url":"https://improvetuition.org",
+      "telephone":"+44-1924-506010",
+      "email":"info@improvetuition.org",
+      "foundingDate":"2007",
+      "address":{"@type":"PostalAddress","streetAddress":"The Study Room, George Street","addressLocality":"Batley","addressRegion":"West Yorkshire","postalCode":"WF17 5AR","addressCountry":"GB"}
+    },
+    {
+      "@type":"Service",
+      "name":"Free Tuition Assessment",
+      "serviceType":"Educational assessment and personalised learning plan",
+      "provider":{"@id":"https://improvetuition.org/#org"},
+      "areaServed":["Batley","West Yorkshire","United Kingdom","Worldwide (online)"],
+      "audience":{"@type":"EducationalAudience","educationalRole":"student"},
+      "description":"A free, no-obligation diagnostic assessment for Year 2 to A-Level in Maths, English and Science, with a written gap analysis and personalised learning plan. Available in person in Batley and online.",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"GBP","availability":"https://schema.org/InStock"}
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://improvetuition.org/"},
+        {"@type":"ListItem","position":2,"name":"Free Assessment","item":"https://improvetuition.org/free-assessment"}
+      ]
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Is the assessment really free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free and with no obligation. You receive a written summary and a learning plan whether or not you choose to book lessons."}},
+        {"@type":"Question","name":"How long does the free assessment take?","acceptedAnswer":{"@type":"Answer","text":"Most assessments take around 30 to 45 minutes, depending on the year group and number of subjects."}},
+        {"@type":"Question","name":"Can the assessment be done online?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can assess in person at our Batley centre or online. We support families across the UK and internationally."}},
+        {"@type":"Question","name":"Which years and subjects do you cover?","acceptedAnswer":{"@type":"Answer","text":"Year 2 through to A-Level in Maths, English and Science, including multiple subjects if needed."}},
+        {"@type":"Question","name":"Who carries out the assessment?","acceptedAnswer":{"@type":"Answer","text":"Assessments and plans are set and reviewed by Gulamhusain Dabhad (QTS) and delivered by DBS-checked subject specialists."}},
+        {"@type":"Question","name":"Is there pressure to sign up afterwards?","acceptedAnswer":{"@type":"Answer","text":"No. The report and plan are yours to keep, and we give an honest recommendation even if that route is not with us."}}
+      ]
+    }
+  ]
+}
+</script>
+
     <script>
         (function () {
-            document.getElementById('yr').textContent = new Date().getFullYear();
+            // document.getElementById('yr').textContent = new Date().getFullYear();
 
             /* ----- scroll reveal ----- */
             var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1409,7 +1457,6 @@
                 this.style.display = 'none';
                 document.getElementById('formSuccess').classList.add('show');
             });
-
         })();
     </script>
     <script src="/assets/js/app.js"></script>
