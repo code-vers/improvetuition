@@ -81,9 +81,9 @@
             text-decoration: none;
         }
 
-        a:hover {
+        /* a:hover {
             color: var(--coral-hover);
-        }
+        } */
 
         img,
         svg {
@@ -181,9 +181,9 @@
         }
 
         .btn-primary:hover {
-            background: var(--coral-hover);
-            color: #fff;
-            transform: translateY(-2px);
+            /* background: var(--coral-hover); */
+            /* color: #fff;
+            transform: translateY(-2px); */
         }
 
         .btn-ghost {
@@ -599,7 +599,7 @@
             align-items: center;
             gap: .5em;
             background: #fbeced;
-            color: var(--coral-hover);
+            /* color: var(--coral-hover); */
             font-weight: 800;
             font-size: .78rem;
             border-radius: 999px;
@@ -982,6 +982,183 @@
             }
         }
 
+        /* ---------- mobile sticky CTA ---------- */
+        .mobile-cta {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 850;
+            display: none;
+            gap: 10px;
+            padding: 10px 14px;
+            background: rgba(247, 245, 242, .96);
+            backdrop-filter: blur(8px);
+            border-top: 1px solid var(--rule);
+        }
+
+        .mobile-cta .btn {
+            flex: 1;
+            padding: .8em 1em;
+            font-size: .9rem;
+        }
+
+        @media(max-width:720px) {
+            .mobile-cta {
+                display: flex;
+            }
+
+            body {
+                padding-bottom: 70px;
+            }
+        }
+
+        /* ---------- accessibility widget ---------- */
+        .a11y-btn {
+            position: fixed;
+            left: 16px;
+            bottom: 16px;
+            z-index: 950;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: #fff;
+            border: 2px solid var(--gold);
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .a11y-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media(max-width:720px) {
+            .a11y-btn {
+                bottom: 82px;
+            }
+        }
+
+        .a11y-panel {
+            position: fixed;
+            left: 16px;
+            bottom: 78px;
+            z-index: 960;
+            width: 290px;
+            max-width: calc(100vw - 32px);
+            background: #fff;
+            border: 1px solid var(--rule);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 16px 18px;
+            display: none;
+        }
+
+        .a11y-panel.open {
+            display: block;
+        }
+
+        @media(max-width:720px) {
+            .a11y-panel {
+                bottom: 144px;
+            }
+        }
+
+        .a11y-panel h4 {
+            font-family: var(--ui);
+            font-weight: 900;
+            font-size: .72rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin: 0 0 12px;
+        }
+
+        .a11y-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .a11y-row:last-of-type {
+            border-bottom: 0;
+        }
+
+        .a11y-row span {
+            font-weight: 700;
+            font-size: .9rem;
+        }
+
+        .a11y-toggle {
+            width: 44px;
+            height: 25px;
+            border-radius: 999px;
+            background: var(--rule);
+            border: 0;
+            position: relative;
+            cursor: pointer;
+            flex: 0 0 auto;
+            transition: background .2s;
+        }
+
+        .a11y-toggle::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            background: #fff;
+            transition: left .2s;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+        }
+
+        .a11y-toggle[aria-pressed="true"] {
+            background: var(--coral);
+        }
+
+        .a11y-toggle[aria-pressed="true"]::after {
+            left: 21px;
+        }
+
+        .tint-btns {
+            display: flex;
+            gap: 6px;
+        }
+
+        .tint-btns button {
+            width: 26px;
+            height: 26px;
+            border-radius: 7px;
+            border: 2px solid var(--rule);
+            cursor: pointer;
+        }
+
+        .tint-btns button[aria-pressed="true"] {
+            border-color: var(--navy);
+        }
+
+        .a11y-reset {
+            margin-top: 12px;
+            width: 100%;
+            background: var(--cream);
+            border: 1px solid var(--rule);
+            border-radius: 8px;
+            padding: .55em;
+            font-weight: 800;
+            font-size: .82rem;
+            color: var(--navy);
+            cursor: pointer;
+        }
+
         /* ---------- reveal ---------- */
         .reveal {
             opacity: 0;
@@ -1008,7 +1185,9 @@
 </head>
 
 <body>
-    <div id="header-phone-placeholder"></div>
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <div id="header-placeholder"></div>
 
     <!-- ============ HERO ============ -->
     <section class="hero">
@@ -1036,10 +1215,7 @@
             <div class="book-card" id="book">
                 <div class="cap"><span class="free">Free</span><b>Book your child's assessment</b></div>
                 <!-- IMRAN: wire this form's POST to the CRM/email endpoint. The WhatsApp button already works client-side. -->
-                <form id="assessForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-                    <input type="hidden" name="access_key" value="efb1f09c-319e-4b47-b770-12997364e160">
-                    <input type="hidden" name="redirect" value="https://www.improvetuition.org">
-                    <input type="hidden" name="subject" value="Book a free assessment">
+                <form id="assessForm" novalidate>
                     <div class="field">
                         <label for="pname">Your name <span class="req">*</span></label>
                         <input id="pname" name="pname" type="text" autocomplete="name"
@@ -1361,10 +1537,62 @@
         </div>
     </section>
 
+    <!-- ============ FOOTER ============ -->
+    <!-- <footer class="site">
+        <div class="container foot">
+            <a class="brand" href="/">Improve<span class="dot">.</span>Tuition</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/subjects">Subjects</a>
+                <a href="/about">About</a>
+                <a href="#book">Free assessment</a>
+            </nav>
+            <p class="foot-legal">Improve Tuition · The Study Room, George Street, Batley, West Yorkshire WF17 5AR ·
+                01924 506010 · Teacher-led tuition since 2007. © <span id="yr"></span> Improve Tuition. All rights
+                reserved.</p>
+        </div>
+    </footer> -->
+
     <div id="footer-placeholder"></div>
 
+    <!-- ============ MOBILE STICKY CTA ============ -->
+    <div class="mobile-cta">
+        <a class="btn btn-primary" href="#book">Book free assessment</a>
+        <a class="btn btn-wa"
+            href="https://wa.me/447951918152?text=Hi%20Improve%20Tuition%2C%20I%27d%20like%20to%20book%20a%20free%20assessment."
+            target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+    </div>
 
-
+    <!-- ============ ACCESSIBILITY WIDGET ============ -->
+    <button class="a11y-btn" id="a11yBtn" aria-label="Accessibility options" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="4" r="2" />
+            <path d="M19 8h-5v13a1 1 0 0 1-2 0v-6h-0v6a1 1 0 0 1-2 0V8H5a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2Z" />
+        </svg>
+    </button>
+    <div class="a11y-panel" id="a11yPanel" role="dialog" aria-label="Accessibility options">
+        <h4>Reading &amp; access</h4>
+        <div class="a11y-row"><span>Larger text</span><button class="a11y-toggle" data-act="big" aria-pressed="false"
+                aria-label="Toggle larger text"></button></div>
+        <div class="a11y-row"><span>Dyslexia-friendly</span><button class="a11y-toggle" data-act="dyslexia"
+                aria-pressed="false" aria-label="Toggle dyslexia-friendly reading"></button></div>
+        <div class="a11y-row"><span>Higher contrast</span><button class="a11y-toggle" data-act="contrast"
+                aria-pressed="false" aria-label="Toggle higher contrast"></button></div>
+        <div class="a11y-row"><span>Calm mode</span><button class="a11y-toggle" data-act="calm" aria-pressed="false"
+                aria-label="Toggle calm mode, reduces motion"></button></div>
+        <div class="a11y-row"><span>Colour overlay</span>
+            <span class="tint-btns">
+                <button data-tint="none" aria-pressed="true" style="background:#fff" aria-label="No overlay"></button>
+                <button data-tint="cream" aria-pressed="false" style="background:#fff4d6"
+                    aria-label="Cream overlay"></button>
+                <button data-tint="blue" aria-pressed="false" style="background:#aacdeb"
+                    aria-label="Blue overlay"></button>
+                <button data-tint="rose" aria-pressed="false" style="background:#f0c8cd"
+                    aria-label="Rose overlay"></button>
+            </span>
+        </div>
+        <button class="a11y-reset" id="a11yReset">Reset all</button>
+    </div>
 
     <!-- ============ FAQ / SERVICE / BREADCRUMB SCHEMA (no AggregateRating, no reviews) ============ -->
     <script type="application/ld+json">
@@ -1457,8 +1685,39 @@
                 this.style.display = 'none';
                 document.getElementById('formSuccess').classList.add('show');
             });
+
+            /* ----- accessibility widget ----- */
+            var KEY = 'it_a11y';
+            var state = { big: false, dyslexia: false, contrast: false, calm: false, tint: 'none' };
+            try { var s = localStorage.getItem(KEY); if (s) state = Object.assign(state, JSON.parse(s)); } catch (e) { }
+            function persist() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { } }
+            function apply() {
+                document.documentElement.style.setProperty('--fs', state.big ? '1.14' : '1');
+                document.body.classList.toggle('dyslexia', state.dyslexia);
+                document.body.classList.toggle('contrast', state.contrast);
+                document.body.classList.toggle('calm', state.calm);
+                document.body.setAttribute('data-tint', state.tint);
+                document.querySelectorAll('.a11y-toggle').forEach(function (b) { b.setAttribute('aria-pressed', String(!!state[b.dataset.act])); });
+                document.querySelectorAll('.tint-btns button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.tint === state.tint)); });
+            }
+            var panel = document.getElementById('a11yPanel'), btn = document.getElementById('a11yBtn');
+            btn.addEventListener('click', function () {
+                var open = panel.classList.toggle('open'); btn.setAttribute('aria-expanded', String(open));
+            });
+            document.querySelectorAll('.a11y-toggle').forEach(function (b) {
+                b.addEventListener('click', function () { state[b.dataset.act] = !state[b.dataset.act]; apply(); persist(); });
+            });
+            document.querySelectorAll('.tint-btns button').forEach(function (b) {
+                b.addEventListener('click', function () { state.tint = b.dataset.tint; apply(); persist(); });
+            });
+            document.getElementById('a11yReset').addEventListener('click', function () {
+                state = { big: false, dyslexia: false, contrast: false, calm: false, tint: 'none' }; apply(); persist();
+            });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { panel.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); } });
+            apply();
         })();
     </script>
+
     <script src="/assets/js/app.js"></script>
 </body>
 
