@@ -559,8 +559,6 @@
             max-width: 38ch;
         }
 
-        /* ------------------------- HERO RESPONSIVE -------------------------
-     (Single rule — duplicate removed per consolidation pass.) */
         @media (max-width: 760px) {
             .hero--photo {
                 min-height: auto;
@@ -572,6 +570,107 @@
         }
 
         @media (max-width: 640px) {}
+
+        /* ---- Hero new elements ---- */
+        .hero-tag {
+            background: rgba(213, 90, 63, .16);
+            color: #F3B9AB;
+            border: 1px solid rgba(213, 90, 63, .4);
+            font-size: .74rem;
+            font-weight: 800;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            padding: 7px 14px;
+            border-radius: 100px;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+
+        .hero-lines {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .hero-lines p {
+            font-family: var(--font-display);
+            font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+            color: #EDE9E2;
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        .hero-lead {
+            max-width: 600px;
+            font-size: 1.04rem;
+            color: #C9CBCB;
+            margin-bottom: 28px;
+            line-height: 1.65;
+        }
+
+        .hero-lead strong {
+            color: #fff;
+            font-weight: 800;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            width: fit-content;
+            background: var(--coral);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1rem;
+            letter-spacing: .01em;
+            padding: 15px 28px;
+            border-radius: 8px;
+            transition: background .18s ease, transform .18s ease;
+            box-shadow: 0 8px 20px rgba(213, 90, 63, .28);
+        }
+
+        .hero-btn:hover {
+            background: var(--coral-hover);
+            transform: translateY(-2px);
+        }
+
+        .hero-micro {
+            font-size: .82rem;
+            color: rgba(255, 255, 255, .55);
+            margin-top: 12px;
+            font-weight: 700;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+        }
+
+        .hero-trust {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 22px;
+            align-items: center;
+            margin-top: 36px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            font-size: .88rem;
+            color: #C9CBCB;
+            font-weight: 600;
+        }
+
+        .hero-trust .stars {
+            color: var(--gold);
+            letter-spacing: 2px;
+        }
+
+        .hero-trust b {
+            color: #fff;
+        }
+
+        .hero-place {
+            margin-top: 18px;
+            font-size: .92rem;
+            color: #AEB2B4;
+            max-width: 540px;
+        }
 
         /* ------------------------- HOW WE HELP YOUR CHILD (McKinsey-style) ------------------------- */
         .mckinsey-block {
@@ -1445,16 +1544,34 @@
     <section class="hero hero--photo" aria-labelledby="hero-h1">
         <div class="hero-inner">
 
-            <div class="hero-pretitle">Year 6 SATs &middot; KS2 Preparation</div>
-            <h1 id="hero-h1" class="hero-title">Year 6 SATs Tutors</h1>
-            <p class="hero-subtagline">
-                Reading, SPaG, Arithmetic and Reasoning &middot; Year 5 and Year 6 preparation
-            </p>
-            <p class="hero-geo">Heckmondwike tuition &middot; Based in Batley, West Yorkshire</p>
+            <div class="hero-pretitle">SATs Tutors</div>
 
-            <p class="hero-geo">
-                SATs tuition based in Batley &middot; serving England and West Yorkshire
-            </p>
+            <span class="hero-tag">Free SATs assessment first</span>
+
+            <h1 id="hero-h1" class="hero-title">Find the gaps first.</h1>
+
+            <div class="hero-lines">
+                <p>We start with a diagnostic.</p>
+                <p>We find the gaps.</p>
+                <p>We teach to the exact papers your child will sit.</p>
+            </div>
+
+            <p class="hero-lead">Free SATs assessment before any paid tuition begins &mdash;
+                covering reading, grammar, punctuation and spelling, and maths (arithmetic and reasoning).</p>
+
+            <a href="/common/free-assessment/" class="hero-btn">Book your free assessment</a>
+            <p class="hero-micro">Takes 2 minutes &middot; No payment &middot; No obligation</p>
+
+            <div class="hero-trust">
+                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span><b>4.7</b> across 168 Trustpilot &amp; Google reviews</span>
+                <span>QTS teacher-led</span>
+                <span>DBS-checked tutors</span>
+                <span>Established 2007</span>
+            </div>
+
+            <p class="hero-place">In-centre tuition at The Study Room, Batley &mdash; and online for families across the
+                UK.</p>
 
         </div>
     </section>
