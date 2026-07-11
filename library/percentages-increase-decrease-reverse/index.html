@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Percentage Increase, Decrease &amp; Reverse | Improve Tuition</title>
+<meta name="description" content="Help with percentage increase, decrease, change and reverse percentages. Free practice with worked examples and read-aloud support.">
+<meta property="og:title" content="Percentage Increase, Decrease &amp; Reverse | Improve Tuition">
+<meta property="og:description" content="Help with percentage increase, decrease, change and reverse percentages. Free practice with worked examples and read-aloud support.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>:root{--navy:#242F3A;--coral:#D55A3F;--coral-hover:#B14526;--coral-deep:#B14526;--gold:#C99A2E;--gold-soft:#D6B35A;--gold-pale:#F1E8D0;--grey:#5A5A5A;--grey-soft:#8A8A8A;--paper:#F7F5F2;--cream:#E8E3DA;--white:#FFFFFF;--rule:#D8D2C7;--rule-line:#D8D2C7;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--grey);font-family:'DM Sans',system-ui,sans-serif;line-height:1.55;}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px 120px;}
+.pupil-banner{position:sticky;top:0;z-index:50;background:var(--navy);color:var(--white);padding:10px 16px;font-size:0.85rem;box-shadow:0 2px 8px rgba(36,47,58,0.15);}
+.pupil-banner strong{color:var(--gold-soft);}
+.pupil-banner .sep{opacity:0.5;margin:0 8px;}
+.topbar{background:var(--navy);color:var(--gold-soft);font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;padding:8px 20px;text-align:center;}
+.hero{background:var(--navy);color:var(--white);border-bottom:4px solid var(--gold);padding:30px 20px 34px;text-align:center;}
+.hero .eyebrow{color:var(--gold-soft);font-size:0.74rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;}
+.hero h1{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(1.7rem,6vw,2.5rem);margin:10px 0 6px;color:var(--white);}
+.hero .sub{font-style:italic;color:var(--gold-soft);font-size:1.02rem;margin:0 0 8px;}
+.hero .meta{color:rgba(255,255,255,0.7);font-size:0.84rem;}
+h2,h3{font-family:'Fraunces',serif;color:var(--navy);}
+.lesson-part{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:22px 20px;margin:22px 0;}
+.lesson-eyebrow{display:inline-block;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;padding:4px 10px;background:var(--gold-pale);border-radius:3px;}
+.lesson-h3{font-size:1.35rem;margin:10px 0 6px;}
+.lesson-aim{color:var(--grey);font-style:italic;margin:0 0 12px;}
+.lesson-part p{margin:10px 0;}
+.key-fact{background:var(--gold-pale);border-left:4px solid var(--gold);border-radius:0 6px 6px 0;padding:12px 16px;margin:14px 0;color:var(--navy);line-height:1.6;}
+.conv-map{margin:14px 0;border:1px solid var(--rule);border-radius:8px;overflow:hidden;}
+.cm-row{display:flex;justify-content:space-between;gap:10px;padding:10px 14px;border-bottom:1px solid var(--rule);background:var(--white);}
+.cm-row:nth-child(even){background:var(--paper);}
+.cm-row:last-child{border-bottom:0;}
+.cm-from{font-weight:700;color:var(--navy);font-size:0.92rem;}
+.cm-how{color:var(--grey);font-size:0.9rem;text-align:right;}
+.worked-example{border:1px solid var(--rule);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:14px 16px;margin:16px 0;background:var(--white);}
+.we-eyebrow{text-transform:uppercase;font-size:0.68rem;letter-spacing:2px;color:var(--grey-soft);font-weight:700;}
+.we-problem{font-family:'Fraunces',serif;color:var(--coral);font-size:1.15rem;font-weight:700;margin:4px 0 8px;}
+.we-steps{margin:0;padding:0;list-style:none;counter-reset:s;}
+.we-step{position:relative;padding:8px 0 8px 34px;border-top:1px dashed var(--rule);counter-increment:s;}
+.we-step:first-child{border-top:0;}
+.we-step::before{content:counter(s);position:absolute;left:0;top:7px;width:22px;height:22px;background:var(--coral);color:#fff;border-radius:50%;font-size:0.78rem;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;}
+.watch-out{background:#FBEEE9;border-left:4px solid var(--coral);border-radius:0 6px 6px 0;padding:12px 16px;margin:14px 0;color:var(--navy);}
+.watch-eyebrow{font-size:0.68rem;letter-spacing:2px;color:var(--coral-deep);font-weight:700;text-transform:uppercase;margin-bottom:4px;}
+.try-one{background:var(--cream);border-radius:8px;padding:14px 16px;margin:14px 0;}
+.try-eyebrow{text-transform:uppercase;font-size:0.68rem;letter-spacing:2px;color:var(--gold);font-weight:700;margin:0 0 4px;}
+.try-one details{margin-top:6px;}
+.try-one summary{cursor:pointer;color:var(--coral-deep);font-weight:600;}
+.lesson-jump{display:inline-block;margin:18px 0 2px;padding:11px 20px;background:var(--coral);color:#fff;font-weight:700;font-size:0.95rem;text-decoration:none;border-radius:8px;box-shadow:0 2px 6px rgba(213,90,63,0.28);transition:background .15s;}
+.lesson-jump:hover{background:var(--coral-hover);}
+.section-jump{display:flex;flex-wrap:wrap;align-items:center;gap:9px;justify-content:center;margin:22px 0;padding:13px 14px;background:var(--cream);border:1px solid var(--rule);border-radius:10px;}
+.section-jump .sj-label{font-size:0.82rem;font-weight:600;color:var(--grey);margin-right:2px;}
+.section-jump a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--white);border:2px solid var(--gold-soft);color:var(--navy);font-family:'Fraunces',serif;font-weight:700;font-size:1rem;text-decoration:none;transition:all .15s;}
+.section-jump a:hover{background:var(--coral);border-color:var(--coral);color:#fff;}
+.section-divider{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20px;margin:26px 0 14px;}
+.back-to-lesson{display:inline-block;margin:0 0 10px;color:var(--gold-soft);font-size:0.82rem;font-weight:600;text-decoration:none;letter-spacing:0.04em;}
+.back-to-lesson:hover{color:#fff;text-decoration:underline;}
+.section-divider .title{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:#fff;}
+.section-divider .intro{margin-top:12px;padding-top:12px;border-top:1px solid rgba(201,154,46,0.35);}
+.lo-eyebrow{font-size:0.7rem;letter-spacing:0.16em;color:var(--gold);font-weight:700;margin-bottom:6px;}
+.lo-statement{margin:0 0 10px;color:#fff;font-style:italic;font-size:0.98rem;}
+.sc-label{font-size:0.76rem;letter-spacing:0.05em;color:var(--gold);font-weight:600;margin-bottom:4px;}
+.sc-list{margin:0;padding-left:1.2em;color:rgba(255,255,255,0.92);font-size:0.92rem;line-height:1.5;}
+.question{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:18px 18px 16px;margin:14px 0;}
+.q-head{display:flex;gap:8px;margin-bottom:12px;}
+.q-num{font-family:'Fraunces',serif;color:var(--gold);font-weight:700;font-size:1.1rem;}
+.q-text{color:var(--navy);font-weight:600;}
+.parts{display:flex;flex-direction:column;gap:2px;}
+.part{display:flex;align-items:center;gap:10px;padding:7px 0;border-top:1px dashed var(--rule);flex-wrap:wrap;}
+.part:first-child{border-top:0;}
+.part-q{font-family:'Fraunces',serif;color:var(--navy);font-size:1.02rem;min-width:96px;}
+.answer-input{font-family:'DM Sans',sans-serif;font-size:1rem;padding:8px 10px;border:2px solid var(--rule);border-radius:7px;width:120px;background:var(--paper);color:var(--navy);}
+.answer-input:focus{outline:none;border-color:var(--gold-soft);background:#fff;}
+.fb{font-weight:700;font-size:1.05rem;min-width:18px;}
+.fb.ok{color:#1f7a4d;}
+.fb.no{color:var(--coral-deep);}
+.fb.part{color:var(--gold);}
+.cd{flex-basis:100%;font-size:0.86rem;color:var(--coral-deep);padding-left:106px;}
+.cd.show{margin-top:-2px;}
+.ord-items{background:var(--cream);border-radius:8px;padding:12px 14px;text-align:center;color:var(--navy);font-size:1.05rem;}
+.ord-tip{font-size:0.9rem;color:var(--grey);}
+.ord-grid{display:flex;flex-wrap:wrap;align-items:center;gap:8px;justify-content:center;margin:10px 0;}
+.ord-arrow{font-size:0.8rem;color:var(--grey-soft);font-weight:600;width:100%;text-align:center;}
+.ord-cell{display:flex;flex-direction:column;align-items:center;gap:3px;}
+.ord-pos{font-size:0.72rem;color:var(--grey-soft);font-weight:700;}
+.ord-input{width:74px;text-align:center;}
+.ord-cds{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;}
+.ord-cds .cd{flex-basis:auto;padding-left:0;}
+.action-bar{box-sizing:border-box;position:sticky;bottom:0;background:var(--navy);margin:0;padding:12px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between;box-shadow:0 -2px 8px rgba(36,47,58,0.2);z-index:40;}
+.progress{color:var(--gold-soft);font-size:0.82rem;}
+.btns{display:flex;gap:10px;}
+.btn{font-family:'DM Sans',sans-serif;font-weight:700;border:0;border-radius:8px;padding:11px 18px;cursor:pointer;font-size:0.95rem;background:var(--coral);color:#fff;}
+.btn:hover{background:var(--coral-hover);}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.5);}
+.score-panel{display:none;background:var(--white);border:2px solid var(--gold);border-radius:12px;padding:20px;margin:18px 0;text-align:center;}
+.score-num{font-family:'Fraunces',serif;font-size:2.4rem;color:var(--navy);font-weight:700;}
+.score-diag{color:var(--grey);margin-top:6px;}
+.pf-resume{margin:0 0 16px;padding:12px 16px;background:var(--gold-pale);border-left:4px solid var(--gold);border-radius:0 6px 6px 0;font-size:0.9rem;color:var(--navy);}
+.pf-resume a{color:var(--coral-deep);font-weight:700;cursor:pointer;text-decoration:underline;margin-left:8px;}
+.pf-saved{position:fixed;bottom:84px;right:14px;background:var(--navy);color:#fff;font-size:0.78rem;padding:7px 13px;border-radius:20px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:60;}
+.pf-saved.show{opacity:0.94;}
+.footer{background:var(--navy);color:rgba(255,255,255,0.8);padding:24px 20px;text-align:center;font-size:0.84rem;margin-top:30px;}
+.footer .org{color:var(--gold-soft);font-weight:700;font-family:'Fraunces',serif;}
+.footer a{color:var(--gold-soft);}
+@media (max-width:420px){.part-q{min-width:84px;}.cd{padding-left:0;}.answer-input{width:104px;}}
+.ws{margin-top:10px;}
+.ws details{border-top:1px dashed var(--rule);padding-top:8px;}
+.ws summary{cursor:pointer;color:var(--coral-deep);font-weight:600;font-size:0.9rem;}
+.ws .we-steps{margin-top:8px;}
+.rem-panel{margin-top:12px;padding:14px;background:var(--gold-pale);border-radius:8px;}
+.rem-head{font-size:0.78rem;letter-spacing:0.04em;font-weight:700;color:var(--coral-deep);text-transform:uppercase;margin-bottom:10px;}
+.rem-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:8px 0;border-top:1px dashed var(--rule);}
+.rem-row:first-of-type{border-top:0;}
+.rem-q{flex:1 1 100%;color:var(--navy);font-size:0.92rem;}
+.rem-ans-wrap{display:flex;align-items:center;gap:8px;}
+.rem-input{font-family:'DM Sans',sans-serif;font-size:0.95rem;padding:6px 9px;border:2px solid var(--rule);border-radius:6px;width:120px;background:#fff;color:var(--navy);}
+.rem-input:focus{outline:none;border-color:var(--gold-soft);}
+.rem-fb{font-weight:700;min-width:16px;}
+.rem-fb.ok{color:#1f7a4d;}
+.rem-fb.no{color:var(--coral-deep);}
+.rem-fb.part{color:var(--gold);}
+.rem-ans{margin-top:10px;}
+.rem-ans summary{cursor:pointer;color:var(--coral-deep);font-weight:600;font-size:0.88rem;}
+.rem-ans p{margin:6px 0 0;color:var(--navy);font-size:0.9rem;}
+.reg-card{background:#fff;border:1px solid var(--rule);border-left:4px solid var(--gold);border-radius:10px;padding:16px;margin:0 0 22px;}
+.reg-title{font-family:'Fraunces',serif;font-weight:600;color:var(--navy);font-size:1.02rem;margin-bottom:4px;}
+.reg-opt{font-family:'DM Sans',sans-serif;font-weight:400;color:var(--grey-soft);font-size:0.82rem;}
+.reg-grid{display:flex;flex-direction:column;gap:12px;margin-top:12px;}
+.reg-field{display:flex;flex-direction:column;gap:5px;}
+.reg-field span{font-size:0.82rem;font-weight:600;color:var(--grey);}
+.reg-field input{font-family:'DM Sans',sans-serif;font-size:0.95rem;padding:9px 11px;border:2px solid var(--rule);border-radius:7px;background:var(--paper);color:var(--navy);}
+.reg-field input:focus{outline:none;border-color:var(--gold-soft);background:#fff;}
+.score-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px;}
+.btn-tutor{background:var(--navy);color:#fff;}
+.btn-tutor:hover{background:#1a232c;}
+.check-row{margin-top:10px;}
+.check-one{font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:600;color:var(--coral-deep,#B14526);background:#fff;border:1.5px solid var(--coral,#D55A3F);border-radius:7px;padding:6px 14px;cursor:pointer;}
+.check-one:hover{background:var(--coral,#D55A3F);color:#fff;}
+.bar-figure{margin:16px 0 4px;padding:14px 12px;background:#F7F5F2;border:1px solid #D8D2C7;border-radius:10px;text-align:center;}
+.bar-figure svg{display:block;margin:0 auto;}
+.bar-cap{margin-top:10px;font-family:'Caveat',cursive;font-size:1.18rem;color:#5A5A5A;line-height:1.25;}
+.check-hint{margin-top:8px;padding:8px 11px;background:#F1E8D0;border-left:3px solid #C99A2E;border-radius:6px;font-size:0.9rem;color:#242F3A;}
+.check-hint .hint-label{font-weight:700;color:#B14526;text-transform:uppercase;font-size:0.72rem;letter-spacing:0.04em;margin-right:6px;}
+.check-ok{color:#1f7a4d;font-weight:600;}
+.check-muted{color:#5A5A5A;}
+.send-status{margin-top:10px;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:600;min-height:1.1em;}
+.send-status.ok{color:#1b7f4d;}
+.send-status.err{color:#B14526;}
+.ws-bar{margin:10px 0 2px;padding:10px;background:#FFFFFF;border:1px solid #E8E3DA;border-radius:8px;text-align:center;}
+.ws-bar svg{display:block;margin:0 auto;}
+.ws-bar-cap{margin-top:6px;font-family:'Caveat',cursive;font-size:1.05rem;color:#5A5A5A;line-height:1.2;}
+.try-steps{margin-top:8px;}
+.try-steps .tl{margin:4px 0;color:var(--navy);font-size:0.93rem;line-height:1.55;}</style>
+<style>
+/* Responsive fixes — added by responsive_fix.py */
+html, body { overflow-x: hidden; max-width: 100vw; }
+svg { max-width: 100%; height: auto; display: block; }
+.qfig, .figbox { max-width: 100%; overflow: hidden; }
+.figbox svg, .qfig svg { margin: 0 auto; }
+table.ak { table-layout: fixed; width: 100%; }
+table.ak td, table.ak th { word-break: break-word; overflow-wrap: anywhere; padding: 6px; font-size: 12px; }
+.q .qhead .qtext, .q .qprompt { overflow-wrap: anywhere; }
+.answer-line, .mistake { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- IMPROVETUITION:CONTENT-START -->
+<div class="pupil-banner"><strong>Preview mode</strong><span class="sep">&middot;</span><span style="opacity:0.75;">login disabled</span></div>
+<div class="topbar">Improve Tuition &middot; Foundation Maths &middot; Year 6&ndash;10</div>
+<div class="hero">
+  <div class="eyebrow">Number &middot; Percentages</div>
+  <h1>Percentages</h1>
+  <p class="sub">Increasing, decreasing, and working backwards to the original.</p>
+  <p class="meta">6 lessons &middot; 35 questions (A&ndash;G) &middot; 20 calculation + 15 word problems &middot; no time pressure</p>
+</div>
+<div class="wrap">
+
+<div class="lesson-part" id="lesson-0" style="border-left:4px solid var(--coral);">
+  <p style="margin:0 0 10px;">Percentage problems grow or shrink an amount by a given percentage &mdash; sales, pay rises, VAT, interest &mdash; and the quickest method is a <strong>multiplier</strong>, so a 12% rise means &times; 1.12. The trickiest type is the <strong>reverse percentage</strong>, where you know the final amount and work back to the original. Pupils most often slip by adding the percentage on instead of using the multiplier, or by treating a reverse percentage like a normal one.</p>
+  <p style="margin:0;">At Improve Tuition, a qualified teacher builds the multiplier method until it is automatic, then tackles reverse percentages carefully, in small worked steps &mdash; with read-aloud, comfort spacing and a reading tint for pupils who take in maths more easily that way.</p>
+</div>
+
+<div class="reg-card"><div class="reg-title">Pupil &amp; tutor details <span class="reg-opt">(optional &mdash; only needed to send results)</span></div><div class="reg-grid"><label class="reg-field"><span>Pupil name</span><input id="reg-name" type="text" autocomplete="off" placeholder="e.g. Aisha K."></label><label class="reg-field"><span>Year / class</span><input id="reg-year" type="text" autocomplete="off" placeholder="e.g. Year 8"></label><label class="reg-field"><span>Tutor email</span><input id="reg-tutor-email" type="email" autocomplete="off" placeholder="tutor@improvetuition.org"></label></div></div>
+
+<div class="lesson-part" id="lesson-1">
+<div class="lesson-eyebrow">Lesson 1</div>
+<h3 class="lesson-h3">A percentage of an amount</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Find a percentage of an amount using easy building blocks.</p>
+<p>Per cent means &ldquo;out of 100&rdquo;. The easy pieces are <strong>10%</strong> (divide by 10), <strong>1%</strong> (divide by 100) and <strong>50%</strong> (halve).</p>
+<p>Build the percentage you need from these. For example, 35% = 10% + 10% + 10% + 5%.</p>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">Find 15% of &pound;80.</div><ol class="we-steps"><li class="we-step">10% of &pound;80 = &pound;8.</li><li class="we-step">5% is half of 10% = &pound;4.</li><li class="we-step">15% = &pound;8 + &pound;4 = <strong>&pound;12</strong>.</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>&ldquo;Of&rdquo; means multiply. 15% of &pound;80 is &pound;12, not &pound;15.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>Find 20% of 45.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">Find 10% first by dividing by 10.</div><div class="tl">10% of 45 = 4.5.</div><div class="tl">20% is double 10%.</div><div class="tl">2 &times; 4.5 = <strong>9</strong>.</div><div class="tl">Check: 9 is a fifth of 45. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-A">Practise this now &mdash; Section A &rarr;</a></div>
+<div class="lesson-part" id="lesson-2">
+<div class="lesson-eyebrow">Lesson 2</div>
+<h3 class="lesson-h3">Percentage increase</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Increase an amount by a percentage.</p>
+<p>To <strong>increase</strong>: find the percentage, then <strong>add</strong> it on. In one step, multiply by a number bigger than 1 &mdash; the <em>multiplier</em>.</p>
+<figure class="bar-figure"><svg viewBox="0 0 302 90" width="100%" style="max-width:302px;height:auto" role="img"><text x="150.0" y="15" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12.5" font-weight="700" fill="#242F3A">&pound;80 + &pound;12 = &pound;92</text><rect x="1.0" y="24" width="260.9" height="42" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="131.4" y="82" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" font-weight="600" fill="#242F3A">100%</text><rect x="261.9" y="24" width="39.1" height="42" fill="#D55A3F" stroke="#242F3A" stroke-width="1.6"/><text x="281.4" y="82" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" font-weight="600" fill="#242F3A">+15%</text></svg><figcaption class="bar-cap">&pound;80 is 100%; adding 15% (&pound;12) makes &pound;92.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">Increase &pound;80 by 15%.</div><ol class="we-steps"><li class="we-step">15% of &pound;80 = &pound;12.</li><li class="we-step">Add it on: &pound;80 + &pound;12 = <strong>&pound;92</strong>.</li><li class="we-step">One step: &pound;80 &times; 1.15 = &pound;92.</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>Add the increase to the original &mdash; don&rsquo;t stop at the increase by itself.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>Increase 200 by 10%.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">Find 10% of 200.</div><div class="tl">10% of 200 = 20.</div><div class="tl">Increase means add it on.</div><div class="tl">200 + 20 = <strong>220</strong>.</div><div class="tl">Check: 220 is 110% of 200. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-A">Practise this now &mdash; Section A &rarr;</a></div>
+<div class="lesson-part" id="lesson-3">
+<div class="lesson-eyebrow">Lesson 3</div>
+<h3 class="lesson-h3">Percentage decrease</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Decrease an amount by a percentage.</p>
+<p>To <strong>decrease</strong>: find the percentage, then <strong>subtract</strong> it. Or multiply by a number less than 1. A 25% discount means you pay 75%.</p>
+<figure class="bar-figure"><svg viewBox="0 0 302 90" width="100%" style="max-width:302px;height:auto" role="img"><text x="150.0" y="15" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12.5" font-weight="700" fill="#242F3A">&pound;80 &minus; &pound;20 = &pound;60</text><rect x="1.0" y="24" width="225.0" height="42" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="113.5" y="82" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" font-weight="600" fill="#242F3A">75% kept</text><rect x="226.0" y="24" width="75.0" height="42" fill="#D55A3F" stroke="#242F3A" stroke-width="1.6"/><text x="263.5" y="82" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" font-weight="600" fill="#242F3A">25% off</text></svg><figcaption class="bar-cap">Take 25% (&pound;20) off &pound;80 to leave &pound;60.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">Decrease &pound;80 by 25%.</div><ol class="we-steps"><li class="we-step">25% of &pound;80 = &pound;20.</li><li class="we-step">Subtract: &pound;80 &minus; &pound;20 = <strong>&pound;60</strong>.</li><li class="we-step">One step: &pound;80 &times; 0.75 = &pound;60.</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>A 25% discount leaves 75%, so the multiplier is 0.75 &mdash; not 0.25.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>Decrease 200 by 10%.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">Find 10% of 200.</div><div class="tl">10% of 200 = 20.</div><div class="tl">Decrease means subtract it.</div><div class="tl">200 &minus; 20 = <strong>180</strong>.</div><div class="tl">Check: 180 is 90% of 200. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-B">Practise this now &mdash; Section B &rarr;</a></div>
+<div class="lesson-part" id="lesson-4">
+<div class="lesson-eyebrow">Lesson 4</div>
+<h3 class="lesson-h3">The multiplier method</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Use a single multiplier for any increase or decrease.</p>
+<p>Turn the change into one multiply. <strong>Increase by p%</strong> &rarr; &times;(1 + p/100). <strong>Decrease by p%</strong> &rarr; &times;(1 &minus; p/100).</p>
+<p>So +20% is &times;1.2, and &minus;12% is &times;0.88. One step, fewer slips.</p>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">A &pound;45 ticket rises by 20%. Use a multiplier.</div><ol class="we-steps"><li class="we-step">+20% &rarr; multiplier 1.2.</li><li class="we-step">&pound;45 &times; 1.2 = <strong>&pound;54</strong>.</li><li class="we-step">Check: the rise is &pound;9 (20% of &pound;45), and &pound;45 + &pound;9 = &pound;54. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>For &minus;8%, the multiplier is 0.92 (because 100% &minus; 8% = 92%).</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>Increase 250 by 12% with a multiplier.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">Increase by 12% &rarr; multiplier 1 + 0.12 = 1.12.</div><div class="tl">Multiply: 250 &times; 1.12.</div><div class="tl">= <strong>280</strong>.</div><div class="tl">Check: the increase is 30, and 250 + 30 = 280. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-A">Practise this now &mdash; Section A &rarr;</a></div>
+<div class="lesson-part" id="lesson-5">
+<div class="lesson-eyebrow">Lesson 5</div>
+<h3 class="lesson-h3">Reverse percentages</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Find the original amount before a percentage change.</p>
+<p>If you know the amount <em>after</em> a change, work backwards by <strong>dividing</strong> by the multiplier. The amount you are given is not 100% &mdash; it is 100% &plusmn; the change.</p>
+<figure class="bar-figure"><svg viewBox="0 0 302 90" width="100%" style="max-width:302px;height:auto" role="img"><text x="150.0" y="15" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12.5" font-weight="700" fill="#242F3A">120% = &pound;60</text><rect x="1.0" y="24" width="250.0" height="42" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="126.0" y="82" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" font-weight="600" fill="#242F3A">100% = ?</text><rect x="251.0" y="24" width="50.0" height="42" fill="#D55A3F" stroke="#242F3A" stroke-width="1.6"/><text x="276.0" y="82" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" font-weight="600" fill="#242F3A">+20%</text></svg><figcaption class="bar-cap">&pound;60 is 120%, so 100% = &pound;60 &divide; 1.2 = &pound;50.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">After a 20% increase, a price is &pound;60. Find the original.</div><ol class="we-steps"><li class="we-step">+20% means &pound;60 is 120% of the original.</li><li class="we-step">The multiplier was 1.2, so divide by it.</li><li class="we-step">&pound;60 &divide; 1.2 = <strong>&pound;50</strong>.</li><li class="we-step">Check: &pound;50 &times; 1.2 = &pound;60. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>Don&rsquo;t take 20% off &pound;60 &mdash; that gives &pound;48, which is wrong. Divide by 1.2.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>After a 25% decrease, a number is 90. Find the original.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">A 25% decrease leaves 75%, so 90 is 75% of the original.</div><div class="tl">Undo it by dividing by the multiplier 0.75.</div><div class="tl">90 &divide; 0.75 = <strong>120</strong>.</div><div class="tl">Check: 120 &times; 0.75 = 90. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-C">Practise this now &mdash; Section C &rarr;</a></div>
+<div class="lesson-part" id="lesson-6">
+<div class="lesson-eyebrow">Lesson 6</div>
+<h3 class="lesson-h3">Percentage change</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Find the percentage increase or decrease between two amounts.</p>
+<p>To find the % change: <strong>change &divide; original &times; 100</strong>. The &ldquo;original&rdquo; is always the <em>starting</em> amount.</p>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">A price rises from &pound;40 to &pound;50. Find the percentage increase.</div><ol class="we-steps"><li class="we-step">Change = &pound;50 &minus; &pound;40 = &pound;10.</li><li class="we-step">&pound;10 &divide; &pound;40 = 0.25.</li><li class="we-step">&times; 100 = <strong>25%</strong> increase.</li><li class="we-step">Check: 25% of &pound;40 = &pound;10, which is exactly the rise. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>Divide by the <strong>original</strong> (the first amount), not the new one.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>A score falls from 50 to 40. Find the percentage decrease.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">Find the change: 50 &minus; 40 = 10.</div><div class="tl">Divide by the original (50), not the new number.</div><div class="tl">10 &divide; 50 = 0.2.</div><div class="tl">&times; 100 = <strong>20%</strong>.</div><div class="tl">Check: 20% of 50 = 10. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-D">Practise this now &mdash; Section D &rarr;</a></div>
+
+<div class="section-jump-wrap"><nav class="section-jump" aria-label="Jump to a section"><span class="sj-label">Jump to a section:</span><a href="#sec-A">A</a><a href="#sec-B">B</a><a href="#sec-C">C</a><a href="#sec-D">D</a><a href="#sec-E">E</a><a href="#sec-F">F</a><a href="#sec-G">G</a></nav></div>
+
+<div class="section-divider" id="sec-A"><a class="back-to-lesson" href="#lesson-2">&uarr; Back to the lessons</a><div class="title">Section A &middot; Percentage increase</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 2 &middot; CALCULATION</div><p class="lo-statement">Increase an amount by a given percentage.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>find the percentage of the amount</li><li>add it to the original</li><li>or multiply by 1 + p/100</li></ul></div></div>
+<div class="question" id="q-1"><div class="q-head"><span class="q-num">1.</span><span class="q-text">Increase 200 by 10%.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="220" data-val="220.00000000000003" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">10% of 200 = 20.</li><li class="we-step">200 + 20 = <strong>220</strong>.</li></ol></details></div></div>
+<div class="question" id="q-2"><div class="q-head"><span class="q-num">2.</span><span class="q-text">Increase &pound;80 by 25%.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="&pound;100" data-val="100.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">25% of &pound;80 = &pound;20.</li><li class="we-step">&pound;80 + &pound;20 = <strong>&pound;100</strong>.</li></ol></details></div></div>
+<div class="question" id="q-3"><div class="q-head"><span class="q-num">3.</span><span class="q-text">Increase 60 by 15%.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="69" data-val="69.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">15% of 60 = 9.</li><li class="we-step">Add it on: 60 + 9 = <strong>69</strong>.</li></ol></details></div></div>
+<div class="question" id="q-4"><div class="q-head"><span class="q-num">4.</span><span class="q-text">Increase &pound;45 by 20%.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="&pound;54" data-val="54.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">20% of &pound;45 = &pound;9.</li><li class="we-step">&pound;45 + &pound;9 = <strong>&pound;54</strong>.</li></ol></details></div></div>
+<div class="question" id="q-5"><div class="q-head"><span class="q-num">5.</span><span class="q-text">Increase 250 by 12%.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="280" data-val="280.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">12% of 250 = 30.</li><li class="we-step">Add it on: 250 + 30 = <strong>280</strong>  (or &times;1.12).</li></ol></details></div></div>
+<div class="section-divider" id="sec-B"><a class="back-to-lesson" href="#lesson-3">&uarr; Back to the lessons</a><div class="title">Section B &middot; Percentage decrease</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 2 &middot; CALCULATION</div><p class="lo-statement">Decrease an amount by a given percentage.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>find the percentage of the amount</li><li>subtract it from the original</li><li>or multiply by 1 &minus; p/100</li></ul></div></div>
+<div class="question" id="q-6"><div class="q-head"><span class="q-num">6.</span><span class="q-text">Decrease 200 by 10%.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="180" data-val="180.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">10% of 200 = 20.</li><li class="we-step">200 &minus; 20 = <strong>180</strong>.</li></ol></details></div></div>
+<div class="question" id="q-7"><div class="q-head"><span class="q-num">7.</span><span class="q-text">Decrease &pound;80 by 25%.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="&pound;60" data-val="60.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">25% of &pound;80 = &pound;20.</li><li class="we-step">&pound;80 &minus; &pound;20 = <strong>&pound;60</strong>.</li></ol></details></div></div>
+<div class="question" id="q-8"><div class="q-head"><span class="q-num">8.</span><span class="q-text">Decrease 90 by 30%.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="63" data-val="62.99999999999999" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">30% of 90 = 27.</li><li class="we-step">90 &minus; 27 = <strong>63</strong>.</li></ol></details></div></div>
+<div class="question" id="q-9"><div class="q-head"><span class="q-num">9.</span><span class="q-text">Decrease &pound;150 by 12%.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="&pound;132" data-val="132.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">12% of &pound;150 = &pound;18.</li><li class="we-step">&pound;150 &minus; &pound;18 = <strong>&pound;132</strong>.</li></ol></details></div></div>
+<div class="question" id="q-10"><div class="q-head"><span class="q-num">10.</span><span class="q-text">Decrease 480 by 35%.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="312" data-val="312.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">35% of 480 = 168.</li><li class="we-step">480 &minus; 168 = <strong>312</strong>  (or &times;0.65).</li></ol></details></div></div>
+<div class="section-divider" id="sec-C"><a class="back-to-lesson" href="#lesson-5">&uarr; Back to the lessons</a><div class="title">Section C &middot; Reverse percentages</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 4 &middot; CALCULATION</div><p class="lo-statement">Find the original amount before a percentage change.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>decide the multiplier that was used</li><li>divide the new amount by it</li><li>check by multiplying back</li></ul></div></div>
+<div class="question" id="q-11"><div class="q-head"><span class="q-num">11.</span><span class="q-text">After a 10% increase, the amount is 220. Find the original.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="200" data-val="200.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">+10% means 220 is 110% of the original.</li><li class="we-step">Divide by 1.1: 220 &divide; 1.1 = <strong>200</strong>.</li></ol></details></div></div>
+<div class="question" id="q-12"><div class="q-head"><span class="q-num">12.</span><span class="q-text">After a 20% increase, the amount is &pound;60. Find the original.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="&pound;50" data-val="50.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">+20% means &pound;60 is 120% of the original.</li><li class="we-step">Divide by 1.2: &pound;60 &divide; 1.2 = <strong>&pound;50</strong>.</li></ol></details></div></div>
+<div class="question" id="q-13"><div class="q-head"><span class="q-num">13.</span><span class="q-text">After a 25% decrease, the amount is 90. Find the original.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="120" data-val="120.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">&minus;25% means 90 is 75% of the original.</li><li class="we-step">Divide by 0.75: 90 &divide; 0.75 = <strong>120</strong>.</li></ol></details></div></div>
+<div class="question" id="q-14"><div class="q-head"><span class="q-num">14.</span><span class="q-text">After a 15% decrease, the amount is &pound;170. Find the original.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="&pound;200" data-val="200.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">&minus;15% means &pound;170 is 85% of the original.</li><li class="we-step">Divide by 0.85: &pound;170 &divide; 0.85 = <strong>&pound;200</strong>.</li></ol></details></div></div>
+<div class="question" id="q-15"><div class="q-head"><span class="q-num">15.</span><span class="q-text">After a 12% increase, the amount is 280. Find the original.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="250" data-val="250.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">+12% means 280 is 112% of the original.</li><li class="we-step">Divide by 1.12: 280 &divide; 1.12 = <strong>250</strong>.</li></ol></details></div></div>
+<div class="section-divider" id="sec-D"><a class="back-to-lesson" href="#lesson-6">&uarr; Back to the lessons</a><div class="title">Section D &middot; Percentage change</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 3 &middot; CALCULATION</div><p class="lo-statement">Find the percentage increase or decrease between two amounts.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>find the change</li><li>divide by the original amount</li><li>multiply by 100</li></ul></div></div>
+<div class="question" id="q-16"><div class="q-head"><span class="q-num">16.</span><span class="q-text">A value changes from 40 to 50. Find the percentage increase.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="25%" data-val="25.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Change = 50 &minus; 40 = 10.</li><li class="we-step">10 &divide; 40 &times; 100 = <strong>25%</strong>.</li></ol></details></div></div>
+<div class="question" id="q-17"><div class="q-head"><span class="q-num">17.</span><span class="q-text">A value changes from 50 to 40. Find the percentage decrease.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="20%" data-val="20.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Change = 50 &minus; 40 = 10.</li><li class="we-step">10 &divide; 50 &times; 100 = <strong>20%</strong>.</li></ol></details></div></div>
+<div class="question" id="q-18"><div class="q-head"><span class="q-num">18.</span><span class="q-text">A value changes from 60 to 72. Find the percentage increase.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="20%" data-val="20.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Change = 72 &minus; 60 = 12.</li><li class="we-step">12 &divide; 60 &times; 100 = <strong>20%</strong>.</li></ol></details></div></div>
+<div class="question" id="q-19"><div class="q-head"><span class="q-num">19.</span><span class="q-text">A value changes from 200 to 170. Find the percentage decrease.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="15%" data-val="15.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Change = 200 &minus; 170 = 30.</li><li class="we-step">30 &divide; 200 &times; 100 = <strong>15%</strong>.</li></ol></details></div></div>
+<div class="question" id="q-20"><div class="q-head"><span class="q-num">20.</span><span class="q-text">A value changes from 250 to 320. Find the percentage increase.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="28%" data-val="28.000000000000004" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Change = 320 &minus; 250 = 70.</li><li class="we-step">70 &divide; 250 &times; 100 = <strong>28%</strong>.</li></ol></details></div></div>
+<div class="section-divider" id="sec-E"><a class="back-to-lesson" href="#lesson-2">&uarr; Back to the lessons</a><div class="title">Section E &middot; Real-life increase &amp; decrease</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 3 &middot; WORD PROBLEM</div><p class="lo-statement">Solve real-life increase and decrease problems.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>pick out the amount and the percentage</li><li>decide increase or decrease</li><li>answer with units</li></ul></div></div>
+<div class="question" id="q-21"><div class="q-head"><span class="q-num">21.</span><span class="q-text">A &pound;40 jacket has 5% added at the till. What is the new price?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="&pound;42" data-val="42.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">5% of &pound;40 = &pound;2.</li><li class="we-step">&pound;40 + &pound;2 = <strong>&pound;42</strong>.</li></ol></details></div></div>
+<div class="question" id="q-22"><div class="q-head"><span class="q-num">22.</span><span class="q-text">A season ticket costs &pound;250 and rises by 8%. What is the new price?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="&pound;270" data-val="270.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">8% of &pound;250 = &pound;20.</li><li class="we-step">&pound;250 + &pound;20 = <strong>&pound;270</strong>.</li></ol></details></div></div>
+<div class="question" id="q-23"><div class="q-head"><span class="q-num">23.</span><span class="q-text">A &pound;120 coat has 30% off in a sale. What is the sale price?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="&pound;84" data-val="84.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">30% of &pound;120 = &pound;36.</li><li class="we-step">&pound;120 &minus; &pound;36 = <strong>&pound;84</strong>.</li></ol></details></div></div>
+<div class="question" id="q-24"><div class="q-head"><span class="q-num">24.</span><span class="q-text">A laptop worth &pound;600 loses 15% of its value in a year. What is it worth now?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="&pound;510" data-val="510.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">15% of &pound;600 = &pound;90.</li><li class="we-step">&pound;600 &minus; &pound;90 = <strong>&pound;510</strong>.</li></ol></details></div></div>
+<div class="question" id="q-25"><div class="q-head"><span class="q-num">25.</span><span class="q-text">A salary of &pound;24000 is given a 4% rise. What is the new salary?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="&pound;24960" data-val="24960.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">4% of &pound;24000 = &pound;960.</li><li class="we-step">&pound;24000 + &pound;960 = <strong>&pound;24960</strong>.</li></ol></details></div></div>
+<div class="section-divider" id="sec-F"><a class="back-to-lesson" href="#lesson-5">&uarr; Back to the lessons</a><div class="title">Section F &middot; Reverse percentages in real life</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 4 &middot; WORD PROBLEM</div><p class="lo-statement">Solve real-life reverse-percentage problems.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>know the amount given is not 100%</li><li>find the multiplier</li><li>divide to get the original</li></ul></div></div>
+<div class="question" id="q-26"><div class="q-head"><span class="q-num">26.</span><span class="q-text">A coat costs &pound;60 after a 20% discount. What was the original price?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="&pound;75" data-val="75.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">20% off means &pound;60 is 80% of the original.</li><li class="we-step">Divide by 0.8: &pound;60 &divide; 0.8 = <strong>&pound;75</strong>.</li></ol></details></div></div>
+<div class="question" id="q-27"><div class="q-head"><span class="q-num">27.</span><span class="q-text">After a 5% pay rise, Sam earns &pound;21000. What was the previous salary?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="&pound;20000" data-val="20000.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">+5% means &pound;21000 is 105% of the old salary.</li><li class="we-step">Divide by 1.05: &pound;21000 &divide; 1.05 = <strong>&pound;20000</strong>.</li></ol></details></div></div>
+<div class="question" id="q-28"><div class="q-head"><span class="q-num">28.</span><span class="q-text">A sale price is &pound;48 after 20% off. What was the original price?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="&pound;60" data-val="60.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">20% off means &pound;48 is 80% of the original.</li><li class="we-step">Divide by 0.8: &pound;48 &divide; 0.8 = <strong>&pound;60</strong>.</li></ol></details></div></div>
+<div class="question" id="q-29"><div class="q-head"><span class="q-num">29.</span><span class="q-text">A bill is &pound;108 including an 8% service charge. What was the bill before service?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="&pound;100" data-val="100.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">+8% means &pound;108 is 108% of the bill.</li><li class="we-step">Divide by 1.08: &pound;108 &divide; 1.08 = <strong>&pound;100</strong>.</li></ol></details></div></div>
+<div class="question" id="q-30"><div class="q-head"><span class="q-num">30.</span><span class="q-text">A car is worth &pound;8500 after losing 15% of its value. What was its original value?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="&pound;10000" data-val="10000.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">&minus;15% means &pound;8500 is 85% of the original.</li><li class="we-step">Divide by 0.85: &pound;8500 &divide; 0.85 = <strong>&pound;10000</strong>.</li></ol></details></div></div>
+<div class="section-divider" id="sec-G"><a class="back-to-lesson" href="#lesson-4">&uarr; Back to the lessons</a><div class="title">Section G &middot; Multi-step reasoning</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 5 &middot; WORD PROBLEM</div><p class="lo-statement">Combine percentage steps and reason through multi-step problems.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>apply each change in turn</li><li>use multipliers where you can</li><li>check the answer is sensible</li></ul></div></div>
+<div class="question" id="q-31"><div class="q-head"><span class="q-num">31.</span><span class="q-text">A &pound;200 coat is increased by 10%, then that new price is reduced by 10%. What is the final price?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="&pound;198" data-val="198.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">&pound;200 &times; 1.1 = &pound;220.</li><li class="we-step">&pound;220 &times; 0.9 = <strong>&pound;198</strong>  (not back to &pound;200).</li></ol></details></div></div>
+<div class="question" id="q-32"><div class="q-head"><span class="q-num">32.</span><span class="q-text">VAT at 20% is added to a &pound;150 bill, then a 10% discount is taken off the total. What is the final amount?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="&pound;162" data-val="162.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">&pound;150 &times; 1.2 = &pound;180.</li><li class="we-step">&pound;180 &times; 0.9 = <strong>&pound;162</strong>.</li></ol></details></div></div>
+<div class="question" id="q-33"><div class="q-head"><span class="q-num">33.</span><span class="q-text">A town of 5000 people grows by 6% in year one and 5% in year two. What is the population after two years?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="5565" data-val="5565.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">5000 &times; 1.06 = 5300.</li><li class="we-step">5300 &times; 1.05 = <strong>5565</strong>.</li></ol></details></div></div>
+<div class="question" id="q-34"><div class="q-head"><span class="q-num">34.</span><span class="q-text">After a 20% discount a bike costs &pound;240. How much money was taken off in the sale?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="&pound;60" data-val="60.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">20% off means &pound;240 is 80% of the original.</li><li class="we-step">Divide by 0.8: &pound;240 &divide; 0.8 = &pound;300.</li><li class="we-step">Taken off = &pound;300 &minus; &pound;240 = <strong>&pound;60</strong>.</li></ol></details></div></div>
+<div class="question" id="q-35"><div class="q-head"><span class="q-num">35.</span><span class="q-text">&pound;2000 is invested at 5% simple interest per year. What is the total value after 3 years?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="&pound;2300" data-val="2300.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Interest each year = 5% of &pound;2000 = &pound;100.</li><li class="we-step">Over 3 years: 3 &times; &pound;100 = &pound;300.</li><li class="we-step">Add to the start: &pound;2000 + &pound;300 = <strong>&pound;2300</strong>.</li></ol></details></div></div>
+
+<div class="score-panel" id="score-panel"><div class="score-num" id="score-num"></div><div class="score-diag" id="score-diag"></div><div class="score-actions"><button id="send-btn" class="btn btn-tutor" onclick="sendToTutor()">Send to Tutor</button><button id="download-btn" class="btn btn-tutor" onclick="downloadResults()">Download results (.txt)</button></div><div class="send-status" id="send-status"></div></div>
+</div>
+
+<div class="action-bar">
+  <span class="progress" id="progress">0 of 35 answered</span>
+  <div class="btns">
+    <button class="btn" id="mark-btn" onclick="markAll()">Mark My Work</button>
+    <button id="reset-btn" class="btn btn-ghost" onclick="resetAll()">Reset</button>
+  </div>
+</div>
+<style>
+.topic-help{max-width:760px;margin:6px auto 0;padding:30px 20px 6px;border-top:2px solid var(--rule);}
+.th-eyebrow,.th-faq-label{font:700 .72rem/1 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);}
+.topic-help h2{font-family:'Fraunces',serif;color:var(--navy);font-size:1.45rem;margin:.4rem 0 .85rem;line-height:1.22;}
+.topic-help p{color:var(--grey);margin:0 0 .85rem;}
+.th-faq-label{margin:1.5rem 0 .55rem;display:block;}
+.th-faq{border:1px solid var(--rule);border-radius:10px;background:var(--white);margin:0 0 8px;overflow:hidden;}
+.th-faq summary{cursor:pointer;list-style:none;padding:13px 42px 13px 16px;font:700 1rem/1.35 'DM Sans',sans-serif;color:var(--navy);position:relative;}
+.th-faq summary::-webkit-details-marker{display:none;}
+.th-faq summary::after{content:'+';position:absolute;right:16px;top:10px;font-size:1.35rem;line-height:1;color:var(--coral);font-weight:700;}
+.th-faq[open] summary::after{content:'\2212';}
+.th-faq summary:hover{color:var(--coral-hover);}
+.th-faq>div{padding:2px 16px 14px;color:var(--grey);line-height:1.55;}
+</style>
+<section class="topic-help" id="topic-help" aria-labelledby="th-h">
+  <div class="th-eyebrow">Guide</div>
+  <h2 id="th-h">How do you increase or decrease by a percentage?</h2>
+  <p>To change an amount by a percentage, the quickest way is a <strong>multiplier</strong>. To <em>increase</em> by 15%, multiply by 1.15; to <em>decrease</em> by 15%, multiply by 0.85. The multiplier does the whole job in one step.</p>
+  <p>A <strong>reverse percentage</strong> works the other way: you are given the amount <em>after</em> a change and asked for the original. Since the final amount equals the original times the multiplier, you divide by the multiplier to get back to the start.</p>
+  <p><strong>Common mistakes.</strong> Forgetting to add or subtract the percentage you worked out, using the wrong multiplier (1.15 instead of 0.85 for a fall), or solving a reverse percentage as if it were an ordinary increase.</p>
+  <span class="th-faq-label">Common questions</span>
+  <details class="th-faq"><summary>What is a multiplier in percentages?</summary><div>A multiplier is a single number that applies a percentage change in one step. A 20% increase uses &times; 1.2; a 20% decrease uses &times; 0.8.</div></details>
+  <details class="th-faq"><summary>How do you increase an amount by a percentage?</summary><div>Multiply by 1 plus the percentage as a decimal. To increase &pound;50 by 10%, work out 50 &times; 1.1 = &pound;55.</div></details>
+  <details class="th-faq"><summary>How do you decrease an amount by a percentage?</summary><div>Multiply by 1 minus the percentage as a decimal. To decrease &pound;50 by 10%, work out 50 &times; 0.9 = &pound;45.</div></details>
+  <details class="th-faq"><summary>What is a reverse percentage?</summary><div>It is finding the original amount when you only know the amount after a percentage change. You divide the final amount by the multiplier that was used.</div></details>
+  <details class="th-faq"><summary>How do you find a percentage change?</summary><div>Work out the difference, divide by the original amount, then multiply by 100. A rise from 40 to 50 is 10 &divide; 40 &times; 100 = 25%.</div></details>
+</section>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a multiplier in percentages?", "acceptedAnswer": {"@type": "Answer", "text": "A multiplier is a single number that applies a percentage change in one step. A 20% increase uses × 1.2; a 20% decrease uses × 0.8."}}, {"@type": "Question", "name": "How do you increase an amount by a percentage?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply by 1 plus the percentage as a decimal. To increase £50 by 10%, work out 50 × 1.1 = £55."}}, {"@type": "Question", "name": "How do you decrease an amount by a percentage?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply by 1 minus the percentage as a decimal. To decrease £50 by 10%, work out 50 × 0.9 = £45."}}, {"@type": "Question", "name": "What is a reverse percentage?", "acceptedAnswer": {"@type": "Answer", "text": "It is finding the original amount when you only know the amount after a percentage change. You divide the final amount by the multiplier that was used."}}, {"@type": "Question", "name": "How do you find a percentage change?", "acceptedAnswer": {"@type": "Answer", "text": "Work out the difference, divide by the original amount, then multiply by 100. A rise from 40 to 50 is 10 ÷ 40 × 100 = 25%."}}]}
+</script>
+<style>
+.next-step{max-width:760px;margin:20px auto 0;padding:24px 22px;background:var(--navy);border-radius:14px;}
+.next-step .ns-eyebrow{font:700 .72rem/1 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);}
+.next-step h2{font-family:'Fraunces',serif;color:#fff;font-size:1.3rem;margin:.45rem 0 .6rem;line-height:1.25;}
+.next-step p{color:#E8E3DA;margin:0 0 16px;line-height:1.55;}
+.next-step a.ns-link{color:#fff;text-decoration:underline;text-decoration-color:var(--gold-soft);text-underline-offset:2px;}
+.next-step .ns-cta{display:inline-block;background:var(--coral);color:#fff;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:999px;}
+.next-step .ns-cta:hover{background:var(--coral-hover);}
+</style>
+<section class="next-step" aria-label="Get help from a teacher">
+  <div class="ns-eyebrow">Stuck on this topic?</div>
+  <h2>A teacher can find the exact gap</h2>
+  <p>Practising percentages on your own is a strong start. If the same marks keep slipping, a qualified teacher can pinpoint the precise gap and fix it. Improve Tuition offers <a class="ns-link" href="https://improvetuition.org/maths/">one-to-one maths tuition</a> with our <a class="ns-link" href="https://improvetuition.org/uk/tutors-in/batley/">maths tutors in Batley</a> and online &mdash; the first assessment is free.</p>
+  <a class="ns-cta" href="https://improvetuition.org/uk/tutors-in/batley/">See maths tutors in Batley &rarr;</a>
+</section>
+<div class="footer"><div class="org">Improve Tuition</div>George Street, Batley, West Yorkshire WF17 5AR<br>Director: Mr G Dabhad (QTS) &middot; <a href="https://improvetuition.org">improvetuition.org</a></div>
+
+<script>
+var REMEDIATION = {"1": [{"q": "Increase 200 by 10%.", "t": "num", "a": {"val": "220.00000000000003", "tol": "1e-6"}, "show": "220"}, {"q": "Increase 80 by 25%.", "t": "num", "a": {"val": "100.0", "tol": "1e-6"}, "show": "100"}, {"q": "Increase 60 by 15%.", "t": "num", "a": {"val": "69.0", "tol": "1e-6"}, "show": "69"}, {"q": "Increase 45 by 20%.", "t": "num", "a": {"val": "54.0", "tol": "1e-6"}, "show": "54"}, {"q": "Increase 250 by 12%.", "t": "num", "a": {"val": "280.0", "tol": "1e-6"}, "show": "280"}], "2": [{"q": "Increase 40 by 5%.", "t": "num", "a": {"val": "42.0", "tol": "1e-6"}, "show": "42"}, {"q": "Increase 90 by 20%.", "t": "num", "a": {"val": "108.0", "tol": "1e-6"}, "show": "108"}, {"q": "Increase 120 by 25%.", "t": "num", "a": {"val": "150.0", "tol": "1e-6"}, "show": "150"}, {"q": "Increase 300 by 8%.", "t": "num", "a": {"val": "324.0", "tol": "1e-6"}, "show": "324"}, {"q": "Increase 150 by 30%.", "t": "num", "a": {"val": "195.0", "tol": "1e-6"}, "show": "195"}], "3": [{"q": "Increase 50 by 40%.", "t": "num", "a": {"val": "70.0", "tol": "1e-6"}, "show": "70"}, {"q": "Increase 80 by 15%.", "t": "num", "a": {"val": "92.0", "tol": "1e-6"}, "show": "92"}, {"q": "Increase 60 by 30%.", "t": "num", "a": {"val": "78.0", "tol": "1e-6"}, "show": "78"}, {"q": "Increase 140 by 10%.", "t": "num", "a": {"val": "154.0", "tol": "1e-6"}, "show": "154"}, {"q": "Increase 90 by 40%.", "t": "num", "a": {"val": "125.99999999999999", "tol": "1e-6"}, "show": "126"}], "4": [{"q": "Increase 160 by 25%.", "t": "num", "a": {"val": "200.0", "tol": "1e-6"}, "show": "200"}, {"q": "Increase 70 by 20%.", "t": "num", "a": {"val": "84.0", "tol": "1e-6"}, "show": "84"}, {"q": "Increase 200 by 15%.", "t": "num", "a": {"val": "229.99999999999997", "tol": "1e-6"}, "show": "230"}, {"q": "Increase 250 by 20%.", "t": "num", "a": {"val": "300.0", "tol": "1e-6"}, "show": "300"}, {"q": "Increase 45 by 40%.", "t": "num", "a": {"val": "62.99999999999999", "tol": "1e-6"}, "show": "63"}], "5": [{"q": "Increase 200 by 10%.", "t": "num", "a": {"val": "220.00000000000003", "tol": "1e-6"}, "show": "220"}, {"q": "Increase 80 by 25%.", "t": "num", "a": {"val": "100.0", "tol": "1e-6"}, "show": "100"}, {"q": "Increase 60 by 15%.", "t": "num", "a": {"val": "69.0", "tol": "1e-6"}, "show": "69"}, {"q": "Increase 45 by 20%.", "t": "num", "a": {"val": "54.0", "tol": "1e-6"}, "show": "54"}, {"q": "Increase 250 by 12%.", "t": "num", "a": {"val": "280.0", "tol": "1e-6"}, "show": "280"}], "6": [{"q": "Decrease 200 by 10%.", "t": "num", "a": {"val": "180.0", "tol": "1e-6"}, "show": "180"}, {"q": "Decrease 80 by 25%.", "t": "num", "a": {"val": "60.0", "tol": "1e-6"}, "show": "60"}, {"q": "Decrease 90 by 30%.", "t": "num", "a": {"val": "62.99999999999999", "tol": "1e-6"}, "show": "63"}, {"q": "Decrease 150 by 12%.", "t": "num", "a": {"val": "132.0", "tol": "1e-6"}, "show": "132"}, {"q": "Decrease 480 by 35%.", "t": "num", "a": {"val": "312.0", "tol": "1e-6"}, "show": "312"}], "7": [{"q": "Decrease 60 by 20%.", "t": "num", "a": {"val": "48.0", "tol": "1e-6"}, "show": "48"}, {"q": "Decrease 40 by 5%.", "t": "num", "a": {"val": "38.0", "tol": "1e-6"}, "show": "38"}, {"q": "Decrease 120 by 15%.", "t": "num", "a": {"val": "102.0", "tol": "1e-6"}, "show": "102"}, {"q": "Decrease 300 by 40%.", "t": "num", "a": {"val": "180.0", "tol": "1e-6"}, "show": "180"}, {"q": "Decrease 50 by 30%.", "t": "num", "a": {"val": "35.0", "tol": "1e-6"}, "show": "35"}], "8": [{"q": "Decrease 140 by 10%.", "t": "num", "a": {"val": "126.0", "tol": "1e-6"}, "show": "126"}, {"q": "Decrease 90 by 20%.", "t": "num", "a": {"val": "72.0", "tol": "1e-6"}, "show": "72"}, {"q": "Decrease 160 by 25%.", "t": "num", "a": {"val": "120.0", "tol": "1e-6"}, "show": "120"}, {"q": "Decrease 200 by 15%.", "t": "num", "a": {"val": "170.0", "tol": "1e-6"}, "show": "170"}, {"q": "Decrease 70 by 30%.", "t": "num", "a": {"val": "49.0", "tol": "1e-6"}, "show": "49"}], "9": [{"q": "Decrease 45 by 20%.", "t": "num", "a": {"val": "36.0", "tol": "1e-6"}, "show": "36"}, {"q": "Decrease 250 by 8%.", "t": "num", "a": {"val": "230.0", "tol": "1e-6"}, "show": "230"}, {"q": "Decrease 80 by 40%.", "t": "num", "a": {"val": "48.0", "tol": "1e-6"}, "show": "48"}, {"q": "Decrease 60 by 15%.", "t": "num", "a": {"val": "51.0", "tol": "1e-6"}, "show": "51"}, {"q": "Decrease 150 by 30%.", "t": "num", "a": {"val": "105.0", "tol": "1e-6"}, "show": "105"}], "10": [{"q": "Decrease 200 by 10%.", "t": "num", "a": {"val": "180.0", "tol": "1e-6"}, "show": "180"}, {"q": "Decrease 80 by 25%.", "t": "num", "a": {"val": "60.0", "tol": "1e-6"}, "show": "60"}, {"q": "Decrease 90 by 30%.", "t": "num", "a": {"val": "62.99999999999999", "tol": "1e-6"}, "show": "63"}, {"q": "Decrease 150 by 12%.", "t": "num", "a": {"val": "132.0", "tol": "1e-6"}, "show": "132"}, {"q": "Decrease 480 by 35%.", "t": "num", "a": {"val": "312.0", "tol": "1e-6"}, "show": "312"}], "11": [{"q": "After a 10% increase, the amount is 220. Find the original.", "t": "num", "a": {"val": "200.0", "tol": "1e-6"}, "show": "200"}, {"q": "After a 20% increase, the amount is 60. Find the original.", "t": "num", "a": {"val": "50.0", "tol": "1e-6"}, "show": "50"}, {"q": "After a 25% decrease, the amount is 90. Find the original.", "t": "num", "a": {"val": "120.0", "tol": "1e-6"}, "show": "120"}, {"q": "After a 15% decrease, the amount is 170. Find the original.", "t": "num", "a": {"val": "200.0", "tol": "1e-6"}, "show": "200"}, {"q": "After a 12% increase, the amount is 280. Find the original.", "t": "num", "a": {"val": "250.0", "tol": "1e-6"}, "show": "250"}], "12": [{"q": "After a 25% increase, the amount is 100. Find the original.", "t": "num", "a": {"val": "80.0", "tol": "1e-6"}, "show": "80"}, {"q": "After a 20% increase, the amount is 72. Find the original.", "t": "num", "a": {"val": "60.0", "tol": "1e-6"}, "show": "60"}, {"q": "After a 20% decrease, the amount is 32. Find the original.", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "40"}, {"q": "After a 5% increase, the amount is 315. Find the original.", "t": "num", "a": {"val": "300.0", "tol": "1e-6"}, "show": "300"}, {"q": "After a 10% decrease, the amount is 81. Find the original.", "t": "num", "a": {"val": "90.0", "tol": "1e-6"}, "show": "90"}], "13": [{"q": "After a 20% decrease, the amount is 120. Find the original.", "t": "num", "a": {"val": "150.0", "tol": "1e-6"}, "show": "150"}, {"q": "After a 40% decrease, the amount is 42. Find the original.", "t": "num", "a": {"val": "70.0", "tol": "1e-6"}, "show": "70"}, {"q": "After a 8% increase, the amount is 48.6. Find the original.", "t": "num", "a": {"val": "45.0", "tol": "1e-6"}, "show": "45"}, {"q": "After a 25% decrease, the amount is 120. Find the original.", "t": "num", "a": {"val": "160.0", "tol": "1e-6"}, "show": "160"}, {"q": "After a 30% decrease, the amount is 350. Find the original.", "t": "num", "a": {"val": "500.0", "tol": "1e-6"}, "show": "500"}], "14": [{"q": "After a 12% increase, the amount is 89.6. Find the original.", "t": "num", "a": {"val": "80.0", "tol": "1e-6"}, "show": "80"}, {"q": "After a 40% decrease, the amount is 72. Find the original.", "t": "num", "a": {"val": "120.0", "tol": "1e-6"}, "show": "120"}, {"q": "After a 4% increase, the amount is 260. Find the original.", "t": "num", "a": {"val": "250.0", "tol": "1e-6"}, "show": "250"}, {"q": "After a 15% decrease, the amount is 51. Find the original.", "t": "num", "a": {"val": "60.0", "tol": "1e-6"}, "show": "60"}, {"q": "After a 8% increase, the amount is 216. Find the original.", "t": "num", "a": {"val": "200.0", "tol": "1e-6"}, "show": "200"}], "15": [{"q": "After a 10% increase, the amount is 220. Find the original.", "t": "num", "a": {"val": "200.0", "tol": "1e-6"}, "show": "200"}, {"q": "After a 20% increase, the amount is 60. Find the original.", "t": "num", "a": {"val": "50.0", "tol": "1e-6"}, "show": "50"}, {"q": "After a 25% decrease, the amount is 90. Find the original.", "t": "num", "a": {"val": "120.0", "tol": "1e-6"}, "show": "120"}, {"q": "After a 15% decrease, the amount is 170. Find the original.", "t": "num", "a": {"val": "200.0", "tol": "1e-6"}, "show": "200"}, {"q": "After a 12% increase, the amount is 280. Find the original.", "t": "num", "a": {"val": "250.0", "tol": "1e-6"}, "show": "250"}], "16": [{"q": "A value changes from 40 to 50. Find the percentage increase.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25%"}, {"q": "A value changes from 50 to 40. Find the percentage decrease.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20%"}, {"q": "A value changes from 60 to 72. Find the percentage increase.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20%"}, {"q": "A value changes from 200 to 170. Find the percentage decrease.", "t": "num", "a": {"val": "15.0", "tol": "1e-6"}, "show": "15%"}, {"q": "A value changes from 250 to 320. Find the percentage increase.", "t": "num", "a": {"val": "28.000000000000004", "tol": "1e-6"}, "show": "28%"}], "17": [{"q": "A value changes from 80 to 100. Find the percentage increase.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25%"}, {"q": "A value changes from 100 to 80. Find the percentage decrease.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20%"}, {"q": "A value changes from 20 to 25. Find the percentage increase.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25%"}, {"q": "A value changes from 150 to 120. Find the percentage decrease.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20%"}, {"q": "A value changes from 500 to 540. Find the percentage increase.", "t": "num", "a": {"val": "8.0", "tol": "1e-6"}, "show": "8%"}], "18": [{"q": "A value changes from 40 to 46. Find the percentage increase.", "t": "num", "a": {"val": "15.0", "tol": "1e-6"}, "show": "15%"}, {"q": "A value changes from 90 to 72. Find the percentage decrease.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20%"}, {"q": "A value changes from 60 to 75. Find the percentage increase.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25%"}, {"q": "A value changes from 200 to 260. Find the percentage increase.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30%"}, {"q": "A value changes from 80 to 60. Find the percentage decrease.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25%"}], "19": [{"q": "A value changes from 120 to 150. Find the percentage increase.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25%"}, {"q": "A value changes from 30 to 24. Find the percentage decrease.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20%"}, {"q": "A value changes from 250 to 300. Find the percentage increase.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20%"}, {"q": "A value changes from 50 to 65. Find the percentage increase.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30%"}, {"q": "A value changes from 160 to 120. Find the percentage decrease.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25%"}], "20": [{"q": "A value changes from 40 to 50. Find the percentage increase.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25%"}, {"q": "A value changes from 50 to 40. Find the percentage decrease.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20%"}, {"q": "A value changes from 60 to 72. Find the percentage increase.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20%"}, {"q": "A value changes from 200 to 170. Find the percentage decrease.", "t": "num", "a": {"val": "15.0", "tol": "1e-6"}, "show": "15%"}, {"q": "A value changes from 250 to 320. Find the percentage increase.", "t": "num", "a": {"val": "28.000000000000004", "tol": "1e-6"}, "show": "28%"}], "21": [{"q": "A coat costs &pound;80. It rises by 10%. New price in &pound;?", "t": "num", "a": {"val": "88.0", "tol": "1e-6"}, "show": "&pound;88"}, {"q": "A &pound;120 game has 25% off. Sale price in &pound;?", "t": "num", "a": {"val": "90.0", "tol": "1e-6"}, "show": "&pound;90"}, {"q": "A &pound;60 bike rises by 20%. New price in &pound;?", "t": "num", "a": {"val": "72.0", "tol": "1e-6"}, "show": "&pound;72"}, {"q": "A phone worth &pound;200 loses 15% of its value. Value now in &pound;?", "t": "num", "a": {"val": "170.0", "tol": "1e-6"}, "show": "&pound;170"}, {"q": "A &pound;40 bill rises by 5%. New total in &pound;?", "t": "num", "a": {"val": "42.0", "tol": "1e-6"}, "show": "&pound;42"}], "22": [{"q": "A coat costs &pound;200. It rises by 15%. New price in &pound;?", "t": "num", "a": {"val": "229.99999999999997", "tol": "1e-6"}, "show": "&pound;230"}, {"q": "A &pound;40 game has 5% off. Sale price in &pound;?", "t": "num", "a": {"val": "38.0", "tol": "1e-6"}, "show": "&pound;38"}, {"q": "A &pound;150 bike rises by 20%. New price in &pound;?", "t": "num", "a": {"val": "180.0", "tol": "1e-6"}, "show": "&pound;180"}, {"q": "A phone worth &pound;90 loses 30% of its value. Value now in &pound;?", "t": "num", "a": {"val": "62.99999999999999", "tol": "1e-6"}, "show": "&pound;63"}, {"q": "A &pound;250 bill rises by 12%. New total in &pound;?", "t": "num", "a": {"val": "280.0", "tol": "1e-6"}, "show": "&pound;280"}], "23": [{"q": "A coat costs &pound;90. It rises by 30%. New price in &pound;?", "t": "num", "a": {"val": "117.0", "tol": "1e-6"}, "show": "&pound;117"}, {"q": "A &pound;250 game has 12% off. Sale price in &pound;?", "t": "num", "a": {"val": "220.0", "tol": "1e-6"}, "show": "&pound;220"}, {"q": "A &pound;80 bike rises by 10%. New price in &pound;?", "t": "num", "a": {"val": "88.0", "tol": "1e-6"}, "show": "&pound;88"}, {"q": "A phone worth &pound;120 loses 25% of its value. Value now in &pound;?", "t": "num", "a": {"val": "90.0", "tol": "1e-6"}, "show": "&pound;90"}, {"q": "A &pound;60 bill rises by 20%. New total in &pound;?", "t": "num", "a": {"val": "72.0", "tol": "1e-6"}, "show": "&pound;72"}], "24": [{"q": "A coat costs &pound;120. It rises by 25%. New price in &pound;?", "t": "num", "a": {"val": "150.0", "tol": "1e-6"}, "show": "&pound;150"}, {"q": "A &pound;60 game has 20% off. Sale price in &pound;?", "t": "num", "a": {"val": "48.0", "tol": "1e-6"}, "show": "&pound;48"}, {"q": "A &pound;200 bike rises by 15%. New price in &pound;?", "t": "num", "a": {"val": "229.99999999999997", "tol": "1e-6"}, "show": "&pound;230"}, {"q": "A phone worth &pound;40 loses 5% of its value. Value now in &pound;?", "t": "num", "a": {"val": "38.0", "tol": "1e-6"}, "show": "&pound;38"}, {"q": "A &pound;150 bill rises by 20%. New total in &pound;?", "t": "num", "a": {"val": "180.0", "tol": "1e-6"}, "show": "&pound;180"}], "25": [{"q": "A coat costs &pound;40. It rises by 5%. New price in &pound;?", "t": "num", "a": {"val": "42.0", "tol": "1e-6"}, "show": "&pound;42"}, {"q": "A &pound;150 game has 20% off. Sale price in &pound;?", "t": "num", "a": {"val": "120.0", "tol": "1e-6"}, "show": "&pound;120"}, {"q": "A &pound;90 bike rises by 30%. New price in &pound;?", "t": "num", "a": {"val": "117.0", "tol": "1e-6"}, "show": "&pound;117"}, {"q": "A phone worth &pound;250 loses 12% of its value. Value now in &pound;?", "t": "num", "a": {"val": "220.0", "tol": "1e-6"}, "show": "&pound;220"}, {"q": "A &pound;80 bill rises by 10%. New total in &pound;?", "t": "num", "a": {"val": "88.0", "tol": "1e-6"}, "show": "&pound;88"}], "26": [{"q": "After 20% off, an item costs &pound;32. Original price in &pound;?", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "&pound;40"}, {"q": "After a 5% price rise, an item costs &pound;315. Original price in &pound;?", "t": "num", "a": {"val": "300.0", "tol": "1e-6"}, "show": "&pound;300"}, {"q": "After 10% off, an item costs &pound;81. Original price in &pound;?", "t": "num", "a": {"val": "90.0", "tol": "1e-6"}, "show": "&pound;90"}, {"q": "After 20% off, an item costs &pound;120. Original price in &pound;?", "t": "num", "a": {"val": "150.0", "tol": "1e-6"}, "show": "&pound;150"}, {"q": "After 40% off, an item costs &pound;42. Original price in &pound;?", "t": "num", "a": {"val": "70.0", "tol": "1e-6"}, "show": "&pound;70"}], "27": [{"q": "After 20% off, an item costs &pound;120. Original price in &pound;?", "t": "num", "a": {"val": "150.0", "tol": "1e-6"}, "show": "&pound;150"}, {"q": "After 40% off, an item costs &pound;42. Original price in &pound;?", "t": "num", "a": {"val": "70.0", "tol": "1e-6"}, "show": "&pound;70"}, {"q": "After a 8% price rise, an item costs &pound;48.6. Original price in &pound;?", "t": "num", "a": {"val": "45.0", "tol": "1e-6"}, "show": "&pound;45"}, {"q": "After 25% off, an item costs &pound;120. Original price in &pound;?", "t": "num", "a": {"val": "160.0", "tol": "1e-6"}, "show": "&pound;160"}, {"q": "After 30% off, an item costs &pound;350. Original price in &pound;?", "t": "num", "a": {"val": "500.0", "tol": "1e-6"}, "show": "&pound;500"}], "28": [{"q": "After 25% off, an item costs &pound;120. Original price in &pound;?", "t": "num", "a": {"val": "160.0", "tol": "1e-6"}, "show": "&pound;160"}, {"q": "After 30% off, an item costs &pound;350. Original price in &pound;?", "t": "num", "a": {"val": "500.0", "tol": "1e-6"}, "show": "&pound;500"}, {"q": "After a 12% price rise, an item costs &pound;89.6. Original price in &pound;?", "t": "num", "a": {"val": "80.0", "tol": "1e-6"}, "show": "&pound;80"}, {"q": "After 40% off, an item costs &pound;72. Original price in &pound;?", "t": "num", "a": {"val": "120.0", "tol": "1e-6"}, "show": "&pound;120"}, {"q": "After a 4% price rise, an item costs &pound;260. Original price in &pound;?", "t": "num", "a": {"val": "250.0", "tol": "1e-6"}, "show": "&pound;250"}], "29": [{"q": "After 40% off, an item costs &pound;72. Original price in &pound;?", "t": "num", "a": {"val": "120.0", "tol": "1e-6"}, "show": "&pound;120"}, {"q": "After a 4% price rise, an item costs &pound;260. Original price in &pound;?", "t": "num", "a": {"val": "250.0", "tol": "1e-6"}, "show": "&pound;250"}, {"q": "After 15% off, an item costs &pound;51. Original price in &pound;?", "t": "num", "a": {"val": "60.0", "tol": "1e-6"}, "show": "&pound;60"}, {"q": "After a 8% price rise, an item costs &pound;216. Original price in &pound;?", "t": "num", "a": {"val": "200.0", "tol": "1e-6"}, "show": "&pound;200"}, {"q": "After a 10% price rise, an item costs &pound;220. Original price in &pound;?", "t": "num", "a": {"val": "200.0", "tol": "1e-6"}, "show": "&pound;200"}], "30": [{"q": "After a 8% price rise, an item costs &pound;216. Original price in &pound;?", "t": "num", "a": {"val": "200.0", "tol": "1e-6"}, "show": "&pound;200"}, {"q": "After a 10% price rise, an item costs &pound;220. Original price in &pound;?", "t": "num", "a": {"val": "200.0", "tol": "1e-6"}, "show": "&pound;200"}, {"q": "After a 20% price rise, an item costs &pound;60. Original price in &pound;?", "t": "num", "a": {"val": "50.0", "tol": "1e-6"}, "show": "&pound;50"}, {"q": "After 25% off, an item costs &pound;90. Original price in &pound;?", "t": "num", "a": {"val": "120.0", "tol": "1e-6"}, "show": "&pound;120"}, {"q": "After 15% off, an item costs &pound;170. Original price in &pound;?", "t": "num", "a": {"val": "200.0", "tol": "1e-6"}, "show": "&pound;200"}], "31": [{"q": "&pound;200 is increased by 10%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "198.00000000000003", "tol": "1e-6"}, "show": "&pound;198"}, {"q": "&pound;150 is increased by 20%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "162.0", "tol": "1e-6"}, "show": "&pound;162"}, {"q": "&pound;100 is increased by 10%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "99.00000000000001", "tol": "1e-6"}, "show": "&pound;99"}, {"q": "&pound;80 is increased by 25%, then that result is reduced by 20%. Final amount in &pound;?", "t": "num", "a": {"val": "80.0", "tol": "1e-6"}, "show": "&pound;80"}, {"q": "&pound;300 is increased by 10%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "297.0", "tol": "1e-6"}, "show": "&pound;297"}], "32": [{"q": "&pound;300 is increased by 10%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "297.0", "tol": "1e-6"}, "show": "&pound;297"}, {"q": "&pound;250 is increased by 20%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "270.0", "tol": "1e-6"}, "show": "&pound;270"}, {"q": "&pound;120 is increased by 25%, then that result is reduced by 20%. Final amount in &pound;?", "t": "num", "a": {"val": "120.0", "tol": "1e-6"}, "show": "&pound;120"}, {"q": "&pound;60 is increased by 50%, then that result is reduced by 50%. Final amount in &pound;?", "t": "num", "a": {"val": "45.0", "tol": "1e-6"}, "show": "&pound;45"}, {"q": "&pound;200 is increased by 20%, then that result is reduced by 20%. Final amount in &pound;?", "t": "num", "a": {"val": "192.0", "tol": "1e-6"}, "show": "&pound;192"}], "33": [{"q": "&pound;200 is increased by 20%, then that result is reduced by 20%. Final amount in &pound;?", "t": "num", "a": {"val": "192.0", "tol": "1e-6"}, "show": "&pound;192"}, {"q": "&pound;400 is increased by 10%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "396.00000000000006", "tol": "1e-6"}, "show": "&pound;396"}, {"q": "&pound;90 is increased by 10%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "89.10000000000001", "tol": "1e-6"}, "show": "&pound;89.1"}, {"q": "&pound;160 is increased by 25%, then that result is reduced by 20%. Final amount in &pound;?", "t": "num", "a": {"val": "160.0", "tol": "1e-6"}, "show": "&pound;160"}, {"q": "&pound;50 is increased by 20%, then that result is reduced by 20%. Final amount in &pound;?", "t": "num", "a": {"val": "48.0", "tol": "1e-6"}, "show": "&pound;48"}], "34": [{"q": "&pound;50 is increased by 20%, then that result is reduced by 20%. Final amount in &pound;?", "t": "num", "a": {"val": "48.0", "tol": "1e-6"}, "show": "&pound;48"}, {"q": "&pound;240 is increased by 10%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "237.6", "tol": "1e-6"}, "show": "&pound;237.6"}, {"q": "&pound;500 is increased by 10%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "495.0", "tol": "1e-6"}, "show": "&pound;495"}, {"q": "&pound;80 is increased by 10%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "79.2", "tol": "1e-6"}, "show": "&pound;79.2"}, {"q": "&pound;120 is increased by 10%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "118.8", "tol": "1e-6"}, "show": "&pound;118.8"}], "35": [{"q": "&pound;120 is increased by 10%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "118.8", "tol": "1e-6"}, "show": "&pound;118.8"}, {"q": "&pound;200 is increased by 5%, then that result is reduced by 5%. Final amount in &pound;?", "t": "num", "a": {"val": "199.5", "tol": "1e-6"}, "show": "&pound;199.5"}, {"q": "&pound;150 is increased by 10%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "148.5", "tol": "1e-6"}, "show": "&pound;148.5"}, {"q": "&pound;100 is increased by 20%, then that result is reduced by 20%. Final amount in &pound;?", "t": "num", "a": {"val": "96.0", "tol": "1e-6"}, "show": "&pound;96"}, {"q": "&pound;200 is increased by 10%, then that result is reduced by 10%. Final amount in &pound;?", "t": "num", "a": {"val": "198.00000000000003", "tol": "1e-6"}, "show": "&pound;198"}]};
+var TOPIC="Percentages: Increase, Decrease & Reverse";window.STORAGE_KEY="improvetuition_percentages_v1";window.TUTOR_ENDPOINT="";
+
+function buildRemediation(qnum, card){
+  if(!window.REMEDIATION || !REMEDIATION[qnum]) return;
+  if(card.querySelector('.rem-panel')) return;
+  var items=REMEDIATION[qnum];
+  var p=document.createElement('div'); p.className='rem-panel';
+  var html='<div class="rem-head">Practise this skill — 5 more like it</div>';
+  items.forEach(function(it){
+    var at='data-type="'+it.t+'"';
+    for(var k in it.a){ at+=' data-'+k+'="'+it.a[k]+'"'; }
+    html+='<div class="rem-row"><span class="rem-q">'+it.q+'</span><span class="rem-ans-wrap"><input class="rem-input" type="text" autocomplete="off" '+at+' data-show="'+it.show+'"><span class="rem-fb"></span></span></div>';
+  });
+  html+='<details class="rem-ans"><summary>Show answers</summary><p>'+items.map(function(it){return it.show;}).join(' · ')+'</p></details>';
+  p.innerHTML=html; card.appendChild(p);
+  p.querySelectorAll('.rem-input').forEach(function(el){
+    el.addEventListener('input',function(){
+      var r=checkInput(el); var fb=el.parentNode.querySelector('.rem-fb'); fb.className='rem-fb'; fb.textContent='';
+      if(el.value.trim()==='') return;
+      if(r.state==='right'){fb.classList.add('ok');fb.textContent='✓';}
+      else if(r.state==='partial'){fb.classList.add('part');fb.textContent='≈';}
+      else{fb.classList.add('no');fb.textContent='✗';}
+    });
+  });
+}
+
+
+function afterMark(){
+  var sec={}, wrong=[], right=0, total=0;
+  document.querySelectorAll('.answer-input').forEach(function(el){
+    var s=el.getAttribute('data-sec')||'?'; if(!sec[s])sec[s]={r:0,t:0}; sec[s].t++; total++;
+    var fb=el.parentNode.querySelector('.fb'); var ok=fb&&fb.classList.contains('ok');
+    if(ok){sec[s].r++; right++;}
+    else{
+      var card=el.closest('.question'); var qn=card?card.id.replace('q-',''):'';
+      var qtEl=card?card.querySelector('.q-text'):null; var qt=qtEl?qtEl.textContent:'';
+      wrong.push({n:qn, sec:s, q:qt});
+    }
+  });
+  window.LAST_RESULTS={score:right,total:total,sec:sec,wrong:wrong,when:new Date()};
+}
+function afterReset(){ window.LAST_RESULTS=null; window.ATTEMPTS={}; try{localStorage.removeItem((window.STORAGE_KEY||'improvetuition')+'_attempts');}catch(e){}
+  var st=document.getElementById('send-status'); if(st){st.textContent='';st.className='send-status';} }
+function regGet(){
+  function v(id){var e=document.getElementById(id); return e?e.value.trim():'';}
+  return {name:v('reg-name'), year:v('reg-year'), tutor:v('reg-tutor-email')};
+}
+function _qnum(k){ return parseInt(k.replace('q-',''),10)||0; }
+// tries for a WRONG question = self-checks, but never less than 1 (the final wrong answer itself counts as a try)
+function _tries(qn){ var A=window.ATTEMPTS||{}; return Math.max(A['q-'+qn]||0, 1); }
+
+function buildReport(){
+  var R=window.LAST_RESULTS; if(!R) return '';
+  var reg=regGet(); var A=window.ATTEMPTS||{}; var L=[];
+  L.push('Improve Tuition \u2014 '+TOPIC);
+  L.push('Pupil: '+(reg.name||'(not given)')+(reg.year?('   Year/Class: '+reg.year):''));
+  L.push('Date: '+R.when.toLocaleDateString('en-GB'));
+  L.push('');
+  L.push('SCORE: '+R.score+' / '+R.total);
+  L.push('');
+  L.push('By section:');
+  Object.keys(R.sec).sort().forEach(function(s){ L.push('  Section '+s+':  '+R.sec[s].r+' / '+R.sec[s].t); });
+  L.push('');
+  var wrongSet={};
+  if(R.wrong.length===0){ L.push('No questions to revisit \u2014 every answer correct.'); }
+  else{
+    L.push('Questions to revisit ('+R.wrong.length+'):');
+    R.wrong.forEach(function(w){ wrongSet['q-'+w.n]=1; var n=_tries(w.n);
+      L.push('  Q'+w.n+' ['+w.sec+'] \u2014 '+n+' tr'+(n===1?'y':'ies')); L.push('      '+w.q); });
+  }
+  var struggled=Object.keys(A).filter(function(k){return A[k]>=2 && !wrongSet[k];})
+                              .sort(function(a,b){return _qnum(a)-_qnum(b);})
+                              .map(function(k){return 'Q'+_qnum(k)+' ('+A[k]+' tries)';});
+  if(struggled.length){ L.push(''); L.push('Got there after a few tries: '+struggled.join(', ')); }
+  var totalChecks=0,qCount=0; Object.keys(A).forEach(function(k){ totalChecks+=A[k]; qCount++; });
+  if(qCount){ L.push(''); L.push('Self-checks used while working: '+totalChecks+' across '+qCount+' question'+(qCount===1?'':'s')+'.'); }
+  L.push(''); L.push('Sent from the Improve Tuition learning library.');
+  return L.join('\n');
+}
+
+function buildPayload(){
+  var R=window.LAST_RESULTS||{}; var reg=regGet(); var A=window.ATTEMPTS||{};
+  var sec=Object.keys(R.sec||{}).sort().map(function(s){return 'Section '+s+': '+R.sec[s].r+'/'+R.sec[s].t;}).join('; ');
+  var wrong=(R.wrong||[]).map(function(w){ var n=_tries(w.n); return 'Q'+w.n+' ['+w.sec+'] ('+n+' tr'+(n===1?'y':'ies')+')'; }).join('; ');
+  var wrongSet={}; (R.wrong||[]).forEach(function(w){wrongSet['q-'+w.n]=1;});
+  var rec=Object.keys(A).filter(function(k){return A[k]>=2 && !wrongSet[k];})
+                        .sort(function(a,b){return _qnum(a)-_qnum(b);})
+                        .map(function(k){return 'Q'+_qnum(k)+' ('+A[k]+' tries)';}).join('; ');
+  var totalChecks=0,qCount=0; Object.keys(A).forEach(function(k){ totalChecks+=A[k]; qCount++; });
+  return { topic:TOPIC, name:reg.name, year:reg.year,
+    score:(R.score!=null?R.score:''), total:(R.total!=null?R.total:''),
+    sections:sec, wrong:wrong, recovered:rec, selfChecks:totalChecks, questionsChecked:qCount,
+    date:(R.when?R.when.toISOString():new Date().toISOString()), report:buildReport() };
+}
+function renderSendStatus(msg, ok){
+  var st=document.getElementById('send-status');
+  if(st){ st.textContent=msg; st.className='send-status '+(ok?'ok':'err'); }
+  else { alert(msg); }
+}
+function postToSheet(payload, done){
+  try{
+    fetch(window.TUTOR_ENDPOINT, {method:'POST', mode:'no-cors', body:JSON.stringify(payload)})
+      .then(function(){ done(true); })
+      .catch(function(){ done(false); });
+  }catch(e){ done(false); }
+}
+function sendToTutor(){
+  if(!window.LAST_RESULTS){ alert('Please mark your work first.'); return; }
+  var btn=document.getElementById('send-btn');
+  if(window.TUTOR_ENDPOINT){
+    if(btn){ btn.disabled=true; btn.dataset.label=btn.textContent; btn.textContent='Sending\u2026'; }
+    renderSendStatus('Sending\u2026', true);
+    postToSheet(buildPayload(), function(ok){
+      if(btn){ btn.disabled=false; btn.textContent=btn.dataset.label||'Send to tutor'; }
+      renderSendStatus(ok? 'Sent to your tutor \u2713  (you can also Download a copy)' : 'Could not send \u2014 please use Download results as a backup.', ok);
+    });
+    return;
+  }
+  // Fallback: no Sheet endpoint set yet -> open email with the report
+  var reg=regGet();
+  if(!reg.tutor){ alert("Please add your tutor's email address in the details box near the top first."); var e=document.getElementById('reg-tutor-email'); if(e){e.scrollIntoView({block:'center'}); e.focus();} return; }
+  var subject='Improve Tuition \u2014 '+TOPIC+' results'+(reg.name?(' for '+reg.name):'');
+  window.location.href='mailto:'+encodeURIComponent(reg.tutor)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(buildReport());
+}
+function downloadResults(){
+  if(!window.LAST_RESULTS){ alert('Please mark your work first.'); return; }
+  var reg=regGet(); var blob=new Blob([buildReport()],{type:'text/plain'});
+  var a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  var who=(reg.name||'pupil').replace(/[^A-Za-z0-9]+/g,'_');
+  a.download='ImproveTuition_'+TOPIC.replace(/[^A-Za-z0-9]+/g,'_')+'_'+who+'.txt';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(function(){URL.revokeObjectURL(a.href);},1500);
+}
+(function(){
+  function key(){ return (window.STORAGE_KEY||'improvetuition')+'_reg'; }
+  var FIELDS=['reg-name','reg-year','reg-tutor-email'];
+  function load(){ try{ var raw=localStorage.getItem(key()); if(!raw)return; var d=JSON.parse(raw);
+    FIELDS.forEach(function(id){ if(d[id]!=null){var e=document.getElementById(id); if(e)e.value=d[id];} }); }catch(e){} }
+  function save(){ try{ var d={}; FIELDS.forEach(function(id){var e=document.getElementById(id); if(e&&e.value)d[id]=e.value;});
+    if(Object.keys(d).length) localStorage.setItem(key(),JSON.stringify(d)); else localStorage.removeItem(key()); }catch(e){} }
+  function init(){ load(); FIELDS.forEach(function(id){var e=document.getElementById(id); if(e)e.addEventListener('input',save);}); }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
+})();
+
+
+window.ATTEMPTS = window.ATTEMPTS || {};
+function _attKey(){ return (window.STORAGE_KEY||'improvetuition')+'_attempts'; }
+function _saveAtt(){ try{ if(Object.keys(window.ATTEMPTS).length) localStorage.setItem(_attKey(), JSON.stringify(window.ATTEMPTS)); else localStorage.removeItem(_attKey()); }catch(e){} }
+function _loadAtt(){ try{ var r=localStorage.getItem(_attKey()); if(r) window.ATTEMPTS=JSON.parse(r)||{}; }catch(e){} }
+
+function checkOne(id){
+  var card=document.getElementById(id); if(!card) return;
+  var el=card.querySelector('.answer-input'); if(!el) return;
+  var fb=card.querySelector('.fb'), cd=card.querySelector('.cd');
+  if(fb){fb.className='fb';fb.textContent='';} if(cd){cd.className='cd';cd.innerHTML='';}
+  var ws=card.querySelector('.ws'); if(ws)ws.style.display='none';
+  var rp=card.querySelector('.rem-panel'); if(rp)rp.remove();
+  var oldHint=card.querySelector('.check-hint'); if(oldHint)oldHint.remove();
+  var r=checkInput(el);
+  if(r.state==='blank'){ cd.innerHTML='<span class="check-muted">Type an answer, then press Check.</span>'; cd.classList.add('show'); return; }
+  window.ATTEMPTS[id]=(window.ATTEMPTS[id]||0)+1; _saveAtt();
+  if(r.state==='right'){ fb.classList.add('ok'); fb.textContent='\u2713'; cd.innerHTML='<span class="check-ok">Correct \u2713</span>'; cd.classList.add('show'); return; }
+  if(r.state==='partial'){ fb.classList.add('part'); fb.textContent='\u2248'; cd.innerHTML='<span class="check-muted">'+(r.hint||'Close \u2014 check the form and try again.')+'</span>'; }
+  else { fb.classList.add('no'); fb.textContent='\u2717'; cd.innerHTML='<span class="check-muted">Not yet \u2014 have another go.</span>'; }
+  cd.classList.add('show');
+  if(window.ATTEMPTS[id]>=2 && ws){
+    var first=ws.querySelector('.we-step');
+    if(first){ var h=document.createElement('div'); h.className='check-hint'; h.innerHTML='<span class="hint-label">Hint</span> '+first.innerHTML; cd.parentNode.insertBefore(h, cd.nextSibling); }
+  }
+}
+(function(){
+  function clearOne(el){ var card=el.closest('.question'); if(!card)return;
+    var fb=card.querySelector('.fb'),cd=card.querySelector('.cd');
+    if(fb){fb.className='fb';fb.textContent='';} if(cd){cd.className='cd';cd.innerHTML='';}
+    var ws=card.querySelector('.ws'); if(ws)ws.style.display='none';
+    var rp=card.querySelector('.rem-panel'); if(rp)rp.remove();
+    var h=card.querySelector('.check-hint'); if(h)h.remove(); }
+  function init(){ _loadAtt();
+    document.addEventListener('input', function(e){ var el=e.target; if(el&&el.classList&&el.classList.contains('answer-input')) clearOne(el); }, true);
+    document.addEventListener('click', function(e){ var t=e.target; var btn=t&&t.closest?t.closest('.check-one'):null; if(!btn)return; var card=btn.closest('.question'); if(card)checkOne(card.id); });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
+})();
+
+function gcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){var t=b;b=a%b;a=t;}return a;}
+function parseNum(raw){var s=(''+raw).replace(/[£$,]/g,'').replace(/[a-zA-Z%²³\s]+$/,'').trim();var n=parseFloat(s);return isNaN(n)?null:n;}
+function parseRatio(raw){var p=(''+raw).split(':');if(p.length<2)return null;var out=[];for(var i=0;i<p.length;i++){var n=parseFloat(p[i].trim());if(isNaN(n))return null;out.push(n);}return out;}
+function checkInput(el){
+  var t=el.getAttribute('data-type'), raw=el.value.trim();
+  if(raw==='') return {state:'blank'};
+  if(t==='num'){var v=parseNum(raw); if(v==null)return {state:'wrong'};
+    var exp=parseFloat(el.getAttribute('data-val')), tol=parseFloat(el.getAttribute('data-tol')||'1e-6');
+    return Math.abs(v-exp)<=tol?{state:'right'}:{state:'wrong'};}
+  if(t==='ratio'){var pu=parseRatio(raw); if(!pu)return {state:'wrong',hint:'Write your answer as a ratio, e.g. 2:3.'};
+    var ex=parseRatio(el.getAttribute('data-exp'));
+    if(pu.length!==ex.length) return {state:'wrong'};
+    var k=pu[0]/ex[0], prop=true; for(var i=0;i<ex.length;i++){ if(ex[i]===0||Math.abs(pu[i]/ex[i]-k)>1e-9) prop=false; }
+    if(!prop) return {state:'wrong'};
+    var g=Math.round(pu[0]); for(var i=1;i<pu.length;i++) g=gcd(g,Math.round(pu[i]));
+    if(g!==1) return {state:'partial',hint:'Right ratio &mdash; now simplify it.'};
+    return {state:'right'};}
+  if(t==='fraclow'){var m=/^(-?\d+)\/(\d+)$/.exec(raw);
+    if(!m) return {state:'wrong',hint:'Write your answer as a fraction, e.g. 2/5.'};
+    var a=+m[1],b=+m[2]; if(b===0)return {state:'wrong'};
+    var en=+el.getAttribute('data-num'),ed=+el.getAttribute('data-den');
+    if(Math.abs(a/b-en/ed)>1e-9) return {state:'wrong'};
+    if(gcd(a,b)!==1) return {state:'partial',hint:'Right value &mdash; now reduce to lowest terms.'};
+    return {state:'right'};}
+  return {state:'blank'};
+}
+function updateProgress(){var ins=document.querySelectorAll('.answer-input'),a=0;ins.forEach(function(el){if(el.value.trim()!=='')a++;});var p=document.getElementById('progress');if(p)p.textContent=a+' of '+ins.length+' answered';}
+function markAll(){
+  var ins=document.querySelectorAll('.answer-input'),right=0,total=ins.length,firstBad=null;
+  document.querySelectorAll('.check-hint').forEach(function(el){el.remove();});
+  ins.forEach(function(el){
+    var r=checkInput(el),fb=el.parentNode.querySelector('.fb'),cd=el.parentNode.querySelector('.cd');
+    if(fb){fb.className='fb';fb.textContent='';} if(cd){cd.className='cd';cd.innerHTML='';}
+    if(r.state==='right'){fb.classList.add('ok');fb.textContent='\u2713';right++;}
+    else{ if(r.state==='partial'){fb.classList.add('part');fb.textContent='\u2248';cd.innerHTML=(r.hint||'')+' &rarr; <strong>'+el.getAttribute('data-show')+'</strong>';}
+      else if(r.state==='wrong'){fb.classList.add('no');fb.textContent='\u2717';cd.innerHTML=(r.hint?r.hint+' ':'')+'Answer: <strong>'+el.getAttribute('data-show')+'</strong>';}
+      else{cd.innerHTML='<span style="color:var(--grey-soft)">(left blank) </span>Answer: <strong>'+el.getAttribute('data-show')+'</strong>';}
+      cd.classList.add('show'); var wsx=el.closest('.question').querySelector('.ws'); if(wsx)wsx.style.display='block'; var qc=el.closest('.question'); if(qc)buildRemediation(qc.id.replace('q-',''),qc); var s=el.getAttribute('data-sec'); if(firstBad===null)firstBad=s; }
+  });
+  document.getElementById('score-num').textContent=right+' / '+total;
+  var sd=document.getElementById('score-diag');
+  if(right===total) sd.innerHTML='Every question correct &mdash; you can write, share, and scale with ratios. <strong>find the gap. fix the gap.</strong>';
+  else sd.innerHTML='First slips appear in <strong>Section '+(firstBad||'?')+'</strong>. That is the skill to practise next.';
+  document.getElementById('score-panel').style.display='block';
+  document.getElementById('score-panel').scrollIntoView({behavior:'smooth',block:'center'});
+  if(window.afterMark)afterMark();
+}
+function resetAll(){ if(!confirm('Clear all your answers and start again?'))return;
+  document.querySelectorAll('.answer-input').forEach(function(el){el.value='';});
+  document.querySelectorAll('.fb').forEach(function(el){el.className='fb';el.textContent='';});
+  document.querySelectorAll('.cd').forEach(function(el){el.className='cd';el.innerHTML='';});
+  document.querySelectorAll('.ws').forEach(function(el){el.style.display='none';});
+  document.querySelectorAll('.rem-panel').forEach(function(el){el.remove();});
+  document.getElementById('score-panel').style.display='none'; if(window.afterReset)afterReset(); updateProgress(); }
+(function(){ var KEY='improvetuition_ratio_v1';
+  function save(t){try{var d={};document.querySelectorAll('.answer-input').forEach(function(el,i){if(el.value!=='')d[i]=el.value;});if(Object.keys(d).length===0)localStorage.removeItem(KEY);else localStorage.setItem(KEY,JSON.stringify(d));if(t)tick();}catch(e){}}
+  function restore(){try{var raw=localStorage.getItem(KEY);if(!raw)return false;var d=JSON.parse(raw),any=false;document.querySelectorAll('.answer-input').forEach(function(el,i){if(d[i]!=null){el.value=d[i];any=true;}});if(any)updateProgress();return any;}catch(e){return false;}}
+  var te=null,tt=null;function tick(){if(!te){te=document.createElement('div');te.className='pf-saved';te.textContent='Progress saved';document.body.appendChild(te);}te.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){te.classList.remove('show');},1100);}
+  function banner(){var a=document.getElementById('sec-A');if(!a)return;var b=document.createElement('div');b.className='pf-resume';b.innerHTML='Welcome back \u2014 your answers from earlier were restored.<a id="pf-fresh">Start fresh</a>';a.parentNode.insertBefore(b,a);var f=document.getElementById('pf-fresh');if(f)f.addEventListener('click',function(){try{localStorage.removeItem(KEY);}catch(e){};location.reload();});}
+  var dT=null;
+  function init(){if(restore())banner();
+    document.addEventListener('input',function(){updateProgress();clearTimeout(dT);dT=setTimeout(function(){save(true);},450);},true);
+    window.addEventListener('beforeunload',function(){save(false);});
+    var rb=document.getElementById('reset-btn');if(rb)rb.addEventListener('click',function(){setTimeout(function(){save(false);},60);});
+    setInterval(function(){save(false);},8000);updateProgress();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+<!--ITTS-START-->
+<style>
+.tts-btn{display:inline-flex;align-items:center;justify-content:center;gap:.35em;border:1.5px solid var(--gold,#C99A2E);background:#fff;color:var(--navy,#242F3A);border-radius:999px;cursor:pointer;padding:3px 9px;font:600 12px/1 'DM Sans',sans-serif;vertical-align:middle;margin-left:8px;transition:background .15s,color .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent;}
+.tts-btn svg{display:block;width:15px;height:15px;}
+.tts-btn:hover{background:var(--gold,#C99A2E);color:#fff;}
+.tts-btn:focus-visible{outline:2px solid var(--coral,#D55A3F);outline-offset:2px;}
+.tts-btn.speaking{background:var(--coral,#D55A3F);border-color:var(--coral,#D55A3F);color:#fff;}
+.tts-lesson{margin:2px 0 10px;}
+.a11y-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin:16px 0;padding:11px 15px;background:var(--cream,#E8E3DA);border:1px solid var(--rule,#D8D2C7);border-radius:14px;font:500 13.5px/1.45 'DM Sans',sans-serif;color:var(--grey,#5A5A5A);}
+.a11y-row .a11y-note{flex:1 1 240px;min-width:200px;}
+.a11y-row .a11y-note strong{color:var(--navy,#242F3A);}
+.a11y-row .tts-btn{margin-left:0;}
+.a11y-row .tts-btn.on{background:var(--navy,#242F3A);border-color:var(--navy,#242F3A);color:#fff;}
+body.comfort{font-size:17px;}
+body.comfort .q-text,body.comfort .qtext,body.comfort .lesson-part p,body.comfort .lesson-part li,body.comfort .lesson-aim,body.comfort .lo-statement,body.comfort .sc-list li,body.comfort .question .part-q,body.comfort .we-step,body.comfort .watch-out,body.comfort .try-one p{line-height:1.85 !important;letter-spacing:.012em;word-spacing:.06em;}
+body.dyslexic,body.dyslexic *{font-family:'OpenDyslexic','Comic Sans MS','Verdana',sans-serif !important;font-style:normal !important;text-transform:none !important;}
+body.dyslexic{font-size:17px;}
+body.dyslexic .q-text,body.dyslexic .qtext,body.dyslexic .lesson-part p,body.dyslexic .lesson-part li,body.dyslexic .lesson-aim,body.dyslexic .lo-statement,body.dyslexic .sc-list li,body.dyslexic .question .part-q,body.dyslexic .we-step,body.dyslexic .watch-out,body.dyslexic .try-one p,body.dyslexic .topic-help p,body.dyslexic .th-faq>div,body.dyslexic .next-step p{line-height:1.8 !important;letter-spacing:.012em !important;word-spacing:.07em;}
+#it-tint{position:fixed;inset:0;pointer-events:none;z-index:2147483646;mix-blend-mode:multiply;display:none;}
+body.comfort .q-text,body.comfort .qtext{display:inline-block;}
+@media (prefers-reduced-motion:no-preference){.tts-btn.speaking{animation:ttspulse 1.1s ease-in-out infinite;}@keyframes ttspulse{50%{box-shadow:0 0 0 5px rgba(213,90,63,.18);}}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--gold,#C99A2E);outline-offset:2px;border-radius:4px;}
+body.it-bigtap .answer-input,body.it-bigtap .rem-input{min-height:48px;font-size:1.05rem;}
+body.it-bigtap .check-one,body.it-bigtap #mark-btn,body.it-bigtap #reset-btn,body.it-bigtap .btn{min-height:44px;}
+#it-ruler{position:fixed;left:0;right:0;height:54px;pointer-events:none;z-index:40;display:none;box-shadow:0 -1500px 0 1500px rgba(36,47,58,.28);border-top:2px solid var(--gold,#C99A2E);border-bottom:2px solid var(--gold,#C99A2E);}
+body.it-ruler-on #it-ruler{display:block;}
+</style>
+<script>
+(function(){
+  var SS=window.speechSynthesis, supported=!!SS&&typeof SpeechSynthesisUtterance!=='undefined';
+  var HINT=null, VOICES=[], primed=false, CHOSEN=null, VSEL=null, CURAUDIO=null;
+  var SPK='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M15.5 8.5a4 4 0 010 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 6a7 7 0 010 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+  function speakify(t){
+    t=(t||'').replace(/\u00A0/g,' ');
+    t=t.replace(/£\s?(\d[\d,]*(?:\.\d+)?)/g,'$1 pounds');     // £8 -> 8 pounds
+    t=t.replace(/£/g,' pounds ');
+    t=t.replace(/(\d)\s:\s(\d)/g,'$1 to $2').replace(/(\d):(\d)/g,'$1 to $2');               // ratio 3:5 -> 3 to 5
+    t=t.replace(/(\d)\s*-\s*(\d)/g,'$1 minus $2');             // 20 - 5 -> 20 minus 5 (math hyphen)
+    t=t.replace(/(\d|x|\))\s*\/\s*(\d|x|\()/g,'$1 over $2');  // x/3 -> x over 3
+    t=t.replace(/×/g,' times ').replace(/÷/g,' divided by ');
+    t=t.replace(/\u2212/g,' minus ');                          // true minus only (keeps hyphens like "call-out")
+    t=t.replace(/=/g,' equals ').replace(/\+/g,' plus ');
+    t=t.replace(/%/g,' percent ').replace(/°/g,' degrees ');
+    t=t.replace(/²/g,' squared ').replace(/³/g,' cubed ').replace(/√/g,' square root of ');
+    t=t.replace(/→/g,' then ').replace(/&/g,' and ');
+    t=t.replace(/\u2713/g,' correct ');
+    t=t.replace(/(\d)([A-Za-z])/g,'$1 $2');                    // 2x -> 2 x
+    return t.replace(/\s+/g,' ').trim();
+  }
+  function loadVoices(){ if(!supported)return; try{ var v=SS.getVoices(); if(v&&v.length)VOICES=v; }catch(e){} refreshVoiceUI(); }
+  function refreshVoiceUI(){ if(!VSEL)return; var evs=[],i; for(i=0;i<VOICES.length;i++){ if(/^en/i.test(VOICES[i].lang))evs.push(VOICES[i]); } if(!evs.length){ VSEL.style.display='none'; return; } try{ var saved=localStorage.getItem('it_tts_voice'); if(saved&&CHOSEN===null)CHOSEN=saved; }catch(e){} VSEL.innerHTML=''; var def=document.createElement('option'); def.value=''; def.textContent='Voice: best available'; VSEL.appendChild(def); for(i=0;i<evs.length;i++){ var o=document.createElement('option'); o.value=evs[i].name; o.textContent=evs[i].name+' ('+evs[i].lang+')'; if(evs[i].name===CHOSEN)o.selected=true; VSEL.appendChild(o); } VSEL.style.display=''; }
+  function pickVoice(){ var i,n;
+    if(CHOSEN){ for(i=0;i<VOICES.length;i++){ if(VOICES[i].name===CHOSEN)return VOICES[i]; } }
+    var pref=[/google uk english female/i,/google uk english male/i,/(daniel|kate|serena|arthur|martha|stephanie|oliver|libby|sonia|ryan|jenny)/i];
+    for(n=0;n<pref.length;n++){ for(i=0;i<VOICES.length;i++){ if(/en[-_]GB/i.test(VOICES[i].lang)&&pref[n].test(VOICES[i].name)&&!/compact/i.test(VOICES[i].name))return VOICES[i]; } }
+    for(i=0;i<VOICES.length;i++){ if(/^en/i.test(VOICES[i].lang)&&/(enhanced|premium|natural|neural)/i.test(VOICES[i].name))return VOICES[i]; }
+    for(i=0;i<VOICES.length;i++){ if(/en[-_]GB/i.test(VOICES[i].lang)&&!/compact/i.test(VOICES[i].name))return VOICES[i]; }
+    for(i=0;i<VOICES.length;i++){ if(/en[-_]GB/i.test(VOICES[i].lang))return VOICES[i]; }
+    for(i=0;i<VOICES.length;i++){ if(/^en/i.test(VOICES[i].lang))return VOICES[i]; }
+    return null; }
+  if(supported){ loadVoices(); try{ SS.addEventListener('voiceschanged',loadVoices); }catch(e){ try{ SS.onvoiceschanged=loadVoices; }catch(e2){} } }
+  function clearFlags(){ var s=document.querySelectorAll('.tts-btn.speaking'); for(var i=0;i<s.length;i++)s[i].classList.remove('speaking'); }
+  function supHTML(h){ h=(h||'').replace(/<sup>\s*\?\s*<\/sup>/gi,' to the power what '); return h.replace(/<sup>\s*([^<]*?)\s*<\/sup>/gi,' to the power $1 '); }
+  function readSpeech(el){ var d=document.createElement('div'); d.innerHTML=supHTML(el.innerHTML); var jt=d.querySelectorAll('.jargon-tip'); for(var i=0;i<jt.length;i++)jt[i].remove(); return d.innerText; }
+  function stopAll(){ try{ if(SS)SS.cancel(); }catch(e){} if(CURAUDIO){ try{ CURAUDIO.pause(); }catch(e){} CURAUDIO=null; } clearFlags(); }
+  function utter(text,btn){ var u=new SpeechSynthesisUtterance(text); u.lang='en-GB'; u.rate=0.95; u.pitch=1; var v=pickVoice(); try{ if(v)u.voice=v; }catch(e){} if(btn){ btn.classList.add('speaking'); u.onend=u.onerror=function(){ btn.classList.remove('speaking'); }; } try{ SS.resume(); }catch(e){} try{ SS.speak(u); }catch(e){} }
+  function noAudioHint(){ if(HINT){ HINT.textContent='Read-aloud plays when you open this page in a browser (Safari or Chrome). The in-app preview has no audio.'; HINT.style.display='block'; } }
+  function fallbackSpeak(text,btn){ if(supported){ if(!primed){ primed=true; loadVoices(); } if(SS.speaking||SS.pending){ try{ SS.cancel(); }catch(e){} } utter(text,btn); } else { noAudioHint(); } }
+  function speakCloud(text,btn,ep){ if(btn)btn.classList.add('speaking'); fetch(ep,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:text})}).then(function(r){ return r.json(); }).then(function(j){ if(!j||!j.audio)throw 0; var a=new Audio('data:audio/mpeg;base64,'+j.audio); CURAUDIO=a; a.onended=a.onerror=function(){ if(btn)btn.classList.remove('speaking'); if(CURAUDIO===a)CURAUDIO=null; }; var p=a.play(); if(p&&p['catch'])p['catch'](function(){ if(btn)btn.classList.remove('speaking'); if(CURAUDIO===a)CURAUDIO=null; fallbackSpeak(text,btn); }); }).catch(function(){ if(btn)btn.classList.remove('speaking'); fallbackSpeak(text,btn); }); }
+  function speak(text,btn){
+    if(!text) return;
+    var ep=(window.IT_TTS_ENDPOINT||'');
+    if(ep){ if(btn&&btn.classList.contains('speaking')){ stopAll(); return; } stopAll(); speakCloud(text,btn,ep); return; }
+    if(!supported){ noAudioHint(); return; }
+    if(btn&&btn.classList.contains('speaking')){ stopAll(); return; }
+    clearFlags();
+    if(SS.speaking||SS.pending){ try{ SS.cancel(); }catch(e){} }
+    if(!primed){ primed=true; loadVoices(); try{ var w=new SpeechSynthesisUtterance(' '); w.volume=0; SS.speak(w); }catch(e){} }
+    utter(text,btn);
+  }
+  window.__speakify=speakify;
+  function loadDysFont(){ if(document.getElementById('it-dys-font'))return; var l=document.createElement('link'); l.id='it-dys-font'; l.rel='stylesheet'; l.href='https://cdn.jsdelivr.net/npm/@fontsource/opendyslexic@5/index.css'; document.head.appendChild(l); }
+  function mkBtn(label,withText){ var b=document.createElement('button'); b.type='button'; b.className='tts-btn'+(withText?' tts-lesson':''); b.setAttribute('aria-label',label); b.innerHTML=SPK+(withText?'<span>Listen</span>':''); return b; }
+  function go(){
+    // accessibility row (comfort toggle always; listen note only if TTS supported)
+    var row=document.createElement('div'); row.className='a11y-row';
+    var note=document.createElement('span'); note.className='a11y-note';
+    note.innerHTML='<strong>Read aloud &amp; reading comfort:</strong> tap a speaker to hear any question or lesson; tap Comfortable text to space the words, Dyslexia-friendly for a rounded font with no italics or capitals and roomier spacing, or pick a Reading tint if a coloured background is easier on your eyes. Your choices are remembered.';
+    row.appendChild(note);
+    var toggle=document.createElement('button'); toggle.type='button'; toggle.className='tts-btn'; toggle.textContent='Aa  Comfortable text'; toggle.setAttribute('aria-pressed','false');
+    toggle.addEventListener('click',function(){ var on=document.body.classList.toggle('comfort'); toggle.classList.toggle('on',on); toggle.setAttribute('aria-pressed',on?'true':'false'); try{ if(on)localStorage.setItem('it_comfort','1'); else localStorage.removeItem('it_comfort'); }catch(e){} });
+    row.appendChild(toggle);
+    var dys=document.createElement('button'); dys.type='button'; dys.className='tts-btn'; dys.textContent='Dyslexia-friendly'; dys.setAttribute('aria-pressed','false');
+    dys.addEventListener('click',function(){ var on=document.body.classList.toggle('dyslexic'); if(on)loadDysFont(); dys.classList.toggle('on',on); dys.setAttribute('aria-pressed',on?'true':'false'); try{ if(on)localStorage.setItem('it_dyslexic','1'); else localStorage.removeItem('it_dyslexic'); }catch(e){} });
+    row.appendChild(dys);
+    var bigtap=document.createElement('button'); bigtap.type='button'; bigtap.className='tts-btn'; bigtap.textContent='Bigger taps'; bigtap.setAttribute('aria-pressed','false');
+    bigtap.addEventListener('click',function(){ var on=document.body.classList.toggle('it-bigtap'); bigtap.classList.toggle('on',on); bigtap.setAttribute('aria-pressed',on?'true':'false'); try{ if(on)localStorage.setItem('it_bigtap','1'); else localStorage.removeItem('it_bigtap'); }catch(e){} });
+    row.appendChild(bigtap);
+    var ruler=document.getElementById('it-ruler'); if(!ruler){ ruler=document.createElement('div'); ruler.id='it-ruler'; ruler.setAttribute('aria-hidden','true'); document.body.appendChild(ruler); }
+    var rulerBtn=document.createElement('button'); rulerBtn.type='button'; rulerBtn.className='tts-btn'; rulerBtn.textContent='Reading ruler'; rulerBtn.setAttribute('aria-pressed','false');
+    function _itRuler(y){ if(document.body.classList.contains('it-ruler-on')) ruler.style.top=(y-27)+'px'; }
+    rulerBtn.addEventListener('click',function(){ var on=document.body.classList.toggle('it-ruler-on'); rulerBtn.classList.toggle('on',on); rulerBtn.setAttribute('aria-pressed',on?'true':'false'); try{ if(on)localStorage.setItem('it_ruler','1'); else localStorage.removeItem('it_ruler'); }catch(e){} });
+    row.appendChild(rulerBtn);
+    document.addEventListener('mousemove',function(e){ _itRuler(e.clientY); });
+    document.addEventListener('touchmove',function(e){ if(e.touches[0]) _itRuler(e.touches[0].clientY); },{passive:true});
+    var tintEl=document.getElementById('it-tint'); if(!tintEl){ tintEl=document.createElement('div'); tintEl.id='it-tint'; document.body.appendChild(tintEl); }
+    function applyTint(v){ if(v){ tintEl.style.background=v; tintEl.style.display='block'; } else { tintEl.style.display='none'; } }
+    var tsel=document.createElement('select'); tsel.className='tts-tint'; tsel.setAttribute('aria-label','Choose a reading tint to ease visual stress'); tsel.style.cssText='font:600 12px/1 \'DM Sans\',sans-serif;border:1.5px solid var(--gold,#C99A2E);border-radius:999px;padding:5px 12px;background:#fff;color:var(--navy,#242F3A);cursor:pointer;';
+    var _TN=[['Tint: off',''],['Cream','#FAF0CC'],['Yellow','#FBF3A0'],['Peach','#FAD9C6'],['Rose','#F8D3E0'],['Mint','#CFEED5'],['Blue','#CDE6FB'],['Grey','#DBDBDB']];
+    for(var _ti=0;_ti<_TN.length;_ti++){ var _op=document.createElement('option'); _op.textContent=_TN[_ti][0]; _op.value=_TN[_ti][1]; tsel.appendChild(_op); }
+    tsel.addEventListener('change',function(){ applyTint(tsel.value); try{ if(tsel.value)localStorage.setItem('it_tint',tsel.value); else localStorage.removeItem('it_tint'); }catch(e){} });
+    row.appendChild(tsel);
+    try{ if(localStorage.getItem('it_comfort')==='1'){ document.body.classList.add('comfort'); toggle.classList.add('on'); toggle.setAttribute('aria-pressed','true'); } }catch(e){}
+    try{ if(localStorage.getItem('it_dyslexic')==='1'){ document.body.classList.add('dyslexic'); loadDysFont(); dys.classList.add('on'); dys.setAttribute('aria-pressed','true'); } }catch(e){}
+    try{ var _sv=localStorage.getItem('it_tint'); if(_sv){ applyTint(_sv); tsel.value=_sv; } }catch(e){}
+    try{ if(localStorage.getItem('it_bigtap')==='1'){ document.body.classList.add('it-bigtap'); bigtap.classList.add('on'); bigtap.setAttribute('aria-pressed','true'); } }catch(e){}
+    try{ if(localStorage.getItem('it_ruler')==='1'){ document.body.classList.add('it-ruler-on'); rulerBtn.classList.add('on'); rulerBtn.setAttribute('aria-pressed','true'); } }catch(e){}
+    var vsel=document.createElement('select'); vsel.className='tts-voice'; vsel.setAttribute('aria-label','Choose the read-aloud voice'); vsel.style.cssText='display:none;font:600 12px/1 \'DM Sans\',sans-serif;border:1.5px solid var(--gold,#C99A2E);border-radius:999px;padding:5px 12px;background:#fff;color:var(--navy,#242F3A);max-width:190px;cursor:pointer;'; vsel.addEventListener('change',function(){ CHOSEN=vsel.value||null; try{ if(CHOSEN)localStorage.setItem('it_tts_voice',CHOSEN); else localStorage.removeItem('it_tts_voice'); }catch(e){} stopAll(); speak('Hello. This is your reading voice.'); }); row.appendChild(vsel); VSEL=vsel; refreshVoiceUI();
+    var hint=document.createElement('span'); hint.className='a11y-hint'; hint.setAttribute('role','status'); hint.style.cssText='flex:1 1 100%;color:var(--coral-deep,#B14526);font-weight:600;font-size:12.5px;display:none;'; row.appendChild(hint); HINT=hint;
+    var l0=document.getElementById('lesson-0'); if(l0){l0.insertAdjacentElement('afterend',row);} else {var anc=document.querySelector('.lesson-part, .q, .question, .section-divider'); if(anc)anc.insertAdjacentElement('beforebegin',row); else document.body.insertBefore(row,document.body.firstChild);}
+    // listen buttons always render; speak() shows a hint if the browser has no speech engine
+    // per-question listen (reads ONLY the question text, never the answer)
+    var heads=document.querySelectorAll('.q-head, .q-header'),k;
+    for(k=0;k<heads.length;k++){ (function(head){ var qt=head.querySelector('.q-text, .qtext'); if(!qt)return; var b=mkBtn('Listen to this question',true); b.classList.remove('tts-lesson'); b.addEventListener('click',function(){ speak(speakify(readSpeech(qt)),b); }); head.appendChild(b); })(heads[k]); }
+    // per-lesson listen (reads the teaching, strips the hidden Try-one answer + visuals)
+    var ls=document.querySelectorAll('.lesson-part, .lesson');
+    for(k=0;k<ls.length;k++){ (function(l){ var h=l.querySelector('.lesson-h3')||l.querySelector('h2, h3'); if(!h)return; var b=mkBtn('Listen to this lesson',true); b.addEventListener('click',function(){ var c=l.cloneNode(true); var rm=c.querySelectorAll('details,.lesson-jump,.tts-btn,svg,.bar-figure,figure,.jargon-tip'); for(var j=0;j<rm.length;j++)rm[j].remove(); var _d=document.createElement('div'); _d.innerHTML=supHTML(c.innerHTML); speak(speakify(_d.innerText),b); }); h.insertAdjacentElement('afterend',b); })(ls[k]); }
+    // flowing-prose lessons (e.g. BIDMAS): an h2 starting 'Lesson', not inside a lesson container; read until the next h2
+    var ph=document.querySelectorAll('h2'),pk;
+    for(pk=0;pk<ph.length;pk++){ (function(h){ if(h.closest('.lesson-part, .lesson'))return; if(!/^lesson\b/i.test((h.textContent||'').trim()))return; var b=mkBtn('Listen to this lesson',true); b.addEventListener('click',function(){ var parts=[h.textContent], el=h.nextElementSibling; while(el && el.tagName!=='H2'){ if(el.classList && (el.classList.contains('tts-btn')||el.classList.contains('tts-lesson'))){ el=el.nextElementSibling; continue; } var c=el.cloneNode(true); var rm=c.querySelectorAll('details,.tts-btn,svg,figure,.bar-figure,.jargon-tip'); for(var j=0;j<rm.length;j++)rm[j].remove(); parts.push(readSpeech(c)); el=el.nextElementSibling; } speak(speakify(parts.join('. ')),b); }); h.insertAdjacentElement('afterend',b); })(ph[pk]); }
+    var tries=document.querySelectorAll('.try-one details'),tk;
+    for(tk=0;tk<tries.length;tk++){ (function(d){ var host=d.querySelector('.try-steps')||d.querySelector('p'); var sum=d.querySelector('summary'); if(!host||!sum)return; var b=mkBtn('Listen to the answer',true); b.style.margin='8px 0 4px'; b.addEventListener('click',function(e){ e.preventDefault(); e.stopPropagation(); speak(speakify(readSpeech(host)),b); }); sum.insertAdjacentElement('afterend',b); })(tries[tk]); }
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape')stopAll(); });
+    window.addEventListener('beforeunload',stopAll); window.addEventListener('pagehide',stopAll);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go); else go();
+})();
+</script>
+<script>/* Improve Tuition accessibility helper (additive; does not alter marking) - maths-safe */
+(function(){
+  var TICK=/[\u2713\u2714]/, CROSS=/[\u2717\u2718\u2715\u274c]/, APPROX=/[\u2248]/;   /* feedback ticks/crosses only - NOT maths multiply U+00D7 */
+  function stateFrom(el){
+    var t=(el.textContent||'').replace(/\s+/g,'');
+    var c=(' '+(el.getAttribute('class')||'')+' ').toLowerCase().replace(/-/g,' ');
+    if(TICK.test(t)||/ (ok|correct|right) /.test(c)) return 'Correct';
+    if(CROSS.test(t)||/ (no|wrong|incorrect) /.test(c)) return 'Incorrect';
+    if(APPROX.test(t)||/ part /.test(c)||/ partial /.test(c)) return 'Partly correct';
+    return '';
+  }
+  function glyphOnly(el){ if(el.children.length) return false; var t=(el.textContent||'').trim(); return t.length>0&&t.length<=2&&/^[\u2713\u2714\u2717\u2718\u2715\u274c\u2248]+$/.test(t); }
+  function setLbl(el,L){ if(el.getAttribute('aria-label')!==L){ el.setAttribute('role','img'); el.setAttribute('aria-label',L);} }
+  function sweep(){
+    try{
+      var nodes=document.querySelectorAll('.fb,.rem-fb,.cm-fb,[class*="-fb"]');
+      for(var i=0;i<nodes.length;i++){ var el=nodes[i], txt=(el.textContent||'').trim(), L=stateFrom(el);
+        if((glyphOnly(el)||!txt)&&L){ setLbl(el,L); }
+        else if(!txt){ el.removeAttribute('role'); el.removeAttribute('aria-label'); } }
+      var st=document.querySelectorAll('[class~="correct"],[class~="incorrect"],[class~="wrong"]');
+      for(var k=0;k<st.length;k++){ var e=st[k]; if(glyphOnly(e)){ var L2=stateFrom(e); if(L2) setLbl(e,L2); } }
+    }catch(_){}
+  }
+  function labelInputs(){
+    try{
+      var ins=document.querySelectorAll('input.answer-input,input.rem-input,input[type="text"],input[type="number"]');
+      for(var i=0;i<ins.length;i++){ var el=ins[i];
+        if(el.getAttribute('aria-label')||el.getAttribute('aria-labelledby')) continue;
+        if(el.closest('label')||el.closest('.reg-field')||el.closest('.reg-card')) continue;
+        if(el.id&&document.querySelector('label[for="'+el.id+'"]')) continue;
+        var q=el.closest('[id^="q-"]'); var n=q?q.id.replace('q-',''):'';
+        el.setAttribute('aria-label', n?('Your answer for question '+n):'Your answer'); }
+    }catch(_){}
+  }
+  function run(){ labelInputs(); sweep(); }
+  if(document.readyState!=='loading') run(); else document.addEventListener('DOMContentLoaded',run);
+  document.addEventListener('click',function(){ setTimeout(sweep,80); },true);
+})();</script>
+<!--IA11Y-END-->
+<!--ITTS-END-->
+<!-- IMPROVETUITION:CONTENT-END -->
+</body>
+</html>

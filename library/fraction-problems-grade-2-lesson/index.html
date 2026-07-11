@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fraction Problems | Improve Tuition</title>
+<meta name="description" content="Harder, multi-step fraction word problems for the non-calculator paper: multiply and round to whole items, a fraction of a fraction, distance from 1, and finding the fraction that is left. Interactive worked examples and graded practice.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#242F3A;--coral:#D55A3F;--coral-hover:#B14526;--gold:#C99A2E;--gold-soft:#D6B35A;--grey:#5A5A5A;--grey-soft:#8A8A8A;--paper:#F7F5F2;--cream:#E8E3DA;--white:#FFFFFF;--rule:#D8D2C7;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--grey);font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px 60px}
+h1,h2,h3,.fr{font-family:'Fraunces',Georgia,serif}
+.topbar{background:var(--navy);color:var(--gold-soft);font:700 .66rem/1 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:7px 10px}
+.hero{background:var(--navy);border-bottom:4px solid var(--gold);padding:26px 16px 24px}
+.hero .in{max-width:640px;margin:0 auto}
+.eyebrow{font:700 .72rem/1 'DM Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hero h1{color:#fff;font-size:clamp(1.6rem,5.6vw,2.2rem);line-height:1.1;margin:9px 0 6px;font-weight:700}
+.hero .sub{color:var(--gold-soft);font-style:italic;font-size:1.02rem;margin:0 0 8px}
+.hero .meta{color:#b9bfc6;font-size:.82rem;margin:0}
+.card{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:18px 16px;margin:18px 0}
+h2{color:var(--navy);font-size:1.35rem;margin:4px 0 8px}
+h3{color:var(--navy);font-size:1.12rem;margin:20px 0 4px}
+.lead{margin:0 0 12px}
+.lead a{color:var(--coral-hover);font-weight:600}
+.keyidea{background:var(--cream);border-left:4px solid var(--gold);border-radius:6px;padding:11px 14px;margin:12px 0;font-size:.96rem}
+.keyidea b,.lead b{color:var(--navy)}
+.miscon{background:#fbeeea;border-left:4px solid var(--coral);border-radius:6px;padding:11px 14px;margin:12px 0;font-size:.92rem}
+.miscon .lab{font:700 .64rem/1 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-hover);display:block;margin-bottom:3px}
+/* fraction rendering */
+.frac{display:inline-flex;flex-direction:column;text-align:center;vertical-align:middle;margin:0 3px;line-height:1.05}
+.frac .n{border-bottom:2px solid currentColor;padding:0 5px}
+.frac .d{padding:0 5px}
+.mixnum{vertical-align:middle;margin-right:1px;font-weight:700}
+/* stepper shell */
+.cstep{border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin:14px 0}
+.cs-head{background:var(--navy);padding:10px 14px}
+.cs-eyebrow{display:block;font:700 .66rem/1 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft)}
+.cs-q{display:block;font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:1.3rem;margin-top:4px}
+.fr-stage{padding:14px 16px 4px;font-family:'Fraunces',serif;font-size:1.5rem;color:var(--navy)}
+.fr-line{padding:5px 0;display:flex;align-items:center;flex-wrap:wrap;gap:2px}
+.fr-line.fr-ans{color:var(--coral)}
+.cs-work{min-height:2.6em;padding:7px 16px 2px;font-size:.9rem;color:var(--navy);line-height:1.45}
+.cs-work b{color:var(--navy)}
+.cs-check{display:block;margin-top:4px;color:var(--coral-hover);font-weight:600;font-size:.86rem}
+.cs-controls{display:flex;gap:8px;padding:10px 16px 14px}
+.cs-btn{font-family:'DM Sans',sans-serif;font-weight:700;font-size:.86rem;padding:9px 14px;min-height:44px;border-radius:8px;border:1.5px solid var(--gold);background:#fff;color:var(--coral-hover);cursor:pointer}
+.cs-btn:hover:not(:disabled){background:var(--gold);color:#fff;border-color:var(--gold)}
+.cs-btn:disabled{opacity:.4;cursor:default}
+.cs-reset{margin-left:auto;border-color:var(--rule);color:var(--grey);background:transparent}
+.wex{background:#faf6ec;border:1px solid var(--rule);border-radius:8px;padding:12px 14px;margin:12px 0;font-size:1.4rem;font-family:'Fraunces',serif;color:var(--navy);text-align:center}
+.wex .cap{display:block;font-family:'DM Sans',sans-serif;font-size:.82rem;color:var(--grey);margin-top:6px;font-weight:500}
+/* sections */
+.divider{background:var(--navy);border-radius:12px;padding:16px;margin:24px 0 6px;color:#fff}
+.divider .lo-eyebrow{font:700 .68rem/1 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.divider .title{font-family:'Fraunces',serif;font-weight:700;font-size:1.18rem;margin:6px 0 2px;color:#fff}
+.divider .lo{font-style:italic;color:#dfe3e8;margin:6px 0 8px;font-size:.96rem}
+.divider .sc-lab{font:700 .64rem/1 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft);display:block;margin-bottom:3px}
+.divider ul{margin:0;padding-left:18px;color:#dfe3e8;font-size:.9rem}
+.divider li{margin:2px 0}
+/* questions */
+.q{background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:14px;margin:10px 0}
+.q .qhead{display:flex;align-items:baseline;gap:8px}
+.q .qn{font-family:'Fraunces',serif;font-weight:700;color:var(--coral)}
+.q .qtext{color:var(--navy);font-weight:500}
+.q .ansrow{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.q .ansrow label{font-size:.9rem;color:var(--grey)}
+.q .ans{font-family:'Fraunces',serif;font-size:1.05rem;width:150px;max-width:55vw;padding:8px 10px;border:1.5px solid var(--rule);border-radius:7px;background:var(--paper)}
+.q .hint{font-size:.78rem;color:var(--grey-soft);margin-top:4px;width:100%}
+.q .marks{font-style:italic;color:var(--grey-soft);font-size:.84rem}
+.verdict{margin-top:8px;font-weight:700;font-size:.92rem;min-height:1em}
+.verdict.ok{color:#2e7d32}.verdict.no{color:var(--coral-hover)}
+.show-how{display:inline-flex;align-items:center;gap:6px;margin-top:9px;padding:7px 13px;min-height:40px;background:transparent;border:1.5px dashed var(--gold);color:var(--coral-hover);border-radius:7px;font:600 .8rem/1 'DM Sans',sans-serif;cursor:pointer}
+.show-how:hover{background:rgba(201,154,46,.09)}
+.work{display:none;margin-top:9px;padding:11px 13px;background:var(--cream);border-radius:7px;font-size:.9rem;line-height:1.5}
+.work.show{display:block}
+.work b{color:var(--navy)}.work .ans-final{color:var(--coral-hover);font-weight:700}
+.markbar{position:sticky;bottom:0;background:var(--navy);margin:22px -16px 0;padding:12px 16px;display:flex;align-items:center;gap:12px;border-top:3px solid var(--gold)}
+.markbtn{background:var(--coral);color:#fff;border:none;font-family:'Fraunces',serif;font-weight:700;font-size:1rem;padding:12px 22px;border-radius:9px;cursor:pointer}
+.markbtn:hover{background:var(--coral-hover)}
+.resetbtn{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);font-weight:700;padding:11px 18px;border-radius:9px;cursor:pointer}
+.score{color:#fff;font-family:'Fraunces',serif;font-weight:700;margin-left:auto;font-size:1rem}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--grey-soft);text-align:center;line-height:1.6}
+.foot b{color:var(--navy)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<style>
+/* Responsive fixes — added by responsive_fix.py */
+html, body { overflow-x: hidden; max-width: 100vw; }
+svg { max-width: 100%; height: auto; display: block; }
+.qfig, .figbox { max-width: 100%; overflow: hidden; }
+.figbox svg, .qfig svg { margin: 0 auto; }
+table.ak { table-layout: fixed; width: 100%; }
+table.ak td, table.ak th { word-break: break-word; overflow-wrap: anywhere; padding: 6px; font-size: 12px; }
+.q .qhead .qtext, .q .qprompt { overflow-wrap: anywhere; }
+.answer-line, .mistake { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- IMPROVETUITION:CONTENT-START -->
+<div class="topbar">Improve Tuition · Non-Calculator Maths · Year 6–9</div>
+<div class="hero"><div class="in">
+  <span class="eyebrow">Lesson · Practice · Steps</span>
+  <h1>Fraction Problems</h1>
+  <p class="sub">Multi-step questions — choose the right method, then read the answer in context.</p>
+  <p class="meta">12 questions · 3 sections · four interactive worked examples · no time pressure</p>
+</div></div>
+
+<div class="wrap">
+<div class="card">
+  <h2>What's really happening</h2>
+  <p class="lead">These problems don't test a new skill — they test whether you can <b>pick the right tool</b> (multiply, add, compare) and then <b>read the answer in context</b>. The arithmetic itself is the simplifying, multiplying and dividing from the <a href="/library/fractions-grade-2-lesson/">Fractions</a> and <a href="/library/multiplying-dividing-fractions-grade-3-lesson/">Multiplying &amp; Dividing Fractions</a> pages.</p>
+  <div class="keyidea"><b>Two habits that win marks:</b> when an answer counts <b>whole items</b> (packs, buses, tins), a fraction means you must <b>round up</b>. And when a question says “the rest”, that fraction is <b>1 minus</b> the others.</div>
+
+  <h3>Type 1 · Multiply, then round to whole items</h3>
+  <p class="lead">Each muffin needs 3/20 of a pack of butter. How many packs to bake 24 muffins? Tap through:</p>
+  <div class="cstep" id="p1"><div class="cs-head"><span class="cs-eyebrow">Multiply &amp; round up</span><span class="cs-q">24 muffins × 3/20 of a pack</span></div><div class="fr-stage"></div><div class="cs-work"></div><div class="cs-controls"><button class="cs-btn cs-next" type="button">Next step ▸</button><button class="cs-btn cs-reset" type="button">Reset</button></div></div>
+
+  <h3>Type 2 · A fraction of a fraction, then add</h3>
+  <p class="lead">A rectangle is split into a left half and a right half. 2/5 of the left half is painted and 3/4 of the right half is painted. What fraction of the whole rectangle is painted?</p>
+  <div class="cstep" id="p2"><div class="cs-head"><span class="cs-eyebrow">Fraction of a fraction, then add</span><span class="cs-q">Fraction of the rectangle painted</span></div><div class="fr-stage"></div><div class="cs-work"></div><div class="cs-controls"><button class="cs-btn cs-next" type="button">Next step ▸</button><button class="cs-btn cs-reset" type="button">Reset</button></div></div>
+
+  <h3>Type 3 · Which is closer to 1?</h3>
+  <p class="lead">Compare the distance each fraction is from 1. Which is closer to 1: 5/6 or 8/7?</p>
+  <div class="cstep" id="p3"><div class="cs-head"><span class="cs-eyebrow">Distance from 1</span><span class="cs-q">Closer to 1: 5/6 or 8/7?</span></div><div class="fr-stage"></div><div class="cs-work"></div><div class="cs-controls"><button class="cs-btn cs-next" type="button">Next step ▸</button><button class="cs-btn cs-reset" type="button">Reset</button></div></div>
+
+  <h3>Type 4 · What fraction is left?</h3>
+  <p class="lead">Of Sam's pens, 3/14 are red and 1/6 are blue; the rest are black. What fraction are black?</p>
+  <div class="cstep" id="p4"><div class="cs-head"><span class="cs-eyebrow">“The rest” = 1 minus the others</span><span class="cs-q">Fraction of pens that are black</span></div><div class="fr-stage"></div><div class="cs-work"></div><div class="cs-controls"><button class="cs-btn cs-next" type="button">Next step ▸</button><button class="cs-btn cs-reset" type="button">Reset</button></div></div>
+
+  <div class="miscon"><span class="lab">Read it in context</span>The arithmetic answer isn't always the final answer. 3⅗ packs of butter means buying <b>4</b>; “how many are left” needs <b>1 minus</b> the rest; and “closer to 1” compares <b>distances</b>, so the bigger fraction can still be the closer one.</div>
+</div>
+
+<div class="divider"><span class="lo-eyebrow">Learning Objective 1 · Year 6–7</span><div class="title">Section A · Multiply &amp; interpret</div><div class="lo">Multiply a fraction in a real context, then read the answer — rounding to whole items where needed.</div><span class="sc-lab">Success criteria — I can:</span><ul><li>multiply a fraction by a whole number</li><li>convert to a mixed number to interpret it</li><li>round up when only whole items can be bought</li></ul></div>
+<div id="secA"></div>
+
+<div class="divider"><span class="lo-eyebrow">Learning Objective 2 · Year 7–8</span><div class="title">Section B · What fraction is left?</div><div class="lo">Combine fractions and find the remaining fraction using “1 minus the rest”.</div><span class="sc-lab">Success criteria — I can:</span><ul><li>add fractions with a common denominator</li><li>subtract from 1 to find “the rest”</li><li>give the answer in its simplest form</li></ul></div>
+<div id="secB"></div>
+
+<div class="divider"><span class="lo-eyebrow">Learning Objective 3 · Year 8–9</span><div class="title">Section C · Fractions of fractions &amp; comparing</div><div class="lo">Take a fraction of a fraction, and compare fractions by their distance from a value.</div><span class="sc-lab">Success criteria — I can:</span><ul><li>find a fraction of a fraction by multiplying</li><li>add the parts over a common denominator</li><li>compare distances from 1</li></ul></div>
+<div id="secC"></div>
+
+<div class="markbar"><button class="markbtn" id="markbtn" type="button">Mark My Work</button><button class="resetbtn" id="resetbtn" type="button">Reset</button><span class="score" id="score">/ 12</span></div>
+<div class="foot"><b>Improve Tuition</b> · George Street, Batley, West Yorkshire WF17 5AR · improvetuition.org<br>Teacher‑led tuition since 2007. We are committed to safeguarding and promoting the welfare of every child in our care.</div>
+</div>
+
+<script>
+function F(n,d){return '<span class="frac"><span class="n">'+n+'</span><span class="d">'+d+'</span></span>';}
+function MX(w,n,d){return '<span class="mixnum">'+w+'</span>'+F(n,d);}
+function setupFracSteps(id, stages){
+  var root=document.getElementById(id), stage=root.querySelector('.fr-stage'), work=root.querySelector('.cs-work');
+  var next=root.querySelector('.cs-next'), reset=root.querySelector('.cs-reset');
+  stage.innerHTML=''; next.disabled=false; next.textContent='Next step ▸';
+  function render(idx){var d=document.createElement('div');d.className='fr-line'+(idx===stages.length-1?' fr-ans':'');d.innerHTML=stages[idx].line;stage.appendChild(d);work.innerHTML=stages[idx].note+(idx===stages.length-1&&stages[idx].check?'<span class="cs-check">'+stages[idx].check+'</span>':'');}
+  render(0); var i=1;
+  next.onclick=function(){if(i>=stages.length)return;render(i);i++;if(i>=stages.length)next.disabled=true;};
+  reset.onclick=function(){setupFracSteps(id,stages);};
+}
+var P1=[{line:'24 × '+F(3,20),note:'Each muffin needs 3/20 of a pack — multiply by 24.'},{line:'= '+F(72,20),note:'24 × 3 = 72 on top; the 20 stays.'},{line:'= '+F(18,5),note:'Divide top and bottom by 4.'},{line:'= '+MX(3,3,5)+' packs',note:'As a mixed number: 18 ÷ 5 = 3 remainder 3.'},{line:'→ 4 packs',note:'Only whole packs can be bought, and 3 isn\'t enough — round up.',check:'✓ 4 packs of butter.'}];
+var P2=[{line:'('+F(2,5)+' × '+F(1,2)+') + ('+F(3,4)+' × '+F(1,2)+')',note:'Each half is 1/2 of the whole, so take that fraction of a half.'},{line:'= '+F(1,5)+' + '+F(3,8),note:'2/5 × 1/2 = 2/10 = 1/5; 3/4 × 1/2 = 3/8.'},{line:'= '+F(8,40)+' + '+F(15,40),note:'Common denominator 40.'},{line:'= '+F(23,40),note:'Add the numerators: 8 + 15 = 23.',check:'✓ 23/40 of the rectangle is painted.'}];
+var P3=[{line:F(5,6)+' and '+F(8,7),note:'Put both over a common denominator: 42 (and 1 = 42/42).'},{line:'= '+F(35,42)+' and '+F(48,42),note:'5/6 = 35/42; 8/7 = 48/42.'},{line:'distances '+F(7,42)+' and '+F(6,42),note:'42 − 35 = 7; 48 − 42 = 6.'},{line:'→ '+F(8,7)+' is closer',note:'6/42 is smaller than 7/42 — the bigger fraction is the closer one here.',check:'✓ 8/7 is closer to 1.'}];
+var P4=[{line:'1 − '+F(3,14)+' − '+F(1,6),note:'The three kinds make one whole, so subtract the known fractions from 1.'},{line:'= '+F(42,42)+' − '+F(9,42)+' − '+F(7,42),note:'Common denominator 42: 3/14 = 9/42, 1/6 = 7/42.'},{line:'= '+F(26,42),note:'42 − 9 − 7 = 26.'},{line:'= '+F(13,21),note:'Divide top and bottom by 2.',check:'✓ 13/21 of the pens are black.'}];
+
+var QS=[
+ {id:1,sec:'A',kind:'whole',exp:[5],t:'A recipe needs 3/20 of a pack of sugar per cake. Sugar comes in whole packs only. How many packs are needed for 30 cakes?',w:'30 × 3/20 = 90/20 = 9/2 = 4½. Four isn\'t enough → round up to <span class="ans-final">5 packs</span>.'},
+ {id:2,sec:'A',kind:'whole',exp:[10],t:'One tin of paint covers 2/5 of a fence. How many tins are needed to paint 4 whole fences?',w:'4 ÷ 2/5 = 4 × 5/2 = 20/2 = <span class="ans-final">10 tins</span>.'},
+ {id:3,sec:'A',kind:'mixed',exp:[4,1,2],t:'Each gift needs 3/4 of a metre of ribbon. How many metres are needed for 6 gifts? Give your answer as a mixed number.',w:'6 × 3/4 = 18/4 = 9/2 = <span class="ans-final">4 1/2 m</span>.'},
+ {id:4,sec:'A',kind:'whole',exp:[6],t:'A jar holds 2/3 of a litre. How many litres do 9 jars hold altogether?',w:'9 × 2/3 = 18/3 = <span class="ans-final">6 litres</span>.'},
+ {id:5,sec:'B',kind:'frac',exp:[7,20],t:'In a class, 1/4 walk to school and 2/5 cycle. The rest come by bus. What fraction come by bus? (simplest form)',w:'1 − 1/4 − 2/5 = 20/20 − 5/20 − 8/20 = <span class="ans-final">7/20</span>.'},
+ {id:6,sec:'B',kind:'frac',exp:[7,24],t:'A field is 3/8 grass and 1/3 woodland; the rest is water. What fraction is water?',w:'1 − 3/8 − 1/3 = 24/24 − 9/24 − 8/24 = <span class="ans-final">7/24</span>.'},
+ {id:7,sec:'B',kind:'frac',exp:[11,18],t:'On a shelf, 2/9 of the books are novels and 1/6 are comics; the rest are textbooks. What fraction are textbooks? (simplest form)',w:'1 − 2/9 − 1/6 = 18/18 − 4/18 − 3/18 = <span class="ans-final">11/18</span>.'},
+ {id:8,sec:'B',kind:'frac',exp:[4,15],t:'Liam ate 2/5 of a pizza and Mia ate 1/3 of it. What fraction of the pizza is left?',w:'1 − 2/5 − 1/3 = 15/15 − 6/15 − 5/15 = <span class="ans-final">4/15</span>.'},
+ {id:9,sec:'C',kind:'frac',exp:[17,40],t:'A square is split into a top half and a bottom half. 3/5 of the top half is shaded and 1/4 of the bottom half is shaded. What fraction of the square is shaded?',w:'(3/5 × 1/2) + (1/4 × 1/2) = 3/10 + 1/8 = 12/40 + 5/40 = <span class="ans-final">17/40</span>.'},
+ {id:10,sec:'C',kind:'frac',exp:[9,20],t:'Two equal-sized teams. 1/2 of one team and 2/5 of the other wear red. What fraction of all the players wear red?',w:'(1/2 ÷ 2) + (2/5 ÷ 2) = 1/4 + 1/5 = 5/20 + 4/20 = <span class="ans-final">9/20</span>.'},
+ {id:11,sec:'C',kind:'frac',exp:[1,6],t:'How far is 5/6 from 1? Give your answer as a fraction.',w:'1 − 5/6 = 6/6 − 5/6 = <span class="ans-final">1/6</span>.'},
+ {id:12,sec:'C',kind:'frac',exp:[9,8],t:'Which is closer to 1: 5/6 or 9/8? Write the fraction that is closer.',w:'Over 24: 5/6 = 20/24 (distance 4/24); 9/8 = 27/24 (distance 3/24). 3/24 < 4/24 → <span class="ans-final">9/8</span> is closer.'}
+];
+function intsIn(v){return (String(v).match(/\d+/g)||[]).map(Number);}
+function qHTML(q){
+  var ph=(q.kind==='mixed')?'e.g. 4 1/2':(q.kind==='whole')?'a whole number':'e.g. 7/20';
+  var hint=(q.kind==='mixed')?'Write it as “whole numerator/denominator”.':(q.kind==='whole')?'Give a whole number.':'Give a fraction in its simplest form.';
+  return '<div class="q" id="q-'+q.id+'"><div class="qhead"><span class="qn">Q'+q.id+'.</span><span class="qtext">'+q.t+'</span></div>'+
+    '<div class="ansrow"><label for="a-'+q.id+'">Your answer:</label><input class="ans" id="a-'+q.id+'" type="text" autocomplete="off" placeholder="'+ph+'" data-q="'+q.id+'"><span class="marks">(1 mark)</span><span class="hint">'+hint+'</span></div>'+
+    '<div class="verdict" id="v-'+q.id+'"></div><button class="show-how" type="button" onclick="toggleWork(this)">➕ Show me how</button><div class="work" id="w-'+q.id+'">'+q.w+'</div></div>';
+}
+['A','B','C'].forEach(function(sec){document.getElementById('sec'+sec).innerHTML=QS.filter(function(q){return q.sec===sec;}).map(qHTML).join('');});
+function toggleWork(btn){var w=btn.nextElementSibling;var open=w.classList.toggle('show');btn.innerHTML=open?'➖ Hide working':'➕ Show me how';}
+function markAll(){var earned=0,total=QS.length;
+  QS.forEach(function(q){var inp=document.getElementById('a-'+q.id),verdict=document.getElementById('v-'+q.id),work=document.getElementById('w-'+q.id);inp.disabled=true;var attempted=inp.value.trim()!=='';var a=intsIn(inp.value);var ok=a.length===q.exp.length&&q.exp.every(function(x,k){return a[k]===x;});
+    if(ok){earned++;verdict.className='verdict ok';verdict.textContent='✓ Correct';}else{verdict.className='verdict no';verdict.textContent=(attempted?'✗ Not quite — try the working':'— Not attempted');work.classList.add('show');work.previousElementSibling.innerHTML='➖ Hide working';}});
+  document.getElementById('score').textContent=earned+' / '+total;}
+document.getElementById('markbtn').onclick=markAll;
+document.getElementById('resetbtn').onclick=function(){location.reload();};
+setupFracSteps('p1',P1);setupFracSteps('p2',P2);setupFracSteps('p3',P3);setupFracSteps('p4',P4);
+</script>
+<!-- IMPROVETUITION:CONTENT-END -->
+</body>
+</html>

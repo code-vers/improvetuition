@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Substitution: Formulas &amp; Expressions | Improve Tuition</title>
+<meta name="description" content="Help substituting numbers into expressions and formulas, including powers and negatives. Free practice with worked examples and read-aloud support.">
+<meta property="og:title" content="Substitution: Formulas &amp; Expressions | Improve Tuition">
+<meta property="og:description" content="Help substituting numbers into expressions and formulas, including powers and negatives. Free practice with worked examples and read-aloud support.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>:root{--navy:#242F3A;--coral:#D55A3F;--coral-hover:#B14526;--coral-deep:#B14526;--gold:#C99A2E;--gold-soft:#D6B35A;--gold-pale:#F1E8D0;--grey:#5A5A5A;--grey-soft:#8A8A8A;--paper:#F7F5F2;--cream:#E8E3DA;--white:#FFFFFF;--rule:#D8D2C7;--rule-line:#D8D2C7;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--grey);font-family:'DM Sans',system-ui,sans-serif;line-height:1.55;}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px 120px;}
+.pupil-banner{position:sticky;top:0;z-index:50;background:var(--navy);color:var(--white);padding:10px 16px;font-size:0.85rem;box-shadow:0 2px 8px rgba(36,47,58,0.15);}
+.pupil-banner strong{color:var(--gold-soft);}
+.pupil-banner .sep{opacity:0.5;margin:0 8px;}
+.topbar{background:var(--navy);color:var(--gold-soft);font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;padding:8px 20px;text-align:center;}
+.hero{background:var(--navy);color:var(--white);border-bottom:4px solid var(--gold);padding:30px 20px 34px;text-align:center;}
+.hero .eyebrow{color:var(--gold-soft);font-size:0.74rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;}
+.hero h1{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(1.7rem,6vw,2.5rem);margin:10px 0 6px;color:var(--white);}
+.hero .sub{font-style:italic;color:var(--gold-soft);font-size:1.02rem;margin:0 0 8px;}
+.hero .meta{color:rgba(255,255,255,0.7);font-size:0.84rem;}
+h2,h3{font-family:'Fraunces',serif;color:var(--navy);}
+.lesson-part{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:22px 20px;margin:22px 0;}
+.lesson-eyebrow{display:inline-block;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;padding:4px 10px;background:var(--gold-pale);border-radius:3px;}
+.lesson-h3{font-size:1.35rem;margin:10px 0 6px;}
+.lesson-aim{color:var(--grey);font-style:italic;margin:0 0 12px;}
+.lesson-part p{margin:10px 0;}
+.key-fact{background:var(--gold-pale);border-left:4px solid var(--gold);border-radius:0 6px 6px 0;padding:12px 16px;margin:14px 0;color:var(--navy);line-height:1.6;}
+.conv-map{margin:14px 0;border:1px solid var(--rule);border-radius:8px;overflow:hidden;}
+.cm-row{display:flex;justify-content:space-between;gap:10px;padding:10px 14px;border-bottom:1px solid var(--rule);background:var(--white);}
+.cm-row:nth-child(even){background:var(--paper);}
+.cm-row:last-child{border-bottom:0;}
+.cm-from{font-weight:700;color:var(--navy);font-size:0.92rem;}
+.cm-how{color:var(--grey);font-size:0.9rem;text-align:right;}
+.worked-example{border:1px solid var(--rule);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:14px 16px;margin:16px 0;background:var(--white);}
+.we-eyebrow{text-transform:uppercase;font-size:0.68rem;letter-spacing:2px;color:var(--grey-soft);font-weight:700;}
+.we-problem{font-family:'Fraunces',serif;color:var(--coral);font-size:1.15rem;font-weight:700;margin:4px 0 8px;}
+.we-steps{margin:0;padding:0;list-style:none;counter-reset:s;}
+.we-step{position:relative;padding:8px 0 8px 34px;border-top:1px dashed var(--rule);counter-increment:s;}
+.we-step:first-child{border-top:0;}
+.we-step::before{content:counter(s);position:absolute;left:0;top:7px;width:22px;height:22px;background:var(--coral);color:#fff;border-radius:50%;font-size:0.78rem;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;}
+.watch-out{background:#FBEEE9;border-left:4px solid var(--coral);border-radius:0 6px 6px 0;padding:12px 16px;margin:14px 0;color:var(--navy);}
+.watch-eyebrow{font-size:0.68rem;letter-spacing:2px;color:var(--coral-deep);font-weight:700;text-transform:uppercase;margin-bottom:4px;}
+.try-one{background:var(--cream);border-radius:8px;padding:14px 16px;margin:14px 0;}
+.try-eyebrow{text-transform:uppercase;font-size:0.68rem;letter-spacing:2px;color:var(--gold);font-weight:700;margin:0 0 4px;}
+.try-one details{margin-top:6px;}
+.try-one summary{cursor:pointer;color:var(--coral-deep);font-weight:600;}
+.lesson-jump{display:inline-block;margin:18px 0 2px;padding:11px 20px;background:var(--coral);color:#fff;font-weight:700;font-size:0.95rem;text-decoration:none;border-radius:8px;box-shadow:0 2px 6px rgba(213,90,63,0.28);transition:background .15s;}
+.lesson-jump:hover{background:var(--coral-hover);}
+.section-jump{display:flex;flex-wrap:wrap;align-items:center;gap:9px;justify-content:center;margin:22px 0;padding:13px 14px;background:var(--cream);border:1px solid var(--rule);border-radius:10px;}
+.section-jump .sj-label{font-size:0.82rem;font-weight:600;color:var(--grey);margin-right:2px;}
+.section-jump a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--white);border:2px solid var(--gold-soft);color:var(--navy);font-family:'Fraunces',serif;font-weight:700;font-size:1rem;text-decoration:none;transition:all .15s;}
+.section-jump a:hover{background:var(--coral);border-color:var(--coral);color:#fff;}
+.section-divider{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20px;margin:26px 0 14px;}
+.back-to-lesson{display:inline-block;margin:0 0 10px;color:var(--gold-soft);font-size:0.82rem;font-weight:600;text-decoration:none;letter-spacing:0.04em;}
+.back-to-lesson:hover{color:#fff;text-decoration:underline;}
+.section-divider .title{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:#fff;}
+.section-divider .intro{margin-top:12px;padding-top:12px;border-top:1px solid rgba(201,154,46,0.35);}
+.lo-eyebrow{font-size:0.7rem;letter-spacing:0.16em;color:var(--gold);font-weight:700;margin-bottom:6px;}
+.lo-statement{margin:0 0 10px;color:#fff;font-style:italic;font-size:0.98rem;}
+.sc-label{font-size:0.76rem;letter-spacing:0.05em;color:var(--gold);font-weight:600;margin-bottom:4px;}
+.sc-list{margin:0;padding-left:1.2em;color:rgba(255,255,255,0.92);font-size:0.92rem;line-height:1.5;}
+.question{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:18px 18px 16px;margin:14px 0;}
+.q-head{display:flex;gap:8px;margin-bottom:12px;}
+.q-num{font-family:'Fraunces',serif;color:var(--gold);font-weight:700;font-size:1.1rem;}
+.q-text{color:var(--navy);font-weight:600;}
+.parts{display:flex;flex-direction:column;gap:2px;}
+.part{display:flex;align-items:center;gap:10px;padding:7px 0;border-top:1px dashed var(--rule);flex-wrap:wrap;}
+.part:first-child{border-top:0;}
+.part-q{font-family:'Fraunces',serif;color:var(--navy);font-size:1.02rem;min-width:96px;}
+.answer-input{font-family:'DM Sans',sans-serif;font-size:1rem;padding:8px 10px;border:2px solid var(--rule);border-radius:7px;width:120px;background:var(--paper);color:var(--navy);}
+.answer-input:focus{outline:none;border-color:var(--gold-soft);background:#fff;}
+.fb{font-weight:700;font-size:1.05rem;min-width:18px;}
+.fb.ok{color:#1f7a4d;}
+.fb.no{color:var(--coral-deep);}
+.fb.part{color:var(--gold);}
+.cd{flex-basis:100%;font-size:0.86rem;color:var(--coral-deep);padding-left:106px;}
+.cd.show{margin-top:-2px;}
+.ord-items{background:var(--cream);border-radius:8px;padding:12px 14px;text-align:center;color:var(--navy);font-size:1.05rem;}
+.ord-tip{font-size:0.9rem;color:var(--grey);}
+.ord-grid{display:flex;flex-wrap:wrap;align-items:center;gap:8px;justify-content:center;margin:10px 0;}
+.ord-arrow{font-size:0.8rem;color:var(--grey-soft);font-weight:600;width:100%;text-align:center;}
+.ord-cell{display:flex;flex-direction:column;align-items:center;gap:3px;}
+.ord-pos{font-size:0.72rem;color:var(--grey-soft);font-weight:700;}
+.ord-input{width:74px;text-align:center;}
+.ord-cds{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;}
+.ord-cds .cd{flex-basis:auto;padding-left:0;}
+.action-bar{box-sizing:border-box;position:sticky;bottom:0;background:var(--navy);margin:0;padding:12px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between;box-shadow:0 -2px 8px rgba(36,47,58,0.2);z-index:40;}
+.progress{color:var(--gold-soft);font-size:0.82rem;}
+.btns{display:flex;gap:10px;}
+.btn{font-family:'DM Sans',sans-serif;font-weight:700;border:0;border-radius:8px;padding:11px 18px;cursor:pointer;font-size:0.95rem;background:var(--coral);color:#fff;}
+.btn:hover{background:var(--coral-hover);}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.5);}
+.score-panel{display:none;background:var(--white);border:2px solid var(--gold);border-radius:12px;padding:20px;margin:18px 0;text-align:center;}
+.score-num{font-family:'Fraunces',serif;font-size:2.4rem;color:var(--navy);font-weight:700;}
+.score-diag{color:var(--grey);margin-top:6px;}
+.pf-resume{margin:0 0 16px;padding:12px 16px;background:var(--gold-pale);border-left:4px solid var(--gold);border-radius:0 6px 6px 0;font-size:0.9rem;color:var(--navy);}
+.pf-resume a{color:var(--coral-deep);font-weight:700;cursor:pointer;text-decoration:underline;margin-left:8px;}
+.pf-saved{position:fixed;bottom:84px;right:14px;background:var(--navy);color:#fff;font-size:0.78rem;padding:7px 13px;border-radius:20px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:60;}
+.pf-saved.show{opacity:0.94;}
+.footer{background:var(--navy);color:rgba(255,255,255,0.8);padding:24px 20px;text-align:center;font-size:0.84rem;margin-top:30px;}
+.footer .org{color:var(--gold-soft);font-weight:700;font-family:'Fraunces',serif;}
+.footer a{color:var(--gold-soft);}
+@media (max-width:420px){.part-q{min-width:84px;}.cd{padding-left:0;}.answer-input{width:104px;}}
+.ws{margin-top:10px;}
+.ws details{border-top:1px dashed var(--rule);padding-top:8px;}
+.ws summary{cursor:pointer;color:var(--coral-deep);font-weight:600;font-size:0.9rem;}
+.ws .we-steps{margin-top:8px;}
+.rem-panel{margin-top:12px;padding:14px;background:var(--gold-pale);border-radius:8px;}
+.rem-head{font-size:0.78rem;letter-spacing:0.04em;font-weight:700;color:var(--coral-deep);text-transform:uppercase;margin-bottom:10px;}
+.rem-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:8px 0;border-top:1px dashed var(--rule);}
+.rem-row:first-of-type{border-top:0;}
+.rem-q{flex:1 1 100%;color:var(--navy);font-size:0.92rem;}
+.rem-ans-wrap{display:flex;align-items:center;gap:8px;}
+.rem-input{font-family:'DM Sans',sans-serif;font-size:0.95rem;padding:6px 9px;border:2px solid var(--rule);border-radius:6px;width:120px;background:#fff;color:var(--navy);}
+.rem-input:focus{outline:none;border-color:var(--gold-soft);}
+.rem-fb{font-weight:700;min-width:16px;}
+.rem-fb.ok{color:#1f7a4d;}
+.rem-fb.no{color:var(--coral-deep);}
+.rem-fb.part{color:var(--gold);}
+.rem-ans{margin-top:10px;}
+.rem-ans summary{cursor:pointer;color:var(--coral-deep);font-weight:600;font-size:0.88rem;}
+.rem-ans p{margin:6px 0 0;color:var(--navy);font-size:0.9rem;}
+.reg-card{background:#fff;border:1px solid var(--rule);border-left:4px solid var(--gold);border-radius:10px;padding:16px;margin:0 0 22px;}
+.reg-title{font-family:'Fraunces',serif;font-weight:600;color:var(--navy);font-size:1.02rem;margin-bottom:4px;}
+.reg-opt{font-family:'DM Sans',sans-serif;font-weight:400;color:var(--grey-soft);font-size:0.82rem;}
+.reg-grid{display:flex;flex-direction:column;gap:12px;margin-top:12px;}
+.reg-field{display:flex;flex-direction:column;gap:5px;}
+.reg-field span{font-size:0.82rem;font-weight:600;color:var(--grey);}
+.reg-field input{font-family:'DM Sans',sans-serif;font-size:0.95rem;padding:9px 11px;border:2px solid var(--rule);border-radius:7px;background:var(--paper);color:var(--navy);}
+.reg-field input:focus{outline:none;border-color:var(--gold-soft);background:#fff;}
+.score-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px;}
+.btn-tutor{background:var(--navy);color:#fff;}
+.btn-tutor:hover{background:#1a232c;}
+.check-row{margin-top:10px;}
+.check-one{font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:600;color:var(--coral-deep,#B14526);background:#fff;border:1.5px solid var(--coral,#D55A3F);border-radius:7px;padding:6px 14px;cursor:pointer;}
+.check-one:hover{background:var(--coral,#D55A3F);color:#fff;}
+.bar-figure{margin:16px 0 4px;padding:14px 12px;background:#F7F5F2;border:1px solid #D8D2C7;border-radius:10px;text-align:center;}
+.bar-figure svg{display:block;margin:0 auto;}
+.bar-cap{margin-top:10px;font-family:'Caveat',cursive;font-size:1.18rem;color:#5A5A5A;line-height:1.25;}
+.check-hint{margin-top:8px;padding:8px 11px;background:#F1E8D0;border-left:3px solid #C99A2E;border-radius:6px;font-size:0.9rem;color:#242F3A;}
+.check-hint .hint-label{font-weight:700;color:#B14526;text-transform:uppercase;font-size:0.72rem;letter-spacing:0.04em;margin-right:6px;}
+.check-ok{color:#1f7a4d;font-weight:600;}
+.check-muted{color:#5A5A5A;}
+.send-status{margin-top:10px;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:600;min-height:1.1em;}
+.send-status.ok{color:#1b7f4d;}
+.send-status.err{color:#B14526;}
+.ws-bar{margin:10px 0 2px;padding:10px;background:#FFFFFF;border:1px solid #E8E3DA;border-radius:8px;text-align:center;}
+.ws-bar svg{display:block;margin:0 auto;}
+.ws-bar-cap{margin-top:6px;font-family:'Caveat',cursive;font-size:1.05rem;color:#5A5A5A;line-height:1.2;}
+.try-steps{margin-top:8px;}
+.try-steps .tl{margin:4px 0;color:var(--navy);font-size:0.93rem;line-height:1.55;}</style>
+<style>
+/* Responsive fixes — added by responsive_fix.py */
+html, body { overflow-x: hidden; max-width: 100vw; }
+svg { max-width: 100%; height: auto; display: block; }
+.qfig, .figbox { max-width: 100%; overflow: hidden; }
+.figbox svg, .qfig svg { margin: 0 auto; }
+table.ak { table-layout: fixed; width: 100%; }
+table.ak td, table.ak th { word-break: break-word; overflow-wrap: anywhere; padding: 6px; font-size: 12px; }
+.q .qhead .qtext, .q .qprompt { overflow-wrap: anywhere; }
+.answer-line, .mistake { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- IMPROVETUITION:CONTENT-START -->
+<div class="pupil-banner"><strong>Preview mode</strong><span class="sep">&middot;</span><span style="opacity:0.75;">login disabled</span></div>
+<div class="topbar">Improve Tuition &middot; Foundation Maths &middot; Year 6&ndash;10</div>
+<div class="hero">
+  <div class="eyebrow">Algebra &middot; Substitution</div>
+  <h1>Substitution</h1>
+  <p class="sub">Substituting numbers into expressions and formulas &mdash; one clear step at a time.</p>
+  <p class="meta">6 lessons &middot; 35 questions (A&ndash;G) &middot; 20 calculation + 15 word problems &middot; no time pressure</p>
+</div>
+<div class="wrap">
+
+<div class="lesson-part" id="lesson-0" style="border-left:4px solid var(--coral);">
+  <p style="margin:0;">Substituting means swapping a letter for a number and working the value out. You do it with an expression (a set of terms with no equals sign, like 3x + 2) and with a formula (a rule that does have one, like P = 4L). Pupils most often slip by adding instead of multiplying (reading 4x as a single number), getting the order wrong, or forgetting that x<sup>2</sup> means x &times; x, not x &times; 2.</p>
+  <p style="margin:10px 0 0;">At Improve Tuition, a qualified teacher shows a pupil exactly how to replace the letter and follow the order of operations, in small worked steps &mdash; with read-aloud, comfort spacing and a reading tint for pupils who take in maths more easily that way.</p>
+</div>
+
+<div class="reg-card"><div class="reg-title">Pupil &amp; tutor details <span class="reg-opt">(optional &mdash; only needed to send results)</span></div><div class="reg-grid"><label class="reg-field"><span>Pupil name</span><input id="reg-name" type="text" autocomplete="off" placeholder="e.g. Aisha K."></label><label class="reg-field"><span>Year / class</span><input id="reg-year" type="text" autocomplete="off" placeholder="e.g. Year 8"></label><label class="reg-field"><span>Tutor email</span><input id="reg-tutor-email" type="email" autocomplete="off" placeholder="tutor@improvetuition.org"></label></div></div>
+
+<div class="lesson-part" id="lesson-1">
+<div class="lesson-eyebrow">Lesson 1</div>
+<h3 class="lesson-h3">What substitution means</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Swap a letter for a number, then work the value out.</p>
+<p><strong>Substituting</strong> means putting a number in place of a letter and then working out the value. You will see it with two things. An <strong>expression</strong> is a collection of terms with <strong>no</strong> equals sign, such as x + 8. A <strong>formula</strong> is a rule that <strong>does</strong> have an equals sign, such as P = 4L. Either way, the letter is just a box waiting for a number.</p>
+<figure class="bar-figure"><svg viewBox="0 0 320 118" width="100%" style="max-width:320px;height:auto" role="img" aria-label="An expression 3x plus 2 has no equals sign; a formula P equals 4L does"><rect x="12" y="24" width="140" height="60" rx="10" fill="#E8E3DA" stroke="#242F3A" stroke-width="1.8"/><text x="82" y="59" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="18" font-weight="700" fill="#242F3A">3x + 2</text><text x="82" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="#5A5A5A">expression &middot; no =</text><rect x="168" y="24" width="140" height="60" rx="10" fill="#FFFFFF" stroke="#C99A2E" stroke-width="2"/><text x="238" y="62" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="18" font-weight="700" fill="#242F3A">P <tspan fill="#D55A3F">=</tspan> 4L</text><text x="238" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="#5A5A5A">formula &middot; has =</text></svg><figcaption class="bar-cap">An <strong>expression</strong> (3x + 2) has no equals sign; a <strong>formula</strong> (P = 4L) does. Either way, you swap the letter for a number.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">Substitute x = 5 into the expression x + 8.</div><ol class="we-steps"><li class="we-step">Find the letter in the expression: it is x.</li><li class="we-step">Replace that x with its value, 5: the expression becomes 5 + 8.</li><li class="we-step">Work it out: 5 + 8 = 13.</li><li class="we-step">So x + 8 = <strong>13</strong> when x = 5.</li><li class="we-step">Check: we swapped the letter for the number and nothing else changed. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>Write the number exactly where the letter was; the rest of the expression stays the same.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>Substitute x = 6 into x + 4.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">Replace x with 6: 6 + 4.</div><div class="tl">Work it out: 6 + 4 = 10.</div><div class="tl">So x + 4 = <strong>10</strong>. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-A">Practise this now &mdash; Section A &rarr;</a></div>
+<div class="lesson-part" id="lesson-2">
+<div class="lesson-eyebrow">Lesson 2</div>
+<h3 class="lesson-h3">Terms like 4x</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Read 4x as 4 &times; x and substitute correctly.</p>
+<p>A number written next to a letter means <strong>multiply</strong>: 4x means 4 &times; x. So to substitute, replace the letter with its value and multiply. If x = 3, then 4x = 4 &times; 3 = 12.</p>
+<figure class="bar-figure"><svg viewBox="0 0 304 82" width="100%" style="max-width:304px;height:auto" role="img" aria-label="Function machine: input, operations, output"><rect x="14" y="22" width="80" height="46" rx="9" fill="#F1E8D0" stroke="#C99A2E" stroke-width="1.8"/><text x="54" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#242F3A">x = 4</text><line x1="94" y1="45" x2="111" y2="45" stroke="#5A5A5A" stroke-width="2"/><polygon points="111,40 118,45 111,50" fill="#5A5A5A"/><rect x="118" y="22" width="68" height="46" rx="9" fill="#E8E3DA" stroke="#242F3A" stroke-width="1.8"/><text x="152" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#242F3A">&times; 5</text><line x1="186" y1="45" x2="203" y2="45" stroke="#5A5A5A" stroke-width="2"/><polygon points="203,40 210,45 203,50" fill="#5A5A5A"/><rect x="210" y="22" width="80" height="46" rx="9" fill="#D55A3F" stroke="#B14526" stroke-width="1.8"/><text x="250" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">20</text></svg><figcaption class="bar-cap">5x means 5 &times; x. Feed x = 4 into the machine: 4 &times; 5 = 20.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">Substitute x = 4 into 5x.</div><ol class="we-steps"><li class="we-step">5x means 5 &times; x.</li><li class="we-step">Replace x with 4: 5 &times; 4.</li><li class="we-step">Work it out: 5 &times; 4 = 20.</li><li class="we-step">So 5x = <strong>20</strong> when x = 4.</li><li class="we-step">Check: 5x is a multiplication, not 54. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>4x means 4 &times; x &mdash; it is not the number forty-something.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>Substitute x = 3 into 7x.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">7x means 7 &times; x.</div><div class="tl">Replace x with 3: 7 &times; 3 = 21.</div><div class="tl">So 7x = <strong>21</strong>. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-B">Practise this now &mdash; Section B &rarr;</a></div>
+<div class="lesson-part" id="lesson-3">
+<div class="lesson-eyebrow">Lesson 3</div>
+<h3 class="lesson-h3">Two terms: multiply, then add</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Substitute into expressions like 3x + 2 in the right order.</p>
+<p>When an expression has two parts, like 3x + 2, do the <strong>multiplication first</strong>, then the addition or subtraction (that is the BIDMAS order). For 3x + 2 with x = 4: first 3 &times; 4 = 12, then 12 + 2 = 14.</p>
+<figure class="bar-figure"><svg viewBox="0 0 396 82" width="100%" style="max-width:340px;height:auto" role="img" aria-label="Function machine: input, operations, output"><rect x="14" y="22" width="80" height="46" rx="9" fill="#F1E8D0" stroke="#C99A2E" stroke-width="1.8"/><text x="54" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#242F3A">x = 5</text><line x1="94" y1="45" x2="111" y2="45" stroke="#5A5A5A" stroke-width="2"/><polygon points="111,40 118,45 111,50" fill="#5A5A5A"/><rect x="118" y="22" width="68" height="46" rx="9" fill="#E8E3DA" stroke="#242F3A" stroke-width="1.8"/><text x="152" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#242F3A">&times; 2</text><line x1="186" y1="45" x2="203" y2="45" stroke="#5A5A5A" stroke-width="2"/><polygon points="203,40 210,45 203,50" fill="#5A5A5A"/><rect x="210" y="22" width="68" height="46" rx="9" fill="#E8E3DA" stroke="#242F3A" stroke-width="1.8"/><text x="244" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#242F3A">+ 3</text><line x1="278" y1="45" x2="295" y2="45" stroke="#5A5A5A" stroke-width="2"/><polygon points="295,40 302,45 295,50" fill="#5A5A5A"/><rect x="302" y="22" width="80" height="46" rx="9" fill="#D55A3F" stroke="#B14526" stroke-width="1.8"/><text x="342" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">13</text></svg><figcaption class="bar-cap">For 2x + 3, multiply first then add: 5 &times; 2 = 10, then + 3 = 13.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">Substitute x = 5 into 2x + 3.</div><ol class="we-steps"><li class="we-step">2x + 3 means (2 &times; x) + 3.</li><li class="we-step">Replace x with 5: (2 &times; 5) + 3.</li><li class="we-step">Multiply first: 2 &times; 5 = 10.</li><li class="we-step">Then add: 10 + 3 = 13.</li><li class="we-step">So 2x + 3 = <strong>13</strong> when x = 5. Check: multiply before you add. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>Do the &times; before the + or &minus;. 2x + 3 with x = 5 is 13, not 25.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>Substitute x = 4 into 6x &minus; 5.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">Multiply first: 6 &times; 4 = 24.</div><div class="tl">Then subtract: 24 &minus; 5 = 19.</div><div class="tl">So 6x &minus; 5 = <strong>19</strong>. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-C">Practise this now &mdash; Section C &rarr;</a></div>
+<div class="lesson-part" id="lesson-4">
+<div class="lesson-eyebrow">Lesson 4</div>
+<h3 class="lesson-h3">Powers and fractions</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Substitute where there is a power, or a fraction of the letter.</p>
+<p>A power means multiply the number by itself: x<sup>2</sup> means x &times; x, so if x = 3 then x<sup>2</sup> = 9. A fraction in front means a fraction of the letter: &frac12;x means half of x (the same as x &divide; 2), and &#8531;x means a third of x. Do the power or the fraction first, then the rest.</p>
+<figure class="bar-figure"><svg viewBox="0 0 304 82" width="100%" style="max-width:304px;height:auto" role="img" aria-label="Function machine: input, operations, output"><rect x="14" y="22" width="80" height="46" rx="9" fill="#F1E8D0" stroke="#C99A2E" stroke-width="1.8"/><text x="54" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#242F3A">x = 3</text><line x1="94" y1="45" x2="111" y2="45" stroke="#5A5A5A" stroke-width="2"/><polygon points="111,40 118,45 111,50" fill="#5A5A5A"/><rect x="118" y="22" width="68" height="46" rx="9" fill="#E8E3DA" stroke="#242F3A" stroke-width="1.8"/><text x="152" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#242F3A">square it</text><line x1="186" y1="45" x2="203" y2="45" stroke="#5A5A5A" stroke-width="2"/><polygon points="203,40 210,45 203,50" fill="#5A5A5A"/><rect x="210" y="22" width="80" height="46" rx="9" fill="#D55A3F" stroke="#B14526" stroke-width="1.8"/><text x="250" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">9</text></svg><figcaption class="bar-cap">x<sup>2</sup> means x &times; x. Squaring 3 gives 3 &times; 3 = 9.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">Substitute x = 4 into x<sup>2</sup> + 1.</div><ol class="we-steps"><li class="we-step">Do the power first: x<sup>2</sup> = 4 &times; 4 = 16.</li><li class="we-step">Then add: 16 + 1 = 17.</li><li class="we-step">So x<sup>2</sup> + 1 = <strong>17</strong> when x = 4.</li><li class="we-step">Check: 4<sup>2</sup> is 16 (four times four), not 8. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>x<sup>2</sup> means x &times; x, not x &times; 2.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>Substitute x = 8 into &frac12;x + 2.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">&frac12;x means half of x: half of 8 is 4.</div><div class="tl">Then add: 4 + 2 = 6.</div><div class="tl">So &frac12;x + 2 = <strong>6</strong>. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-D">Practise this now &mdash; Section D &rarr;</a></div>
+<div class="lesson-part" id="lesson-5">
+<div class="lesson-eyebrow">Lesson 5</div>
+<h3 class="lesson-h3">Substituting into a formula</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Put the given value into a rule and find the result.</p>
+<p>A <strong>formula</strong> is a rule with an equals sign, like P = 4L. To use it, substitute the value you are given and work out the other side. Formulas turn a real situation &mdash; a perimeter, a price, a conversion &mdash; into one quick calculation.</p>
+<figure class="bar-figure"><svg viewBox="0 0 304 82" width="100%" style="max-width:304px;height:auto" role="img" aria-label="Function machine: input, operations, output"><rect x="14" y="22" width="80" height="46" rx="9" fill="#F1E8D0" stroke="#C99A2E" stroke-width="1.8"/><text x="54" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#242F3A">L = 6</text><line x1="94" y1="45" x2="111" y2="45" stroke="#5A5A5A" stroke-width="2"/><polygon points="111,40 118,45 111,50" fill="#5A5A5A"/><rect x="118" y="22" width="68" height="46" rx="9" fill="#E8E3DA" stroke="#242F3A" stroke-width="1.8"/><text x="152" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#242F3A">&times; 4</text><line x1="186" y1="45" x2="203" y2="45" stroke="#5A5A5A" stroke-width="2"/><polygon points="203,40 210,45 203,50" fill="#5A5A5A"/><rect x="210" y="22" width="80" height="46" rx="9" fill="#D55A3F" stroke="#B14526" stroke-width="1.8"/><text x="250" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">P = 24</text></svg><figcaption class="bar-cap">The formula P = 4L is a machine: feed in L = 6, multiply by 4, out comes P = 24.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">A square has perimeter P = 4L. Find P when the side L = 6 cm.</div><ol class="we-steps"><li class="we-step">The formula is P = 4L, which means P = 4 &times; L.</li><li class="we-step">Replace L with 6: P = 4 &times; 6.</li><li class="we-step">Work it out: 4 &times; 6 = 24.</li><li class="we-step">So P = <strong>24</strong> cm.</li><li class="we-step">Check: a square with side 6 has four sides of 6, and 4 &times; 6 = 24. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>Substitute into the side that has the letter, then work out the subject (here P).</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>The cost of n tickets is C = 9n pounds. Find C when n = 7.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">C = 9n means 9 &times; n.</div><div class="tl">Replace n with 7: 9 &times; 7 = 63.</div><div class="tl">So C = <strong>&pound;63</strong>. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-E">Practise this now &mdash; Section E &rarr;</a></div>
+<div class="lesson-part" id="lesson-6">
+<div class="lesson-eyebrow">Lesson 6</div>
+<h3 class="lesson-h3">Two-step and real-life formulas</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Substitute into formulas with two steps, including negative values.</p>
+<p>Many formulas have more than one step &mdash; a multiply (or divide) and then an add. Work through them in order. The same method handles a negative value: replace the letter, keeping its sign, and follow the order of operations.</p>
+<figure class="bar-figure"><svg viewBox="0 0 488 82" width="100%" style="max-width:340px;height:auto" role="img" aria-label="Function machine: input, operations, output"><rect x="14" y="22" width="80" height="46" rx="9" fill="#F1E8D0" stroke="#C99A2E" stroke-width="1.8"/><text x="54" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#242F3A">C = 20</text><line x1="94" y1="45" x2="111" y2="45" stroke="#5A5A5A" stroke-width="2"/><polygon points="111,40 118,45 111,50" fill="#5A5A5A"/><rect x="118" y="22" width="68" height="46" rx="9" fill="#E8E3DA" stroke="#242F3A" stroke-width="1.8"/><text x="152" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#242F3A">&times; 9</text><line x1="186" y1="45" x2="203" y2="45" stroke="#5A5A5A" stroke-width="2"/><polygon points="203,40 210,45 203,50" fill="#5A5A5A"/><rect x="210" y="22" width="68" height="46" rx="9" fill="#E8E3DA" stroke="#242F3A" stroke-width="1.8"/><text x="244" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#242F3A">&divide; 5</text><line x1="278" y1="45" x2="295" y2="45" stroke="#5A5A5A" stroke-width="2"/><polygon points="295,40 302,45 295,50" fill="#5A5A5A"/><rect x="302" y="22" width="68" height="46" rx="9" fill="#E8E3DA" stroke="#242F3A" stroke-width="1.8"/><text x="336" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#242F3A">+ 32</text><line x1="370" y1="45" x2="387" y2="45" stroke="#5A5A5A" stroke-width="2"/><polygon points="387,40 394,45 387,50" fill="#5A5A5A"/><rect x="394" y="22" width="80" height="46" rx="9" fill="#D55A3F" stroke="#B14526" stroke-width="1.8"/><text x="434" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">F = 68</text></svg><figcaption class="bar-cap">F = 9C &divide; 5 + 32 is a three-step machine: 20 &times; 9 = 180, &divide; 5 = 36, + 32 = 68.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">To change Celsius to Fahrenheit, F = 9C &divide; 5 + 32. Find F when C = 25.</div><ol class="we-steps"><li class="we-step">Replace C with 25: F = 9 &times; 25 &divide; 5 + 32.</li><li class="we-step">Work the multiply and divide first: 9 &times; 25 = 225, then 225 &divide; 5 = 45.</li><li class="we-step">Then add: 45 + 32 = 77.</li><li class="we-step">So F = <strong>77</strong>, meaning 25&deg;C = 77&deg;F.</li><li class="we-step">Check: do the &times; and &divide; before the + 32. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>Keep the order: multiply and divide before adding. Carry a minus sign with its number.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>Substitute x = &minus;2 into 3x + 10.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">Replace x with &minus;2: 3 &times; (&minus;2) + 10.</div><div class="tl">Multiply first: 3 &times; (&minus;2) = &minus;6.</div><div class="tl">Then add: &minus;6 + 10 = 4.</div><div class="tl">So 3x + 10 = <strong>4</strong>. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-F">Practise this now &mdash; Section F &rarr;</a></div>
+
+<div class="section-jump-wrap"><nav class="section-jump" aria-label="Jump to a section"><span class="sj-label">Jump to a section:</span><a href="#sec-A">A</a><a href="#sec-B">B</a><a href="#sec-C">C</a><a href="#sec-D">D</a><a href="#sec-E">E</a><a href="#sec-F">F</a><a href="#sec-G">G</a></nav></div>
+
+<div class="section-divider" id="sec-A"><a class="back-to-lesson" href="#lesson-1">&uarr; Back to the lessons</a><div class="title">Section A &middot; Substituting into expressions</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 2 &middot; CALCULATION</div><p class="lo-statement">Replace a letter with a number and work it out.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>put the number where the letter was</li><li>keep the rest the same</li><li>work out the value</li></ul></div></div>
+<div class="question" id="q-1"><div class="q-head"><span class="q-num">1.</span><span class="q-text">Substitute x = 5 into x + 9.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="14" placeholder="a number" data-val="14.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Replace x with 5: 5 + 9.</li><li class="we-step">Work it out: 5 + 9 = 14.</li><li class="we-step">So x + 9 = <strong>14</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-2"><div class="q-head"><span class="q-num">2.</span><span class="q-text">Substitute a = 7 into a &minus; 3.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="4" placeholder="a number" data-val="4.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Replace a with 7: 7 &minus; 3.</li><li class="we-step">Work it out: 7 &minus; 3 = 4.</li><li class="we-step">So a &minus; 3 = <strong>4</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-3"><div class="q-head"><span class="q-num">3.</span><span class="q-text">Substitute x = 6 into 4x.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="24" placeholder="a number" data-val="24.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">4x means 4 &times; x. Replace x with 6: 4 &times; 6.</li><li class="we-step">Work it out: 4 &times; 6 = 24.</li><li class="we-step">So 4x = <strong>24</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-4"><div class="q-head"><span class="q-num">4.</span><span class="q-text">Substitute m = 3 into 2m + 5.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="11" placeholder="a number" data-val="11.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Multiply first: 2 &times; 3 = 6.</li><li class="we-step">Then add: 6 + 5 = 11.</li><li class="we-step">So 2m + 5 = <strong>11</strong> when m = 3. ✓</li></ol></details></div></div>
+<div class="question" id="q-5"><div class="q-head"><span class="q-num">5.</span><span class="q-text">Substitute y = 8 into 5y &minus; 12.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="28" placeholder="a number" data-val="28.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Multiply first: 5 &times; 8 = 40.</li><li class="we-step">Then subtract: 40 &minus; 12 = 28.</li><li class="we-step">So 5y &minus; 12 = <strong>28</strong>. ✓</li></ol></details></div></div>
+<div class="section-divider" id="sec-B"><a class="back-to-lesson" href="#lesson-2">&uarr; Back to the lessons</a><div class="title">Section B &middot; Terms with a number in front</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 2 &middot; CALCULATION</div><p class="lo-statement">Substitute into terms like 3x + 7.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>3x means 3 &times; x</li><li>multiply, then add or subtract</li><li>keep the order</li></ul></div></div>
+<div class="question" id="q-6"><div class="q-head"><span class="q-num">6.</span><span class="q-text">Substitute x = 4 into 3x + 7.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="19" placeholder="a number" data-val="19.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Multiply first: 3 &times; 4 = 12.</li><li class="we-step">Then add: 12 + 7 = 19.</li><li class="we-step">So 3x + 7 = <strong>19</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-7"><div class="q-head"><span class="q-num">7.</span><span class="q-text">Substitute t = 9 into 6t &minus; 4.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="50" placeholder="a number" data-val="50.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Multiply first: 6 &times; 9 = 54.</li><li class="we-step">Then subtract: 54 &minus; 4 = 50.</li><li class="we-step">So 6t &minus; 4 = <strong>50</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-8"><div class="q-head"><span class="q-num">8.</span><span class="q-text">Substitute n = 5 into 2n + 11.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="21" placeholder="a number" data-val="21.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Multiply first: 2 &times; 5 = 10.</li><li class="we-step">Then add: 10 + 11 = 21.</li><li class="we-step">So 2n + 11 = <strong>21</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-9"><div class="q-head"><span class="q-num">9.</span><span class="q-text">Substitute p = 7 into 4p &minus; 9.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="19" placeholder="a number" data-val="19.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Multiply first: 4 &times; 7 = 28.</li><li class="we-step">Then subtract: 28 &minus; 9 = 19.</li><li class="we-step">So 4p &minus; 9 = <strong>19</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-10"><div class="q-head"><span class="q-num">10.</span><span class="q-text">Substitute x = 10 into 3x &minus; 8.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="22" placeholder="a number" data-val="22.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Multiply first: 3 &times; 10 = 30.</li><li class="we-step">Then subtract: 30 &minus; 8 = 22.</li><li class="we-step">So 3x &minus; 8 = <strong>22</strong>. ✓</li></ol></details></div></div>
+<div class="section-divider" id="sec-C"><a class="back-to-lesson" href="#lesson-3">&uarr; Back to the lessons</a><div class="title">Section C &middot; Fractions of the letter</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 3 &middot; CALCULATION</div><p class="lo-statement">Substitute where there is a fraction of the letter.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>&frac12;x means half of x</li><li>do the fraction first</li><li>then add or subtract</li></ul></div></div>
+<div class="question" id="q-11"><div class="q-head"><span class="q-num">11.</span><span class="q-text">Substitute x = 8 into &frac12;x.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="4" placeholder="a number" data-val="4.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">&frac12;x means half of x: half of 8.</li><li class="we-step">Half of 8 = 4.</li><li class="we-step">So &frac12;x = <strong>4</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-12"><div class="q-head"><span class="q-num">12.</span><span class="q-text">Substitute x = 12 into &#8531;x + 2.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="6" placeholder="a number" data-val="6.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">&#8531;x means a third of x: a third of 12 = 4.</li><li class="we-step">Then add: 4 + 2 = 6.</li><li class="we-step">So &#8531;x + 2 = <strong>6</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-13"><div class="q-head"><span class="q-num">13.</span><span class="q-text">Substitute x = 10 into &frac12;x + 7.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="12" placeholder="a number" data-val="12.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Half of 10 = 5.</li><li class="we-step">Then add: 5 + 7 = 12.</li><li class="we-step">So &frac12;x + 7 = <strong>12</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-14"><div class="q-head"><span class="q-num">14.</span><span class="q-text">Substitute x = 9 into &#8531;x &minus; 1.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="2" placeholder="a number" data-val="2.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">A third of 9 = 3.</li><li class="we-step">Then subtract: 3 &minus; 1 = 2.</li><li class="we-step">So &#8531;x &minus; 1 = <strong>2</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-15"><div class="q-head"><span class="q-num">15.</span><span class="q-text">Substitute k = 16 into &frac14;k &minus; 1.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="3" placeholder="a number" data-val="3.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">A quarter of 16 = 4.</li><li class="we-step">Then subtract: 4 &minus; 1 = 3.</li><li class="we-step">So &frac14;k &minus; 1 = <strong>3</strong>. ✓</li></ol></details></div></div>
+<div class="section-divider" id="sec-D"><a class="back-to-lesson" href="#lesson-4">&uarr; Back to the lessons</a><div class="title">Section D &middot; Powers</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 3 &middot; CALCULATION</div><p class="lo-statement">Substitute where there is a power.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>x<sup>2</sup> means x &times; x</li><li>do the power first</li><li>then the rest</li></ul></div></div>
+<div class="question" id="q-16"><div class="q-head"><span class="q-num">16.</span><span class="q-text">Substitute x = 3 into x<sup>2</sup>.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="9" placeholder="a number" data-val="9.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">x<sup>2</sup> means x &times; x: 3 &times; 3.</li><li class="we-step">Work it out: 3 &times; 3 = 9.</li><li class="we-step">So x<sup>2</sup> = <strong>9</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-17"><div class="q-head"><span class="q-num">17.</span><span class="q-text">Substitute x = 4 into x<sup>2</sup> + 5.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="21" placeholder="a number" data-val="21.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Do the power first: 4 &times; 4 = 16.</li><li class="we-step">Then add: 16 + 5 = 21.</li><li class="we-step">So x<sup>2</sup> + 5 = <strong>21</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-18"><div class="q-head"><span class="q-num">18.</span><span class="q-text">Substitute x = 2 into 3x<sup>2</sup>.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="12" placeholder="a number" data-val="12.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Do the power first: 2 &times; 2 = 4.</li><li class="we-step">Then multiply by 3: 3 &times; 4 = 12.</li><li class="we-step">So 3x<sup>2</sup> = <strong>12</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-19"><div class="q-head"><span class="q-num">19.</span><span class="q-text">Substitute x = 5 into 2x<sup>2</sup> &minus; 10.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="40" placeholder="a number" data-val="40.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Power first: 5 &times; 5 = 25.</li><li class="we-step">Times 2: 2 &times; 25 = 50.</li><li class="we-step">Then subtract: 50 &minus; 10 = 40. So <strong>40</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-20"><div class="q-head"><span class="q-num">20.</span><span class="q-text">Substitute x = 3 into 4x<sup>2</sup> &minus; 11.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="25" placeholder="a number" data-val="25.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Power first: 3 &times; 3 = 9.</li><li class="we-step">Times 4: 4 &times; 9 = 36.</li><li class="we-step">Then subtract: 36 &minus; 11 = 25. So <strong>25</strong>. ✓</li></ol></details></div></div>
+<div class="section-divider" id="sec-E"><a class="back-to-lesson" href="#lesson-5">&uarr; Back to the lessons</a><div class="title">Section E &middot; Using a formula</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 3 &middot; WORD PROBLEM</div><p class="lo-statement">Substitute a value into a rule and find the result.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>a formula has an equals sign</li><li>substitute the given value</li><li>work out the subject</li></ul></div></div>
+<div class="question" id="q-21"><div class="q-head"><span class="q-num">21.</span><span class="q-text">The perimeter of a square is P = 4L. Find P when L = 7 cm.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="28 cm" placeholder="a number" data-val="28.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">P = 4L = 4 &times; L. Replace L with 7: 4 &times; 7.</li><li class="we-step">Work it out: 4 &times; 7 = 28.</li><li class="we-step">So P = <strong>28</strong> cm. ✓</li></ol></details></div></div>
+<div class="question" id="q-22"><div class="q-head"><span class="q-num">22.</span><span class="q-text">A taxi charges C = 3m + 2 pounds for m miles. Find C when m = 6.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="&pound;20" placeholder="a number" data-val="20.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">C = 3m + 2. Replace m with 6: 3 &times; 6 + 2.</li><li class="we-step">Multiply first: 18, then add 2 = 20.</li><li class="we-step">So C = <strong>&pound;20</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-23"><div class="q-head"><span class="q-num">23.</span><span class="q-text">To change kilometres to miles, M = 5K &divide; 8. Convert 24 km to miles.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="15 miles" placeholder="a number" data-val="15.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">M = 5K &divide; 8. Replace K with 24: 5 &times; 24 &divide; 8.</li><li class="we-step">5 &times; 24 = 120, then 120 &divide; 8 = 15.</li><li class="we-step">So 24 km = <strong>15</strong> miles. ✓</li></ol></details></div></div>
+<div class="question" id="q-24"><div class="q-head"><span class="q-num">24.</span><span class="q-text">The cost of n tickets is C = 9n pounds. Find the cost of 5 tickets.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="&pound;45" placeholder="a number" data-val="45.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">C = 9n = 9 &times; n. Replace n with 5: 9 &times; 5.</li><li class="we-step">Work it out: 9 &times; 5 = 45.</li><li class="we-step">So C = <strong>&pound;45</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-25"><div class="q-head"><span class="q-num">25.</span><span class="q-text">A plumber charges H = 40t + 25 pounds for t hours. Find H when t = 3.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="&pound;145" placeholder="a number" data-val="145.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">H = 40t + 25. Replace t with 3: 40 &times; 3 + 25.</li><li class="we-step">Multiply first: 120, then add 25 = 145.</li><li class="we-step">So H = <strong>&pound;145</strong>. ✓</li></ol></details></div></div>
+<div class="section-divider" id="sec-F"><a class="back-to-lesson" href="#lesson-6">&uarr; Back to the lessons</a><div class="title">Section F &middot; Two-step formulas</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 3 &middot; WORD PROBLEM</div><p class="lo-statement">Substitute into formulas with more than one step.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>multiply or divide first</li><li>then add</li><li>two letters: substitute both</li></ul></div></div>
+<div class="question" id="q-26"><div class="q-head"><span class="q-num">26.</span><span class="q-text">To change Celsius to Fahrenheit, F = 9C &divide; 5 + 32. Find F when C = 20.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="68&deg;F" placeholder="a number" data-val="68.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">F = 9C &divide; 5 + 32. Replace C with 20: 9 &times; 20 &divide; 5 + 32.</li><li class="we-step">9 &times; 20 = 180, 180 &divide; 5 = 36.</li><li class="we-step">Then add 32: 36 + 32 = 68. So <strong>68&deg;F</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-27"><div class="q-head"><span class="q-num">27.</span><span class="q-text">The area of a rectangle is A = lw. Find A when l = 8 and w = 5.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="40" placeholder="a number" data-val="40.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">A = lw = l &times; w. Replace: 8 &times; 5.</li><li class="we-step">Work it out: 8 &times; 5 = 40.</li><li class="we-step">So A = <strong>40</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-28"><div class="q-head"><span class="q-num">28.</span><span class="q-text">The terms of a sequence are given by T = 5n + 3. Find the 10th term (n = 10).</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="53" placeholder="a number" data-val="53.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">T = 5n + 3. Replace n with 10: 5 &times; 10 + 3.</li><li class="we-step">50, then add 3 = 53.</li><li class="we-step">So the 10th term is <strong>53</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-29"><div class="q-head"><span class="q-num">29.</span><span class="q-text">The area of a triangle is A = &frac12;bh. Find A when b = 10 and h = 6.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="30" placeholder="a number" data-val="30.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">A = &frac12;bh = half of b &times; h. b &times; h = 10 &times; 6 = 60.</li><li class="we-step">Half of 60 = 30.</li><li class="we-step">So A = <strong>30</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-30"><div class="q-head"><span class="q-num">30.</span><span class="q-text">To change Celsius to Fahrenheit, F = 9C &divide; 5 + 32. Find F when C = 10.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="50&deg;F" placeholder="a number" data-val="50.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">F = 9C &divide; 5 + 32. Replace C with 10: 9 &times; 10 &divide; 5 + 32.</li><li class="we-step">90 &divide; 5 = 18, then 18 + 32 = 50.</li><li class="we-step">So <strong>50&deg;F</strong>. ✓</li></ol></details></div></div>
+<div class="section-divider" id="sec-G"><a class="back-to-lesson" href="#lesson-6">&uarr; Back to the lessons</a><div class="title">Section G &middot; Negatives and sequences</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 4 &middot; WORD PROBLEM</div><p class="lo-statement">Substitute negative values and into harder formulas.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>carry the minus sign</li><li>follow the order of operations</li><li>do powers first</li></ul></div></div>
+<div class="question" id="q-31"><div class="q-head"><span class="q-num">31.</span><span class="q-text">Substitute x = &minus;2 into 3x + 10.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="4" placeholder="a number" data-val="4.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Replace x with &minus;2: 3 &times; (&minus;2) + 10.</li><li class="we-step">Multiply first: &minus;6, then add 10 = 4.</li><li class="we-step">So 3x + 10 = <strong>4</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-32"><div class="q-head"><span class="q-num">32.</span><span class="q-text">Substitute x = &minus;5 into 2x + 20.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="10" placeholder="a number" data-val="10.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Replace x with &minus;5: 2 &times; (&minus;5) + 20.</li><li class="we-step">Multiply first: &minus;10, then add 20 = 10.</li><li class="we-step">So 2x + 20 = <strong>10</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-33"><div class="q-head"><span class="q-num">33.</span><span class="q-text">The formula v = u + at gives final speed. Find v when u = 4, a = 3 and t = 5.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="19" placeholder="a number" data-val="19.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">v = u + at. Replace: 4 + 3 &times; 5.</li><li class="we-step">Multiply first: 3 &times; 5 = 15, then add 4 = 19.</li><li class="we-step">So v = <strong>19</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-34"><div class="q-head"><span class="q-num">34.</span><span class="q-text">Substitute x = &minus;3 into x<sup>2</sup> + 1.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="10" placeholder="a number" data-val="10.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Replace x with &minus;3: (&minus;3)<sup>2</sup> + 1.</li><li class="we-step">A negative squared is positive: (&minus;3) &times; (&minus;3) = 9.</li><li class="we-step">Then add 1: 9 + 1 = 10. So <strong>10</strong>. ✓</li></ol></details></div></div>
+<div class="question" id="q-35"><div class="q-head"><span class="q-num">35.</span><span class="q-text">A sequence is given by T = n<sup>2</sup> + n. Find the 6th term (n = 6).</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="42" placeholder="a number" data-val="42.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">T = n<sup>2</sup> + n. Replace n with 6: 6<sup>2</sup> + 6.</li><li class="we-step">6<sup>2</sup> = 36, then add 6 = 42.</li><li class="we-step">So the 6th term is <strong>42</strong>. ✓</li></ol></details></div></div>
+
+<div class="score-panel" id="score-panel"><div class="score-num" id="score-num"></div><div class="score-diag" id="score-diag"></div><div class="score-actions"><button id="send-btn" class="btn btn-tutor" onclick="sendToTutor()">Send to Tutor</button><button id="download-btn" class="btn btn-tutor" onclick="downloadResults()">Download results (.txt)</button></div><div class="send-status" id="send-status"></div></div>
+</div>
+
+<div class="action-bar">
+  <span class="progress" id="progress">0 of 35 answered</span>
+  <div class="btns">
+    <button class="btn" id="mark-btn" onclick="markAll()">Mark My Work</button>
+    <button id="reset-btn" class="btn btn-ghost" onclick="resetAll()">Reset</button>
+  </div>
+</div>
+<style>
+.topic-help{max-width:760px;margin:6px auto 0;padding:30px 20px 6px;border-top:2px solid var(--rule);}
+.th-eyebrow,.th-faq-label{font:700 .72rem/1 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);}
+.topic-help h2{font-family:'Fraunces',serif;color:var(--navy);font-size:1.45rem;margin:.4rem 0 .85rem;line-height:1.22;}
+.topic-help p{color:var(--grey);margin:0 0 .85rem;}
+.th-faq-label{margin:1.5rem 0 .55rem;display:block;}
+.th-faq{border:1px solid var(--rule);border-radius:10px;background:var(--white);margin:0 0 8px;overflow:hidden;}
+.th-faq summary{cursor:pointer;list-style:none;padding:13px 42px 13px 16px;font:700 1rem/1.35 'DM Sans',sans-serif;color:var(--navy);position:relative;}
+.th-faq summary::-webkit-details-marker{display:none;}
+.th-faq summary::after{content:'+';position:absolute;right:16px;top:10px;font-size:1.35rem;line-height:1;color:var(--coral);font-weight:700;}
+.th-faq[open] summary::after{content:'\2212';}
+.th-faq summary:hover{color:var(--coral-hover);}
+.th-faq>div{padding:2px 16px 14px;color:var(--grey);line-height:1.55;}
+</style>
+<section class="topic-help" id="topic-help" aria-labelledby="th-h">
+  <div class="th-eyebrow">Guide</div>
+  <h2 id="th-h">What is substitution in maths?</h2>
+  <p>Substitution in maths means replacing a letter in an expression or formula with a number, then working out the value. You substitute into an <strong>expression</strong> &mdash; a set of terms with no equals sign, like 3x + 2 &mdash; and into a <strong>formula</strong> &mdash; a rule with an equals sign, like P = 4L for the perimeter of a square. Whatever the letter, you put the given number in its place and calculate.</p>
+  <p>The order matters. Work out any powers or brackets first, then multiplying and dividing, then adding and subtracting &mdash; the usual BIDMAS order. So for 3x + 2 with x = 4, you multiply 3 &times; 4 = 12 before adding 2 to reach 14. A term like 4x always means 4 &times; x, and x<sup>2</sup> means x &times; x.</p>
+  <p>Common mistakes are reading 4x as a single number instead of a multiplication, adding before multiplying, squaring by doubling (treating x<sup>2</sup> as x &times; 2), and dropping a minus sign when the value is negative. At Improve Tuition, a qualified teacher shows a pupil exactly how to replace each letter and follow the order of operations, in small worked steps &mdash; with read-aloud, comfort spacing and a reading tint for pupils who take in maths more easily that way.</p>
+  <span class="th-faq-label">Common questions</span>
+  <details class="th-faq"><summary>What is the difference between an expression and a formula?</summary><div>An expression is a collection of terms with no equals sign, such as 3x + 2. A formula is a rule that does have an equals sign, such as P = 4L. You substitute into both the same way &mdash; by replacing the letter with a number.</div></details>
+  <details class="th-faq"><summary>How do you substitute a number into an expression?</summary><div>Replace every letter with its value, keeping everything else the same, then work the calculation out in the usual order. For 2x + 3 with x = 5, that is 2 &times; 5 + 3 = 13.</div></details>
+  <details class="th-faq"><summary>What does x<sup>2</sup> mean when you substitute?</summary><div>x<sup>2</sup> means x &times; x, not x &times; 2. So if x = 3, then x<sup>2</sup> = 3 &times; 3 = 9. Always work out the power before multiplying or adding.</div></details>
+  <details class="th-faq"><summary>Which operation do you do first when substituting?</summary><div>Follow BIDMAS: powers and brackets first, then multiply and divide, then add and subtract. In 3x + 2 you multiply 3 by the value before adding 2.</div></details>
+  <details class="th-faq"><summary>How do you substitute a negative number?</summary><div>Put the negative value in place of the letter, keeping its sign, then follow the order of operations. For 3x + 10 with x = &minus;2, that is 3 &times; (&minus;2) + 10 = &minus;6 + 10 = 4.</div></details>
+</section>
+<style>
+.next-step{max-width:760px;margin:20px auto 0;padding:24px 22px;background:var(--navy);border-radius:14px;}
+.next-step .ns-eyebrow{font:700 .72rem/1 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);}
+.next-step h2{font-family:'Fraunces',serif;color:#fff;font-size:1.3rem;margin:.45rem 0 .6rem;line-height:1.25;}
+.next-step p{color:#E8E3DA;margin:0 0 16px;line-height:1.55;}
+.next-step a.ns-link{color:#fff;text-decoration:underline;text-decoration-color:var(--gold-soft);text-underline-offset:2px;}
+.next-step .ns-cta{display:inline-block;background:var(--coral);color:#fff;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:999px;}
+.next-step .ns-cta:hover{background:var(--coral-hover);}
+</style>
+<section class="next-step" aria-label="Get help from a teacher">
+  <div class="ns-eyebrow">Stuck on this topic?</div>
+  <h2>A teacher can find the exact gap</h2>
+  <p>Practising substitution on your own is a strong start. If the same marks keep slipping, a qualified teacher can pinpoint the precise gap and fix it. Improve Tuition offers <a class="ns-link" href="https://improvetuition.org/maths/">one-to-one maths tuition</a> with our <a class="ns-link" href="https://improvetuition.org/uk/tutors-in/batley/">maths tutors in Batley</a> and online &mdash; the first assessment is free.</p>
+  <a class="ns-cta" href="https://improvetuition.org/uk/tutors-in/batley/">See maths tutors in Batley &rarr;</a>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "EducationalOrganization",
+        "LocalBusiness"
+      ],
+      "@id": "https://www.improvetuition.org/#organization",
+      "name": "Improve Tuition",
+      "url": "https://www.improvetuition.org/",
+      "telephone": "01924 506010",
+      "priceRange": "From £14.50 per hour",
+      "foundingDate": "2007",
+      "description": "Improve Tuition provides teacher-led online Maths, English and Science tuition for children aged 5 to 18 in the UK and internationally, including British curriculum pupils, British schools overseas and expat families in Dubai, Singapore, Hong Kong and Spain.",
+      "founder": {
+        "@id": "https://www.improvetuition.org/#mr-g-dabhad"
+      },
+      "areaServed": [
+        "Batley",
+        "Dewsbury",
+        "Heckmondwike",
+        "West Yorkshire",
+        "United Kingdom",
+        "Dubai",
+        "Singapore",
+        "Hong Kong",
+        "Spain",
+        "British schools overseas",
+        "British curriculum schools",
+        "Expat families"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.improvetuition.org/#mr-g-dabhad",
+      "name": "Mr G Dabhad",
+      "jobTitle": "Founder and Lead Teacher",
+      "description": "Mr G Dabhad has QTS, BA Hons and 18 years' experience."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.improvetuition.org/#website",
+      "url": "https://www.improvetuition.org/",
+      "name": "Improve Tuition",
+      "publisher": {
+        "@id": "https://www.improvetuition.org/#organization"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://www.improvetuition.org/algebra/substitution/#learning-resource",
+      "name": "Algebra Substitution Study Guide",
+      "url": "https://www.improvetuition.org/algebra/substitution/",
+      "description": "A clear Maths study guide explaining algebra substitution with worked examples, step-by-step methods and practice questions for secondary school pupils.",
+      "learningResourceType": "Study guide",
+      "educationalLevel": "Secondary school",
+      "about": [
+        "algebra substitution",
+        "substituting values into expressions",
+        "simplifying algebra",
+        "algebra practice",
+        "maths revision"
+      ],
+      "teaches": [
+        "How to substitute numbers into algebraic expressions",
+        "How to simplify expressions after substitution",
+        "How to avoid common algebra substitution mistakes"
+      ],
+      "provider": {
+        "@id": "https://www.improvetuition.org/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.improvetuition.org/algebra/substitution/#webpage",
+      "url": "https://www.improvetuition.org/algebra/substitution/",
+      "name": "Algebra Substitution Study Guide | Improve Tuition",
+      "description": "Learn algebra substitution with clear examples, simple explanations and practice questions from Improve Tuition.",
+      "isPartOf": {
+        "@id": "https://www.improvetuition.org/#website"
+      },
+      "about": {
+        "@id": "https://www.improvetuition.org/algebra/substitution/#learning-resource"
+      },
+      "publisher": {
+        "@id": "https://www.improvetuition.org/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.improvetuition.org/algebra/substitution/#faq",
+      "url": "https://www.improvetuition.org/algebra/substitution/",
+      "isPartOf": {
+        "@id": "https://www.improvetuition.org/#website"
+      },
+      "about": {
+        "@id": "https://www.improvetuition.org/algebra/substitution/#learning-resource"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between an expression and a formula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An expression is a collection of terms with no equals sign, such as 3x + 2. A formula is a rule that does have an equals sign, such as P = 4L. You substitute into both the same way — by replacing the letter with a number."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you substitute a number into an expression?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Replace every letter with its value, keeping everything else the same, then work the calculation out in the usual order. For 2x + 3 with x = 5, that is 2 × 5 + 3 = 13."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does x² mean when you substitute?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "x² means x × x, not x × 2. So if x = 3, then x² = 3 × 3 = 9. Always work out the power before multiplying or adding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which operation do you do first when substituting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Follow BIDMAS: powers and brackets first, then multiply and divide, then add and subtract. In 3x + 2 you multiply 3 by the value before adding 2."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you substitute a negative number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Put the negative value in place of the letter, keeping its sign, then follow the order of operations. For 3x + 10 with x = −2, that is 3 × (−2) + 10 = −6 + 10 = 4."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<div class="footer"><div class="org">Improve Tuition</div>George Street, Batley, West Yorkshire WF17 5AR<br>Director: Mr G Dabhad (QTS) &middot; <a href="https://improvetuition.org">improvetuition.org</a></div>
+
+<script>
+var REMEDIATION = {"1": [{"q": "Substitute x = 3 into x + 6.", "t": "num", "a": {"val": "9.0", "tol": "1e-6"}, "show": "9"}, {"q": "Substitute a = 8 into a + 5.", "t": "num", "a": {"val": "13.0", "tol": "1e-6"}, "show": "13"}, {"q": "Substitute n = 4 into n + 10.", "t": "num", "a": {"val": "14.0", "tol": "1e-6"}, "show": "14"}, {"q": "Substitute x = 7 into x + 2.", "t": "num", "a": {"val": "9.0", "tol": "1e-6"}, "show": "9"}, {"q": "Substitute m = 6 into m + 9.", "t": "num", "a": {"val": "15.0", "tol": "1e-6"}, "show": "15"}], "2": [{"q": "Substitute a = 9 into a &minus; 4.", "t": "num", "a": {"val": "5.0", "tol": "1e-6"}, "show": "5"}, {"q": "Substitute x = 6 into x &minus; 2.", "t": "num", "a": {"val": "4.0", "tol": "1e-6"}, "show": "4"}, {"q": "Substitute t = 10 into t &minus; 7.", "t": "num", "a": {"val": "3.0", "tol": "1e-6"}, "show": "3"}, {"q": "Substitute p = 8 into p &minus; 3.", "t": "num", "a": {"val": "5.0", "tol": "1e-6"}, "show": "5"}, {"q": "Substitute m = 5 into m &minus; 1.", "t": "num", "a": {"val": "4.0", "tol": "1e-6"}, "show": "4"}], "3": [{"q": "Substitute x = 5 into 4x.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}, {"q": "Substitute y = 3 into 7y.", "t": "num", "a": {"val": "21.0", "tol": "1e-6"}, "show": "21"}, {"q": "Substitute m = 6 into 2m.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}, {"q": "Substitute n = 4 into 8n.", "t": "num", "a": {"val": "32.0", "tol": "1e-6"}, "show": "32"}, {"q": "Substitute x = 9 into 3x.", "t": "num", "a": {"val": "27.0", "tol": "1e-6"}, "show": "27"}], "4": [{"q": "Substitute m = 4 into 2m + 5.", "t": "num", "a": {"val": "13.0", "tol": "1e-6"}, "show": "13"}, {"q": "Substitute x = 3 into 3x + 2.", "t": "num", "a": {"val": "11.0", "tol": "1e-6"}, "show": "11"}, {"q": "Substitute y = 5 into 2y + 1.", "t": "num", "a": {"val": "11.0", "tol": "1e-6"}, "show": "11"}, {"q": "Substitute p = 2 into 6p + 4.", "t": "num", "a": {"val": "16.0", "tol": "1e-6"}, "show": "16"}, {"q": "Substitute n = 6 into 2n + 3.", "t": "num", "a": {"val": "15.0", "tol": "1e-6"}, "show": "15"}], "5": [{"q": "Substitute y = 8 into 5y &minus; 12.", "t": "num", "a": {"val": "28.0", "tol": "1e-6"}, "show": "28"}, {"q": "Substitute x = 7 into 3x &minus; 4.", "t": "num", "a": {"val": "17.0", "tol": "1e-6"}, "show": "17"}, {"q": "Substitute t = 9 into 4t &minus; 6.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30"}, {"q": "Substitute p = 10 into 2p &minus; 5.", "t": "num", "a": {"val": "15.0", "tol": "1e-6"}, "show": "15"}, {"q": "Substitute m = 6 into 5m &minus; 10.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}], "6": [{"q": "Substitute x = 4 into 3x + 7.", "t": "num", "a": {"val": "19.0", "tol": "1e-6"}, "show": "19"}, {"q": "Substitute a = 5 into 2a + 6.", "t": "num", "a": {"val": "16.0", "tol": "1e-6"}, "show": "16"}, {"q": "Substitute n = 3 into 4n + 8.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}, {"q": "Substitute t = 6 into 3t + 2.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}, {"q": "Substitute y = 2 into 5y + 9.", "t": "num", "a": {"val": "19.0", "tol": "1e-6"}, "show": "19"}], "7": [{"q": "Substitute t = 9 into 6t &minus; 4.", "t": "num", "a": {"val": "50.0", "tol": "1e-6"}, "show": "50"}, {"q": "Substitute x = 5 into 4x &minus; 3.", "t": "num", "a": {"val": "17.0", "tol": "1e-6"}, "show": "17"}, {"q": "Substitute m = 8 into 3m &minus; 6.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18"}, {"q": "Substitute p = 4 into 7p &minus; 5.", "t": "num", "a": {"val": "23.0", "tol": "1e-6"}, "show": "23"}, {"q": "Substitute n = 10 into 2n &minus; 8.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}], "8": [{"q": "Substitute n = 5 into 2n + 11.", "t": "num", "a": {"val": "21.0", "tol": "1e-6"}, "show": "21"}, {"q": "Substitute x = 6 into 3x + 2.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}, {"q": "Substitute a = 4 into 5a + 3.", "t": "num", "a": {"val": "23.0", "tol": "1e-6"}, "show": "23"}, {"q": "Substitute t = 7 into 2t + 6.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}, {"q": "Substitute m = 3 into 8m + 1.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25"}], "9": [{"q": "Substitute p = 7 into 4p &minus; 9.", "t": "num", "a": {"val": "19.0", "tol": "1e-6"}, "show": "19"}, {"q": "Substitute x = 5 into 3x &minus; 7.", "t": "num", "a": {"val": "8.0", "tol": "1e-6"}, "show": "8"}, {"q": "Substitute y = 6 into 2y &minus; 4.", "t": "num", "a": {"val": "8.0", "tol": "1e-6"}, "show": "8"}, {"q": "Substitute m = 8 into 3m &minus; 10.", "t": "num", "a": {"val": "14.0", "tol": "1e-6"}, "show": "14"}, {"q": "Substitute n = 9 into 2n &minus; 5.", "t": "num", "a": {"val": "13.0", "tol": "1e-6"}, "show": "13"}], "10": [{"q": "Substitute x = 10 into 3x &minus; 8.", "t": "num", "a": {"val": "22.0", "tol": "1e-6"}, "show": "22"}, {"q": "Substitute a = 9 into 2a &minus; 5.", "t": "num", "a": {"val": "13.0", "tol": "1e-6"}, "show": "13"}, {"q": "Substitute t = 7 into 4t &minus; 6.", "t": "num", "a": {"val": "22.0", "tol": "1e-6"}, "show": "22"}, {"q": "Substitute p = 8 into 3p &minus; 9.", "t": "num", "a": {"val": "15.0", "tol": "1e-6"}, "show": "15"}, {"q": "Substitute m = 6 into 5m &minus; 7.", "t": "num", "a": {"val": "23.0", "tol": "1e-6"}, "show": "23"}], "11": [{"q": "Substitute x = 8 into &frac12;x.", "t": "num", "a": {"val": "4.0", "tol": "1e-6"}, "show": "4"}, {"q": "Substitute x = 10 into &frac12;x.", "t": "num", "a": {"val": "5.0", "tol": "1e-6"}, "show": "5"}, {"q": "Substitute a = 6 into &frac12;a.", "t": "num", "a": {"val": "3.0", "tol": "1e-6"}, "show": "3"}, {"q": "Substitute m = 14 into &frac12;m.", "t": "num", "a": {"val": "7.0", "tol": "1e-6"}, "show": "7"}, {"q": "Substitute y = 20 into &frac12;y.", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10"}], "12": [{"q": "Substitute x = 12 into &#8531;x + 2.", "t": "num", "a": {"val": "6.0", "tol": "1e-6"}, "show": "6"}, {"q": "Substitute x = 9 into &#8531;x + 1.", "t": "num", "a": {"val": "4.0", "tol": "1e-6"}, "show": "4"}, {"q": "Substitute a = 6 into &#8531;a + 4.", "t": "num", "a": {"val": "6.0", "tol": "1e-6"}, "show": "6"}, {"q": "Substitute m = 15 into &#8531;m + 2.", "t": "num", "a": {"val": "7.0", "tol": "1e-6"}, "show": "7"}, {"q": "Substitute y = 18 into &#8531;y + 3.", "t": "num", "a": {"val": "9.0", "tol": "1e-6"}, "show": "9"}], "13": [{"q": "Substitute x = 10 into &frac12;x + 7.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}, {"q": "Substitute x = 6 into &frac12;x + 3.", "t": "num", "a": {"val": "6.0", "tol": "1e-6"}, "show": "6"}, {"q": "Substitute a = 12 into &frac12;a + 1.", "t": "num", "a": {"val": "7.0", "tol": "1e-6"}, "show": "7"}, {"q": "Substitute m = 8 into &frac12;m + 5.", "t": "num", "a": {"val": "9.0", "tol": "1e-6"}, "show": "9"}, {"q": "Substitute y = 16 into &frac12;y + 2.", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10"}], "14": [{"q": "Substitute x = 9 into &#8531;x &minus; 1.", "t": "num", "a": {"val": "2.0", "tol": "1e-6"}, "show": "2"}, {"q": "Substitute x = 12 into &#8531;x &minus; 2.", "t": "num", "a": {"val": "2.0", "tol": "1e-6"}, "show": "2"}, {"q": "Substitute a = 6 into &#8531;a &minus; 1.", "t": "num", "a": {"val": "1.0", "tol": "1e-6"}, "show": "1"}, {"q": "Substitute m = 18 into &#8531;m &minus; 4.", "t": "num", "a": {"val": "2.0", "tol": "1e-6"}, "show": "2"}, {"q": "Substitute y = 15 into &#8531;y &minus; 3.", "t": "num", "a": {"val": "2.0", "tol": "1e-6"}, "show": "2"}], "15": [{"q": "Substitute k = 16 into &frac14;k &minus; 1.", "t": "num", "a": {"val": "3.0", "tol": "1e-6"}, "show": "3"}, {"q": "Substitute x = 12 into &frac14;x &minus; 1.", "t": "num", "a": {"val": "2.0", "tol": "1e-6"}, "show": "2"}, {"q": "Substitute a = 20 into &frac14;a &minus; 3.", "t": "num", "a": {"val": "2.0", "tol": "1e-6"}, "show": "2"}, {"q": "Substitute m = 8 into &frac14;m &minus; 1.", "t": "num", "a": {"val": "1.0", "tol": "1e-6"}, "show": "1"}, {"q": "Substitute y = 24 into &frac14;y &minus; 2.", "t": "num", "a": {"val": "4.0", "tol": "1e-6"}, "show": "4"}], "16": [{"q": "Substitute x = 3 into x<sup>2</sup>.", "t": "num", "a": {"val": "9.0", "tol": "1e-6"}, "show": "9"}, {"q": "Substitute x = 5 into x<sup>2</sup>.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25"}, {"q": "Substitute a = 2 into a<sup>2</sup>.", "t": "num", "a": {"val": "4.0", "tol": "1e-6"}, "show": "4"}, {"q": "Substitute m = 6 into m<sup>2</sup>.", "t": "num", "a": {"val": "36.0", "tol": "1e-6"}, "show": "36"}, {"q": "Substitute y = 4 into y<sup>2</sup>.", "t": "num", "a": {"val": "16.0", "tol": "1e-6"}, "show": "16"}], "17": [{"q": "Substitute x = 4 into x<sup>2</sup> + 5.", "t": "num", "a": {"val": "21.0", "tol": "1e-6"}, "show": "21"}, {"q": "Substitute x = 3 into x<sup>2</sup> + 2.", "t": "num", "a": {"val": "11.0", "tol": "1e-6"}, "show": "11"}, {"q": "Substitute a = 2 into a<sup>2</sup> + 6.", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10"}, {"q": "Substitute m = 5 into m<sup>2</sup> + 1.", "t": "num", "a": {"val": "26.0", "tol": "1e-6"}, "show": "26"}, {"q": "Substitute y = 6 into y<sup>2</sup> + 4.", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "40"}], "18": [{"q": "Substitute x = 2 into 3x<sup>2</sup>.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}, {"q": "Substitute x = 3 into 2x<sup>2</sup>.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18"}, {"q": "Substitute a = 4 into 2a<sup>2</sup>.", "t": "num", "a": {"val": "32.0", "tol": "1e-6"}, "show": "32"}, {"q": "Substitute m = 2 into 5m<sup>2</sup>.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}, {"q": "Substitute y = 3 into 4y<sup>2</sup>.", "t": "num", "a": {"val": "36.0", "tol": "1e-6"}, "show": "36"}], "19": [{"q": "Substitute x = 5 into 2x<sup>2</sup> &minus; 10.", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "40"}, {"q": "Substitute x = 4 into 2x<sup>2</sup> &minus; 5.", "t": "num", "a": {"val": "27.0", "tol": "1e-6"}, "show": "27"}, {"q": "Substitute a = 3 into 2a<sup>2</sup> &minus; 8.", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10"}, {"q": "Substitute m = 6 into 2m<sup>2</sup> &minus; 12.", "t": "num", "a": {"val": "60.0", "tol": "1e-6"}, "show": "60"}, {"q": "Substitute y = 5 into 3y<sup>2</sup> &minus; 15.", "t": "num", "a": {"val": "60.0", "tol": "1e-6"}, "show": "60"}], "20": [{"q": "Substitute x = 3 into 4x<sup>2</sup> &minus; 11.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25"}, {"q": "Substitute x = 2 into 5x<sup>2</sup> &minus; 9.", "t": "num", "a": {"val": "11.0", "tol": "1e-6"}, "show": "11"}, {"q": "Substitute a = 4 into 2a<sup>2</sup> &minus; 7.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25"}, {"q": "Substitute m = 3 into 3m<sup>2</sup> &minus; 10.", "t": "num", "a": {"val": "17.0", "tol": "1e-6"}, "show": "17"}, {"q": "Substitute y = 2 into 7y<sup>2</sup> &minus; 11.", "t": "num", "a": {"val": "17.0", "tol": "1e-6"}, "show": "17"}], "21": [{"q": "The perimeter of a square is P = 4L. Find P when L = 5 cm.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20 cm"}, {"q": "The perimeter of a square is P = 4L. Find P when L = 9 cm.", "t": "num", "a": {"val": "36.0", "tol": "1e-6"}, "show": "36 cm"}, {"q": "The perimeter of a square is P = 4L. Find P when L = 3 cm.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12 cm"}, {"q": "The perimeter of a square is P = 4L. Find P when L = 10 cm.", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "40 cm"}, {"q": "The perimeter of a square is P = 4L. Find P when L = 6 cm.", "t": "num", "a": {"val": "24.0", "tol": "1e-6"}, "show": "24 cm"}], "22": [{"q": "A taxi charges C = 3m + 2 pounds for m miles. Find C when m = 4.", "t": "num", "a": {"val": "14.0", "tol": "1e-6"}, "show": "&pound;14"}, {"q": "A taxi charges C = 3m + 2 pounds for m miles. Find C when m = 5.", "t": "num", "a": {"val": "17.0", "tol": "1e-6"}, "show": "&pound;17"}, {"q": "A taxi charges C = 3m + 2 pounds for m miles. Find C when m = 7.", "t": "num", "a": {"val": "23.0", "tol": "1e-6"}, "show": "&pound;23"}, {"q": "A taxi charges C = 3m + 2 pounds for m miles. Find C when m = 3.", "t": "num", "a": {"val": "11.0", "tol": "1e-6"}, "show": "&pound;11"}, {"q": "A taxi charges C = 3m + 2 pounds for m miles. Find C when m = 8.", "t": "num", "a": {"val": "26.0", "tol": "1e-6"}, "show": "&pound;26"}], "23": [{"q": "To change kilometres to miles, M = 5K &divide; 8. Convert 16 km to miles.", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10 miles"}, {"q": "To change kilometres to miles, M = 5K &divide; 8. Convert 8 km to miles.", "t": "num", "a": {"val": "5.0", "tol": "1e-6"}, "show": "5 miles"}, {"q": "To change kilometres to miles, M = 5K &divide; 8. Convert 32 km to miles.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20 miles"}, {"q": "To change kilometres to miles, M = 5K &divide; 8. Convert 40 km to miles.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25 miles"}, {"q": "To change kilometres to miles, M = 5K &divide; 8. Convert 48 km to miles.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30 miles"}], "24": [{"q": "The cost of n tickets is C = 9n pounds. Find the cost of 3 tickets.", "t": "num", "a": {"val": "27.0", "tol": "1e-6"}, "show": "&pound;27"}, {"q": "The cost of n tickets is C = 9n pounds. Find the cost of 6 tickets.", "t": "num", "a": {"val": "54.0", "tol": "1e-6"}, "show": "&pound;54"}, {"q": "The cost of n tickets is C = 9n pounds. Find the cost of 4 tickets.", "t": "num", "a": {"val": "36.0", "tol": "1e-6"}, "show": "&pound;36"}, {"q": "The cost of n tickets is C = 9n pounds. Find the cost of 7 tickets.", "t": "num", "a": {"val": "63.0", "tol": "1e-6"}, "show": "&pound;63"}, {"q": "The cost of n tickets is C = 9n pounds. Find the cost of 2 tickets.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "&pound;18"}], "25": [{"q": "A plumber charges H = 40t + 25 pounds for t hours. Find H when t = 2.", "t": "num", "a": {"val": "105.0", "tol": "1e-6"}, "show": "&pound;105"}, {"q": "A plumber charges H = 40t + 25 pounds for t hours. Find H when t = 4.", "t": "num", "a": {"val": "185.0", "tol": "1e-6"}, "show": "&pound;185"}, {"q": "A plumber charges H = 40t + 25 pounds for t hours. Find H when t = 1.", "t": "num", "a": {"val": "65.0", "tol": "1e-6"}, "show": "&pound;65"}, {"q": "A plumber charges H = 40t + 25 pounds for t hours. Find H when t = 5.", "t": "num", "a": {"val": "225.0", "tol": "1e-6"}, "show": "&pound;225"}, {"q": "A plumber charges H = 40t + 25 pounds for t hours. Find H when t = 3.", "t": "num", "a": {"val": "145.0", "tol": "1e-6"}, "show": "&pound;145"}], "26": [{"q": "Using F = 9C &divide; 5 + 32, find F when C = 10.", "t": "num", "a": {"val": "50.0", "tol": "1e-6"}, "show": "50&deg;F"}, {"q": "Using F = 9C &divide; 5 + 32, find F when C = 25.", "t": "num", "a": {"val": "77.0", "tol": "1e-6"}, "show": "77&deg;F"}, {"q": "Using F = 9C &divide; 5 + 32, find F when C = 15.", "t": "num", "a": {"val": "59.0", "tol": "1e-6"}, "show": "59&deg;F"}, {"q": "Using F = 9C &divide; 5 + 32, find F when C = 5.", "t": "num", "a": {"val": "41.0", "tol": "1e-6"}, "show": "41&deg;F"}, {"q": "Using F = 9C &divide; 5 + 32, find F when C = 20.", "t": "num", "a": {"val": "68.0", "tol": "1e-6"}, "show": "68&deg;F"}], "27": [{"q": "The area of a rectangle is A = lw. Find A when l = 6 and w = 4.", "t": "num", "a": {"val": "24.0", "tol": "1e-6"}, "show": "24"}, {"q": "The area of a rectangle is A = lw. Find A when l = 7 and w = 3.", "t": "num", "a": {"val": "21.0", "tol": "1e-6"}, "show": "21"}, {"q": "The area of a rectangle is A = lw. Find A when l = 9 and w = 2.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18"}, {"q": "The area of a rectangle is A = lw. Find A when l = 8 and w = 8.", "t": "num", "a": {"val": "64.0", "tol": "1e-6"}, "show": "64"}, {"q": "The area of a rectangle is A = lw. Find A when l = 5 and w = 6.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30"}], "28": [{"q": "The terms of a sequence are T = 5n + 3. Find the term when n = 4.", "t": "num", "a": {"val": "23.0", "tol": "1e-6"}, "show": "23"}, {"q": "The terms of a sequence are T = 5n + 3. Find the term when n = 7.", "t": "num", "a": {"val": "38.0", "tol": "1e-6"}, "show": "38"}, {"q": "The terms of a sequence are T = 5n + 3. Find the term when n = 2.", "t": "num", "a": {"val": "13.0", "tol": "1e-6"}, "show": "13"}, {"q": "The terms of a sequence are T = 5n + 3. Find the term when n = 6.", "t": "num", "a": {"val": "33.0", "tol": "1e-6"}, "show": "33"}, {"q": "The terms of a sequence are T = 5n + 3. Find the term when n = 9.", "t": "num", "a": {"val": "48.0", "tol": "1e-6"}, "show": "48"}], "29": [{"q": "The area of a triangle is A = &frac12;bh. Find A when b = 8 and h = 4.", "t": "num", "a": {"val": "16.0", "tol": "1e-6"}, "show": "16"}, {"q": "The area of a triangle is A = &frac12;bh. Find A when b = 6 and h = 5.", "t": "num", "a": {"val": "15.0", "tol": "1e-6"}, "show": "15"}, {"q": "The area of a triangle is A = &frac12;bh. Find A when b = 12 and h = 3.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18"}, {"q": "The area of a triangle is A = &frac12;bh. Find A when b = 10 and h = 10.", "t": "num", "a": {"val": "50.0", "tol": "1e-6"}, "show": "50"}, {"q": "The area of a triangle is A = &frac12;bh. Find A when b = 4 and h = 9.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18"}], "30": [{"q": "Using F = 9C &divide; 5 + 32, find F when C = 0.", "t": "num", "a": {"val": "32.0", "tol": "1e-6"}, "show": "32&deg;F"}, {"q": "Using F = 9C &divide; 5 + 32, find F when C = 30.", "t": "num", "a": {"val": "86.0", "tol": "1e-6"}, "show": "86&deg;F"}, {"q": "Using F = 9C &divide; 5 + 32, find F when C = 40.", "t": "num", "a": {"val": "104.0", "tol": "1e-6"}, "show": "104&deg;F"}, {"q": "Using F = 9C &divide; 5 + 32, find F when C = 35.", "t": "num", "a": {"val": "95.0", "tol": "1e-6"}, "show": "95&deg;F"}, {"q": "Using F = 9C &divide; 5 + 32, find F when C = 45.", "t": "num", "a": {"val": "113.0", "tol": "1e-6"}, "show": "113&deg;F"}], "31": [{"q": "Substitute x = &minus;2 into 3x + 10.", "t": "num", "a": {"val": "4.0", "tol": "1e-6"}, "show": "4"}, {"q": "Substitute x = &minus;1 into 3x + 10.", "t": "num", "a": {"val": "7.0", "tol": "1e-6"}, "show": "7"}, {"q": "Substitute x = &minus;3 into 3x + 10.", "t": "num", "a": {"val": "1.0", "tol": "1e-6"}, "show": "1"}, {"q": "Substitute x = &minus;4 into 3x + 10.", "t": "num", "a": {"val": "-2.0", "tol": "1e-6"}, "show": "-2"}, {"q": "Substitute x = &minus;5 into 3x + 10.", "t": "num", "a": {"val": "-5.0", "tol": "1e-6"}, "show": "-5"}], "32": [{"q": "Substitute x = &minus;5 into 2x + 20.", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10"}, {"q": "Substitute x = &minus;3 into 2x + 20.", "t": "num", "a": {"val": "14.0", "tol": "1e-6"}, "show": "14"}, {"q": "Substitute x = &minus;8 into 2x + 20.", "t": "num", "a": {"val": "4.0", "tol": "1e-6"}, "show": "4"}, {"q": "Substitute x = &minus;10 into 2x + 20.", "t": "num", "a": {"val": "0.0", "tol": "1e-6"}, "show": "0"}, {"q": "Substitute x = &minus;6 into 2x + 20.", "t": "num", "a": {"val": "8.0", "tol": "1e-6"}, "show": "8"}], "33": [{"q": "The formula v = u + at. Find v when u = 5, a = 2 and t = 4.", "t": "num", "a": {"val": "13.0", "tol": "1e-6"}, "show": "13"}, {"q": "The formula v = u + at. Find v when u = 6, a = 1 and t = 7.", "t": "num", "a": {"val": "13.0", "tol": "1e-6"}, "show": "13"}, {"q": "The formula v = u + at. Find v when u = 2, a = 5 and t = 3.", "t": "num", "a": {"val": "17.0", "tol": "1e-6"}, "show": "17"}, {"q": "The formula v = u + at. Find v when u = 10, a = 4 and t = 2.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18"}, {"q": "The formula v = u + at. Find v when u = 0, a = 6 and t = 5.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30"}], "34": [{"q": "Substitute x = &minus;3 into x<sup>2</sup> + 1.", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10"}, {"q": "Substitute x = &minus;2 into x<sup>2</sup> + 1.", "t": "num", "a": {"val": "5.0", "tol": "1e-6"}, "show": "5"}, {"q": "Substitute x = &minus;4 into x<sup>2</sup> + 1.", "t": "num", "a": {"val": "17.0", "tol": "1e-6"}, "show": "17"}, {"q": "Substitute x = &minus;1 into x<sup>2</sup> + 1.", "t": "num", "a": {"val": "2.0", "tol": "1e-6"}, "show": "2"}, {"q": "Substitute x = &minus;5 into x<sup>2</sup> + 1.", "t": "num", "a": {"val": "26.0", "tol": "1e-6"}, "show": "26"}], "35": [{"q": "A sequence is T = n<sup>2</sup> + n. Find the term when n = 4.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}, {"q": "A sequence is T = n<sup>2</sup> + n. Find the term when n = 5.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30"}, {"q": "A sequence is T = n<sup>2</sup> + n. Find the term when n = 3.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}, {"q": "A sequence is T = n<sup>2</sup> + n. Find the term when n = 7.", "t": "num", "a": {"val": "56.0", "tol": "1e-6"}, "show": "56"}, {"q": "A sequence is T = n<sup>2</sup> + n. Find the term when n = 2.", "t": "num", "a": {"val": "6.0", "tol": "1e-6"}, "show": "6"}]};
+var TOPIC="Substitution";window.STORAGE_KEY="improvetuition_subst_v1";window.TUTOR_ENDPOINT="";
+
+function buildRemediation(qnum, card){
+  if(!window.REMEDIATION || !REMEDIATION[qnum]) return;
+  if(card.querySelector('.rem-panel')) return;
+  var items=REMEDIATION[qnum];
+  var p=document.createElement('div'); p.className='rem-panel';
+  var html='<div class="rem-head">Practise this skill — 5 more like it</div>';
+  items.forEach(function(it){
+    var at='data-type="'+it.t+'"';
+    for(var k in it.a){ at+=' data-'+k+'="'+it.a[k]+'"'; }
+    html+='<div class="rem-row"><span class="rem-q">'+it.q+'</span><span class="rem-ans-wrap"><input class="rem-input" type="text" autocomplete="off" '+at+' data-show="'+it.show+'"><span class="rem-fb"></span></span></div>';
+  });
+  html+='<details class="rem-ans"><summary>Show answers</summary><p>'+items.map(function(it){return it.show;}).join(' · ')+'</p></details>';
+  p.innerHTML=html; card.appendChild(p);
+  p.querySelectorAll('.rem-input').forEach(function(el){
+    el.addEventListener('input',function(){
+      var r=checkInput(el); var fb=el.parentNode.querySelector('.rem-fb'); fb.className='rem-fb'; fb.textContent='';
+      if(el.value.trim()==='') return;
+      if(r.state==='right'){fb.classList.add('ok');fb.textContent='✓';}
+      else if(r.state==='partial'){fb.classList.add('part');fb.textContent='≈';}
+      else{fb.classList.add('no');fb.textContent='✗';}
+    });
+  });
+}
+
+
+function afterMark(){
+  var sec={}, wrong=[], right=0, total=0;
+  document.querySelectorAll('.answer-input').forEach(function(el){
+    var s=el.getAttribute('data-sec')||'?'; if(!sec[s])sec[s]={r:0,t:0}; sec[s].t++; total++;
+    var fb=el.parentNode.querySelector('.fb'); var ok=fb&&fb.classList.contains('ok');
+    if(ok){sec[s].r++; right++;}
+    else{
+      var card=el.closest('.question'); var qn=card?card.id.replace('q-',''):'';
+      var qtEl=card?card.querySelector('.q-text'):null; var qt=qtEl?qtEl.textContent:'';
+      wrong.push({n:qn, sec:s, q:qt});
+    }
+  });
+  window.LAST_RESULTS={score:right,total:total,sec:sec,wrong:wrong,when:new Date()};
+}
+function afterReset(){ window.LAST_RESULTS=null; window.ATTEMPTS={}; try{localStorage.removeItem((window.STORAGE_KEY||'improvetuition')+'_attempts');}catch(e){}
+  var st=document.getElementById('send-status'); if(st){st.textContent='';st.className='send-status';} }
+function regGet(){
+  function v(id){var e=document.getElementById(id); return e?e.value.trim():'';}
+  return {name:v('reg-name'), year:v('reg-year'), tutor:v('reg-tutor-email')};
+}
+function _qnum(k){ return parseInt(k.replace('q-',''),10)||0; }
+// tries for a WRONG question = self-checks, but never less than 1 (the final wrong answer itself counts as a try)
+function _tries(qn){ var A=window.ATTEMPTS||{}; return Math.max(A['q-'+qn]||0, 1); }
+
+function buildReport(){
+  var R=window.LAST_RESULTS; if(!R) return '';
+  var reg=regGet(); var A=window.ATTEMPTS||{}; var L=[];
+  L.push('Improve Tuition \u2014 '+TOPIC);
+  L.push('Pupil: '+(reg.name||'(not given)')+(reg.year?('   Year/Class: '+reg.year):''));
+  L.push('Date: '+R.when.toLocaleDateString('en-GB'));
+  L.push('');
+  L.push('SCORE: '+R.score+' / '+R.total);
+  L.push('');
+  L.push('By section:');
+  Object.keys(R.sec).sort().forEach(function(s){ L.push('  Section '+s+':  '+R.sec[s].r+' / '+R.sec[s].t); });
+  L.push('');
+  var wrongSet={};
+  if(R.wrong.length===0){ L.push('No questions to revisit \u2014 every answer correct.'); }
+  else{
+    L.push('Questions to revisit ('+R.wrong.length+'):');
+    R.wrong.forEach(function(w){ wrongSet['q-'+w.n]=1; var n=_tries(w.n);
+      L.push('  Q'+w.n+' ['+w.sec+'] \u2014 '+n+' tr'+(n===1?'y':'ies')); L.push('      '+w.q); });
+  }
+  var struggled=Object.keys(A).filter(function(k){return A[k]>=2 && !wrongSet[k];})
+                              .sort(function(a,b){return _qnum(a)-_qnum(b);})
+                              .map(function(k){return 'Q'+_qnum(k)+' ('+A[k]+' tries)';});
+  if(struggled.length){ L.push(''); L.push('Got there after a few tries: '+struggled.join(', ')); }
+  var totalChecks=0,qCount=0; Object.keys(A).forEach(function(k){ totalChecks+=A[k]; qCount++; });
+  if(qCount){ L.push(''); L.push('Self-checks used while working: '+totalChecks+' across '+qCount+' question'+(qCount===1?'':'s')+'.'); }
+  L.push(''); L.push('Sent from the Improve Tuition learning library.');
+  return L.join('\n');
+}
+
+function buildPayload(){
+  var R=window.LAST_RESULTS||{}; var reg=regGet(); var A=window.ATTEMPTS||{};
+  var sec=Object.keys(R.sec||{}).sort().map(function(s){return 'Section '+s+': '+R.sec[s].r+'/'+R.sec[s].t;}).join('; ');
+  var wrong=(R.wrong||[]).map(function(w){ var n=_tries(w.n); return 'Q'+w.n+' ['+w.sec+'] ('+n+' tr'+(n===1?'y':'ies')+')'; }).join('; ');
+  var wrongSet={}; (R.wrong||[]).forEach(function(w){wrongSet['q-'+w.n]=1;});
+  var rec=Object.keys(A).filter(function(k){return A[k]>=2 && !wrongSet[k];})
+                        .sort(function(a,b){return _qnum(a)-_qnum(b);})
+                        .map(function(k){return 'Q'+_qnum(k)+' ('+A[k]+' tries)';}).join('; ');
+  var totalChecks=0,qCount=0; Object.keys(A).forEach(function(k){ totalChecks+=A[k]; qCount++; });
+  return { topic:TOPIC, name:reg.name, year:reg.year,
+    score:(R.score!=null?R.score:''), total:(R.total!=null?R.total:''),
+    sections:sec, wrong:wrong, recovered:rec, selfChecks:totalChecks, questionsChecked:qCount,
+    date:(R.when?R.when.toISOString():new Date().toISOString()), report:buildReport() };
+}
+function renderSendStatus(msg, ok){
+  var st=document.getElementById('send-status');
+  if(st){ st.textContent=msg; st.className='send-status '+(ok?'ok':'err'); }
+  else { alert(msg); }
+}
+function postToSheet(payload, done){
+  try{
+    fetch(window.TUTOR_ENDPOINT, {method:'POST', mode:'no-cors', body:JSON.stringify(payload)})
+      .then(function(){ done(true); })
+      .catch(function(){ done(false); });
+  }catch(e){ done(false); }
+}
+function sendToTutor(){
+  if(!window.LAST_RESULTS){ alert('Please mark your work first.'); return; }
+  var btn=document.getElementById('send-btn');
+  if(window.TUTOR_ENDPOINT){
+    if(btn){ btn.disabled=true; btn.dataset.label=btn.textContent; btn.textContent='Sending\u2026'; }
+    renderSendStatus('Sending\u2026', true);
+    postToSheet(buildPayload(), function(ok){
+      if(btn){ btn.disabled=false; btn.textContent=btn.dataset.label||'Send to tutor'; }
+      renderSendStatus(ok? 'Sent to your tutor \u2713  (you can also Download a copy)' : 'Could not send \u2014 please use Download results as a backup.', ok);
+    });
+    return;
+  }
+  // Fallback: no Sheet endpoint set yet -> open email with the report
+  var reg=regGet();
+  if(!reg.tutor){ alert("Please add your tutor's email address in the details box near the top first."); var e=document.getElementById('reg-tutor-email'); if(e){e.scrollIntoView({block:'center'}); e.focus();} return; }
+  var subject='Improve Tuition \u2014 '+TOPIC+' results'+(reg.name?(' for '+reg.name):'');
+  window.location.href='mailto:'+encodeURIComponent(reg.tutor)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(buildReport());
+}
+function downloadResults(){
+  if(!window.LAST_RESULTS){ alert('Please mark your work first.'); return; }
+  var reg=regGet(); var blob=new Blob([buildReport()],{type:'text/plain'});
+  var a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  var who=(reg.name||'pupil').replace(/[^A-Za-z0-9]+/g,'_');
+  a.download='ImproveTuition_'+TOPIC.replace(/[^A-Za-z0-9]+/g,'_')+'_'+who+'.txt';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(function(){URL.revokeObjectURL(a.href);},1500);
+}
+(function(){
+  function key(){ return (window.STORAGE_KEY||'improvetuition')+'_reg'; }
+  var FIELDS=['reg-name','reg-year','reg-tutor-email'];
+  function load(){ try{ var raw=localStorage.getItem(key()); if(!raw)return; var d=JSON.parse(raw);
+    FIELDS.forEach(function(id){ if(d[id]!=null){var e=document.getElementById(id); if(e)e.value=d[id];} }); }catch(e){} }
+  function save(){ try{ var d={}; FIELDS.forEach(function(id){var e=document.getElementById(id); if(e&&e.value)d[id]=e.value;});
+    if(Object.keys(d).length) localStorage.setItem(key(),JSON.stringify(d)); else localStorage.removeItem(key()); }catch(e){} }
+  function init(){ load(); FIELDS.forEach(function(id){var e=document.getElementById(id); if(e)e.addEventListener('input',save);}); }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
+})();
+
+
+window.ATTEMPTS = window.ATTEMPTS || {};
+function _attKey(){ return (window.STORAGE_KEY||'improvetuition')+'_attempts'; }
+function _saveAtt(){ try{ if(Object.keys(window.ATTEMPTS).length) localStorage.setItem(_attKey(), JSON.stringify(window.ATTEMPTS)); else localStorage.removeItem(_attKey()); }catch(e){} }
+function _loadAtt(){ try{ var r=localStorage.getItem(_attKey()); if(r) window.ATTEMPTS=JSON.parse(r)||{}; }catch(e){} }
+
+function checkOne(id){
+  var card=document.getElementById(id); if(!card) return;
+  var el=card.querySelector('.answer-input'); if(!el) return;
+  var fb=card.querySelector('.fb'), cd=card.querySelector('.cd');
+  if(fb){fb.className='fb';fb.textContent='';} if(cd){cd.className='cd';cd.innerHTML='';}
+  var ws=card.querySelector('.ws'); if(ws)ws.style.display='none';
+  var rp=card.querySelector('.rem-panel'); if(rp)rp.remove();
+  var oldHint=card.querySelector('.check-hint'); if(oldHint)oldHint.remove();
+  var r=checkInput(el);
+  if(r.state==='blank'){ cd.innerHTML='<span class="check-muted">Type an answer, then press Check.</span>'; cd.classList.add('show'); return; }
+  window.ATTEMPTS[id]=(window.ATTEMPTS[id]||0)+1; _saveAtt();
+  if(r.state==='right'){ fb.classList.add('ok'); fb.textContent='\u2713'; cd.innerHTML='<span class="check-ok">Correct \u2713</span>'; cd.classList.add('show'); return; }
+  if(r.state==='partial'){ fb.classList.add('part'); fb.textContent='\u2248'; cd.innerHTML='<span class="check-muted">'+(r.hint||'Close \u2014 check the form and try again.')+'</span>'; }
+  else { fb.classList.add('no'); fb.textContent='\u2717'; cd.innerHTML='<span class="check-muted">Not yet \u2014 have another go.</span>'; }
+  cd.classList.add('show');
+  if(window.ATTEMPTS[id]>=2 && ws){
+    var first=ws.querySelector('.we-step');
+    if(first){ var h=document.createElement('div'); h.className='check-hint'; h.innerHTML='<span class="hint-label">Hint</span> '+first.innerHTML; cd.parentNode.insertBefore(h, cd.nextSibling); }
+  }
+}
+(function(){
+  function clearOne(el){ var card=el.closest('.question'); if(!card)return;
+    var fb=card.querySelector('.fb'),cd=card.querySelector('.cd');
+    if(fb){fb.className='fb';fb.textContent='';} if(cd){cd.className='cd';cd.innerHTML='';}
+    var ws=card.querySelector('.ws'); if(ws)ws.style.display='none';
+    var rp=card.querySelector('.rem-panel'); if(rp)rp.remove();
+    var h=card.querySelector('.check-hint'); if(h)h.remove(); }
+  function init(){ _loadAtt();
+    document.addEventListener('input', function(e){ var el=e.target; if(el&&el.classList&&el.classList.contains('answer-input')) clearOne(el); }, true);
+    document.addEventListener('click', function(e){ var t=e.target; var btn=t&&t.closest?t.closest('.check-one'):null; if(!btn)return; var card=btn.closest('.question'); if(card)checkOne(card.id); });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
+})();
+
+function gcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){var t=b;b=a%b;a=t;}return a;}
+function parseNum(raw){var s=(''+raw).replace(/[£$,]/g,'').replace(/[a-zA-Z%²³\s]+$/,'').trim();var n=parseFloat(s);return isNaN(n)?null:n;}
+function parseRatio(raw){var p=(''+raw).split(':');if(p.length<2)return null;var out=[];for(var i=0;i<p.length;i++){var n=parseFloat(p[i].trim());if(isNaN(n))return null;out.push(n);}return out;}
+function checkInput(el){
+  var t=el.getAttribute('data-type'), raw=el.value.trim();
+  if(raw==='') return {state:'blank'};
+  if(t==='num'){var v=parseNum(raw); if(v==null)return {state:'wrong'};
+    var exp=parseFloat(el.getAttribute('data-val')), tol=parseFloat(el.getAttribute('data-tol')||'1e-6');
+    return Math.abs(v-exp)<=tol?{state:'right'}:{state:'wrong'};}
+  if(t==='ratio'){var pu=parseRatio(raw); if(!pu)return {state:'wrong',hint:'Write your answer as a ratio, e.g. 2:3.'};
+    var ex=parseRatio(el.getAttribute('data-exp'));
+    if(pu.length!==ex.length) return {state:'wrong'};
+    var k=pu[0]/ex[0], prop=true; for(var i=0;i<ex.length;i++){ if(ex[i]===0||Math.abs(pu[i]/ex[i]-k)>1e-9) prop=false; }
+    if(!prop) return {state:'wrong'};
+    var g=Math.round(pu[0]); for(var i=1;i<pu.length;i++) g=gcd(g,Math.round(pu[i]));
+    if(g!==1) return {state:'partial',hint:'Right ratio &mdash; now simplify it.'};
+    return {state:'right'};}
+  if(t==='fraclow'){var m=/^(-?\d+)\/(\d+)$/.exec(raw);
+    if(!m) return {state:'wrong',hint:'Write your answer as a fraction, e.g. 2/5.'};
+    var a=+m[1],b=+m[2]; if(b===0)return {state:'wrong'};
+    var en=+el.getAttribute('data-num'),ed=+el.getAttribute('data-den');
+    if(Math.abs(a/b-en/ed)>1e-9) return {state:'wrong'};
+    if(gcd(a,b)!==1) return {state:'partial',hint:'Right value &mdash; now reduce to lowest terms.'};
+    return {state:'right'};}
+  return {state:'blank'};
+}
+function updateProgress(){var ins=document.querySelectorAll('.answer-input'),a=0;ins.forEach(function(el){if(el.value.trim()!=='')a++;});var p=document.getElementById('progress');if(p)p.textContent=a+' of '+ins.length+' answered';}
+function markAll(){
+  var ins=document.querySelectorAll('.answer-input'),right=0,total=ins.length,firstBad=null;
+  document.querySelectorAll('.check-hint').forEach(function(el){el.remove();});
+  ins.forEach(function(el){
+    var r=checkInput(el),fb=el.parentNode.querySelector('.fb'),cd=el.parentNode.querySelector('.cd');
+    if(fb){fb.className='fb';fb.textContent='';} if(cd){cd.className='cd';cd.innerHTML='';}
+    if(r.state==='right'){fb.classList.add('ok');fb.textContent='\u2713';right++;}
+    else{ if(r.state==='partial'){fb.classList.add('part');fb.textContent='\u2248';cd.innerHTML=(r.hint||'')+' &rarr; <strong>'+el.getAttribute('data-show')+'</strong>';}
+      else if(r.state==='wrong'){fb.classList.add('no');fb.textContent='\u2717';cd.innerHTML=(r.hint?r.hint+' ':'')+'Answer: <strong>'+el.getAttribute('data-show')+'</strong>';}
+      else{cd.innerHTML='<span style="color:var(--grey-soft)">(left blank) </span>Answer: <strong>'+el.getAttribute('data-show')+'</strong>';}
+      cd.classList.add('show'); var wsx=el.closest('.question').querySelector('.ws'); if(wsx)wsx.style.display='block'; var qc=el.closest('.question'); if(qc)buildRemediation(qc.id.replace('q-',''),qc); var s=el.getAttribute('data-sec'); if(firstBad===null)firstBad=s; }
+  });
+  document.getElementById('score-num').textContent=right+' / '+total;
+  var sd=document.getElementById('score-diag');
+  if(right===total) sd.innerHTML='Every question correct &mdash; you can substitute into expressions and formulas with confidence. <strong>find the gap. fix the gap.</strong>';
+  else sd.innerHTML='First slips appear in <strong>Section '+(firstBad||'?')+'</strong>. That is the skill to practise next.';
+  document.getElementById('score-panel').style.display='block';
+  document.getElementById('score-panel').scrollIntoView({behavior:'smooth',block:'center'});
+  if(window.afterMark)afterMark();
+}
+function resetAll(){ if(!confirm('Clear all your answers and start again?'))return;
+  document.querySelectorAll('.answer-input').forEach(function(el){el.value='';});
+  document.querySelectorAll('.fb').forEach(function(el){el.className='fb';el.textContent='';});
+  document.querySelectorAll('.cd').forEach(function(el){el.className='cd';el.innerHTML='';});
+  document.querySelectorAll('.ws').forEach(function(el){el.style.display='none';});
+  document.querySelectorAll('.rem-panel').forEach(function(el){el.remove();});
+  document.getElementById('score-panel').style.display='none'; if(window.afterReset)afterReset(); updateProgress(); }
+(function(){ var KEY='improvetuition_subst_v1';
+  function save(t){try{var d={};document.querySelectorAll('.answer-input').forEach(function(el,i){if(el.value!=='')d[i]=el.value;});if(Object.keys(d).length===0)localStorage.removeItem(KEY);else localStorage.setItem(KEY,JSON.stringify(d));if(t)tick();}catch(e){}}
+  function restore(){try{var raw=localStorage.getItem(KEY);if(!raw)return false;var d=JSON.parse(raw),any=false;document.querySelectorAll('.answer-input').forEach(function(el,i){if(d[i]!=null){el.value=d[i];any=true;}});if(any)updateProgress();return any;}catch(e){return false;}}
+  var te=null,tt=null;function tick(){if(!te){te=document.createElement('div');te.className='pf-saved';te.textContent='Progress saved';document.body.appendChild(te);}te.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){te.classList.remove('show');},1100);}
+  function banner(){var a=document.getElementById('sec-A');if(!a)return;var b=document.createElement('div');b.className='pf-resume';b.innerHTML='Welcome back \u2014 your answers from earlier were restored.<a id="pf-fresh">Start fresh</a>';a.parentNode.insertBefore(b,a);var f=document.getElementById('pf-fresh');if(f)f.addEventListener('click',function(){try{localStorage.removeItem(KEY);}catch(e){};location.reload();});}
+  var dT=null;
+  function init(){if(restore())banner();
+    document.addEventListener('input',function(){updateProgress();clearTimeout(dT);dT=setTimeout(function(){save(true);},450);},true);
+    window.addEventListener('beforeunload',function(){save(false);});
+    var rb=document.getElementById('reset-btn');if(rb)rb.addEventListener('click',function(){setTimeout(function(){save(false);},60);});
+    setInterval(function(){save(false);},8000);updateProgress();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+<!--ITTS-START-->
+<style>
+.tts-btn{display:inline-flex;align-items:center;justify-content:center;gap:.35em;border:1.5px solid var(--gold,#C99A2E);background:#fff;color:var(--navy,#242F3A);border-radius:999px;cursor:pointer;padding:3px 9px;font:600 12px/1 'DM Sans',sans-serif;vertical-align:middle;margin-left:8px;transition:background .15s,color .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent;}
+.tts-btn svg{display:block;width:15px;height:15px;}
+.tts-btn:hover{background:var(--gold,#C99A2E);color:#fff;}
+.tts-btn:focus-visible{outline:2px solid var(--coral,#D55A3F);outline-offset:2px;}
+.tts-btn.speaking{background:var(--coral,#D55A3F);border-color:var(--coral,#D55A3F);color:#fff;}
+.tts-lesson{margin:2px 0 10px;}
+.a11y-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin:16px 0;padding:11px 15px;background:var(--cream,#E8E3DA);border:1px solid var(--rule,#D8D2C7);border-radius:14px;font:500 13.5px/1.45 'DM Sans',sans-serif;color:var(--grey,#5A5A5A);}
+.a11y-row .a11y-note{flex:1 1 240px;min-width:200px;}
+.a11y-row .a11y-note strong{color:var(--navy,#242F3A);}
+.a11y-row .tts-btn{margin-left:0;}
+.a11y-row .tts-btn.on{background:var(--navy,#242F3A);border-color:var(--navy,#242F3A);color:#fff;}
+body.comfort{font-size:17px;}
+body.comfort .q-text,body.comfort .qtext,body.comfort .lesson-part p,body.comfort .lesson-part li,body.comfort .lesson-aim,body.comfort .lo-statement,body.comfort .sc-list li,body.comfort .question .part-q,body.comfort .we-step,body.comfort .watch-out,body.comfort .try-one p{line-height:1.85 !important;letter-spacing:.012em;word-spacing:.06em;}
+body.dyslexic,body.dyslexic *{font-family:'OpenDyslexic','Comic Sans MS','Verdana',sans-serif !important;font-style:normal !important;text-transform:none !important;}
+body.dyslexic{font-size:17px;}
+body.dyslexic .q-text,body.dyslexic .qtext,body.dyslexic .lesson-part p,body.dyslexic .lesson-part li,body.dyslexic .lesson-aim,body.dyslexic .lo-statement,body.dyslexic .sc-list li,body.dyslexic .question .part-q,body.dyslexic .we-step,body.dyslexic .watch-out,body.dyslexic .try-one p,body.dyslexic .topic-help p,body.dyslexic .th-faq>div,body.dyslexic .next-step p{line-height:1.8 !important;letter-spacing:.012em !important;word-spacing:.07em;}
+#it-tint{position:fixed;inset:0;pointer-events:none;z-index:2147483646;mix-blend-mode:multiply;display:none;}
+body.comfort .q-text,body.comfort .qtext{display:inline-block;}
+@media (prefers-reduced-motion:no-preference){.tts-btn.speaking{animation:ttspulse 1.1s ease-in-out infinite;}@keyframes ttspulse{50%{box-shadow:0 0 0 5px rgba(213,90,63,.18);}}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--gold,#C99A2E);outline-offset:2px;border-radius:4px;}
+body.it-bigtap .answer-input,body.it-bigtap .rem-input{min-height:48px;font-size:1.05rem;}
+body.it-bigtap .check-one,body.it-bigtap #mark-btn,body.it-bigtap #reset-btn,body.it-bigtap .btn{min-height:44px;}
+#it-ruler{position:fixed;left:0;right:0;height:54px;pointer-events:none;z-index:40;display:none;box-shadow:0 -1500px 0 1500px rgba(36,47,58,.28);border-top:2px solid var(--gold,#C99A2E);border-bottom:2px solid var(--gold,#C99A2E);}
+body.it-ruler-on #it-ruler{display:block;}
+</style>
+<script>
+(function(){
+  var SS=window.speechSynthesis, supported=!!SS&&typeof SpeechSynthesisUtterance!=='undefined';
+  var HINT=null, VOICES=[], primed=false, CHOSEN=null, VSEL=null, CURAUDIO=null;
+  var SPK='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M15.5 8.5a4 4 0 010 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 6a7 7 0 010 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+  function speakify(t){
+    t=(t||'').replace(/\u00A0/g,' ');
+    t=t.replace(/£\s?(\d[\d,]*(?:\.\d+)?)/g,'$1 pounds');     // £8 -> 8 pounds
+    t=t.replace(/£/g,' pounds ');
+    t=t.replace(/(\d)\s:\s(\d)/g,'$1 to $2').replace(/(\d):(\d)/g,'$1 to $2');               // ratio 3:5 -> 3 to 5
+    t=t.replace(/(\d)\s*-\s*(\d)/g,'$1 minus $2');             // 20 - 5 -> 20 minus 5 (math hyphen)
+    t=t.replace(/(\d|x|\))\s*\/\s*(\d|x|\()/g,'$1 over $2');  // x/3 -> x over 3
+    t=t.replace(/×/g,' times ').replace(/÷/g,' divided by ');
+    t=t.replace(/\u2212/g,' minus ');                          // true minus only (keeps hyphens like "call-out")
+    t=t.replace(/=/g,' equals ').replace(/\+/g,' plus ');
+    t=t.replace(/%/g,' percent ').replace(/°/g,' degrees ');
+    t=t.replace(/²/g,' squared ').replace(/³/g,' cubed ').replace(/√/g,' square root of ');
+    t=t.replace(/→/g,' then ').replace(/&/g,' and ');
+    t=t.replace(/\u2713/g,' correct ');
+    t=t.replace(/(\d)([A-Za-z])/g,'$1 $2');                    // 2x -> 2 x
+    return t.replace(/\s+/g,' ').trim();
+  }
+  function loadVoices(){ if(!supported)return; try{ var v=SS.getVoices(); if(v&&v.length)VOICES=v; }catch(e){} refreshVoiceUI(); }
+  function refreshVoiceUI(){ if(!VSEL)return; var evs=[],i; for(i=0;i<VOICES.length;i++){ if(/^en/i.test(VOICES[i].lang))evs.push(VOICES[i]); } if(!evs.length){ VSEL.style.display='none'; return; } try{ var saved=localStorage.getItem('it_tts_voice'); if(saved&&CHOSEN===null)CHOSEN=saved; }catch(e){} VSEL.innerHTML=''; var def=document.createElement('option'); def.value=''; def.textContent='Voice: best available'; VSEL.appendChild(def); for(i=0;i<evs.length;i++){ var o=document.createElement('option'); o.value=evs[i].name; o.textContent=evs[i].name+' ('+evs[i].lang+')'; if(evs[i].name===CHOSEN)o.selected=true; VSEL.appendChild(o); } VSEL.style.display=''; }
+  function pickVoice(){ var i,n;
+    if(CHOSEN){ for(i=0;i<VOICES.length;i++){ if(VOICES[i].name===CHOSEN)return VOICES[i]; } }
+    var pref=[/google uk english female/i,/google uk english male/i,/(daniel|kate|serena|arthur|martha|stephanie|oliver|libby|sonia|ryan|jenny)/i];
+    for(n=0;n<pref.length;n++){ for(i=0;i<VOICES.length;i++){ if(/en[-_]GB/i.test(VOICES[i].lang)&&pref[n].test(VOICES[i].name)&&!/compact/i.test(VOICES[i].name))return VOICES[i]; } }
+    for(i=0;i<VOICES.length;i++){ if(/^en/i.test(VOICES[i].lang)&&/(enhanced|premium|natural|neural)/i.test(VOICES[i].name))return VOICES[i]; }
+    for(i=0;i<VOICES.length;i++){ if(/en[-_]GB/i.test(VOICES[i].lang)&&!/compact/i.test(VOICES[i].name))return VOICES[i]; }
+    for(i=0;i<VOICES.length;i++){ if(/en[-_]GB/i.test(VOICES[i].lang))return VOICES[i]; }
+    for(i=0;i<VOICES.length;i++){ if(/^en/i.test(VOICES[i].lang))return VOICES[i]; }
+    return null; }
+  if(supported){ loadVoices(); try{ SS.addEventListener('voiceschanged',loadVoices); }catch(e){ try{ SS.onvoiceschanged=loadVoices; }catch(e2){} } }
+  function clearFlags(){ var s=document.querySelectorAll('.tts-btn.speaking'); for(var i=0;i<s.length;i++)s[i].classList.remove('speaking'); }
+  function supHTML(h){ h=(h||'').replace(/<sup>\s*\?\s*<\/sup>/gi,' to the power what '); return h.replace(/<sup>\s*([^<]*?)\s*<\/sup>/gi,' to the power $1 '); }
+  function readSpeech(el){ var d=document.createElement('div'); d.innerHTML=supHTML(el.innerHTML); var jt=d.querySelectorAll('.jargon-tip'); for(var i=0;i<jt.length;i++)jt[i].remove(); return d.innerText; }
+  function stopAll(){ try{ if(SS)SS.cancel(); }catch(e){} if(CURAUDIO){ try{ CURAUDIO.pause(); }catch(e){} CURAUDIO=null; } clearFlags(); }
+  function utter(text,btn){ var u=new SpeechSynthesisUtterance(text); u.lang='en-GB'; u.rate=0.95; u.pitch=1; var v=pickVoice(); try{ if(v)u.voice=v; }catch(e){} if(btn){ btn.classList.add('speaking'); u.onend=u.onerror=function(){ btn.classList.remove('speaking'); }; } try{ SS.resume(); }catch(e){} try{ SS.speak(u); }catch(e){} }
+  function noAudioHint(){ if(HINT){ HINT.textContent='Read-aloud plays when you open this page in a browser (Safari or Chrome). The in-app preview has no audio.'; HINT.style.display='block'; } }
+  function fallbackSpeak(text,btn){ if(supported){ if(!primed){ primed=true; loadVoices(); } if(SS.speaking||SS.pending){ try{ SS.cancel(); }catch(e){} } utter(text,btn); } else { noAudioHint(); } }
+  function speakCloud(text,btn,ep){ if(btn)btn.classList.add('speaking'); fetch(ep,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:text})}).then(function(r){ return r.json(); }).then(function(j){ if(!j||!j.audio)throw 0; var a=new Audio('data:audio/mpeg;base64,'+j.audio); CURAUDIO=a; a.onended=a.onerror=function(){ if(btn)btn.classList.remove('speaking'); if(CURAUDIO===a)CURAUDIO=null; }; var p=a.play(); if(p&&p['catch'])p['catch'](function(){ if(btn)btn.classList.remove('speaking'); if(CURAUDIO===a)CURAUDIO=null; fallbackSpeak(text,btn); }); }).catch(function(){ if(btn)btn.classList.remove('speaking'); fallbackSpeak(text,btn); }); }
+  function speak(text,btn){
+    if(!text) return;
+    var ep=(window.IT_TTS_ENDPOINT||'');
+    if(ep){ if(btn&&btn.classList.contains('speaking')){ stopAll(); return; } stopAll(); speakCloud(text,btn,ep); return; }
+    if(!supported){ noAudioHint(); return; }
+    if(btn&&btn.classList.contains('speaking')){ stopAll(); return; }
+    clearFlags();
+    if(SS.speaking||SS.pending){ try{ SS.cancel(); }catch(e){} }
+    if(!primed){ primed=true; loadVoices(); try{ var w=new SpeechSynthesisUtterance(' '); w.volume=0; SS.speak(w); }catch(e){} }
+    utter(text,btn);
+  }
+  window.__speakify=speakify;
+  function loadDysFont(){ if(document.getElementById('it-dys-font'))return; var l=document.createElement('link'); l.id='it-dys-font'; l.rel='stylesheet'; l.href='https://cdn.jsdelivr.net/npm/@fontsource/opendyslexic@5/index.css'; document.head.appendChild(l); }
+  function mkBtn(label,withText){ var b=document.createElement('button'); b.type='button'; b.className='tts-btn'+(withText?' tts-lesson':''); b.setAttribute('aria-label',label); b.innerHTML=SPK+(withText?'<span>Listen</span>':''); return b; }
+  function go(){
+    // accessibility row (comfort toggle always; listen note only if TTS supported)
+    var row=document.createElement('div'); row.className='a11y-row';
+    var note=document.createElement('span'); note.className='a11y-note';
+    note.innerHTML='<strong>Read aloud &amp; reading comfort:</strong> tap a speaker to hear any question or lesson; tap Comfortable text to space the words, Dyslexia-friendly for a rounded font with no italics or capitals and roomier spacing, or pick a Reading tint if a coloured background is easier on your eyes. Your choices are remembered.';
+    row.appendChild(note);
+    var toggle=document.createElement('button'); toggle.type='button'; toggle.className='tts-btn'; toggle.textContent='Aa  Comfortable text'; toggle.setAttribute('aria-pressed','false');
+    toggle.addEventListener('click',function(){ var on=document.body.classList.toggle('comfort'); toggle.classList.toggle('on',on); toggle.setAttribute('aria-pressed',on?'true':'false'); try{ if(on)localStorage.setItem('it_comfort','1'); else localStorage.removeItem('it_comfort'); }catch(e){} });
+    row.appendChild(toggle);
+    var dys=document.createElement('button'); dys.type='button'; dys.className='tts-btn'; dys.textContent='Dyslexia-friendly'; dys.setAttribute('aria-pressed','false');
+    dys.addEventListener('click',function(){ var on=document.body.classList.toggle('dyslexic'); if(on)loadDysFont(); dys.classList.toggle('on',on); dys.setAttribute('aria-pressed',on?'true':'false'); try{ if(on)localStorage.setItem('it_dyslexic','1'); else localStorage.removeItem('it_dyslexic'); }catch(e){} });
+    row.appendChild(dys);
+    var bigtap=document.createElement('button'); bigtap.type='button'; bigtap.className='tts-btn'; bigtap.textContent='Bigger taps'; bigtap.setAttribute('aria-pressed','false');
+    bigtap.addEventListener('click',function(){ var on=document.body.classList.toggle('it-bigtap'); bigtap.classList.toggle('on',on); bigtap.setAttribute('aria-pressed',on?'true':'false'); try{ if(on)localStorage.setItem('it_bigtap','1'); else localStorage.removeItem('it_bigtap'); }catch(e){} });
+    row.appendChild(bigtap);
+    var ruler=document.getElementById('it-ruler'); if(!ruler){ ruler=document.createElement('div'); ruler.id='it-ruler'; ruler.setAttribute('aria-hidden','true'); document.body.appendChild(ruler); }
+    var rulerBtn=document.createElement('button'); rulerBtn.type='button'; rulerBtn.className='tts-btn'; rulerBtn.textContent='Reading ruler'; rulerBtn.setAttribute('aria-pressed','false');
+    function _itRuler(y){ if(document.body.classList.contains('it-ruler-on')) ruler.style.top=(y-27)+'px'; }
+    rulerBtn.addEventListener('click',function(){ var on=document.body.classList.toggle('it-ruler-on'); rulerBtn.classList.toggle('on',on); rulerBtn.setAttribute('aria-pressed',on?'true':'false'); try{ if(on)localStorage.setItem('it_ruler','1'); else localStorage.removeItem('it_ruler'); }catch(e){} });
+    row.appendChild(rulerBtn);
+    document.addEventListener('mousemove',function(e){ _itRuler(e.clientY); });
+    document.addEventListener('touchmove',function(e){ if(e.touches[0]) _itRuler(e.touches[0].clientY); },{passive:true});
+    var tintEl=document.getElementById('it-tint'); if(!tintEl){ tintEl=document.createElement('div'); tintEl.id='it-tint'; document.body.appendChild(tintEl); }
+    function applyTint(v){ if(v){ tintEl.style.background=v; tintEl.style.display='block'; } else { tintEl.style.display='none'; } }
+    var tsel=document.createElement('select'); tsel.className='tts-tint'; tsel.setAttribute('aria-label','Choose a reading tint to ease visual stress'); tsel.style.cssText='font:600 12px/1 \'DM Sans\',sans-serif;border:1.5px solid var(--gold,#C99A2E);border-radius:999px;padding:5px 12px;background:#fff;color:var(--navy,#242F3A);cursor:pointer;';
+    var _TN=[['Tint: off',''],['Cream','#FAF0CC'],['Yellow','#FBF3A0'],['Peach','#FAD9C6'],['Rose','#F8D3E0'],['Mint','#CFEED5'],['Blue','#CDE6FB'],['Grey','#DBDBDB']];
+    for(var _ti=0;_ti<_TN.length;_ti++){ var _op=document.createElement('option'); _op.textContent=_TN[_ti][0]; _op.value=_TN[_ti][1]; tsel.appendChild(_op); }
+    tsel.addEventListener('change',function(){ applyTint(tsel.value); try{ if(tsel.value)localStorage.setItem('it_tint',tsel.value); else localStorage.removeItem('it_tint'); }catch(e){} });
+    row.appendChild(tsel);
+    try{ if(localStorage.getItem('it_comfort')==='1'){ document.body.classList.add('comfort'); toggle.classList.add('on'); toggle.setAttribute('aria-pressed','true'); } }catch(e){}
+    try{ if(localStorage.getItem('it_dyslexic')==='1'){ document.body.classList.add('dyslexic'); loadDysFont(); dys.classList.add('on'); dys.setAttribute('aria-pressed','true'); } }catch(e){}
+    try{ var _sv=localStorage.getItem('it_tint'); if(_sv){ applyTint(_sv); tsel.value=_sv; } }catch(e){}
+    try{ if(localStorage.getItem('it_bigtap')==='1'){ document.body.classList.add('it-bigtap'); bigtap.classList.add('on'); bigtap.setAttribute('aria-pressed','true'); } }catch(e){}
+    try{ if(localStorage.getItem('it_ruler')==='1'){ document.body.classList.add('it-ruler-on'); rulerBtn.classList.add('on'); rulerBtn.setAttribute('aria-pressed','true'); } }catch(e){}
+    var vsel=document.createElement('select'); vsel.className='tts-voice'; vsel.setAttribute('aria-label','Choose the read-aloud voice'); vsel.style.cssText='display:none;font:600 12px/1 \'DM Sans\',sans-serif;border:1.5px solid var(--gold,#C99A2E);border-radius:999px;padding:5px 12px;background:#fff;color:var(--navy,#242F3A);max-width:190px;cursor:pointer;'; vsel.addEventListener('change',function(){ CHOSEN=vsel.value||null; try{ if(CHOSEN)localStorage.setItem('it_tts_voice',CHOSEN); else localStorage.removeItem('it_tts_voice'); }catch(e){} stopAll(); speak('Hello. This is your reading voice.'); }); row.appendChild(vsel); VSEL=vsel; refreshVoiceUI();
+    var hint=document.createElement('span'); hint.className='a11y-hint'; hint.setAttribute('role','status'); hint.style.cssText='flex:1 1 100%;color:var(--coral-deep,#B14526);font-weight:600;font-size:12.5px;display:none;'; row.appendChild(hint); HINT=hint;
+    var l0=document.getElementById('lesson-0'); if(l0){l0.insertAdjacentElement('afterend',row);} else {var anc=document.querySelector('.lesson-part, .q, .question, .section-divider'); if(anc)anc.insertAdjacentElement('beforebegin',row); else document.body.insertBefore(row,document.body.firstChild);}
+    // listen buttons always render; speak() shows a hint if the browser has no speech engine
+    // per-question listen (reads ONLY the question text, never the answer)
+    var heads=document.querySelectorAll('.q-head, .q-header'),k;
+    for(k=0;k<heads.length;k++){ (function(head){ var qt=head.querySelector('.q-text, .qtext'); if(!qt)return; var b=mkBtn('Listen to this question',true); b.classList.remove('tts-lesson'); b.addEventListener('click',function(){ speak(speakify(readSpeech(qt)),b); }); head.appendChild(b); })(heads[k]); }
+    // per-lesson listen (reads the teaching, strips the hidden Try-one answer + visuals)
+    var ls=document.querySelectorAll('.lesson-part, .lesson');
+    for(k=0;k<ls.length;k++){ (function(l){ var h=l.querySelector('.lesson-h3')||l.querySelector('h2, h3'); if(!h)return; var b=mkBtn('Listen to this lesson',true); b.addEventListener('click',function(){ var c=l.cloneNode(true); var rm=c.querySelectorAll('details,.lesson-jump,.tts-btn,svg,.bar-figure,figure,.jargon-tip'); for(var j=0;j<rm.length;j++)rm[j].remove(); var _d=document.createElement('div'); _d.innerHTML=supHTML(c.innerHTML); speak(speakify(_d.innerText),b); }); h.insertAdjacentElement('afterend',b); })(ls[k]); }
+    // flowing-prose lessons (e.g. BIDMAS): an h2 starting 'Lesson', not inside a lesson container; read until the next h2
+    var ph=document.querySelectorAll('h2'),pk;
+    for(pk=0;pk<ph.length;pk++){ (function(h){ if(h.closest('.lesson-part, .lesson'))return; if(!/^lesson\b/i.test((h.textContent||'').trim()))return; var b=mkBtn('Listen to this lesson',true); b.addEventListener('click',function(){ var parts=[h.textContent], el=h.nextElementSibling; while(el && el.tagName!=='H2'){ if(el.classList && (el.classList.contains('tts-btn')||el.classList.contains('tts-lesson'))){ el=el.nextElementSibling; continue; } var c=el.cloneNode(true); var rm=c.querySelectorAll('details,.tts-btn,svg,figure,.bar-figure,.jargon-tip'); for(var j=0;j<rm.length;j++)rm[j].remove(); parts.push(readSpeech(c)); el=el.nextElementSibling; } speak(speakify(parts.join('. ')),b); }); h.insertAdjacentElement('afterend',b); })(ph[pk]); }
+    var tries=document.querySelectorAll('.try-one details'),tk;
+    for(tk=0;tk<tries.length;tk++){ (function(d){ var host=d.querySelector('.try-steps')||d.querySelector('p'); var sum=d.querySelector('summary'); if(!host||!sum)return; var b=mkBtn('Listen to the answer',true); b.style.margin='8px 0 4px'; b.addEventListener('click',function(e){ e.preventDefault(); e.stopPropagation(); speak(speakify(readSpeech(host)),b); }); sum.insertAdjacentElement('afterend',b); })(tries[tk]); }
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape')stopAll(); });
+    window.addEventListener('beforeunload',stopAll); window.addEventListener('pagehide',stopAll);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go); else go();
+})();
+</script>
+<script>/* Improve Tuition accessibility helper (additive; does not alter marking) - maths-safe */
+(function(){
+  var TICK=/[\u2713\u2714]/, CROSS=/[\u2717\u2718\u2715\u274c]/, APPROX=/[\u2248]/;   /* feedback ticks/crosses only - NOT maths multiply U+00D7 */
+  function stateFrom(el){
+    var t=(el.textContent||'').replace(/\s+/g,'');
+    var c=(' '+(el.getAttribute('class')||'')+' ').toLowerCase().replace(/-/g,' ');
+    if(TICK.test(t)||/ (ok|correct|right) /.test(c)) return 'Correct';
+    if(CROSS.test(t)||/ (no|wrong|incorrect) /.test(c)) return 'Incorrect';
+    if(APPROX.test(t)||/ part /.test(c)||/ partial /.test(c)) return 'Partly correct';
+    return '';
+  }
+  function glyphOnly(el){ if(el.children.length) return false; var t=(el.textContent||'').trim(); return t.length>0&&t.length<=2&&/^[\u2713\u2714\u2717\u2718\u2715\u274c\u2248]+$/.test(t); }
+  function setLbl(el,L){ if(el.getAttribute('aria-label')!==L){ el.setAttribute('role','img'); el.setAttribute('aria-label',L);} }
+  function sweep(){
+    try{
+      var nodes=document.querySelectorAll('.fb,.rem-fb,.cm-fb,[class*="-fb"]');
+      for(var i=0;i<nodes.length;i++){ var el=nodes[i], txt=(el.textContent||'').trim(), L=stateFrom(el);
+        if((glyphOnly(el)||!txt)&&L){ setLbl(el,L); }
+        else if(!txt){ el.removeAttribute('role'); el.removeAttribute('aria-label'); } }
+      var st=document.querySelectorAll('[class~="correct"],[class~="incorrect"],[class~="wrong"]');
+      for(var k=0;k<st.length;k++){ var e=st[k]; if(glyphOnly(e)){ var L2=stateFrom(e); if(L2) setLbl(e,L2); } }
+    }catch(_){}
+  }
+  function labelInputs(){
+    try{
+      var ins=document.querySelectorAll('input.answer-input,input.rem-input,input[type="text"],input[type="number"]');
+      for(var i=0;i<ins.length;i++){ var el=ins[i];
+        if(el.getAttribute('aria-label')||el.getAttribute('aria-labelledby')) continue;
+        if(el.closest('label')||el.closest('.reg-field')||el.closest('.reg-card')) continue;
+        if(el.id&&document.querySelector('label[for="'+el.id+'"]')) continue;
+        var q=el.closest('[id^="q-"]'); var n=q?q.id.replace('q-',''):'';
+        el.setAttribute('aria-label', n?('Your answer for question '+n):'Your answer'); }
+    }catch(_){}
+  }
+  function run(){ labelInputs(); sweep(); }
+  if(document.readyState!=='loading') run(); else document.addEventListener('DOMContentLoaded',run);
+  document.addEventListener('click',function(){ setTimeout(sweep,80); },true);
+})();</script>
+<!--IA11Y-END-->
+<!--ITTS-END-->
+<!-- IMPROVETUITION:CONTENT-END -->
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dividing Whole Numbers | Improve Tuition</title>
+<meta name="description" content="Divide whole numbers by hand with short division (the bus-stop method): carry remainders, read the answer and interpret what is left over. Interactive steppers and practice.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#242F3A;--coral:#D55A3F;--coral-hover:#B14526;--gold:#C99A2E;--gold-soft:#D6B35A;--grey:#5A5A5A;--grey-soft:#8A8A8A;--paper:#F7F5F2;--cream:#E8E3DA;--white:#FFFFFF;--rule:#D8D2C7;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--grey);font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px 60px}
+h1,h2,h3,.fr{font-family:'Fraunces',Georgia,serif}
+.topbar{background:var(--navy);color:var(--gold-soft);font:700 .66rem/1 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:7px 10px}
+.hero{background:var(--navy);border-bottom:4px solid var(--gold);padding:26px 16px 24px}
+.hero .in{max-width:640px;margin:0 auto}
+.eyebrow{font:700 .72rem/1 'DM Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hero h1{color:#fff;font-size:clamp(1.7rem,6vw,2.3rem);line-height:1.1;margin:9px 0 6px;font-weight:700}
+.hero .sub{color:var(--gold-soft);font-style:italic;font-size:1.02rem;margin:0 0 8px}
+.hero .meta{color:#b9bfc6;font-size:.82rem;margin:0}
+.card{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:18px 16px;margin:18px 0}
+h2{color:var(--navy);font-size:1.35rem;margin:4px 0 8px}
+h3{color:var(--navy);font-size:1.1rem;margin:18px 0 4px}
+.lead{margin:0 0 12px}
+.keyidea{background:var(--cream);border-left:4px solid var(--gold);border-radius:6px;padding:11px 14px;margin:12px 0;font-size:.96rem}
+.keyidea b,.lead b{color:var(--navy)}
+.lead a{color:var(--coral-hover);font-weight:600}
+.miscon{background:#fbeeea;border-left:4px solid var(--coral);border-radius:6px;padding:11px 14px;margin:12px 0;font-size:.92rem}
+.miscon .lab{font:700 .64rem/1 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-hover);display:block;margin-bottom:3px}
+/* ---- stepper shell ---- */
+.cstep{border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin:14px 0}
+.cs-head{background:var(--navy);padding:10px 14px}
+.cs-eyebrow{display:block;font:700 .66rem/1 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft)}
+.cs-q{display:block;font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:1.35rem;margin-top:4px}
+.cs-work{min-height:2.6em;padding:9px 14px 2px;font-size:.9rem;color:var(--navy);line-height:1.45}
+.cs-work b{color:var(--navy)}
+.cs-check{display:block;margin-top:4px;color:var(--coral-hover);font-weight:600;font-size:.86rem}
+.cs-controls{display:flex;gap:8px;padding:10px 14px 14px}
+.cs-btn{font-family:'DM Sans',sans-serif;font-weight:700;font-size:.86rem;padding:9px 14px;min-height:44px;border-radius:8px;border:1.5px solid var(--gold);background:#fff;color:var(--coral-hover);cursor:pointer}
+.cs-btn:hover:not(:disabled){background:var(--gold);color:#fff;border-color:var(--gold)}
+.cs-btn:disabled{opacity:.4;cursor:default}
+.cs-reset{margin-left:auto;border-color:var(--rule);color:var(--grey);background:transparent}
+/* ---- short division grid ---- */
+.sd-stage{padding:18px 10px 6px;overflow-x:auto;text-align:center}
+.sd-table{border-collapse:collapse;margin:0 auto;font-variant-numeric:tabular-nums}
+.sd-table td{width:42px;height:42px;text-align:center;font-family:'Fraunces',serif;font-weight:700;font-size:1.5rem;color:var(--navy);position:relative}
+.sd-quot td{color:var(--coral);font-weight:800;height:36px}
+.sd-lead{width:auto!important;min-width:48px;text-align:right!important;padding-right:6px;color:var(--navy)}
+.sd-digit{border-top:2.5px solid var(--navy)}
+.sd-carry{position:absolute;left:3px;top:0;font-size:.5em;color:var(--coral-hover);font-family:'DM Sans',sans-serif;font-weight:700;line-height:1.2}
+td.col-on{background:rgba(201,154,46,.20);box-shadow:inset 0 0 0 2px var(--gold);border-radius:5px}
+.sd-mult{margin:4px 14px 0;padding:7px 11px;background:#faf6ec;border:1px solid var(--rule);border-radius:6px;font-size:.8rem;color:var(--grey)}
+.sd-mult b{color:var(--navy)}
+/* ---- sections ---- */
+.divider{background:var(--navy);border-radius:12px;padding:16px;margin:24px 0 6px;color:#fff}
+.divider .lo-eyebrow{font:700 .68rem/1 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.divider .title{font-family:'Fraunces',serif;font-weight:700;font-size:1.18rem;margin:6px 0 2px;color:#fff}
+.divider .lo{font-style:italic;color:#dfe3e8;margin:6px 0 8px;font-size:.96rem}
+.divider .sc-lab{font:700 .64rem/1 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft);display:block;margin-bottom:3px}
+.divider ul{margin:0;padding-left:18px;color:#dfe3e8;font-size:.9rem}
+.divider li{margin:2px 0}
+/* ---- questions ---- */
+.q{background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:14px;margin:10px 0}
+.q .qhead{display:flex;align-items:baseline;gap:8px}
+.q .qn{font-family:'Fraunces',serif;font-weight:700;color:var(--coral)}
+.q .qtext{color:var(--navy);font-weight:500}
+.q .ansrow{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.q .ansrow label{font-size:.9rem;color:var(--grey)}
+.q .ans{font-family:'Fraunces',serif;font-size:1.05rem;width:150px;max-width:55vw;padding:8px 10px;border:1.5px solid var(--rule);border-radius:7px;background:var(--paper)}
+.q .hint{font-size:.78rem;color:var(--grey-soft);margin-top:4px;width:100%}
+.q .marks{font-style:italic;color:var(--grey-soft);font-size:.84rem}
+.verdict{margin-top:8px;font-weight:700;font-size:.92rem;min-height:1em}
+.verdict.ok{color:#2e7d32}.verdict.no{color:var(--coral-hover)}
+.show-how{display:inline-flex;align-items:center;gap:6px;margin-top:9px;padding:7px 13px;min-height:40px;background:transparent;border:1.5px dashed var(--gold);color:var(--coral-hover);border-radius:7px;font:600 .8rem/1 'DM Sans',sans-serif;cursor:pointer}
+.show-how:hover{background:rgba(201,154,46,.09)}
+.work{display:none;margin-top:9px;padding:11px 13px;background:var(--cream);border-radius:7px;font-size:.9rem;line-height:1.5}
+.work.show{display:block}
+.work b{color:var(--navy)}.work .ans-final{color:var(--coral-hover);font-weight:700}
+.markbar{position:sticky;bottom:0;background:var(--navy);margin:22px -16px 0;padding:12px 16px;display:flex;align-items:center;gap:12px;border-top:3px solid var(--gold)}
+.markbtn{background:var(--coral);color:#fff;border:none;font-family:'Fraunces',serif;font-weight:700;font-size:1rem;padding:12px 22px;border-radius:9px;cursor:pointer}
+.markbtn:hover{background:var(--coral-hover)}
+.resetbtn{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);font-weight:700;padding:11px 18px;border-radius:9px;cursor:pointer}
+.score{color:#fff;font-family:'Fraunces',serif;font-weight:700;margin-left:auto;font-size:1rem}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--grey-soft);text-align:center;line-height:1.6}
+.foot b{color:var(--navy)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<style>
+/* Responsive fixes — added by responsive_fix.py */
+html, body { overflow-x: hidden; max-width: 100vw; }
+svg { max-width: 100%; height: auto; display: block; }
+.qfig, .figbox { max-width: 100%; overflow: hidden; }
+.figbox svg, .qfig svg { margin: 0 auto; }
+table.ak { table-layout: fixed; width: 100%; }
+table.ak td, table.ak th { word-break: break-word; overflow-wrap: anywhere; padding: 6px; font-size: 12px; }
+.q .qhead .qtext, .q .qprompt { overflow-wrap: anywhere; }
+.answer-line, .mistake { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- IMPROVETUITION:CONTENT-START -->
+<div class="topbar">Improve Tuition · Non-Calculator Maths · Year 6–9</div>
+<div class="hero"><div class="in">
+  <span class="eyebrow">Lesson · Practice · Steps</span>
+  <h1>Dividing Whole Numbers</h1>
+  <p class="sub">Short division, step by step — carry the remainder, read the answer, and know what's left over.</p>
+  <p class="meta">14 questions · 3 sections · interactive bus-stop method · no time pressure</p>
+</div></div>
+
+<div class="wrap">
+
+<div class="card">
+  <h2>What's really happening</h2>
+  <p class="lead">Short division — the <b>bus-stop method</b> — works through the number <b>one digit at a time, left to right</b>. At each digit you ask “how many whole times does the divisor go in?”, write that above, and <b>carry whatever is left over</b> to the next digit. The number you carry is always smaller than the divisor.</p>
+  <div class="keyidea"><b>The tip that makes it easy:</b> before you start, jot down the first few multiples of the divisor. For 25 that's 25, 50, 75, 100, 125… Now every “how many go in?” becomes a quick look-up instead of guesswork.</div>
+
+  <h3>Method — work through 925 ÷ 25</h3>
+  <p class="lead">Tap <b>Next digit</b> to bring each digit into the bus stop and carry the remainder along:</p>
+  <div class="cstep" id="sd1">
+    <div class="cs-head"><span class="cs-eyebrow">Short division · exact</span><span class="cs-q">925 ÷ 25</span></div>
+    <div class="sd-stage"><div class="sd-grid"></div></div>
+    <div class="sd-mult"></div>
+    <div class="cs-work">Set out as 25 ) 925. Tap <b>Next digit</b> to start with the hundreds digit.</div>
+    <div class="cs-controls"><button class="cs-btn cs-next" type="button">Next digit ▸</button><button class="cs-btn cs-reset" type="button">Reset</button></div>
+  </div>
+
+  <h3>When it doesn't go exactly — 437 ÷ 12</h3>
+  <p class="lead">Most divisions leave a <b>remainder</b>. Watch the last carry become the leftover:</p>
+  <div class="cstep" id="sd2">
+    <div class="cs-head"><span class="cs-eyebrow">Short division · with a remainder</span><span class="cs-q">437 ÷ 12</span></div>
+    <div class="sd-stage"><div class="sd-grid"></div></div>
+    <div class="sd-mult"></div>
+    <div class="cs-work">Set out as 12 ) 437. Tap <b>Next digit</b>.</div>
+    <div class="cs-controls"><button class="cs-btn cs-next" type="button">Next digit ▸</button><button class="cs-btn cs-reset" type="button">Reset</button></div>
+  </div>
+
+  <h3>Reading the remainder</h3>
+  <p class="lead">In a real problem, the remainder has a meaning — and sometimes you must <b>round up</b>. A baker puts 200 cupcakes into boxes of 12. Short division gives <b>200 ÷ 12 = 16 remainder 8</b>. So there are <b>16 full boxes</b> with <b>8 cupcakes left over</b>. But if the question were “how many boxes are <i>needed</i> to hold them all?”, you'd need a 17th box for those last 8 — so you round <b>up</b> to 17.</p>
+  <div class="miscon"><span class="lab">Common slip</span>Don't drop the leading place value. In 437 ÷ 12, 12 won't go into 4, so you write <b>0</b> there and carry the 4 to make 43 — the answer is 36, not 3‑something. And the remainder is the <i>last</i> carry, not a digit you write in the answer.</div>
+  <p class="lead" style="margin-top:14px">You'll lean on times tables throughout — for the multiplication side of the non-calculator paper, see <a href="/library/multiplying-without-calculator-grade-1-lesson/">Multiplying Without a Calculator</a>.</p>
+</div>
+
+<!-- SECTION A -->
+<div class="divider">
+  <span class="lo-eyebrow">Learning Objective 1 · Year 5–6</span>
+  <div class="title">Section A · Short division (exact)</div>
+  <div class="lo">Divide whole numbers that go exactly, using short division.</div>
+  <span class="sc-lab">Success criteria — I can:</span>
+  <ul><li>set the division out as a bus stop</li><li>carry the remainder to the next digit</li><li>write a 0 when the divisor won't go yet</li></ul>
+</div>
+<div id="secA"></div>
+
+<!-- SECTION B -->
+<div class="divider">
+  <span class="lo-eyebrow">Learning Objective 2 · Year 6–7</span>
+  <div class="title">Section B · Divisions with a remainder</div>
+  <div class="lo">Divide whole numbers that leave a remainder, and state both parts.</div>
+  <span class="sc-lab">Success criteria — I can:</span>
+  <ul><li>find the whole-number answer (the quotient)</li><li>read off the final remainder</li><li>write the answer as “___ r ___”</li></ul>
+</div>
+<div id="secB"></div>
+
+<!-- SECTION C -->
+<div class="divider">
+  <span class="lo-eyebrow">Learning Objective 3 · Year 6–9</span>
+  <div class="title">Section C · Real-life remainders</div>
+  <div class="lo">Solve word problems by dividing, then interpret the remainder — including when to round up.</div>
+  <span class="sc-lab">Success criteria — I can:</span>
+  <ul><li>decide that a problem needs dividing</li><li>read whether the answer wants the quotient or the remainder</li><li>round up when every item must be covered</li></ul>
+</div>
+<div id="secC"></div>
+
+<div class="markbar">
+  <button class="markbtn" id="markbtn" type="button">Mark My Work</button>
+  <button class="resetbtn" id="resetbtn" type="button">Reset</button>
+  <span class="score" id="score">/ 14</span>
+</div>
+
+<div class="foot">
+  <b>Improve Tuition</b> · George Street, Batley, West Yorkshire WF17 5AR · improvetuition.org<br>
+  Teacher‑led tuition since 2007. We are committed to safeguarding and promoting the welfare of every child in our care.
+</div>
+
+</div>
+
+<script>
+/* ===== Short-division (bus-stop) stepper ===== */
+function setupShortDiv(id, divisor, dividend){
+  var root=document.getElementById(id), grid=root.querySelector('.sd-grid');
+  var n=dividend.length;
+  var qcells='<td class="sd-lead"></td>', dcells='<td class="sd-lead">'+divisor+'&thinsp;)</td>';
+  for(var c=0;c<n;c++){qcells+='<td data-c="'+c+'"></td>';dcells+='<td class="sd-digit" data-c="'+c+'">'+dividend[c]+'</td>';}
+  grid.innerHTML='<table class="sd-table"><tbody><tr class="sd-quot">'+qcells+'</tr><tr class="sd-divrow">'+dcells+'</tr></tbody></table>';
+  // multiples helper
+  var mult=root.querySelector('.sd-mult'); var ms=[];
+  for(var k=1;k<=9;k++)ms.push(k+'×'+divisor+'='+(k*divisor));
+  mult.innerHTML='<b>Multiples of '+divisor+':</b> '+ms.join(' &middot; ');
+  var S={i:0,carry:0,done:false};
+  var work=root.querySelector('.cs-work'), next=root.querySelector('.cs-next'), reset=root.querySelector('.cs-reset');
+  next.disabled=false; next.textContent='Next digit ▸';
+  function qcell(c){return grid.querySelector('.sd-quot td[data-c="'+c+'"]');}
+  function dcell(c){return grid.querySelector('.sd-divrow td[data-c="'+c+'"]');}
+  function hi(c){grid.querySelectorAll('td.col-on').forEach(function(x){x.classList.remove('col-on');});grid.querySelectorAll('td[data-c="'+c+'"]').forEach(function(x){x.classList.add('col-on');});}
+  function step(){
+    if(S.done)return;
+    var i=S.i, cur=S.carry*10 + (+dividend[i]);
+    var q=Math.floor(cur/divisor), r=cur%divisor;
+    qcell(i).textContent=q; hi(i);
+    if(r>0 && i<n-1){var nx=dcell(i+1);nx.innerHTML='<span class="sd-carry">'+r+'</span>'+dividend[i+1];}
+    if(q===0 && i<n-1){work.innerHTML='<b>'+divisor+' into '+cur+' won\'t go</b> — write 0 above and carry the '+cur+' across to make the next number '+(cur*10+ +dividend[i+1])+'.';}
+    else{work.innerHTML='<b>'+divisor+' into '+cur+'</b> goes <b>'+q+'</b> times ('+divisor+' × '+q+' = '+(q*divisor)+'), remainder <b>'+r+'</b>.';}
+    S.carry=r; S.i++;
+    if(S.i>=n){
+      S.done=true; next.disabled=true;
+      var quot=parseInt(grid.querySelectorAll('.sd-quot td[data-c]').length?Array.prototype.map.call(grid.querySelectorAll('.sd-quot td[data-c]'),function(t){return t.textContent||'0';}).join(''):'0',10);
+      var rem=S.carry;
+      var chk=rem? (quot+' × '+divisor+' + '+rem+' = '+dividend) : (quot+' × '+divisor+' = '+dividend);
+      work.innerHTML='<b>Done.</b> '+dividend+' ÷ '+divisor+' = <b>'+quot+(rem?' remainder '+rem:'')+'</b>.<span class="cs-check">Check: '+chk+' ✓</span>';
+    }
+  }
+  next.onclick=step; reset.onclick=function(){setupShortDiv(id,divisor,dividend);};
+}
+
+/* ===== Questions ===== */
+var QS=[
+ {id:1,sec:'A',type:'num',a:14,t:'84 ÷ 6',w:'6 into 8 = 1 r2; carry the 2 → 6 into 24 = 4. <span class="ans-final">84 ÷ 6 = 14.</span>'},
+ {id:2,sec:'A',type:'num',a:39,t:'195 ÷ 5',w:'5 into 1 = 0 r1; 5 into 19 = 3 r4; 5 into 45 = 9. <span class="ans-final">195 ÷ 5 = 39.</span>'},
+ {id:3,sec:'A',type:'num',a:52,t:'416 ÷ 8',w:'8 into 4 = 0 r4; 8 into 41 = 5 r1; 8 into 16 = 2. <span class="ans-final">416 ÷ 8 = 52.</span>'},
+ {id:4,sec:'A',type:'num',a:36,t:'576 ÷ 16',w:'16 into 5 = 0 r5; 16 into 57 = 3 r9; 16 into 96 = 6. <span class="ans-final">576 ÷ 16 = 36.</span>'},
+ {id:5,sec:'A',type:'num',a:35,t:'945 ÷ 27',w:'27 into 9 = 0 r9; 27 into 94 = 3 r13; 27 into 135 = 5. <span class="ans-final">945 ÷ 27 = 35.</span>'},
+ {id:6,sec:'B',type:'rem',q:23,r:3,t:'95 ÷ 4',w:'4 into 9 = 2 r1; 4 into 15 = 3 r3. <span class="ans-final">95 ÷ 4 = 23 r 3.</span>'},
+ {id:7,sec:'B',type:'rem',q:35,r:5,t:'250 ÷ 7',w:'7 into 2 = 0 r2; 7 into 25 = 3 r4; 7 into 40 = 5 r5. <span class="ans-final">250 ÷ 7 = 35 r 5.</span>'},
+ {id:8,sec:'B',type:'rem',q:38,r:6,t:'500 ÷ 13',w:'13 into 5 = 0 r5; 13 into 50 = 3 r11; 13 into 110 = 8 r6. <span class="ans-final">500 ÷ 13 = 38 r 6.</span>'},
+ {id:9,sec:'B',type:'rem',q:55,r:8,t:'833 ÷ 15',w:'15 into 8 = 0 r8; 15 into 83 = 5 r8; 15 into 83 = 5 r8. <span class="ans-final">833 ÷ 15 = 55 r 8.</span>'},
+ {id:10,sec:'B',type:'rem',q:43,r:11,t:'1000 ÷ 23',w:'23 into 100 = 4 r8; 23 into 80 = 3 r11; (leading digits give 0s). <span class="ans-final">1000 ÷ 23 = 43 r 11.</span>'},
+ {id:11,sec:'C',type:'num',a:16,t:'A plank of wood is 250 cm long. It is cut into 18 cm pieces. What length of wood is left over (in cm)?',hint:'Divide, then the leftover is the remainder.',w:'250 ÷ 18 = 13 remainder 16, so 13 whole pieces are cut and <span class="ans-final">16 cm</span> is left over.'},
+ {id:12,sec:'C',type:'num',a:5,t:'365 sweets are shared equally among 8 children. How many sweets are left over?',hint:'The leftover is the remainder.',w:'365 ÷ 8 = 45 remainder 5, so each child gets 45 and <span class="ans-final">5 sweets</span> are left over.'},
+ {id:13,sec:'C',type:'num',a:13,t:'Pens are packed in boxes of 18. How many full boxes can be filled from 240 pens?',hint:'Here you want the whole-number answer (the quotient).',w:'240 ÷ 18 = 13 remainder 6 → <span class="ans-final">13 full boxes</span> (6 pens are left over).'},
+ {id:14,sec:'C',type:'num',a:14,t:'A coach seats 53 people. How many coaches are needed to carry 700 people?',hint:'Everyone must travel — round up.',w:'700 ÷ 53 = 13 remainder 11. Thirteen coaches seat 689; the last 11 people still need a coach, so round up to <span class="ans-final">14 coaches</span>.'}
+];
+function intsIn(v){return (String(v).match(/\d+/g)||[]).map(Number);}
+function qHTML(q){
+  var isRem=q.type==='rem';
+  return '<div class="q" id="q-'+q.id+'"><div class="qhead"><span class="qn">Q'+q.id+'.</span><span class="qtext">'+(q.sec==='C'?q.t:'Work out '+q.t+'.')+'</span></div>'+
+    '<div class="ansrow"><label for="a-'+q.id+'">Your answer:</label><input class="ans" id="a-'+q.id+'" type="text" inputmode="'+(isRem?'text':'numeric')+'" autocomplete="off" placeholder="'+(isRem?'e.g. 23 r 3':'')+'" data-q="'+q.id+'"><span class="marks">(1 mark)</span>'+
+    (q.hint?'<span class="hint">'+q.hint+'</span>':'')+(isRem?'<span class="hint">Write it as “quotient r remainder”.</span>':'')+'</div>'+
+    '<div class="verdict" id="v-'+q.id+'"></div>'+
+    '<button class="show-how" type="button" onclick="toggleWork(this)">➕ Show me how</button>'+
+    '<div class="work" id="w-'+q.id+'">'+q.w+'</div></div>';
+}
+['A','B','C'].forEach(function(sec){document.getElementById('sec'+sec).innerHTML=QS.filter(function(q){return q.sec===sec;}).map(qHTML).join('');});
+function toggleWork(btn){var w=btn.nextElementSibling;var open=w.classList.toggle('show');btn.innerHTML=open?'➖ Hide working':'➕ Show me how';}
+function normNum(v){if(v==null)return null;v=String(v).replace(/[^0-9.\-]/g,'');if(v===''||v==='-'||v==='.')return null;var n=parseFloat(v);return isNaN(n)?null:n;}
+function markAll(){
+  var earned=0,total=QS.length;
+  QS.forEach(function(q){
+    var inp=document.getElementById('a-'+q.id), verdict=document.getElementById('v-'+q.id), work=document.getElementById('w-'+q.id);
+    inp.disabled=true; var ok=false, attempted=inp.value.trim()!=='';
+    if(q.type==='rem'){var ns=intsIn(inp.value);ok=ns.length>=2&&ns[0]===q.q&&ns[1]===q.r;}
+    else{var v=normNum(inp.value);ok=v!==null&&Math.abs(v-q.a)<1e-9;}
+    if(ok){earned++;verdict.className='verdict ok';verdict.textContent='✓ Correct';}
+    else{verdict.className='verdict no';verdict.textContent=(attempted?'✗ Not quite — try the working':'— Not attempted');work.classList.add('show');work.previousElementSibling.innerHTML='➖ Hide working';}
+  });
+  document.getElementById('score').textContent=earned+' / '+total;
+}
+document.getElementById('markbtn').onclick=markAll;
+document.getElementById('resetbtn').onclick=function(){location.reload();};
+
+setupShortDiv('sd1',25,'925');
+setupShortDiv('sd2',12,'437');
+</script>
+<!-- IMPROVETUITION:CONTENT-END -->
+</body>
+</html>

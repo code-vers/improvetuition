@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recurring Decimals | Improve Tuition</title>
+<meta name="description" content="Recurring decimals without a calculator: the dot notation, turning a fraction into a recurring decimal by division, and converting a recurring decimal back into a fraction with the algebra method. Interactive steppers and graded practice.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#242F3A;--coral:#D55A3F;--coral-hover:#B14526;--gold:#C99A2E;--gold-soft:#D6B35A;--grey:#5A5A5A;--grey-soft:#8A8A8A;--paper:#F7F5F2;--cream:#E8E3DA;--white:#FFFFFF;--rule:#D8D2C7;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--grey);font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px 60px}
+h1,h2,h3,.fr{font-family:'Fraunces',Georgia,serif}
+.topbar{background:var(--navy);color:var(--gold-soft);font:700 .66rem/1 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:7px 10px}
+.hero{background:var(--navy);border-bottom:4px solid var(--gold);padding:26px 16px 24px}
+.hero .in{max-width:640px;margin:0 auto}
+.eyebrow{font:700 .72rem/1 'DM Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hero h1{color:#fff;font-size:clamp(1.6rem,5.6vw,2.2rem);line-height:1.1;margin:9px 0 6px;font-weight:700}
+.hero .sub{color:var(--gold-soft);font-style:italic;font-size:1.02rem;margin:0 0 8px}
+.hero .meta{color:#b9bfc6;font-size:.82rem;margin:0}
+.card{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:18px 16px;margin:18px 0}
+h2{color:var(--navy);font-size:1.35rem;margin:4px 0 8px}
+h3{color:var(--navy);font-size:1.12rem;margin:20px 0 4px}
+.lead{margin:0 0 12px}
+.lead a{color:var(--coral-hover);font-weight:600}
+.keyidea{background:var(--cream);border-left:4px solid var(--gold);border-radius:6px;padding:11px 14px;margin:12px 0;font-size:.96rem}
+.keyidea b,.lead b{color:var(--navy)}
+.miscon{background:#fbeeea;border-left:4px solid var(--coral);border-radius:6px;padding:11px 14px;margin:12px 0;font-size:.92rem}
+.miscon .lab{font:700 .64rem/1 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-hover);display:block;margin-bottom:3px}
+/* fraction rendering */
+.frac{display:inline-flex;flex-direction:column;text-align:center;vertical-align:middle;margin:0 3px;line-height:1.05}
+.frac .n{border-bottom:2px solid currentColor;padding:0 5px}
+.frac .d{padding:0 5px}
+.mixnum{vertical-align:middle;margin-right:1px;font-weight:700}
+/* stepper shell */
+.cstep{border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin:14px 0}
+.cs-head{background:var(--navy);padding:10px 14px}
+.cs-eyebrow{display:block;font:700 .66rem/1 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft)}
+.cs-q{display:block;font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:1.3rem;margin-top:4px}
+.fr-stage{padding:14px 16px 4px;font-family:'Fraunces',serif;font-size:1.5rem;color:var(--navy)}
+.fr-line{padding:5px 0;display:flex;align-items:center;flex-wrap:wrap;gap:2px}
+.fr-line.fr-ans{color:var(--coral)}
+.cs-work{min-height:2.6em;padding:7px 16px 2px;font-size:.9rem;color:var(--navy);line-height:1.45}
+.cs-work b{color:var(--navy)}
+.cs-check{display:block;margin-top:4px;color:var(--coral-hover);font-weight:600;font-size:.86rem}
+.cs-controls{display:flex;gap:8px;padding:10px 16px 14px}
+.cs-btn{font-family:'DM Sans',sans-serif;font-weight:700;font-size:.86rem;padding:9px 14px;min-height:44px;border-radius:8px;border:1.5px solid var(--gold);background:#fff;color:var(--coral-hover);cursor:pointer}
+.cs-btn:hover:not(:disabled){background:var(--gold);color:#fff;border-color:var(--gold)}
+.cs-btn:disabled{opacity:.4;cursor:default}
+.cs-reset{margin-left:auto;border-color:var(--rule);color:var(--grey);background:transparent}
+.wex{background:#faf6ec;border:1px solid var(--rule);border-radius:8px;padding:12px 14px;margin:12px 0;font-size:1.4rem;font-family:'Fraunces',serif;color:var(--navy);text-align:center}
+.wex .cap{display:block;font-family:'DM Sans',sans-serif;font-size:.82rem;color:var(--grey);margin-top:6px;font-weight:500}
+/* sections */
+.divider{background:var(--navy);border-radius:12px;padding:16px;margin:24px 0 6px;color:#fff}
+.divider .lo-eyebrow{font:700 .68rem/1 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.divider .title{font-family:'Fraunces',serif;font-weight:700;font-size:1.18rem;margin:6px 0 2px;color:#fff}
+.divider .lo{font-style:italic;color:#dfe3e8;margin:6px 0 8px;font-size:.96rem}
+.divider .sc-lab{font:700 .64rem/1 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft);display:block;margin-bottom:3px}
+.divider ul{margin:0;padding-left:18px;color:#dfe3e8;font-size:.9rem}
+.divider li{margin:2px 0}
+/* questions */
+.q{background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:14px;margin:10px 0}
+.q .qhead{display:flex;align-items:baseline;gap:8px}
+.q .qn{font-family:'Fraunces',serif;font-weight:700;color:var(--coral)}
+.q .qtext{color:var(--navy);font-weight:500}
+.q .ansrow{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.q .ansrow label{font-size:.9rem;color:var(--grey)}
+.q .ans{font-family:'Fraunces',serif;font-size:1.05rem;width:150px;max-width:55vw;padding:8px 10px;border:1.5px solid var(--rule);border-radius:7px;background:var(--paper)}
+.q .hint{font-size:.78rem;color:var(--grey-soft);margin-top:4px;width:100%}
+.q .marks{font-style:italic;color:var(--grey-soft);font-size:.84rem}
+.verdict{margin-top:8px;font-weight:700;font-size:.92rem;min-height:1em}
+.verdict.ok{color:#2e7d32}.verdict.no{color:var(--coral-hover)}
+.show-how{display:inline-flex;align-items:center;gap:6px;margin-top:9px;padding:7px 13px;min-height:40px;background:transparent;border:1.5px dashed var(--gold);color:var(--coral-hover);border-radius:7px;font:600 .8rem/1 'DM Sans',sans-serif;cursor:pointer}
+.show-how:hover{background:rgba(201,154,46,.09)}
+.work{display:none;margin-top:9px;padding:11px 13px;background:var(--cream);border-radius:7px;font-size:.9rem;line-height:1.5}
+.work.show{display:block}
+.work b{color:var(--navy)}.work .ans-final{color:var(--coral-hover);font-weight:700}
+.markbar{position:sticky;bottom:0;background:var(--navy);margin:22px -16px 0;padding:12px 16px;display:flex;align-items:center;gap:12px;border-top:3px solid var(--gold)}
+.markbtn{background:var(--coral);color:#fff;border:none;font-family:'Fraunces',serif;font-weight:700;font-size:1rem;padding:12px 22px;border-radius:9px;cursor:pointer}
+.markbtn:hover{background:var(--coral-hover)}
+.resetbtn{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);font-weight:700;padding:11px 18px;border-radius:9px;cursor:pointer}
+.score{color:#fff;font-family:'Fraunces',serif;font-weight:700;margin-left:auto;font-size:1rem}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--grey-soft);text-align:center;line-height:1.6}
+.foot b{color:var(--navy)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.dot{position:relative;display:inline-block;padding:0 1px}.dot::after{content:"";position:absolute;top:-3px;left:50%;width:4px;height:4px;background:currentColor;border-radius:50%;transform:translateX(-50%)}.recbox{background:#faf6ec;border:1px solid var(--rule);border-radius:8px;padding:10px 14px;margin:10px 0;font-family:"Fraunces",serif;font-size:1.3rem;color:var(--navy);text-align:center}.recbox .cap{display:block;font-family:"DM Sans",sans-serif;font-size:.8rem;color:var(--grey);margin-top:5px;font-weight:500}</style>
+<style>
+/* Responsive fixes — added by responsive_fix.py */
+html, body { overflow-x: hidden; max-width: 100vw; }
+svg { max-width: 100%; height: auto; display: block; }
+.qfig, .figbox { max-width: 100%; overflow: hidden; }
+.figbox svg, .qfig svg { margin: 0 auto; }
+table.ak { table-layout: fixed; width: 100%; }
+table.ak td, table.ak th { word-break: break-word; overflow-wrap: anywhere; padding: 6px; font-size: 12px; }
+.q .qhead .qtext, .q .qprompt { overflow-wrap: anywhere; }
+.answer-line, .mistake { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- IMPROVETUITION:CONTENT-START -->
+<div class="topbar">Improve Tuition · Non-Calculator Maths · Year 8–GCSE</div>
+<div class="hero"><div class="in">
+  <span class="eyebrow">Lesson · Practice · Steps</span>
+  <h1>Recurring Decimals</h1>
+  <p class="sub">The dots, the division that never ends, and turning it all back into a fraction.</p>
+  <p class="meta">14 questions · 3 sections · two interactive steppers · no time pressure</p>
+</div></div>
+
+<div class="wrap">
+<div class="card">
+  <h2>What's really happening</h2>
+  <p class="lead">A <b>recurring decimal</b> has digits that repeat forever. We don't write them out forever — we mark the repeating part with <b>dots</b>. The straightforward conversions between fractions, decimals and percentages live on the <a href="/library/fractions-decimals-percentages/">Fractions, Decimals &amp; Percentages</a> page; this page is about the recurring case.</p>
+  <div class="keyidea"><b>The dot rule:</b> one dot marks a single repeating digit; two dots mark the <b>first and last</b> digit of a repeating block — everything between them repeats too.</div>
+  <div class="recbox">
+    0.<span class="dot">5</span> = 0.5555…  &nbsp;&nbsp; 0.<span class="dot">4</span><span class="dot">5</span> = 0.454545…  &nbsp;&nbsp; 0.1<span class="dot">6</span> = 0.1666…
+    <span class="cap">One dot · two dots (the 45 block) · a non-repeating 1 then a repeating 6.</span>
+  </div>
+
+  <h3>1 · Fraction → recurring decimal</h3>
+  <p class="lead">Divide the top by the bottom and watch the <b>remainders</b>. When a remainder comes back, the digits start repeating. Tap through 2 ÷ 11:</p>
+  <div class="cstep" id="r1"><div class="cs-head"><span class="cs-eyebrow">Fraction → recurring decimal</span><span class="cs-q">2/11 as a decimal</span></div><div class="fr-stage"></div><div class="cs-work"></div><div class="cs-controls"><button class="cs-btn cs-next" type="button">Next step ▸</button><button class="cs-btn cs-reset" type="button">Reset</button></div></div>
+
+  <h3>2 · Recurring decimal → fraction</h3>
+  <p class="lead">This is the clever one. Call the decimal <b>x</b>, multiply so one whole block shifts past the point, then <b>subtract</b> — the endless tails cancel. Tap through 0.<span class="dot">7</span><span class="dot">2</span>:</p>
+  <div class="cstep" id="r2"><div class="cs-head"><span class="cs-eyebrow">Recurring decimal → fraction</span><span class="cs-q">0.72̇ (72 repeats) as a fraction</span></div><div class="fr-stage"></div><div class="cs-work"></div><div class="cs-controls"><button class="cs-btn cs-next" type="button">Next step ▸</button><button class="cs-btn cs-reset" type="button">Reset</button></div></div>
+
+  <div class="miscon"><span class="lab">Watch out</span>Only the digits <i>under</i> the dots repeat. In 0.1<span class="dot">6</span> the 1 does <b>not</b> repeat, so you multiply by 10 <i>and</i> 100 and subtract those — that's why it gives 1/6, not 16/99.</div>
+</div>
+
+<div class="divider"><span class="lo-eyebrow">Learning Objective 1 · Year 8–9</span><div class="title">Section A · Fraction → recurring decimal</div><div class="lo">Find the recurring decimal of a fraction by division, and identify the repeating part.</div><span class="sc-lab">Success criteria — I can:</span><ul><li>divide to get the decimal</li><li>spot when a remainder repeats</li><li>name the digit or block that recurs</li></ul></div>
+<div id="secA"></div>
+
+<div class="divider"><span class="lo-eyebrow">Learning Objective 2 · GCSE (Grade 5+)</span><div class="title">Section B · Recurring decimal → fraction</div><div class="lo">Convert a recurring decimal into a fraction using the algebra method, and simplify.</div><span class="sc-lab">Success criteria — I can:</span><ul><li>set x equal to the decimal</li><li>multiply to shift one repeating block</li><li>subtract, solve and simplify</li></ul></div>
+<div id="secB"></div>
+
+<div class="divider"><span class="lo-eyebrow">Learning Objective 3 · GCSE</span><div class="title">Section C · Mixed &amp; compare</div><div class="lo">Work in both directions and compare a recurring decimal with a fraction.</div><span class="sc-lab">Success criteria — I can:</span><ul><li>convert either way confidently</li><li>handle a non-repeating digit before the block</li><li>compare values across forms</li></ul></div>
+<div id="secC"></div>
+
+<div class="markbar"><button class="markbtn" id="markbtn" type="button">Mark My Work</button><button class="resetbtn" id="resetbtn" type="button">Reset</button><span class="score" id="score">/ 14</span></div>
+<div class="foot"><b>Improve Tuition</b> · George Street, Batley, West Yorkshire WF17 5AR · improvetuition.org<br>Teacher‑led tuition since 2007. We are committed to safeguarding and promoting the welfare of every child in our care.</div>
+</div>
+
+<script>
+function F(n,d){return '<span class="frac"><span class="n">'+n+'</span><span class="d">'+d+'</span></span>';}
+function dot(d){return '<span class="dot">'+d+'</span>';}
+function REC(pre,block){var b=String(block),o='';for(var i=0;i<b.length;i++){o+=(i===0||i===b.length-1)?dot(b[i]):b[i];}return pre+o;}
+function setupFracSteps(id, stages){
+  var root=document.getElementById(id), stage=root.querySelector('.fr-stage'), work=root.querySelector('.cs-work');
+  var next=root.querySelector('.cs-next'), reset=root.querySelector('.cs-reset');
+  stage.innerHTML=''; next.disabled=false; next.textContent='Next step ▸';
+  function render(idx){var d=document.createElement('div');d.className='fr-line'+(idx===stages.length-1?' fr-ans':'');d.innerHTML=stages[idx].line;stage.appendChild(d);work.innerHTML=stages[idx].note+(idx===stages.length-1&&stages[idx].check?'<span class="cs-check">'+stages[idx].check+'</span>':'');}
+  render(0); var i=1;
+  next.onclick=function(){if(i>=stages.length)return;render(i);i++;if(i>=stages.length)next.disabled=true;};
+  reset.onclick=function(){setupFracSteps(id,stages);};
+}
+var R1=[
+ {line:'2 &divide; 11',note:'11 won\'t go into 2, so divide 2.000… and follow the remainders.'},
+ {line:'0.1 &nbsp; <span style="font-size:.7em">rem 9</span>',note:'20 ÷ 11 = 1 remainder 9. Bring down a 0 to make 90.'},
+ {line:'0.18 &nbsp; <span style="font-size:.7em">rem 2</span>',note:'90 ÷ 11 = 8 remainder 2. Bring down a 0 to make 20.'},
+ {line:'0.181 &nbsp; <span style="font-size:.7em">rem 9 again</span>',note:'20 ÷ 11 = 1 remainder 9 — remainder 9 is back, so the digits now repeat.'},
+ {line:'= '+REC('0.','18'),note:'The block 18 repeats forever.',check:'✓ 2/11 = 0.18̇ repeating = 0.181818…'}
+];
+var R2=[
+ {line:'x = 0.7272…',note:'Call the recurring decimal x.'},
+ {line:'100x = 72.7272…',note:'Two digits repeat, so multiply by 100 — that shifts exactly one block past the point.'},
+ {line:'100x − x = 72',note:'Subtract: the endless …7272 tails are identical and cancel, leaving a whole number.'},
+ {line:'99x = 72',note:'100x − x = 99x.'},
+ {line:'x = '+F(72,99)+' = '+F(8,11),note:'Divide by 99, then simplify (÷9).',check:'✓ 0.72̇ repeating = 8/11.'}
+];
+
+var QS=[
+ {id:1,sec:'A',kind:'whole',exp:[3],t:'Write 1/3 as a decimal. Which digit repeats?',w:'1 ÷ 3 = 0.3333… — the repeating digit is <span class="ans-final">3</span> (written 0.3̇).'},
+ {id:2,sec:'A',kind:'whole',exp:[6],t:'Write 1/6 as a decimal. Which digit repeats?',w:'1 ÷ 6 = 0.1666… — the 1 does not repeat; the repeating digit is <span class="ans-final">6</span> (written 0.16̇).'},
+ {id:3,sec:'A',kind:'whole',exp:[45],t:'Write 5/11 as a decimal. Which two-digit block repeats?',w:'5 ÷ 11 = 0.4545… — the repeating block is <span class="ans-final">45</span> (written 0.45̇ repeating).'},
+ {id:4,sec:'A',kind:'whole',exp:[3],t:'Write 5/6 as a decimal. Which digit repeats?',w:'5 ÷ 6 = 0.8333… — the repeating digit is <span class="ans-final">3</span> (written 0.83̇).'},
+ {id:5,sec:'A',kind:'whole',exp:[63],t:'Write 7/11 as a decimal. Which two-digit block repeats?',w:'7 ÷ 11 = 0.6363… — the repeating block is <span class="ans-final">63</span>.'},
+ {id:6,sec:'B',kind:'frac',exp:[5,9],t:'Write 0.<span class="dot">5</span> (0.5555…) as a fraction in its simplest form.',w:'x = 0.555…, 10x = 5.555…, 10x − x = 5 → 9x = 5 → x = <span class="ans-final">5/9</span>.'},
+ {id:7,sec:'B',kind:'frac',exp:[7,9],t:'Write 0.<span class="dot">7</span> (0.7777…) as a fraction in its simplest form.',w:'x = 0.777…, 10x = 7.777…, 9x = 7 → x = <span class="ans-final">7/9</span>.'},
+ {id:8,sec:'B',kind:'frac',exp:[3,11],t:'Write 0.<span class="dot">2</span><span class="dot">7</span> (0.2727…) as a fraction in its simplest form.',w:'x = 0.2727…, 100x = 27.2727…, 99x = 27 → x = 27/99 = <span class="ans-final">3/11</span>.'},
+ {id:9,sec:'B',kind:'frac',exp:[5,11],t:'Write 0.<span class="dot">4</span><span class="dot">5</span> (0.4545…) as a fraction in its simplest form.',w:'x = 0.4545…, 100x = 45.4545…, 99x = 45 → x = 45/99 = <span class="ans-final">5/11</span>.'},
+ {id:10,sec:'B',kind:'frac',exp:[1,6],t:'Write 0.1<span class="dot">6</span> (0.1666…) as a fraction in its simplest form.',w:'The 1 doesn\'t repeat. x = 0.1666…, 10x = 1.666…, 100x = 16.666…, 100x − 10x = 15 → 90x = 15 → x = <span class="ans-final">1/6</span>.'},
+ {id:11,sec:'C',kind:'frac',exp:[8,9],t:'Write 0.<span class="dot">8</span> (0.8888…) as a fraction in its simplest form.',w:'9x = 8 → x = <span class="ans-final">8/9</span>.'},
+ {id:12,sec:'C',kind:'whole',exp:[2],t:'Write 2/9 as a decimal. Which digit repeats?',w:'2 ÷ 9 = 0.2222… — the repeating digit is <span class="ans-final">2</span>.'},
+ {id:13,sec:'C',kind:'frac',exp:[8,33],t:'Write 0.<span class="dot">2</span><span class="dot">4</span> (0.2424…) as a fraction in its simplest form.',w:'99x = 24 → x = 24/99, simplify (÷3) → <span class="ans-final">8/33</span>.'},
+ {id:14,sec:'C',kind:'frac',exp:[5,9],t:'Which is larger, 0.<span class="dot">5</span> (0.555…) or 1/2? Write the larger one as a fraction in its simplest form.',w:'0.5̇ = 5/9 ≈ 0.556, which is bigger than 0.5 = 1/2. The larger is <span class="ans-final">5/9</span>.'}
+];
+function intsIn(v){return (String(v).match(/\d+/g)||[]).map(Number);}
+function qHTML(q){
+  var ph=(q.kind==='whole')?'a number':'e.g. 5/9';
+  var hint=(q.kind==='whole')?'Give the repeating digit or block as a number.':'Give a fraction in its simplest form.';
+  return '<div class="q" id="q-'+q.id+'"><div class="qhead"><span class="qn">Q'+q.id+'.</span><span class="qtext">'+q.t+'</span></div>'+
+    '<div class="ansrow"><label for="a-'+q.id+'">Your answer:</label><input class="ans" id="a-'+q.id+'" type="text" autocomplete="off" placeholder="'+ph+'" data-q="'+q.id+'"><span class="marks">(1 mark)</span><span class="hint">'+hint+'</span></div>'+
+    '<div class="verdict" id="v-'+q.id+'"></div><button class="show-how" type="button" onclick="toggleWork(this)">➕ Show me how</button><div class="work" id="w-'+q.id+'">'+q.w+'</div></div>';
+}
+['A','B','C'].forEach(function(sec){document.getElementById('sec'+sec).innerHTML=QS.filter(function(q){return q.sec===sec;}).map(qHTML).join('');});
+function toggleWork(btn){var w=btn.nextElementSibling;var open=w.classList.toggle('show');btn.innerHTML=open?'➖ Hide working':'➕ Show me how';}
+function markAll(){var earned=0,total=QS.length;
+  QS.forEach(function(q){var inp=document.getElementById('a-'+q.id),verdict=document.getElementById('v-'+q.id),work=document.getElementById('w-'+q.id);inp.disabled=true;var attempted=inp.value.trim()!=='';var a=intsIn(inp.value);var ok=a.length===q.exp.length&&q.exp.every(function(x,k){return a[k]===x;});
+    if(ok){earned++;verdict.className='verdict ok';verdict.textContent='✓ Correct';}else{verdict.className='verdict no';verdict.textContent=(attempted?'✗ Not quite — try the working':'— Not attempted');work.classList.add('show');work.previousElementSibling.innerHTML='➖ Hide working';}});
+  document.getElementById('score').textContent=earned+' / '+total;}
+document.getElementById('markbtn').onclick=markAll;
+document.getElementById('resetbtn').onclick=function(){location.reload();};
+setupFracSteps('r1',R1);setupFracSteps('r2',R2);
+</script>
+<!-- IMPROVETUITION:CONTENT-END -->
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiplying Without a Calculator | Improve Tuition</title>
+<meta name="description" content="Multiply 2- and 3-digit numbers by hand using the column (partial-products) method and the grid method. Interactive worked steppers, examples and graded practice.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#242F3A;--coral:#D55A3F;--coral-hover:#B14526;--gold:#C99A2E;--gold-soft:#D6B35A;--grey:#5A5A5A;--grey-soft:#8A8A8A;--paper:#F7F5F2;--cream:#E8E3DA;--white:#FFFFFF;--rule:#D8D2C7;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--grey);font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px 60px}
+h1,h2,h3,.fr{font-family:'Fraunces',Georgia,serif}
+.topbar{background:var(--navy);color:var(--gold-soft);font:700 .66rem/1 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:7px 10px}
+.hero{background:var(--navy);border-bottom:4px solid var(--gold);padding:26px 16px 24px}
+.hero .in{max-width:640px;margin:0 auto}
+.eyebrow{font:700 .72rem/1 'DM Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hero h1{color:#fff;font-size:clamp(1.7rem,6vw,2.3rem);line-height:1.1;margin:9px 0 6px;font-weight:700}
+.hero .sub{color:var(--gold-soft);font-style:italic;font-size:1.02rem;margin:0 0 8px}
+.hero .meta{color:#b9bfc6;font-size:.82rem;margin:0}
+.card{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:18px 16px;margin:18px 0}
+h2{color:var(--navy);font-size:1.35rem;margin:4px 0 8px}
+h3{color:var(--navy);font-size:1.1rem;margin:18px 0 4px}
+.lead{margin:0 0 12px}
+.keyidea{background:var(--cream);border-left:4px solid var(--gold);border-radius:6px;padding:11px 14px;margin:12px 0;font-size:.96rem}
+.keyidea b,.lead b{color:var(--navy)}
+.miscon{background:#fbeeea;border-left:4px solid var(--coral);border-radius:6px;padding:11px 14px;margin:12px 0;font-size:.92rem}
+.miscon .lab{font:700 .64rem/1 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-hover);display:block;margin-bottom:3px}
+/* ---- shared stepper (column / partial products) ---- */
+.cstep{border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin:14px 0}
+.cs-head{background:var(--navy);padding:10px 14px}
+.cs-eyebrow{display:block;font:700 .66rem/1 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft)}
+.cs-q{display:block;font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:1.35rem;margin-top:4px}
+.cs-stage{padding:14px 10px 4px;text-align:center;overflow-x:auto}
+.cs-table{border-collapse:collapse;margin:0 auto;font-variant-numeric:tabular-nums}
+.cs-table td{width:34px;height:36px;text-align:center;font-family:'Fraunces',serif;font-weight:700;font-size:1.4rem;color:var(--navy);position:relative}
+.cs-table .cs-op{position:absolute;left:1px;top:50%;transform:translateY(-50%);color:var(--grey);font-size:1.05rem}
+.cs-table .cs-rule td{border-top:2.5px solid var(--navy);height:3px;padding:0}
+.cs-table .cs-rule.thin td{border-top-width:1.5px}
+.cs-table .cs-partial td{color:var(--navy)}
+.cs-table .cs-total td{color:var(--coral);font-weight:800}
+td.col-on{background:rgba(201,154,46,.20);box-shadow:inset 0 0 0 2px var(--gold);border-radius:5px}
+.dig-on{background:rgba(213,90,63,.16);box-shadow:inset 0 0 0 2px var(--coral);border-radius:5px}
+.cs-work{min-height:2.6em;padding:9px 14px 2px;font-size:.9rem;color:var(--navy);line-height:1.45}
+.cs-work b{color:var(--navy)}
+.cs-check{display:block;margin-top:4px;color:var(--coral-hover);font-weight:600;font-size:.86rem}
+.cs-controls{display:flex;gap:8px;padding:10px 14px 14px}
+.cs-btn{font-family:'DM Sans',sans-serif;font-weight:700;font-size:.86rem;padding:9px 14px;min-height:44px;border-radius:8px;border:1.5px solid var(--gold);background:#fff;color:var(--coral-hover);cursor:pointer}
+.cs-btn:hover:not(:disabled){background:var(--gold);color:#fff;border-color:var(--gold)}
+.cs-btn:disabled{opacity:.4;cursor:default}
+.cs-reset{margin-left:auto;border-color:var(--rule);color:var(--grey);background:transparent}
+/* ---- grid method ---- */
+.gm-stage{padding:14px 12px 4px;overflow-x:auto}
+.gm-table{border-collapse:collapse;margin:0 auto;min-width:240px}
+.gm-table th,.gm-table td{border:1.5px solid var(--rule);padding:8px 6px;text-align:center;font-family:'Fraunces',serif;font-size:1.05rem;min-width:62px}
+.gm-table .corner{background:var(--navy);color:#fff;font-size:1.2rem}
+.gm-table .gm-colh{background:#faf6ec;color:var(--navy);font-weight:700}
+.gm-table .gm-rowh{background:#faf6ec;color:var(--navy);font-weight:700}
+.gm-table td.gm-cell{color:var(--coral);font-weight:800;height:42px}
+.gm-table .hl-h{background:rgba(201,154,46,.28);box-shadow:inset 0 0 0 2px var(--gold)}
+.gm-table td.cell-on{box-shadow:inset 0 0 0 3px var(--coral)}
+/* ---- sections ---- */
+.divider{background:var(--navy);border-radius:12px;padding:16px;margin:24px 0 6px;color:#fff}
+.divider .lo-eyebrow{font:700 .68rem/1 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.divider .title{font-family:'Fraunces',serif;font-weight:700;font-size:1.18rem;margin:6px 0 2px;color:#fff}
+.divider .lo{font-style:italic;color:#dfe3e8;margin:6px 0 8px;font-size:.96rem}
+.divider .sc-lab{font:700 .64rem/1 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft);display:block;margin-bottom:3px}
+.divider ul{margin:0;padding-left:18px;color:#dfe3e8;font-size:.9rem}
+.divider li{margin:2px 0}
+/* ---- questions ---- */
+.q{background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:14px;margin:10px 0}
+.q .qhead{display:flex;align-items:baseline;gap:8px}
+.q .qn{font-family:'Fraunces',serif;font-weight:700;color:var(--coral)}
+.q .qtext{color:var(--navy);font-weight:500}
+.q .ansrow{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.q .ansrow label{font-size:.9rem;color:var(--grey)}
+.q .ans{font-family:'Fraunces',serif;font-size:1.05rem;width:150px;max-width:55vw;padding:8px 10px;border:1.5px solid var(--rule);border-radius:7px;background:var(--paper)}
+.q .marks{font-style:italic;color:var(--grey-soft);font-size:.84rem}
+.verdict{margin-top:8px;font-weight:700;font-size:.92rem;min-height:1em}
+.verdict.ok{color:#2e7d32}.verdict.no{color:var(--coral-hover)}
+.show-how{display:inline-flex;align-items:center;gap:6px;margin-top:9px;padding:7px 13px;min-height:40px;background:transparent;border:1.5px dashed var(--gold);color:var(--coral-hover);border-radius:7px;font:600 .8rem/1 'DM Sans',sans-serif;cursor:pointer}
+.show-how:hover{background:rgba(201,154,46,.09)}
+.work{display:none;margin-top:9px;padding:11px 13px;background:var(--cream);border-radius:7px;font-size:.9rem;line-height:1.5}
+.work.show{display:block}
+.work b{color:var(--navy)}.work .ans-final{color:var(--coral-hover);font-weight:700}
+.markbar{position:sticky;bottom:0;background:var(--navy);margin:22px -16px 0;padding:12px 16px;display:flex;align-items:center;gap:12px;border-top:3px solid var(--gold)}
+.markbtn{background:var(--coral);color:#fff;border:none;font-family:'Fraunces',serif;font-weight:700;font-size:1rem;padding:12px 22px;border-radius:9px;cursor:pointer}
+.markbtn:hover{background:var(--coral-hover)}
+.resetbtn{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);font-weight:700;padding:11px 18px;border-radius:9px;cursor:pointer}
+.score{color:#fff;font-family:'Fraunces',serif;font-weight:700;margin-left:auto;font-size:1rem}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--grey-soft);text-align:center;line-height:1.6}
+.foot b{color:var(--navy)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<style>
+/* Responsive fixes — added by responsive_fix.py */
+html, body { overflow-x: hidden; max-width: 100vw; }
+svg { max-width: 100%; height: auto; display: block; }
+.qfig, .figbox { max-width: 100%; overflow: hidden; }
+.figbox svg, .qfig svg { margin: 0 auto; }
+table.ak { table-layout: fixed; width: 100%; }
+table.ak td, table.ak th { word-break: break-word; overflow-wrap: anywhere; padding: 6px; font-size: 12px; }
+.q .qhead .qtext, .q .qprompt { overflow-wrap: anywhere; }
+.answer-line, .mistake { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- IMPROVETUITION:CONTENT-START -->
+<div class="topbar">Improve Tuition · Foundation Maths · Year 5–8</div>
+<div class="hero"><div class="in">
+  <span class="eyebrow">Lesson · Practice · Steps</span>
+  <h1>Multiplying Without a Calculator</h1>
+  <p class="sub">Break a hard multiplication into easy parts — by column, or in a grid.</p>
+  <p class="meta">18 questions · 4 sections · two interactive methods · no time pressure</p>
+</div></div>
+
+<div class="wrap">
+
+<div class="card">
+  <h2>What's really happening</h2>
+  <p class="lead">Nobody multiplies <b>27 × 14</b> in one go. The trick is to <b>split the multiplier into its tens and units</b>, multiply by each part separately, then add. So 27 × 14 becomes <b>27 × 4</b> and <b>27 × 10</b>, added together.</p>
+  <div class="keyidea"><b>The key idea:</b> the two methods below are the <i>same maths</i> shown two ways. The <b>column method</b> stacks the parts; the <b>grid method</b> lays them in a box. Pick whichever you can keep tidy — tidiness is what stops mistakes.</div>
+
+  <h3>Method 1 — the column method</h3>
+  <p class="lead">Multiply by the units, then by the tens (remembering the tens digit means ×10), then add the two parts. Tap through it:</p>
+  <div class="cstep" id="cmul">
+    <div class="cs-head"><span class="cs-eyebrow">Column method · partial products</span><span class="cs-q">27 × 14</span></div>
+    <div class="cs-stage"><div class="cs-grid"></div></div>
+    <div class="cs-work">Set out with units lined up. Tap <b>Next step</b> to multiply by the units digit first.</div>
+    <div class="cs-controls"><button class="cs-btn cs-next" type="button">Next step ▸</button><button class="cs-btn cs-reset" type="button">Reset</button></div>
+  </div>
+
+  <h3>Method 2 — the grid method</h3>
+  <p class="lead">Split <b>both</b> numbers into tens and units, multiply every part by every part in the grid, then add all the boxes. Tap to fill each box:</p>
+  <div class="cstep" id="gmul">
+    <div class="cs-head"><span class="cs-eyebrow">Grid method · partial products</span><span class="cs-q">34 × 26</span></div>
+    <div class="gm-stage"><div class="gm-grid"></div></div>
+    <div class="cs-work">34 splits into 30 + 4, and 26 into 20 + 6. Tap <b>Next box</b> to fill the grid one box at a time.</div>
+    <div class="cs-controls"><button class="cs-btn cs-next" type="button">Next box ▸</button><button class="cs-btn cs-reset" type="button">Reset</button></div>
+  </div>
+
+  <h3>A bigger one — 213 × 23 in a grid</h3>
+  <p class="lead">The grid just grows. Split 213 into 200 + 10 + 3 and 23 into 20 + 3:</p>
+  <ul class="lead" style="padding-left:20px">
+    <li>20 × 200 = 4000 &nbsp;·&nbsp; 20 × 10 = 200 &nbsp;·&nbsp; 20 × 3 = 60</li>
+    <li>3 × 200 = 600 &nbsp;·&nbsp; 3 × 10 = 30 &nbsp;·&nbsp; 3 × 3 = 9</li>
+  </ul>
+  <p class="lead">Add the six boxes: 4000 + 200 + 60 + 600 + 30 + 9 = <b>4899</b>. <span style="color:var(--coral-hover);font-weight:600">Check: a rough estimate 200 × 23 = 4600 — so 4899 is sensible. ✓</span></p>
+  <div class="miscon"><span class="lab">Common slip</span>When you multiply by the tens digit, it stands for <b>tens</b>. The 1 in 14 means <b>10</b>, so 27 × 10 = <b>270</b>, not 27. Writing the second part without its place value (270) — or forgetting its 0 — is the most common mistake.</div>
+</div>
+
+<!-- SECTION A -->
+<div class="divider">
+  <span class="lo-eyebrow">Learning Objective 1 · Year 5–6</span>
+  <div class="title">Section A · 2-digit × 2-digit</div>
+  <div class="lo">Multiply a two-digit number by a two-digit number using a written method.</div>
+  <span class="sc-lab">Success criteria — I can:</span>
+  <ul><li>split the multiplier into tens and units</li><li>multiply by each part</li><li>add the parts to get the answer</li></ul>
+</div>
+<div id="secA"></div>
+
+<!-- SECTION B -->
+<div class="divider">
+  <span class="lo-eyebrow">Learning Objective 2 · Year 6–7</span>
+  <div class="title">Section B · 3-digit × 2-digit</div>
+  <div class="lo">Multiply a three-digit number by a two-digit number, keeping place value tidy.</div>
+  <span class="sc-lab">Success criteria — I can:</span>
+  <ul><li>set out a three-digit multiplicand correctly</li><li>handle carrying within each part</li><li>line the two parts up by place value before adding</li></ul>
+</div>
+<div id="secB"></div>
+
+<!-- SECTION C -->
+<div class="divider">
+  <span class="lo-eyebrow">Learning Objective 3 · Year 7–8</span>
+  <div class="title">Section C · Challenge</div>
+  <div class="lo">Multiply larger numbers, including four-digit multiplicands, accurately by hand.</div>
+  <span class="sc-lab">Success criteria — I can:</span>
+  <ul><li>stay accurate with bigger numbers</li><li>estimate first to sense-check the answer</li><li>choose the method I keep tidiest</li></ul>
+</div>
+<div id="secC"></div>
+
+<!-- SECTION D -->
+<div class="divider">
+  <span class="lo-eyebrow">Learning Objective 4 · Year 6–8</span>
+  <div class="title">Section D · Real-life problems</div>
+  <div class="lo">Recognise when a problem needs multiplying, then solve it by hand.</div>
+  <span class="sc-lab">Success criteria — I can:</span>
+  <ul><li>spot the words that mean “multiply” (each, per, in total)</li><li>set the calculation out clearly</li><li>answer with the correct units</li></ul>
+</div>
+<div id="secD"></div>
+
+<div class="markbar">
+  <button class="markbtn" id="markbtn" type="button">Mark My Work</button>
+  <button class="resetbtn" id="resetbtn" type="button">Reset</button>
+  <span class="score" id="score">/ 18</span>
+</div>
+
+<div class="foot">
+  <b>Improve Tuition</b> · George Street, Batley, West Yorkshire WF17 5AR · improvetuition.org<br>
+  Teacher‑led tuition since 2007. We are committed to safeguarding and promoting the welfare of every child in our care.
+</div>
+
+</div>
+
+<script>
+function cellsRow(n){var s='';for(var c=0;c<n;c++)s+='<td data-c="'+c+'"></td>';return s;}
+
+/* ===== Column / partial-products stepper ===== */
+function setupColMul(id, A, B){
+  var root=document.getElementById(id), grid=root.querySelector('.cs-grid');
+  var parts=[]; for(var pos=0;pos<B.length;pos++){var d=+B[B.length-1-pos];parts.push({d:d,pos:pos,val:(+A)*d*Math.pow(10,pos)});}
+  var total=(+A)*(+B);
+  var width=Math.max(String(total).length, A.length, B.length, Math.max.apply(null,parts.map(function(p){return String(p.val).length;})));
+  var cols=width+1;
+  function rowCells(numStr,extraCls,opSym){
+    var pad=cols-numStr.length,r='';
+    for(var c=0;c<cols;c++){var op=(opSym&&c===0)?'<span class="cs-op">'+opSym+'</span>':'';r+='<td data-c="'+c+'" class="'+(extraCls||'')+'">'+op+(c>=pad?numStr[c-pad]:'')+'</td>';}
+    return r;
+  }
+  var html='<table class="cs-table"><tbody>';
+  html+='<tr class="cs-num cs-top">'+rowCells(A,'')+'</tr>';
+  html+='<tr class="cs-num cs-mul">'+rowCells(B,'','×')+'</tr>';
+  html+='<tr class="cs-rule"><td colspan="'+cols+'"></td></tr>';
+  html+='</tbody></table>';
+  grid.innerHTML=html;
+  var tbody=grid.querySelector('tbody');
+  var S={i:0,done:false,phase:'partials'};
+  var work=root.querySelector('.cs-work'), next=root.querySelector('.cs-next'), reset=root.querySelector('.cs-reset');
+  next.disabled=false; next.textContent='Next step ▸';
+  var NAMES=['units','tens','hundreds'];
+  function clearHi(){grid.querySelectorAll('.dig-on').forEach(function(x){x.classList.remove('dig-on');});}
+  function hiMulDigit(pos){clearHi();var mul=grid.querySelector('.cs-mul');var cells=mul.querySelectorAll('td');cells[cells.length-1-pos].classList.add('dig-on');}
+  function addRow(numStr,cls,opSym){var tr=document.createElement('tr');tr.className=cls;tr.innerHTML=rowCells(numStr,'',opSym||'');var ps=tbody.querySelectorAll('.cs-partial');var ref=ps.length?ps[ps.length-1].nextSibling:tbody.querySelector('.cs-rule').nextSibling;tbody.insertBefore(tr, ref);return tr;}
+  function step(){
+    if(S.done)return;
+    if(S.phase==='partials'){
+      var p=parts[S.i];
+      var opSym=(S.i>0)?'+':'';
+      addRow(String(p.val),'cs-num cs-partial',opSym); hiMulDigit(p.pos);
+      var placeNote=(p.pos===0)?'': (' — the '+p.d+' is in the '+NAMES[p.pos]+' place, so it means '+(p.d*Math.pow(10,p.pos))+'');
+      work.innerHTML='<b>Multiply by the '+NAMES[p.pos]+':</b> '+p.d+(p.pos>0?' (which means '+(p.d*Math.pow(10,p.pos))+')':'')+' × '+A+' = <b>'+p.val+'</b>'+(p.pos>0?'. Note the placeholder zero'+(p.pos>1?'s':'')+'.':'.');
+      S.i++;
+      if(S.i>=parts.length){S.phase='add';}
+    } else {
+      // add the partials
+      clearHi();
+      var tr=document.createElement('tr');tr.className='cs-rule thin';tr.innerHTML='<td colspan="'+cols+'"></td>';tbody.appendChild(tr);
+      var sumTr=document.createElement('tr');sumTr.className='cs-num cs-total';sumTr.innerHTML=rowCells(String(total),'');tbody.appendChild(sumTr);
+      work.innerHTML='<b>Add the parts:</b> '+parts.map(function(p){return p.val;}).join(' + ')+' = <b>'+total+'</b>.<span class="cs-check">Check: about '+(Math.round(+A/10)*10)+' × '+B+' ≈ '+(Math.round(+A/10)*10*(+B))+', so '+total+' is sensible. ✓</span>';
+      S.done=true; next.disabled=true;
+    }
+  }
+  next.onclick=step; reset.onclick=function(){setupColMul(id,A,B);};
+}
+
+/* ===== Grid-method builder ===== */
+function setupGrid(id, A, B){
+  var root=document.getElementById(id), grid=root.querySelector('.gm-grid');
+  function split2(n){return [Math.floor(n/10)*10, n%10];}
+  var cols=split2(+A), rows=split2(+B); // cols from A, rows from B
+  var total=(+A)*(+B);
+  var html='<table class="gm-table"><tbody>';
+  html+='<tr><td class="corner">×</td>'+cols.map(function(c,ci){return '<th class="gm-colh" data-col="'+ci+'">'+c+'</th>';}).join('')+'</tr>';
+  rows.forEach(function(rv,ri){
+    html+='<tr><th class="gm-rowh" data-row="'+ri+'">'+rv+'</th>'+cols.map(function(cv,ci){return '<td class="gm-cell" data-row="'+ri+'" data-col="'+ci+'"></td>';}).join('')+'</tr>';
+  });
+  html+='</tbody></table>';
+  grid.innerHTML=html;
+  var order=[]; rows.forEach(function(rv,ri){cols.forEach(function(cv,ci){order.push({ri:ri,ci:ci,rv:rv,cv:cv,val:rv*cv});});});
+  var S={i:0,done:false};
+  var work=root.querySelector('.cs-work'), next=root.querySelector('.cs-next'), reset=root.querySelector('.cs-reset');
+  next.disabled=false; next.textContent='Next box ▸';
+  function clearHi(){grid.querySelectorAll('.hl-h,.cell-on').forEach(function(x){x.classList.remove('hl-h');x.classList.remove('cell-on');});}
+  function step(){
+    if(S.done)return;
+    if(S.i<order.length){
+      clearHi();
+      var o=order[S.i];
+      var cell=grid.querySelector('td.gm-cell[data-row="'+o.ri+'"][data-col="'+o.ci+'"]');
+      cell.textContent=o.val; cell.classList.add('cell-on');
+      grid.querySelector('.gm-rowh[data-row="'+o.ri+'"]').classList.add('hl-h');
+      grid.querySelector('.gm-colh[data-col="'+o.ci+'"]').classList.add('hl-h');
+      work.innerHTML='<b>'+o.rv+' × '+o.cv+' = '+o.val+'.</b> Fill that box.';
+      S.i++;
+      if(S.i>=order.length){next.textContent='Add the boxes ▸';}
+    } else {
+      clearHi();
+      var vals=order.map(function(o){return o.val;});
+      work.innerHTML='<b>Add every box:</b> '+vals.join(' + ')+' = <b>'+total+'</b>.<span class="cs-check">So '+A+' × '+B+' = '+total+'. Estimate '+(Math.round(+A/10)*10)+' × '+(Math.round(+B/10)*10)+' ≈ '+(Math.round(+A/10)*10*Math.round(+B/10)*10)+' ✓</span>';
+      S.done=true; next.disabled=true;
+    }
+  }
+  next.onclick=step; reset.onclick=function(){setupGrid(id,A,B);};
+}
+
+/* ===== Questions ===== */
+var QS=[
+ {id:1,sec:'A',t:'24 × 13',a:312,w:'24 × 3 = 72; 24 × 10 = 240; 72 + 240 = <span class="ans-final">312</span>.'},
+ {id:2,sec:'A',t:'35 × 16',a:560,w:'35 × 6 = 210; 35 × 10 = 350; 210 + 350 = <span class="ans-final">560</span>.'},
+ {id:3,sec:'A',t:'47 × 12',a:564,w:'47 × 2 = 94; 47 × 10 = 470; 94 + 470 = <span class="ans-final">564</span>.'},
+ {id:4,sec:'A',t:'58 × 21',a:1218,w:'58 × 1 = 58; 58 × 20 = 1160; 58 + 1160 = <span class="ans-final">1218</span>.'},
+ {id:5,sec:'A',t:'64 × 15',a:960,w:'64 × 5 = 320; 64 × 10 = 640; 320 + 640 = <span class="ans-final">960</span>.'},
+ {id:6,sec:'B',t:'142 × 13',a:1846,w:'142 × 3 = 426; 142 × 10 = 1420; 426 + 1420 = <span class="ans-final">1846</span>.'},
+ {id:7,sec:'B',t:'216 × 24',a:5184,w:'216 × 4 = 864; 216 × 20 = 4320; 864 + 4320 = <span class="ans-final">5184</span>.'},
+ {id:8,sec:'B',t:'305 × 16',a:4880,w:'305 × 6 = 1830; 305 × 10 = 3050; 1830 + 3050 = <span class="ans-final">4880</span>.'},
+ {id:9,sec:'B',t:'423 × 18',a:7614,w:'423 × 8 = 3384; 423 × 10 = 4230; 3384 + 4230 = <span class="ans-final">7614</span>.'},
+ {id:10,sec:'B',t:'134 × 35',a:4690,w:'134 × 5 = 670; 134 × 30 = 4020; 670 + 4020 = <span class="ans-final">4690</span>.'},
+ {id:11,sec:'C',t:'615 × 24',a:14760,w:'615 × 4 = 2460; 615 × 20 = 12 300; 2460 + 12 300 = <span class="ans-final">14 760</span>.'},
+ {id:12,sec:'C',t:'720 × 35',a:25200,w:'720 × 5 = 3600; 720 × 30 = 21 600; 3600 + 21 600 = <span class="ans-final">25 200</span>.'},
+ {id:13,sec:'C',t:'1308 × 14',a:18312,w:'1308 × 4 = 5232; 1308 × 10 = 13 080; 5232 + 13 080 = <span class="ans-final">18 312</span>.'},
+ {id:14,sec:'C',t:'2150 × 26',a:55900,w:'2150 × 6 = 12 900; 2150 × 20 = 43 000; 12 900 + 43 000 = <span class="ans-final">55 900</span>.'},
+ {id:15,sec:'C',t:'3204 × 32',a:102528,w:'3204 × 2 = 6408; 3204 × 30 = 96 120; 6408 + 96 120 = <span class="ans-final">102 528</span>.'},
+ {id:16,sec:'D',t:'A crate holds 24 bottles. How many bottles are in 18 crates?',a:432,w:'\u201cIn total\u201d means multiply: 24 × 18. 24 × 8 = 192; 24 × 10 = 240; 192 + 240 = <span class="ans-final">432 bottles</span>.'},
+ {id:17,sec:'D',t:'A theatre has 145 seats on each floor. How many seats are there on 16 floors?',a:2320,w:'145 × 16. 145 × 6 = 870; 145 × 10 = 1450; 870 + 1450 = <span class="ans-final">2320 seats</span>.'},
+ {id:18,sec:'D',t:'A ream of paper has 312 sheets. How many sheets are in 15 reams?',a:4680,w:'312 × 15. 312 × 5 = 1560; 312 × 10 = 3120; 1560 + 3120 = <span class="ans-final">4680 sheets</span>.'}
+];
+function qHTML(q){
+  return '<div class="q" id="q-'+q.id+'"><div class="qhead"><span class="qn">Q'+q.id+'.</span><span class="qtext">'+(q.sec==='D'?q.t:'Work out '+q.t+'.')+'</span></div>'+
+    '<div class="ansrow"><label for="a-'+q.id+'">Your answer:</label><input class="ans" id="a-'+q.id+'" type="text" inputmode="numeric" autocomplete="off" data-q="'+q.id+'"><span class="marks">(1 mark)</span></div>'+
+    '<div class="verdict" id="v-'+q.id+'"></div>'+
+    '<button class="show-how" type="button" onclick="toggleWork(this)">➕ Show me how</button>'+
+    '<div class="work" id="w-'+q.id+'">'+q.w+'</div></div>';
+}
+['A','B','C','D'].forEach(function(sec){document.getElementById('sec'+sec).innerHTML=QS.filter(function(q){return q.sec===sec;}).map(qHTML).join('');});
+function toggleWork(btn){var w=btn.nextElementSibling;var open=w.classList.toggle('show');btn.innerHTML=open?'➖ Hide working':'➕ Show me how';}
+function normNum(v){if(v==null)return null;v=String(v).replace(/[^0-9.\-]/g,'');if(v===''||v==='-'||v==='.')return null;var n=parseFloat(v);return isNaN(n)?null:n;}
+function markAll(){
+  var earned=0,total=QS.length;
+  QS.forEach(function(q){
+    var inp=document.getElementById('a-'+q.id), v=normNum(inp.value), verdict=document.getElementById('v-'+q.id), work=document.getElementById('w-'+q.id);
+    inp.disabled=true;
+    if(v!==null&&Math.abs(v-q.a)<1e-9){earned++;verdict.className='verdict ok';verdict.textContent='✓ Correct';}
+    else{verdict.className='verdict no';verdict.textContent=(v===null?'— Not attempted':'✗ Not quite — try the working');work.classList.add('show');work.previousElementSibling.innerHTML='➖ Hide working';}
+  });
+  document.getElementById('score').textContent=earned+' / '+total;
+}
+document.getElementById('markbtn').onclick=markAll;
+document.getElementById('resetbtn').onclick=function(){location.reload();};
+
+setupColMul('cmul','27','14');
+setupGrid('gmul','34','26');
+</script>
+<!-- IMPROVETUITION:CONTENT-END -->
+</body>
+</html>

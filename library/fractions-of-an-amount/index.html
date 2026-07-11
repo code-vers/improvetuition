@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fractions of an Amount | Improve Tuition</title>
+<meta name="description" content="GCSE and KS3 practice finding fractions of an amount — halves, thirds, quarters and more, with and without a calculator. Worked examples and read-aloud support.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>:root{--navy:#242F3A;--coral:#D55A3F;--coral-hover:#B14526;--coral-deep:#B14526;--gold:#C99A2E;--gold-soft:#D6B35A;--gold-pale:#F1E8D0;--grey:#5A5A5A;--grey-soft:#8A8A8A;--paper:#F7F5F2;--cream:#E8E3DA;--white:#FFFFFF;--rule:#D8D2C7;--rule-line:#D8D2C7;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--grey);font-family:'DM Sans',system-ui,sans-serif;line-height:1.55;}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px 120px;}
+.pupil-banner{position:sticky;top:0;z-index:50;background:var(--navy);color:var(--white);padding:10px 16px;font-size:0.85rem;box-shadow:0 2px 8px rgba(36,47,58,0.15);}
+.pupil-banner strong{color:var(--gold-soft);}
+.pupil-banner .sep{opacity:0.5;margin:0 8px;}
+.topbar{background:var(--navy);color:var(--gold-soft);font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;padding:8px 20px;text-align:center;}
+.hero{background:var(--navy);color:var(--white);border-bottom:4px solid var(--gold);padding:30px 20px 34px;text-align:center;}
+.hero .eyebrow{color:var(--gold-soft);font-size:0.74rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;}
+.hero h1{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(1.7rem,6vw,2.5rem);margin:10px 0 6px;color:var(--white);}
+.hero .sub{font-style:italic;color:var(--gold-soft);font-size:1.02rem;margin:0 0 8px;}
+.hero .meta{color:rgba(255,255,255,0.7);font-size:0.84rem;}
+h2,h3{font-family:'Fraunces',serif;color:var(--navy);}
+.lesson-part{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:22px 20px;margin:22px 0;}
+.lesson-eyebrow{display:inline-block;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;padding:4px 10px;background:var(--gold-pale);border-radius:3px;}
+.lesson-h3{font-size:1.35rem;margin:10px 0 6px;}
+.lesson-aim{color:var(--grey);font-style:italic;margin:0 0 12px;}
+.lesson-part p{margin:10px 0;}
+.key-fact{background:var(--gold-pale);border-left:4px solid var(--gold);border-radius:0 6px 6px 0;padding:12px 16px;margin:14px 0;color:var(--navy);line-height:1.6;}
+.conv-map{margin:14px 0;border:1px solid var(--rule);border-radius:8px;overflow:hidden;}
+.cm-row{display:flex;justify-content:space-between;gap:10px;padding:10px 14px;border-bottom:1px solid var(--rule);background:var(--white);}
+.cm-row:nth-child(even){background:var(--paper);}
+.cm-row:last-child{border-bottom:0;}
+.cm-from{font-weight:700;color:var(--navy);font-size:0.92rem;}
+.cm-how{color:var(--grey);font-size:0.9rem;text-align:right;}
+.worked-example{border:1px solid var(--rule);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:14px 16px;margin:16px 0;background:var(--white);}
+.we-eyebrow{text-transform:uppercase;font-size:0.68rem;letter-spacing:2px;color:var(--grey-soft);font-weight:700;}
+.we-problem{font-family:'Fraunces',serif;color:var(--coral);font-size:1.15rem;font-weight:700;margin:4px 0 8px;}
+.we-steps{margin:0;padding:0;list-style:none;counter-reset:s;}
+.we-step{position:relative;padding:8px 0 8px 34px;border-top:1px dashed var(--rule);counter-increment:s;}
+.we-step:first-child{border-top:0;}
+.we-step::before{content:counter(s);position:absolute;left:0;top:7px;width:22px;height:22px;background:var(--coral);color:#fff;border-radius:50%;font-size:0.78rem;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;}
+.watch-out{background:#FBEEE9;border-left:4px solid var(--coral);border-radius:0 6px 6px 0;padding:12px 16px;margin:14px 0;color:var(--navy);}
+.watch-eyebrow{font-size:0.68rem;letter-spacing:2px;color:var(--coral-deep);font-weight:700;text-transform:uppercase;margin-bottom:4px;}
+.try-one{background:var(--cream);border-radius:8px;padding:14px 16px;margin:14px 0;}
+.try-eyebrow{text-transform:uppercase;font-size:0.68rem;letter-spacing:2px;color:var(--gold);font-weight:700;margin:0 0 4px;}
+.try-one details{margin-top:6px;}
+.try-one summary{cursor:pointer;color:var(--coral-deep);font-weight:600;}
+.lesson-jump{display:inline-block;margin:18px 0 2px;padding:11px 20px;background:var(--coral);color:#fff;font-weight:700;font-size:0.95rem;text-decoration:none;border-radius:8px;box-shadow:0 2px 6px rgba(213,90,63,0.28);transition:background .15s;}
+.lesson-jump:hover{background:var(--coral-hover);}
+.section-jump{display:flex;flex-wrap:wrap;align-items:center;gap:9px;justify-content:center;margin:22px 0;padding:13px 14px;background:var(--cream);border:1px solid var(--rule);border-radius:10px;}
+.section-jump .sj-label{font-size:0.82rem;font-weight:600;color:var(--grey);margin-right:2px;}
+.section-jump a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--white);border:2px solid var(--gold-soft);color:var(--navy);font-family:'Fraunces',serif;font-weight:700;font-size:1rem;text-decoration:none;transition:all .15s;}
+.section-jump a:hover{background:var(--coral);border-color:var(--coral);color:#fff;}
+.section-divider{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20px;margin:26px 0 14px;}
+.back-to-lesson{display:inline-block;margin:0 0 10px;color:var(--gold-soft);font-size:0.82rem;font-weight:600;text-decoration:none;letter-spacing:0.04em;}
+.back-to-lesson:hover{color:#fff;text-decoration:underline;}
+.section-divider .title{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:#fff;}
+.section-divider .intro{margin-top:12px;padding-top:12px;border-top:1px solid rgba(201,154,46,0.35);}
+.lo-eyebrow{font-size:0.7rem;letter-spacing:0.16em;color:var(--gold);font-weight:700;margin-bottom:6px;}
+.lo-statement{margin:0 0 10px;color:#fff;font-style:italic;font-size:0.98rem;}
+.sc-label{font-size:0.76rem;letter-spacing:0.05em;color:var(--gold);font-weight:600;margin-bottom:4px;}
+.sc-list{margin:0;padding-left:1.2em;color:rgba(255,255,255,0.92);font-size:0.92rem;line-height:1.5;}
+.question{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:18px 18px 16px;margin:14px 0;}
+.q-head{display:flex;gap:8px;margin-bottom:12px;}
+.q-num{font-family:'Fraunces',serif;color:var(--gold);font-weight:700;font-size:1.1rem;}
+.q-text{color:var(--navy);font-weight:600;}
+.parts{display:flex;flex-direction:column;gap:2px;}
+.part{display:flex;align-items:center;gap:10px;padding:7px 0;border-top:1px dashed var(--rule);flex-wrap:wrap;}
+.part:first-child{border-top:0;}
+.part-q{font-family:'Fraunces',serif;color:var(--navy);font-size:1.02rem;min-width:96px;}
+.answer-input{font-family:'DM Sans',sans-serif;font-size:1rem;padding:8px 10px;border:2px solid var(--rule);border-radius:7px;width:120px;background:var(--paper);color:var(--navy);}
+.answer-input:focus{outline:none;border-color:var(--gold-soft);background:#fff;}
+.fb{font-weight:700;font-size:1.05rem;min-width:18px;}
+.fb.ok{color:#1f7a4d;}
+.fb.no{color:var(--coral-deep);}
+.fb.part{color:var(--gold);}
+.cd{flex-basis:100%;font-size:0.86rem;color:var(--coral-deep);padding-left:106px;}
+.cd.show{margin-top:-2px;}
+.ord-items{background:var(--cream);border-radius:8px;padding:12px 14px;text-align:center;color:var(--navy);font-size:1.05rem;}
+.ord-tip{font-size:0.9rem;color:var(--grey);}
+.ord-grid{display:flex;flex-wrap:wrap;align-items:center;gap:8px;justify-content:center;margin:10px 0;}
+.ord-arrow{font-size:0.8rem;color:var(--grey-soft);font-weight:600;width:100%;text-align:center;}
+.ord-cell{display:flex;flex-direction:column;align-items:center;gap:3px;}
+.ord-pos{font-size:0.72rem;color:var(--grey-soft);font-weight:700;}
+.ord-input{width:74px;text-align:center;}
+.ord-cds{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;}
+.ord-cds .cd{flex-basis:auto;padding-left:0;}
+.action-bar{box-sizing:border-box;position:sticky;bottom:0;background:var(--navy);margin:0;padding:12px 20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between;box-shadow:0 -2px 8px rgba(36,47,58,0.2);z-index:40;}
+.progress{color:var(--gold-soft);font-size:0.82rem;}
+.btns{display:flex;gap:10px;}
+.btn{font-family:'DM Sans',sans-serif;font-weight:700;border:0;border-radius:8px;padding:11px 18px;cursor:pointer;font-size:0.95rem;background:var(--coral);color:#fff;}
+.btn:hover{background:var(--coral-hover);}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.5);}
+.score-panel{display:none;background:var(--white);border:2px solid var(--gold);border-radius:12px;padding:20px;margin:18px 0;text-align:center;}
+.score-num{font-family:'Fraunces',serif;font-size:2.4rem;color:var(--navy);font-weight:700;}
+.score-diag{color:var(--grey);margin-top:6px;}
+.pf-resume{margin:0 0 16px;padding:12px 16px;background:var(--gold-pale);border-left:4px solid var(--gold);border-radius:0 6px 6px 0;font-size:0.9rem;color:var(--navy);}
+.pf-resume a{color:var(--coral-deep);font-weight:700;cursor:pointer;text-decoration:underline;margin-left:8px;}
+.pf-saved{position:fixed;bottom:84px;right:14px;background:var(--navy);color:#fff;font-size:0.78rem;padding:7px 13px;border-radius:20px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:60;}
+.pf-saved.show{opacity:0.94;}
+.footer{background:var(--navy);color:rgba(255,255,255,0.8);padding:24px 20px;text-align:center;font-size:0.84rem;margin-top:30px;}
+.footer .org{color:var(--gold-soft);font-weight:700;font-family:'Fraunces',serif;}
+.footer a{color:var(--gold-soft);}
+@media (max-width:420px){.part-q{min-width:84px;}.cd{padding-left:0;}.answer-input{width:104px;}}
+.ws{margin-top:10px;}
+.ws details{border-top:1px dashed var(--rule);padding-top:8px;}
+.ws summary{cursor:pointer;color:var(--coral-deep);font-weight:600;font-size:0.9rem;}
+.ws .we-steps{margin-top:8px;}
+.rem-panel{margin-top:12px;padding:14px;background:var(--gold-pale);border-radius:8px;}
+.rem-head{font-size:0.78rem;letter-spacing:0.04em;font-weight:700;color:var(--coral-deep);text-transform:uppercase;margin-bottom:10px;}
+.rem-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:8px 0;border-top:1px dashed var(--rule);}
+.rem-row:first-of-type{border-top:0;}
+.rem-q{flex:1 1 100%;color:var(--navy);font-size:0.92rem;}
+.rem-ans-wrap{display:flex;align-items:center;gap:8px;}
+.rem-input{font-family:'DM Sans',sans-serif;font-size:0.95rem;padding:6px 9px;border:2px solid var(--rule);border-radius:6px;width:120px;background:#fff;color:var(--navy);}
+.rem-input:focus{outline:none;border-color:var(--gold-soft);}
+.rem-fb{font-weight:700;min-width:16px;}
+.rem-fb.ok{color:#1f7a4d;}
+.rem-fb.no{color:var(--coral-deep);}
+.rem-fb.part{color:var(--gold);}
+.rem-ans{margin-top:10px;}
+.rem-ans summary{cursor:pointer;color:var(--coral-deep);font-weight:600;font-size:0.88rem;}
+.rem-ans p{margin:6px 0 0;color:var(--navy);font-size:0.9rem;}
+.reg-card{background:#fff;border:1px solid var(--rule);border-left:4px solid var(--gold);border-radius:10px;padding:16px;margin:0 0 22px;}
+.reg-title{font-family:'Fraunces',serif;font-weight:600;color:var(--navy);font-size:1.02rem;margin-bottom:4px;}
+.reg-opt{font-family:'DM Sans',sans-serif;font-weight:400;color:var(--grey-soft);font-size:0.82rem;}
+.reg-grid{display:flex;flex-direction:column;gap:12px;margin-top:12px;}
+.reg-field{display:flex;flex-direction:column;gap:5px;}
+.reg-field span{font-size:0.82rem;font-weight:600;color:var(--grey);}
+.reg-field input{font-family:'DM Sans',sans-serif;font-size:0.95rem;padding:9px 11px;border:2px solid var(--rule);border-radius:7px;background:var(--paper);color:var(--navy);}
+.reg-field input:focus{outline:none;border-color:var(--gold-soft);background:#fff;}
+.score-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px;}
+.btn-tutor{background:var(--navy);color:#fff;}
+.btn-tutor:hover{background:#1a232c;}
+.check-row{margin-top:10px;}
+.check-one{font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:600;color:var(--coral-deep,#B14526);background:#fff;border:1.5px solid var(--coral,#D55A3F);border-radius:7px;padding:6px 14px;cursor:pointer;}
+.check-one:hover{background:var(--coral,#D55A3F);color:#fff;}
+.bar-figure{margin:16px 0 4px;padding:14px 12px;background:#F7F5F2;border:1px solid #D8D2C7;border-radius:10px;text-align:center;}
+.bar-figure svg{display:block;margin:0 auto;}
+.bar-cap{margin-top:10px;font-family:'Caveat',cursive;font-size:1.18rem;color:#5A5A5A;line-height:1.25;}
+.check-hint{margin-top:8px;padding:8px 11px;background:#F1E8D0;border-left:3px solid #C99A2E;border-radius:6px;font-size:0.9rem;color:#242F3A;}
+.check-hint .hint-label{font-weight:700;color:#B14526;text-transform:uppercase;font-size:0.72rem;letter-spacing:0.04em;margin-right:6px;}
+.check-ok{color:#1f7a4d;font-weight:600;}
+.check-muted{color:#5A5A5A;}
+.send-status{margin-top:10px;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:600;min-height:1.1em;}
+.send-status.ok{color:#1b7f4d;}
+.send-status.err{color:#B14526;}
+.ws-bar{margin:10px 0 2px;padding:10px;background:#FFFFFF;border:1px solid #E8E3DA;border-radius:8px;text-align:center;}
+.ws-bar svg{display:block;margin:0 auto;}
+.ws-bar-cap{margin-top:6px;font-family:'Caveat',cursive;font-size:1.05rem;color:#5A5A5A;line-height:1.2;}
+.try-steps{margin-top:8px;}
+.try-steps .tl{margin:4px 0;color:var(--navy);font-size:0.93rem;line-height:1.55;}</style>
+<style>
+/* Responsive fixes — added by responsive_fix.py */
+html, body { overflow-x: hidden; max-width: 100vw; }
+svg { max-width: 100%; height: auto; display: block; }
+.qfig, .figbox { max-width: 100%; overflow: hidden; }
+.figbox svg, .qfig svg { margin: 0 auto; }
+table.ak { table-layout: fixed; width: 100%; }
+table.ak td, table.ak th { word-break: break-word; overflow-wrap: anywhere; padding: 6px; font-size: 12px; }
+.q .qhead .qtext, .q .qprompt { overflow-wrap: anywhere; }
+.answer-line, .mistake { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- IMPROVETUITION:CONTENT-START -->
+<div class="pupil-banner"><strong>Preview mode</strong><span class="sep">&middot;</span><span style="opacity:0.75;">login disabled</span></div>
+<div class="topbar">Improve Tuition &middot; Foundation Maths &middot; Year 6&ndash;10</div>
+<div class="hero">
+  <div class="eyebrow">Number &middot; Fractions of an Amount</div>
+  <h1>Fractions of an Amount</h1>
+  <p class="sub">From index notation and the laws of indices to zero, negative powers and powers in real life.</p>
+  <p class="meta">6 lessons &middot; 35 questions (A&ndash;G) &middot; 20 calculation + 15 word problems &middot; no time pressure</p>
+</div>
+<div class="wrap">
+
+<div class="lesson-part" id="lesson-0" style="border-left:4px solid var(--coral);">
+  <p style="margin:0;">Finding a fraction of an amount comes down to one idea: <strong>divide by the bottom number, then multiply by the top</strong>. This paper builds from simple unit fractions up to larger amounts, simplifying, and real-life money, measures and multi-step problems. Every worked example shows the thinking and ends with a check.</p>
+</div>
+
+<div class="reg-card"><div class="reg-title">Pupil &amp; tutor details <span class="reg-opt">(optional &mdash; only needed to send results)</span></div><div class="reg-grid"><label class="reg-field"><span>Pupil name</span><input id="reg-name" type="text" autocomplete="off" placeholder="e.g. Aisha K."></label><label class="reg-field"><span>Year / class</span><input id="reg-year" type="text" autocomplete="off" placeholder="e.g. Year 8"></label><label class="reg-field"><span>Tutor email</span><input id="reg-tutor-email" type="email" autocomplete="off" placeholder="tutor@improvetuition.org"></label></div></div>
+
+<div class="lesson-part" id="lesson-1">
+<div class="lesson-eyebrow">Lesson 1</div>
+<h3 class="lesson-h3">Unit fractions of an amount</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Find a unit fraction of an amount by dividing.</p>
+<p>A <strong>unit fraction</strong> has 1 on top, like 1/4. To find 1/4 of an amount you share it into 4 equal parts &mdash; that means <strong>divide by the bottom number</strong> (the denominator). One of those equal parts is your answer.</p>
+<figure class="bar-figure"><svg viewBox="0 0 300 102" width="100%" style="max-width:300px;height:auto" role="img" aria-label="1/4 of 20: one of four equal parts = 5"><defs><pattern id="fh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#C99A2E" stroke-width="2.6"/></pattern></defs><rect x="12.0" y="22" width="69.0" height="44" fill="#F1E8D0" stroke="#242F3A" stroke-width="1.4"/><rect x="12.0" y="22" width="69.0" height="44" fill="url(#fh)" stroke="none"/><text x="46" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">5</text><rect x="81.0" y="22" width="69.0" height="44" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.4"/><text x="116" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">5</text><rect x="150.0" y="22" width="69.0" height="44" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.4"/><text x="184" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">5</text><rect x="219.0" y="22" width="69.0" height="44" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.4"/><text x="254" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">5</text><text x="150" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#5A5A5A">1/4 of 20: one of four equal parts = 5</text></svg><figcaption class="bar-cap">20 split into 4 equal parts of 5; one part (hatched) is 1/4 = 5.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">Find 1/4 of 20.</div><ol class="we-steps"><li class="we-step">The bottom number is 4, so split 20 into 4 equal parts.</li><li class="we-step">Dividing does the splitting: 20 &divide; 4 = 5.</li><li class="we-step">One part is 5, so 1/4 of 20 = <strong>5</strong>.</li><li class="we-step">Check: 4 parts of 5 make 4 &times; 5 = 20, the whole amount. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>&lsquo;Of&rsquo; here means divide by the bottom number. 1/4 of 20 is 5, found by 20 &divide; 4.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>Find 1/3 of 18.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">The bottom number is 3, so 18 &divide; 3 = 6.</div><div class="tl">So 1/3 of 18 = <strong>6</strong>.</div><div class="tl">Check: 3 &times; 6 = 18. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-A">Practise this now &mdash; Section A &rarr;</a></div>
+<div class="lesson-part" id="lesson-2">
+<div class="lesson-eyebrow">Lesson 2</div>
+<h3 class="lesson-h3">Any fraction of an amount</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Find any fraction of an amount: divide by the bottom, multiply by the top.</p>
+<p>For a fraction like 3/4, first find <strong>one part</strong> by dividing by the bottom number, then take 3 of those parts by <strong>multiplying by the top number</strong>. In short: divide by the denominator, then multiply by the numerator.</p>
+<figure class="bar-figure"><svg viewBox="0 0 300 102" width="100%" style="max-width:300px;height:auto" role="img" aria-label="3/4 of 20: three of four parts = 15"><defs><pattern id="fh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#C99A2E" stroke-width="2.6"/></pattern></defs><rect x="12.0" y="22" width="69.0" height="44" fill="#F1E8D0" stroke="#242F3A" stroke-width="1.4"/><rect x="12.0" y="22" width="69.0" height="44" fill="url(#fh)" stroke="none"/><text x="46" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">5</text><rect x="81.0" y="22" width="69.0" height="44" fill="#F1E8D0" stroke="#242F3A" stroke-width="1.4"/><rect x="81.0" y="22" width="69.0" height="44" fill="url(#fh)" stroke="none"/><text x="116" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">5</text><rect x="150.0" y="22" width="69.0" height="44" fill="#F1E8D0" stroke="#242F3A" stroke-width="1.4"/><rect x="150.0" y="22" width="69.0" height="44" fill="url(#fh)" stroke="none"/><text x="184" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">5</text><rect x="219.0" y="22" width="69.0" height="44" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.4"/><text x="254" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">5</text><text x="150" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#5A5A5A">3/4 of 20: three of four parts = 15</text></svg><figcaption class="bar-cap">20 in 4 parts of 5; three parts (hatched) make 3/4 = 15.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">Find 3/4 of 20.</div><ol class="we-steps"><li class="we-step">First find 1/4 by dividing: 20 &divide; 4 = 5. That is one part.</li><li class="we-step">We want 3 of those parts, so multiply by the top number: 5 &times; 3 = 15.</li><li class="we-step">So 3/4 of 20 = <strong>15</strong>.</li><li class="we-step">Check: 3 parts of 5 make 15, and the last part (5) makes 20 in total. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>Divide by the bottom, then multiply by the top. Keep the two steps separate so you don&rsquo;t muddle them.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>Find 2/3 of 18.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">1/3 of 18 is 18 &divide; 3 = 6.</div><div class="tl">Two parts: 6 &times; 2 = <strong>12</strong>.</div><div class="tl">Check: 2 parts of 6 is 12, with 1 part (6) left to make 18. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-B">Practise this now &mdash; Section B &rarr;</a></div>
+<div class="lesson-part" id="lesson-3">
+<div class="lesson-eyebrow">Lesson 3</div>
+<h3 class="lesson-h3">Fractions of money and measures</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Find a fraction of an amount of money or a measurement, keeping the units.</p>
+<p>Fractions of money or measures work in exactly the same way: <strong>divide by the bottom, multiply by the top</strong>. Just remember to write the <strong>units</strong> (pounds, grams, ml, minutes) in your answer.</p>
+<figure class="bar-figure"><svg viewBox="0 0 300 102" width="100%" style="max-width:300px;height:auto" role="img" aria-label="2/5 of pounds 35: two parts of pounds 7 = pounds 14"><defs><pattern id="fh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#C99A2E" stroke-width="2.6"/></pattern></defs><rect x="12.0" y="22" width="55.2" height="44" fill="#F1E8D0" stroke="#242F3A" stroke-width="1.4"/><rect x="12.0" y="22" width="55.2" height="44" fill="url(#fh)" stroke="none"/><text x="40" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">&pound;7</text><rect x="67.2" y="22" width="55.2" height="44" fill="#F1E8D0" stroke="#242F3A" stroke-width="1.4"/><rect x="67.2" y="22" width="55.2" height="44" fill="url(#fh)" stroke="none"/><text x="95" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">&pound;7</text><rect x="122.4" y="22" width="55.2" height="44" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.4"/><text x="150" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">&pound;7</text><rect x="177.6" y="22" width="55.2" height="44" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.4"/><text x="205" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">&pound;7</text><rect x="232.8" y="22" width="55.2" height="44" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.4"/><text x="260" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">&pound;7</text><text x="150" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#5A5A5A">2/5 of &pound;35: two parts of &pound;7 = &pound;14</text></svg><figcaption class="bar-cap">&pound;35 in 5 parts of &pound;7; two parts (hatched) make 2/5 = &pound;14.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">Find 2/5 of &pound;35.</div><ol class="we-steps"><li class="we-step">Find 1/5 first: &pound;35 &divide; 5 = &pound;7.</li><li class="we-step">We want 2 parts: &pound;7 &times; 2 = &pound;14.</li><li class="we-step">So 2/5 of &pound;35 = <strong>&pound;14</strong>.</li><li class="we-step">Check: 5 parts of &pound;7 make &pound;35. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>Keep the units in the answer. 2/5 of &pound;35 is &pound;14, not just 14.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>Find 3/8 of 240 cm.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">1/8 of 240 is 240 &divide; 8 = 30 cm.</div><div class="tl">Three parts: 30 &times; 3 = <strong>90 cm</strong>.</div><div class="tl">Check: 8 parts of 30 cm make 240 cm. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-C">Practise this now &mdash; Section C &rarr;</a></div>
+<div class="lesson-part" id="lesson-4">
+<div class="lesson-eyebrow">Lesson 4</div>
+<h3 class="lesson-h3">Larger amounts and simplifying first</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Find fractions of larger amounts, simplifying the fraction first when it helps.</p>
+<p>The method is the same for big numbers. Sometimes the fraction can be <strong>simplified first</strong> to make the dividing easier &mdash; for example 6/10 is the same as 3/5. Simplify if you spot it, but you do not have to.</p>
+<figure class="bar-figure"><svg viewBox="0 0 300 102" width="100%" style="max-width:300px;height:auto" role="img" aria-label="6/10 = 3/5, so 3/5 of 50 = 30"><defs><pattern id="fh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#C99A2E" stroke-width="2.6"/></pattern></defs><rect x="12.0" y="22" width="55.2" height="44" fill="#F1E8D0" stroke="#242F3A" stroke-width="1.4"/><rect x="12.0" y="22" width="55.2" height="44" fill="url(#fh)" stroke="none"/><text x="40" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">10</text><rect x="67.2" y="22" width="55.2" height="44" fill="#F1E8D0" stroke="#242F3A" stroke-width="1.4"/><rect x="67.2" y="22" width="55.2" height="44" fill="url(#fh)" stroke="none"/><text x="95" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">10</text><rect x="122.4" y="22" width="55.2" height="44" fill="#F1E8D0" stroke="#242F3A" stroke-width="1.4"/><rect x="122.4" y="22" width="55.2" height="44" fill="url(#fh)" stroke="none"/><text x="150" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">10</text><rect x="177.6" y="22" width="55.2" height="44" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.4"/><text x="205" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">10</text><rect x="232.8" y="22" width="55.2" height="44" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.4"/><text x="260" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">10</text><text x="150" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#5A5A5A">6/10 = 3/5, so 3/5 of 50 = 30</text></svg><figcaption class="bar-cap">Simplify 6/10 to 3/5: 50 in 5 parts of 10, three parts (hatched) = 30.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">Find 6/10 of 50.</div><ol class="we-steps"><li class="we-step">6/10 simplifies to 3/5 (divide top and bottom by 2). Either form works.</li><li class="we-step">Find 1/5 of 50: 50 &divide; 5 = 10.</li><li class="we-step">Three parts: 10 &times; 3 = 30.</li><li class="we-step">So 6/10 of 50 = <strong>30</strong>. Check using 6/10 directly: 50 &divide; 10 = 5, then 5 &times; 6 = 30 &mdash; the same answer. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>Simplifying is optional &mdash; it just makes the numbers friendlier. Both forms give the same answer.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>Find 4/6 of 90.</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">4/6 simplifies to 2/3.</div><div class="tl">1/3 of 90 is 90 &divide; 3 = 30; two parts: 30 &times; 2 = <strong>60</strong>.</div><div class="tl">Check using 4/6: 90 &divide; 6 = 15, then 15 &times; 4 = 60. Same. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-D">Practise this now &mdash; Section D &rarr;</a></div>
+<div class="lesson-part" id="lesson-5">
+<div class="lesson-eyebrow">Lesson 5</div>
+<h3 class="lesson-h3">Fractions in real life</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Solve real-life problems by finding a fraction of an amount.</p>
+<p>Many real problems are just &lsquo;find a fraction of an amount&rsquo; in disguise: a fraction of a class, a price, a distance or a time. Spot the <strong>whole amount</strong> and the <strong>fraction</strong>, then use the same divide-then-multiply method.</p>
+<figure class="bar-figure"><svg viewBox="0 0 300 102" width="100%" style="max-width:300px;height:auto" role="img" aria-label="3/5 of 30 children = 18 girls"><defs><pattern id="fh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#C99A2E" stroke-width="2.6"/></pattern></defs><rect x="12.0" y="22" width="55.2" height="44" fill="#F1E8D0" stroke="#242F3A" stroke-width="1.4"/><rect x="12.0" y="22" width="55.2" height="44" fill="url(#fh)" stroke="none"/><text x="40" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">6</text><rect x="67.2" y="22" width="55.2" height="44" fill="#F1E8D0" stroke="#242F3A" stroke-width="1.4"/><rect x="67.2" y="22" width="55.2" height="44" fill="url(#fh)" stroke="none"/><text x="95" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">6</text><rect x="122.4" y="22" width="55.2" height="44" fill="#F1E8D0" stroke="#242F3A" stroke-width="1.4"/><rect x="122.4" y="22" width="55.2" height="44" fill="url(#fh)" stroke="none"/><text x="150" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">6</text><rect x="177.6" y="22" width="55.2" height="44" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.4"/><text x="205" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">6</text><rect x="232.8" y="22" width="55.2" height="44" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.4"/><text x="260" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">6</text><text x="150" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#5A5A5A">3/5 of 30 children = 18 girls</text></svg><figcaption class="bar-cap">30 in 5 parts of 6; three parts (hatched) are the girls, 3/5 = 18.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">In a class of 30 children, 3/5 are girls. How many girls are there?</div><ol class="we-steps"><li class="we-step">The whole amount is 30 and the fraction is 3/5.</li><li class="we-step">Find 1/5: 30 &divide; 5 = 6.</li><li class="we-step">Three parts: 6 &times; 3 = 18.</li><li class="we-step">So there are <strong>18 girls</strong>. Check: 18 girls and 12 boys make 30. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>Find the whole amount and the fraction first, then divide and multiply.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>2/3 of a &pound;45 prize is given away. How much is given away?</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">The whole is &pound;45 and the fraction is 2/3. 1/3 is &pound;45 &divide; 3 = &pound;15.</div><div class="tl">Two parts: &pound;15 &times; 2 = <strong>&pound;30</strong>.</div><div class="tl">Check: &pound;30 given away leaves &pound;15. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-E">Practise this now &mdash; Section E &rarr;</a></div>
+<div class="lesson-part" id="lesson-6">
+<div class="lesson-eyebrow">Lesson 6</div>
+<h3 class="lesson-h3">Multi-step fraction problems</h3>
+<p class="lesson-aim"><strong>Aim:</strong> Solve problems that need a fraction and a second step, such as finding what is left.</p>
+<p>Some problems need an extra step: find the fraction, then <strong>subtract</strong> to find what is left, or find a part and work back to the <strong>whole</strong>. Do the fraction step first, then the second step, and check at the end.</p>
+<figure class="bar-figure"><svg viewBox="0 0 300 102" width="100%" style="max-width:300px;height:auto" role="img" aria-label="spent 1/3 = pounds 20 then pounds 40 is left"><defs><pattern id="fh" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#C99A2E" stroke-width="2.6"/></pattern></defs><rect x="12.0" y="22" width="92.0" height="44" fill="#F1E8D0" stroke="#242F3A" stroke-width="1.4"/><rect x="12.0" y="22" width="92.0" height="44" fill="url(#fh)" stroke="none"/><text x="58" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">&pound;20</text><rect x="104.0" y="22" width="92.0" height="44" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.4"/><text x="150" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">&pound;20</text><rect x="196.0" y="22" width="92.0" height="44" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.4"/><text x="242" y="49" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#242F3A">&pound;20</text><text x="150" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="13" font-weight="700" fill="#5A5A5A">spent 1/3 = &pound;20 &rarr; &pound;40 is left</text></svg><figcaption class="bar-cap">&pound;60 in 3 parts of &pound;20; one part (hatched) is spent, two parts left = &pound;40.</figcaption></figure>
+<div class="worked-example"><div class="we-eyebrow">Worked example</div><div class="we-problem">Sam has &pound;60 and spends 1/3 of it. How much is left?</div><ol class="we-steps"><li class="we-step">Step 1 &mdash; find the amount spent: 1/3 of &pound;60 is &pound;60 &divide; 3 = &pound;20.</li><li class="we-step">Step 2 &mdash; subtract to find what is left: &pound;60 &minus; &pound;20 = &pound;40.</li><li class="we-step">So <strong>&pound;40</strong> is left.</li><li class="we-step">Check: spent &pound;20 + left &pound;40 = &pound;60. ✓</li></ol></div>
+<div class="watch-out"><div class="watch-eyebrow">Watch out</div>Do the fraction first, then the subtraction. Read whether the question wants what is <em>left</em> or what was <em>used</em>.</div>
+<div class="try-one"><p class="try-eyebrow">Try one</p><p>1/4 of a number is 9. What is the number?</p><details><summary>Show answer</summary><div class="try-steps"><div class="tl">1/4 of the number is 9, so one part is 9 and there are 4 equal parts.</div><div class="tl">Work back to the whole: 9 &times; 4 = 36.</div><div class="tl">So the number is <strong>36</strong>.</div><div class="tl">Check: 1/4 of 36 is 36 &divide; 4 = 9. ✓</div></div></details></div>
+<a class="lesson-jump" href="#sec-F">Practise this now &mdash; Section F &rarr;</a></div>
+
+<div class="section-jump-wrap"><nav class="section-jump" aria-label="Jump to a section"><span class="sj-label">Jump to a section:</span><a href="#sec-A">A</a><a href="#sec-B">B</a><a href="#sec-C">C</a><a href="#sec-D">D</a><a href="#sec-E">E</a><a href="#sec-F">F</a><a href="#sec-G">G</a></nav></div>
+
+<div class="section-divider" id="sec-A"><a class="back-to-lesson" href="#lesson-1">&uarr; Back to the lessons</a><div class="title">Section A &middot; Unit fractions</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 1 &middot; CALCULATION</div><p class="lo-statement">Find a unit fraction of an amount.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>divide by the bottom number</li><li>that gives one equal part</li><li>check by multiplying back</li></ul></div></div>
+<div class="question" id="q-1"><div class="q-head"><span class="q-num">1.</span><span class="q-text">Find 1/2 of 18.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="9" placeholder="a number" data-val="9.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">1/2 means split into 2 equal parts, so divide by 2.</li><li class="we-step">18 &divide; 2 = 9.</li><li class="we-step">So 1/2 of 18 = <strong>9</strong>. Check: 2 &times; 9 = 18. ✓</li></ol></details></div></div>
+<div class="question" id="q-2"><div class="q-head"><span class="q-num">2.</span><span class="q-text">Find 1/3 of 21.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="7" placeholder="a number" data-val="7.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Divide by the bottom number, 3.</li><li class="we-step">21 &divide; 3 = 7.</li><li class="we-step">So 1/3 of 21 = <strong>7</strong>. Check: 3 &times; 7 = 21. ✓</li></ol></details></div></div>
+<div class="question" id="q-3"><div class="q-head"><span class="q-num">3.</span><span class="q-text">Find 1/4 of 32.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="8" placeholder="a number" data-val="8.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Divide by 4.</li><li class="we-step">32 &divide; 4 = 8.</li><li class="we-step">So 1/4 of 32 = <strong>8</strong>. Check: 4 &times; 8 = 32. ✓</li></ol></details></div></div>
+<div class="question" id="q-4"><div class="q-head"><span class="q-num">4.</span><span class="q-text">Find 1/5 of 45.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="9" placeholder="a number" data-val="9.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Divide by 5.</li><li class="we-step">45 &divide; 5 = 9.</li><li class="we-step">So 1/5 of 45 = <strong>9</strong>. Check: 5 &times; 9 = 45. ✓</li></ol></details></div></div>
+<div class="question" id="q-5"><div class="q-head"><span class="q-num">5.</span><span class="q-text">Find 1/10 of 90.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="A" data-show="9" placeholder="a number" data-val="9.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Divide by 10 (move each digit one place right).</li><li class="we-step">90 &divide; 10 = 9.</li><li class="we-step">So 1/10 of 90 = <strong>9</strong>. Check: 10 &times; 9 = 90. ✓</li></ol></details></div></div>
+<div class="section-divider" id="sec-B"><a class="back-to-lesson" href="#lesson-2">&uarr; Back to the lessons</a><div class="title">Section B &middot; Any fraction of an amount</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 2 &middot; CALCULATION</div><p class="lo-statement">Find a non-unit fraction of an amount.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>divide by the bottom number</li><li>multiply by the top number</li><li>check it is sensible</li></ul></div></div>
+<div class="question" id="q-6"><div class="q-head"><span class="q-num">6.</span><span class="q-text">Find 2/3 of 18.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="12" placeholder="a number" data-val="12.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Find 1/3 first: 18 &divide; 3 = 6.</li><li class="we-step">Two parts: 6 &times; 2 = 12.</li><li class="we-step">So 2/3 of 18 = <strong>12</strong>. Check: leaves 1 part (6) to make 18. ✓</li></ol></details></div></div>
+<div class="question" id="q-7"><div class="q-head"><span class="q-num">7.</span><span class="q-text">Find 3/4 of 20.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="15" placeholder="a number" data-val="15.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Find 1/4: 20 &divide; 4 = 5.</li><li class="we-step">Three parts: 5 &times; 3 = 15.</li><li class="we-step">So 3/4 of 20 = <strong>15</strong>. Check: leaves 1 part (5) to make 20. ✓</li></ol></details></div></div>
+<div class="question" id="q-8"><div class="q-head"><span class="q-num">8.</span><span class="q-text">Find 2/5 of 30.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="12" placeholder="a number" data-val="12.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Find 1/5: 30 &divide; 5 = 6.</li><li class="we-step">Two parts: 6 &times; 2 = 12.</li><li class="we-step">So 2/5 of 30 = <strong>12</strong>. Check: 6 &times; 5 = 30. ✓</li></ol></details></div></div>
+<div class="question" id="q-9"><div class="q-head"><span class="q-num">9.</span><span class="q-text">Find 3/8 of 40.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="15" placeholder="a number" data-val="15.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Find 1/8: 40 &divide; 8 = 5.</li><li class="we-step">Three parts: 5 &times; 3 = 15.</li><li class="we-step">So 3/8 of 40 = <strong>15</strong>. Check: 5 &times; 8 = 40. ✓</li></ol></details></div></div>
+<div class="question" id="q-10"><div class="q-head"><span class="q-num">10.</span><span class="q-text">Find 5/6 of 24.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="B" data-show="20" placeholder="a number" data-val="20.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Find 1/6: 24 &divide; 6 = 4.</li><li class="we-step">Five parts: 4 &times; 5 = 20.</li><li class="we-step">So 5/6 of 24 = <strong>20</strong>. Check: leaves 1 part (4) to make 24. ✓</li></ol></details></div></div>
+<div class="section-divider" id="sec-C"><a class="back-to-lesson" href="#lesson-3">&uarr; Back to the lessons</a><div class="title">Section C &middot; Larger amounts</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 2 &middot; CALCULATION</div><p class="lo-statement">Find fractions of larger amounts.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>find one part by dividing</li><li>multiply by the top number</li><li>keep the steps separate</li></ul></div></div>
+<div class="question" id="q-11"><div class="q-head"><span class="q-num">11.</span><span class="q-text">Find 3/4 of 80.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="60" placeholder="a number" data-val="60.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Find 1/4: 80 &divide; 4 = 20.</li><li class="we-step">Three parts: 20 &times; 3 = 60.</li><li class="we-step">So 3/4 of 80 = <strong>60</strong>. Check: leaves 1 part (20) to make 80. ✓</li></ol></details></div></div>
+<div class="question" id="q-12"><div class="q-head"><span class="q-num">12.</span><span class="q-text">Find 2/5 of 75.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="30" placeholder="a number" data-val="30.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Find 1/5: 75 &divide; 5 = 15.</li><li class="we-step">Two parts: 15 &times; 2 = 30.</li><li class="we-step">So 2/5 of 75 = <strong>30</strong>. Check: 15 &times; 5 = 75. ✓</li></ol></details></div></div>
+<div class="question" id="q-13"><div class="q-head"><span class="q-num">13.</span><span class="q-text">Find 5/8 of 64.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="40" placeholder="a number" data-val="40.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Find 1/8: 64 &divide; 8 = 8.</li><li class="we-step">Five parts: 8 &times; 5 = 40.</li><li class="we-step">So 5/8 of 64 = <strong>40</strong>. Check: 8 &times; 8 = 64. ✓</li></ol></details></div></div>
+<div class="question" id="q-14"><div class="q-head"><span class="q-num">14.</span><span class="q-text">Find 4/9 of 90.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="40" placeholder="a number" data-val="40.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Find 1/9: 90 &divide; 9 = 10.</li><li class="we-step">Four parts: 10 &times; 4 = 40.</li><li class="we-step">So 4/9 of 90 = <strong>40</strong>. Check: 10 &times; 9 = 90. ✓</li></ol></details></div></div>
+<div class="question" id="q-15"><div class="q-head"><span class="q-num">15.</span><span class="q-text">Find 7/10 of 120.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="C" data-show="84" placeholder="a number" data-val="84.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Find 1/10: 120 &divide; 10 = 12.</li><li class="we-step">Seven parts: 12 &times; 7 = 84.</li><li class="we-step">So 7/10 of 120 = <strong>84</strong>. Check: 12 &times; 10 = 120. ✓</li></ol></details></div></div>
+<div class="section-divider" id="sec-D"><a class="back-to-lesson" href="#lesson-4">&uarr; Back to the lessons</a><div class="title">Section D &middot; Simplifying first</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 3 &middot; CALCULATION</div><p class="lo-statement">Simplify a fraction before finding the amount.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>simplify the fraction if you can</li><li>then divide and multiply</li><li>both forms give the same answer</li></ul></div></div>
+<div class="question" id="q-16"><div class="q-head"><span class="q-num">16.</span><span class="q-text">Find 6/10 of 50.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="30" placeholder="a number" data-val="30.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">6/10 simplifies to 3/5. Find 1/5: 50 &divide; 5 = 10.</li><li class="we-step">Three parts: 10 &times; 3 = 30.</li><li class="we-step">So 6/10 of 50 = <strong>30</strong>. Check via 6/10: 50 &divide; 10 = 5, 5 &times; 6 = 30. ✓</li></ol></details></div></div>
+<div class="question" id="q-17"><div class="q-head"><span class="q-num">17.</span><span class="q-text">Find 3/12 of 48.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="12" placeholder="a number" data-val="12.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">3/12 simplifies to 1/4. Find 1/4: 48 &divide; 4 = 12.</li><li class="we-step">One part is enough: 12.</li><li class="we-step">So 3/12 of 48 = <strong>12</strong>. Check via 3/12: 48 &divide; 12 = 4, 4 &times; 3 = 12. ✓</li></ol></details></div></div>
+<div class="question" id="q-18"><div class="q-head"><span class="q-num">18.</span><span class="q-text">Find 4/6 of 90.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="60" placeholder="a number" data-val="60.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">4/6 simplifies to 2/3. Find 1/3: 90 &divide; 3 = 30.</li><li class="we-step">Two parts: 30 &times; 2 = 60.</li><li class="we-step">So 4/6 of 90 = <strong>60</strong>. Check via 4/6: 90 &divide; 6 = 15, 15 &times; 4 = 60. ✓</li></ol></details></div></div>
+<div class="question" id="q-19"><div class="q-head"><span class="q-num">19.</span><span class="q-text">Find 9/10 of 70.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="63" placeholder="a number" data-val="63.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Find 1/10: 70 &divide; 10 = 7.</li><li class="we-step">Nine parts: 7 &times; 9 = 63.</li><li class="we-step">So 9/10 of 70 = <strong>63</strong>. Check: leaves 1 part (7) to make 70. ✓</li></ol></details></div></div>
+<div class="question" id="q-20"><div class="q-head"><span class="q-num">20.</span><span class="q-text">Find 5/100 of 300.</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="D" data-show="15" placeholder="a number" data-val="15.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Find 1/100: 300 &divide; 100 = 3.</li><li class="we-step">Five parts: 3 &times; 5 = 15.</li><li class="we-step">So 5/100 of 300 = <strong>15</strong>. Check: 3 &times; 100 = 300. ✓</li></ol></details></div></div>
+<div class="section-divider" id="sec-E"><a class="back-to-lesson" href="#lesson-5">&uarr; Back to the lessons</a><div class="title">Section E &middot; Fractions in real life</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 2 &middot; WORD PROBLEM</div><p class="lo-statement">Find a fraction of an amount in context.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>spot the whole amount</li><li>spot the fraction</li><li>divide then multiply</li></ul></div></div>
+<div class="question" id="q-21"><div class="q-head"><span class="q-num">21.</span><span class="q-text">In a class of 30 children, 3/5 are girls. How many girls are there?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="18 girls" placeholder="a number" data-val="18.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Whole = 30, fraction = 3/5. Find 1/5: 30 &divide; 5 = 6.</li><li class="we-step">Three parts: 6 &times; 3 = 18.</li><li class="we-step">So <strong>18 girls</strong>. Check: 18 girls + 12 boys = 30. ✓</li></ol></details></div></div>
+<div class="question" id="q-22"><div class="q-head"><span class="q-num">22.</span><span class="q-text">A prize is &pound;45. Two thirds (2/3) is given away. How much money is given away?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="&pound;30.00" placeholder="a number" data-val="30.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Whole = &pound;45, fraction = 2/3. Find 1/3: &pound;45 &divide; 3 = &pound;15.</li><li class="we-step">Two parts: &pound;15 &times; 2 = &pound;30.</li><li class="we-step">So <strong>&pound;30</strong> given away. Check: leaves &pound;15. ✓</li></ol></details></div></div>
+<div class="question" id="q-23"><div class="q-head"><span class="q-num">23.</span><span class="q-text">A jug holds 200 ml of juice. 3/4 of it is poured out. How many ml is poured out?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="150 ml" placeholder="a number" data-val="150.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Whole = 200 ml, fraction = 3/4. Find 1/4: 200 &divide; 4 = 50.</li><li class="we-step">Three parts: 50 &times; 3 = 150.</li><li class="we-step">So <strong>150 ml</strong>. Check: 50 ml left makes 200 ml. ✓</li></ol></details></div></div>
+<div class="question" id="q-24"><div class="q-head"><span class="q-num">24.</span><span class="q-text">A film lasts 60 minutes. 1/4 of it has been watched. How many minutes is that?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="15 minutes" placeholder="a number" data-val="15.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Whole = 60 min, fraction = 1/4. Find 1/4: 60 &divide; 4 = 15.</li><li class="we-step">One part is the answer.</li><li class="we-step">So <strong>15 minutes</strong>. Check: 4 &times; 15 = 60. ✓</li></ol></details></div></div>
+<div class="question" id="q-25"><div class="q-head"><span class="q-num">25.</span><span class="q-text">There are 32 sweets in a bag. 5/8 of them are eaten. How many sweets are eaten?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="E" data-show="20 sweets" placeholder="a number" data-val="20.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Whole = 32, fraction = 5/8. Find 1/8: 32 &divide; 8 = 4.</li><li class="we-step">Five parts: 4 &times; 5 = 20.</li><li class="we-step">So <strong>20 sweets</strong>. Check: leaves 3 parts (12) to make 32. ✓</li></ol></details></div></div>
+<div class="section-divider" id="sec-F"><a class="back-to-lesson" href="#lesson-6">&uarr; Back to the lessons</a><div class="title">Section F &middot; Money and measures in context</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 2 &middot; WORD PROBLEM</div><p class="lo-statement">Find fractions of money and measures in real problems.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>divide by the bottom</li><li>multiply by the top</li><li>write the units</li></ul></div></div>
+<div class="question" id="q-26"><div class="q-head"><span class="q-num">26.</span><span class="q-text">A bag of flour weighs 250 g. A recipe uses 2/5 of it. How many grams are used?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="100 g" placeholder="a number" data-val="100.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Whole = 250 g, fraction = 2/5. Find 1/5: 250 &divide; 5 = 50.</li><li class="we-step">Two parts: 50 &times; 2 = 100.</li><li class="we-step">So <strong>100 g</strong>. Check: 50 &times; 5 = 250. ✓</li></ol></details></div></div>
+<div class="question" id="q-27"><div class="q-head"><span class="q-num">27.</span><span class="q-text">A coat costs &pound;80. In a sale it is reduced by 3/10 of the price. How much money is taken off?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="&pound;24.00" placeholder="a number" data-val="24.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Whole = &pound;80, fraction = 3/10. Find 1/10: &pound;80 &divide; 10 = &pound;8.</li><li class="we-step">Three parts: &pound;8 &times; 3 = &pound;24.</li><li class="we-step">So <strong>&pound;24</strong> off. Check: 8 &times; 10 = 80. ✓</li></ol></details></div></div>
+<div class="question" id="q-28"><div class="q-head"><span class="q-num">28.</span><span class="q-text">A book has 56 pages. Anya has read 7/8 of it. How many pages has she read?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="49 pages" placeholder="a number" data-val="49.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Whole = 56, fraction = 7/8. Find 1/8: 56 &divide; 8 = 7.</li><li class="we-step">Seven parts: 7 &times; 7 = 49.</li><li class="we-step">So <strong>49 pages</strong>. Check: leaves 1 part (7) to make 56. ✓</li></ol></details></div></div>
+<div class="question" id="q-29"><div class="q-head"><span class="q-num">29.</span><span class="q-text">A journey is 120 km. 4/5 of it has been driven. How many km is that?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="96 km" placeholder="a number" data-val="96.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Whole = 120 km, fraction = 4/5. Find 1/5: 120 &divide; 5 = 24.</li><li class="we-step">Four parts: 24 &times; 4 = 96.</li><li class="we-step">So <strong>96 km</strong>. Check: leaves 1 part (24) to make 120. ✓</li></ol></details></div></div>
+<div class="question" id="q-30"><div class="q-head"><span class="q-num">30.</span><span class="q-text">A lesson lasts 90 minutes. 2/3 of it has gone. How many minutes have gone?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="F" data-show="60 minutes" placeholder="a number" data-val="60.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Whole = 90 min, fraction = 2/3. Find 1/3: 90 &divide; 3 = 30.</li><li class="we-step">Two parts: 30 &times; 2 = 60.</li><li class="we-step">So <strong>60 minutes</strong>. Check: 30 left makes 90. ✓</li></ol></details></div></div>
+<div class="section-divider" id="sec-G"><a class="back-to-lesson" href="#lesson-6">&uarr; Back to the lessons</a><div class="title">Section G &middot; Multi-step problems</div><div class="intro"><div class="lo-eyebrow">LEARNING OBJECTIVE &middot; GRADE 3 &middot; WORD PROBLEM</div><p class="lo-statement">Use a fraction and a second step to solve a problem.</p><div class="sc-label">Success criteria &mdash; I can:</div><ul class="sc-list"><li>find the fraction first</li><li>then subtract or work back</li><li>check it makes sense</li></ul></div></div>
+<div class="question" id="q-31"><div class="q-head"><span class="q-num">31.</span><span class="q-text">In a class of 30 children, 2/5 are boys. How many are girls?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="18 girls" placeholder="a number" data-val="18.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Step 1 &mdash; boys: 2/5 of 30 = (30 &divide; 5) &times; 2 = 12.</li><li class="we-step">Step 2 &mdash; girls = total &minus; boys = 30 &minus; 12 = 18.</li><li class="we-step">So <strong>18 girls</strong>. Check: 12 + 18 = 30. ✓</li></ol></details></div></div>
+<div class="question" id="q-32"><div class="q-head"><span class="q-num">32.</span><span class="q-text">Tom has &pound;60 and spends 1/3 of it. How much money is left?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="&pound;40.00" placeholder="a number" data-val="40.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Step 1 &mdash; spent: 1/3 of &pound;60 = &pound;60 &divide; 3 = &pound;20.</li><li class="we-step">Step 2 &mdash; left = &pound;60 &minus; &pound;20 = &pound;40.</li><li class="we-step">So <strong>&pound;40</strong> left. Check: &pound;20 + &pound;40 = &pound;60. ✓</li></ol></details></div></div>
+<div class="question" id="q-33"><div class="q-head"><span class="q-num">33.</span><span class="q-text">In a test of 28 questions, 3/4 are answered correctly. How many are wrong?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="7" placeholder="a number" data-val="7.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Step 1 &mdash; correct: 3/4 of 28 = (28 &divide; 4) &times; 3 = 21.</li><li class="we-step">Step 2 &mdash; wrong = 28 &minus; 21 = 7.</li><li class="we-step">So <strong>7</strong> wrong. Check: 21 + 7 = 28. ✓</li></ol></details></div></div>
+<div class="question" id="q-34"><div class="q-head"><span class="q-num">34.</span><span class="q-text">A tank holds 80 litres and is 5/8 full. How many more litres are needed to fill it?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="30 litres" placeholder="a number" data-val="30.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">Step 1 &mdash; full part: 5/8 of 80 = (80 &divide; 8) &times; 5 = 50 litres.</li><li class="we-step">Step 2 &mdash; more needed = 80 &minus; 50 = 30.</li><li class="we-step">So <strong>30 litres</strong>. Check: 50 + 30 = 80. ✓</li></ol></details></div></div>
+<div class="question" id="q-35"><div class="q-head"><span class="q-num">35.</span><span class="q-text">1/4 of a number is 9. What is the number?</span></div><div class="part"><span class="part-q">Answer:</span><input class="answer-input" type="text" inputmode="text" autocomplete="off" data-type="num" data-sec="G" data-show="36" placeholder="a number" data-val="36.0" data-tol="1e-6"><span class="fb" aria-hidden="true"></span><span class="cd"></span></div><div class="check-row"><button type="button" class="check-one">Check answer</button></div><div class="ws" style="display:none"><details><summary>Show working</summary><ol class="we-steps"><li class="we-step">1/4 of the number is 9, so 9 is one of 4 equal parts.</li><li class="we-step">Work back to the whole: 9 &times; 4 = 36.</li><li class="we-step">So the number is <strong>36</strong>. Check: 36 &divide; 4 = 9. ✓</li></ol></details></div></div>
+
+<div class="score-panel" id="score-panel"><div class="score-num" id="score-num"></div><div class="score-diag" id="score-diag"></div><div class="score-actions"><button id="send-btn" class="btn btn-tutor" onclick="sendToTutor()">Send to Tutor</button><button id="download-btn" class="btn btn-tutor" onclick="downloadResults()">Download results (.txt)</button></div><div class="send-status" id="send-status"></div></div>
+</div>
+
+<div class="action-bar">
+  <span class="progress" id="progress">0 of 35 answered</span>
+  <div class="btns">
+    <button class="btn" id="mark-btn" onclick="markAll()">Mark My Work</button>
+    <button id="reset-btn" class="btn btn-ghost" onclick="resetAll()">Reset</button>
+  </div>
+</div>
+<div class="footer"><div class="org">Improve Tuition</div>George Street, Batley, West Yorkshire WF17 5AR<br>Director: Mr G Dabhad (QTS) &middot; <a href="https://improvetuition.org">improvetuition.org</a></div>
+
+<script>
+var REMEDIATION = {"1": [{"q": "Find 1/2 of 18.", "t": "num", "a": {"val": "9.0", "tol": "1e-6"}, "show": "9"}, {"q": "Find 1/2 of 24.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}, {"q": "Find 1/2 of 36.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18"}, {"q": "Find 1/2 of 50.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25"}, {"q": "Find 1/2 of 16.", "t": "num", "a": {"val": "8.0", "tol": "1e-6"}, "show": "8"}], "2": [{"q": "Find 1/3 of 21.", "t": "num", "a": {"val": "7.0", "tol": "1e-6"}, "show": "7"}, {"q": "Find 1/3 of 27.", "t": "num", "a": {"val": "9.0", "tol": "1e-6"}, "show": "9"}, {"q": "Find 1/3 of 15.", "t": "num", "a": {"val": "5.0", "tol": "1e-6"}, "show": "5"}, {"q": "Find 1/3 of 33.", "t": "num", "a": {"val": "11.0", "tol": "1e-6"}, "show": "11"}, {"q": "Find 1/3 of 24.", "t": "num", "a": {"val": "8.0", "tol": "1e-6"}, "show": "8"}], "3": [{"q": "Find 1/4 of 32.", "t": "num", "a": {"val": "8.0", "tol": "1e-6"}, "show": "8"}, {"q": "Find 1/4 of 28.", "t": "num", "a": {"val": "7.0", "tol": "1e-6"}, "show": "7"}, {"q": "Find 1/4 of 40.", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10"}, {"q": "Find 1/4 of 24.", "t": "num", "a": {"val": "6.0", "tol": "1e-6"}, "show": "6"}, {"q": "Find 1/4 of 48.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}], "4": [{"q": "Find 1/5 of 45.", "t": "num", "a": {"val": "9.0", "tol": "1e-6"}, "show": "9"}, {"q": "Find 1/5 of 35.", "t": "num", "a": {"val": "7.0", "tol": "1e-6"}, "show": "7"}, {"q": "Find 1/5 of 40.", "t": "num", "a": {"val": "8.0", "tol": "1e-6"}, "show": "8"}, {"q": "Find 1/5 of 25.", "t": "num", "a": {"val": "5.0", "tol": "1e-6"}, "show": "5"}, {"q": "Find 1/5 of 60.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}], "5": [{"q": "Find 1/10 of 90.", "t": "num", "a": {"val": "9.0", "tol": "1e-6"}, "show": "9"}, {"q": "Find 1/10 of 70.", "t": "num", "a": {"val": "7.0", "tol": "1e-6"}, "show": "7"}, {"q": "Find 1/10 of 120.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}, {"q": "Find 1/10 of 50.", "t": "num", "a": {"val": "5.0", "tol": "1e-6"}, "show": "5"}, {"q": "Find 1/10 of 80.", "t": "num", "a": {"val": "8.0", "tol": "1e-6"}, "show": "8"}], "6": [{"q": "Find 2/3 of 18.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}, {"q": "Find 2/3 of 21.", "t": "num", "a": {"val": "14.0", "tol": "1e-6"}, "show": "14"}, {"q": "Find 2/3 of 30.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}, {"q": "Find 2/3 of 24.", "t": "num", "a": {"val": "16.0", "tol": "1e-6"}, "show": "16"}, {"q": "Find 2/3 of 27.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18"}], "7": [{"q": "Find 3/4 of 20.", "t": "num", "a": {"val": "15.0", "tol": "1e-6"}, "show": "15"}, {"q": "Find 3/4 of 16.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}, {"q": "Find 3/4 of 28.", "t": "num", "a": {"val": "21.0", "tol": "1e-6"}, "show": "21"}, {"q": "Find 3/4 of 24.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18"}, {"q": "Find 3/4 of 32.", "t": "num", "a": {"val": "24.0", "tol": "1e-6"}, "show": "24"}], "8": [{"q": "Find 2/5 of 30.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}, {"q": "Find 2/5 of 35.", "t": "num", "a": {"val": "14.0", "tol": "1e-6"}, "show": "14"}, {"q": "Find 2/5 of 40.", "t": "num", "a": {"val": "16.0", "tol": "1e-6"}, "show": "16"}, {"q": "Find 2/5 of 25.", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10"}, {"q": "Find 2/5 of 45.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18"}], "9": [{"q": "Find 3/8 of 40.", "t": "num", "a": {"val": "15.0", "tol": "1e-6"}, "show": "15"}, {"q": "Find 3/8 of 32.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}, {"q": "Find 3/8 of 48.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18"}, {"q": "Find 3/8 of 24.", "t": "num", "a": {"val": "9.0", "tol": "1e-6"}, "show": "9"}, {"q": "Find 3/8 of 16.", "t": "num", "a": {"val": "6.0", "tol": "1e-6"}, "show": "6"}], "10": [{"q": "Find 5/6 of 24.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}, {"q": "Find 5/6 of 18.", "t": "num", "a": {"val": "15.0", "tol": "1e-6"}, "show": "15"}, {"q": "Find 5/6 of 36.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30"}, {"q": "Find 5/6 of 30.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25"}, {"q": "Find 5/6 of 12.", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10"}], "11": [{"q": "Find 3/4 of 80.", "t": "num", "a": {"val": "60.0", "tol": "1e-6"}, "show": "60"}, {"q": "Find 3/4 of 60.", "t": "num", "a": {"val": "45.0", "tol": "1e-6"}, "show": "45"}, {"q": "Find 3/4 of 100.", "t": "num", "a": {"val": "75.0", "tol": "1e-6"}, "show": "75"}, {"q": "Find 3/4 of 40.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30"}, {"q": "Find 3/4 of 120.", "t": "num", "a": {"val": "90.0", "tol": "1e-6"}, "show": "90"}], "12": [{"q": "Find 2/5 of 75.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30"}, {"q": "Find 2/5 of 60.", "t": "num", "a": {"val": "24.0", "tol": "1e-6"}, "show": "24"}, {"q": "Find 2/5 of 90.", "t": "num", "a": {"val": "36.0", "tol": "1e-6"}, "show": "36"}, {"q": "Find 2/5 of 45.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18"}, {"q": "Find 2/5 of 100.", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "40"}], "13": [{"q": "Find 5/8 of 64.", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "40"}, {"q": "Find 5/8 of 40.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25"}, {"q": "Find 5/8 of 48.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30"}, {"q": "Find 5/8 of 72.", "t": "num", "a": {"val": "45.0", "tol": "1e-6"}, "show": "45"}, {"q": "Find 5/8 of 32.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}], "14": [{"q": "Find 4/9 of 90.", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "40"}, {"q": "Find 4/9 of 45.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}, {"q": "Find 4/9 of 63.", "t": "num", "a": {"val": "28.0", "tol": "1e-6"}, "show": "28"}, {"q": "Find 4/9 of 72.", "t": "num", "a": {"val": "32.0", "tol": "1e-6"}, "show": "32"}, {"q": "Find 4/9 of 81.", "t": "num", "a": {"val": "36.0", "tol": "1e-6"}, "show": "36"}], "15": [{"q": "Find 7/10 of 120.", "t": "num", "a": {"val": "84.0", "tol": "1e-6"}, "show": "84"}, {"q": "Find 7/10 of 90.", "t": "num", "a": {"val": "63.0", "tol": "1e-6"}, "show": "63"}, {"q": "Find 7/10 of 100.", "t": "num", "a": {"val": "70.0", "tol": "1e-6"}, "show": "70"}, {"q": "Find 7/10 of 70.", "t": "num", "a": {"val": "49.0", "tol": "1e-6"}, "show": "49"}, {"q": "Find 7/10 of 150.", "t": "num", "a": {"val": "105.0", "tol": "1e-6"}, "show": "105"}], "16": [{"q": "Find 6/10 of 50.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30"}, {"q": "Find 6/10 of 40.", "t": "num", "a": {"val": "24.0", "tol": "1e-6"}, "show": "24"}, {"q": "Find 6/10 of 70.", "t": "num", "a": {"val": "42.0", "tol": "1e-6"}, "show": "42"}, {"q": "Find 6/10 of 90.", "t": "num", "a": {"val": "54.0", "tol": "1e-6"}, "show": "54"}, {"q": "Find 6/10 of 30.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18"}], "17": [{"q": "Find 3/12 of 48.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12"}, {"q": "Find 3/12 of 36.", "t": "num", "a": {"val": "9.0", "tol": "1e-6"}, "show": "9"}, {"q": "Find 3/12 of 60.", "t": "num", "a": {"val": "15.0", "tol": "1e-6"}, "show": "15"}, {"q": "Find 3/12 of 24.", "t": "num", "a": {"val": "6.0", "tol": "1e-6"}, "show": "6"}, {"q": "Find 3/12 of 84.", "t": "num", "a": {"val": "21.0", "tol": "1e-6"}, "show": "21"}], "18": [{"q": "Find 4/6 of 90.", "t": "num", "a": {"val": "60.0", "tol": "1e-6"}, "show": "60"}, {"q": "Find 4/6 of 60.", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "40"}, {"q": "Find 4/6 of 75.", "t": "num", "a": {"val": "50.0", "tol": "1e-6"}, "show": "50"}, {"q": "Find 4/6 of 30.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}, {"q": "Find 4/6 of 45.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30"}], "19": [{"q": "Find 9/10 of 70.", "t": "num", "a": {"val": "63.0", "tol": "1e-6"}, "show": "63"}, {"q": "Find 9/10 of 90.", "t": "num", "a": {"val": "81.0", "tol": "1e-6"}, "show": "81"}, {"q": "Find 9/10 of 50.", "t": "num", "a": {"val": "45.0", "tol": "1e-6"}, "show": "45"}, {"q": "Find 9/10 of 120.", "t": "num", "a": {"val": "108.0", "tol": "1e-6"}, "show": "108"}, {"q": "Find 9/10 of 80.", "t": "num", "a": {"val": "72.0", "tol": "1e-6"}, "show": "72"}], "20": [{"q": "Find 5/100 of 300.", "t": "num", "a": {"val": "15.0", "tol": "1e-6"}, "show": "15"}, {"q": "Find 5/100 of 200.", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10"}, {"q": "Find 5/100 of 400.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20"}, {"q": "Find 5/100 of 500.", "t": "num", "a": {"val": "25.0", "tol": "1e-6"}, "show": "25"}, {"q": "Find 5/100 of 600.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30"}], "21": [{"q": "In a class of 40, 2/5 are girls. How many girls?", "t": "num", "a": {"val": "16.0", "tol": "1e-6"}, "show": "16 girls"}, {"q": "In a class of 25, 4/5 are girls. How many girls?", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20 girls"}, {"q": "In a class of 30, 2/3 are girls. How many girls?", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20 girls"}, {"q": "In a class of 20, 3/5 are girls. How many girls?", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12 girls"}, {"q": "In a class of 24, 3/4 are girls. How many girls?", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18 girls"}], "22": [{"q": "Find 3/4 of &pound;60.", "t": "num", "a": {"val": "45.0", "tol": "1e-6"}, "show": "&pound;45.00"}, {"q": "Find 2/5 of &pound;40.", "t": "num", "a": {"val": "16.0", "tol": "1e-6"}, "show": "&pound;16.00"}, {"q": "Find 1/3 of &pound;90.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "&pound;30.00"}, {"q": "Find 4/5 of &pound;35.", "t": "num", "a": {"val": "28.0", "tol": "1e-6"}, "show": "&pound;28.00"}, {"q": "Find 1/4 of &pound;52.", "t": "num", "a": {"val": "13.0", "tol": "1e-6"}, "show": "&pound;13.00"}], "23": [{"q": "Find 2/5 of 300 ml.", "t": "num", "a": {"val": "120.0", "tol": "1e-6"}, "show": "120 ml"}, {"q": "Find 1/4 of 160 ml.", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "40 ml"}, {"q": "Find 3/8 of 240 ml.", "t": "num", "a": {"val": "90.0", "tol": "1e-6"}, "show": "90 ml"}, {"q": "Find 4/5 of 150 ml.", "t": "num", "a": {"val": "120.0", "tol": "1e-6"}, "show": "120 ml"}, {"q": "Find 1/2 of 180 ml.", "t": "num", "a": {"val": "90.0", "tol": "1e-6"}, "show": "90 ml"}], "24": [{"q": "Find 1/3 of 90 minutes.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30 minutes"}, {"q": "Find 2/5 of 45 minutes.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18 minutes"}, {"q": "Find 1/6 of 60 minutes.", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10 minutes"}, {"q": "Find 3/4 of 80 minutes.", "t": "num", "a": {"val": "60.0", "tol": "1e-6"}, "show": "60 minutes"}, {"q": "Find 3/10 of 120 minutes.", "t": "num", "a": {"val": "36.0", "tol": "1e-6"}, "show": "36 minutes"}], "25": [{"q": "Find 3/4 of 40 sweets.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30 sweets"}, {"q": "Find 2/5 of 30 sweets.", "t": "num", "a": {"val": "12.0", "tol": "1e-6"}, "show": "12 sweets"}, {"q": "Find 3/8 of 48 sweets.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "18 sweets"}, {"q": "Find 5/6 of 24 sweets.", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20 sweets"}, {"q": "Find 7/10 of 50 sweets.", "t": "num", "a": {"val": "35.0", "tol": "1e-6"}, "show": "35 sweets"}], "26": [{"q": "Find 3/5 of 200 g.", "t": "num", "a": {"val": "120.0", "tol": "1e-6"}, "show": "120 g"}, {"q": "Find 1/4 of 300 g.", "t": "num", "a": {"val": "75.0", "tol": "1e-6"}, "show": "75 g"}, {"q": "Find 5/8 of 400 g.", "t": "num", "a": {"val": "250.0", "tol": "1e-6"}, "show": "250 g"}, {"q": "Find 3/10 of 150 g.", "t": "num", "a": {"val": "45.0", "tol": "1e-6"}, "show": "45 g"}, {"q": "Find 4/5 of 250 g.", "t": "num", "a": {"val": "200.0", "tol": "1e-6"}, "show": "200 g"}], "27": [{"q": "Find 1/5 of &pound;90.", "t": "num", "a": {"val": "18.0", "tol": "1e-6"}, "show": "&pound;18.00"}, {"q": "Find 3/4 of &pound;120.", "t": "num", "a": {"val": "90.0", "tol": "1e-6"}, "show": "&pound;90.00"}, {"q": "Find 7/10 of &pound;60.", "t": "num", "a": {"val": "42.0", "tol": "1e-6"}, "show": "&pound;42.00"}, {"q": "Find 2/5 of &pound;80.", "t": "num", "a": {"val": "32.0", "tol": "1e-6"}, "show": "&pound;32.00"}, {"q": "Find 5/8 of &pound;64.", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "&pound;40.00"}], "28": [{"q": "Find 4/5 of 60 pages.", "t": "num", "a": {"val": "48.0", "tol": "1e-6"}, "show": "48 pages"}, {"q": "Find 3/4 of 40 pages.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30 pages"}, {"q": "Find 9/10 of 90 pages.", "t": "num", "a": {"val": "81.0", "tol": "1e-6"}, "show": "81 pages"}, {"q": "Find 5/6 of 48 pages.", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "40 pages"}, {"q": "Find 3/8 of 72 pages.", "t": "num", "a": {"val": "27.0", "tol": "1e-6"}, "show": "27 pages"}], "29": [{"q": "Find 3/5 of 90 km.", "t": "num", "a": {"val": "54.0", "tol": "1e-6"}, "show": "54 km"}, {"q": "Find 3/4 of 100 km.", "t": "num", "a": {"val": "75.0", "tol": "1e-6"}, "show": "75 km"}, {"q": "Find 7/10 of 120 km.", "t": "num", "a": {"val": "84.0", "tol": "1e-6"}, "show": "84 km"}, {"q": "Find 5/8 of 80 km.", "t": "num", "a": {"val": "50.0", "tol": "1e-6"}, "show": "50 km"}, {"q": "Find 5/6 of 60 km.", "t": "num", "a": {"val": "50.0", "tol": "1e-6"}, "show": "50 km"}], "30": [{"q": "Find 3/4 of 80 minutes.", "t": "num", "a": {"val": "60.0", "tol": "1e-6"}, "show": "60 minutes"}, {"q": "Find 2/5 of 75 minutes.", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30 minutes"}, {"q": "Find 5/6 of 90 minutes.", "t": "num", "a": {"val": "75.0", "tol": "1e-6"}, "show": "75 minutes"}, {"q": "Find 1/3 of 120 minutes.", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "40 minutes"}, {"q": "Find 4/5 of 90 minutes.", "t": "num", "a": {"val": "72.0", "tol": "1e-6"}, "show": "72 minutes"}], "31": [{"q": "In a class of 30, 1/3 are boys. How many are girls?", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20 girls"}, {"q": "In a class of 40, 1/4 are boys. How many are girls?", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30 girls"}, {"q": "In a class of 25, 3/5 are boys. How many are girls?", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10 girls"}, {"q": "In a class of 24, 1/6 are boys. How many are girls?", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20 girls"}, {"q": "In a class of 50, 3/10 are boys. How many are girls?", "t": "num", "a": {"val": "35.0", "tol": "1e-6"}, "show": "35 girls"}], "32": [{"q": "You have &pound;80 and spend 1/4 of it. How much is left?", "t": "num", "a": {"val": "60.0", "tol": "1e-6"}, "show": "&pound;60.00"}, {"q": "You have &pound;50 and spend 2/5 of it. How much is left?", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "&pound;30.00"}, {"q": "You have &pound;90 and spend 2/3 of it. How much is left?", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "&pound;30.00"}, {"q": "You have &pound;40 and spend 3/4 of it. How much is left?", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "&pound;10.00"}, {"q": "You have &pound;75 and spend 1/5 of it. How much is left?", "t": "num", "a": {"val": "60.0", "tol": "1e-6"}, "show": "&pound;60.00"}], "33": [{"q": "In a test of 30 questions, 4/5 are correct. How many are wrong?", "t": "num", "a": {"val": "6.0", "tol": "1e-6"}, "show": "6"}, {"q": "In a test of 24 questions, 2/3 are correct. How many are wrong?", "t": "num", "a": {"val": "8.0", "tol": "1e-6"}, "show": "8"}, {"q": "In a test of 40 questions, 3/4 are correct. How many are wrong?", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10"}, {"q": "In a test of 36 questions, 5/6 are correct. How many are wrong?", "t": "num", "a": {"val": "6.0", "tol": "1e-6"}, "show": "6"}, {"q": "In a test of 50 questions, 9/10 are correct. How many are wrong?", "t": "num", "a": {"val": "5.0", "tol": "1e-6"}, "show": "5"}], "34": [{"q": "A tank holds 40 litres and is 3/4 full. How many more litres are needed?", "t": "num", "a": {"val": "10.0", "tol": "1e-6"}, "show": "10 litres"}, {"q": "A tank holds 60 litres and is 2/5 full. How many more litres are needed?", "t": "num", "a": {"val": "36.0", "tol": "1e-6"}, "show": "36 litres"}, {"q": "A tank holds 90 litres and is 2/3 full. How many more litres are needed?", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30 litres"}, {"q": "A tank holds 100 litres and is 4/5 full. How many more litres are needed?", "t": "num", "a": {"val": "20.0", "tol": "1e-6"}, "show": "20 litres"}, {"q": "A tank holds 64 litres and is 3/8 full. How many more litres are needed?", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "40 litres"}], "35": [{"q": "1/3 of a number is 8. What is the number?", "t": "num", "a": {"val": "24.0", "tol": "1e-6"}, "show": "24"}, {"q": "1/5 of a number is 7. What is the number?", "t": "num", "a": {"val": "35.0", "tol": "1e-6"}, "show": "35"}, {"q": "1/2 of a number is 15. What is the number?", "t": "num", "a": {"val": "30.0", "tol": "1e-6"}, "show": "30"}, {"q": "1/4 of a number is 6. What is the number?", "t": "num", "a": {"val": "24.0", "tol": "1e-6"}, "show": "24"}, {"q": "1/10 of a number is 4. What is the number?", "t": "num", "a": {"val": "40.0", "tol": "1e-6"}, "show": "40"}]};
+var TOPIC="Fractions of an Amount";window.STORAGE_KEY="improvetuition_fracamount_v1";window.TUTOR_ENDPOINT="";
+
+function buildRemediation(qnum, card){
+  if(!window.REMEDIATION || !REMEDIATION[qnum]) return;
+  if(card.querySelector('.rem-panel')) return;
+  var items=REMEDIATION[qnum];
+  var p=document.createElement('div'); p.className='rem-panel';
+  var html='<div class="rem-head">Practise this skill — 5 more like it</div>';
+  items.forEach(function(it){
+    var at='data-type="'+it.t+'"';
+    for(var k in it.a){ at+=' data-'+k+'="'+it.a[k]+'"'; }
+    html+='<div class="rem-row"><span class="rem-q">'+it.q+'</span><span class="rem-ans-wrap"><input class="rem-input" type="text" autocomplete="off" '+at+' data-show="'+it.show+'"><span class="rem-fb"></span></span></div>';
+  });
+  html+='<details class="rem-ans"><summary>Show answers</summary><p>'+items.map(function(it){return it.show;}).join(' · ')+'</p></details>';
+  p.innerHTML=html; card.appendChild(p);
+  p.querySelectorAll('.rem-input').forEach(function(el){
+    el.addEventListener('input',function(){
+      var r=checkInput(el); var fb=el.parentNode.querySelector('.rem-fb'); fb.className='rem-fb'; fb.textContent='';
+      if(el.value.trim()==='') return;
+      if(r.state==='right'){fb.classList.add('ok');fb.textContent='✓';}
+      else if(r.state==='partial'){fb.classList.add('part');fb.textContent='≈';}
+      else{fb.classList.add('no');fb.textContent='✗';}
+    });
+  });
+}
+
+
+function afterMark(){
+  var sec={}, wrong=[], right=0, total=0;
+  document.querySelectorAll('.answer-input').forEach(function(el){
+    var s=el.getAttribute('data-sec')||'?'; if(!sec[s])sec[s]={r:0,t:0}; sec[s].t++; total++;
+    var fb=el.parentNode.querySelector('.fb'); var ok=fb&&fb.classList.contains('ok');
+    if(ok){sec[s].r++; right++;}
+    else{
+      var card=el.closest('.question'); var qn=card?card.id.replace('q-',''):'';
+      var qtEl=card?card.querySelector('.q-text'):null; var qt=qtEl?qtEl.textContent:'';
+      wrong.push({n:qn, sec:s, q:qt});
+    }
+  });
+  window.LAST_RESULTS={score:right,total:total,sec:sec,wrong:wrong,when:new Date()};
+}
+function afterReset(){ window.LAST_RESULTS=null; window.ATTEMPTS={}; try{localStorage.removeItem((window.STORAGE_KEY||'improvetuition')+'_attempts');}catch(e){}
+  var st=document.getElementById('send-status'); if(st){st.textContent='';st.className='send-status';} }
+function regGet(){
+  function v(id){var e=document.getElementById(id); return e?e.value.trim():'';}
+  return {name:v('reg-name'), year:v('reg-year'), tutor:v('reg-tutor-email')};
+}
+function _qnum(k){ return parseInt(k.replace('q-',''),10)||0; }
+// tries for a WRONG question = self-checks, but never less than 1 (the final wrong answer itself counts as a try)
+function _tries(qn){ var A=window.ATTEMPTS||{}; return Math.max(A['q-'+qn]||0, 1); }
+
+function buildReport(){
+  var R=window.LAST_RESULTS; if(!R) return '';
+  var reg=regGet(); var A=window.ATTEMPTS||{}; var L=[];
+  L.push('Improve Tuition \u2014 '+TOPIC);
+  L.push('Pupil: '+(reg.name||'(not given)')+(reg.year?('   Year/Class: '+reg.year):''));
+  L.push('Date: '+R.when.toLocaleDateString('en-GB'));
+  L.push('');
+  L.push('SCORE: '+R.score+' / '+R.total);
+  L.push('');
+  L.push('By section:');
+  Object.keys(R.sec).sort().forEach(function(s){ L.push('  Section '+s+':  '+R.sec[s].r+' / '+R.sec[s].t); });
+  L.push('');
+  var wrongSet={};
+  if(R.wrong.length===0){ L.push('No questions to revisit \u2014 every answer correct.'); }
+  else{
+    L.push('Questions to revisit ('+R.wrong.length+'):');
+    R.wrong.forEach(function(w){ wrongSet['q-'+w.n]=1; var n=_tries(w.n);
+      L.push('  Q'+w.n+' ['+w.sec+'] \u2014 '+n+' tr'+(n===1?'y':'ies')); L.push('      '+w.q); });
+  }
+  var struggled=Object.keys(A).filter(function(k){return A[k]>=2 && !wrongSet[k];})
+                              .sort(function(a,b){return _qnum(a)-_qnum(b);})
+                              .map(function(k){return 'Q'+_qnum(k)+' ('+A[k]+' tries)';});
+  if(struggled.length){ L.push(''); L.push('Got there after a few tries: '+struggled.join(', ')); }
+  var totalChecks=0,qCount=0; Object.keys(A).forEach(function(k){ totalChecks+=A[k]; qCount++; });
+  if(qCount){ L.push(''); L.push('Self-checks used while working: '+totalChecks+' across '+qCount+' question'+(qCount===1?'':'s')+'.'); }
+  L.push(''); L.push('Sent from the Improve Tuition learning library.');
+  return L.join('\n');
+}
+
+function buildPayload(){
+  var R=window.LAST_RESULTS||{}; var reg=regGet(); var A=window.ATTEMPTS||{};
+  var sec=Object.keys(R.sec||{}).sort().map(function(s){return 'Section '+s+': '+R.sec[s].r+'/'+R.sec[s].t;}).join('; ');
+  var wrong=(R.wrong||[]).map(function(w){ var n=_tries(w.n); return 'Q'+w.n+' ['+w.sec+'] ('+n+' tr'+(n===1?'y':'ies')+')'; }).join('; ');
+  var wrongSet={}; (R.wrong||[]).forEach(function(w){wrongSet['q-'+w.n]=1;});
+  var rec=Object.keys(A).filter(function(k){return A[k]>=2 && !wrongSet[k];})
+                        .sort(function(a,b){return _qnum(a)-_qnum(b);})
+                        .map(function(k){return 'Q'+_qnum(k)+' ('+A[k]+' tries)';}).join('; ');
+  var totalChecks=0,qCount=0; Object.keys(A).forEach(function(k){ totalChecks+=A[k]; qCount++; });
+  return { topic:TOPIC, name:reg.name, year:reg.year,
+    score:(R.score!=null?R.score:''), total:(R.total!=null?R.total:''),
+    sections:sec, wrong:wrong, recovered:rec, selfChecks:totalChecks, questionsChecked:qCount,
+    date:(R.when?R.when.toISOString():new Date().toISOString()), report:buildReport() };
+}
+function renderSendStatus(msg, ok){
+  var st=document.getElementById('send-status');
+  if(st){ st.textContent=msg; st.className='send-status '+(ok?'ok':'err'); }
+  else { alert(msg); }
+}
+function postToSheet(payload, done){
+  try{
+    fetch(window.TUTOR_ENDPOINT, {method:'POST', mode:'no-cors', body:JSON.stringify(payload)})
+      .then(function(){ done(true); })
+      .catch(function(){ done(false); });
+  }catch(e){ done(false); }
+}
+function sendToTutor(){
+  if(!window.LAST_RESULTS){ alert('Please mark your work first.'); return; }
+  var btn=document.getElementById('send-btn');
+  if(window.TUTOR_ENDPOINT){
+    if(btn){ btn.disabled=true; btn.dataset.label=btn.textContent; btn.textContent='Sending\u2026'; }
+    renderSendStatus('Sending\u2026', true);
+    postToSheet(buildPayload(), function(ok){
+      if(btn){ btn.disabled=false; btn.textContent=btn.dataset.label||'Send to tutor'; }
+      renderSendStatus(ok? 'Sent to your tutor \u2713  (you can also Download a copy)' : 'Could not send \u2014 please use Download results as a backup.', ok);
+    });
+    return;
+  }
+  // Fallback: no Sheet endpoint set yet -> open email with the report
+  var reg=regGet();
+  if(!reg.tutor){ alert("Please add your tutor's email address in the details box near the top first."); var e=document.getElementById('reg-tutor-email'); if(e){e.scrollIntoView({block:'center'}); e.focus();} return; }
+  var subject='Improve Tuition \u2014 '+TOPIC+' results'+(reg.name?(' for '+reg.name):'');
+  window.location.href='mailto:'+encodeURIComponent(reg.tutor)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(buildReport());
+}
+function downloadResults(){
+  if(!window.LAST_RESULTS){ alert('Please mark your work first.'); return; }
+  var reg=regGet(); var blob=new Blob([buildReport()],{type:'text/plain'});
+  var a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  var who=(reg.name||'pupil').replace(/[^A-Za-z0-9]+/g,'_');
+  a.download='ImproveTuition_'+TOPIC.replace(/[^A-Za-z0-9]+/g,'_')+'_'+who+'.txt';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(function(){URL.revokeObjectURL(a.href);},1500);
+}
+(function(){
+  function key(){ return (window.STORAGE_KEY||'improvetuition')+'_reg'; }
+  var FIELDS=['reg-name','reg-year','reg-tutor-email'];
+  function load(){ try{ var raw=localStorage.getItem(key()); if(!raw)return; var d=JSON.parse(raw);
+    FIELDS.forEach(function(id){ if(d[id]!=null){var e=document.getElementById(id); if(e)e.value=d[id];} }); }catch(e){} }
+  function save(){ try{ var d={}; FIELDS.forEach(function(id){var e=document.getElementById(id); if(e&&e.value)d[id]=e.value;});
+    if(Object.keys(d).length) localStorage.setItem(key(),JSON.stringify(d)); else localStorage.removeItem(key()); }catch(e){} }
+  function init(){ load(); FIELDS.forEach(function(id){var e=document.getElementById(id); if(e)e.addEventListener('input',save);}); }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
+})();
+
+
+window.ATTEMPTS = window.ATTEMPTS || {};
+function _attKey(){ return (window.STORAGE_KEY||'improvetuition')+'_attempts'; }
+function _saveAtt(){ try{ if(Object.keys(window.ATTEMPTS).length) localStorage.setItem(_attKey(), JSON.stringify(window.ATTEMPTS)); else localStorage.removeItem(_attKey()); }catch(e){} }
+function _loadAtt(){ try{ var r=localStorage.getItem(_attKey()); if(r) window.ATTEMPTS=JSON.parse(r)||{}; }catch(e){} }
+
+function checkOne(id){
+  var card=document.getElementById(id); if(!card) return;
+  var el=card.querySelector('.answer-input'); if(!el) return;
+  var fb=card.querySelector('.fb'), cd=card.querySelector('.cd');
+  if(fb){fb.className='fb';fb.textContent='';} if(cd){cd.className='cd';cd.innerHTML='';}
+  var ws=card.querySelector('.ws'); if(ws)ws.style.display='none';
+  var rp=card.querySelector('.rem-panel'); if(rp)rp.remove();
+  var oldHint=card.querySelector('.check-hint'); if(oldHint)oldHint.remove();
+  var r=checkInput(el);
+  if(r.state==='blank'){ cd.innerHTML='<span class="check-muted">Type an answer, then press Check.</span>'; cd.classList.add('show'); return; }
+  window.ATTEMPTS[id]=(window.ATTEMPTS[id]||0)+1; _saveAtt();
+  if(r.state==='right'){ fb.classList.add('ok'); fb.textContent='\u2713'; cd.innerHTML='<span class="check-ok">Correct \u2713</span>'; cd.classList.add('show'); return; }
+  if(r.state==='partial'){ fb.classList.add('part'); fb.textContent='\u2248'; cd.innerHTML='<span class="check-muted">'+(r.hint||'Close \u2014 check the form and try again.')+'</span>'; }
+  else { fb.classList.add('no'); fb.textContent='\u2717'; cd.innerHTML='<span class="check-muted">Not yet \u2014 have another go.</span>'; }
+  cd.classList.add('show');
+  if(window.ATTEMPTS[id]>=2 && ws){
+    var first=ws.querySelector('.we-step');
+    if(first){ var h=document.createElement('div'); h.className='check-hint'; h.innerHTML='<span class="hint-label">Hint</span> '+first.innerHTML; cd.parentNode.insertBefore(h, cd.nextSibling); }
+  }
+}
+(function(){
+  function clearOne(el){ var card=el.closest('.question'); if(!card)return;
+    var fb=card.querySelector('.fb'),cd=card.querySelector('.cd');
+    if(fb){fb.className='fb';fb.textContent='';} if(cd){cd.className='cd';cd.innerHTML='';}
+    var ws=card.querySelector('.ws'); if(ws)ws.style.display='none';
+    var rp=card.querySelector('.rem-panel'); if(rp)rp.remove();
+    var h=card.querySelector('.check-hint'); if(h)h.remove(); }
+  function init(){ _loadAtt();
+    document.addEventListener('input', function(e){ var el=e.target; if(el&&el.classList&&el.classList.contains('answer-input')) clearOne(el); }, true);
+    document.addEventListener('click', function(e){ var t=e.target; var btn=t&&t.closest?t.closest('.check-one'):null; if(!btn)return; var card=btn.closest('.question'); if(card)checkOne(card.id); });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
+})();
+
+function gcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){var t=b;b=a%b;a=t;}return a;}
+function parseNum(raw){var s=(''+raw).replace(/[£$,]/g,'').replace(/[a-zA-Z%²³\s]+$/,'').trim();var n=parseFloat(s);return isNaN(n)?null:n;}
+function parseRatio(raw){var p=(''+raw).split(':');if(p.length<2)return null;var out=[];for(var i=0;i<p.length;i++){var n=parseFloat(p[i].trim());if(isNaN(n))return null;out.push(n);}return out;}
+function checkInput(el){
+  var t=el.getAttribute('data-type'), raw=el.value.trim();
+  if(raw==='') return {state:'blank'};
+  if(t==='num'){var v=parseNum(raw); if(v==null)return {state:'wrong'};
+    var exp=parseFloat(el.getAttribute('data-val')), tol=parseFloat(el.getAttribute('data-tol')||'1e-6');
+    return Math.abs(v-exp)<=tol?{state:'right'}:{state:'wrong'};}
+  if(t==='ratio'){var pu=parseRatio(raw); if(!pu)return {state:'wrong',hint:'Write your answer as a ratio, e.g. 2:3.'};
+    var ex=parseRatio(el.getAttribute('data-exp'));
+    if(pu.length!==ex.length) return {state:'wrong'};
+    var k=pu[0]/ex[0], prop=true; for(var i=0;i<ex.length;i++){ if(ex[i]===0||Math.abs(pu[i]/ex[i]-k)>1e-9) prop=false; }
+    if(!prop) return {state:'wrong'};
+    var g=Math.round(pu[0]); for(var i=1;i<pu.length;i++) g=gcd(g,Math.round(pu[i]));
+    if(g!==1) return {state:'partial',hint:'Right ratio &mdash; now simplify it.'};
+    return {state:'right'};}
+  if(t==='fraclow'){var m=/^(-?\d+)\/(\d+)$/.exec(raw);
+    if(!m) return {state:'wrong',hint:'Write your answer as a fraction, e.g. 2/5.'};
+    var a=+m[1],b=+m[2]; if(b===0)return {state:'wrong'};
+    var en=+el.getAttribute('data-num'),ed=+el.getAttribute('data-den');
+    if(Math.abs(a/b-en/ed)>1e-9) return {state:'wrong'};
+    if(gcd(a,b)!==1) return {state:'partial',hint:'Right value &mdash; now reduce to lowest terms.'};
+    return {state:'right'};}
+  return {state:'blank'};
+}
+function updateProgress(){var ins=document.querySelectorAll('.answer-input'),a=0;ins.forEach(function(el){if(el.value.trim()!=='')a++;});var p=document.getElementById('progress');if(p)p.textContent=a+' of '+ins.length+' answered';}
+function markAll(){
+  var ins=document.querySelectorAll('.answer-input'),right=0,total=ins.length,firstBad=null;
+  document.querySelectorAll('.check-hint').forEach(function(el){el.remove();});
+  ins.forEach(function(el){
+    var r=checkInput(el),fb=el.parentNode.querySelector('.fb'),cd=el.parentNode.querySelector('.cd');
+    if(fb){fb.className='fb';fb.textContent='';} if(cd){cd.className='cd';cd.innerHTML='';}
+    if(r.state==='right'){fb.classList.add('ok');fb.textContent='\u2713';right++;}
+    else{ if(r.state==='partial'){fb.classList.add('part');fb.textContent='\u2248';cd.innerHTML=(r.hint||'')+' &rarr; <strong>'+el.getAttribute('data-show')+'</strong>';}
+      else if(r.state==='wrong'){fb.classList.add('no');fb.textContent='\u2717';cd.innerHTML=(r.hint?r.hint+' ':'')+'Answer: <strong>'+el.getAttribute('data-show')+'</strong>';}
+      else{cd.innerHTML='<span style="color:var(--grey-soft)">(left blank) </span>Answer: <strong>'+el.getAttribute('data-show')+'</strong>';}
+      cd.classList.add('show'); var wsx=el.closest('.question').querySelector('.ws'); if(wsx)wsx.style.display='block'; var qc=el.closest('.question'); if(qc)buildRemediation(qc.id.replace('q-',''),qc); var s=el.getAttribute('data-sec'); if(firstBad===null)firstBad=s; }
+  });
+  document.getElementById('score-num').textContent=right+' / '+total;
+  var sd=document.getElementById('score-diag');
+  if(right===total) sd.innerHTML='Every question correct &mdash; you can write, share, and scale with ratios. <strong>find the gap. fix the gap.</strong>';
+  else sd.innerHTML='First slips appear in <strong>Section '+(firstBad||'?')+'</strong>. That is the skill to practise next.';
+  document.getElementById('score-panel').style.display='block';
+  document.getElementById('score-panel').scrollIntoView({behavior:'smooth',block:'center'});
+  if(window.afterMark)afterMark();
+}
+function resetAll(){ if(!confirm('Clear all your answers and start again?'))return;
+  document.querySelectorAll('.answer-input').forEach(function(el){el.value='';});
+  document.querySelectorAll('.fb').forEach(function(el){el.className='fb';el.textContent='';});
+  document.querySelectorAll('.cd').forEach(function(el){el.className='cd';el.innerHTML='';});
+  document.querySelectorAll('.ws').forEach(function(el){el.style.display='none';});
+  document.querySelectorAll('.rem-panel').forEach(function(el){el.remove();});
+  document.getElementById('score-panel').style.display='none'; if(window.afterReset)afterReset(); updateProgress(); }
+(function(){ var KEY='improvetuition_fracamount_v1';
+  function save(t){try{var d={};document.querySelectorAll('.answer-input').forEach(function(el,i){if(el.value!=='')d[i]=el.value;});if(Object.keys(d).length===0)localStorage.removeItem(KEY);else localStorage.setItem(KEY,JSON.stringify(d));if(t)tick();}catch(e){}}
+  function restore(){try{var raw=localStorage.getItem(KEY);if(!raw)return false;var d=JSON.parse(raw),any=false;document.querySelectorAll('.answer-input').forEach(function(el,i){if(d[i]!=null){el.value=d[i];any=true;}});if(any)updateProgress();return any;}catch(e){return false;}}
+  var te=null,tt=null;function tick(){if(!te){te=document.createElement('div');te.className='pf-saved';te.textContent='Progress saved';document.body.appendChild(te);}te.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){te.classList.remove('show');},1100);}
+  function banner(){var a=document.getElementById('sec-A');if(!a)return;var b=document.createElement('div');b.className='pf-resume';b.innerHTML='Welcome back \u2014 your answers from earlier were restored.<a id="pf-fresh">Start fresh</a>';a.parentNode.insertBefore(b,a);var f=document.getElementById('pf-fresh');if(f)f.addEventListener('click',function(){try{localStorage.removeItem(KEY);}catch(e){};location.reload();});}
+  var dT=null;
+  function init(){if(restore())banner();
+    document.addEventListener('input',function(){updateProgress();clearTimeout(dT);dT=setTimeout(function(){save(true);},450);},true);
+    window.addEventListener('beforeunload',function(){save(false);});
+    var rb=document.getElementById('reset-btn');if(rb)rb.addEventListener('click',function(){setTimeout(function(){save(false);},60);});
+    setInterval(function(){save(false);},8000);updateProgress();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+<!--ITTS-START-->
+<style>
+.tts-btn{display:inline-flex;align-items:center;justify-content:center;gap:.35em;border:1.5px solid var(--gold,#C99A2E);background:#fff;color:var(--navy,#242F3A);border-radius:999px;cursor:pointer;padding:3px 9px;font:600 12px/1 'DM Sans',sans-serif;vertical-align:middle;margin-left:8px;transition:background .15s,color .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent;}
+.tts-btn svg{display:block;width:15px;height:15px;}
+.tts-btn:hover{background:var(--gold,#C99A2E);color:#fff;}
+.tts-btn:focus-visible{outline:2px solid var(--coral,#D55A3F);outline-offset:2px;}
+.tts-btn.speaking{background:var(--coral,#D55A3F);border-color:var(--coral,#D55A3F);color:#fff;}
+.tts-lesson{margin:2px 0 10px;}
+.a11y-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin:16px 0;padding:11px 15px;background:var(--cream,#E8E3DA);border:1px solid var(--rule,#D8D2C7);border-radius:14px;font:500 13.5px/1.45 'DM Sans',sans-serif;color:var(--grey,#5A5A5A);}
+.a11y-row .a11y-note{flex:1 1 240px;min-width:200px;}
+.a11y-row .a11y-note strong{color:var(--navy,#242F3A);}
+.a11y-row .tts-btn{margin-left:0;}
+.a11y-row .tts-btn.on{background:var(--navy,#242F3A);border-color:var(--navy,#242F3A);color:#fff;}
+body.comfort{font-size:17px;}
+body.comfort .q-text,body.comfort .qtext,body.comfort .lesson-part p,body.comfort .lesson-part li,body.comfort .lesson-aim,body.comfort .lo-statement,body.comfort .sc-list li,body.comfort .question .part-q,body.comfort .we-step,body.comfort .watch-out,body.comfort .try-one p{line-height:1.85 !important;letter-spacing:.012em;word-spacing:.06em;}
+body.dyslexic,body.dyslexic *{font-family:'OpenDyslexic','Comic Sans MS','Verdana',sans-serif !important;font-style:normal !important;text-transform:none !important;}
+body.dyslexic{font-size:17px;}
+body.dyslexic .q-text,body.dyslexic .qtext,body.dyslexic .lesson-part p,body.dyslexic .lesson-part li,body.dyslexic .lesson-aim,body.dyslexic .lo-statement,body.dyslexic .sc-list li,body.dyslexic .question .part-q,body.dyslexic .we-step,body.dyslexic .watch-out,body.dyslexic .try-one p,body.dyslexic .topic-help p,body.dyslexic .th-faq>div,body.dyslexic .next-step p{line-height:1.8 !important;letter-spacing:.012em !important;word-spacing:.07em;}
+#it-tint{position:fixed;inset:0;pointer-events:none;z-index:2147483646;mix-blend-mode:multiply;display:none;}
+body.comfort .q-text,body.comfort .qtext{display:inline-block;}
+@media (prefers-reduced-motion:no-preference){.tts-btn.speaking{animation:ttspulse 1.1s ease-in-out infinite;}@keyframes ttspulse{50%{box-shadow:0 0 0 5px rgba(213,90,63,.18);}}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--gold,#C99A2E);outline-offset:2px;border-radius:4px;}
+body.it-bigtap .answer-input,body.it-bigtap .rem-input{min-height:48px;font-size:1.05rem;}
+body.it-bigtap .check-one,body.it-bigtap #mark-btn,body.it-bigtap #reset-btn,body.it-bigtap .btn{min-height:44px;}
+#it-ruler{position:fixed;left:0;right:0;height:54px;pointer-events:none;z-index:40;display:none;box-shadow:0 -1500px 0 1500px rgba(36,47,58,.28);border-top:2px solid var(--gold,#C99A2E);border-bottom:2px solid var(--gold,#C99A2E);}
+body.it-ruler-on #it-ruler{display:block;}
+</style>
+<script>
+(function(){
+  var SS=window.speechSynthesis, supported=!!SS&&typeof SpeechSynthesisUtterance!=='undefined';
+  var HINT=null, VOICES=[], primed=false, CHOSEN=null, VSEL=null, CURAUDIO=null;
+  var SPK='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M15.5 8.5a4 4 0 010 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 6a7 7 0 010 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+  function speakify(t){
+    t=(t||'').replace(/\u00A0/g,' ');
+    t=t.replace(/£\s?(\d[\d,]*(?:\.\d+)?)/g,'$1 pounds');     // £8 -> 8 pounds
+    t=t.replace(/£/g,' pounds ');
+    t=t.replace(/(\d)\s:\s(\d)/g,'$1 to $2').replace(/(\d):(\d)/g,'$1 to $2');               // ratio 3:5 -> 3 to 5
+    t=t.replace(/(\d)\s*-\s*(\d)/g,'$1 minus $2');             // 20 - 5 -> 20 minus 5 (math hyphen)
+    t=t.replace(/(\d|x|\))\s*\/\s*(\d|x|\()/g,'$1 over $2');  // x/3 -> x over 3
+    t=t.replace(/×/g,' times ').replace(/÷/g,' divided by ');
+    t=t.replace(/\u2212/g,' minus ');                          // true minus only (keeps hyphens like "call-out")
+    t=t.replace(/=/g,' equals ').replace(/\+/g,' plus ');
+    t=t.replace(/%/g,' percent ').replace(/°/g,' degrees ');
+    t=t.replace(/²/g,' squared ').replace(/³/g,' cubed ').replace(/√/g,' square root of ');
+    t=t.replace(/→/g,' then ').replace(/&/g,' and ');
+    t=t.replace(/\u2713/g,' correct ');
+    t=t.replace(/(\d)([A-Za-z])/g,'$1 $2');                    // 2x -> 2 x
+    return t.replace(/\s+/g,' ').trim();
+  }
+  function loadVoices(){ if(!supported)return; try{ var v=SS.getVoices(); if(v&&v.length)VOICES=v; }catch(e){} refreshVoiceUI(); }
+  function refreshVoiceUI(){ if(!VSEL)return; var evs=[],i; for(i=0;i<VOICES.length;i++){ if(/^en/i.test(VOICES[i].lang))evs.push(VOICES[i]); } if(!evs.length){ VSEL.style.display='none'; return; } try{ var saved=localStorage.getItem('it_tts_voice'); if(saved&&CHOSEN===null)CHOSEN=saved; }catch(e){} VSEL.innerHTML=''; var def=document.createElement('option'); def.value=''; def.textContent='Voice: best available'; VSEL.appendChild(def); for(i=0;i<evs.length;i++){ var o=document.createElement('option'); o.value=evs[i].name; o.textContent=evs[i].name+' ('+evs[i].lang+')'; if(evs[i].name===CHOSEN)o.selected=true; VSEL.appendChild(o); } VSEL.style.display=''; }
+  function pickVoice(){ var i,n;
+    if(CHOSEN){ for(i=0;i<VOICES.length;i++){ if(VOICES[i].name===CHOSEN)return VOICES[i]; } }
+    var pref=[/google uk english female/i,/google uk english male/i,/(daniel|kate|serena|arthur|martha|stephanie|oliver|libby|sonia|ryan|jenny)/i];
+    for(n=0;n<pref.length;n++){ for(i=0;i<VOICES.length;i++){ if(/en[-_]GB/i.test(VOICES[i].lang)&&pref[n].test(VOICES[i].name)&&!/compact/i.test(VOICES[i].name))return VOICES[i]; } }
+    for(i=0;i<VOICES.length;i++){ if(/^en/i.test(VOICES[i].lang)&&/(enhanced|premium|natural|neural)/i.test(VOICES[i].name))return VOICES[i]; }
+    for(i=0;i<VOICES.length;i++){ if(/en[-_]GB/i.test(VOICES[i].lang)&&!/compact/i.test(VOICES[i].name))return VOICES[i]; }
+    for(i=0;i<VOICES.length;i++){ if(/en[-_]GB/i.test(VOICES[i].lang))return VOICES[i]; }
+    for(i=0;i<VOICES.length;i++){ if(/^en/i.test(VOICES[i].lang))return VOICES[i]; }
+    return null; }
+  if(supported){ loadVoices(); try{ SS.addEventListener('voiceschanged',loadVoices); }catch(e){ try{ SS.onvoiceschanged=loadVoices; }catch(e2){} } }
+  function clearFlags(){ var s=document.querySelectorAll('.tts-btn.speaking'); for(var i=0;i<s.length;i++)s[i].classList.remove('speaking'); }
+  function supHTML(h){ h=(h||'').replace(/<sup>\s*\?\s*<\/sup>/gi,' to the power what '); return h.replace(/<sup>\s*([^<]*?)\s*<\/sup>/gi,' to the power $1 '); }
+  function readSpeech(el){ var d=document.createElement('div'); d.innerHTML=supHTML(el.innerHTML); var jt=d.querySelectorAll('.jargon-tip'); for(var i=0;i<jt.length;i++)jt[i].remove(); return d.innerText; }
+  function stopAll(){ try{ if(SS)SS.cancel(); }catch(e){} if(CURAUDIO){ try{ CURAUDIO.pause(); }catch(e){} CURAUDIO=null; } clearFlags(); }
+  function utter(text,btn){ var u=new SpeechSynthesisUtterance(text); u.lang='en-GB'; u.rate=0.95; u.pitch=1; var v=pickVoice(); try{ if(v)u.voice=v; }catch(e){} if(btn){ btn.classList.add('speaking'); u.onend=u.onerror=function(){ btn.classList.remove('speaking'); }; } try{ SS.resume(); }catch(e){} try{ SS.speak(u); }catch(e){} }
+  function noAudioHint(){ if(HINT){ HINT.textContent='Read-aloud plays when you open this page in a browser (Safari or Chrome). The in-app preview has no audio.'; HINT.style.display='block'; } }
+  function fallbackSpeak(text,btn){ if(supported){ if(!primed){ primed=true; loadVoices(); } if(SS.speaking||SS.pending){ try{ SS.cancel(); }catch(e){} } utter(text,btn); } else { noAudioHint(); } }
+  function speakCloud(text,btn,ep){ if(btn)btn.classList.add('speaking'); fetch(ep,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:text})}).then(function(r){ return r.json(); }).then(function(j){ if(!j||!j.audio)throw 0; var a=new Audio('data:audio/mpeg;base64,'+j.audio); CURAUDIO=a; a.onended=a.onerror=function(){ if(btn)btn.classList.remove('speaking'); if(CURAUDIO===a)CURAUDIO=null; }; var p=a.play(); if(p&&p['catch'])p['catch'](function(){ if(btn)btn.classList.remove('speaking'); if(CURAUDIO===a)CURAUDIO=null; fallbackSpeak(text,btn); }); }).catch(function(){ if(btn)btn.classList.remove('speaking'); fallbackSpeak(text,btn); }); }
+  function speak(text,btn){
+    if(!text) return;
+    var ep=(window.IT_TTS_ENDPOINT||'');
+    if(ep){ if(btn&&btn.classList.contains('speaking')){ stopAll(); return; } stopAll(); speakCloud(text,btn,ep); return; }
+    if(!supported){ noAudioHint(); return; }
+    if(btn&&btn.classList.contains('speaking')){ stopAll(); return; }
+    clearFlags();
+    if(SS.speaking||SS.pending){ try{ SS.cancel(); }catch(e){} }
+    if(!primed){ primed=true; loadVoices(); try{ var w=new SpeechSynthesisUtterance(' '); w.volume=0; SS.speak(w); }catch(e){} }
+    utter(text,btn);
+  }
+  window.__speakify=speakify;
+  function loadDysFont(){ if(document.getElementById('it-dys-font'))return; var l=document.createElement('link'); l.id='it-dys-font'; l.rel='stylesheet'; l.href='https://cdn.jsdelivr.net/npm/@fontsource/opendyslexic@5/index.css'; document.head.appendChild(l); }
+  function mkBtn(label,withText){ var b=document.createElement('button'); b.type='button'; b.className='tts-btn'+(withText?' tts-lesson':''); b.setAttribute('aria-label',label); b.innerHTML=SPK+(withText?'<span>Listen</span>':''); return b; }
+  function go(){
+    // accessibility row (comfort toggle always; listen note only if TTS supported)
+    var row=document.createElement('div'); row.className='a11y-row';
+    var note=document.createElement('span'); note.className='a11y-note';
+    note.innerHTML='<strong>Read aloud &amp; reading comfort:</strong> tap a speaker to hear any question or lesson; tap Comfortable text to space the words, Dyslexia-friendly for a rounded font with no italics or capitals and roomier spacing, or pick a Reading tint if a coloured background is easier on your eyes. Your choices are remembered.';
+    row.appendChild(note);
+    var toggle=document.createElement('button'); toggle.type='button'; toggle.className='tts-btn'; toggle.textContent='Aa  Comfortable text'; toggle.setAttribute('aria-pressed','false');
+    toggle.addEventListener('click',function(){ var on=document.body.classList.toggle('comfort'); toggle.classList.toggle('on',on); toggle.setAttribute('aria-pressed',on?'true':'false'); try{ if(on)localStorage.setItem('it_comfort','1'); else localStorage.removeItem('it_comfort'); }catch(e){} });
+    row.appendChild(toggle);
+    var dys=document.createElement('button'); dys.type='button'; dys.className='tts-btn'; dys.textContent='Dyslexia-friendly'; dys.setAttribute('aria-pressed','false');
+    dys.addEventListener('click',function(){ var on=document.body.classList.toggle('dyslexic'); if(on)loadDysFont(); dys.classList.toggle('on',on); dys.setAttribute('aria-pressed',on?'true':'false'); try{ if(on)localStorage.setItem('it_dyslexic','1'); else localStorage.removeItem('it_dyslexic'); }catch(e){} });
+    row.appendChild(dys);
+    var bigtap=document.createElement('button'); bigtap.type='button'; bigtap.className='tts-btn'; bigtap.textContent='Bigger taps'; bigtap.setAttribute('aria-pressed','false');
+    bigtap.addEventListener('click',function(){ var on=document.body.classList.toggle('it-bigtap'); bigtap.classList.toggle('on',on); bigtap.setAttribute('aria-pressed',on?'true':'false'); try{ if(on)localStorage.setItem('it_bigtap','1'); else localStorage.removeItem('it_bigtap'); }catch(e){} });
+    row.appendChild(bigtap);
+    var ruler=document.getElementById('it-ruler'); if(!ruler){ ruler=document.createElement('div'); ruler.id='it-ruler'; ruler.setAttribute('aria-hidden','true'); document.body.appendChild(ruler); }
+    var rulerBtn=document.createElement('button'); rulerBtn.type='button'; rulerBtn.className='tts-btn'; rulerBtn.textContent='Reading ruler'; rulerBtn.setAttribute('aria-pressed','false');
+    function _itRuler(y){ if(document.body.classList.contains('it-ruler-on')) ruler.style.top=(y-27)+'px'; }
+    rulerBtn.addEventListener('click',function(){ var on=document.body.classList.toggle('it-ruler-on'); rulerBtn.classList.toggle('on',on); rulerBtn.setAttribute('aria-pressed',on?'true':'false'); try{ if(on)localStorage.setItem('it_ruler','1'); else localStorage.removeItem('it_ruler'); }catch(e){} });
+    row.appendChild(rulerBtn);
+    document.addEventListener('mousemove',function(e){ _itRuler(e.clientY); });
+    document.addEventListener('touchmove',function(e){ if(e.touches[0]) _itRuler(e.touches[0].clientY); },{passive:true});
+    var tintEl=document.getElementById('it-tint'); if(!tintEl){ tintEl=document.createElement('div'); tintEl.id='it-tint'; document.body.appendChild(tintEl); }
+    function applyTint(v){ if(v){ tintEl.style.background=v; tintEl.style.display='block'; } else { tintEl.style.display='none'; } }
+    var tsel=document.createElement('select'); tsel.className='tts-tint'; tsel.setAttribute('aria-label','Choose a reading tint to ease visual stress'); tsel.style.cssText='font:600 12px/1 \'DM Sans\',sans-serif;border:1.5px solid var(--gold,#C99A2E);border-radius:999px;padding:5px 12px;background:#fff;color:var(--navy,#242F3A);cursor:pointer;';
+    var _TN=[['Tint: off',''],['Cream','#FAF0CC'],['Yellow','#FBF3A0'],['Peach','#FAD9C6'],['Rose','#F8D3E0'],['Mint','#CFEED5'],['Blue','#CDE6FB'],['Grey','#DBDBDB']];
+    for(var _ti=0;_ti<_TN.length;_ti++){ var _op=document.createElement('option'); _op.textContent=_TN[_ti][0]; _op.value=_TN[_ti][1]; tsel.appendChild(_op); }
+    tsel.addEventListener('change',function(){ applyTint(tsel.value); try{ if(tsel.value)localStorage.setItem('it_tint',tsel.value); else localStorage.removeItem('it_tint'); }catch(e){} });
+    row.appendChild(tsel);
+    try{ if(localStorage.getItem('it_comfort')==='1'){ document.body.classList.add('comfort'); toggle.classList.add('on'); toggle.setAttribute('aria-pressed','true'); } }catch(e){}
+    try{ if(localStorage.getItem('it_dyslexic')==='1'){ document.body.classList.add('dyslexic'); loadDysFont(); dys.classList.add('on'); dys.setAttribute('aria-pressed','true'); } }catch(e){}
+    try{ var _sv=localStorage.getItem('it_tint'); if(_sv){ applyTint(_sv); tsel.value=_sv; } }catch(e){}
+    try{ if(localStorage.getItem('it_bigtap')==='1'){ document.body.classList.add('it-bigtap'); bigtap.classList.add('on'); bigtap.setAttribute('aria-pressed','true'); } }catch(e){}
+    try{ if(localStorage.getItem('it_ruler')==='1'){ document.body.classList.add('it-ruler-on'); rulerBtn.classList.add('on'); rulerBtn.setAttribute('aria-pressed','true'); } }catch(e){}
+    var vsel=document.createElement('select'); vsel.className='tts-voice'; vsel.setAttribute('aria-label','Choose the read-aloud voice'); vsel.style.cssText='display:none;font:600 12px/1 \'DM Sans\',sans-serif;border:1.5px solid var(--gold,#C99A2E);border-radius:999px;padding:5px 12px;background:#fff;color:var(--navy,#242F3A);max-width:190px;cursor:pointer;'; vsel.addEventListener('change',function(){ CHOSEN=vsel.value||null; try{ if(CHOSEN)localStorage.setItem('it_tts_voice',CHOSEN); else localStorage.removeItem('it_tts_voice'); }catch(e){} stopAll(); speak('Hello. This is your reading voice.'); }); row.appendChild(vsel); VSEL=vsel; refreshVoiceUI();
+    var hint=document.createElement('span'); hint.className='a11y-hint'; hint.setAttribute('role','status'); hint.style.cssText='flex:1 1 100%;color:var(--coral-deep,#B14526);font-weight:600;font-size:12.5px;display:none;'; row.appendChild(hint); HINT=hint;
+    var l0=document.getElementById('lesson-0'); if(l0){l0.insertAdjacentElement('afterend',row);} else {var anc=document.querySelector('.lesson-part, .q, .question, .section-divider'); if(anc)anc.insertAdjacentElement('beforebegin',row); else document.body.insertBefore(row,document.body.firstChild);}
+    // listen buttons always render; speak() shows a hint if the browser has no speech engine
+    // per-question listen (reads ONLY the question text, never the answer)
+    var heads=document.querySelectorAll('.q-head, .q-header'),k;
+    for(k=0;k<heads.length;k++){ (function(head){ var qt=head.querySelector('.q-text, .qtext'); if(!qt)return; var b=mkBtn('Listen to this question',true); b.classList.remove('tts-lesson'); b.addEventListener('click',function(){ speak(speakify(readSpeech(qt)),b); }); head.appendChild(b); })(heads[k]); }
+    // per-lesson listen (reads the teaching, strips the hidden Try-one answer + visuals)
+    var ls=document.querySelectorAll('.lesson-part, .lesson');
+    for(k=0;k<ls.length;k++){ (function(l){ var h=l.querySelector('.lesson-h3')||l.querySelector('h2, h3'); if(!h)return; var b=mkBtn('Listen to this lesson',true); b.addEventListener('click',function(){ var c=l.cloneNode(true); var rm=c.querySelectorAll('details,.lesson-jump,.tts-btn,svg,.bar-figure,figure,.jargon-tip'); for(var j=0;j<rm.length;j++)rm[j].remove(); var _d=document.createElement('div'); _d.innerHTML=supHTML(c.innerHTML); speak(speakify(_d.innerText),b); }); h.insertAdjacentElement('afterend',b); })(ls[k]); }
+    // flowing-prose lessons (e.g. BIDMAS): an h2 starting 'Lesson', not inside a lesson container; read until the next h2
+    var ph=document.querySelectorAll('h2'),pk;
+    for(pk=0;pk<ph.length;pk++){ (function(h){ if(h.closest('.lesson-part, .lesson'))return; if(!/^lesson\b/i.test((h.textContent||'').trim()))return; var b=mkBtn('Listen to this lesson',true); b.addEventListener('click',function(){ var parts=[h.textContent], el=h.nextElementSibling; while(el && el.tagName!=='H2'){ if(el.classList && (el.classList.contains('tts-btn')||el.classList.contains('tts-lesson'))){ el=el.nextElementSibling; continue; } var c=el.cloneNode(true); var rm=c.querySelectorAll('details,.tts-btn,svg,figure,.bar-figure,.jargon-tip'); for(var j=0;j<rm.length;j++)rm[j].remove(); parts.push(readSpeech(c)); el=el.nextElementSibling; } speak(speakify(parts.join('. ')),b); }); h.insertAdjacentElement('afterend',b); })(ph[pk]); }
+    var tries=document.querySelectorAll('.try-one details'),tk;
+    for(tk=0;tk<tries.length;tk++){ (function(d){ var host=d.querySelector('.try-steps')||d.querySelector('p'); var sum=d.querySelector('summary'); if(!host||!sum)return; var b=mkBtn('Listen to the answer',true); b.style.margin='8px 0 4px'; b.addEventListener('click',function(e){ e.preventDefault(); e.stopPropagation(); speak(speakify(readSpeech(host)),b); }); sum.insertAdjacentElement('afterend',b); })(tries[tk]); }
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape')stopAll(); });
+    window.addEventListener('beforeunload',stopAll); window.addEventListener('pagehide',stopAll);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go); else go();
+})();
+</script>
+<script>/* Improve Tuition accessibility helper (additive; does not alter marking) - maths-safe */
+(function(){
+  var TICK=/[\u2713\u2714]/, CROSS=/[\u2717\u2718\u2715\u274c]/, APPROX=/[\u2248]/;   /* feedback ticks/crosses only - NOT maths multiply U+00D7 */
+  function stateFrom(el){
+    var t=(el.textContent||'').replace(/\s+/g,'');
+    var c=(' '+(el.getAttribute('class')||'')+' ').toLowerCase().replace(/-/g,' ');
+    if(TICK.test(t)||/ (ok|correct|right) /.test(c)) return 'Correct';
+    if(CROSS.test(t)||/ (no|wrong|incorrect) /.test(c)) return 'Incorrect';
+    if(APPROX.test(t)||/ part /.test(c)||/ partial /.test(c)) return 'Partly correct';
+    return '';
+  }
+  function glyphOnly(el){ if(el.children.length) return false; var t=(el.textContent||'').trim(); return t.length>0&&t.length<=2&&/^[\u2713\u2714\u2717\u2718\u2715\u274c\u2248]+$/.test(t); }
+  function setLbl(el,L){ if(el.getAttribute('aria-label')!==L){ el.setAttribute('role','img'); el.setAttribute('aria-label',L);} }
+  function sweep(){
+    try{
+      var nodes=document.querySelectorAll('.fb,.rem-fb,.cm-fb,[class*="-fb"]');
+      for(var i=0;i<nodes.length;i++){ var el=nodes[i], txt=(el.textContent||'').trim(), L=stateFrom(el);
+        if((glyphOnly(el)||!txt)&&L){ setLbl(el,L); }
+        else if(!txt){ el.removeAttribute('role'); el.removeAttribute('aria-label'); } }
+      var st=document.querySelectorAll('[class~="correct"],[class~="incorrect"],[class~="wrong"]');
+      for(var k=0;k<st.length;k++){ var e=st[k]; if(glyphOnly(e)){ var L2=stateFrom(e); if(L2) setLbl(e,L2); } }
+    }catch(_){}
+  }
+  function labelInputs(){
+    try{
+      var ins=document.querySelectorAll('input.answer-input,input.rem-input,input[type="text"],input[type="number"]');
+      for(var i=0;i<ins.length;i++){ var el=ins[i];
+        if(el.getAttribute('aria-label')||el.getAttribute('aria-labelledby')) continue;
+        if(el.closest('label')||el.closest('.reg-field')||el.closest('.reg-card')) continue;
+        if(el.id&&document.querySelector('label[for="'+el.id+'"]')) continue;
+        var q=el.closest('[id^="q-"]'); var n=q?q.id.replace('q-',''):'';
+        el.setAttribute('aria-label', n?('Your answer for question '+n):'Your answer'); }
+    }catch(_){}
+  }
+  function run(){ labelInputs(); sweep(); }
+  if(document.readyState!=='loading') run(); else document.addEventListener('DOMContentLoaded',run);
+  document.addEventListener('click',function(){ setTimeout(sweep,80); },true);
+})();</script>
+<!--IA11Y-END-->
+<!--ITTS-END-->
+<!-- IMPROVETUITION:CONTENT-END -->
+</body>
+</html>

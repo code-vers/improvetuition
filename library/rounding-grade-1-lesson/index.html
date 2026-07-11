@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rounding | Improve Tuition</title>
+<meta name="description" content="Grade 1 GCSE Rounding lesson - round to the nearest 10, 100 and 1000. Halfway cases and rounding-up cascades. Eight worked examples and twelve practice questions with number-line diagrams and step-by-step working. Built for dyslexic and autistic pupils.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#242F3A;--coral:#D55A3F;--coral-hover:#B14526;--gold:#C99A2E;--gold-soft:#D6B35A;--grey:#3F3F3F;--paper:#F7F5F2;--cream:#E8E3DA;--white:#FFFFFF;--rule:#D8D2C7;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--grey);font-family:'DM Sans',system-ui,sans-serif;font-size:17px;line-height:1.7;-webkit-text-size-adjust:100%}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px 80px}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--navy)}
+.topbar{background:var(--navy);color:var(--gold-soft);font:700 .68rem/1 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:8px 10px}
+.hero{background:var(--navy);border-bottom:4px solid var(--gold);padding:24px 16px 22px}
+.hero .in{max-width:640px;margin:0 auto}
+.eyebrow{font:700 .72rem/1 'DM Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hero h1{color:#fff;font-size:clamp(1.7rem,6vw,2.2rem);line-height:1.15;margin:9px 0 6px;font-weight:700}
+.hero .sub{color:var(--gold-soft);font-style:italic;font-size:1rem;margin:0}
+.card{background:var(--white);border:1px solid var(--rule);border-radius:14px;padding:18px 18px 20px;margin:18px 0}
+h2{font-size:1.45rem;margin:0 0 10px;line-height:1.2}
+h3{font-size:1.15rem;margin:20px 0 8px}
+.lead{margin:0 0 14px;font-size:1.02rem}
+.pill{display:inline-block;background:#faf6ec;border:1px solid var(--rule);border-left:3px solid var(--gold);border-radius:8px;padding:9px 13px;margin:6px 0;font-weight:600;color:var(--navy);font-size:.98rem}
+.figbox{margin:14px 0;display:flex;justify-content:center;background:#fff;padding:6px 0}
+.figbox svg{max-width:100%;height:auto}
+.steps{counter-reset:step;padding:0;margin:8px 0 0;list-style:none}
+.steps li{counter-increment:step;padding:10px 12px 10px 46px;margin:6px 0;background:#faf6ec;border:1px solid var(--rule);border-left:3px solid var(--gold);border-radius:8px;position:relative;font-size:1rem;line-height:1.55}
+.steps li::before{content:counter(step);position:absolute;left:10px;top:9px;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;font-family:'Fraunces',serif;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.steps li b{color:var(--navy)}
+.answer-line{margin-top:10px;background:rgba(213,90,63,.08);border:1px solid var(--coral);border-radius:8px;padding:10px 14px;color:var(--coral-hover);font-weight:700;font-size:1.1rem}
+.mistake{margin-top:12px;background:#fbeeea;border:1px solid #f0c2b6;border-left:3px solid var(--coral);border-radius:8px;padding:11px 13px;font-size:.96rem}
+.mistake b{color:var(--coral-hover);display:block;margin-bottom:3px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.facts{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0}
+.fact{background:#faf6ec;border:1px solid var(--rule);border-left:3px solid var(--gold);border-radius:8px;padding:11px 14px}
+.fact .nm{display:block;font:700 .7rem/1 'DM Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--coral-hover);margin-bottom:4px}
+.fact .vl{font-family:'Fraunces',serif;color:var(--navy);font-weight:700;font-size:1.04rem}
+.divider{background:var(--navy);border-radius:12px;padding:16px;margin:24px 0 6px;color:#fff}
+.divider .lo-eyebrow{font:700 .68rem/1 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.divider .title{font-family:'Fraunces',serif;font-weight:700;font-size:1.18rem;margin:6px 0 2px;color:#fff}
+.divider .lo{font-style:italic;color:#dfe3e8;margin:6px 0 0;font-size:.96rem}
+.q{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:16px;margin:12px 0}
+.q .qhead{margin-bottom:10px}
+.q .qn{font-family:'Fraunces',serif;font-weight:700;color:var(--coral);margin-right:6px;font-size:1.05rem}
+.q .qtext{color:var(--navy);font-weight:600;font-size:1rem}
+.q .qfig{margin:12px auto;display:flex;justify-content:center}
+.q .ansrow{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap}
+.q .ansrow label{font-size:1rem;color:var(--navy);font-weight:600}
+.q .ans{font-family:'Fraunces',serif;font-size:1.1rem;width:130px;max-width:55vw;padding:10px 12px;border:1.5px solid var(--rule);border-radius:8px;background:var(--paper)}
+.q .unit{font-size:1rem;color:var(--grey)}
+.q .marks{font-style:italic;color:var(--grey);font-size:.85rem}
+.verdict{margin-top:10px;font-weight:700;font-size:1rem;min-height:1em}
+.verdict.ok{color:#2e7d32}.verdict.no{color:var(--coral-hover)}
+.show-how{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:10px 14px;min-height:44px;background:transparent;border:1.5px dashed var(--gold);color:var(--coral-hover);border-radius:8px;font:600 .92rem/1 'DM Sans',sans-serif;cursor:pointer}
+.show-how:hover{background:rgba(201,154,46,.09)}
+.work{display:none;margin-top:10px;padding:14px;background:var(--cream);border-radius:10px;font-size:.98rem;line-height:1.7}
+.work.show{display:block}
+.work .pill{display:block;margin-bottom:8px}
+.work ol{padding-left:18px;margin:0}
+.work ol li{margin:4px 0}
+.markbar{position:sticky;bottom:0;background:var(--navy);margin:24px -16px 0;padding:14px 16px;display:flex;align-items:center;gap:12px;border-top:3px solid var(--gold)}
+.markbtn{background:var(--coral);color:#fff;border:none;font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;padding:13px 24px;border-radius:10px;cursor:pointer}
+.markbtn:hover{background:var(--coral-hover)}
+.resetbtn{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);font-weight:700;padding:12px 18px;border-radius:10px;cursor:pointer;font-size:.95rem}
+.score{color:#fff;font-family:'Fraunces',serif;font-weight:700;margin-left:auto;font-size:1.05rem}
+.foot{margin-top:30px;padding-top:18px;border-top:1px solid var(--rule);font-size:.85rem;color:var(--grey);text-align:center;line-height:1.6}
+.foot b{color:var(--navy)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "EducationalOrganization",
+        "LocalBusiness"
+      ],
+      "@id": "https://www.improvetuition.org/#organization",
+      "name": "Improve Tuition",
+      "url": "https://www.improvetuition.org/",
+      "telephone": "01924 506010",
+      "priceRange": "From \u00a314.50 per hour",
+      "foundingDate": "2007",
+      "description": "Improve Tuition provides teacher-led online Maths, English and Science tuition for children aged 5 to 18 in the UK and internationally, including British curriculum pupils, British schools overseas and expat families in Dubai, Singapore, Hong Kong and Spain.",
+      "founder": {
+        "@id": "https://www.improvetuition.org/#mr-g-dabhad"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "The Study Room, George Street",
+        "addressLocality": "Batley",
+        "addressRegion": "West Yorkshire",
+        "postalCode": "WF17 5AR",
+        "addressCountry": "GB"
+      },
+      "areaServed": [
+        "Batley",
+        "Dewsbury",
+        "Heckmondwike",
+        "West Yorkshire",
+        "United Kingdom",
+        "Dubai",
+        "Singapore",
+        "Hong Kong",
+        "Spain",
+        "British schools overseas",
+        "British curriculum schools",
+        "Expat families"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.improvetuition.org/#mr-g-dabhad",
+      "name": "Mr G Dabhad",
+      "jobTitle": "Founder and Lead Teacher",
+      "description": "Mr G Dabhad has QTS, BA Hons and 18 years' experience."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.improvetuition.org/#website",
+      "url": "https://www.improvetuition.org/",
+      "name": "Improve Tuition",
+      "publisher": {
+        "@id": "https://www.improvetuition.org/#organization"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://www.improvetuition.org/library/rounding-grade-1-lesson/#learning-resource",
+      "name": "Rounding Study Guide \u2014 Grade 1",
+      "url": "https://www.improvetuition.org/library/rounding-grade-1-lesson/",
+      "description": "A clear Grade 1 GCSE Maths study guide on rounding \u2014 round whole numbers to the nearest 10, 100 and 1,000. Halfway rule, rounding-up cascades. With number-line diagrams, worked examples and step-by-step practice. Built for dyslexic and autistic pupils.",
+      "learningResourceType": "Study guide",
+      "educationalLevel": "GCSE Grade 1",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      },
+      "inLanguage": "en-GB",
+      "about": [
+        "rounding",
+        "nearest 10",
+        "nearest 100",
+        "nearest 1000",
+        "rounding whole numbers",
+        "halfway rule",
+        "GCSE Maths"
+      ],
+      "teaches": [
+        "How to round whole numbers to the nearest 10, 100 or 1000",
+        "The 'check the next digit' rule",
+        "How to handle halfway cases",
+        "How to handle rounding that cascades into a new column"
+      ],
+      "provider": {
+        "@id": "https://www.improvetuition.org/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.improvetuition.org/library/rounding-grade-1-lesson/#webpage",
+      "url": "https://www.improvetuition.org/library/rounding-grade-1-lesson/",
+      "name": "Rounding \u2014 Lesson + Practice (Grade 1) | Improve Tuition",
+      "description": "A clear Grade 1 GCSE Maths study guide on rounding \u2014 round whole numbers to the nearest 10, 100 and 1,000. Halfway rule, rounding-up cascades. With number-line diagrams, worked examples and step-by-step practice. Built for dyslexic and autistic pupils.",
+      "inLanguage": "en-GB",
+      "isPartOf": {
+        "@id": "https://www.improvetuition.org/#website"
+      },
+      "about": {
+        "@id": "https://www.improvetuition.org/library/rounding-grade-1-lesson/#learning-resource"
+      },
+      "publisher": {
+        "@id": "https://www.improvetuition.org/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.improvetuition.org/library/rounding-grade-1-lesson/#faq",
+      "url": "https://www.improvetuition.org/library/rounding-grade-1-lesson/",
+      "isPartOf": {
+        "@id": "https://www.improvetuition.org/#website"
+      },
+      "about": {
+        "@id": "https://www.improvetuition.org/library/rounding-grade-1-lesson/#learning-resource"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does rounding mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rounding means finding the closest 'nice' number \u2014 like the nearest 10, 100 or 1,000. It makes big numbers easier to remember and estimate with."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you round to the nearest 10?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Look at the ones digit. If it's 5 or more, round UP to the next multiple of 10. If it's less than 5, round DOWN. For example, 47 rounds up to 50 (7 is 5 or more)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you round to the nearest 100?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Look at the tens digit. Same rule: 5 or more rounds up, less than 5 rounds down. For example, 264 rounds up to 300 because the tens digit is 6."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you round to the nearest 1,000?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Look at the hundreds digit. Same rule: 5 or more rounds up, less than 5 rounds down. For example, 1,758 rounds up to 2,000 because the hundreds digit is 7."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens when a number is exactly halfway?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When the digit you're checking is exactly 5, always round UP. This is the school convention. For example, 35 rounds up to 40, and 250 rounds up to 300."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if rounding up crosses to a bigger column?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That's fine \u2014 just follow the rule. For example, 9,950 rounded to the nearest 100 becomes 10,000. Rounding up added a whole extra digit, but that's the correct nice number."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+/* Responsive fixes — added by responsive_fix.py */
+html, body { overflow-x: hidden; max-width: 100vw; }
+svg { max-width: 100%; height: auto; display: block; }
+.qfig, .figbox { max-width: 100%; overflow: hidden; }
+.figbox svg, .qfig svg { margin: 0 auto; }
+table.ak { table-layout: fixed; width: 100%; }
+table.ak td, table.ak th { word-break: break-word; overflow-wrap: anywhere; padding: 6px; font-size: 12px; }
+.q .qhead .qtext, .q .qprompt { overflow-wrap: anywhere; }
+.answer-line, .mistake { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- IMPROVETUITION:CONTENT-START -->
+<div class="topbar">Improve Tuition · Grade 1 · Rounding</div>
+<div class="hero"><div class="in">
+  <span class="eyebrow">Lesson · Practice · Steps</span>
+  <h1>Rounding</h1>
+  <p class="sub">Find the closest nice number. Look at one digit. Round up or down.</p>
+</div></div>
+
+<div class="wrap">
+
+<div class="card">
+  <h2>The six facts you need</h2>
+  <p class="lead">Every rounding question uses one of these. You don't need to remember anything else.</p>
+  <div class="facts">
+    <div class="fact"><span class="nm">1 &middot; What is rounding?</span><span class="vl">Rounding = finding the closest &lsquo;nice&rsquo; number. Like the nearest 10, 100 or 1000.</span></div>
+    <div class="fact"><span class="nm">2 &middot; Nearest 10</span><span class="vl">Look at the <b>ones</b> digit. 5 or more &rArr; round UP. Less than 5 &rArr; round DOWN.</span></div>
+    <div class="fact"><span class="nm">3 &middot; Nearest 100</span><span class="vl">Look at the <b>tens</b> digit. Same rule: 5 or more up, less than 5 down.</span></div>
+    <div class="fact"><span class="nm">4 &middot; Nearest 1000</span><span class="vl">Look at the <b>hundreds</b> digit. Same rule.</span></div>
+    <div class="fact"><span class="nm">5 &middot; Halfway</span><span class="vl">If the digit is exactly 5, always round UP. That&rsquo;s the school rule.</span></div>
+    <div class="fact"><span class="nm">6 &middot; The digit is next door</span><span class="vl">The digit you check is always ONE column right of what you&rsquo;re rounding to.</span></div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 1 - round UP to nearest 10</h2>
+  <p class="lead">Round <b>47</b> to the nearest 10.</p>
+  <div class="figbox"><svg viewBox="0 0 320 130" width="320" role="img" aria-label="A number line showing 47 between 40 and 50"><line x1="22" y1="60" x2="298" y2="60" stroke="#242F3A" stroke-width="2"/><polyline points="28,55 22,60 28,65" fill="none" stroke="#242F3A" stroke-width="2"/><polyline points="292,55 298,60 292,65" fill="none" stroke="#242F3A" stroke-width="2"/><line x1="30.0" y1="52" x2="30.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="30.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">40</text><line x1="290.0" y1="52" x2="290.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="290.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">50</text><line x1="160.0" y1="55" x2="160.0" y2="65" stroke="#C99A2E" stroke-width="1.4" stroke-dasharray="2,2"/><text x="160.0" y="50" font-family="DM Sans,sans-serif" font-size="10" fill="#C99A2E" text-anchor="middle">45</text><circle cx="212.0" cy="60" r="6" fill="#D55A3F"/><text x="212.0" y="42" font-family="Fraunces,serif" font-size="15" font-weight="700" fill="#D55A3F" text-anchor="middle">47</text><line x1="212.0" y1="90" x2="290.0" y2="90" stroke="#D55A3F" stroke-width="1.8"/><polyline points="285.0,86 290.0,90 285.0,94" fill="none" stroke="#D55A3F" stroke-width="1.8"/><text x="251.0" y="108" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="#D55A3F" text-anchor="middle">rounds to 50</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Round 47 to the nearest 10.</li><li><b>The fact.</b> Look at the ONES digit. 5 or more rounds UP.</li><li>47: ones digit is 7.</li><li>7 is 5 or more, so round UP.</li><li>40 &rarr; 50.</li></ol>
+  <div class="answer-line">Answer: 50</div>
+  <div class="mistake"><b>Watch out</b>The digit you check is ALWAYS one column right of what you&rsquo;re rounding to.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 2 - round DOWN to nearest 10</h2>
+  <p class="lead">Round <b>42</b> to the nearest 10.</p>
+  <div class="figbox"><svg viewBox="0 0 320 130" width="320" role="img" aria-label="A number line showing 42 between 40 and 50"><line x1="22" y1="60" x2="298" y2="60" stroke="#242F3A" stroke-width="2"/><polyline points="28,55 22,60 28,65" fill="none" stroke="#242F3A" stroke-width="2"/><polyline points="292,55 298,60 292,65" fill="none" stroke="#242F3A" stroke-width="2"/><line x1="30.0" y1="52" x2="30.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="30.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">40</text><line x1="290.0" y1="52" x2="290.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="290.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">50</text><line x1="160.0" y1="55" x2="160.0" y2="65" stroke="#C99A2E" stroke-width="1.4" stroke-dasharray="2,2"/><text x="160.0" y="50" font-family="DM Sans,sans-serif" font-size="10" fill="#C99A2E" text-anchor="middle">45</text><circle cx="82.0" cy="60" r="6" fill="#D55A3F"/><text x="82.0" y="42" font-family="Fraunces,serif" font-size="15" font-weight="700" fill="#D55A3F" text-anchor="middle">42</text><line x1="82.0" y1="90" x2="30.0" y2="90" stroke="#D55A3F" stroke-width="1.8"/><polyline points="35.0,86 30.0,90 35.0,94" fill="none" stroke="#D55A3F" stroke-width="1.8"/><text x="56.0" y="108" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="#D55A3F" text-anchor="middle">rounds to 40</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Round 42 to the nearest 10.</li><li><b>The fact.</b> Ones digit less than 5 = round DOWN.</li><li>42: ones digit is 2.</li><li>2 is less than 5, so round DOWN.</li><li>Stay at 40.</li></ol>
+  <div class="answer-line">Answer: 40</div>
+  <div class="mistake"><b>Watch out</b>Rounding down keeps the tens digit the same. Just drop the ones back to 0.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 3 - the halfway rule</h2>
+  <p class="lead">Round <b>35</b> to the nearest 10.</p>
+  <div class="figbox"><svg viewBox="0 0 320 130" width="320" role="img" aria-label="A number line showing 35 between 30 and 40"><line x1="22" y1="60" x2="298" y2="60" stroke="#242F3A" stroke-width="2"/><polyline points="28,55 22,60 28,65" fill="none" stroke="#242F3A" stroke-width="2"/><polyline points="292,55 298,60 292,65" fill="none" stroke="#242F3A" stroke-width="2"/><line x1="30.0" y1="52" x2="30.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="30.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">30</text><line x1="290.0" y1="52" x2="290.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="290.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">40</text><line x1="160.0" y1="55" x2="160.0" y2="65" stroke="#C99A2E" stroke-width="1.4" stroke-dasharray="2,2"/><text x="160.0" y="50" font-family="DM Sans,sans-serif" font-size="10" fill="#C99A2E" text-anchor="middle">35</text><circle cx="160.0" cy="60" r="6" fill="#D55A3F"/><text x="160.0" y="42" font-family="Fraunces,serif" font-size="15" font-weight="700" fill="#D55A3F" text-anchor="middle">35</text><line x1="160.0" y1="90" x2="290.0" y2="90" stroke="#D55A3F" stroke-width="1.8"/><polyline points="285.0,86 290.0,90 285.0,94" fill="none" stroke="#D55A3F" stroke-width="1.8"/><text x="225.0" y="108" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="#D55A3F" text-anchor="middle">rounds to 40</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Round 35 to the nearest 10.</li><li><b>The fact.</b> When the digit is exactly 5, always round UP.</li><li>35: ones digit is exactly 5.</li><li>35 is halfway between 30 and 40.</li><li>Halfway rule: round UP.</li><li>So 35 &rarr; 40.</li></ol>
+  <div class="answer-line">Answer: 40</div>
+  <div class="mistake"><b>Watch out</b>Halfway means EQUAL distance from both. We break the tie by going UP.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 4 - round to nearest 100</h2>
+  <p class="lead">Round <b>264</b> to the nearest 100.</p>
+  <div class="figbox"><svg viewBox="0 0 320 130" width="320" role="img" aria-label="A number line showing 264 between 200 and 300"><line x1="22" y1="60" x2="298" y2="60" stroke="#242F3A" stroke-width="2"/><polyline points="28,55 22,60 28,65" fill="none" stroke="#242F3A" stroke-width="2"/><polyline points="292,55 298,60 292,65" fill="none" stroke="#242F3A" stroke-width="2"/><line x1="30.0" y1="52" x2="30.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="30.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">200</text><line x1="290.0" y1="52" x2="290.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="290.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">300</text><line x1="160.0" y1="55" x2="160.0" y2="65" stroke="#C99A2E" stroke-width="1.4" stroke-dasharray="2,2"/><text x="160.0" y="50" font-family="DM Sans,sans-serif" font-size="10" fill="#C99A2E" text-anchor="middle">250</text><circle cx="196.4" cy="60" r="6" fill="#D55A3F"/><text x="196.4" y="42" font-family="Fraunces,serif" font-size="15" font-weight="700" fill="#D55A3F" text-anchor="middle">264</text><line x1="196.4" y1="90" x2="290.0" y2="90" stroke="#D55A3F" stroke-width="1.8"/><polyline points="285.0,86 290.0,90 285.0,94" fill="none" stroke="#D55A3F" stroke-width="1.8"/><text x="243.2" y="108" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="#D55A3F" text-anchor="middle">rounds to 300</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Round 264 to the nearest 100.</li><li><b>The fact.</b> For nearest 100, look at the TENS digit.</li><li>264: tens digit is 6.</li><li>6 is 5 or more, so round UP.</li><li>200 &rarr; 300.</li></ol>
+  <div class="answer-line">Answer: 300</div>
+  <div class="mistake"><b>Watch out</b>The ones digit doesn&rsquo;t matter for nearest 100 &mdash; only check the tens.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 5 - round DOWN to nearest 100</h2>
+  <p class="lead">Round <b>231</b> to the nearest 100.</p>
+  <div class="figbox"><svg viewBox="0 0 320 130" width="320" role="img" aria-label="A number line showing 231 between 200 and 300"><line x1="22" y1="60" x2="298" y2="60" stroke="#242F3A" stroke-width="2"/><polyline points="28,55 22,60 28,65" fill="none" stroke="#242F3A" stroke-width="2"/><polyline points="292,55 298,60 292,65" fill="none" stroke="#242F3A" stroke-width="2"/><line x1="30.0" y1="52" x2="30.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="30.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">200</text><line x1="290.0" y1="52" x2="290.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="290.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">300</text><line x1="160.0" y1="55" x2="160.0" y2="65" stroke="#C99A2E" stroke-width="1.4" stroke-dasharray="2,2"/><text x="160.0" y="50" font-family="DM Sans,sans-serif" font-size="10" fill="#C99A2E" text-anchor="middle">250</text><circle cx="110.6" cy="60" r="6" fill="#D55A3F"/><text x="110.6" y="42" font-family="Fraunces,serif" font-size="15" font-weight="700" fill="#D55A3F" text-anchor="middle">231</text><line x1="110.6" y1="90" x2="30.0" y2="90" stroke="#D55A3F" stroke-width="1.8"/><polyline points="35.0,86 30.0,90 35.0,94" fill="none" stroke="#D55A3F" stroke-width="1.8"/><text x="70.3" y="108" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="#D55A3F" text-anchor="middle">rounds to 200</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Round 231 to the nearest 100.</li><li><b>The fact.</b> Tens digit less than 5 = round DOWN.</li><li>231: tens digit is 3.</li><li>3 is less than 5, so round DOWN.</li><li>Stay at 200.</li></ol>
+  <div class="answer-line">Answer: 200</div>
+  <div class="mistake"><b>Watch out</b>Rounding down to nearest 100 means the tens and ones both become 0.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 6 - round to nearest 1000</h2>
+  <p class="lead">Round <b>1,758</b> to the nearest 1000.</p>
+  <div class="figbox"><svg viewBox="0 0 320 130" width="320" role="img" aria-label="A number line showing 1758 between 1000 and 2000"><line x1="22" y1="60" x2="298" y2="60" stroke="#242F3A" stroke-width="2"/><polyline points="28,55 22,60 28,65" fill="none" stroke="#242F3A" stroke-width="2"/><polyline points="292,55 298,60 292,65" fill="none" stroke="#242F3A" stroke-width="2"/><line x1="30.0" y1="52" x2="30.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="30.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">1,000</text><line x1="290.0" y1="52" x2="290.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="290.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">2,000</text><line x1="160.0" y1="55" x2="160.0" y2="65" stroke="#C99A2E" stroke-width="1.4" stroke-dasharray="2,2"/><text x="160.0" y="50" font-family="DM Sans,sans-serif" font-size="10" fill="#C99A2E" text-anchor="middle">1,500</text><circle cx="227.1" cy="60" r="6" fill="#D55A3F"/><text x="227.1" y="42" font-family="Fraunces,serif" font-size="15" font-weight="700" fill="#D55A3F" text-anchor="middle">1,758</text><line x1="227.1" y1="90" x2="290.0" y2="90" stroke="#D55A3F" stroke-width="1.8"/><polyline points="285.0,86 290.0,90 285.0,94" fill="none" stroke="#D55A3F" stroke-width="1.8"/><text x="258.5" y="108" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="#D55A3F" text-anchor="middle">rounds to 2,000</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Round 1,758 to the nearest 1000.</li><li><b>The fact.</b> For nearest 1000, look at the HUNDREDS digit.</li><li>1,758: hundreds digit is 7.</li><li>7 is 5 or more, so round UP.</li><li>1,000 &rarr; 2,000.</li></ol>
+  <div class="answer-line">Answer: 2,000</div>
+  <div class="mistake"><b>Watch out</b>For nearest 1000, only the hundreds digit matters &mdash; ignore the tens and ones.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 7 - big-looking numbers still follow the rule</h2>
+  <p class="lead">Round <b>3,499</b> to the nearest 100.</p>
+  <div class="figbox"><svg viewBox="0 0 320 130" width="320" role="img" aria-label="A number line showing 3499 between 3400 and 3500"><line x1="22" y1="60" x2="298" y2="60" stroke="#242F3A" stroke-width="2"/><polyline points="28,55 22,60 28,65" fill="none" stroke="#242F3A" stroke-width="2"/><polyline points="292,55 298,60 292,65" fill="none" stroke="#242F3A" stroke-width="2"/><line x1="30.0" y1="52" x2="30.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="30.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">3,400</text><line x1="290.0" y1="52" x2="290.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="290.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">3,500</text><line x1="160.0" y1="55" x2="160.0" y2="65" stroke="#C99A2E" stroke-width="1.4" stroke-dasharray="2,2"/><text x="160.0" y="50" font-family="DM Sans,sans-serif" font-size="10" fill="#C99A2E" text-anchor="middle">3,450</text><circle cx="287.4" cy="60" r="6" fill="#D55A3F"/><text x="287.4" y="42" font-family="Fraunces,serif" font-size="15" font-weight="700" fill="#D55A3F" text-anchor="middle">3,499</text><line x1="287.4" y1="90" x2="290.0" y2="90" stroke="#D55A3F" stroke-width="1.8"/><polyline points="285.0,86 290.0,90 285.0,94" fill="none" stroke="#D55A3F" stroke-width="1.8"/><text x="288.7" y="108" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="#D55A3F" text-anchor="middle">rounds to 3,500</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Round 3,499 to the nearest 100.</li><li><b>The fact.</b> For nearest 100, only the tens digit matters.</li><li>3,499: tens digit is 9.</li><li>9 is 5 or more, so round UP.</li><li>3,400 &rarr; 3,500.</li></ol>
+  <div class="answer-line">Answer: 3,500</div>
+  <div class="mistake"><b>Watch out</b>The 9 in the ones column can fool you. For nearest 100, only the tens digit decides.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 8 - when rounding up carries</h2>
+  <p class="lead">Round <b>9,950</b> to the nearest 100.</p>
+  <div class="figbox"><svg viewBox="0 0 320 130" width="320" role="img" aria-label="A number line showing 9950 between 9900 and 10000"><line x1="22" y1="60" x2="298" y2="60" stroke="#242F3A" stroke-width="2"/><polyline points="28,55 22,60 28,65" fill="none" stroke="#242F3A" stroke-width="2"/><polyline points="292,55 298,60 292,65" fill="none" stroke="#242F3A" stroke-width="2"/><line x1="30.0" y1="52" x2="30.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="30.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">9,900</text><line x1="290.0" y1="52" x2="290.0" y2="68" stroke="#242F3A" stroke-width="1.8"/><text x="290.0" y="84" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">10,000</text><line x1="160.0" y1="55" x2="160.0" y2="65" stroke="#C99A2E" stroke-width="1.4" stroke-dasharray="2,2"/><text x="160.0" y="50" font-family="DM Sans,sans-serif" font-size="10" fill="#C99A2E" text-anchor="middle">9,950</text><circle cx="160.0" cy="60" r="6" fill="#D55A3F"/><text x="160.0" y="42" font-family="Fraunces,serif" font-size="15" font-weight="700" fill="#D55A3F" text-anchor="middle">9,950</text><line x1="160.0" y1="90" x2="290.0" y2="90" stroke="#D55A3F" stroke-width="1.8"/><polyline points="285.0,86 290.0,90 285.0,94" fill="none" stroke="#D55A3F" stroke-width="1.8"/><text x="225.0" y="108" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="#D55A3F" text-anchor="middle">rounds to 10,000</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Round 9,950 to the nearest 100.</li><li><b>The fact.</b> Tens digit exactly 5 &rArr; round UP.</li><li>9,950: tens digit is 5. Halfway, round UP.</li><li>9,900 &rarr; 10,000.</li><li>Rounding up crossed a whole column. That&rsquo;s fine.</li></ol>
+  <div class="answer-line">Answer: 10,000</div>
+  <div class="mistake"><b>Watch out</b>When you&rsquo;re near a change of column, rounding up can add a whole extra digit. That&rsquo;s the correct answer.</div>
+</div>
+
+<!-- ====================== Practice ====================== -->
+
+<div class="divider">
+  <span class="lo-eyebrow">Practice &middot; Section A</span>
+  <div class="title">Nearest 10</div>
+  <div class="lo">Look at the ones digit &middot; 5 or more, round up</div>
+</div>
+<div id="secA"></div>
+
+<div class="divider">
+  <span class="lo-eyebrow">Practice &middot; Section B</span>
+  <div class="title">Nearest 100</div>
+  <div class="lo">Look at the tens digit &middot; Halfway rounds up</div>
+</div>
+<div id="secB"></div>
+
+<div class="divider">
+  <span class="lo-eyebrow">Practice &middot; Section C</span>
+  <div class="title">Nearest 1000 &amp; harder</div>
+  <div class="lo">Look at the hundreds digit &middot; When rounding up carries</div>
+</div>
+<div id="secC"></div>
+
+
+<div class="card" style="border-color:var(--gold);border-left:4px solid var(--coral);background:#faf6ec">
+  <h2 style="display:flex;align-items:center;gap:8px">Ready for more? <span style="background:var(--coral);color:#fff;font:700 .7rem/1 'DM Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:6px">100 questions</span></h2>
+  <p class="lead">When you have done these 12, you are ready for the bigger practice paper.</p>
+  <p class="lead">It has <b>100 questions</b>. They start very easy and get harder near the end. Every question is still Grade 1 — nothing harder. You can stop at any time and come back.</p>
+  <p style="text-align:center;margin:16px 0 4px">
+    <a href="/library/rounding-grade-1-100-questions/" style="display:inline-block;background:var(--coral);color:#fff;font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;padding:14px 24px;border-radius:10px;text-decoration:none;min-height:48px;line-height:1.2">Open the 100-question paper &rarr;</a>
+  </p>
+  <p style="font-size:.88rem;color:var(--grey);text-align:center;margin:8px 0 0">It opens in this same place. The lesson stays open behind it.</p>
+</div>
+
+<div class="markbar">
+  <button class="markbtn" id="markbtn" type="button">Mark My Work</button>
+  <button class="resetbtn" id="resetbtn" type="button">Start again</button>
+  <span class="score" id="score">/ 12</span>
+</div>
+
+<div class="foot">
+  <b>Improve Tuition</b> · George Street, Batley, West Yorkshire WF17 5AR · improvetuition.org<br>
+  Teacher-led tuition since 2007.
+</div>
+
+</div>
+
+<script>
+var QS = [{"id": 1, "sec": "A", "a": 50, "fig": "<svg viewBox=\"0 0 320 130\" width=\"320\" role=\"img\" aria-label=\"A number line showing 47 between 40 and 50\"><line x1=\"22\" y1=\"60\" x2=\"298\" y2=\"60\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,55 22,60 28,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,55 298,60 292,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"52\" x2=\"30.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"30.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">40</text><line x1=\"290.0\" y1=\"52\" x2=\"290.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"290.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">50</text><line x1=\"160.0\" y1=\"55\" x2=\"160.0\" y2=\"65\" stroke=\"#C99A2E\" stroke-width=\"1.4\" stroke-dasharray=\"2,2\"/><text x=\"160.0\" y=\"50\" font-family=\"DM Sans,sans-serif\" font-size=\"10\" fill=\"#C99A2E\" text-anchor=\"middle\">45</text><circle cx=\"212.0\" cy=\"60\" r=\"6\" fill=\"#D55A3F\"/><text x=\"212.0\" y=\"42\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">47</text><line x1=\"212.0\" y1=\"90\" x2=\"290.0\" y2=\"90\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><polyline points=\"285.0,86 290.0,90 285.0,94\" fill=\"none\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><text x=\"251.0\" y=\"108\" font-family=\"DM Sans,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">rounds to 50</text></svg>", "t": "Round 47 to the nearest 10.", "rule": "To round to the nearest 10, look at the ONES digit. 5 or more rounds UP.", "work": ["47: ones digit is 7.", "7 is 5 or more, so round UP.", "40 \u2192 50.", "Round 47 up to 50.", "Answer: 50"]}, {"id": 2, "sec": "A", "a": 40, "fig": "<svg viewBox=\"0 0 320 130\" width=\"320\" role=\"img\" aria-label=\"A number line showing 42 between 40 and 50\"><line x1=\"22\" y1=\"60\" x2=\"298\" y2=\"60\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,55 22,60 28,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,55 298,60 292,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"52\" x2=\"30.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"30.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">40</text><line x1=\"290.0\" y1=\"52\" x2=\"290.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"290.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">50</text><line x1=\"160.0\" y1=\"55\" x2=\"160.0\" y2=\"65\" stroke=\"#C99A2E\" stroke-width=\"1.4\" stroke-dasharray=\"2,2\"/><text x=\"160.0\" y=\"50\" font-family=\"DM Sans,sans-serif\" font-size=\"10\" fill=\"#C99A2E\" text-anchor=\"middle\">45</text><circle cx=\"82.0\" cy=\"60\" r=\"6\" fill=\"#D55A3F\"/><text x=\"82.0\" y=\"42\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">42</text><line x1=\"82.0\" y1=\"90\" x2=\"30.0\" y2=\"90\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><polyline points=\"35.0,86 30.0,90 35.0,94\" fill=\"none\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><text x=\"56.0\" y=\"108\" font-family=\"DM Sans,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">rounds to 40</text></svg>", "t": "Round 42 to the nearest 10.", "rule": "To round to the nearest 10, look at the ONES digit. Less than 5 rounds DOWN.", "work": ["42: ones digit is 2.", "2 is less than 5, so round DOWN.", "Stay at 40.", "Round 42 down to 40.", "Answer: 40"]}, {"id": 3, "sec": "A", "a": 40, "fig": "<svg viewBox=\"0 0 320 130\" width=\"320\" role=\"img\" aria-label=\"A number line showing 35 between 30 and 40\"><line x1=\"22\" y1=\"60\" x2=\"298\" y2=\"60\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,55 22,60 28,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,55 298,60 292,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"52\" x2=\"30.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"30.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">30</text><line x1=\"290.0\" y1=\"52\" x2=\"290.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"290.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">40</text><line x1=\"160.0\" y1=\"55\" x2=\"160.0\" y2=\"65\" stroke=\"#C99A2E\" stroke-width=\"1.4\" stroke-dasharray=\"2,2\"/><text x=\"160.0\" y=\"50\" font-family=\"DM Sans,sans-serif\" font-size=\"10\" fill=\"#C99A2E\" text-anchor=\"middle\">35</text><circle cx=\"160.0\" cy=\"60\" r=\"6\" fill=\"#D55A3F\"/><text x=\"160.0\" y=\"42\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">35</text><line x1=\"160.0\" y1=\"90\" x2=\"290.0\" y2=\"90\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><polyline points=\"285.0,86 290.0,90 285.0,94\" fill=\"none\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><text x=\"225.0\" y=\"108\" font-family=\"DM Sans,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">rounds to 40</text></svg>", "t": "Round 35 to the nearest 10.", "rule": "When the digit is exactly 5, always round UP (school convention).", "work": ["35: ones digit is exactly 5.", "5 is halfway between 30 and 40.", "The rule: 5 always rounds UP.", "35 rounds up to 40.", "Answer: 40"]}, {"id": 4, "sec": "A", "a": 190, "fig": "<svg viewBox=\"0 0 320 130\" width=\"320\" role=\"img\" aria-label=\"A number line showing 189 between 180 and 190\"><line x1=\"22\" y1=\"60\" x2=\"298\" y2=\"60\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,55 22,60 28,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,55 298,60 292,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"52\" x2=\"30.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"30.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">180</text><line x1=\"290.0\" y1=\"52\" x2=\"290.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"290.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">190</text><line x1=\"160.0\" y1=\"55\" x2=\"160.0\" y2=\"65\" stroke=\"#C99A2E\" stroke-width=\"1.4\" stroke-dasharray=\"2,2\"/><text x=\"160.0\" y=\"50\" font-family=\"DM Sans,sans-serif\" font-size=\"10\" fill=\"#C99A2E\" text-anchor=\"middle\">185</text><circle cx=\"264.0\" cy=\"60\" r=\"6\" fill=\"#D55A3F\"/><text x=\"264.0\" y=\"42\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">189</text><line x1=\"264.0\" y1=\"90\" x2=\"290.0\" y2=\"90\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><polyline points=\"285.0,86 290.0,90 285.0,94\" fill=\"none\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><text x=\"277.0\" y=\"108\" font-family=\"DM Sans,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">rounds to 190</text></svg>", "t": "Round 189 to the nearest 10.", "rule": "Look at the ONES digit. 5 or more rounds UP.", "work": ["189: ones digit is 9.", "9 is 5 or more, so round UP.", "180 \u2192 190.", "189 rounds up to 190.", "Answer: 190"]}, {"id": 5, "sec": "B", "a": 300, "fig": "<svg viewBox=\"0 0 320 130\" width=\"320\" role=\"img\" aria-label=\"A number line showing 264 between 200 and 300\"><line x1=\"22\" y1=\"60\" x2=\"298\" y2=\"60\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,55 22,60 28,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,55 298,60 292,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"52\" x2=\"30.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"30.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">200</text><line x1=\"290.0\" y1=\"52\" x2=\"290.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"290.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">300</text><line x1=\"160.0\" y1=\"55\" x2=\"160.0\" y2=\"65\" stroke=\"#C99A2E\" stroke-width=\"1.4\" stroke-dasharray=\"2,2\"/><text x=\"160.0\" y=\"50\" font-family=\"DM Sans,sans-serif\" font-size=\"10\" fill=\"#C99A2E\" text-anchor=\"middle\">250</text><circle cx=\"196.4\" cy=\"60\" r=\"6\" fill=\"#D55A3F\"/><text x=\"196.4\" y=\"42\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">264</text><line x1=\"196.4\" y1=\"90\" x2=\"290.0\" y2=\"90\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><polyline points=\"285.0,86 290.0,90 285.0,94\" fill=\"none\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><text x=\"243.2\" y=\"108\" font-family=\"DM Sans,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">rounds to 300</text></svg>", "t": "Round 264 to the nearest 100.", "rule": "To round to the nearest 100, look at the TENS digit.", "work": ["264: tens digit is 6.", "6 is 5 or more, so round UP.", "200 \u2192 300.", "264 rounds up to 300.", "Answer: 300"]}, {"id": 6, "sec": "B", "a": 200, "fig": "<svg viewBox=\"0 0 320 130\" width=\"320\" role=\"img\" aria-label=\"A number line showing 231 between 200 and 300\"><line x1=\"22\" y1=\"60\" x2=\"298\" y2=\"60\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,55 22,60 28,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,55 298,60 292,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"52\" x2=\"30.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"30.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">200</text><line x1=\"290.0\" y1=\"52\" x2=\"290.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"290.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">300</text><line x1=\"160.0\" y1=\"55\" x2=\"160.0\" y2=\"65\" stroke=\"#C99A2E\" stroke-width=\"1.4\" stroke-dasharray=\"2,2\"/><text x=\"160.0\" y=\"50\" font-family=\"DM Sans,sans-serif\" font-size=\"10\" fill=\"#C99A2E\" text-anchor=\"middle\">250</text><circle cx=\"110.6\" cy=\"60\" r=\"6\" fill=\"#D55A3F\"/><text x=\"110.6\" y=\"42\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">231</text><line x1=\"110.6\" y1=\"90\" x2=\"30.0\" y2=\"90\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><polyline points=\"35.0,86 30.0,90 35.0,94\" fill=\"none\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><text x=\"70.3\" y=\"108\" font-family=\"DM Sans,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">rounds to 200</text></svg>", "t": "Round 231 to the nearest 100.", "rule": "Tens digit less than 5 \u2192 round DOWN.", "work": ["231: tens digit is 3.", "3 is less than 5, so round DOWN.", "Stay at 200.", "231 rounds down to 200.", "Answer: 200"]}, {"id": 7, "sec": "B", "a": 3500, "fig": "<svg viewBox=\"0 0 320 130\" width=\"320\" role=\"img\" aria-label=\"A number line showing 3499 between 3400 and 3500\"><line x1=\"22\" y1=\"60\" x2=\"298\" y2=\"60\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,55 22,60 28,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,55 298,60 292,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"52\" x2=\"30.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"30.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">3,400</text><line x1=\"290.0\" y1=\"52\" x2=\"290.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"290.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">3,500</text><line x1=\"160.0\" y1=\"55\" x2=\"160.0\" y2=\"65\" stroke=\"#C99A2E\" stroke-width=\"1.4\" stroke-dasharray=\"2,2\"/><text x=\"160.0\" y=\"50\" font-family=\"DM Sans,sans-serif\" font-size=\"10\" fill=\"#C99A2E\" text-anchor=\"middle\">3,450</text><circle cx=\"287.4\" cy=\"60\" r=\"6\" fill=\"#D55A3F\"/><text x=\"287.4\" y=\"42\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">3,499</text><line x1=\"287.4\" y1=\"90\" x2=\"290.0\" y2=\"90\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><polyline points=\"285.0,86 290.0,90 285.0,94\" fill=\"none\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><text x=\"288.7\" y=\"108\" font-family=\"DM Sans,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">rounds to 3,500</text></svg>", "t": "Round 3,499 to the nearest 100.", "rule": "Look at the tens digit \u2014 not the ones.", "work": ["3,499: tens digit is 9.", "9 is 5 or more, so round UP.", "3,400 \u2192 3,500.", "3,499 rounds up to 3,500.", "Answer: 3,500"]}, {"id": 8, "sec": "B", "a": 1800, "fig": "<svg viewBox=\"0 0 320 130\" width=\"320\" role=\"img\" aria-label=\"A number line showing 1750 between 1700 and 1800\"><line x1=\"22\" y1=\"60\" x2=\"298\" y2=\"60\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,55 22,60 28,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,55 298,60 292,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"52\" x2=\"30.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"30.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">1,700</text><line x1=\"290.0\" y1=\"52\" x2=\"290.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"290.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">1,800</text><line x1=\"160.0\" y1=\"55\" x2=\"160.0\" y2=\"65\" stroke=\"#C99A2E\" stroke-width=\"1.4\" stroke-dasharray=\"2,2\"/><text x=\"160.0\" y=\"50\" font-family=\"DM Sans,sans-serif\" font-size=\"10\" fill=\"#C99A2E\" text-anchor=\"middle\">1,750</text><circle cx=\"160.0\" cy=\"60\" r=\"6\" fill=\"#D55A3F\"/><text x=\"160.0\" y=\"42\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">1,750</text><line x1=\"160.0\" y1=\"90\" x2=\"290.0\" y2=\"90\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><polyline points=\"285.0,86 290.0,90 285.0,94\" fill=\"none\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><text x=\"225.0\" y=\"108\" font-family=\"DM Sans,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">rounds to 1,800</text></svg>", "t": "Round 1,750 to the nearest 100.", "rule": "Tens digit exactly 5 \u2192 round UP (halfway rule).", "work": ["1,750: tens digit is exactly 5.", "1,750 is halfway between 1,700 and 1,800.", "Halfway rounds UP.", "1,750 rounds up to 1,800.", "Answer: 1,800"]}, {"id": 9, "sec": "C", "a": 2000, "fig": "<svg viewBox=\"0 0 320 130\" width=\"320\" role=\"img\" aria-label=\"A number line showing 1758 between 1000 and 2000\"><line x1=\"22\" y1=\"60\" x2=\"298\" y2=\"60\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,55 22,60 28,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,55 298,60 292,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"52\" x2=\"30.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"30.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">1,000</text><line x1=\"290.0\" y1=\"52\" x2=\"290.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"290.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">2,000</text><line x1=\"160.0\" y1=\"55\" x2=\"160.0\" y2=\"65\" stroke=\"#C99A2E\" stroke-width=\"1.4\" stroke-dasharray=\"2,2\"/><text x=\"160.0\" y=\"50\" font-family=\"DM Sans,sans-serif\" font-size=\"10\" fill=\"#C99A2E\" text-anchor=\"middle\">1,500</text><circle cx=\"227.1\" cy=\"60\" r=\"6\" fill=\"#D55A3F\"/><text x=\"227.1\" y=\"42\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">1,758</text><line x1=\"227.1\" y1=\"90\" x2=\"290.0\" y2=\"90\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><polyline points=\"285.0,86 290.0,90 285.0,94\" fill=\"none\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><text x=\"258.5\" y=\"108\" font-family=\"DM Sans,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">rounds to 2,000</text></svg>", "t": "Round 1,758 to the nearest 1000.", "rule": "To round to the nearest 1000, look at the HUNDREDS digit.", "work": ["1,758: hundreds digit is 7.", "7 is 5 or more, so round UP.", "1,000 \u2192 2,000.", "1,758 rounds up to 2,000.", "Answer: 2,000"]}, {"id": 10, "sec": "C", "a": 4000, "fig": "<svg viewBox=\"0 0 320 130\" width=\"320\" role=\"img\" aria-label=\"A number line showing 4321 between 4000 and 5000\"><line x1=\"22\" y1=\"60\" x2=\"298\" y2=\"60\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,55 22,60 28,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,55 298,60 292,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"52\" x2=\"30.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"30.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">4,000</text><line x1=\"290.0\" y1=\"52\" x2=\"290.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"290.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">5,000</text><line x1=\"160.0\" y1=\"55\" x2=\"160.0\" y2=\"65\" stroke=\"#C99A2E\" stroke-width=\"1.4\" stroke-dasharray=\"2,2\"/><text x=\"160.0\" y=\"50\" font-family=\"DM Sans,sans-serif\" font-size=\"10\" fill=\"#C99A2E\" text-anchor=\"middle\">4,500</text><circle cx=\"113.5\" cy=\"60\" r=\"6\" fill=\"#D55A3F\"/><text x=\"113.5\" y=\"42\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">4,321</text><line x1=\"113.5\" y1=\"90\" x2=\"30.0\" y2=\"90\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><polyline points=\"35.0,86 30.0,90 35.0,94\" fill=\"none\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><text x=\"71.7\" y=\"108\" font-family=\"DM Sans,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">rounds to 4,000</text></svg>", "t": "Round 4,321 to the nearest 1000.", "rule": "Hundreds digit less than 5 \u2192 round DOWN.", "work": ["4,321: hundreds digit is 3.", "3 is less than 5, so round DOWN.", "Stay at 4,000.", "4,321 rounds down to 4,000.", "Answer: 4,000"]}, {"id": 11, "sec": "C", "a": 9000, "fig": "<svg viewBox=\"0 0 320 130\" width=\"320\" role=\"img\" aria-label=\"A number line showing 8500 between 8000 and 9000\"><line x1=\"22\" y1=\"60\" x2=\"298\" y2=\"60\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,55 22,60 28,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,55 298,60 292,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"52\" x2=\"30.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"30.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">8,000</text><line x1=\"290.0\" y1=\"52\" x2=\"290.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"290.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">9,000</text><line x1=\"160.0\" y1=\"55\" x2=\"160.0\" y2=\"65\" stroke=\"#C99A2E\" stroke-width=\"1.4\" stroke-dasharray=\"2,2\"/><text x=\"160.0\" y=\"50\" font-family=\"DM Sans,sans-serif\" font-size=\"10\" fill=\"#C99A2E\" text-anchor=\"middle\">8,500</text><circle cx=\"160.0\" cy=\"60\" r=\"6\" fill=\"#D55A3F\"/><text x=\"160.0\" y=\"42\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">8,500</text><line x1=\"160.0\" y1=\"90\" x2=\"290.0\" y2=\"90\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><polyline points=\"285.0,86 290.0,90 285.0,94\" fill=\"none\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><text x=\"225.0\" y=\"108\" font-family=\"DM Sans,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">rounds to 9,000</text></svg>", "t": "Round 8,500 to the nearest 1000.", "rule": "Hundreds digit exactly 5 \u2192 halfway \u2192 round UP.", "work": ["8,500: hundreds digit is exactly 5.", "That is halfway between 8,000 and 9,000.", "Halfway rounds UP.", "8,500 rounds up to 9,000.", "Answer: 9,000"]}, {"id": 12, "sec": "C", "a": 10000, "fig": "<svg viewBox=\"0 0 320 130\" width=\"320\" role=\"img\" aria-label=\"A number line showing 9950 between 9900 and 10000\"><line x1=\"22\" y1=\"60\" x2=\"298\" y2=\"60\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,55 22,60 28,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,55 298,60 292,65\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"52\" x2=\"30.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"30.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">9,900</text><line x1=\"290.0\" y1=\"52\" x2=\"290.0\" y2=\"68\" stroke=\"#242F3A\" stroke-width=\"1.8\"/><text x=\"290.0\" y=\"84\" font-family=\"DM Sans,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">10,000</text><line x1=\"160.0\" y1=\"55\" x2=\"160.0\" y2=\"65\" stroke=\"#C99A2E\" stroke-width=\"1.4\" stroke-dasharray=\"2,2\"/><text x=\"160.0\" y=\"50\" font-family=\"DM Sans,sans-serif\" font-size=\"10\" fill=\"#C99A2E\" text-anchor=\"middle\">9,950</text><circle cx=\"160.0\" cy=\"60\" r=\"6\" fill=\"#D55A3F\"/><text x=\"160.0\" y=\"42\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">9,950</text><line x1=\"160.0\" y1=\"90\" x2=\"290.0\" y2=\"90\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><polyline points=\"285.0,86 290.0,90 285.0,94\" fill=\"none\" stroke=\"#D55A3F\" stroke-width=\"1.8\"/><text x=\"225.0\" y=\"108\" font-family=\"DM Sans,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">rounds to 10,000</text></svg>", "t": "Round 9,950 to the nearest 100.", "rule": "Halfway rule: 5 rounds up. When rounding up crosses a big number, keep going up as needed.", "work": ["9,950: tens digit is 5.", "Halfway, so round UP.", "9,900 \u2192 10,000 (not just 9,000 up to 10,000, but the whole number carries).", "9,950 rounds up to 10,000.", "Answer: 10,000"]}];
+
+function normNum(v){if(v==null)return null;v=String(v).replace(/[^0-9.\-]/g,'');if(v===''||v==='-'||v==='.')return null;var n=parseFloat(v);return isNaN(n)?null:n;}
+function qHTML(q){
+  var workItems = q.work.map(function(w){return '<li>'+w+'</li>';}).join('');
+  return '<div class="q" id="q-'+q.id+'">' +
+    '<div class="qhead"><span class="qn">Q'+q.id+'.</span><span class="qtext">'+q.t+'</span></div>' +
+    '<div class="qfig">'+q.fig+'</div>' +
+    '<div class="ansrow"><label for="a-'+q.id+'">Answer =</label><input class="ans" id="a-'+q.id+'" type="text" inputmode="'+(q.at==='text'?'text':'decimal')+'" autocomplete="off" data-q="'+q.id+'"><span class="unit"></span><span class="marks">(1 mark)</span></div>' +
+    '<div class="verdict" id="v-'+q.id+'"></div>' +
+    '<button class="show-how" type="button" onclick="toggleWork(this)">Show me how step by step</button>' +
+    '<div class="work" id="w-'+q.id+'">' +
+      '<div class="pill"><b>Fact used:</b> '+q.rule+'</div>' +
+      '<ol>'+workItems+'</ol>' +
+    '</div></div>';
+}
+['A','B','C'].forEach(function(sec){
+  document.getElementById('sec'+sec).innerHTML = QS.filter(function(q){return q.sec===sec;}).map(qHTML).join('');
+});
+function toggleWork(btn){
+  var w=btn.nextElementSibling;
+  var open=w.classList.toggle('show');
+  btn.textContent=open?'Hide the steps':'Show me how step by step';
+}
+function markAll(){
+  var earned=0,total=QS.length;
+  var normText=function(s){return String(s).toLowerCase().replace(/[,\-]/g,' ').replace(/\s+/g,' ').trim();};
+  QS.forEach(function(q){
+    var inp=document.getElementById('a-'+q.id), verdict=document.getElementById('v-'+q.id), work=document.getElementById('w-'+q.id);
+    inp.disabled=true;
+    var raw=inp.value;
+    var attempted=raw.trim()!=='';
+    var ok;
+    if (q.at==='text'){
+      ok = attempted && normText(raw)===normText(q.a);
+    } else {
+      var v=normNum(raw);
+      ok = v!==null && Math.abs(v-q.a)<1e-9;
+    }
+    if(ok){earned++;verdict.className='verdict ok';verdict.textContent='\u2713 Correct \u2014 well done.';work.classList.remove('show');}
+    else{
+      verdict.className='verdict no';
+      verdict.textContent = attempted ? ('Not quite. The answer is '+q.a+'. Look at the steps below.') : ('\u2014 Not answered. The answer is '+q.a+'. Look at the steps below.');
+      work.classList.add('show');
+    }
+  });
+  var scoreEl=document.getElementById('score'); if(scoreEl) scoreEl.textContent = earned + ' / ' + total;
+  var btn = document.querySelector('.markbar .btn') || document.querySelector('.markbar-inner .btn') || document.querySelector('.markbar button');
+  if (btn) btn.textContent='Marked';
+}
+document.getElementById('markbtn').onclick=markAll;
+document.getElementById('resetbtn').onclick=function(){location.reload();};
+</script>
+<!-- IMPROVETUITION:CONTENT-END -->
+</body></html>
