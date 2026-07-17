@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiplying & Dividing Fractions | Improve Tuition</title>
+<meta name="description" content="Fractions without a calculator: cancel down to simplest form, switch between mixed numbers and improper fractions, and multiply and divide step by step. Interactive worked steppers and graded practice.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#242F3A;--coral:#D55A3F;--coral-hover:#B14526;--gold:#C99A2E;--gold-soft:#D6B35A;--grey:#5A5A5A;--grey-soft:#8A8A8A;--paper:#F7F5F2;--cream:#E8E3DA;--white:#FFFFFF;--rule:#D8D2C7;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--grey);font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px 60px}
+h1,h2,h3,.fr{font-family:'Fraunces',Georgia,serif}
+.topbar{background:var(--navy);color:var(--gold-soft);font:700 .66rem/1 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:7px 10px}
+.hero{background:var(--navy);border-bottom:4px solid var(--gold);padding:26px 16px 24px}
+.hero .in{max-width:640px;margin:0 auto}
+.eyebrow{font:700 .72rem/1 'DM Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hero h1{color:#fff;font-size:clamp(1.6rem,5.6vw,2.2rem);line-height:1.1;margin:9px 0 6px;font-weight:700}
+.hero .sub{color:var(--gold-soft);font-style:italic;font-size:1.02rem;margin:0 0 8px}
+.hero .meta{color:#b9bfc6;font-size:.82rem;margin:0}
+.card{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:18px 16px;margin:18px 0}
+h2{color:var(--navy);font-size:1.35rem;margin:4px 0 8px}
+h3{color:var(--navy);font-size:1.12rem;margin:20px 0 4px}
+.lead{margin:0 0 12px}
+.lead a{color:var(--coral-hover);font-weight:600}
+.keyidea{background:var(--cream);border-left:4px solid var(--gold);border-radius:6px;padding:11px 14px;margin:12px 0;font-size:.96rem}
+.keyidea b,.lead b{color:var(--navy)}
+.miscon{background:#fbeeea;border-left:4px solid var(--coral);border-radius:6px;padding:11px 14px;margin:12px 0;font-size:.92rem}
+.miscon .lab{font:700 .64rem/1 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-hover);display:block;margin-bottom:3px}
+/* fraction rendering */
+.frac{display:inline-flex;flex-direction:column;text-align:center;vertical-align:middle;margin:0 3px;line-height:1.05}
+.frac .n{border-bottom:2px solid currentColor;padding:0 5px}
+.frac .d{padding:0 5px}
+.mixnum{vertical-align:middle;margin-right:1px;font-weight:700}
+/* stepper shell */
+.cstep{border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin:14px 0}
+.cs-head{background:var(--navy);padding:10px 14px}
+.cs-eyebrow{display:block;font:700 .66rem/1 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft)}
+.cs-q{display:block;font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:1.3rem;margin-top:4px}
+.fr-stage{padding:14px 16px 4px;font-family:'Fraunces',serif;font-size:1.5rem;color:var(--navy)}
+.fr-line{padding:5px 0;display:flex;align-items:center;flex-wrap:wrap;gap:2px}
+.fr-line.fr-ans{color:var(--coral)}
+.cs-work{min-height:2.6em;padding:7px 16px 2px;font-size:.9rem;color:var(--navy);line-height:1.45}
+.cs-work b{color:var(--navy)}
+.cs-check{display:block;margin-top:4px;color:var(--coral-hover);font-weight:600;font-size:.86rem}
+.cs-controls{display:flex;gap:8px;padding:10px 16px 14px}
+.cs-btn{font-family:'DM Sans',sans-serif;font-weight:700;font-size:.86rem;padding:9px 14px;min-height:44px;border-radius:8px;border:1.5px solid var(--gold);background:#fff;color:var(--coral-hover);cursor:pointer}
+.cs-btn:hover:not(:disabled){background:var(--gold);color:#fff;border-color:var(--gold)}
+.cs-btn:disabled{opacity:.4;cursor:default}
+.cs-reset{margin-left:auto;border-color:var(--rule);color:var(--grey);background:transparent}
+.wex{background:#faf6ec;border:1px solid var(--rule);border-radius:8px;padding:12px 14px;margin:12px 0;font-size:1.4rem;font-family:'Fraunces',serif;color:var(--navy);text-align:center}
+.wex .cap{display:block;font-family:'DM Sans',sans-serif;font-size:.82rem;color:var(--grey);margin-top:6px;font-weight:500}
+/* sections */
+.divider{background:var(--navy);border-radius:12px;padding:16px;margin:24px 0 6px;color:#fff}
+.divider .lo-eyebrow{font:700 .68rem/1 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.divider .title{font-family:'Fraunces',serif;font-weight:700;font-size:1.18rem;margin:6px 0 2px;color:#fff}
+.divider .lo{font-style:italic;color:#dfe3e8;margin:6px 0 8px;font-size:.96rem}
+.divider .sc-lab{font:700 .64rem/1 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft);display:block;margin-bottom:3px}
+.divider ul{margin:0;padding-left:18px;color:#dfe3e8;font-size:.9rem}
+.divider li{margin:2px 0}
+/* questions */
+.q{background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:14px;margin:10px 0}
+.q .qhead{display:flex;align-items:baseline;gap:8px}
+.q .qn{font-family:'Fraunces',serif;font-weight:700;color:var(--coral)}
+.q .qtext{color:var(--navy);font-weight:500}
+.q .ansrow{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.q .ansrow label{font-size:.9rem;color:var(--grey)}
+.q .ans{font-family:'Fraunces',serif;font-size:1.05rem;width:150px;max-width:55vw;padding:8px 10px;border:1.5px solid var(--rule);border-radius:7px;background:var(--paper)}
+.q .hint{font-size:.78rem;color:var(--grey-soft);margin-top:4px;width:100%}
+.q .marks{font-style:italic;color:var(--grey-soft);font-size:.84rem}
+.verdict{margin-top:8px;font-weight:700;font-size:.92rem;min-height:1em}
+.verdict.ok{color:#2e7d32}.verdict.no{color:var(--coral-hover)}
+.show-how{display:inline-flex;align-items:center;gap:6px;margin-top:9px;padding:7px 13px;min-height:40px;background:transparent;border:1.5px dashed var(--gold);color:var(--coral-hover);border-radius:7px;font:600 .8rem/1 'DM Sans',sans-serif;cursor:pointer}
+.show-how:hover{background:rgba(201,154,46,.09)}
+.work{display:none;margin-top:9px;padding:11px 13px;background:var(--cream);border-radius:7px;font-size:.9rem;line-height:1.5}
+.work.show{display:block}
+.work b{color:var(--navy)}.work .ans-final{color:var(--coral-hover);font-weight:700}
+.markbar{position:sticky;bottom:0;background:var(--navy);margin:22px -16px 0;padding:12px 16px;display:flex;align-items:center;gap:12px;border-top:3px solid var(--gold)}
+.markbtn{background:var(--coral);color:#fff;border:none;font-family:'Fraunces',serif;font-weight:700;font-size:1rem;padding:12px 22px;border-radius:9px;cursor:pointer}
+.markbtn:hover{background:var(--coral-hover)}
+.resetbtn{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);font-weight:700;padding:11px 18px;border-radius:9px;cursor:pointer}
+.score{color:#fff;font-family:'Fraunces',serif;font-weight:700;margin-left:auto;font-size:1rem}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--grey-soft);text-align:center;line-height:1.6}
+.foot b{color:var(--navy)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<style>
+/* Responsive fixes — added by responsive_fix.py */
+html, body { overflow-x: hidden; max-width: 100vw; }
+svg { max-width: 100%; height: auto; display: block; }
+.qfig, .figbox { max-width: 100%; overflow: hidden; }
+.figbox svg, .qfig svg { margin: 0 auto; }
+table.ak { table-layout: fixed; width: 100%; }
+table.ak td, table.ak th { word-break: break-word; overflow-wrap: anywhere; padding: 6px; font-size: 12px; }
+.q .qhead .qtext, .q .qprompt { overflow-wrap: anywhere; }
+.answer-line, .mistake { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<!-- IMPROVETUITION:CONTENT-START -->
+<div class="topbar">Improve Tuition · Non-Calculator Maths · Year 5–9</div>
+<div class="hero"><div class="in">
+  <span class="eyebrow">Lesson · Practice · Steps</span>
+  <h1>Multiplying &amp; Dividing Fractions</h1>
+  <p class="sub">Cancel down, switch between mixed and improper, then multiply and divide — all by hand.</p>
+  <p class="meta">20 questions · 4 sections · three interactive steppers · no time pressure</p>
+</div></div>
+
+<div class="wrap">
+
+<div class="card">
+  <h2>What's really happening</h2>
+  <p class="lead">Fractions are friendly without a calculator if you keep two habits: <b>always simplify at the end</b>, and <b>turn any mixed number into an improper fraction before you multiply or divide</b>. Get those two right and the rest is just times tables.</p>
+
+  <h3>1 · Cancelling down (simplifying)</h3>
+  <p class="lead">Divide the <b>top (numerator)</b> and <b>bottom (denominator)</b> by the same number, again and again, until they share no common factor. Tap through it:</p>
+  <div class="cstep" id="fsimp">
+    <div class="cs-head"><span class="cs-eyebrow">Cancelling down</span><span class="cs-q">Simplify 24/36</span></div>
+    <div class="fr-stage"></div>
+    <div class="cs-work"></div>
+    <div class="cs-controls"><button class="cs-btn cs-next" type="button">Next step ▸</button><button class="cs-btn cs-reset" type="button">Reset</button></div>
+  </div>
+
+  <h3>2 · Mixed numbers ↔ improper fractions</h3>
+  <p class="lead">A <b>mixed number</b> has a whole part and a fraction part; an <b>improper fraction</b> has a top bigger than its bottom. You must be able to swap between them.</p>
+  <div class="wex">
+    <span class="mixnum">4</span><span class="frac"><span class="n">2</span><span class="d">3</span></span> = <span class="frac"><span class="n">(4×3)+2</span><span class="d">3</span></span> = <span class="frac"><span class="n">14</span><span class="d">3</span></span>
+    <span class="cap">Mixed → improper: whole × bottom, add the top, keep the bottom.</span>
+  </div>
+  <div class="wex">
+    <span class="frac"><span class="n">23</span><span class="d">4</span></span> = 23 ÷ 4 = 5 r 3 = <span class="mixnum">5</span><span class="frac"><span class="n">3</span><span class="d">4</span></span>
+    <span class="cap">Improper → mixed: divide top by bottom — the whole is the answer, the remainder goes on top. (That's <a href="/library/dividing-whole-numbers-grade-1-lesson/">short division</a>.)</span>
+  </div>
+
+  <h3>3 · Multiplying fractions</h3>
+  <p class="lead">Multiply the tops together and the bottoms together — then simplify. Tap through it:</p>
+  <div class="cstep" id="fmul">
+    <div class="cs-head"><span class="cs-eyebrow">Multiplying fractions</span><span class="cs-q">2/3 × 6/7</span></div>
+    <div class="fr-stage"></div>
+    <div class="cs-work"></div>
+    <div class="cs-controls"><button class="cs-btn cs-next" type="button">Next step ▸</button><button class="cs-btn cs-reset" type="button">Reset</button></div>
+  </div>
+
+  <h3>4 · Dividing fractions</h3>
+  <p class="lead">Keep the first, <b>flip</b> the second, <b>change</b> ÷ to × — “keep, flip, change”. With mixed numbers, convert first. Tap through it:</p>
+  <div class="cstep" id="fdiv">
+    <div class="cs-head"><span class="cs-eyebrow">Dividing fractions · with mixed numbers</span><span class="cs-q">1½ ÷ 2¼</span></div>
+    <div class="fr-stage"></div>
+    <div class="cs-work"></div>
+    <div class="cs-controls"><button class="cs-btn cs-next" type="button">Next step ▸</button><button class="cs-btn cs-reset" type="button">Reset</button></div>
+  </div>
+  <div class="miscon"><span class="lab">Remember</span>When multiplying or dividing <b>mixed numbers</b>, turn them into improper fractions <i>first</i>. And you only “flip” for division — never for multiplication.</div>
+</div>
+
+<!-- SECTION A -->
+<div class="divider">
+  <span class="lo-eyebrow">Learning Objective 1 · Year 5–6</span>
+  <div class="title">Section A · Simplifying</div>
+  <div class="lo">Cancel a fraction down to its simplest form.</div>
+  <span class="sc-lab">Success criteria — I can:</span>
+  <ul><li>find a common factor of top and bottom</li><li>divide both by it, and repeat</li><li>stop when they share no factor</li></ul>
+</div>
+<div id="secA"></div>
+
+<!-- SECTION B -->
+<div class="divider">
+  <span class="lo-eyebrow">Learning Objective 2 · Year 5–7</span>
+  <div class="title">Section B · Mixed ↔ improper</div>
+  <div class="lo">Convert between mixed numbers and improper fractions.</div>
+  <span class="sc-lab">Success criteria — I can:</span>
+  <ul><li>turn a mixed number into an improper fraction</li><li>turn an improper fraction into a mixed number</li><li>use division to find the whole part and remainder</li></ul>
+</div>
+<div id="secB"></div>
+
+<!-- SECTION C -->
+<div class="divider">
+  <span class="lo-eyebrow">Learning Objective 3 · Year 6–8</span>
+  <div class="title">Section C · Multiplying</div>
+  <div class="lo">Multiply fractions and give the answer in its simplest form.</div>
+  <span class="sc-lab">Success criteria — I can:</span>
+  <ul><li>multiply the numerators and the denominators</li><li>simplify the result fully</li></ul>
+</div>
+<div id="secC"></div>
+
+<!-- SECTION D -->
+<div class="divider">
+  <span class="lo-eyebrow">Learning Objective 4 · Year 6–9</span>
+  <div class="title">Section D · Dividing</div>
+  <div class="lo">Divide fractions and mixed numbers using keep–flip–change.</div>
+  <span class="sc-lab">Success criteria — I can:</span>
+  <ul><li>convert mixed numbers to improper fractions first</li><li>flip the second fraction and multiply</li><li>simplify the result fully</li></ul>
+</div>
+<div id="secD"></div>
+
+<div class="markbar">
+  <button class="markbtn" id="markbtn" type="button">Mark My Work</button>
+  <button class="resetbtn" id="resetbtn" type="button">Reset</button>
+  <span class="score" id="score">/ 20</span>
+</div>
+
+<div class="foot">
+  <b>Improve Tuition</b> · George Street, Batley, West Yorkshire WF17 5AR · improvetuition.org<br>
+  Teacher‑led tuition since 2007. We are committed to safeguarding and promoting the welfare of every child in our care.
+</div>
+
+</div>
+
+<script>
+function F(n,d){return '<span class="frac"><span class="n">'+n+'</span><span class="d">'+d+'</span></span>';}
+function MX(w,n,d){return '<span class="mixnum">'+w+'</span>'+F(n,d);}
+
+/* ===== fraction working stepper (reveals stages on tap) ===== */
+function setupFracSteps(id, stages){
+  var root=document.getElementById(id), stage=root.querySelector('.fr-stage'), work=root.querySelector('.cs-work');
+  var next=root.querySelector('.cs-next'), reset=root.querySelector('.cs-reset');
+  stage.innerHTML=''; next.disabled=false; next.textContent='Next step ▸';
+  function render(idx){
+    var d=document.createElement('div'); d.className='fr-line'+(idx===stages.length-1?' fr-ans':'');
+    d.innerHTML=stages[idx].line; stage.appendChild(d);
+    work.innerHTML=stages[idx].note+(idx===stages.length-1&&stages[idx].check?'<span class="cs-check">'+stages[idx].check+'</span>':'');
+  }
+  render(0); var i=1;
+  next.onclick=function(){ if(i>=stages.length)return; render(i); i++; if(i>=stages.length)next.disabled=true; };
+  reset.onclick=function(){ setupFracSteps(id,stages); };
+}
+
+var simpStages=[
+ {line:F(24,36),note:'Find a number that divides into both 24 and 36.'},
+ {line:'= '+F(12,18),note:'Both divide by 2.'},
+ {line:'= '+F(6,9),note:'Divide by 2 again.'},
+ {line:'= '+F(2,3),note:'Divide by 3. Now 2 and 3 share no common factor.',check:'✓ Fully simplified: 24/36 = 2/3.'}
+];
+var mulStages=[
+ {line:F(2,3)+' &times; '+F(6,7),note:'Multiply the tops together, and the bottoms together.'},
+ {line:'= '+F('2×6','3×7'),note:'Tops: 2 × 6. Bottoms: 3 × 7.'},
+ {line:'= '+F(12,21),note:'That gives 12 over 21.'},
+ {line:'= '+F(4,7),note:'Both divide by 3, so simplify.',check:'✓ 2/3 × 6/7 = 4/7.'}
+];
+var divStages=[
+ {line:MX(1,1,2)+' &divide; '+MX(2,1,4),note:'Turn both mixed numbers into improper fractions first.'},
+ {line:'= '+F(3,2)+' &divide; '+F(9,4),note:'1½ = 3/2 and 2¼ = 9/4.'},
+ {line:'= '+F(3,2)+' &times; '+F(4,9),note:'Keep, flip, change: flip the second fraction and multiply.'},
+ {line:'= '+F(12,18),note:'Multiply across: 3 × 4 = 12 on top, 2 × 9 = 18 on the bottom.'},
+ {line:'= '+F(2,3),note:'Both divide by 6.',check:'✓ 1½ ÷ 2¼ = 2/3.'}
+];
+
+/* ===== Questions ===== */
+var QS=[
+ {id:1,sec:'A',kind:'frac',exp:[3,4],t:'Simplify 9/12.',w:'Divide top and bottom by 3: 9÷3=3, 12÷3=4 → <span class="ans-final">3/4</span>.'},
+ {id:2,sec:'A',kind:'frac',exp:[2,3],t:'Simplify 14/21.',w:'Both divide by 7: 14÷7=2, 21÷7=3 → <span class="ans-final">2/3</span>.'},
+ {id:3,sec:'A',kind:'frac',exp:[3,5],t:'Simplify 15/25.',w:'Both divide by 5: 15÷5=3, 25÷5=5 → <span class="ans-final">3/5</span>.'},
+ {id:4,sec:'A',kind:'frac',exp:[4,5],t:'Simplify 28/35.',w:'Both divide by 7: 28÷7=4, 35÷7=5 → <span class="ans-final">4/5</span>.'},
+ {id:5,sec:'A',kind:'frac',exp:[5,8],t:'Simplify 30/48.',w:'Both divide by 6: 30÷6=5, 48÷6=8 → <span class="ans-final">5/8</span>.'},
+ {id:6,sec:'B',kind:'frac',exp:[17,5],t:'Write 3 2/5 as an improper fraction.',w:'(3×5)+2 = 17, keep the 5 → <span class="ans-final">17/5</span>.'},
+ {id:7,sec:'B',kind:'frac',exp:[21,4],t:'Write 5 1/4 as an improper fraction.',w:'(5×4)+1 = 21, keep the 4 → <span class="ans-final">21/4</span>.'},
+ {id:8,sec:'B',kind:'frac',exp:[17,6],t:'Write 2 5/6 as an improper fraction.',w:'(2×6)+5 = 17, keep the 6 → <span class="ans-final">17/6</span>.'},
+ {id:9,sec:'B',kind:'mixed',exp:[4,5,6],t:'Write 29/6 as a mixed number.',w:'29 ÷ 6 = 4 remainder 5 → <span class="ans-final">4 5/6</span>.'},
+ {id:10,sec:'B',kind:'mixed',exp:[9,2,5],t:'Write 47/5 as a mixed number.',w:'47 ÷ 5 = 9 remainder 2 → <span class="ans-final">9 2/5</span>.'},
+ {id:11,sec:'C',kind:'frac',exp:[1,2],t:'Work out 2/3 × 3/4.',w:'Tops 2×3=6, bottoms 3×4=12 → 6/12, simplify → <span class="ans-final">1/2</span>.'},
+ {id:12,sec:'C',kind:'frac',exp:[1,6],t:'Work out 4/9 × 3/8.',w:'Tops 4×3=12, bottoms 9×8=72 → 12/72, simplify (÷12) → <span class="ans-final">1/6</span>.'},
+ {id:13,sec:'C',kind:'frac',exp:[3,4],t:'Work out 5/6 × 9/10.',w:'Tops 5×9=45, bottoms 6×10=60 → 45/60, simplify (÷15) → <span class="ans-final">3/4</span>.'},
+ {id:14,sec:'C',kind:'frac',exp:[4,9],t:'Work out 8/15 × 5/6.',w:'Tops 8×5=40, bottoms 15×6=90 → 40/90, simplify (÷10) → <span class="ans-final">4/9</span>.'},
+ {id:15,sec:'C',kind:'frac',exp:[4,5],t:'Work out 6/7 × 14/15.',w:'Tops 6×14=84, bottoms 7×15=105 → 84/105, simplify (÷21) → <span class="ans-final">4/5</span>.'},
+ {id:16,sec:'D',kind:'frac',exp:[2,3],t:'Work out 3/4 ÷ 9/8.',w:'Flip: 3/4 × 8/9 = 24/36, simplify → <span class="ans-final">2/3</span>.'},
+ {id:17,sec:'D',kind:'frac',exp:[1,2],t:'Work out 5/6 ÷ 5/3.',w:'Flip: 5/6 × 3/5 = 15/30, simplify → <span class="ans-final">1/2</span>.'},
+ {id:18,sec:'D',kind:'frac',exp:[3,4],t:'Work out 2/3 ÷ 8/9.',w:'Flip: 2/3 × 9/8 = 18/24, simplify → <span class="ans-final">3/4</span>.'},
+ {id:19,sec:'D',kind:'frac',exp:[1,2],t:'Work out 1 1/3 ÷ 2 2/3.',w:'Convert: 4/3 ÷ 8/3. Flip: 4/3 × 3/8 = 12/24, simplify → <span class="ans-final">1/2</span>.'},
+ {id:20,sec:'D',kind:'frac',exp:[2,3],t:'Work out 2 1/2 ÷ 3 3/4.',w:'Convert: 5/2 ÷ 15/4. Flip: 5/2 × 4/15 = 20/30, simplify → <span class="ans-final">2/3</span>.'}
+];
+function intsIn(v){return (String(v).match(/\d+/g)||[]).map(Number);}
+function qHTML(q){
+  var ph=(q.kind==='mixed')?'e.g. 4 5/6':'e.g. 3/4';
+  var hint=(q.kind==='mixed')?'Write it as “whole numerator/denominator”, e.g. 4 5/6.':'Give your answer as a fraction in its simplest form.';
+  return '<div class="q" id="q-'+q.id+'"><div class="qhead"><span class="qn">Q'+q.id+'.</span><span class="qtext">'+q.t+'</span></div>'+
+    '<div class="ansrow"><label for="a-'+q.id+'">Your answer:</label><input class="ans" id="a-'+q.id+'" type="text" autocomplete="off" placeholder="'+ph+'" data-q="'+q.id+'"><span class="marks">(1 mark)</span>'+
+    '<span class="hint">'+hint+'</span></div>'+
+    '<div class="verdict" id="v-'+q.id+'"></div>'+
+    '<button class="show-how" type="button" onclick="toggleWork(this)">➕ Show me how</button>'+
+    '<div class="work" id="w-'+q.id+'">'+q.w+'</div></div>';
+}
+['A','B','C','D'].forEach(function(sec){document.getElementById('sec'+sec).innerHTML=QS.filter(function(q){return q.sec===sec;}).map(qHTML).join('');});
+function toggleWork(btn){var w=btn.nextElementSibling;var open=w.classList.toggle('show');btn.innerHTML=open?'➖ Hide working':'➕ Show me how';}
+function markAll(){
+  var earned=0,total=QS.length;
+  QS.forEach(function(q){
+    var inp=document.getElementById('a-'+q.id), verdict=document.getElementById('v-'+q.id), work=document.getElementById('w-'+q.id);
+    inp.disabled=true; var attempted=inp.value.trim()!=='';
+    var a=intsIn(inp.value);
+    var ok=a.length===q.exp.length && q.exp.every(function(x,k){return a[k]===x;});
+    if(ok){earned++;verdict.className='verdict ok';verdict.textContent='✓ Correct';}
+    else{verdict.className='verdict no';verdict.textContent=(attempted?'✗ Not quite — try the working':'— Not attempted');work.classList.add('show');work.previousElementSibling.innerHTML='➖ Hide working';}
+  });
+  document.getElementById('score').textContent=earned+' / '+total;
+}
+document.getElementById('markbtn').onclick=markAll;
+document.getElementById('resetbtn').onclick=function(){location.reload();};
+
+setupFracSteps('fsimp',simpStages);
+setupFracSteps('fmul',mulStages);
+setupFracSteps('fdiv',divStages);
+</script>
+<!-- IMPROVETUITION:CONTENT-END -->
+<div id="footer-placeholder"></div>
+<script src="/assets/js/app.js"></script>
+</body>
+</html>
