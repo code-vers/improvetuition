@@ -1011,7 +1011,245 @@
             flex: 1;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
-            padding: 0.5rem 0 1.5rem;
+            padding: 18px 18px 28px;
+        }
+
+        /* ── Accordion card ── */
+        .acc {
+            background: var(--cream);
+            border: 1px solid transparent;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .acc.open {
+            border-color: var(--gold);
+        }
+
+        .acc-head {
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 15px 16px;
+        }
+
+        .acc.open .acc-head {
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .acc-ic {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--white);
+            flex: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .acc-ic svg {
+            stroke: var(--gold);
+        }
+
+        .acc-txt {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .acc-txt h3 {
+            font-family: var(--font-display);
+            color: var(--navy);
+            font-weight: 600;
+            font-size: 1.15rem;
+            line-height: 1.1;
+        }
+
+        .acc-txt p {
+            color: var(--grey);
+            font-size: .9rem;
+            line-height: 1.35;
+            margin-top: 4px;
+        }
+
+        .acc-chev {
+            flex: none;
+            color: var(--navy);
+            transition: transform .25s ease;
+        }
+
+        .acc.open .acc-chev {
+            transform: rotate(180deg);
+        }
+
+        .acc-panel {
+            display: none;
+            padding: 0 0 12px;
+        }
+
+        .acc.open .acc-panel {
+            display: block;
+        }
+
+        /* Section label */
+        .acc-sec-label {
+            font-family: var(--font-ui);
+            font-size: .72rem;
+            font-weight: 800;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: #6E685C;
+            padding: 6px 4px 12px;
+        }
+
+        .acc-sec-label.spaced {
+            padding-top: 22px;
+        }
+
+        /* Group label */
+        .acc-grp {
+            font-size: .69rem;
+            font-weight: 700;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: #4A5058;
+            line-height: 1.3;
+            margin-top: 24px;
+            padding: 6px 18px;
+            background: var(--paper);
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .acc-grp::before {
+            content: "";
+            width: 12px;
+            height: 1.5px;
+            background: var(--coral);
+            border-radius: 2px;
+            flex: none;
+            opacity: .9;
+        }
+
+        .acc-grp.first {
+            margin-top: 6px;
+        }
+
+        /* Sub links */
+        .acc-sub {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 14px 18px;
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-top: 1px solid rgba(216, 210, 199, .55);
+        }
+
+        .acc-panel>.acc-sub:first-child,
+        .acc-grp+.acc-sub {
+            border-top: none;
+        }
+
+        .acc-sub:active {
+            background: var(--cream);
+        }
+
+        .acc-sub .acc-arw {
+            color: var(--grey);
+            flex: none;
+        }
+
+        .acc-sub.active {
+            color: var(--coral);
+        }
+
+        .acc-sub.active .acc-arw {
+            color: var(--coral);
+        }
+
+        /* About block inside drawer */
+        .acc-about-label {
+            font-size: .75rem;
+            font-weight: 800;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--grey);
+            padding: 26px 4px 12px;
+            border-bottom: 1px solid var(--rule);
+            margin-bottom: 22px;
+        }
+
+        .acc-promise {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .acc-promise .a {
+            font-family: var(--font-display);
+            color: var(--navy);
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        .acc-promise .b {
+            font-family: var(--font-display);
+            font-style: italic;
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin-top: 4px;
+        }
+
+        .acc-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--coral);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 10px 22px rgba(213, 90, 63, .24);
+        }
+
+        .acc-cta:active {
+            background: var(--coral-hover);
+        }
+
+        .acc-phone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 22px 0 4px;
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+
+        .acc-phone svg {
+            stroke: var(--navy);
+        }
+
+        .acc-hours {
+            text-align: center;
+            color: var(--grey);
+            font-size: .9rem;
+            padding-bottom: 14px;
         }
 
         .drawer .section-label {
@@ -1515,142 +1753,151 @@
             </button>
         </div>
         <div class="drawer-body">
-            <p class="section-label">Tuition Options</p>
-            <div class="format-cards">
 
-                <div class="format-group is-open" data-format="centre">
-                    <button type="button" class="format-card" aria-expanded="true">
-                        <span class="format-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M12 2 L19 8.5 V20 a1 1 0 0 1-1 1 H6 a1 1 0 0 1-1-1 V8.5 Z" />
-                                <path d="M9 21 V13 H15 V21" />
-                            </svg></span>
-                        <span class="format-text"><span class="format-title">Batley Centre</span><span
-                                class="format-sub">In-person tuition at our Batley centre</span></span>
-                        <svg class="format-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M4 6 L8 10 L12 6" />
-                        </svg>
-                    </button>
-                    <ul class="format-subjects">
-                        <li><a href="/uk/maths/tutor-in/batley/index.html"><span>Maths Tutor</span><svg
-                                    class="menu-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li><a href="/uk/english/tutors-in/batley/index.html"><span>English Tutor</span><svg
-                                    class="menu-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li><a href="/uk/science/tutors-in/batley/index.html"><span>Science Tutor</span><svg
-                                    class="menu-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                    </ul>
+            <div class="acc-sec-label">Tuition Options</div>
+
+            <!-- Batley Centre -->
+            <div class="acc open" id="acc-batley">
+                <button class="acc-head" aria-expanded="false" aria-controls="p-batley">
+                    <span class="acc-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8"
+                            stroke-linejoin="round">
+                            <path d="M4 11l8-6 8 6" />
+                            <path d="M6 10v9h12v-9" />
+                            <path d="M10 19v-5h4v5" />
+                        </svg></span>
+                    <span class="acc-txt">
+                        <h3>Batley Centre</h3>
+                        <p>In-person tuition at our Batley centre</p>
+                    </span>
+                    <span class="acc-chev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg></span>
+                </button>
+                <div class="acc-panel" id="p-batley" role="region">
+                    <a class="acc-sub" href="/uk/maths/tutor-in/batley/"><span>Maths Tutor</span><span
+                            class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/english/tutors-in/batley/"><span>English Tutor</span><span
+                            class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/science/tutors-in/batley/"><span>Science Tutor</span><span
+                            class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/biology/tutor-in/batley/"><span>Biology Tutor</span><span
+                            class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/chemistry/tutor-in/batley/"><span>Chemistry Tutor</span><span
+                            class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/physics/tutor-in/batley/"><span>Physics Tutor</span><span
+                            class="acc-arw">→</span></a>
                 </div>
-
-                <div class="format-group" data-format="online">
-                    <button type="button" class="format-card" aria-expanded="false">
-                        <span class="format-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <rect x="2" y="4" width="20" height="13" rx="1.5" />
-                                <line x1="8" y1="21" x2="16" y2="21" />
-                                <line x1="12" y1="17" x2="12" y2="21" />
-                            </svg></span>
-                        <span class="format-text"><span class="format-title">Online Tuition</span><span
-                                class="format-sub">Online tuition for families in the UK and abroad</span></span>
-                        <svg class="format-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M4 6 L8 10 L12 6" />
-                        </svg>
-                    </button>
-                    <ul class="format-subjects">
-                        <li><a href="/uk/online/maths-tutor/" class="is-active"><span>Online Maths Tutor</span><svg
-                                    class="menu-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li><a href="/uk/online/english-tutor/"><span>Online English
-                                    Tutor</span><svg class="menu-arrow" viewBox="0 0 16 16" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li><a href="/uk/online/science-tutor/"><span>Online Science
-                                    Tutor</span><svg class="menu-arrow" viewBox="0 0 16 16" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                    </ul>
-                </div>
-
-
-                <div class="format-group" data-format="exams">
-                    <button type="button" class="format-card" aria-expanded="false">
-                        <span class="format-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <rect x="2" y="4" width="20" height="13" rx="1.5" />
-                                <line x1="8" y1="21" x2="16" y2="21" />
-                                <line x1="12" y1="17" x2="12" y2="21" />
-                            </svg></span>
-                        <span class="format-text"><span class="format-title">Exams</span></span>
-                        <svg class="format-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M4 6 L8 10 L12 6" />
-                        </svg>
-                    </button>
-                    <ul class="format-subjects">
-                        <li class="format-subject-group-label">Primary &amp; Entrance Exams</li>
-                        <li><a href="/uk/sats-tutor/"><span>SATs</span><svg class="menu-arrow" viewBox="0 0 16 16"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li><a href="/uk/11-plus-tutor/" class="is-active"><span>11 Plus</span><svg class="menu-arrow"
-                                    viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li><a href="/heckmondwike-tutor/"><span>Heckmondwike Grammar</span><svg class="menu-arrow"
-                                    viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li class="format-subject-group-label">GCSE &amp; International Exams</li>
-                        <li><a href="/uk/gcse-tutors/"><span>GCSE</span><svg class="menu-arrow" viewBox="0 0 16 16"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li><a href="/uk/igcse-tutors/"><span>IGCSE</span><svg class="menu-arrow" viewBox="0 0 16 16"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li><a href="/uk/online/lb-tutors/"><span>IB</span><svg class="menu-arrow" viewBox="0 0 16 16"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li class="format-subject-group-label">Scottish SQA Exams</li>
-                        <li><a href="/uk/online/scottish-nationals/"><span>National 5</span><svg class="menu-arrow"
-                                    viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                        <li><a href="/uk/online/higher-tutor/"><span>Higher &amp; Advanced Higher</span><svg
-                                    class="menu-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-                                </svg></a></li>
-                    </ul>
-                </div>
-
             </div>
 
+            <!-- Online Tuition -->
+            <div class="acc" id="acc-online">
+                <button class="acc-head" aria-expanded="false" aria-controls="p-online">
+                    <span class="acc-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                            <rect x="3" y="4" width="18" height="12" rx="1.5" />
+                            <path d="M8 20h8M12 16v4" />
+                        </svg></span>
+                    <span class="acc-txt">
+                        <h3>Online Tuition</h3>
+                        <p>Online tuition for families in the UK and abroad</p>
+                    </span>
+                    <span class="acc-chev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg></span>
+                </button>
+                <div class="acc-panel" id="p-online" role="region">
+                    <a class="acc-sub" href="/uk/online/maths-tutor/"><span>Online Maths Tutor</span><span
+                            class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/online/english-tutor/"><span>Online English Tutor</span><span
+                            class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/online/science-tutor/"><span>Online Science Tutor</span><span
+                            class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/online/gcse-maths-10-11/"><span>Online GCSE Maths</span><span
+                            class="acc-arw">→</span></a>
+                </div>
+            </div>
+
+            <div class="acc-sec-label spaced">Exams</div>
+
+            <!-- Exams — England & Wales -->
+            <div class="acc" id="acc-ew">
+                <button class="acc-head" aria-expanded="true" aria-controls="p-ew">
+                    <span class="acc-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                            <rect x="5" y="3" width="14" height="18" rx="1.6" />
+                            <path d="M9 8h6M9 12h6M9 16h4" />
+                        </svg></span>
+                    <span class="acc-txt">
+                        <h3>England &amp; Wales</h3>
+                        <p>GCSE, 11+, SATs &amp; grammar entrance</p>
+                    </span>
+                    <span class="acc-chev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg></span>
+                </button>
+                <div class="acc-panel" id="p-ew" role="region">
+                    <a class="acc-sub" href="/uk/sats-tutor/"><span>SATs</span><span class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/11-plus-tutor/"><span>11 Plus</span><span class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/heckmondwike-tutor/"><span>Heckmondwike Grammar</span><span
+                            class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/gcse-tutors/"><span>GCSE</span><span class="acc-arw">→</span></a>
+                </div>
+            </div>
+
+            <!-- Exams — Scotland -->
+            <div class="acc" id="acc-sc">
+                <button class="acc-head" aria-expanded="false" aria-controls="p-sc">
+                    <span class="acc-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                            <rect x="5" y="3" width="14" height="18" rx="1.6" />
+                            <path d="M9 8h6M9 12h6M9 16h4" />
+                        </svg></span>
+                    <span class="acc-txt">
+                        <h3>Scotland</h3>
+                        <p>SQA National 5, Higher &amp; Advanced Higher</p>
+                    </span>
+                    <span class="acc-chev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg></span>
+                </button>
+                <div class="acc-panel" id="p-sc" role="region">
+                    <a class="acc-sub" href="/uk/online/scottish-nationals/"><span>National 5</span><span
+                            class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/online/higher-tutor/"><span>Higher &amp; Advanced Higher</span><span
+                            class="acc-arw">→</span></a>
+                </div>
+            </div>
+
+            <!-- Exams — International -->
+            <div class="acc" id="acc-int">
+                <button class="acc-head" aria-expanded="false" aria-controls="p-int">
+                    <span class="acc-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                            <rect x="5" y="3" width="14" height="18" rx="1.6" />
+                            <path d="M9 8h6M9 12h6M9 16h4" />
+                        </svg></span>
+                    <span class="acc-txt">
+                        <h3>International</h3>
+                        <p>IGCSE &amp; IB Diploma</p>
+                    </span>
+                    <span class="acc-chev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg></span>
+                </button>
+                <div class="acc-panel" id="p-int" role="region">
+                    <a class="acc-sub" href="/uk/igcse-tutors/"><span>IGCSE</span><span class="acc-arw">→</span></a>
+                    <p class="acc-grp first">IB Diploma — SL &amp; HL</p>
+                    <a class="acc-sub" href="/uk/online/lb-tutors/"><span>Maths AA (Analysis)</span><span
+                            class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/online/lb-tutors/"><span>Maths AI (Applications)</span><span
+                            class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/online/lb-tutors/"><span>Sciences</span><span
+                            class="acc-arw">→</span></a>
+                    <a class="acc-sub" href="/uk/online/lb-tutors/"><span>English</span><span
+                            class="acc-arw">→</span></a>
+                </div>
+            </div>
             <p class="section-label">About</p>
             <ul class="menu-list">
                 <li><a href="/about/"><span>About Improve Tuition</span><svg class="menu-arrow" viewBox="0 0 16 16"
@@ -1688,6 +1935,9 @@
                             <path d="M3 8 H13 M9 4 L13 8 L9 12" />
                         </svg></a></li>
             </ul>
+
+
+
 
         </div>
         <div class="drawer-foot">

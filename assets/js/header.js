@@ -254,7 +254,7 @@
         drawer.querySelectorAll('a[href^="#"]').forEach(function (a) {
             a.addEventListener('click', closeDrawer);
         });
-        // Tuition-options accordion (one open at a time).
+        // Tuition-options accordion (one open at a time) — old format-card style.
         drawer.querySelectorAll('.format-card').forEach(function (card) {
             card.addEventListener('click', function () {
                 var group = card.parentElement;
@@ -265,6 +265,14 @@
                     if (btn) btn.setAttribute('aria-expanded', 'false');
                 });
                 if (!isOpen) { group.classList.add('is-open'); card.setAttribute('aria-expanded', 'true'); }
+            });
+        });
+        // New accordion-style drawer menu (.acc-head buttons).
+        drawer.querySelectorAll('.acc-head').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var acc = btn.closest('.acc');
+                var open = acc.classList.toggle('open');
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
             });
         });
     }
