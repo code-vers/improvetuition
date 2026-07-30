@@ -2,6 +2,13 @@
 <html lang="en-GB">
 
 <head>
+    <link rel="preload" href="/header_with_phone.html" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="/assets/images/logo_3.webp" as="image" type="image/webp">
+    <style>
+        #header-placeholder, #header-phone-placeholder { min-height: 110px; }
+        @media(max-width: 768px) { #header-placeholder, #header-phone-placeholder { min-height: 100px; } }
+    </style>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Physics Tutor in Batley | GCSE & A Level Physics</title>
