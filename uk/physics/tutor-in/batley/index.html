@@ -1759,17 +1759,25 @@
 
         /* ── READING ZOOM — makes the text-size buttons actually work ──
        Scales the root font-size so every rem-based and clamp(rem)
-       value grows proportionally. Set on <html>, not <body>, so
+       value grows proportionally. Set on <html>, not <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>, so
        rem units (which resolve against the root) actually respond. */
         html {
             font-size: calc(100% * var(--reading-zoom, 1))
         }
     </style>
-</head>
+
+    <style>
+        /* Accessibility Overrides */
+        main p a { text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+        .skip-link { position: absolute; top: -100px; left: 1rem; z-index: 2000; padding: 0.7rem 1.1rem; background: #242F3A; color: #fff; text-decoration: none; border-radius: 4px; transition: top 150ms ease; }
+        .skip-link:focus { top: 1rem; outline: 3px solid #D55A3F; outline-offset: 2px; }
+    </style>
+    </head>
 
 <body>
 
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    
 
     <div id="header-phone-placeholder"></div>
 

@@ -263,12 +263,21 @@
             display: inline-block;
         }
     </style>
-</head>
+
+    <style>
+        /* Accessibility Overrides */
+        main p a { text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+        .skip-link { position: absolute; top: -100px; left: 1rem; z-index: 2000; padding: 0.7rem 1.1rem; background: #242F3A; color: #fff; text-decoration: none; border-radius: 4px; transition: top 150ms ease; }
+        .skip-link:focus { top: 1rem; outline: 3px solid #D55A3F; outline-offset: 2px; }
+    </style>
+    </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- ═══════════ HEADER ═══════════ -->
     <div id="header-placeholder"></div>
+    <main id="main-content">
 
     <!-- ═══════════ SAFEGUARDING PAGE ═══════════ -->
     <main class="safeguarding">
@@ -313,7 +322,8 @@
     </main>
 
     <!-- ═══════════ FOOTER ═══════════ -->
-    <div id="footer-placeholder"></div>
+        </main>
+<div id="footer-placeholder"></div>
 
     <script src="/assets/js/app.js" defer></script>
 
