@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ordering Numbers | Improve Tuition</title>
+<meta name="description" content="Grade 1 GCSE Ordering Numbers lesson - order 3+ numbers ascending or descending, use less-than and greater-than, place on a number line, order with negatives. Eight worked examples and twelve practice questions with step-by-step working. Built for dyslexic and autistic pupils.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#242F3A;--coral:#D55A3F;--coral-hover:#B14526;--gold:#C99A2E;--gold-soft:#D6B35A;--grey:#3F3F3F;--paper:#F7F5F2;--cream:#E8E3DA;--white:#FFFFFF;--rule:#D8D2C7;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--grey);font-family:'DM Sans',system-ui,sans-serif;font-size:17px;line-height:1.7;-webkit-text-size-adjust:100%}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px 80px}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--navy)}
+.topbar{background:var(--navy);color:var(--gold-soft);font:700 .68rem/1 'DM Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:8px 10px}
+.hero{background:var(--navy);border-bottom:4px solid var(--gold);padding:24px 16px 22px}
+.hero .in{max-width:640px;margin:0 auto}
+.eyebrow{font:700 .72rem/1 'DM Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hero h1{color:#fff;font-size:clamp(1.7rem,6vw,2.2rem);line-height:1.15;margin:9px 0 6px;font-weight:700}
+.hero .sub{color:var(--gold-soft);font-style:italic;font-size:1rem;margin:0}
+.card{background:var(--white);border:1px solid var(--rule);border-radius:14px;padding:18px 18px 20px;margin:18px 0}
+h2{font-size:1.45rem;margin:0 0 10px;line-height:1.2}
+h3{font-size:1.15rem;margin:20px 0 8px}
+.lead{margin:0 0 14px;font-size:1.02rem}
+.pill{display:inline-block;background:#faf6ec;border:1px solid var(--rule);border-left:3px solid var(--gold);border-radius:8px;padding:9px 13px;margin:6px 0;font-weight:600;color:var(--navy);font-size:.98rem}
+.figbox{margin:14px 0;display:flex;justify-content:center;background:#fff;padding:6px 0}
+.figbox svg{max-width:100%;height:auto}
+.steps{counter-reset:step;padding:0;margin:8px 0 0;list-style:none}
+.steps li{counter-increment:step;padding:10px 12px 10px 46px;margin:6px 0;background:#faf6ec;border:1px solid var(--rule);border-left:3px solid var(--gold);border-radius:8px;position:relative;font-size:1rem;line-height:1.55}
+.steps li::before{content:counter(step);position:absolute;left:10px;top:9px;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;font-family:'Fraunces',serif;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.steps li b{color:var(--navy)}
+.answer-line{margin-top:10px;background:rgba(213,90,63,.08);border:1px solid var(--coral);border-radius:8px;padding:10px 14px;color:var(--coral-hover);font-weight:700;font-size:1.1rem}
+.mistake{margin-top:12px;background:#fbeeea;border:1px solid #f0c2b6;border-left:3px solid var(--coral);border-radius:8px;padding:11px 13px;font-size:.96rem}
+.mistake b{color:var(--coral-hover);display:block;margin-bottom:3px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.facts{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0}
+.fact{background:#faf6ec;border:1px solid var(--rule);border-left:3px solid var(--gold);border-radius:8px;padding:11px 14px}
+.fact .nm{display:block;font:700 .7rem/1 'DM Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--coral-hover);margin-bottom:4px}
+.fact .vl{font-family:'Fraunces',serif;color:var(--navy);font-weight:700;font-size:1.04rem}
+.divider{background:var(--navy);border-radius:12px;padding:16px;margin:24px 0 6px;color:#fff}
+.divider .lo-eyebrow{font:700 .68rem/1 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.divider .title{font-family:'Fraunces',serif;font-weight:700;font-size:1.18rem;margin:6px 0 2px;color:#fff}
+.divider .lo{font-style:italic;color:#dfe3e8;margin:6px 0 0;font-size:.96rem}
+.q{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:16px;margin:12px 0}
+.q .qhead{margin-bottom:10px}
+.q .qn{font-family:'Fraunces',serif;font-weight:700;color:var(--coral);margin-right:6px;font-size:1.05rem}
+.q .qtext{color:var(--navy);font-weight:600;font-size:1rem}
+.q .qfig{margin:12px auto;display:flex;justify-content:center}
+.q .ansrow{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap}
+.q .ansrow label{font-size:1rem;color:var(--navy);font-weight:600}
+.q .ans{font-family:'Fraunces',serif;font-size:1.1rem;width:130px;max-width:55vw;padding:10px 12px;border:1.5px solid var(--rule);border-radius:8px;background:var(--paper)}
+.q .unit{font-size:1rem;color:var(--grey)}
+.q .marks{font-style:italic;color:var(--grey);font-size:.85rem}
+.verdict{margin-top:10px;font-weight:700;font-size:1rem;min-height:1em}
+.verdict.ok{color:#2e7d32}.verdict.no{color:var(--coral-hover)}
+.show-how{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:10px 14px;min-height:44px;background:transparent;border:1.5px dashed var(--gold);color:var(--coral-hover);border-radius:8px;font:600 .92rem/1 'DM Sans',sans-serif;cursor:pointer}
+.show-how:hover{background:rgba(201,154,46,.09)}
+.work{display:none;margin-top:10px;padding:14px;background:var(--cream);border-radius:10px;font-size:.98rem;line-height:1.7}
+.work.show{display:block}
+.work .pill{display:block;margin-bottom:8px}
+.work ol{padding-left:18px;margin:0}
+.work ol li{margin:4px 0}
+.markbar{position:sticky;bottom:0;background:var(--navy);margin:24px -16px 0;padding:14px 16px;display:flex;align-items:center;gap:12px;border-top:3px solid var(--gold)}
+.markbtn{background:var(--coral);color:#fff;border:none;font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;padding:13px 24px;border-radius:10px;cursor:pointer}
+.markbtn:hover{background:var(--coral-hover)}
+.resetbtn{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);font-weight:700;padding:12px 18px;border-radius:10px;cursor:pointer;font-size:.95rem}
+.score{color:#fff;font-family:'Fraunces',serif;font-weight:700;margin-left:auto;font-size:1.05rem}
+.foot{margin-top:30px;padding-top:18px;border-top:1px solid var(--rule);font-size:.85rem;color:var(--grey);text-align:center;line-height:1.6}
+.foot b{color:var(--navy)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "EducationalOrganization",
+        "LocalBusiness"
+      ],
+      "@id": "https://www.improvetuition.org/#organization",
+      "name": "Improve Tuition",
+      "url": "https://www.improvetuition.org/",
+      "telephone": "01924 506010",
+      "priceRange": "From \u00a314.50 per hour",
+      "foundingDate": "2007",
+      "description": "Improve Tuition provides teacher-led online Maths, English and Science tuition for children aged 5 to 18 in the UK and internationally, including British curriculum pupils, British schools overseas and expat families in Dubai, Singapore, Hong Kong and Spain.",
+      "founder": {
+        "@id": "https://www.improvetuition.org/#mr-g-dabhad"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "The Study Room, George Street",
+        "addressLocality": "Batley",
+        "addressRegion": "West Yorkshire",
+        "postalCode": "WF17 5AR",
+        "addressCountry": "GB"
+      },
+      "areaServed": [
+        "Batley",
+        "Dewsbury",
+        "Heckmondwike",
+        "West Yorkshire",
+        "United Kingdom",
+        "Dubai",
+        "Singapore",
+        "Hong Kong",
+        "Spain",
+        "British schools overseas",
+        "British curriculum schools",
+        "Expat families"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.improvetuition.org/#mr-g-dabhad",
+      "name": "Mr G Dabhad",
+      "jobTitle": "Founder and Lead Teacher",
+      "description": "Mr G Dabhad has QTS, BA Hons and 18 years' experience."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.improvetuition.org/#website",
+      "url": "https://www.improvetuition.org/",
+      "name": "Improve Tuition",
+      "publisher": {
+        "@id": "https://www.improvetuition.org/#organization"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://www.improvetuition.org/library/ordering-numbers-grade-1-lesson/#learning-resource",
+      "name": "Ordering Numbers Study Guide \u2014 Grade 1",
+      "url": "https://www.improvetuition.org/library/ordering-numbers-grade-1-lesson/",
+      "description": "A clear Grade 1 GCSE Maths study guide on ordering numbers \u2014 pick smallest, largest and middle from a list, use less-than and greater-than signs, place on a number line and order with negatives \u2014 with diagrams, worked examples and step-by-step practice. Built for dyslexic and autistic pupils.",
+      "learningResourceType": "Study guide",
+      "educationalLevel": "GCSE Grade 1",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      },
+      "inLanguage": "en-GB",
+      "about": [
+        "ordering numbers",
+        "ascending order",
+        "descending order",
+        "less than",
+        "greater than",
+        "number line",
+        "negative numbers",
+        "comparing numbers",
+        "GCSE Maths"
+      ],
+      "teaches": [
+        "How to order a list of whole numbers ascending or descending",
+        "How to use < and > correctly",
+        "How to place numbers on a number line",
+        "How to compare and order negative numbers"
+      ],
+      "provider": {
+        "@id": "https://www.improvetuition.org/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.improvetuition.org/library/ordering-numbers-grade-1-lesson/#webpage",
+      "url": "https://www.improvetuition.org/library/ordering-numbers-grade-1-lesson/",
+      "name": "Ordering Numbers \u2014 Lesson + Practice (Grade 1) | Improve Tuition",
+      "description": "A clear Grade 1 GCSE Maths study guide on ordering numbers \u2014 pick smallest, largest and middle from a list, use less-than and greater-than signs, place on a number line and order with negatives \u2014 with diagrams, worked examples and step-by-step practice. Built for dyslexic and autistic pupils.",
+      "inLanguage": "en-GB",
+      "isPartOf": {
+        "@id": "https://www.improvetuition.org/#website"
+      },
+      "about": {
+        "@id": "https://www.improvetuition.org/library/ordering-numbers-grade-1-lesson/#learning-resource"
+      },
+      "publisher": {
+        "@id": "https://www.improvetuition.org/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.improvetuition.org/library/ordering-numbers-grade-1-lesson/#faq",
+      "url": "https://www.improvetuition.org/library/ordering-numbers-grade-1-lesson/",
+      "isPartOf": {
+        "@id": "https://www.improvetuition.org/#website"
+      },
+      "about": {
+        "@id": "https://www.improvetuition.org/library/ordering-numbers-grade-1-lesson/#learning-resource"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does ascending order mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ascending order means smallest first, then getting bigger. For example, 12, 45, 78, 99 is in ascending order. Descending order is the opposite \u2014 biggest first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you order numbers with different numbers of digits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For whole numbers, the one with more digits is always bigger. So 999 is smaller than 1,002, because 999 has 3 digits and 1,002 has 4."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you use the < and > signs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The small end of the sign always points at the smaller number. So 3 < 5 means '3 is less than 5', and 8 > 2 means '8 is greater than 2'."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you order numbers on a number line?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Numbers get bigger as you move to the right, and smaller as you move to the left. Every number sits at exactly one spot on the line."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is -3 bigger than -8?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On the number line, -3 is closer to zero than -8. Bigger means further to the right, so -3 is bigger than -8, even though 8 is bigger than 3. Negatives flip the size rule."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a positive number always bigger than a negative number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Any positive number, even a small one like 1, is bigger than any negative number, even a large-looking one like -100. Positive numbers sit to the right of zero, negatives sit to the left."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+/* Responsive fixes — added by responsive_fix.py */
+html, body { overflow-x: hidden; max-width: 100vw; }
+svg { max-width: 100%; height: auto; display: block; }
+.qfig, .figbox { max-width: 100%; overflow: hidden; }
+.figbox svg, .qfig svg { margin: 0 auto; }
+table.ak { table-layout: fixed; width: 100%; }
+table.ak td, table.ak th { word-break: break-word; overflow-wrap: anywhere; padding: 6px; font-size: 12px; }
+.q .qhead .qtext, .q .qprompt { overflow-wrap: anywhere; }
+.answer-line, .mistake { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<!-- IMPROVETUITION:CONTENT-START -->
+<div class="topbar">Improve Tuition · Grade 1 · Ordering Numbers</div>
+<div class="hero"><div class="in">
+  <span class="eyebrow">Lesson · Practice · Steps</span>
+  <h1>Ordering Numbers</h1>
+  <p class="sub">Put numbers in the right order. Column by column, from the left.</p>
+</div></div>
+
+<div class="wrap">
+
+<div class="card">
+  <h2>The six facts you need</h2>
+  <p class="lead">Every ordering question uses one of these. You don't need to remember anything else.</p>
+  <div class="facts">
+    <div class="fact"><span class="nm">1 &middot; Ascending vs descending</span><span class="vl">Ascending = smallest first. Descending = biggest first.</span></div>
+    <div class="fact"><span class="nm">2 &middot; Compare from the LEFT</span><span class="vl">When digit counts match, compare column by column starting from the LEFT.</span></div>
+    <div class="fact"><span class="nm">3 &middot; More digits = bigger</span><span class="vl">For whole numbers, the one with more digits always wins.</span></div>
+    <div class="fact"><span class="nm">4 &middot; Number line</span><span class="vl">Numbers get BIGGER as you move RIGHT. Smaller as you move left.</span></div>
+    <div class="fact"><span class="nm">5 &middot; Negatives flip</span><span class="vl">For negatives, closer to zero = bigger. So &minus;3 is bigger than &minus;8.</span></div>
+    <div class="fact"><span class="nm">6 &middot; &lt; and &gt; signs</span><span class="vl">The small end of the sign always points at the smaller number: 3 &lt; 5.</span></div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 1 - pick the smallest</h2>
+  <p class="lead">From <b>432, 234 and 342</b>, pick the smallest.</p>
+  <div class="figbox"><svg viewBox="0 0 320 186" width="320" role="img" aria-label="A list of 3 numbers stacked vertically: 432, 234, 342"><rect x="95.0" y="12" width="130" height="44" rx="6" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="160.0" y="43.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#242F3A" text-anchor="middle">432</text><rect x="95.0" y="68" width="130" height="44" rx="6" fill="#E8E3DA" stroke="#D55A3F" stroke-width="2.4"/><text x="160.0" y="99.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#D55A3F" text-anchor="middle">234</text><rect x="95.0" y="124" width="130" height="44" rx="6" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="160.0" y="155.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#242F3A" text-anchor="middle">342</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Pick the smallest of 432, 234, 342.</li><li><b>The fact.</b> Compare column by column from the LEFT.</li><li>Hundreds column: 432 has 4, 234 has 2, 342 has 3.</li><li>2 is the smallest hundreds digit, so 234 wins.</li><li>So 234 &lt; 342 &lt; 432.</li></ol>
+  <div class="answer-line">Answer: 234</div>
+  <div class="mistake"><b>Watch out</b>Do NOT just look at the last digit. Start from the LEFT.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 2 - pick the largest</h2>
+  <p class="lead">From <b>1,360, 1,063 and 1,306</b>, pick the largest.</p>
+  <div class="figbox"><svg viewBox="0 0 320 186" width="320" role="img" aria-label="A list of 3 numbers stacked vertically: 1360, 1063, 1306"><rect x="95.0" y="12" width="130" height="44" rx="6" fill="#E8E3DA" stroke="#D55A3F" stroke-width="2.4"/><text x="160.0" y="43.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#D55A3F" text-anchor="middle">1,360</text><rect x="95.0" y="68" width="130" height="44" rx="6" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="160.0" y="99.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#242F3A" text-anchor="middle">1,063</text><rect x="95.0" y="124" width="130" height="44" rx="6" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="160.0" y="155.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#242F3A" text-anchor="middle">1,306</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Pick the largest of 1,360, 1,063 and 1,306.</li><li><b>The fact.</b> Same digit count &rArr; compare column by column from the LEFT.</li><li>Thousands: all 1. Same.</li><li>Hundreds: 3, 0, 3.</li><li>Two numbers tie on 3 hundreds &mdash; check tens: 6 vs 0.</li><li>1,360 wins: 6 tens beats 0 tens.</li><li>So 1,063 &lt; 1,306 &lt; 1,360.</li></ol>
+  <div class="answer-line">Answer: 1,360</div>
+  <div class="mistake"><b>Watch out</b>The middle digits matter. Don&rsquo;t rush past them.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 3 - different digit counts</h2>
+  <p class="lead">From <b>82, 728 and 90</b>, pick the smallest.</p>
+  <div class="figbox"><svg viewBox="0 0 320 186" width="320" role="img" aria-label="A list of 3 numbers stacked vertically: 82, 728, 90"><rect x="95.0" y="12" width="130" height="44" rx="6" fill="#E8E3DA" stroke="#D55A3F" stroke-width="2.4"/><text x="160.0" y="43.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#D55A3F" text-anchor="middle">82</text><rect x="95.0" y="68" width="130" height="44" rx="6" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="160.0" y="99.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#242F3A" text-anchor="middle">728</text><rect x="95.0" y="124" width="130" height="44" rx="6" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="160.0" y="155.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#242F3A" text-anchor="middle">90</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Pick the smallest of 82, 728 and 90.</li><li><b>The fact.</b> For whole numbers, more digits = bigger.</li><li>728 has 3 digits.</li><li>82 and 90 have 2 digits.</li><li>Both 2-digit numbers are smaller than 728.</li><li>Between 82 and 90: 8 tens vs 9 tens. 82 wins.</li><li>So 82 &lt; 90 &lt; 728.</li></ol>
+  <div class="answer-line">Answer: 82</div>
+  <div class="mistake"><b>Watch out</b>Don&rsquo;t be fooled by the digits. 728 starts with 7 but is bigger than 90.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 4 - pick the middle</h2>
+  <p class="lead">From <b>503, 530 and 305</b>, pick the middle number.</p>
+  <div class="figbox"><svg viewBox="0 0 320 186" width="320" role="img" aria-label="A list of 3 numbers stacked vertically: 503, 530, 305"><rect x="95.0" y="12" width="130" height="44" rx="6" fill="#E8E3DA" stroke="#D55A3F" stroke-width="2.4"/><text x="160.0" y="43.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#D55A3F" text-anchor="middle">503</text><rect x="95.0" y="68" width="130" height="44" rx="6" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="160.0" y="99.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#242F3A" text-anchor="middle">530</text><rect x="95.0" y="124" width="130" height="44" rx="6" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="160.0" y="155.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#242F3A" text-anchor="middle">305</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Pick the middle of 503, 530 and 305.</li><li><b>The fact.</b> Order all three first &mdash; the middle one is your answer.</li><li>Hundreds: 5, 5, 3. So 305 is the smallest.</li><li>Compare 503 and 530 by tens: 0 vs 3.</li><li>530 is bigger.</li><li>So 305 &lt; 503 &lt; 530. Middle = 503.</li></ol>
+  <div class="answer-line">Answer: 503</div>
+  <div class="mistake"><b>Watch out</b>The middle number is NOT always the one with a middle first digit.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 5 - which is bigger</h2>
+  <p class="lead">Which is bigger, <b>5,432</b> or <b>5,423</b>?</p>
+  <div class="figbox"><svg viewBox="0 0 320 142" width="320" role="img" aria-label="Two numbers 5432 and 5423 shown in a place value grid"><rect x="40.0" y="0" width="60" height="26" fill="#E8E3DA" stroke="#D8D2C7" stroke-width="1"/><text x="70.0" y="18.0" font-family="DM Sans, sans-serif" font-size="11" font-weight="700" fill="#5A5A5A" text-anchor="middle">Th</text><rect x="100.0" y="0" width="60" height="26" fill="#E8E3DA" stroke="#D8D2C7" stroke-width="1"/><text x="130.0" y="18.0" font-family="DM Sans, sans-serif" font-size="11" font-weight="700" fill="#5A5A5A" text-anchor="middle">H</text><rect x="160.0" y="0" width="60" height="26" fill="#E8E3DA" stroke="#D8D2C7" stroke-width="1"/><text x="190.0" y="18.0" font-family="DM Sans, sans-serif" font-size="11" font-weight="700" fill="#5A5A5A" text-anchor="middle">T</text><rect x="220.0" y="0" width="60" height="26" fill="#E8E3DA" stroke="#D8D2C7" stroke-width="1"/><text x="250.0" y="18.0" font-family="DM Sans, sans-serif" font-size="11" font-weight="700" fill="#5A5A5A" text-anchor="middle">O</text><rect x="40.0" y="26" width="60" height="48" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="70.0" y="59.0" font-family="Fraunces, Georgia, serif" font-size="24" font-weight="600" fill="#242F3A" text-anchor="middle">5</text><rect x="100.0" y="26" width="60" height="48" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="130.0" y="59.0" font-family="Fraunces, Georgia, serif" font-size="24" font-weight="600" fill="#242F3A" text-anchor="middle">4</text><rect x="160.0" y="26" width="60" height="48" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="190.0" y="59.0" font-family="Fraunces, Georgia, serif" font-size="24" font-weight="600" fill="#242F3A" text-anchor="middle">3</text><rect x="220.0" y="26" width="60" height="48" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="250.0" y="59.0" font-family="Fraunces, Georgia, serif" font-size="24" font-weight="600" fill="#242F3A" text-anchor="middle">2</text><rect x="40.0" y="74" width="60" height="48" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="70.0" y="107.0" font-family="Fraunces, Georgia, serif" font-size="24" font-weight="600" fill="#242F3A" text-anchor="middle">5</text><rect x="100.0" y="74" width="60" height="48" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="130.0" y="107.0" font-family="Fraunces, Georgia, serif" font-size="24" font-weight="600" fill="#242F3A" text-anchor="middle">4</text><rect x="160.0" y="74" width="60" height="48" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="190.0" y="107.0" font-family="Fraunces, Georgia, serif" font-size="24" font-weight="600" fill="#242F3A" text-anchor="middle">2</text><rect x="220.0" y="74" width="60" height="48" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="250.0" y="107.0" font-family="Fraunces, Georgia, serif" font-size="24" font-weight="600" fill="#242F3A" text-anchor="middle">3</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Pick the bigger of 5,432 and 5,423.</li><li><b>The fact.</b> Line them up and compare column by column from the LEFT.</li><li>Thousands: 5 = 5. Same.</li><li>Hundreds: 4 = 4. Same.</li><li>Tens: 3 vs 2. 3 is bigger.</li><li>So 5,432 &gt; 5,423.</li></ol>
+  <div class="answer-line">Answer: 5,432</div>
+  <div class="mistake"><b>Watch out</b>Do NOT just look at the last digit. The columns matter in order.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 6 - read a number line</h2>
+  <p class="lead">What number is at the highlighted point on the line?</p>
+  <div class="figbox"><svg viewBox="0 0 320 110" width="320" role="img" aria-label="A number line from 0 to 10"><line x1="22" y1="55" x2="298" y2="55" stroke="#242F3A" stroke-width="2"/><polyline points="28,50 22,55 28,60" fill="none" stroke="#242F3A" stroke-width="2"/><polyline points="292,50 298,55 292,60" fill="none" stroke="#242F3A" stroke-width="2"/><line x1="30.0" y1="49" x2="30.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="30.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">0</text><line x1="56.0" y1="49" x2="56.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="56.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">1</text><line x1="82.0" y1="49" x2="82.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="82.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">2</text><line x1="108.0" y1="49" x2="108.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="108.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">3</text><line x1="134.0" y1="49" x2="134.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="134.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">4</text><line x1="160.0" y1="49" x2="160.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="160.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">5</text><line x1="186.0" y1="49" x2="186.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="186.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">6</text><line x1="212.0" y1="49" x2="212.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="212.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">7</text><line x1="238.0" y1="49" x2="238.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="238.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">8</text><line x1="264.0" y1="49" x2="264.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="264.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">9</text><line x1="290.0" y1="49" x2="290.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="290.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">10</text><circle cx="212.0" cy="55" r="5" fill="#D55A3F"/><text x="212.0" y="41" font-family="Fraunces,serif" font-size="15" font-weight="700" fill="#D55A3F" text-anchor="middle">7</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Find the number at the highlighted point.</li><li><b>The fact.</b> Ticks are labelled. Count from the leftmost value.</li><li>The line goes from 0 to 10.</li><li>Ticks: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.</li><li>The highlighted point is at the 8th tick from the left.</li><li>That tick is at 7.</li></ol>
+  <div class="answer-line">Answer: 7</div>
+  <div class="mistake"><b>Watch out</b>The first tick is 0, not 1. So the 8th tick is at 7.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 7 - which negative is bigger</h2>
+  <p class="lead">Which is bigger, <b>&minus;3</b> or <b>&minus;8</b>?</p>
+  <div class="figbox"><svg viewBox="0 0 320 110" width="320" role="img" aria-label="A number line from -10 to 2"><line x1="22" y1="55" x2="298" y2="55" stroke="#242F3A" stroke-width="2"/><polyline points="28,50 22,55 28,60" fill="none" stroke="#242F3A" stroke-width="2"/><polyline points="292,50 298,55 292,60" fill="none" stroke="#242F3A" stroke-width="2"/><line x1="30.0" y1="49" x2="30.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="30.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">-10</text><line x1="51.7" y1="49" x2="51.7" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="51.7" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">-9</text><line x1="73.3" y1="49" x2="73.3" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="73.3" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">-8</text><line x1="95.0" y1="49" x2="95.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="95.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">-7</text><line x1="116.7" y1="49" x2="116.7" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="116.7" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">-6</text><line x1="138.3" y1="49" x2="138.3" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="138.3" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">-5</text><line x1="160.0" y1="49" x2="160.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="160.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">-4</text><line x1="181.7" y1="49" x2="181.7" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="181.7" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">-3</text><line x1="203.3" y1="49" x2="203.3" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="203.3" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">-2</text><line x1="225.0" y1="49" x2="225.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="225.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">-1</text><line x1="246.7" y1="49" x2="246.7" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="246.7" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">0</text><line x1="268.3" y1="49" x2="268.3" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="268.3" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">1</text><line x1="290.0" y1="49" x2="290.0" y2="61" stroke="#242F3A" stroke-width="1.6"/><text x="290.0" y="77" font-family="DM Sans,sans-serif" font-size="12" fill="#5A5A5A" text-anchor="middle">2</text><circle cx="181.7" cy="55" r="5" fill="#D55A3F"/><text x="181.7" y="41" font-family="Fraunces,serif" font-size="15" font-weight="700" fill="#D55A3F" text-anchor="middle">-3</text><circle cx="73.3" cy="55" r="5" fill="#242F3A"/><text x="73.3" y="41" font-family="Fraunces,serif" font-size="13" font-weight="600" fill="#242F3A" text-anchor="middle">-8</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Pick the bigger of &minus;3 and &minus;8.</li><li><b>The fact.</b> For negatives, closer to zero = bigger.</li><li>&minus;8 is 8 steps left of zero.</li><li>&minus;3 is 3 steps left of zero.</li><li>&minus;3 is closer to zero, so &minus;3 &gt; &minus;8.</li></ol>
+  <div class="answer-line">Answer: &minus;3</div>
+  <div class="mistake"><b>Watch out</b>A common mistake: thinking &minus;8 is bigger because &lsquo;8 &gt; 3&rsquo;. It flips for negatives.</div>
+</div>
+
+<div class="card">
+  <h2>Worked example 8 - order three negatives</h2>
+  <p class="lead">From <b>&minus;3, &minus;8 and &minus;1</b>, pick the smallest.</p>
+  <div class="figbox"><svg viewBox="0 0 320 186" width="320" role="img" aria-label="A list of 3 numbers stacked vertically: -3, -8, -1"><rect x="95.0" y="12" width="130" height="44" rx="6" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="160.0" y="43.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#242F3A" text-anchor="middle">-3</text><rect x="95.0" y="68" width="130" height="44" rx="6" fill="#E8E3DA" stroke="#D55A3F" stroke-width="2.4"/><text x="160.0" y="99.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#D55A3F" text-anchor="middle">-8</text><rect x="95.0" y="124" width="130" height="44" rx="6" fill="#FFFFFF" stroke="#242F3A" stroke-width="1.6"/><text x="160.0" y="155.0" font-family="Fraunces,serif" font-size="22" font-weight="600" fill="#242F3A" text-anchor="middle">-1</text></svg></div>
+  <ol class="steps"><li><b>Read it.</b> Pick the smallest of &minus;3, &minus;8, &minus;1.</li><li><b>The fact.</b> Smallest means furthest LEFT on the number line.</li><li>On the line: &minus;8 (far left), &minus;3 (middle), &minus;1 (nearest zero).</li><li>Furthest left = smallest.</li><li>So &minus;8 &lt; &minus;3 &lt; &minus;1.</li></ol>
+  <div class="answer-line">Answer: &minus;8</div>
+  <div class="mistake"><b>Watch out</b>The number with the biggest &lsquo;size&rsquo; (like 8) can actually be the smallest, if it&rsquo;s negative.</div>
+</div>
+
+<!-- ====================== Practice ====================== -->
+
+<div class="divider">
+  <span class="lo-eyebrow">Practice &middot; Section A</span>
+  <div class="title">Ordering positive numbers</div>
+  <div class="lo">Pick the smallest &middot; Pick the largest</div>
+</div>
+<div id="secA"></div>
+
+<div class="divider">
+  <span class="lo-eyebrow">Practice &middot; Section B</span>
+  <div class="title">Comparing &amp; number lines</div>
+  <div class="lo">Which is bigger &middot; Read the number line</div>
+</div>
+<div id="secB"></div>
+
+<div class="divider">
+  <span class="lo-eyebrow">Practice &middot; Section C</span>
+  <div class="title">Negatives</div>
+  <div class="lo">Negatives on a number line &middot; Order with negatives</div>
+</div>
+<div id="secC"></div>
+
+
+<div class="card" style="border-color:var(--gold);border-left:4px solid var(--coral);background:#faf6ec">
+  <h2 style="display:flex;align-items:center;gap:8px">Ready for more? <span style="background:var(--coral);color:#fff;font:700 .7rem/1 'DM Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:6px">100 questions</span></h2>
+  <p class="lead">When you have done these 12, you are ready for the bigger practice paper.</p>
+  <p class="lead">It has <b>100 questions</b>. They start very easy and get harder near the end. Every question is still Grade 1 — nothing harder. You can stop at any time and come back.</p>
+  <p style="text-align:center;margin:16px 0 4px">
+    <a href="/library/ordering-numbers-grade-1-100-questions/" style="display:inline-block;background:var(--coral);color:#fff;font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;padding:14px 24px;border-radius:10px;text-decoration:none;min-height:48px;line-height:1.2">Open the 100-question paper &rarr;</a>
+  </p>
+  <p style="font-size:.88rem;color:var(--grey);text-align:center;margin:8px 0 0">It opens in this same place. The lesson stays open behind it.</p>
+</div>
+
+<div class="markbar">
+  <button class="markbtn" id="markbtn" type="button">Mark My Work</button>
+  <button class="resetbtn" id="resetbtn" type="button">Start again</button>
+  <span class="score" id="score">/ 12</span>
+</div>
+
+<div class="foot">
+  <b>Improve Tuition</b> · George Street, Batley, West Yorkshire WF17 5AR · improvetuition.org<br>
+  Teacher-led tuition since 2007.
+</div>
+
+</div>
+
+<script>
+var QS = [{"id": 1, "sec": "A", "a": 234, "fig": "<svg viewBox=\"0 0 320 186\" width=\"320\" role=\"img\" aria-label=\"A list of 3 numbers stacked vertically: 432, 234, 342\"><rect x=\"95.0\" y=\"12\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"43.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">432</text><rect x=\"95.0\" y=\"68\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#E8E3DA\" stroke=\"#D55A3F\" stroke-width=\"2.4\"/><text x=\"160.0\" y=\"99.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#D55A3F\" text-anchor=\"middle\">234</text><rect x=\"95.0\" y=\"124\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"155.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">342</text></svg>", "t": "From 432, 234 and 342, pick the smallest.", "rule": "Compare column by column from the LEFT. Smallest first digit wins.", "work": ["Hundreds column: 432 has 4, 234 has 2, 342 has 3.", "2 is the smallest hundreds digit, so 234 is smallest.", "234 < 342 < 432.", "Smallest = 234.", "Answer: 234"]}, {"id": 2, "sec": "A", "a": 1360, "fig": "<svg viewBox=\"0 0 320 186\" width=\"320\" role=\"img\" aria-label=\"A list of 3 numbers stacked vertically: 1360, 1063, 1306\"><rect x=\"95.0\" y=\"12\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#E8E3DA\" stroke=\"#D55A3F\" stroke-width=\"2.4\"/><text x=\"160.0\" y=\"43.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#D55A3F\" text-anchor=\"middle\">1,360</text><rect x=\"95.0\" y=\"68\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"99.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">1,063</text><rect x=\"95.0\" y=\"124\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"155.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">1,306</text></svg>", "t": "From 1,360, 1,063 and 1,306, pick the largest.", "rule": "When digit counts match, compare column by column from the LEFT.", "work": ["Thousands: all 1. Same.", "Hundreds: 1,360 has 3, 1,063 has 0, 1,306 has 3.", "The two with 3 hundreds are bigger than the one with 0.", "Between 1,360 and 1,306: tens digit 6 vs 0. 6 wins.", "1,063 < 1,306 < 1,360.", "Largest = 1,360.", "Answer: 1360"]}, {"id": 3, "sec": "A", "a": 82, "fig": "<svg viewBox=\"0 0 320 186\" width=\"320\" role=\"img\" aria-label=\"A list of 3 numbers stacked vertically: 82, 728, 90\"><rect x=\"95.0\" y=\"12\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#E8E3DA\" stroke=\"#D55A3F\" stroke-width=\"2.4\"/><text x=\"160.0\" y=\"43.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#D55A3F\" text-anchor=\"middle\">82</text><rect x=\"95.0\" y=\"68\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"99.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">728</text><rect x=\"95.0\" y=\"124\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"155.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">90</text></svg>", "t": "From 82, 728 and 90, pick the smallest.", "rule": "For whole numbers, fewer digits = smaller.", "work": ["728 has 3 digits.", "82 has 2 digits, 90 has 2 digits.", "Both 2-digit numbers are smaller than 728.", "Between 82 and 90: 8 tens vs 9 tens. 82 is smaller.", "82 < 90 < 728.", "Smallest = 82.", "Answer: 82"]}, {"id": 4, "sec": "A", "a": 503, "fig": "<svg viewBox=\"0 0 320 186\" width=\"320\" role=\"img\" aria-label=\"A list of 3 numbers stacked vertically: 503, 530, 305\"><rect x=\"95.0\" y=\"12\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#E8E3DA\" stroke=\"#D55A3F\" stroke-width=\"2.4\"/><text x=\"160.0\" y=\"43.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#D55A3F\" text-anchor=\"middle\">503</text><rect x=\"95.0\" y=\"68\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"99.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">530</text><rect x=\"95.0\" y=\"124\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"155.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">305</text></svg>", "t": "From 503, 530 and 305, pick the middle number.", "rule": "Order all three first \u2014 the middle one is your answer.", "work": ["Hundreds: 5, 5, 3. So 305 is smallest.", "Compare 503 and 530 by tens: 0 vs 3. 530 is bigger.", "305 < 503 < 530.", "Middle = 503.", "Answer: 503"]}, {"id": 5, "sec": "B", "a": 5432, "fig": "<svg viewBox=\"0 0 320 142\" width=\"320\" role=\"img\" aria-label=\"Two numbers 5432 and 5423 shown in a place value grid\"><rect x=\"40.0\" y=\"0\" width=\"60\" height=\"26\" fill=\"#E8E3DA\" stroke=\"#D8D2C7\" stroke-width=\"1\"/><text x=\"70.0\" y=\"18.0\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#5A5A5A\" text-anchor=\"middle\">Th</text><rect x=\"100.0\" y=\"0\" width=\"60\" height=\"26\" fill=\"#E8E3DA\" stroke=\"#D8D2C7\" stroke-width=\"1\"/><text x=\"130.0\" y=\"18.0\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#5A5A5A\" text-anchor=\"middle\">H</text><rect x=\"160.0\" y=\"0\" width=\"60\" height=\"26\" fill=\"#E8E3DA\" stroke=\"#D8D2C7\" stroke-width=\"1\"/><text x=\"190.0\" y=\"18.0\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#5A5A5A\" text-anchor=\"middle\">T</text><rect x=\"220.0\" y=\"0\" width=\"60\" height=\"26\" fill=\"#E8E3DA\" stroke=\"#D8D2C7\" stroke-width=\"1\"/><text x=\"250.0\" y=\"18.0\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#5A5A5A\" text-anchor=\"middle\">O</text><rect x=\"40.0\" y=\"26\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"70.0\" y=\"59.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">5</text><rect x=\"100.0\" y=\"26\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"130.0\" y=\"59.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">4</text><rect x=\"160.0\" y=\"26\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"190.0\" y=\"59.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">3</text><rect x=\"220.0\" y=\"26\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"250.0\" y=\"59.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">2</text><rect x=\"40.0\" y=\"74\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"70.0\" y=\"107.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">5</text><rect x=\"100.0\" y=\"74\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"130.0\" y=\"107.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">4</text><rect x=\"160.0\" y=\"74\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"190.0\" y=\"107.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">2</text><rect x=\"220.0\" y=\"74\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"250.0\" y=\"107.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">3</text></svg>", "t": "Which is bigger, 5,432 or 5,423? Type the bigger number.", "rule": "Compare column by column from the LEFT.", "work": ["Thousands 5=5, hundreds 4=4, tens 3 vs 2.", "3 is bigger, so 5,432 wins.", "5,432 > 5,423.", "Answer: 5432"]}, {"id": 6, "sec": "B", "a": 1002, "fig": "<svg viewBox=\"0 0 320 142\" width=\"320\" role=\"img\" aria-label=\"Two numbers 999 and 1002 shown in a place value grid\"><rect x=\"40.0\" y=\"0\" width=\"60\" height=\"26\" fill=\"#E8E3DA\" stroke=\"#D8D2C7\" stroke-width=\"1\"/><text x=\"70.0\" y=\"18.0\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#5A5A5A\" text-anchor=\"middle\">Th</text><rect x=\"100.0\" y=\"0\" width=\"60\" height=\"26\" fill=\"#E8E3DA\" stroke=\"#D8D2C7\" stroke-width=\"1\"/><text x=\"130.0\" y=\"18.0\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#5A5A5A\" text-anchor=\"middle\">H</text><rect x=\"160.0\" y=\"0\" width=\"60\" height=\"26\" fill=\"#E8E3DA\" stroke=\"#D8D2C7\" stroke-width=\"1\"/><text x=\"190.0\" y=\"18.0\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#5A5A5A\" text-anchor=\"middle\">T</text><rect x=\"220.0\" y=\"0\" width=\"60\" height=\"26\" fill=\"#E8E3DA\" stroke=\"#D8D2C7\" stroke-width=\"1\"/><text x=\"250.0\" y=\"18.0\" font-family=\"DM Sans, sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#5A5A5A\" text-anchor=\"middle\">O</text><rect x=\"40.0\" y=\"26\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><rect x=\"100.0\" y=\"26\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"130.0\" y=\"59.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">9</text><rect x=\"160.0\" y=\"26\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"190.0\" y=\"59.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">9</text><rect x=\"220.0\" y=\"26\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"250.0\" y=\"59.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">9</text><rect x=\"40.0\" y=\"74\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"70.0\" y=\"107.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">1</text><rect x=\"100.0\" y=\"74\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"130.0\" y=\"107.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">0</text><rect x=\"160.0\" y=\"74\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"190.0\" y=\"107.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">0</text><rect x=\"220.0\" y=\"74\" width=\"60\" height=\"48\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"250.0\" y=\"107.0\" font-family=\"Fraunces, Georgia, serif\" font-size=\"24\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">2</text></svg>", "t": "Which is bigger, 999 or 1,002? Type the bigger number.", "rule": "For whole numbers, more digits = bigger.", "work": ["999 has 3 digits.", "1,002 has 4 digits.", "1,002 > 999.", "Answer: 1002"]}, {"id": 7, "sec": "B", "a": 7, "fig": "<svg viewBox=\"0 0 320 110\" width=\"320\" role=\"img\" aria-label=\"A number line from 0 to 10\"><line x1=\"22\" y1=\"55\" x2=\"298\" y2=\"55\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,50 22,55 28,60\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,50 298,55 292,60\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"49\" x2=\"30.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"30.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">0</text><line x1=\"56.0\" y1=\"49\" x2=\"56.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"56.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">1</text><line x1=\"82.0\" y1=\"49\" x2=\"82.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"82.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">2</text><line x1=\"108.0\" y1=\"49\" x2=\"108.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"108.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">3</text><line x1=\"134.0\" y1=\"49\" x2=\"134.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"134.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">4</text><line x1=\"160.0\" y1=\"49\" x2=\"160.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">5</text><line x1=\"186.0\" y1=\"49\" x2=\"186.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"186.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">6</text><line x1=\"212.0\" y1=\"49\" x2=\"212.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"212.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">7</text><line x1=\"238.0\" y1=\"49\" x2=\"238.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"238.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">8</text><line x1=\"264.0\" y1=\"49\" x2=\"264.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"264.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">9</text><line x1=\"290.0\" y1=\"49\" x2=\"290.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"290.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">10</text><circle cx=\"212.0\" cy=\"55\" r=\"5\" fill=\"#D55A3F\"/><text x=\"212.0\" y=\"41\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">7</text></svg>", "t": "What number is at the highlighted point on the number line?", "rule": "On a number line, count the tick marks from left to right.", "work": ["Ticks: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.", "The highlighted point is on the 8th tick from the left.", "That tick is at 7.", "Answer: 7"]}, {"id": 8, "sec": "B", "a": 230, "fig": "<svg viewBox=\"0 0 320 110\" width=\"320\" role=\"img\" aria-label=\"A number line from 200 to 300\"><line x1=\"22\" y1=\"55\" x2=\"298\" y2=\"55\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,50 22,55 28,60\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,50 298,55 292,60\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"49\" x2=\"30.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"30.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">200</text><line x1=\"56.0\" y1=\"49\" x2=\"56.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"56.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">210</text><line x1=\"82.0\" y1=\"49\" x2=\"82.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"82.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">220</text><line x1=\"108.0\" y1=\"49\" x2=\"108.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"108.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">230</text><line x1=\"134.0\" y1=\"49\" x2=\"134.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"134.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">240</text><line x1=\"160.0\" y1=\"49\" x2=\"160.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">250</text><line x1=\"186.0\" y1=\"49\" x2=\"186.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"186.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">260</text><line x1=\"212.0\" y1=\"49\" x2=\"212.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"212.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">270</text><line x1=\"238.0\" y1=\"49\" x2=\"238.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"238.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">280</text><line x1=\"264.0\" y1=\"49\" x2=\"264.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"264.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">290</text><line x1=\"290.0\" y1=\"49\" x2=\"290.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"290.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">300</text><circle cx=\"108.0\" cy=\"55\" r=\"5\" fill=\"#D55A3F\"/><text x=\"108.0\" y=\"41\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">230</text></svg>", "t": "What number is at the highlighted point on the number line?", "rule": "When ticks step by 10, count in tens from the start.", "work": ["Ticks: 200, 210, 220, 230, ..., 300.", "The highlighted point is at the 4th tick.", "200 + 3 \u00d7 10 = 230.", "Answer: 230"]}, {"id": 9, "sec": "C", "a": -3, "fig": "<svg viewBox=\"0 0 320 110\" width=\"320\" role=\"img\" aria-label=\"A number line from -10 to -1\"><line x1=\"22\" y1=\"55\" x2=\"298\" y2=\"55\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,50 22,55 28,60\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,50 298,55 292,60\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"49\" x2=\"30.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"30.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-10</text><line x1=\"58.9\" y1=\"49\" x2=\"58.9\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"58.9\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-9</text><line x1=\"87.8\" y1=\"49\" x2=\"87.8\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"87.8\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-8</text><line x1=\"116.7\" y1=\"49\" x2=\"116.7\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"116.7\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-7</text><line x1=\"145.6\" y1=\"49\" x2=\"145.6\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"145.6\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-6</text><line x1=\"174.4\" y1=\"49\" x2=\"174.4\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"174.4\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-5</text><line x1=\"203.3\" y1=\"49\" x2=\"203.3\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"203.3\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-4</text><line x1=\"232.2\" y1=\"49\" x2=\"232.2\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"232.2\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-3</text><line x1=\"261.1\" y1=\"49\" x2=\"261.1\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"261.1\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-2</text><line x1=\"290.0\" y1=\"49\" x2=\"290.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"290.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-1</text><circle cx=\"232.2\" cy=\"55\" r=\"5\" fill=\"#D55A3F\"/><text x=\"232.2\" y=\"41\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">-3</text><circle cx=\"87.8\" cy=\"55\" r=\"5\" fill=\"#242F3A\"/><text x=\"87.8\" y=\"41\" font-family=\"Fraunces,serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">-8</text></svg>", "t": "Which is bigger, -3 or -8?", "rule": "On a number line, negatives get SMALLER as they move left of zero.", "work": ["On the line: -8 is further left, -3 is closer to zero.", "Bigger means further RIGHT on the line.", "-3 is closer to zero, so -3 > -8.", "Answer: -3"]}, {"id": 10, "sec": "C", "a": -7, "fig": "<svg viewBox=\"0 0 320 110\" width=\"320\" role=\"img\" aria-label=\"A number line from -9 to 0\"><line x1=\"22\" y1=\"55\" x2=\"298\" y2=\"55\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"28,50 22,55 28,60\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><polyline points=\"292,50 298,55 292,60\" fill=\"none\" stroke=\"#242F3A\" stroke-width=\"2\"/><line x1=\"30.0\" y1=\"49\" x2=\"30.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"30.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-9</text><line x1=\"58.9\" y1=\"49\" x2=\"58.9\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"58.9\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-8</text><line x1=\"87.8\" y1=\"49\" x2=\"87.8\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"87.8\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-7</text><line x1=\"116.7\" y1=\"49\" x2=\"116.7\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"116.7\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-6</text><line x1=\"145.6\" y1=\"49\" x2=\"145.6\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"145.6\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-5</text><line x1=\"174.4\" y1=\"49\" x2=\"174.4\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"174.4\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-4</text><line x1=\"203.3\" y1=\"49\" x2=\"203.3\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"203.3\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-3</text><line x1=\"232.2\" y1=\"49\" x2=\"232.2\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"232.2\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-2</text><line x1=\"261.1\" y1=\"49\" x2=\"261.1\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"261.1\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">-1</text><line x1=\"290.0\" y1=\"49\" x2=\"290.0\" y2=\"61\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"290.0\" y=\"77\" font-family=\"DM Sans,sans-serif\" font-size=\"12\" fill=\"#5A5A5A\" text-anchor=\"middle\">0</text><circle cx=\"232.2\" cy=\"55\" r=\"5\" fill=\"#242F3A\"/><text x=\"232.2\" y=\"41\" font-family=\"Fraunces,serif\" font-size=\"13\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">-2</text><circle cx=\"87.8\" cy=\"55\" r=\"5\" fill=\"#D55A3F\"/><text x=\"87.8\" y=\"41\" font-family=\"Fraunces,serif\" font-size=\"15\" font-weight=\"700\" fill=\"#D55A3F\" text-anchor=\"middle\">-7</text></svg>", "t": "Which is smaller, -2 or -7?", "rule": "For negatives, further from zero = smaller.", "work": ["-7 is 7 steps left of zero.", "-2 is 2 steps left of zero.", "-7 is further left, so -7 < -2.", "Answer: -7"]}, {"id": 11, "sec": "C", "a": -8, "fig": "<svg viewBox=\"0 0 320 186\" width=\"320\" role=\"img\" aria-label=\"A list of 3 numbers stacked vertically: -3, -8, -1\"><rect x=\"95.0\" y=\"12\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"43.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">-3</text><rect x=\"95.0\" y=\"68\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#E8E3DA\" stroke=\"#D55A3F\" stroke-width=\"2.4\"/><text x=\"160.0\" y=\"99.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#D55A3F\" text-anchor=\"middle\">-8</text><rect x=\"95.0\" y=\"124\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"155.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">-1</text></svg>", "t": "From -3, -8 and -1, pick the smallest.", "rule": "Smallest means furthest LEFT on the number line.", "work": ["On the line: -8 (far left), -3 (middle), -1 (nearest zero).", "Furthest left = smallest.", "-8 < -3 < -1.", "Smallest = -8.", "Answer: -8"]}, {"id": 12, "sec": "C", "a": 2, "fig": "<svg viewBox=\"0 0 320 186\" width=\"320\" role=\"img\" aria-label=\"A list of 3 numbers stacked vertically: -5, 2, -1\"><rect x=\"95.0\" y=\"12\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"43.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">-5</text><rect x=\"95.0\" y=\"68\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#E8E3DA\" stroke=\"#D55A3F\" stroke-width=\"2.4\"/><text x=\"160.0\" y=\"99.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#D55A3F\" text-anchor=\"middle\">2</text><rect x=\"95.0\" y=\"124\" width=\"130\" height=\"44\" rx=\"6\" fill=\"#FFFFFF\" stroke=\"#242F3A\" stroke-width=\"1.6\"/><text x=\"160.0\" y=\"155.0\" font-family=\"Fraunces,serif\" font-size=\"22\" font-weight=\"600\" fill=\"#242F3A\" text-anchor=\"middle\">-1</text></svg>", "t": "From -5, 2 and -1, pick the largest.", "rule": "Positive numbers are always bigger than any negative number.", "work": ["Positive: 2.", "Negatives: -5, -1.", "Any positive beats any negative.", "-5 < -1 < 2.", "Largest = 2.", "Answer: 2"]}];
+
+function normNum(v){if(v==null)return null;v=String(v).replace(/[^0-9.\-]/g,'');if(v===''||v==='-'||v==='.')return null;var n=parseFloat(v);return isNaN(n)?null:n;}
+function qHTML(q){
+  var workItems = q.work.map(function(w){return '<li>'+w+'</li>';}).join('');
+  return '<div class="q" id="q-'+q.id+'">' +
+    '<div class="qhead"><span class="qn">Q'+q.id+'.</span><span class="qtext">'+q.t+'</span></div>' +
+    '<div class="qfig">'+q.fig+'</div>' +
+    '<div class="ansrow"><label for="a-'+q.id+'">Answer =</label><input class="ans" id="a-'+q.id+'" type="text" inputmode="'+(q.at==='text'?'text':'decimal')+'" autocomplete="off" data-q="'+q.id+'"><span class="unit"></span><span class="marks">(1 mark)</span></div>' +
+    '<div class="verdict" id="v-'+q.id+'"></div>' +
+    '<button class="show-how" type="button" onclick="toggleWork(this)">Show me how step by step</button>' +
+    '<div class="work" id="w-'+q.id+'">' +
+      '<div class="pill"><b>Fact used:</b> '+q.rule+'</div>' +
+      '<ol>'+workItems+'</ol>' +
+    '</div></div>';
+}
+['A','B','C'].forEach(function(sec){
+  document.getElementById('sec'+sec).innerHTML = QS.filter(function(q){return q.sec===sec;}).map(qHTML).join('');
+});
+function toggleWork(btn){
+  var w=btn.nextElementSibling;
+  var open=w.classList.toggle('show');
+  btn.textContent=open?'Hide the steps':'Show me how step by step';
+}
+function markAll(){
+  var earned=0,total=QS.length;
+  var normText=function(s){return String(s).toLowerCase().replace(/[,\-]/g,' ').replace(/\s+/g,' ').trim();};
+  QS.forEach(function(q){
+    var inp=document.getElementById('a-'+q.id), verdict=document.getElementById('v-'+q.id), work=document.getElementById('w-'+q.id);
+    inp.disabled=true;
+    var raw=inp.value;
+    var attempted=raw.trim()!=='';
+    var ok;
+    if (q.at==='text'){
+      ok = attempted && normText(raw)===normText(q.a);
+    } else {
+      var v=normNum(raw);
+      ok = v!==null && Math.abs(v-q.a)<1e-9;
+    }
+    if(ok){earned++;verdict.className='verdict ok';verdict.textContent='\u2713 Correct \u2014 well done.';work.classList.remove('show');}
+    else{
+      verdict.className='verdict no';
+      verdict.textContent = attempted ? ('Not quite. The answer is '+q.a+'. Look at the steps below.') : ('\u2014 Not answered. The answer is '+q.a+'. Look at the steps below.');
+      work.classList.add('show');
+    }
+  });
+  var scoreEl=document.getElementById('score'); if(scoreEl) scoreEl.textContent = earned + ' / ' + total;
+  var btn = document.querySelector('.markbar .btn') || document.querySelector('.markbar-inner .btn') || document.querySelector('.markbar button');
+  if (btn) btn.textContent='Marked';
+}
+document.getElementById('markbtn').onclick=markAll;
+document.getElementById('resetbtn').onclick=function(){location.reload();};
+</script>
+<!-- IMPROVETUITION:CONTENT-END -->
+<div id="footer-placeholder"></div>
+<script src="/assets/js/app.js"></script>
+</body></html>
