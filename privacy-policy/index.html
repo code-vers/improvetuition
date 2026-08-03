@@ -10,15 +10,26 @@
         content="Privacy policy for Improve Tuition. How we handle the personal information of parents and pupils who contact us. UK GDPR compliant.">
 
     <link rel="canonical" href="https://improvetuition.org/privacy/">
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
 
     <meta name="theme-color" content="#D55A3F">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Improve Tuition">
+    <meta property="og:title" content="Privacy Policy | Improve Tuition">
+    <meta property="og:description" content="Privacy policy for Improve Tuition. How we handle the personal information of parents and pupils who contact us. UK GDPR compliant.">
+    <meta property="og:url" content="https://improvetuition.org/privacy/">
+    <meta property="og:image" content="https://improvetuition.org/social/home.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_GB">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Privacy Policy | Improve Tuition">
+    <meta name="twitter:description" content="Privacy policy for Improve Tuition. How we handle the personal information of parents and pupils who contact us.">
+    
+
+    <link rel="stylesheet" href="/assets/css/fonts.css">
 
     <style>
         :root {
@@ -83,62 +94,7 @@
             color: var(--ink);
         }
 
-        /* Header */
-        .site-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1.5rem;
-            padding: 1.4rem 2.5rem 1.15rem;
-            background: var(--ivory);
-            border-bottom: 1px solid var(--rule);
-        }
-
-        .brand-mark {
-            display: flex;
-            align-items: center;
-            gap: 0.55rem;
-            text-decoration: none;
-        }
-
-        .brand-icon {
-            width: 22px;
-            height: 22px;
-            flex-shrink: 0;
-        }
-
-        .brand-name {
-            font-family: 'Fraunces', serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            letter-spacing: -0.012em;
-            color: var(--ink);
-            line-height: 1;
-        }
-
-        .brand-name .dot {
-            color: var(--coral);
-        }
-
-        .menu-toggle {
-            display: flex;
-            align-items: center;
-            gap: 0.55rem;
-            background: none;
-            border: none;
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 500;
-            font-size: 0.95rem;
-            color: var(--ink);
-            cursor: pointer;
-            padding: 0.4rem 0.6rem;
-            border-radius: 4px;
-            text-decoration: none;
-        }
-
-        .menu-toggle:hover {
-            background: var(--cream);
-        }
+        
 
         /* Page */
         main {
@@ -239,14 +195,11 @@
         a {
             color: var(--ink);
             text-decoration: none;
-            border-bottom: 1px solid var(--gold);
-            padding-bottom: 1px;
-            transition: color 150ms ease, border-color 150ms ease;
+            transition: color 150ms ease;
         }
 
         a:hover {
             color: var(--coral);
-            border-bottom-color: var(--coral);
         }
 
         .contact-block {
@@ -275,81 +228,43 @@
             margin-bottom: 0.6rem !important;
         }
 
-        /* Footer */
-        .site-footer {
-            background: #242F3A;
-            color: #e8e0d2;
-            padding: 2.5rem 2.5rem 2rem;
-        }
-
-        .site-footer-inner {
-            max-width: 760px;
-            margin: 0 auto;
-            text-align: center;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.82rem;
-            color: rgba(232, 224, 210, 0.7);
-            line-height: 1.7;
-        }
-
-        .site-footer a {
-            color: rgba(232, 224, 210, 0.85);
-            border-bottom-color: rgba(232, 224, 210, 0.3);
-        }
-
-        .site-footer a:hover {
-            color: var(--ivory);
-            border-bottom-color: var(--ivory);
-        }
-
-        .footer-meta {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(232, 224, 210, 0.1);
-            font-size: 0.78rem;
-        }
-
-        .established {
-            color: #C99A2E;
-            font-weight: 600;
-        }
+        
 
         @media (max-width: 640px) {
-            .site-header {
-                padding: 1.1rem 1.25rem;
-            }
+            
 
-            .brand-name {
-                font-size: 1.3rem;
-            }
+            
 
             main {
                 padding: 2rem 1.25rem;
             }
 
-            .site-footer {
-                padding: 2rem 1.25rem 1.5rem;
-            }
+            
         }
+    </style>
+
+    <style>
+        /* Accessibility Overrides */
+        main p a { text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+        .skip-link { position: absolute; top: -100px; left: 1rem; z-index: 2000; padding: 0.7rem 1.1rem; background: #242F3A; color: #fff; text-decoration: none; border-radius: 4px; transition: top 150ms ease; }
+        .skip-link:focus { top: 1rem; outline: 3px solid #D55A3F; outline-offset: 2px; }
+    </style>
+        <link rel="preload" href="/header.html" as="fetch" crossorigin="anonymous">
+    <style>
+        #header-placeholder { min-height: 67px; }
+        #footer-placeholder { min-height: 500px; }
+        @media (max-width: 600px) { #footer-placeholder { min-height: 620px; } }
+        @media (max-width: 380px) { #footer-placeholder { min-height: 780px; } }
     </style>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Header -->
-    <header class="site-header">
-        <a href="index.html" class="brand-mark">
-            <svg class="brand-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path d="M3.5 8 L10.5 19 L20.5 4.5" stroke="#D55A3F" stroke-width="3" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
-            <span class="brand-name">improve tuition<span class="dot">.</span></span>
-        </a>
-        <a href="index.html" class="menu-toggle">← Back to site</a>
-    </header>
+    <div id="header-placeholder"></div>
 
-    <main>
+    <main id="main-content">
         <p class="page-eyebrow">Privacy</p>
         <h1>Privacy Policy</h1>
         <p class="lede">How we handle your personal information when you contact Improve Tuition.</p>
@@ -503,18 +418,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="site-footer-inner">
-            <p><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a
-                    href="safeguarding.html">Safeguarding</a></p>
-            <div class="footer-meta">
-                <p>Mr G Dabhad, QTS · Batley Centre and Online · Established <span class="established">2007</span></p>
-                <p>The Study Room, George Street, Batley, West Yorkshire WF17 5AR</p>
-                <p>© 2026 Improve Tuition. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
+    <script src="/assets/js/app.js" defer></script>
 </body>
 
 </html>

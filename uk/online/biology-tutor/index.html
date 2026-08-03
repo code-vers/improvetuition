@@ -2,6 +2,13 @@
 <html lang="en-GB">
 
 <head>
+    <link rel="preload" href="/header_with_phone.html" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="/assets/images/logo_3.webp" as="image" type="image/webp">
+    <style>
+        #header-placeholder, #header-phone-placeholder { min-height: 110px; }
+        @media(max-width: 768px) { #header-placeholder, #header-phone-placeholder { min-height: 100px; } }
+    </style>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Biology Tutor | Year 7 to A-Level | Improve Tuition</title>
@@ -34,11 +41,7 @@
     <meta name="twitter:image" content="https://www.improvetuition.org/social/online-biology-tutor.png">
     <meta name="twitter:image:alt" content="Improve Tuition — Online Biology Tutor — Free Assessment First">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Lora:wght@500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-dyslexic/0.0.3/open-dyslexic.min.css">
 
     <script type="application/ld+json">
@@ -2853,9 +2856,17 @@
 
         /* Category nav line */
     </style>
-</head>
+
+    <style>
+        /* Accessibility Overrides */
+        main p a { text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+        .skip-link { position: absolute; top: -100px; left: 1rem; z-index: 2000; padding: 0.7rem 1.1rem; background: #242F3A; color: #fff; text-decoration: none; border-radius: 4px; transition: top 150ms ease; }
+        .skip-link:focus { top: 1rem; outline: 3px solid #D55A3F; outline-offset: 2px; }
+    </style>
+    </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <div id="header-phone-placeholder"></div>
 
@@ -3699,7 +3710,7 @@
         })();
     </script>
 
-    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/app.js" defer></script>
 </body>
 
 </html>

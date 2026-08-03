@@ -2,6 +2,13 @@
 <html lang="en-GB">
 
 <head>
+    <link rel="preload" href="/header_with_phone.html" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="/assets/images/logo_3.webp" as="image" type="image/webp">
+    <style>
+        #header-placeholder, #header-phone-placeholder { min-height: 110px; }
+        @media(max-width: 768px) { #header-placeholder, #header-phone-placeholder { min-height: 100px; } }
+    </style>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maths Tutor in Batley | GCSE, SATs &amp; A Level</title>
@@ -33,11 +40,7 @@
         content="Teacher-led Maths tuition in Batley for SATs, 11 Plus, GCSE and A Level. Free assessment first to find gaps, then targeted lessons.">
     <meta name="twitter:image" content="https://improvetuition.org/social/maths-batley.png">
     <meta name="twitter:image:alt" content="Improve Tuition — Maths Tutor in Batley — Free Assessment First">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nunito+Sans:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/fonts.css">
     <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
     {"@type":["EducationalOrganization","LocalBusiness"],"@id":"https://improvetuition.org/#organization","name":"Improve Tuition","alternateName":["Improve Tuition Batley","Improve Tuition Maths Tutor Batley"],"url":"https://improvetuition.org/","logo":{"@id":"https://improvetuition.org/#logo"},"image":{"@type":"ImageObject","url":"https://improvetuition.org/social/maths-batley.png","width":1200,"height":630},"description":"Improve Tuition provides teacher-led Maths, English and Science tuition for pupils aged 5 to 18.","telephone":"+447951918152","email":"info@improvetuition.org","priceRange":"££","currenciesAccepted":"GBP","paymentAccepted":["Bank transfer","Card payment"],"foundingDate":"2007-10-15","founder":{"@id":"https://improvetuition.org/#mr-g-dabhad"},"address":{"@type":"PostalAddress","streetAddress":"The Study Room, George Street","addressLocality":"Batley","addressRegion":"West Yorkshire","postalCode":"WF17 5AR","addressCountry":"GB"},"geo":{"@type":"GeoCoordinates","latitude":53.7104021,"longitude":-1.6311968},"hasMap":"https://www.google.com/maps/search/?api=1&query=53.7104021,-1.6311968","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"10:00","closes":"14:00"}],"areaServed":[{"@type":"Place","name":"Batley"},{"@type":"Place","name":"Dewsbury"},{"@type":"Place","name":"Heckmondwike"},{"@type":"Place","name":"Birstall"},{"@type":"Place","name":"Mirfield"},{"@type":"Place","name":"Morley"},{"@type":"Place","name":"West Yorkshire"},{"@type":"Country","name":"United Kingdom"}],"sameAs":["https://www.instagram.com/improve_tuition/","https://www.youtube.com/@IMPROVETuition","https://www.facebook.com/Improvetuition/","https://www.tiktok.com/@improvetuition/","https://x.com/ImproveTuition","https://uk.trustpilot.com/review/improvetuition.org"],"contactPoint":{"@type":"ContactPoint","telephone":"+447951918152","contactType":"customer enquiries","areaServed":"GB","availableLanguage":"English"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"168","bestRating":"5","worstRating":"1"},"knowsAbout":["Maths tuition","English tuition","Science tuition","Primary tuition","Secondary tuition","GCSE tuition","A Level tuition","SATs preparation","11+ preparation"]},
@@ -1838,10 +1841,18 @@
             }
         }
     </style>
-</head>
+
+    <style>
+        /* Accessibility Overrides */
+        main p a { text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+        .skip-link { position: absolute; top: -100px; left: 1rem; z-index: 2000; padding: 0.7rem 1.1rem; background: #242F3A; color: #fff; text-decoration: none; border-radius: 4px; transition: top 150ms ease; }
+        .skip-link:focus { top: 1rem; outline: 3px solid #D55A3F; outline-offset: 2px; }
+    </style>
+    </head>
 
 <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <div id="header-phone-placeholder"></div>
 
     <main id="main-content">
@@ -2291,7 +2302,7 @@
             onScroll();
         })();
     </script>
-    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/app.js" defer></script>
 </body>
 
 </html>

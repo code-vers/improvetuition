@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+    <link rel="preload" href="/header.html" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="/assets/images/logo_3.webp" as="image" type="image/webp">
+    <style>
+        #header-placeholder, #header-phone-placeholder { min-height: 110px; }
+        @media(max-width: 768px) { #header-placeholder, #header-phone-placeholder { min-height: 100px; } }
+    </style>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,14 +35,7 @@
   <meta name="theme-color" content="#D55A3F">
   <meta name="author" content="Mr G Dabhad, Improve Tuition">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" as="style">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </noscript>
-  <link rel="preload" as="image" href="/assets/images/logo_3.png">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
 
   <style>
     :root {
@@ -1831,14 +1831,23 @@
   }
 }
 </script>
-</head>
+
+    <style>
+        /* Accessibility Overrides */
+        main p a { text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+        .skip-link { position: absolute; top: -100px; left: 1rem; z-index: 2000; padding: 0.7rem 1.1rem; background: #242F3A; color: #fff; text-decoration: none; border-radius: 4px; transition: top 150ms ease; }
+        .skip-link:focus { top: 1rem; outline: 3px solid #D55A3F; outline-offset: 2px; }
+    </style>
+    </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <a href="#main" class="skip-link">Skip to main content</a>
+  
 
   <!-- ═══════════ HEADER ═══════════ -->
   <div id="header-placeholder"></div>
+    <main id="main-content">
 
   <!-- ═══════════ HERO ═══════════ -->
 
@@ -2263,7 +2272,8 @@
   </section>
 
   <!-- ═══════════ FOOTER START═══════════ -->
-  <div id="footer-placeholder"></div>
+      </main>
+<div id="footer-placeholder"></div>
   <!-- ═══════════ FOOTER  END ═══════════ -->
 
 
