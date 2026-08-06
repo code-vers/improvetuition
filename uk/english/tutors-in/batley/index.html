@@ -45,7 +45,7 @@
   <meta name="twitter:image" content="https://improvetuition.org/social/english-batley.png">
   <meta name="twitter:image:alt" content="Improve Tuition — English Tutor in Batley — Free Assessment First">
 
-  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/fonts.css" media="print" onload="this.media=\'all\'">
 
   <script type="application/ld+json">
   {
@@ -829,6 +829,7 @@
         repeating-linear-gradient(105deg, transparent 0, transparent 90px,
           rgba(214, 179, 90, 0.04) 90px, rgba(214, 179, 90, 0.05) 92px);
       pointer-events: none;
+            visibility: hidden;
     }
 
     .home-hero {
@@ -843,6 +844,7 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
+            visibility: hidden;
       background-image: repeating-linear-gradient(108deg, transparent 0, transparent 110px,
           rgba(255, 255, 255, 0.042) 110px, rgba(255, 255, 255, 0.042) 111px);
     }
@@ -1109,6 +1111,7 @@
       border: 1px solid rgba(201, 154, 46, 0.22);
       border-radius: 8px;
       pointer-events: none;
+            visibility: hidden;
     }
 
     .support-pill {
@@ -2136,6 +2139,7 @@
       color: var(--coral);
       opacity: 0.1;
       pointer-events: none;
+            visibility: hidden;
       white-space: nowrap;
       letter-spacing: -0.02em;
     }
@@ -2504,6 +2508,7 @@
       transform: translateY(100%);
       opacity: 0;
       pointer-events: none;
+            visibility: hidden;
       transition: transform 0.32s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.25s ease;
       box-shadow: 0 -4px 16px rgba(36, 47, 58, 0.14);
     }
@@ -2512,6 +2517,7 @@
       transform: translateY(0);
       opacity: 1;
       pointer-events: auto;
+            visibility: visible;;
     }
 
     .contact-bar-btn {
@@ -2660,7 +2666,7 @@
               <h3 class="offer-card-title">Year 2 English Tuition</h3>
               <p class="offer-card-copy">Early reading, spelling, sentence writing and confidence with basic English
                 skills.</p>
-              <a href="#start" class="offer-card-link">Find out more <span aria-hidden="true">&rarr;</span></a>
+              <a href="#start" class="offer-card-link" aria-label="Find out more about Year 2 English Tuition">Find out more <span aria-hidden="true">&rarr;</span></a>
             </div>
           </article>
 
@@ -2672,7 +2678,7 @@
               <h3 class="offer-card-title">SATs English Preparation</h3>
               <p class="offer-card-copy">Support with reading comprehension, grammar, punctuation, spelling and writing
                 accuracy.</p>
-              <a href="#start" class="offer-card-link">Find out more <span aria-hidden="true">&rarr;</span></a>
+              <a href="#start" class="offer-card-link" aria-label="Find out more about SATs English Preparation">Find out more <span aria-hidden="true">&rarr;</span></a>
             </div>
           </article>
 
@@ -2684,7 +2690,7 @@
               <h3 class="offer-card-title">11 Plus English Exam Preparation</h3>
               <p class="offer-card-copy">Support with comprehension, vocabulary, grammar, spelling, creative writing and
                 exam-style question practice.</p>
-              <a href="#start" class="offer-card-link">Find out more <span aria-hidden="true">&rarr;</span></a>
+              <a href="#start" class="offer-card-link" aria-label="Find out more about 11 Plus English Exam Preparation">Find out more <span aria-hidden="true">&rarr;</span></a>
             </div>
           </article>
 
@@ -2696,7 +2702,7 @@
               <h3 class="offer-card-title">Secondary English Tuition</h3>
               <p class="offer-card-copy">Help for pupils who need stronger reading, writing, vocabulary and confidence
                 before GCSE.</p>
-              <a href="#start" class="offer-card-link">Find out more <span aria-hidden="true">&rarr;</span></a>
+              <a href="#start" class="offer-card-link" aria-label="Find out more about Secondary English Tuition">Find out more <span aria-hidden="true">&rarr;</span></a>
             </div>
           </article>
 
@@ -2708,7 +2714,7 @@
               <h3 class="offer-card-title">GCSE English Language Tuition</h3>
               <p class="offer-card-copy">Support with reading questions, writing structure, analysis, timing and exam
                 technique.</p>
-              <a href="#start" class="offer-card-link">Find out more <span aria-hidden="true">&rarr;</span></a>
+              <a href="#start" class="offer-card-link" aria-label="Find out more about GCSE English Language Tuition">Find out more <span aria-hidden="true">&rarr;</span></a>
             </div>
           </article>
 
@@ -2720,7 +2726,7 @@
               <h3 class="offer-card-title">GCSE English Literature Tuition</h3>
               <p class="offer-card-copy">Help with set texts, quotations, themes, character analysis, essay structure
                 and exam answers.</p>
-              <a href="#start" class="offer-card-link">Find out more <span aria-hidden="true">&rarr;</span></a>
+              <a href="#start" class="offer-card-link" aria-label="Find out more about GCSE English Literature Tuition">Find out more <span aria-hidden="true">&rarr;</span></a>
             </div>
           </article>
 

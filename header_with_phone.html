@@ -33,9 +33,9 @@
     <meta name="twitter:image" content="/social/online-maths-tutor.png">
     <meta name="twitter:image:alt" content="Improve Tuition — Online Maths Tutor — Free Assessment First">
 
-    <link rel="stylesheet" href="/assets/css/fonts.css">
-    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/open-dyslexic/0.0.3/open-dyslexic.min.css">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-dyslexic/0.0.3/open-dyslexic.min.css"></noscript>
+    <link rel="stylesheet" href="/assets/css/fonts.css" media="print" onload="this.media=\'all\'">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.cdnfonts.com/css/opendyslexic">
+    <noscript><link rel="stylesheet" href="https://fonts.cdnfonts.com/css/opendyslexic"></noscript>
     <link rel="dns-prefetch" href="https://api.web3forms.com">
 
     <script type="application/ld+json">
@@ -1005,6 +1005,7 @@
             max-width: 380px;
             background: var(--ivory);
             transform: translateX(-100%);
+            visibility: hidden;
             transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 1210;
             display: flex;
@@ -1014,6 +1015,7 @@
 
         .drawer.is-open {
             transform: translateX(0);
+            visibility: visible;
         }
 
         .drawer-head {
@@ -1793,7 +1795,7 @@
                 <a href="/" class="brand-mark" aria-label="Improve Tuition — home">
                     <picture>
                        <source srcset="/assets/images/logo_3.webp" type="image/webp">
-                       <img src="/assets/images/logo_3.png" alt="Improve Tuition logo" class="brand-logo" width="1300" height="433" fetchpriority="high" decoding="async">
+                       <img src="/assets/images/logo_3.webp" alt="Improve Tuition logo" class="brand-logo" width="1300" height="433" fetchpriority="high" decoding="async">
                    </picture>
                 </a>
                 <a href="/case-studies/" class="case-link">Case Study</a>
@@ -1830,7 +1832,7 @@
                 <a href="/pricing/" class="cat-link">Pricing</a>
                 <a href="/contact/" class="cat-link">Contact</a>
                 <a href="/library/" class="cat-link">Library</a>
-                <a href="/common/free-assessment/" class="cat-link" style="color:var(--hero-gold);font-weight:700;">Free
+                <a href="/common/free-assessment/" class="cat-link" style="color:#A87B1E;font-weight:700;text-decoration:underline;">Free
                     assessment</a>
             </div>
             <button class="cat-next" id="catNext" aria-label="Scroll categories">
@@ -1847,7 +1849,7 @@
         <div class="drawer-head">
             <picture>
                 <source srcset="/assets/images/logo_3.webp" type="image/webp">
-                <img src="/assets/images/logo_3.png" alt="Improve Tuition logo" class="brand-logo" width="1300" height="433" fetchpriority="high" decoding="async">
+                <img src="/assets/images/logo_3.webp" alt="Improve Tuition logo" class="brand-logo" width="1300" height="433" fetchpriority="high" decoding="async">
             </picture>
             <button class="drawer-close" aria-label="Close menu" id="drawerClose">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"

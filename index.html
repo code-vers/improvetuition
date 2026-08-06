@@ -45,7 +45,7 @@
   <meta name="theme-color" content="#D55A3F">
   <meta name="author" content="Mr G Dabhad, Improve Tuition">
 
-  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/fonts.css" media="print" onload="this.media=\'all\'">
 
   <style>
     :root {
@@ -154,6 +154,7 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
+            visibility: hidden;
       background-image: repeating-linear-gradient(108deg, transparent 0, transparent 110px,
           rgba(255, 255, 255, 0.042) 110px, rgba(255, 255, 255, 0.042) 111px);
     }
@@ -767,6 +768,7 @@
       color: var(--coral);
       opacity: 0.08;
       pointer-events: none;
+            visibility: hidden;
       user-select: none;
     }
 

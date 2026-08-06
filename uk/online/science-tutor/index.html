@@ -41,8 +41,8 @@
     <meta name="twitter:image" content="https://www.improvetuition.org/social/online-science-tutor.png">
     <meta name="twitter:image:alt" content="Improve Tuition — Online Science Tutor — Free Assessment First">
 
-    <link rel="stylesheet" href="/assets/css/fonts.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-dyslexic/0.0.3/open-dyslexic.min.css">
+    <link rel="stylesheet" href="/assets/css/fonts.css" media="print" onload="this.media=\'all\'">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/opendyslexic">
 
     <script type="application/ld+json">
   {
@@ -774,6 +774,7 @@
             background: rgba(36, 47, 58, 0.5);
             opacity: 0;
             pointer-events: none;
+            visibility: hidden;
             transition: opacity 0.25s ease;
             z-index: 1200;
         }
@@ -781,6 +782,7 @@
         .drawer-overlay.is-open {
             opacity: 1;
             pointer-events: auto;
+            visibility: visible;;
         }
 
         .drawer {
@@ -945,6 +947,7 @@
             position: absolute;
             inset: 0;
             pointer-events: none;
+            visibility: hidden;
             background-image: repeating-linear-gradient(108deg, transparent 0, transparent 110px,
                     rgba(255, 255, 255, 0.042) 110px, rgba(255, 255, 255, 0.042) 111px);
         }
@@ -1494,6 +1497,7 @@
             color: var(--coral);
             opacity: 0.07;
             pointer-events: none;
+            visibility: hidden;
             user-select: none;
             z-index: 0;
             letter-spacing: -0.02em;
@@ -2019,6 +2023,7 @@
             color: var(--coral);
             opacity: 0.10;
             pointer-events: none;
+            visibility: hidden;
             user-select: none;
             z-index: 0;
         }
@@ -2223,6 +2228,7 @@
             line-height: 1;
             color: rgba(213, 90, 63, 0.08);
             pointer-events: none;
+            visibility: hidden;
             user-select: none;
             z-index: 0;
         }
@@ -2836,6 +2842,7 @@
             transform: translateY(100%);
             opacity: 0;
             pointer-events: none;
+            visibility: hidden;
             transition: transform 0.32s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.25s ease;
             box-shadow: 0 -4px 16px rgba(36, 47, 58, 0.14);
         }
@@ -2844,6 +2851,7 @@
             transform: translateY(0);
             opacity: 1;
             pointer-events: auto;
+            visibility: visible;;
         }
 
         .contact-bar-btn {

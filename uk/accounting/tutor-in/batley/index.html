@@ -132,7 +132,7 @@
   }
   </script>
 
-    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/fonts.css" media="print" onload="this.media=\'all\'">
 
     <style>
         :root {
@@ -214,6 +214,7 @@
             position: absolute;
             inset: 0;
             pointer-events: none;
+            visibility: hidden;
             background-image: repeating-linear-gradient(108deg, transparent 0, transparent 110px, rgba(255, 255, 255, .042) 110px, rgba(255, 255, 255, .042) 111px)
         }
 
@@ -498,6 +499,7 @@
             color: var(--coral);
             opacity: .1;
             pointer-events: none;
+            visibility: hidden;
             white-space: nowrap;
             letter-spacing: -.02em
         }
@@ -1489,6 +1491,7 @@
             transform: translateY(100%);
             opacity: 0;
             pointer-events: none;
+            visibility: hidden;
             transition: transform .32s cubic-bezier(.32, .72, 0, 1), opacity .25s ease;
             box-shadow: 0 -4px 16px rgba(36, 47, 58, .14)
         }
@@ -1496,7 +1499,8 @@
         .contact-bar.is-visible {
             transform: translateY(0);
             opacity: 1;
-            pointer-events: auto
+            pointer-events: auto;
+            visibility: visible;
         }
 
         .contact-bar-btn {
@@ -1649,7 +1653,7 @@
                             <p class="offer-card-copy">Double-entry, ledgers and the trial balance, accruals and
                                 prepayments, depreciation, control accounts and reconciliations, and preparing final
                                 accounts for sole traders, partnerships and limited companies.</p>
-                            <a href="#start" class="offer-card-link">Find out more <span
+                            <a href="#start" class="offer-card-link" aria-label="Find out more about Financial Accounting">Find out more <span
                                     aria-hidden="true">&rarr;</span></a>
                         </div>
                     </article>
@@ -1662,7 +1666,7 @@
                             <p class="offer-card-copy">Marginal and absorption costing, break-even, budgeting and
                                 variance analysis, standard costing, and investment appraisal (payback, ARR and net
                                 present value).</p>
-                            <a href="#start" class="offer-card-link">Find out more <span
+                            <a href="#start" class="offer-card-link" aria-label="Find out more about Costing &amp; Management Accounting">Find out more <span
                                     aria-hidden="true">&rarr;</span></a>
                         </div>
                     </article>
@@ -1678,7 +1682,7 @@
                                 correct layout matter too: small format and arithmetic slips quietly drain marks across
                                 a long paper. This is where most students plateau, and where focused tuition moves the
                                 grade most.</p>
-                            <a href="#start" class="offer-card-link">Find out more <span
+                            <a href="#start" class="offer-card-link" aria-label="Find out more about Analysis &amp; Evaluation">Find out more <span
                                     aria-hidden="true">&rarr;</span></a>
                         </div>
                     </article>
