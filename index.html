@@ -2,12 +2,22 @@
 <html lang="en">
 
 <head>
-    <link rel="preload" href="/header.html" as="fetch" crossorigin="anonymous">
-    <link rel="preload" href="/assets/images/logo_3.webp" as="image" type="image/webp">
-    <style>
-        #header-placeholder, #header-phone-placeholder { min-height: 110px; }
-        @media(max-width: 768px) { #header-placeholder, #header-phone-placeholder { min-height: 100px; } }
-    </style>
+  <link rel="preload" href="/header.html" as="fetch" crossorigin="anonymous">
+  <link rel="preload" href="/assets/images/logo_3.webp" as="image" type="image/webp">
+  <style>
+    #header-placeholder,
+    #header-phone-placeholder {
+      min-height: 110px;
+    }
+
+    @media(max-width: 768px) {
+
+      #header-placeholder,
+      #header-phone-placeholder {
+        min-height: 100px;
+      }
+    }
+  </style>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1159,7 +1169,7 @@
     }
 
     /* ═══════════════════ FAQ ═══════════════════ */
-    .home-faq {
+    /* .home-faq {
       background: var(--cream-warm);
       padding: clamp(3rem, 6vw, 4.5rem) 2.5rem;
     }
@@ -1227,6 +1237,124 @@
       line-height: 1.6;
       color: var(--ink);
       max-width: 60ch;
+    } */
+
+    .it-faq {
+      /* background: #F7F5F2; */
+      background: var(--cream-warm);
+      padding: 64px 20px;
+    }
+
+    .it-faq__inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .it-faq__eyebrow {
+      font-family: 'Nunito Sans', 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #C99A2E;
+      margin: 0 0 10px;
+    }
+
+    .it-faq__title {
+      font-family: 'Lora', 'Fraunces', serif;
+      font-size: clamp(1.7rem, 4vw, 2.3rem);
+      color: #242F3A;
+      margin: 0 0 32px;
+      line-height: 1.2;
+    }
+
+    .it-faq__title em {
+      font-style: italic;
+      color: #242F3A;
+    }
+
+    .it-faq details {
+      background: #FFFFFF;
+      border: 1px solid #D8D2C7;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .it-faq details[open] {
+      border-color: #C99A2E;
+    }
+
+    .it-faq summary {
+      font-family: 'Nunito Sans', 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #242F3A;
+      padding: 18px 48px 18px 20px;
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+      line-height: 1.4;
+    }
+
+    .it-faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .it-faq summary::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #D55A3F;
+      transition: transform 0.2s ease;
+    }
+
+    .it-faq details[open] summary::after {
+      content: '\2212';
+      /* minus sign */
+    }
+
+    .it-faq summary:focus-visible {
+      outline: 3px solid #D55A3F;
+      outline-offset: 2px;
+      border-radius: 10px;
+    }
+
+    .it-faq__answer {
+      font-family: 'Nunito Sans', 'DM Sans', sans-serif;
+      font-size: 0.98rem;
+      color: #5A5A5A;
+      line-height: 1.65;
+      padding: 0 20px 20px;
+    }
+
+    .it-faq__answer p {
+      margin: 0 0 12px;
+    }
+
+    .it-faq__answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    .it-faq__answer a {
+      color: #D55A3F;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 2px solid #D6B35A;
+    }
+
+    .it-faq__answer a:hover {
+      color: #B14526;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .it-faq summary::after {
+        transition: none;
+      }
     }
 
     /* ═══════════════════ Areas ═══════════════════ */
@@ -1831,71 +1959,132 @@
   }
 }
 </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What happens at the free assessment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We listen first. You tell us what's going on with Maths, English or Science — the school worry, the slipping grade, the homework battles. We work out where your child is actually getting stuck and tell you honestly whether tuition would help, and which type. No pitch. You'll speak to a qualified teacher."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Online or in-person — which is better for my child?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both work. Online tuition suits busy weeks, families outside Batley, and pupils comfortable on screens — and works surprisingly well for younger pupils too. In-person at our Batley tuition centre suits primary children who need eye contact and structure, and pupils who lose focus on screens. We'll suggest which after the assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your tutors qualified and DBS checked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every tutor is DBS checked and selected for their subject knowledge, teaching ability and professionalism. Lessons are planned and overseen by Mr G Dabhad, a qualified teacher (QTS). We'll always tell you who would teach your child and why we believe they're the right fit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if it isn't working?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tell us. There are no contracts — you pay monthly in advance and you can stop any time. More often we'll change the tutor, change the approach, or honestly tell you tuition isn't the right answer. We'd rather lose a customer than waste a family's time."
+      }
+    }
+  ]
+}
+</script>
 
-    <style>
-        /* Accessibility Overrides */
-        main p a { text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
-        .skip-link { position: absolute; top: -100px; left: 1rem; z-index: 2000; padding: 0.7rem 1.1rem; background: #242F3A; color: #fff; text-decoration: none; border-radius: 4px; transition: top 150ms ease; }
-        .skip-link:focus { top: 1rem; outline: 3px solid #D55A3F; outline-offset: 2px; }
-    </style>
-    </head>
+  <style>
+    /* Accessibility Overrides */
+    main p a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      z-index: 2000;
+      padding: 0.7rem 1.1rem;
+      background: #242F3A;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: top 150ms ease;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+      outline: 3px solid #D55A3F;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
 
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  
+
 
   <!-- ═══════════ HEADER ═══════════ -->
   <div id="header-placeholder"></div>
-    <main id="main-content">
+  <main id="main-content">
 
-  <!-- ═══════════ HERO ═══════════ -->
+    <!-- ═══════════ HERO ═══════════ -->
 
-  <section class="home-hero" id="main">
-    <div class="hero-grid">
+    <section class="home-hero" id="main">
+      <div class="hero-grid">
 
-      <div class="hero-copy">
-        <p class="hero-eyebrow">Maths<span class="dot">·</span>English<span class="dot">·</span>Science</p>
-        <h1 class="hero-headline">Teacher-led tuition from Year&nbsp;2 to&nbsp;A-Level.</h1>
-        <p class="hero-tagline">
-          <svg class="tagline-glass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="11" cy="11" r="7" />
-            <line x1="21" y1="21" x2="16.65" y2="16.65" />
-          </svg>
-          We find the gap. <em>Then we teach it<span class="em-stop">.</span></em>
-        </p>
-        <p class="hero-lede">In-person in Batley or online &mdash; UK and abroad.<br>Led by Mr G Dabhad, Qualified
-          Teacher (QTS). Established 2007.</p>
+        <div class="hero-copy">
+          <p class="hero-eyebrow">Maths<span class="dot">·</span>English<span class="dot">·</span>Science</p>
+          <h1 class="hero-headline">Teacher-led tuition from Year&nbsp;2 to&nbsp;A-Level.</h1>
+          <p class="hero-tagline">
+            <svg class="tagline-glass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            We find the gap. <em>Then we teach it<span class="em-stop">.</span></em>
+          </p>
+          <p class="hero-lede">In-person in Batley or online &mdash; UK and abroad.<br>Led by Mr G Dabhad, Qualified
+            Teacher (QTS). Established 2007.</p>
 
-        <div class="hero-trust">
-          <span class="stat"><span class="star">★</span> <strong
-              data-config="reviews_summary.aggregate_rating">4.7</strong> across <strong
-              data-config="reviews_summary.aggregate_count">171</strong> reviews</span>
-          <span class="sep" aria-hidden="true"></span>
-          <span class="stat">Trustpilot &amp; Google</span>
+          <div class="hero-trust">
+            <span class="stat"><span class="star">★</span> <strong
+                data-config="reviews_summary.aggregate_rating">4.7</strong> across <strong
+                data-config="reviews_summary.aggregate_count">171</strong> reviews</span>
+            <span class="sep" aria-hidden="true"></span>
+            <span class="stat">Trustpilot &amp; Google</span>
+          </div>
+
+          <figure class="hero-promise" aria-label="Our promise: we find the gap, we teach it — what you'll see">
+            <img src="/assets/images/hero-promise.jpg" width="1200" height="800" fetchpriority="high" alt="Our promise">
+            <a href="#book" class="hero-promise-arrow" aria-label="Jump to book a free assessment">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <polyline points="6 13 12 19 18 13" />
+              </svg>
+            </a>
+          </figure>
         </div>
 
-        <figure class="hero-promise" aria-label="Our promise: we find the gap, we teach it — what you'll see">
-          <img src="/assets/images/hero-promise.jpg" width="1200" height="800" fetchpriority="high" alt="Our promise">
-          <a href="#book" class="hero-promise-arrow" aria-label="Jump to book a free assessment">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <line x1="12" y1="5" x2="12" y2="19" />
-              <polyline points="6 13 12 19 18 13" />
-            </svg>
-          </a>
-        </figure>
-      </div>
+        <aside class="form-card" id="book">
+          <span class="form-badge">Free, no obligation</span>
+          <h2>Book a free assessment</h2>
+          <p class="form-sub">A teacher will call you back within one working day.</p>
 
-      <aside class="form-card" id="book">
-        <span class="form-badge">Free, no obligation</span>
-        <h2>Book a free assessment</h2>
-        <p class="form-sub">A teacher will call you back within one working day.</p>
-
-        <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-          <input type="hidden" name="access_key" value="efb1f09c-319e-4b47-b770-12997364e160">
-          <!-- <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px"
+          <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="efb1f09c-319e-4b47-b770-12997364e160">
+            <!-- <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px"
             aria-hidden="true">
           <input type="hidden" name="_subject" value="Free assessment request from improvetuition.org">
           <input type="hidden" name="_template" value="table">
@@ -1904,282 +2093,285 @@
           <input type="hidden" name="stage" id="bookingStage" value="">
           <input type="hidden" name="subject_interest" id="bookingSubject" value=""> -->
 
-          <input type="hidden" name="redirect" value="https://improvetuition.org">
-          <input type="hidden" name="subject" value="Book a free assessment">
+            <input type="hidden" name="redirect" value="https://improvetuition.org">
+            <input type="hidden" name="subject" value="Book a free assessment">
 
-          <div class="field">
-            <label for="parent-name">Your name</label>
-            <input id="parent-name" name="parent_name" type="text" autocomplete="name" required>
+            <div class="field">
+              <label for="parent-name">Your name</label>
+              <input id="parent-name" name="parent_name" type="text" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Contact number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+            </div>
+
+            <button type="submit" class="form-submit">
+              Request my free assessment
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+              </svg>
+            </button>
+          </form>
+
+          <div id="bookingSuccess" class="form-success" hidden>
+            <strong>Thanks &mdash; we&rsquo;ve got your details.</strong>
+            <p>A teacher will call you back within one working day. If it&rsquo;s urgent, call <a
+                href="tel:+447951918152">07951918152</a>.</p>
           </div>
 
-          <div class="field">
-            <label for="phone">Contact number</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
-          </div>
+          <p class="form-fallback">
+            <strong>Prefer to talk first?</strong>
+            <a href="tel:+447951918152">07951918152</a>
+            <span class="form-fallback-hours">Mon-Fri 9am-7pm · Sat-Sun 10am-2pm</span>
+          </p>
 
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
-          </div>
+          <p class="form-foot">No payment, no obligation. We'll call you back within one working day.<br>We use your
+            details only to contact you about your free assessment. <a href="privacy.html">Privacy policy</a>.</p>
+        </aside>
 
-          <button type="submit" class="form-submit">
-            Request my free assessment
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
+      </div>
+
+    </section>
+
+    <!-- ═══════════ ROUTE BY EXAM ═══════════ -->
+
+    <section class="route-section">
+      <div class="section-head">
+        <div>
+          <p class="section-eyebrow">By exam stage</p>
+          <h2 class="section-title">Preparing for an <em>exam?</em></h2>
+        </div>
+        <p class="section-meta">Five pathways · <strong>11+ to IB</strong></p>
+      </div>
+
+      <div class="exam-grid">
+
+        <a href="/uk/11-plus-tutor/" class="route-card" data-stage="11plus">
+          <span class="route-watermark">11+</span>
+          <span class="route-tag">Entrance</span>
+          <span class="route-stage">Years 4-6</span>
+          <h3 class="route-title">11+ Entrance</h3>
+          <p class="route-copy">Focused prep for grammar school and selective entrance.</p>
+          <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-            </svg>
-          </button>
-        </form>
+            </svg></span>
+        </a>
 
-        <div id="bookingSuccess" class="form-success" hidden>
-          <strong>Thanks &mdash; we&rsquo;ve got your details.</strong>
-          <p>A teacher will call you back within one working day. If it&rsquo;s urgent, call <a
-              href="tel:+447951918152">07951918152</a>.</p>
+        <a href="/uk/sats-tutor/" class="route-card" data-stage="sats">
+          <span class="route-watermark">SATs</span>
+          <span class="route-tag">Key Stage 2</span>
+          <span class="route-stage">Year 6</span>
+          <h3 class="route-title">SATs</h3>
+          <p class="route-copy">Calm, focused prep for SATs and the move into secondary.</p>
+          <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+            </svg></span>
+        </a>
+
+        <a href="/uk/gcse-tutors/" class="route-card" data-stage="gcse">
+          <span class="route-watermark">GCSE</span>
+          <span class="route-tag">Key Stage 4</span>
+          <span class="route-stage">Years 10-11</span>
+          <h3 class="route-title">GCSE</h3>
+          <p class="route-copy">Targeted help for revision, exam technique and stronger answers.</p>
+          <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+            </svg></span>
+        </a>
+
+        <a href="/common/math-12-13year/" class="route-card" data-stage="a-level">
+          <span class="route-watermark">A</span>
+          <span class="route-tag">Sixth Form</span>
+          <span class="route-stage">Years 12-13</span>
+          <h3 class="route-title">A-Level</h3>
+          <p class="route-copy">Advanced support for deeper understanding and exam performance.</p>
+          <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+            </svg></span>
+        </a>
+
+        <a href="/uk/online/lb-tutors/" class="route-card" data-stage="ib">
+          <span class="route-watermark">IB</span>
+          <span class="route-tag">International</span>
+          <span class="route-stage">MYP &amp; Diploma</span>
+          <h3 class="route-title">IB</h3>
+          <p class="route-copy">Structured help with demanding IB subjects and coursework.</p>
+          <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+            </svg></span>
+        </a>
+
+        <a href="/uk/igcse-tutors/" class="route-card" data-stage="igcse">
+          <span class="route-watermark">IGCSE</span>
+          <span class="route-tag">INTERNATIONAL GCSE</span>
+          <span class="route-stage">Years 10-11</span>
+          <h3 class="route-title">IGCSE Tutors</h3>
+          <p class="route-copy">Online IGCSE tuition for Maths, English and Science. Targeted support for exam
+            technique,
+            topic gaps and stronger answers.</p>
+          <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+            </svg></span>
+        </a>
+
+        <a href="/uk/online/scottish-nationals/" class="route-card" data-stage="nat5">
+          <span class="route-watermark">Nat 5</span>
+          <span class="route-tag">SCOTTISH QUALIFICATIONS</span>
+          <span class="route-stage">S3-S4</span>
+          <h3 class="route-title">National 5 Tutors</h3>
+          <p class="route-copy">Online National 5 tuition for Maths, English and Science. Focused help with
+            understanding,
+            revision and exam confidence.</p>
+          <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+            </svg></span>
+        </a>
+
+        <a href="/uk/online/higher-tutor/" class="route-card" data-stage="higher">
+          <span class="route-watermark">Higher</span>
+          <span class="route-tag">SCOTTISH HIGHERS</span>
+          <span class="route-stage">S5-S6</span>
+          <h3 class="route-title">Higher Tutors</h3>
+          <p class="route-copy">Online Higher tuition for Maths, English and Science. Targeted support for exam
+            technique,
+            deeper understanding and stronger answers.</p>
+          <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+            </svg></span>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- ═══════════ SUBJECT STRIP (compact, replaces former 3-card grid) ═══════════ -->
+
+    <section class="subject-strip">
+      <div class="subject-strip-inner">
+        <h2 class="subject-strip-title">Or pick by <em>subject<span class="em-stop">.</span></em></h2>
+        <div class="subject-strip-links">
+          <a href="#book?subject=maths" class="subject-link" data-subject="maths">
+            <span class="subject-link-name">Maths</span>
+          </a>
+          <a href="#book?subject=english" class="subject-link" data-subject="english">
+            <span class="subject-link-name">English</span>
+          </a>
+          <a href="#book?subject=science" class="subject-link" data-subject="science">
+            <span class="subject-link-name">Science</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOUNDER NOTE ═══════════ -->
+
+    <section class="founder-section">
+      <div class="founder-inner">
+        <p class="founder-eyebrow">A note from the Founder</p>
+        <h2 class="founder-title">Why I started <em>Improve Tuition<span class="em-stop">.</span></em></h2>
+        <div class="founder-prose">
+          <p>Improve Tuition began in 2007, after years of encouragement from my mum to start tutoring. The children I
+            worked with in those early years passed their grammar school entrance exams &mdash; <strong>five years in a
+              row</strong>. That wasn't luck. It was a way of explaining things that helped children who had been
+            struggling.</p>
+          <p>If your child is the one struggling now, that's still where we start.</p>
+          <p class="founder-link-inline"><a href="/about/" class="founder-link">Read
+              more about us
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+              </svg>
+            </a></p>
+        </div>
+        <div class="founder-signature-block">
+          <p class="founder-signature">G. Dabhad</p>
+          <p class="founder-printed">Mr G Dabhad <span class="sep">·</span> Founder, Qualified Teacher (QTS)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRICE BAND (moved here — after founder voice, before reviews) ═══════════ -->
+
+    <section class="price-band" aria-label="Pricing summary">
+      <p class="price-band-eyebrow">Pricing from</p>
+      <div class="price-grid">
+        <div class="price-item">
+          <span class="price-label">Group (4–5)</span>
+          <span class="price-value" data-config="pricing.group_standard">£14.50<span class="unit">/hr</span></span>
+          <span class="price-meta">Per child · Years 2 to GCSE</span>
+        </div>
+        <div class="price-item">
+          <span class="price-label">Small group (2–3)</span>
+          <span class="price-value">£22.50<span class="unit">/hr</span></span>
+          <span class="price-meta">Per child · Years 2 to GCSE</span>
+        </div>
+        <div class="price-item">
+          <span class="price-label">One-to-one</span>
+          <span class="price-value" data-config="pricing.one_to_one_standard">£39.50<span class="unit">/hr</span></span>
+          <span class="price-meta">Years 2 to GCSE</span>
+        </div>
+      </div>
+      <p class="price-foot">Sixth Form pricing differs. <a href="/pricing/">See full
+          pricing &rarr;</a></p>
+    </section>
+
+    <!-- ═══════════ REVIEWS ═══════════ -->
+
+    <section class="home-reviews">
+      <div class="section-head">
+        <div>
+          <p class="section-eyebrow">Reviews</p>
+          <h2 class="section-title">What parents <em>say<span class="em-stop">.</span></em></h2>
+        </div>
+        <p class="section-meta"><strong>4.7</strong> across <strong>171</strong> reviews · Trustpilot &amp; Google</p>
+      </div>
+
+      <div class="reviews-grid-home">
+
+        <div class="home-review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"Thanks to his support, I achieved Grade As in both Maths and Physics, a huge jump from the Cs and
+            Ds I was getting before."</blockquote>
+          <p class="source"><strong>Pupil</strong> · GCSE Maths &amp; Physics · Trustpilot</p>
         </div>
 
-        <p class="form-fallback">
-          <strong>Prefer to talk first?</strong>
-          <a href="tel:+447951918152">07951918152</a>
-          <span class="form-fallback-hours">Mon-Fri 9am-7pm · Sat-Sun 10am-2pm</span>
-        </p>
+        <div class="home-review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"Living in Dubai, finding the right tutor is not easy. He somehow made it possible."</blockquote>
+          <p class="source"><strong>Parent</strong> · Online Tuition (Dubai) · Google</p>
+        </div>
 
-        <p class="form-foot">No payment, no obligation. We'll call you back within one working day.<br>We use your
-          details only to contact you about your free assessment. <a href="privacy.html">Privacy policy</a>.</p>
-      </aside>
+        <div class="home-review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"She passed her SATs, achieving Greater Depth in all her subjects."</blockquote>
+          <p class="source"><strong>Parent</strong> · SATs (Year 6) · Google</p>
+        </div>
 
-    </div>
-
-  </section>
-
-  <!-- ═══════════ ROUTE BY EXAM ═══════════ -->
-
-  <section class="route-section">
-    <div class="section-head">
-      <div>
-        <p class="section-eyebrow">By exam stage</p>
-        <h2 class="section-title">Preparing for an <em>exam?</em></h2>
-      </div>
-      <p class="section-meta">Five pathways · <strong>11+ to IB</strong></p>
-    </div>
-
-    <div class="exam-grid">
-
-      <a href="/uk/11-plus-tutor/" class="route-card" data-stage="11plus">
-        <span class="route-watermark">11+</span>
-        <span class="route-tag">Entrance</span>
-        <span class="route-stage">Years 4-6</span>
-        <h3 class="route-title">11+ Entrance</h3>
-        <p class="route-copy">Focused prep for grammar school and selective entrance.</p>
-        <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-          </svg></span>
-      </a>
-
-      <a href="/uk/sats-tutor/" class="route-card" data-stage="sats">
-        <span class="route-watermark">SATs</span>
-        <span class="route-tag">Key Stage 2</span>
-        <span class="route-stage">Year 6</span>
-        <h3 class="route-title">SATs</h3>
-        <p class="route-copy">Calm, focused prep for SATs and the move into secondary.</p>
-        <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-          </svg></span>
-      </a>
-
-      <a href="/uk/gcse-tutors/" class="route-card" data-stage="gcse">
-        <span class="route-watermark">GCSE</span>
-        <span class="route-tag">Key Stage 4</span>
-        <span class="route-stage">Years 10-11</span>
-        <h3 class="route-title">GCSE</h3>
-        <p class="route-copy">Targeted help for revision, exam technique and stronger answers.</p>
-        <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-          </svg></span>
-      </a>
-
-      <a href="/common/math-12-13year/" class="route-card" data-stage="a-level">
-        <span class="route-watermark">A</span>
-        <span class="route-tag">Sixth Form</span>
-        <span class="route-stage">Years 12-13</span>
-        <h3 class="route-title">A-Level</h3>
-        <p class="route-copy">Advanced support for deeper understanding and exam performance.</p>
-        <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-          </svg></span>
-      </a>
-
-      <a href="/uk/online/lb-tutors/" class="route-card" data-stage="ib">
-        <span class="route-watermark">IB</span>
-        <span class="route-tag">International</span>
-        <span class="route-stage">MYP &amp; Diploma</span>
-        <h3 class="route-title">IB</h3>
-        <p class="route-copy">Structured help with demanding IB subjects and coursework.</p>
-        <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-          </svg></span>
-      </a>
-
-      <a href="/uk/igcse-tutors/" class="route-card" data-stage="igcse">
-        <span class="route-watermark">IGCSE</span>
-        <span class="route-tag">INTERNATIONAL GCSE</span>
-        <span class="route-stage">Years 10-11</span>
-        <h3 class="route-title">IGCSE Tutors</h3>
-        <p class="route-copy">Online IGCSE tuition for Maths, English and Science. Targeted support for exam technique,
-          topic gaps and stronger answers.</p>
-        <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-          </svg></span>
-      </a>
-
-      <a href="/uk/online/scottish-nationals/" class="route-card" data-stage="nat5">
-        <span class="route-watermark">Nat 5</span>
-        <span class="route-tag">SCOTTISH QUALIFICATIONS</span>
-        <span class="route-stage">S3-S4</span>
-        <h3 class="route-title">National 5 Tutors</h3>
-        <p class="route-copy">Online National 5 tuition for Maths, English and Science. Focused help with understanding,
-          revision and exam confidence.</p>
-        <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-          </svg></span>
-      </a>
-
-      <a href="/uk/online/higher-tutor/" class="route-card" data-stage="higher">
-        <span class="route-watermark">Higher</span>
-        <span class="route-tag">SCOTTISH HIGHERS</span>
-        <span class="route-stage">S5-S6</span>
-        <h3 class="route-title">Higher Tutors</h3>
-        <p class="route-copy">Online Higher tuition for Maths, English and Science. Targeted support for exam technique,
-          deeper understanding and stronger answers.</p>
-        <span class="route-arrow">See more <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-          </svg></span>
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- ═══════════ SUBJECT STRIP (compact, replaces former 3-card grid) ═══════════ -->
-
-  <section class="subject-strip">
-    <div class="subject-strip-inner">
-      <h2 class="subject-strip-title">Or pick by <em>subject<span class="em-stop">.</span></em></h2>
-      <div class="subject-strip-links">
-        <a href="#book?subject=maths" class="subject-link" data-subject="maths">
-          <span class="subject-link-name">Maths</span>
-        </a>
-        <a href="#book?subject=english" class="subject-link" data-subject="english">
-          <span class="subject-link-name">English</span>
-        </a>
-        <a href="#book?subject=science" class="subject-link" data-subject="science">
-          <span class="subject-link-name">Science</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════ FOUNDER NOTE ═══════════ -->
-
-  <section class="founder-section">
-    <div class="founder-inner">
-      <p class="founder-eyebrow">A note from the Founder</p>
-      <h2 class="founder-title">Why I started <em>Improve Tuition<span class="em-stop">.</span></em></h2>
-      <div class="founder-prose">
-        <p>Improve Tuition began in 2007, after years of encouragement from my mum to start tutoring. The children I
-          worked with in those early years passed their grammar school entrance exams &mdash; <strong>five years in a
-            row</strong>. That wasn't luck. It was a way of explaining things that helped children who had been
-          struggling.</p>
-        <p>If your child is the one struggling now, that's still where we start.</p>
-        <p class="founder-link-inline"><a href="/about/" class="founder-link">Read
-            more about us
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" aria-hidden="true">
-              <path d="M3 8 H13 M9 4 L13 8 L9 12" />
-            </svg>
-          </a></p>
-      </div>
-      <div class="founder-signature-block">
-        <p class="founder-signature">G. Dabhad</p>
-        <p class="founder-printed">Mr G Dabhad <span class="sep">·</span> Founder, Qualified Teacher (QTS)</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════ PRICE BAND (moved here — after founder voice, before reviews) ═══════════ -->
-
-  <section class="price-band" aria-label="Pricing summary">
-    <p class="price-band-eyebrow">Pricing from</p>
-    <div class="price-grid">
-      <div class="price-item">
-        <span class="price-label">Group (4–5)</span>
-        <span class="price-value" data-config="pricing.group_standard">£14.50<span class="unit">/hr</span></span>
-        <span class="price-meta">Per child · Years 2 to GCSE</span>
-      </div>
-      <div class="price-item">
-        <span class="price-label">Small group (2–3)</span>
-        <span class="price-value">£22.50<span class="unit">/hr</span></span>
-        <span class="price-meta">Per child · Years 2 to GCSE</span>
-      </div>
-      <div class="price-item">
-        <span class="price-label">One-to-one</span>
-        <span class="price-value" data-config="pricing.one_to_one_standard">£39.50<span class="unit">/hr</span></span>
-        <span class="price-meta">Years 2 to GCSE</span>
-      </div>
-    </div>
-    <p class="price-foot">Sixth Form pricing differs. <a href="/pricing/">See full
-        pricing &rarr;</a></p>
-  </section>
-
-  <!-- ═══════════ REVIEWS ═══════════ -->
-
-  <section class="home-reviews">
-    <div class="section-head">
-      <div>
-        <p class="section-eyebrow">Reviews</p>
-        <h2 class="section-title">What parents <em>say<span class="em-stop">.</span></em></h2>
-      </div>
-      <p class="section-meta"><strong>4.7</strong> across <strong>171</strong> reviews · Trustpilot &amp; Google</p>
-    </div>
-
-    <div class="reviews-grid-home">
-
-      <div class="home-review-card">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>"Thanks to his support, I achieved Grade As in both Maths and Physics, a huge jump from the Cs and
-          Ds I was getting before."</blockquote>
-        <p class="source"><strong>Pupil</strong> · GCSE Maths &amp; Physics · Trustpilot</p>
       </div>
 
-      <div class="home-review-card">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>"Living in Dubai, finding the right tutor is not easy. He somehow made it possible."</blockquote>
-        <p class="source"><strong>Parent</strong> · Online Tuition (Dubai) · Google</p>
-      </div>
+      <p class="reviews-link-row"><a href="/reviews/index.html">Read all reviews →</a></p>
 
-      <div class="home-review-card">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>"She passed her SATs, achieving Greater Depth in all her subjects."</blockquote>
-        <p class="source"><strong>Parent</strong> · SATs (Year 6) · Google</p>
-      </div>
-
-    </div>
-
-    <p class="reviews-link-row"><a href="/reviews/index.html">Read all reviews →</a></p>
-
-  </section>
+    </section>
 
 
-  <!-- ═══════════ FAQ ═══════════ -->
+    <!-- ═══════════ FAQ ═══════════ -->
 
-  <section class="home-faq">
+    <!-- <section class="home-faq">
     <div class="faq-inner">
       <div class="faq-head">
         <p class="section-eyebrow">Common questions</p>
@@ -2214,66 +2406,121 @@
         </li>
       </ul>
     </div>
-  </section>
+  </section> -->
 
-  <!-- ═══════════ AREAS COVERED ═══════════ -->
 
-  <section class="home-areas">
-    <p class="section-eyebrow" style="text-align: center; margin-bottom: 0.6rem;">Where we tutor</p>
-    <h2 class="areas-title">Areas we cover.</h2>
+    <section class="it-faq" id="faq" aria-labelledby="faq-title">
+      <div class="it-faq__inner">
+        <p class="it-faq__eyebrow">Common questions</p>
+        <h2 class="it-faq__title" id="faq-title">Four things <em>parents ask first.</em></h2>
 
-    <div class="areas-cards">
-      <article class="areas-card">
-        <p class="areas-card-eyebrow">Online tuition</p>
-        <h3 class="areas-card-title">Across the UK <em>and worldwide<span class="em-stop">.</span></em></h3>
-        <p class="areas-card-body">Same teachers, same approach, same prices — delivered live online. We work with
-          families across the UK and abroad, in different timezones, on the same one-to-one and small-group basis as our
-          centre.</p>
-      </article>
+        <details>
+          <summary>What happens at the free assessment?</summary>
+          <div class="it-faq__answer">
+            <p>We listen first. You tell us what&rsquo;s going on with Maths,
+              English or Science &mdash; the school worry, the slipping grade, the
+              homework battles. We work out where your child is actually getting
+              stuck and tell you honestly whether tuition would help, and which
+              type. No pitch. You&rsquo;ll speak to a qualified teacher.</p>
+          </div>
+        </details>
 
-      <article class="areas-card">
-        <p class="areas-card-eyebrow">In-person tuition</p>
-        <h3 class="areas-card-title">Our centre is <em>in Batley<span class="em-stop">.</span></em></h3>
-        <p class="areas-card-body">We welcome families from across West Yorkshire to the Batley centre. Most pupils
-          travel in from these towns:</p>
-        <ul class="areas-list">
-          <li>Batley</li>
-          <li>Dewsbury</li>
-          <li>Bradford</li>
-          <li>Huddersfield</li>
-          <li>Leeds</li>
-          <li>Wakefield</li>
-          <li>Halifax</li>
-        </ul>
-      </article>
-    </div>
+        <details>
+          <summary>Online or in-person &mdash; which is better for my child?</summary>
+          <div class="it-faq__answer">
+            <p>Both work. Online tuition suits busy weeks, families outside
+              Batley, and pupils comfortable on screens &mdash; and works
+              surprisingly well for younger pupils too. In-person at our Batley
+              tuition centre suits primary children who need eye contact and
+              structure, and pupils who lose focus on screens. We&rsquo;ll suggest
+              which after the assessment.</p>
+          </div>
+        </details>
 
-  </section>
+        <details>
+          <summary>Are your tutors qualified and DBS checked?</summary>
+          <div class="it-faq__answer">
+            <p>Yes. Every tutor is DBS checked and selected for their subject
+              knowledge, teaching ability and professionalism. Lessons are planned
+              and overseen by Mr G Dabhad, a qualified teacher (QTS). We&rsquo;ll
+              always tell you who would teach your child and why we believe
+              they&rsquo;re the right fit.
+              <a href="/about/">Read more about the team &rarr;</a>
+            </p>
+          </div>
+        </details>
 
-  <!-- ═══════════ CLOSING CTA ═══════════ -->
-
-  <section class="home-closer">
-    <div class="closer-inner">
-      <p class="closer-text">Still thinking about it? <em>Just give us a call<span class="em-stop">.</span></em></p>
-      <div class="closer-actions">
-        <a href="tel:+447951918152" class="closer-phone">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" aria-hidden="true">
-            <path
-              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-          </svg>
-          <span data-config="contact.phone_display">(0)7951 918152</span>
-        </a>
-        <p class="closer-hours"><strong>Mon-Fri 9am-7pm · Sat-Sun 10am-2pm</strong></p>
-        <p class="closer-meta">You'll speak to me — Mr Dabhad — or someone on the team. No pitch, just an honest chat
-          about whether tuition would help.</p>
+        <details>
+          <summary>What if it isn&rsquo;t working?</summary>
+          <div class="it-faq__answer">
+            <p>Tell us. There are no contracts &mdash; you pay monthly in advance
+              and you can stop any time. More often we&rsquo;ll change the tutor,
+              change the approach, or honestly tell you tuition isn&rsquo;t the
+              right answer. We&rsquo;d rather lose a customer than waste a
+              family&rsquo;s time.</p>
+          </div>
+        </details>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- ═══════════ AREAS COVERED ═══════════ -->
 
-  <!-- ═══════════ FOOTER START═══════════ -->
-      </main>
-<div id="footer-placeholder"></div>
+    <section class="home-areas">
+      <p class="section-eyebrow" style="text-align: center; margin-bottom: 0.6rem;">Where we tutor</p>
+      <h2 class="areas-title">Areas we cover.</h2>
+
+      <div class="areas-cards">
+        <article class="areas-card">
+          <p class="areas-card-eyebrow">Online tuition</p>
+          <h3 class="areas-card-title">Across the UK <em>and worldwide<span class="em-stop">.</span></em></h3>
+          <p class="areas-card-body">Same teachers, same approach, same prices — delivered live online. We work with
+            families across the UK and abroad, in different timezones, on the same one-to-one and small-group basis as
+            our
+            centre.</p>
+        </article>
+
+        <article class="areas-card">
+          <p class="areas-card-eyebrow">In-person tuition</p>
+          <h3 class="areas-card-title">Our centre is <em>in Batley<span class="em-stop">.</span></em></h3>
+          <p class="areas-card-body">We welcome families from across West Yorkshire to the Batley centre. Most pupils
+            travel in from these towns:</p>
+          <ul class="areas-list">
+            <li>Batley</li>
+            <li>Dewsbury</li>
+            <li>Bradford</li>
+            <li>Huddersfield</li>
+            <li>Leeds</li>
+            <li>Wakefield</li>
+            <li>Halifax</li>
+          </ul>
+        </article>
+      </div>
+
+    </section>
+
+    <!-- ═══════════ CLOSING CTA ═══════════ -->
+
+    <section class="home-closer">
+      <div class="closer-inner">
+        <p class="closer-text">Still thinking about it? <em>Just give us a call<span class="em-stop">.</span></em></p>
+        <div class="closer-actions">
+          <a href="tel:+447951918152" class="closer-phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span data-config="contact.phone_display">(0)7951 918152</span>
+          </a>
+          <p class="closer-hours"><strong>Mon-Fri 9am-7pm · Sat-Sun 10am-2pm</strong></p>
+          <p class="closer-meta">You'll speak to me — Mr Dabhad — or someone on the team. No pitch, just an honest chat
+            about whether tuition would help.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOOTER START═══════════ -->
+  </main>
+  <div id="footer-placeholder"></div>
   <!-- ═══════════ FOOTER  END ═══════════ -->
 
 
